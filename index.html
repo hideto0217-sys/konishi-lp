@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <title>楽天LP無料診断｜小西式CVR改善</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
@@ -15,7 +16,7 @@
   --accent: #c8a96e;
   --accent-dark: #a8893e;
   --bg: #fafaf8;
-  --bg-warm: #f5f3ee;
+  --bg-warm: #f8f7f3;
   --bg-card: #ffffff;
   --danger: #c0392b;
   --success: #2e7d52;
@@ -23,14 +24,14 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; color-scheme: light only; }
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
   background: var(--bg);
   color: var(--ink);
-  line-height: 1.8;
-  font-size: 15px;
+  line-height: 2.0;
+  font-size: 17px;
 }
 
 /* ── HEADER ── */
@@ -92,7 +93,7 @@ body {
   color: var(--accent);
 }
 .hero-sub {
-  color: #bbb;
+  color: #ddd;
   font-size: 14px;
   max-width: 520px;
   margin: 0 auto 40px;
@@ -103,7 +104,7 @@ body {
   background: var(--accent);
   color: var(--ink);
   font-weight: 700;
-  font-size: 15px;
+  font-size: 17px;
   padding: 16px 40px;
   letter-spacing: .05em;
   text-decoration: none;
@@ -122,8 +123,8 @@ section { padding: 72px 24px; }
 .inner { max-width: 720px; margin: 0 auto; }
 
 .section-label {
-  font-size: 10px;
-  letter-spacing: .25em;
+  font-size: 12px;
+  letter-spacing: .15em;
   color: var(--accent);
   margin-bottom: 12px;
   display: block;
@@ -153,21 +154,21 @@ section { padding: 72px 24px; }
   border-left: 3px solid var(--rule);
   margin-bottom: 12px;
   background: var(--bg-card);
-  font-size: 15px;
-  color: var(--ink-light);
+  font-size: 17px;
+  color: #333;
   transition: border-color .2s;
 }
 .pain-list li:hover { border-color: var(--accent); }
 .pain-list li::before {
   content: '□ ';
-  color: var(--ink-mute);
+  color: #666;
 }
 .pain-conclusion {
   background: var(--ink);
   color: #fff;
   padding: 28px 32px;
   margin-top: 32px;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.9;
 }
 .pain-conclusion strong {
@@ -203,7 +204,7 @@ section { padding: 72px 24px; }
   margin-bottom: 10px;
   line-height: 1.5;
 }
-.cause-card p { font-size: 13px; color: var(--ink-light); line-height: 1.8; }
+.cause-card p { font-size: 13px; color: #333; line-height: 2.0; }
 
 /* ── MISUNDERSTANDING ── */
 .mis { background: var(--bg-warm); }
@@ -229,7 +230,7 @@ section { padding: 72px 24px; }
 }
 .mis-body {
   font-size: 14px;
-  color: var(--ink-light);
+  color: #333;
   line-height: 1.95;
 }
 .mis-result {
@@ -238,13 +239,13 @@ section { padding: 72px 24px; }
   background: var(--bg-card);
   border-left: 3px solid var(--accent);
   font-size: 13px;
-  color: var(--ink-light);
+  color: #333;
 }
 
 /* ── STORY ── */
 .story-body {
-  font-size: 15px;
-  color: var(--ink-light);
+  font-size: 17px;
+  color: #333;
   line-height: 2;
   margin-bottom: 24px;
 }
@@ -270,12 +271,12 @@ section { padding: 72px 24px; }
 }
 .cred-label {
   font-size: 11px;
-  color: var(--ink-mute);
+  color: #666;
   letter-spacing: .1em;
   line-height: 1.6;
 }
 
-/* ── RESULTS ── */
+/* ── 改善実績 ── */
 .results { background: var(--bg-warm); }
 .result-list {
   display: flex;
@@ -290,14 +291,14 @@ section { padding: 72px 24px; }
 }
 .result-quote {
   font-family: 'Noto Serif JP', serif;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.9;
   color: var(--ink);
   margin-bottom: 16px;
 }
 .result-meta {
   font-size: 12px;
-  color: var(--ink-mute);
+  color: #666;
   letter-spacing: .05em;
 }
 .result-cvr {
@@ -310,7 +311,7 @@ section { padding: 72px 24px; }
   font-weight: 700;
 }
 
-/* ── FAQ ── */
+/* ── よくある質問 ── */
 .faq-list { margin-top: 40px; }
 .faq-item {
   border-bottom: 1px solid var(--rule);
@@ -318,7 +319,7 @@ section { padding: 72px 24px; }
 }
 .faq-q {
   font-family: 'Noto Serif JP', serif;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
   margin-bottom: 14px;
   display: flex;
@@ -334,7 +335,7 @@ section { padding: 72px 24px; }
 }
 .faq-a {
   font-size: 14px;
-  color: var(--ink-light);
+  color: #333;
   line-height: 1.9;
   padding-left: 30px;
 }
@@ -348,7 +349,7 @@ section { padding: 72px 24px; }
 .form-section .section-title { color: #fff; }
 .form-section .rule { background: var(--accent); }
 .form-lead {
-  color: #aaa;
+  color: #ccc;
   font-size: 14px;
   line-height: 1.9;
   margin-bottom: 48px;
@@ -389,7 +390,7 @@ section { padding: 72px 24px; }
   border-radius: 0;
   color: #fff;
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   padding: 14px 16px;
   outline: none;
   transition: border-color .2s;
@@ -405,8 +406,8 @@ section { padding: 72px 24px; }
 
 .form-hint {
   margin-top: 7px;
-  font-size: 11px;
-  color: #555;
+  font-size: 13px;
+  color: #777;
   line-height: 1.7;
 }
 
@@ -432,7 +433,7 @@ section { padding: 72px 24px; }
   margin-top: 16px;
   font-size: 11px;
   color: #555;
-  line-height: 1.8;
+  line-height: 2.0;
 }
 
 /* ── SUCCESS ── */
@@ -454,7 +455,7 @@ section { padding: 72px 24px; }
   color: var(--accent);
   margin-bottom: 16px;
 }
-.success-msg p { color: #aaa; font-size: 14px; line-height: 1.9; }
+.success-msg p { color: #ccc; font-size: 14px; line-height: 1.9; }
 
 /* ── FOOTER ── */
 footer {
@@ -471,7 +472,7 @@ footer {
 .footer-bio {
   font-size: 11px;
   color: #555;
-  line-height: 1.8;
+  line-height: 2.0;
 }
 .footer-disclaimer {
   margin-top: 20px;
@@ -497,6 +498,47 @@ footer {
   .pain-conclusion { padding: 22px 20px; }
   .result-item { padding: 22px 20px; }
 }
+
+/* ── ダークモード強制無効化 ── */
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background: var(--bg) !important;
+    color: var(--ink) !important;
+    color-scheme: light !important;
+  }
+  body * {
+    color: inherit;
+  }
+  .hero, .form-section, footer, .pain-conclusion {
+    background: var(--ink) !important;
+    color: #fff !important;
+  }
+  .hero *, .form-section *, footer * {
+    color: inherit;
+  }
+  .pain { background: var(--bg-warm) !important; }
+  .mis { background: var(--bg-warm) !important; }
+  .results { background: var(--bg-warm) !important; }
+  .cause-card, .result-item, .cred-item, .pain-list li {
+    background: #fff !important;
+    color: var(--ink) !important;
+  }
+  .mis-result {
+    background: #fff !important;
+    color: #333 !important;
+  }
+  .section-title { color: var(--ink) !important; }
+  .story-body { color: #333 !important; }
+  .faq-a { color: #333 !important; }
+  .mis-title { color: var(--ink) !important; }
+  .mis-body { color: #333 !important; }
+  .faq-q { color: var(--ink) !important; }
+  .form-input, .form-select {
+    background: rgba(255,255,255,.06) !important;
+    color: #fff !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -523,7 +565,7 @@ footer {
 <!-- PAIN -->
 <section class="pain">
   <div class="inner fade-in">
-    <span class="section-label">CURRENT SITUATION</span>
+    <span class="section-label">現状確認</span>
     <h2 class="section-title">あなたは今、<br>こんな状態にありませんか？</h2>
     <div class="rule"></div>
     <ul class="pain-list">
@@ -543,7 +585,7 @@ footer {
 <!-- CAUSE -->
 <section>
   <div class="inner fade-in">
-    <span class="section-label">THE REAL CAUSE</span>
+    <span class="section-label">本当の原因</span>
     <h2 class="section-title">なぜ、改善しても<br>数字が動かないのか。</h2>
     <div class="rule"></div>
     <p style="color:var(--ink-light);font-size:14px;line-height:2;margin-bottom:32px;">
@@ -552,12 +594,12 @@ footer {
     </p>
     <div class="cause-block">
       <div class="cause-card bad">
-        <span class="label">DESIGNER'S GOAL</span>
+        <span class="label">デザイナーのゴール</span>
         <h3>見栄えが良く、ポートフォリオに載せられる美しいページを作る</h3>
         <p>デザイナーは「見た目」のプロです。「なぜお客様が買わないのか」を分析するプロではありません。</p>
       </div>
       <div class="cause-card good">
-        <span class="label">YOUR GOAL</span>
+        <span class="label">あなたのゴール</span>
         <h3>競合比較に勝ち、1円でも多く利益を残す</h3>
         <p>必要なのはデザインではなく、お客様が「自分に合っている」「今これを選ぶべきだ」と決断できる心理導線です。</p>
       </div>
@@ -573,7 +615,7 @@ footer {
 <!-- MISUNDERSTANDING -->
 <section class="mis">
   <div class="inner fade-in">
-    <span class="section-label">3 COMMON MISTAKES</span>
+    <span class="section-label">よくある3つの誤解</span>
     <h2 class="section-title">楽天店舗が遠回りする、<br>3つの誤解。</h2>
     <div class="rule"></div>
     <div class="mis-item">
@@ -615,7 +657,7 @@ footer {
 <!-- STORY -->
 <section>
   <div class="inner fade-in">
-    <span class="section-label">ABOUT</span>
+    <span class="section-label">診断を始めた理由</span>
     <h2 class="section-title">なぜ私が<br>LP診断を始めたのか。</h2>
     <div class="rule"></div>
     <p class="story-body">
@@ -645,10 +687,10 @@ footer {
   </div>
 </section>
 
-<!-- RESULTS -->
+<!-- 改善実績 -->
 <section class="results">
   <div class="inner fade-in">
-    <span class="section-label">RESULTS</span>
+    <span class="section-label">改善実績</span>
     <h2 class="section-title">診断を受けた<br>店舗様の声。</h2>
     <div class="rule"></div>
     <div class="result-list">
@@ -671,10 +713,10 @@ footer {
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- よくある質問 -->
 <section>
   <div class="inner fade-in">
-    <span class="section-label">FAQ</span>
+    <span class="section-label">よくある質問</span>
     <h2 class="section-title">よくあるご質問。</h2>
     <div class="rule"></div>
     <div class="faq-list">
@@ -701,7 +743,7 @@ footer {
 <!-- FORM -->
 <section class="form-section" id="form">
   <div class="inner">
-    <span class="section-label">FREE DIAGNOSIS</span>
+    <span class="section-label">無料診断申込</span>
     <h2 class="section-title">無料LP診断を<br>申し込む。</h2>
     <div class="rule"></div>
     <p class="form-lead">
