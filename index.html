@@ -546,7 +546,7 @@ footer {
     <span class="section-label">本当の原因</span>
     <h2 class="section-title">なぜ、改善しても<br>数字が動かないのか。</h2>
     <div class="rule"></div>
-    <p style="color:var(--ink-light);font-size:14px;line-height:2;margin-bottom:32px;">
+    <p style="color:var(--ink-light);font-size:16px;line-height:2;margin-bottom:32px;">
       楽天店舗様が遠回りする原因は、スキル不足でも努力不足でもありません。
       「どこで負けているか」を見ないまま改善を繰り返しているからです。
     </p>
@@ -562,7 +562,7 @@ footer {
         <p>必要なのはデザインではなく、お客様が「自分に合っている」「今これを選ぶべきだ」と決断できる心理導線です。</p>
       </div>
     </div>
-    <p style="color:var(--ink-light);font-size:14px;line-height:2;margin-top:8px;">
+    <p style="color:var(--ink-light);font-size:16px;line-height:2;margin-top:8px;">
       この違いが分からないまま作られたページは、どれだけ綺麗でも競合比較で負けてしまいます。 しかし、「何が他と違うのか」「なぜ自分に合っているのか」「なぜ今これを選ぶべきなのか」—— この3つを正しい順番で配置するだけで、CVRは平均1.8倍改善されます。
     </p>
   </div>
@@ -759,15 +759,7 @@ footer {
           現在のCVR（転換率）<span class="required">必須</span>
           <span class="note">感覚値でOK</span>
         </label>
-        <select class="form-select" id="cvr" name="cvr" required>
-          <option value="" disabled selected>選択してください</option>
-          <option value="under_1">1%未満</option>
-          <option value="1_2">1〜2%</option>
-          <option value="2_4">2〜4%</option>
-          <option value="4_7">4〜7%</option>
-          <option value="over_7">7%以上</option>
-          <option value="unknown">分からない</option>
-        </select>
+        <input class="form-input" type="text" id="cvr" name="cvr" placeholder="例：3.2%" required>
         <p class="form-hint">購入数 ÷ 訪問数 × 100 で計算できます。感覚値で構いません</p>
       </div>
 
