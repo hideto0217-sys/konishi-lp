@@ -2,64 +2,92 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 <title>楽天LP無料診断｜小西式CVR改善</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+/* ── RESET & ROOT ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
 
 :root {
-  --ink: #1a1a1a;
-  --ink-light: #444;
-  --ink-mute: #888;
-  --rule: #e0e0e0;
-  --accent: #c8a96e;
-  --accent-dark: #a8893e;
-  --bg: #fafaf8;
-  --bg-warm: #f5f3ee;
-  --bg-card: #ffffff;
-  --danger: #c0392b;
-  --success: #2e7d52;
+  --ink:        #141414;
+  --ivory:      #F5F0E8;
+  --ivory-dark: #EDE8DF;
+  --gold:       #C8A96E;
+  --gold-dark:  #A8893E;
+  --mute:       #888;
+  --rule:       rgba(200,169,110,.25);
+  --body-font:  'DM Sans', 'Noto Sans JP', sans-serif;
+  --serif-font: 'Noto Serif JP', serif;
 }
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
-  background: var(--bg);
+  font-family: var(--body-font);
+  background: var(--ivory);
   color: var(--ink);
-  line-height: 1.8;
-  font-size: 15px;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-/* ── HEADER ── */
+/* ── UTILITY ──────────────────────────────────────────────── */
+.inner { max-width: 680px; margin: 0 auto; padding: 0 22px; }
+.dark  { background: var(--ink); color: var(--ivory); }
+.light { background: var(--ivory); color: var(--ink); }
+.cream { background: var(--ivory-dark); color: var(--ink); }
+
+/* ── REVEAL ANIMATION ─────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .65s cubic-bezier(.4,0,.2,1),
+              transform .65s cubic-bezier(.4,0,.2,1);
+}
+.reveal.in { opacity: 1; transform: none; }
+.reveal-d1 { transition-delay: .08s; }
+.reveal-d2 { transition-delay: .16s; }
+.reveal-d3 { transition-delay: .24s; }
+.reveal-d4 { transition-delay: .32s; }
+
+/* ── SITE HEADER ──────────────────────────────────────────── */
 .site-header {
   background: var(--ink);
-  padding: 14px 24px;
+  padding: 16px 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(200,169,110,.2);
 }
-.site-header .logo {
-  font-family: 'Noto Serif JP', serif;
-  color: var(--accent);
-  font-size: 13px;
-  letter-spacing: .15em;
-  font-weight: 600;
-}
-.site-header .tagline {
-  color: #888;
+.header-logo {
+  font-family: var(--serif-font);
+  color: var(--gold);
   font-size: 11px;
-  letter-spacing: .1em;
+  letter-spacing: .22em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
+.header-cta {
+  font-size: 10px;
+  letter-spacing: .12em;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 6px 14px;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+}
+.header-cta:hover { background: var(--gold); color: var(--ink); }
 
-/* ── HERO ── */
+/* ── HERO ─────────────────────────────────────────────────── */
 .hero {
   background: var(--ink);
-  color: #fff;
-  padding: 72px 24px 80px;
-  text-align: center;
+  color: var(--ivory);
+  padding: 96px 22px 100px;
   position: relative;
   overflow: hidden;
 }
@@ -67,751 +95,1159 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 60% 40%, rgba(200,169,110,.12) 0%, transparent 65%);
+  background: radial-gradient(ellipse 70% 60% at 80% 20%,
+    rgba(200,169,110,.10) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-eyebrow {
   display: inline-block;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  font-size: 11px;
-  letter-spacing: .2em;
-  padding: 5px 16px;
-  margin-bottom: 32px;
+  font-size: 10px;
+  letter-spacing: .28em;
+  color: var(--gold);
+  border-top: 1px solid var(--gold);
+  padding-top: 8px;
+  margin-bottom: 36px;
+  text-transform: uppercase;
 }
-.hero h1 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(24px, 5vw, 42px);
+.hero-headline {
+  font-family: var(--serif-font);
+  font-size: clamp(34px, 7.5vw, 58px);
   font-weight: 900;
-  line-height: 1.45;
-  margin-bottom: 28px;
+  line-height: 1.38;
   letter-spacing: .02em;
+  margin-bottom: 32px;
+  color: var(--ivory);
 }
-.hero h1 em {
+.hero-headline em {
   font-style: normal;
-  color: var(--accent);
+  color: var(--gold);
 }
-.hero-sub {
-  color: #bbb;
-  font-size: 16px;
+.hero-body {
+  font-size: clamp(15px, 3.5vw, 17px);
+  color: rgba(245,240,232,.75);
+  line-height: 2;
   max-width: 520px;
-  margin: 0 auto 40px;
-  line-height: 1.9;
+  margin-bottom: 20px;
 }
-.hero-cta {
+.hero-body strong {
+  color: var(--ivory);
+  font-weight: 500;
+}
+.hero-cta-wrap {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.cta-btn {
   display: inline-block;
-  background: var(--accent);
+  background: var(--gold);
   color: var(--ink);
   font-weight: 700;
   font-size: 15px;
-  padding: 16px 40px;
-  letter-spacing: .05em;
-  text-decoration: none;
-  transition: background .2s;
-}
-.hero-cta:hover { background: var(--accent-dark); color: #fff; }
-.hero-note {
-  margin-top: 16px;
-  font-size: 11px;
-  color: #666;
   letter-spacing: .08em;
+  padding: 18px 44px;
+  text-decoration: none;
+  transition: background .2s, transform .15s;
+  position: relative;
+}
+.cta-btn:hover { background: var(--gold-dark); transform: translateY(-1px); }
+.cta-note {
+  font-size: 11px;
+  color: rgba(245,240,232,.45);
+  letter-spacing: .06em;
 }
 
-/* ── SECTION BASE ── */
-section { padding: 72px 24px; }
-.inner { max-width: 720px; margin: 0 auto; }
+/* ── SECTION BASE ─────────────────────────────────────────── */
+section { padding: 88px 0; }
+section.slim { padding: 72px 0; }
 
 .section-label {
-  font-size: 10px;
-  letter-spacing: .25em;
-  color: var(--accent);
-  margin-bottom: 12px;
   display: block;
-}
-.section-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(20px, 3.5vw, 30px);
-  font-weight: 700;
-  line-height: 1.5;
-  margin-bottom: 24px;
-}
-.rule {
-  width: 40px;
-  height: 2px;
-  background: var(--accent);
-  margin-bottom: 32px;
+  font-size: 10px;
+  letter-spacing: .28em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
-/* ── PAIN ── */
-.pain { background: var(--bg-warm); }
+/* 大見出し（流し読みで引っかかるジャンプ率設計） */
+.h2 {
+  font-family: var(--serif-font);
+  font-size: clamp(26px, 5.5vw, 42px);
+  font-weight: 900;
+  line-height: 1.42;
+  letter-spacing: .02em;
+  margin-bottom: 32px;
+}
+.dark .h2 { color: var(--ivory); }
+
+/* 中見出し */
+.h3 {
+  font-family: var(--serif-font);
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: 700;
+  line-height: 1.55;
+  margin-bottom: 14px;
+  margin-top: 52px;
+  padding-left: 16px;
+  border-left: 3px solid var(--gold);
+}
+.dark .h3 { color: var(--ivory); border-left-color: var(--gold); }
+
+.body-text {
+  font-size: clamp(15px, 3.5vw, 17px);
+  line-height: 2;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+.dark .body-text { color: rgba(245,240,232,.82); }
+
+.body-text strong, .dark .body-text strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+.dark .body-text strong { color: var(--ivory); }
+
+.body-text em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* ── GOLD RULE ────────────────────────────────────────────── */
+.gold-rule {
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  margin-bottom: 40px;
+}
+
+/* ── PAIN LIST ────────────────────────────────────────────── */
 .pain-list {
   list-style: none;
   margin: 32px 0;
 }
 .pain-list li {
-  padding: 16px 20px;
-  border-left: 3px solid var(--rule);
-  margin-bottom: 12px;
-  background: var(--bg-card);
-  font-size: 16px;
-  color: var(--ink-light);
-  transition: border-color .2s;
+  font-size: clamp(15px, 3.5vw, 17px);
+  line-height: 1.75;
+  padding: 16px 0 16px 28px;
+  position: relative;
+  border-bottom: 1px solid var(--rule);
+  color: rgba(245,240,232,.82);
 }
-.pain-list li:hover { border-color: var(--accent); }
 .pain-list li::before {
-  content: '□ ';
-  color: var(--ink-mute);
-}
-.pain-conclusion {
-  background: var(--ink);
-  color: #fff;
-  padding: 28px 32px;
-  margin-top: 32px;
-  font-size: 16px;
-  line-height: 1.9;
-}
-.pain-conclusion strong {
-  color: var(--accent);
-  font-size: 17px;
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 300;
 }
 
-/* ── CAUSE ── */
-.cause-block {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+/* ── EMPHASIS BOX ─────────────────────────────────────────── */
+.emph-box {
+  border: 1px solid var(--gold);
+  padding: 28px 28px;
+  margin: 36px 0;
+  position: relative;
+}
+.emph-box::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: -1px;
+  width: 40px; height: 3px;
+  background: var(--gold);
+}
+.emph-box p {
+  font-family: var(--serif-font);
+  font-size: clamp(16px, 3.8vw, 20px);
+  line-height: 1.8;
+  font-weight: 700;
+}
+.dark .emph-box p { color: var(--ivory); }
+
+/* ── STEP LIST ────────────────────────────────────────────── */
+.step-list {
+  list-style: none;
+  margin: 28px 0;
+  counter-reset: steps;
+}
+.step-list li {
+  counter-increment: steps;
+  font-size: clamp(14px, 3.2vw, 16px);
+  line-height: 1.8;
+  padding: 14px 16px 14px 52px;
+  position: relative;
+  background: rgba(200,169,110,.06);
+  margin-bottom: 4px;
+  color: rgba(245,240,232,.82);
+}
+.dark .step-list li { color: rgba(245,240,232,.82); }
+.light .step-list li, section.light .step-list li { 
+  color: var(--ink); 
+  background: rgba(200,169,110,.10);
+}
+.step-list li::before {
+  content: counter(steps);
+  position: absolute;
+  left: 16px;
+  top: 50%; transform: translateY(-50%);
+  font-family: var(--serif-font);
+  font-size: 11px;
+  font-weight: 900;
+  color: var(--gold);
+  width: 22px; height: 22px;
+  border: 1px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  line-height: 1;
+}
+.step-list li strong { color: var(--gold); font-weight: 600; }
+
+/* ── BELIEF CARDS ─────────────────────────────────────────── */
+.belief-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
   margin: 40px 0;
 }
-@media(max-width:600px){ .cause-block { grid-template-columns: 1fr; } }
-.cause-card {
-  padding: 28px;
-  border: 1px solid var(--rule);
-  background: var(--bg-card);
+.belief-card {
+  padding: 36px 28px 36px 28px;
+  border-bottom: 1px solid rgba(200,169,110,.2);
+  position: relative;
 }
-.cause-card .label {
-  font-size: 15px;
+.belief-card:first-child { border-top: 1px solid rgba(200,169,110,.2); }
+.belief-card-num {
+  font-family: var(--serif-font);
+  font-size: 11px;
   letter-spacing: .2em;
+  color: var(--gold);
   margin-bottom: 12px;
   display: block;
 }
-.cause-card.bad .label { color: var(--danger); }
-.cause-card.good .label { color: var(--success); }
-.cause-card h3 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 16px;
+.belief-card-title {
+  font-family: var(--serif-font);
+  font-size: clamp(18px, 4vw, 22px);
   font-weight: 700;
-  margin-bottom: 10px;
   line-height: 1.5;
+  margin-bottom: 20px;
+  color: rgba(245,240,232,.5);
+  text-decoration: line-through;
+  text-decoration-color: rgba(200,169,110,.5);
 }
-.cause-card p { font-size: 16px; color: var(--ink-light); line-height: 1.8; }
-
-/* ── MISUNDERSTANDING ── */
-.mis { background: var(--bg-warm); }
-.mis-item {
-  border-bottom: 1px solid var(--rule);
-  padding: 36px 0;
-}
-.mis-item:last-child { border-bottom: none; }
-.mis-num {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 40px;
-  font-weight: 900;
-  color: var(--rule);
-  line-height: 1;
-  margin-bottom: 8px;
-}
-.mis-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: var(--ink);
-}
-.mis-body {
-  font-size: 16px;
-  color: var(--ink-light);
-  line-height: 1.95;
-}
-.mis-result {
-  margin-top: 16px;
-  padding: 16px 20px;
-  background: var(--bg-card);
-  border-left: 3px solid var(--accent);
-  font-size: 16px;
-  color: var(--ink-light);
-}
-
-/* ── STORY ── */
-.story-body {
-  font-size: 16px;
-  color: var(--ink-light);
+.belief-card-body {
+  font-size: clamp(14px, 3.2vw, 16px);
   line-height: 2;
-  margin-bottom: 24px;
+  color: rgba(245,240,232,.75);
+  margin-bottom: 16px;
 }
-.credentials {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 16px;
-  margin: 40px 0;
-}
-.cred-item {
-  text-align: center;
-  padding: 24px 16px;
-  border: 1px solid var(--rule);
-  background: var(--bg-card);
-}
-.cred-num {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 32px;
-  font-weight: 900;
-  color: var(--accent);
-  line-height: 1;
-  margin-bottom: 6px;
-}
-.cred-label {
-  font-size: 11px;
-  color: var(--ink-mute);
-  letter-spacing: .1em;
-  line-height: 1.6;
+.belief-card-result {
+  font-size: clamp(13px, 3vw, 14px);
+  color: var(--gold);
+  letter-spacing: .04em;
+  padding: 10px 16px;
+  border-left: 2px solid var(--gold);
+  background: rgba(200,169,110,.06);
+  margin-top: 16px;
 }
 
-/* ── RESULTS ── */
-.results { background: var(--bg-warm); }
-.result-list {
+/* ── MECHANISM ────────────────────────────────────────────── */
+/* ── MECHANISM GRID ───────────────────────────────────────── */
+.mechanism-grid {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-top: 40px;
+  gap: 3px;
+  margin: 36px 0;
 }
-.result-item {
-  background: var(--bg-card);
-  padding: 28px 32px;
-  border-left: 4px solid var(--accent);
+.mech-row {
+  display: flex;
+  align-items: stretch;
+  gap: 3px;
 }
-.result-quote {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 16px;
-  line-height: 1.9;
+.mech-level {
+  width: 64px;
+  min-width: 64px;
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 4px;
+}
+.mech-level span {
+  font-family: var(--serif-font);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: .06em;
+}
+.mech-content {
+  flex: 1;
+  background: #f0ece4;
+  border: 1px solid #d8d2c6;
+  padding: 18px 22px;
+}
+.mech-label {
+  font-size: 10px;
+  letter-spacing: .2em;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+  font-weight: 700;
+}
+.mech-text {
+  font-size: clamp(14px, 3.2vw, 15px);
+  line-height: 1.8;
+  color: #333;
+}
+.mech-text strong { color: var(--ink); }
+
+.mech-row.active .mech-level { background: var(--gold); }
+.mech-row.active .mech-level span { color: var(--ink); }
+.mech-row.active .mech-content {
+  background: var(--ink);
+  border-color: var(--gold);
+}
+.mech-row.active .mech-label { color: var(--gold); }
+.mech-row.active .mech-text { color: var(--ivory); font-weight: 500; }
+.mech-row.active .mech-text strong { color: var(--gold); }
+
+/* ── LEVEL STEPS ──────────────────────────────────────────── */
+.level-steps {
+  list-style: none;
+  margin: 28px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.level-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  font-size: clamp(14px, 3.2vw, 15px);
+  line-height: 1.75;
+  overflow: hidden;
+}
+.level-step .ls-tag {
+  font-family: var(--serif-font);
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--ivory);
+  background: #555;
+  min-width: 48px;
+  padding: 14px 0;
+  text-align: center;
+  flex-shrink: 0;
+  letter-spacing: .04em;
+}
+.level-step .ls-body {
+  flex: 1;
+  padding: 13px 18px;
+  background: #eee;
+  color: #444;
+  border: 1px solid #ddd;
+  border-left: none;
+}
+.level-step.highlighted .ls-tag {
+  background: var(--ink);
+  color: var(--gold);
+}
+.level-step.highlighted .ls-body {
+  background: var(--ink);
+  color: var(--ivory);
+  border-color: var(--ink);
+  font-weight: 500;
+}
+.level-step.highlighted .ls-body strong {
+  color: var(--gold);
+}
+
+/* ── STATS ROW ────────────────────────────────────────────── */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+  margin: 44px 0;
+}
+.stat-cell {
+  background: rgba(200,169,110,.10);
+  border: 1px solid rgba(200,169,110,.20);
+  padding: 32px 16px;
+  text-align: center;
+}
+.stat-num {
+  display: block;
+  font-family: var(--serif-font);
+  font-size: clamp(32px, 7vw, 48px);
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+.stat-label {
+  font-size: clamp(13px, 3vw, 14px);
+  color: rgba(245,240,232,.88);
+  line-height: 1.65;
+  letter-spacing: .04em;
+}
+
+/* ── BENEFIT CARDS ────────────────────────────────────────── */
+.benefit-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 36px 0;
+}
+.benefit-card {
+  padding: 32px 24px;
+  background: var(--ivory-dark);
+  position: relative;
+  overflow: hidden;
+}
+.benefit-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--gold);
+}
+.bc-num {
+  font-size: 10px;
+  letter-spacing: .22em;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: block;
+}
+.bc-title {
+  font-family: var(--serif-font);
+  font-size: clamp(16px, 3.8vw, 20px);
+  font-weight: 700;
+  line-height: 1.5;
   color: var(--ink);
   margin-bottom: 16px;
 }
-.result-meta {
-  font-size: 12px;
-  color: var(--ink-mute);
-  letter-spacing: .05em;
-}
-.result-cvr {
-  display: inline-block;
-  background: var(--ink);
-  color: var(--accent);
-  font-size: 12px;
-  padding: 3px 10px;
-  margin-top: 8px;
-  font-weight: 700;
+.bc-body {
+  font-size: clamp(14px, 3.2vw, 15px);
+  line-height: 1.95;
+  color: #444;
 }
 
-/* ── FAQ ── */
-.faq-list { margin-top: 40px; }
+/* ── TESTIMONIALS ─────────────────────────────────────────── */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 36px 0;
+}
+.testi {
+  padding: 36px 28px;
+  background: rgba(200,169,110,.07);
+  position: relative;
+}
+.testi-quote {
+  font-size: clamp(14px, 3.2vw, 16px);
+  line-height: 2;
+  color: rgba(245,240,232,.82);
+  font-style: italic;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border-left: 2px solid rgba(200,169,110,.4);
+}
+.testi-meta {
+  font-size: 11px;
+  letter-spacing: .08em;
+  color: var(--gold);
+}
+.testi-cvr {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ivory);
+  background: rgba(200,169,110,.2);
+  padding: 4px 12px;
+  letter-spacing: .04em;
+}
+
+/* ── FAQ ──────────────────────────────────────────────────── */
+.faq-list {
+  list-style: none;
+  margin: 36px 0;
+}
 .faq-item {
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid rgba(200,169,110,.18);
   padding: 28px 0;
 }
+.faq-item:first-child { border-top: 1px solid rgba(200,169,110,.18); }
 .faq-q {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 15px;
+  font-family: var(--serif-font);
+  font-size: clamp(15px, 3.5vw, 17px);
   font-weight: 700;
+  line-height: 1.6;
+  color: var(--ivory);
   margin-bottom: 14px;
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
+  padding-left: 24px;
+  position: relative;
 }
 .faq-q::before {
   content: 'Q';
-  color: var(--accent);
-  font-size: 18px;
-  line-height: 1.2;
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  font-size: 11px;
+  color: var(--gold);
+  font-weight: 900;
+  top: 3px;
 }
 .faq-a {
-  font-size: 16px;
-  color: var(--ink-light);
-  line-height: 1.9;
-  padding-left: 30px;
+  font-size: clamp(14px, 3.2vw, 15px);
+  line-height: 2;
+  color: rgba(245,240,232,.72);
+  padding-left: 24px;
 }
 
-/* ── FORM ── */
-.form-section {
+/* ── AFTER-AFTER ──────────────────────────────────────────── */
+.after-after {
   background: var(--ink);
-  color: #fff;
-  padding: 80px 24px;
+  padding: 96px 22px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(200,169,110,.2);
+  border-bottom: 1px solid rgba(200,169,110,.2);
 }
-.form-section .section-title { color: #fff; }
-.form-section .rule { background: var(--accent); }
-.form-lead {
-  color: #aaa;
-  font-size: 16px;
-  line-height: 1.9;
-  margin-bottom: 48px;
-  max-width: 600px;
+.after-after::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 100%,
+    rgba(200,169,110,.10) 0%, transparent 70%);
+  pointer-events: none;
 }
-.form-lead strong { color: var(--accent); }
+.aa-text {
+  font-family: var(--serif-font);
+  font-size: clamp(22px, 5vw, 36px);
+  font-weight: 900;
+  line-height: 1.55;
+  color: var(--ivory);
+  max-width: 540px;
+  margin: 0 auto 28px;
+  letter-spacing: .02em;
+}
+.aa-text em {
+  font-style: normal;
+  color: var(--gold);
+}
+.aa-body {
+  font-size: clamp(14px, 3.2vw, 16px);
+  line-height: 2;
+  color: rgba(245,240,232,.88);
+  max-width: 480px;
+  margin: 0 auto 16px;
+}
 
-.diag-form {
-  max-width: 600px;
-  margin: 0 auto;
+/* ── CTA SECTION ──────────────────────────────────────────── */
+.cta-section {
+  background: var(--ivory);
+  padding: 96px 22px;
+}
+.cta-section .h2 { color: var(--ink); }
+
+.form-wrap {
+  background: #fff;
+  border: 1px solid var(--ivory-dark);
+  padding: 36px 28px;
+  margin-top: 40px;
+  box-shadow: 0 4px 32px rgba(20,20,20,.07);
 }
 .form-group {
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 .form-label {
   display: block;
   font-size: 12px;
-  letter-spacing: .15em;
-  color: var(--accent);
-  margin-bottom: 8px;
-}
-.form-label .required {
-  color: #e74c3c;
-  margin-left: 6px;
-  font-size: 10px;
-}
-.form-label .note {
+  letter-spacing: .12em;
   color: #666;
-  font-size: 10px;
-  margin-left: 8px;
-  letter-spacing: 0;
+  margin-bottom: 8px;
+  text-transform: uppercase;
 }
-.form-input,
-.form-select {
+.form-label .req {
+  color: var(--gold);
+  margin-left: 4px;
+}
+.form-input, .form-select {
   width: 100%;
-  background: rgba(255,255,255,.06);
-  border: 1px solid #333;
+  border: 1px solid #ddd;
   border-radius: 0;
-  color: #fff;
-  font-family: 'Noto Sans JP', sans-serif;
+  padding: 13px 16px;
   font-size: 15px;
-  padding: 14px 16px;
-  outline: none;
+  font-family: var(--body-font);
+  color: var(--ink);
+  background: var(--ivory);
   transition: border-color .2s;
-  -webkit-appearance: none;
+  appearance: none;
 }
-.form-input:focus,
-.form-select:focus {
-  border-color: var(--accent);
-  background: rgba(255,255,255,.09);
+.form-input:focus, .form-select:focus {
+  outline: none;
+  border-color: var(--gold);
 }
-.form-input::placeholder { color: #555; }
-.form-select option { background: #1a1a1a; color: #fff; }
-
 .form-hint {
-  margin-top: 7px;
   font-size: 11px;
-  color: #555;
-  line-height: 1.7;
+  color: var(--mute);
+  margin-top: 6px;
 }
-
-.submit-wrap {
-  margin-top: 44px;
-  text-align: center;
-}
+.submit-wrap { margin-top: 8px; }
 .submit-btn {
   width: 100%;
-  background: var(--accent);
+  background: var(--gold);
   color: var(--ink);
   border: none;
-  font-family: 'Noto Sans JP', sans-serif;
+  padding: 18px 24px;
   font-size: 16px;
   font-weight: 700;
-  padding: 20px 32px;
-  letter-spacing: .08em;
+  font-family: var(--body-font);
+  letter-spacing: .06em;
   cursor: pointer;
-  transition: background .2s, color .2s;
+  transition: background .2s, transform .15s;
+  margin-top: 8px;
 }
-.submit-btn:hover { background: var(--accent-dark); color: #fff; }
-.submit-note {
+.submit-btn:hover { background: var(--gold-dark); transform: translateY(-1px); }
+.form-notes {
   margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-note {
   font-size: 11px;
-  color: #aaa;
-  line-height: 1.8;
+  color: var(--mute);
+  letter-spacing: .04em;
 }
 
-/* ── SUCCESS ── */
+/* ── SUCCESS MESSAGE ──────────────────────────────────────── */
 .success-msg {
   display: none;
   text-align: center;
-  padding: 60px 32px;
-  max-width: 520px;
-  margin: 0 auto;
+  padding: 48px 24px;
 }
 .success-msg.show { display: block; }
-.success-icon {
-  font-size: 48px;
-  margin-bottom: 24px;
-}
-.success-msg h3 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 22px;
-  color: var(--accent);
-  margin-bottom: 16px;
-}
-.success-msg p { color: #aaa; font-size: 14px; line-height: 1.9; }
-
-/* ── FOOTER ── */
-footer {
-  background: #111;
-  padding: 40px 24px;
-  text-align: center;
-}
-.footer-name {
-  font-family: 'Noto Serif JP', serif;
-  color: var(--accent);
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-.footer-bio {
-  font-size: 11px;
-  color: #aaa;
+.success-msg p {
+  font-family: var(--serif-font);
+  font-size: 18px;
+  color: var(--ink);
   line-height: 1.8;
 }
-.footer-disclaimer {
+.success-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: block;
+  color: var(--gold);
+}
+
+/* ── FOOTER ───────────────────────────────────────────────── */
+footer {
+  background: var(--ink);
+  color: rgba(245,240,232,.45);
+  padding: 48px 22px;
+  border-top: 1px solid rgba(200,169,110,.15);
+}
+.footer-name {
+  font-family: var(--serif-font);
+  font-size: 15px;
+  color: rgba(245,240,232,.8);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.footer-creds {
+  font-size: 12px;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+.footer-legal {
+  font-size: 11px;
+  line-height: 1.85;
+  border-top: 1px solid rgba(200,169,110,.12);
+  padding-top: 20px;
   margin-top: 20px;
-  font-size: 10px;
-  color: #777;
-  line-height: 1.7;
 }
 
-/* ── ANIMATIONS ── */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity .6s ease, transform .6s ease;
+/* ── SECTION DIVIDER ──────────────────────────────────────── */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 22px;
+  max-width: 680px;
+  margin: 0 auto;
 }
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+.divider-line { flex: 1; height: 1px; background: var(--rule); }
+.divider-mark {
+  font-size: 9px;
+  letter-spacing: .3em;
+  color: var(--gold);
+  text-transform: uppercase;
 }
 
-@media(max-width:600px){
-  section { padding: 56px 20px; }
-  .hero { padding: 56px 20px 64px; }
-  .pain-conclusion { padding: 22px 20px; }
-  .result-item { padding: 22px 20px; }
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .stats-row { grid-template-columns: repeat(2,1fr); }
+  .hero { padding: 72px 22px 80px; }
+  section { padding: 72px 0; }
+  .form-wrap { padding: 28px 20px; }
+  .belief-card { padding: 28px 20px; }
+  .emph-box { padding: 22px 20px; }
 }
+
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- ──────────────────── HEADER ──────────────────── -->
 <header class="site-header">
-  <div class="logo">KONISHI LP DIAGNOSTICS</div>
-  <div class="tagline">CVRは構成で変わる</div>
+  <span class="header-logo">KONISHI LP DIAGNOSTICS</span>
+  <a href="#cta" class="header-cta">無料診断を受ける</a>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-eyebrow">楽天LP 無料診断</div>
-  <h1>広告を増やす前に、<br><em>ページで負けている</em><br>原因を特定してください。</h1>
-  <p class="hero-sub">
-    売れないページの90%は、デザインの問題ではありません。<br>
-    「購買心理の導線」が設計されていないことが原因です。<br>
-    その診断を、今なら無料で受けられます。
-  </p>
-  <a href="#form" class="hero-cta">▼ 無料診断を申し込む（30秒）</a>
-  <p class="hero-note">※ 営業電話一切なし　※ 診断後の有料提案はご希望の場合のみ</p>
+<!-- ──────────────────── HERO ──────────────────── -->
+<section class="hero" aria-label="ヒーロー">
+  <div class="inner">
+    <span class="hero-eyebrow reveal">RAKUTEN LP DIAGNOSIS</span>
+    <h1 class="hero-headline reveal reveal-d1">
+      改善するたびに、<br>
+      <em>何かが違う</em>気がしていた。
+    </h1>
+    <p class="hero-body reveal reveal-d2">
+      写真を撮り直した。バナーを新しくした。コンサルに相談した。
+    </p>
+    <p class="hero-body reveal reveal-d2">
+      それでも数字は動かず、「次は何をすればいいのか」がわからなくなってきた。
+    </p>
+    <p class="hero-body reveal reveal-d3">
+      この違和感の正体は、スキル不足でも努力不足でもありません。<br>
+      <strong>「どこで負けているか」を見ないまま改善を繰り返しているからです。</strong>
+    </p>
+    <div class="hero-cta-wrap reveal reveal-d4">
+      <a href="#cta" class="cta-btn">▼ 無料診断を申し込む（30秒）</a>
+      <span class="cta-note">※ 営業電話一切なし　※ 診断後の有料提案はご希望の場合のみ</span>
+    </div>
+  </div>
 </section>
 
-<!-- PAIN -->
-<section class="pain">
-  <div class="inner fade-in">
-    <span class="section-label">現状</span>
-    <h2 class="section-title">あなたは今、<br>こんな状態にありませんか？</h2>
-    <div class="rule"></div>
-    <ul class="pain-list">
+<!-- ──────────────────── SECTION 1：共感 ──────────────────── -->
+<section class="dark slim" aria-label="共感">
+  <div class="inner">
+    <span class="section-label reveal">CURRENT STATE</span>
+    <h2 class="h2 reveal">あなたは今、<br>こんな状態に<br>ありませんか？</h2>
+    <div class="gold-rule reveal"></div>
+    <ul class="pain-list reveal">
       <li>広告費を増やしても、利益が比例しない</li>
       <li>ページを修正しても、CVRが上がらない</li>
-      <li>「次は何をすればいいのか」が、分からなくなってきている</li>
       <li>デザインを綺麗にしたのに、売上が変わらなかった</li>
-      <li>楽天コンサルに頼んだが、広告費だけが増えた</li>
+      <li>楽天コンサルに頼んだら、広告費だけが増えた</li>
+      <li>「次は何をすればいいのか」が、もうわからない</li>
     </ul>
-    <div class="pain-conclusion">
-      原因はおそらく、広告でもデザインでもありません。<br>
-      <strong>売れないページの90%に共通する本当の原因は、<br>「購買心理の導線」が設計されていないことにあります。</strong>
+    <div class="emph-box reveal">
+      <p>もしひとつでも当てはまるなら、原因は広告でも、デザインでも、コンサルでもありません。</p>
     </div>
   </div>
 </section>
 
-<!-- CAUSE -->
-<section>
-  <div class="inner fade-in">
-    <span class="section-label">本当の原因</span>
-    <h2 class="section-title">なぜ、改善しても<br>数字が動かないのか。</h2>
-    <div class="rule"></div>
-    <p style="color:var(--ink-light);font-size:16px;line-height:2;margin-bottom:32px;">
-      楽天店舗様が遠回りする原因は、スキル不足でも努力不足でもありません。
-      「どこで負けているか」を見ないまま改善を繰り返しているからです。
-    </p>
-    <div class="cause-block">
-      <div class="cause-card bad">
-        <span class="label">デザイナーの目標</span>
-        <h3>見栄えが良く、ポートフォリオに載せられる美しいページを作る</h3>
-        <p>デザイナーは「見た目」のプロです。「なぜお客様が買わないのか」を分析するプロではありません。</p>
-      </div>
-      <div class="cause-card good">
-        <span class="label">あなたの目標</span>
-        <h3>競合比較に勝ち、1円でも多く利益を残す</h3>
-        <p>必要なのはデザインではなく、お客様が「自分に合っている」「今これを選ぶべきだ」と決断できる心理導線です。</p>
-      </div>
-    </div>
-    <p style="color:var(--ink-light);font-size:16px;line-height:2;margin-top:8px;">
-      この違いが分からないまま作られたページは、どれだけ綺麗でも競合比較で負けてしまいます。 しかし、「何が他と違うのか」「なぜ自分に合っているのか」「なぜ今これを選ぶべきなのか」—— この3つを正しい順番で配置するだけで、CVRは平均1.8倍改善されます。
-    </p>
-  </div>
-</section>
-
-<!-- MISUNDERSTANDING -->
-<section class="mis">
-  <div class="inner fade-in">
-    <span class="section-label">3つの誤解</span>
-    <h2 class="section-title">楽天店舗が遠回りする、<br>3つの誤解。</h2>
-    <div class="rule"></div>
-    <div class="mis-item">
-      <div class="mis-num">01</div>
-      <div class="mis-title">LPを修正したら CVRは上がる</div>
-      <p class="mis-body">
-        楽天では、商品は3段階でふるいにかけられます。クリック前（サムネ）→ 比較段階（サムネ5枚目まで）→ 最終判断（6枚目以降）。
-        どこで落とされているかを見ないまま一部だけを改善すると、かえって原因が分からなくなります。
-      </p>
-      <div class="mis-result">
-        ある美容雑貨店舗様は、サムネ5枚目までを変えただけで翌月にCVRが1.9倍に改善。それ以外は一文字も変えていません。
-      </div>
-    </div>
-    <div class="mis-item">
-      <div class="mis-num">02</div>
-      <div class="mis-title">広告費を増やせば 売上は上がる</div>
-      <p class="mis-body">
-        CVRが低いまま広告を回すと、1件あたりの獲得コストが利益を食い潰します。
-        広告は「売れるページ」に流すから利益が出る。売れないページに流せば、広告費の分だけ赤字が積み上がります。
-      </p>
-      <div class="mis-result">
-        ある食品店舗様は広告費を一旦止め、ページ改善に集中した結果、3ヶ月後に広告費を半分に減らした状態で以前と同じ売上を達成しました。
-      </div>
-    </div>
-    <div class="mis-item">
-      <div class="mis-num">03</div>
-      <div class="mis-title">楽天コンサルに依頼すれば 問題は全て解決する</div>
-      <p class="mis-body">
-        多くのコンサルのページ改善は、デザイナーへの外注です。見た目は変わるのに、購買心理の設計は変わらない。
-        結果、見栄えの良いページに広告を流しても、CVRは改善されず広告費だけが膨らみます。
-      </p>
-      <div class="mis-result">
-        ある店舗様はコンサル契約でリニューアル＋RPP強化後、売上は月商600万→750万に伸びたが、広告費を差し引くと利益はほぼ変わっていませんでした。
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STORY -->
-<section>
-  <div class="inner fade-in">
-    <span class="section-label">私について</span>
-    <h2 class="section-title">なぜ私が<br>LP診断を始めたのか。</h2>
-    <div class="rule"></div>
-    <p class="story-body">
-      私も、あなたと同じ壁にぶつかっていました。「デザインを変えても、売上が伸びない」「広告を増やしても、利益が残らない」——楽天に携わって20年、1000以上のページ改善に関わってきた私も、最初の3年間は失敗の連続でした。
-    </p>
-    <p class="story-body">
-      しかし、ある日気づいたのです。売れないページの共通点は「デザインが悪い」ことではなく、「お客様が決断できない」こと。その気づきから、私は購買心理の導線設計に全てを注ぐようになりました。
-    </p>
-    <div class="credentials">
-      <div class="cred-item">
-        <div class="cred-num">2<span style="font-size:18px">回</span></div>
-        <div class="cred-label">楽天総合<br>ランキング1位</div>
-      </div>
-      <div class="cred-item">
-        <div class="cred-num">11<span style="font-size:18px">回</span></div>
-        <div class="cred-label">楽天年間<br>ランキング1位</div>
-      </div>
-      <div class="cred-item">
-        <div class="cred-num">1000<span style="font-size:14px">回+</span></div>
-        <div class="cred-label">楽天ランキング<br>1位獲得</div>
-      </div>
-      <div class="cred-item">
-        <div class="cred-num">1.8<span style="font-size:18px">倍</span></div>
-        <div class="cred-label">26店舗<br>平均CVR改善率</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RESULTS -->
-<section class="results">
-  <div class="inner fade-in">
-    <span class="section-label">実績</span>
-    <h2 class="section-title">診断を受けた<br>店舗様の声。</h2>
-    <div class="rule"></div>
-    <div class="result-list">
-      <div class="result-item">
-        <p class="result-quote">「診断で指摘された"5枚目までの構成"を変えただけで、CVRが2.1倍に改善しました。正直、こんなに変わるとは思っていませんでした」</p>
-        <div class="result-meta">健康食品店舗様・月商780万→1,380万円</div>
-        <div class="result-cvr">CVR 2.1% → 4.3%</div>
-      </div>
-      <div class="result-item">
-        <p class="result-quote">「『今は広告を増やすべきではない』と言われ、まずページを整えることに集中しました。結果、3ヶ月後に楽天ランキング初受賞できました」</p>
-        <div class="result-meta">美容雑貨店舗様</div>
-        <div class="result-cvr">CVR 7.3% → 14.8%</div>
-      </div>
-      <div class="result-item">
-        <p class="result-quote">「診断レポートを読んで、自分が"間違った場所"に時間を使っていたことに気づきました。小西さんの指摘通りに修正したら、翌月に売上が1.5倍になりました」</p>
-        <div class="result-meta">生活雑貨店舗様・月商270万→400万円</div>
-        <div class="result-cvr">CVR 3.4% → 6.1%</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section>
-  <div class="inner fade-in">
-    <span class="section-label">よくある質問</span>
-    <h2 class="section-title">よくあるご質問。</h2>
-    <div class="rule"></div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-q">診断後、営業電話がかかってきますか？</div>
-        <p class="faq-a">一切ありません。診断レポートをお送りした後、有料提案を希望される場合のみご連絡ください。</p>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">本当に無料ですか？</div>
-        <p class="faq-a">はい、診断は完全無料です。診断後、有料支援を希望される場合のみ、別途ご提案いたします。</p>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">診断にはどのくらい時間がかかりますか？</div>
-        <p class="faq-a">申込後、2営業日以内にレポートをお送りします。あなたがすることは、フォームに30秒入力するだけです。</p>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">診断レポートは、どんな内容ですか？</div>
-        <p class="faq-a">①今、売上を止めているポイント　②最初に改善すべき1点　③それにより失っている本来得られる利益——この3点を数値とともにお伝えします。診断レポートを読むだけで「次に何をすべきか」が明確になります。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FORM -->
-<section class="form-section" id="form">
+<!-- ──────────────────── SECTION 2：原因の再定義 ──────────────────── -->
+<section class="light" aria-label="原因の再定義">
   <div class="inner">
-    <span class="section-label">無料診断</span>
-    <h2 class="section-title">無料LP診断を<br>申し込む。</h2>
-    <div class="rule"></div>
-    <p class="form-lead">
-      このLPを読んで「これはページの問題だ」と感じた方は、以下のフォームから30秒で申込完了です。
+    <span class="section-label reveal">ROOT CAUSE</span>
+    <h2 class="h2 reveal">
+      同じデザイン会社に頼んだのに、<br>
+      A店は転換率が2倍になり、<br>
+      B店は何も変わらなかった。
+    </h2>
+    <div class="gold-rule reveal"></div>
+    <p class="body-text reveal">この差はどこにあるのか。</p>
+    <p class="body-text reveal">
+      多くの楽天店舗が遠回りする理由は、こういう構造にあります。
+    </p>
+    <p class="body-text reveal">
+      ページを見に来た人が「買わなかった」のではない。
+    </p>
+    <div class="emph-box reveal" style="border-color: var(--gold);">
+      <p style="color: var(--ink);">「<em style="color: var(--gold-dark); font-style:normal; font-weight:700;">選べなかった</em>」のです。</p>
+    </div>
+    <p class="body-text reveal">
+      「選べなかった」のは、読者の頭の中にある判断軸と、ページが語りかける順序が<strong>ズレていた</strong>から。このズレはデザインでは解決できません。
+    </p>
+    <p class="body-text reveal">
+      なぜなら、デザインは「見やすさ」のプロであり、「なぜお客様が選べないのか」を分析するプロではないからです。
+    </p>
+    <p class="body-text reveal" style="font-weight:600; font-size: clamp(16px,3.8vw,19px); line-height:1.85;">
+      必要なのは、ページの見た目ではなく——<br>
+      「お客様が自分に合っている、今これを選ぶべきだと<br>判断できる<em>順序</em>」を設計することです。
+    </p>
+  </div>
+</section>
+
+<!-- ──────────────────── SECTION 3：Belief崩し ──────────────────── -->
+<section class="dark" aria-label="3つの誤解">
+  <div class="inner">
+    <span class="section-label reveal">THREE MISBELIEFS</span>
+    <h2 class="h2 reveal">楽天店舗が遠回りする、<br>3つの構造的誤解。</h2>
+    <div class="gold-rule reveal"></div>
+
+    <div class="belief-cards reveal">
+
+      <div class="belief-card">
+        <span class="belief-card-num">MISBELIEF 01</span>
+        <p class="belief-card-title">「LPを修正したら、CVRは上がる」</p>
+        <p class="belief-card-body">
+          ある食品店舗のオーナーは、半年間で4回のリニューアルを繰り返しました。写真、バナー、商品説明、レイアウト——変えられるものはすべて変えた。それでもCVRは変わらなかった。
+        </p>
+        <p class="belief-card-body">
+          なぜか。楽天では商品は3段階でふるいにかけられています。①クリック前（サムネ1枚目）→②比較段階（2〜5枚目）→③最終判断（6枚目以降）。<strong>どの段階で落とされているかを特定せずに修正しても、原因は解消されない。</strong>
+        </p>
+        <div class="belief-card-result">
+          事例：5枚目までのサムネだけを変えた結果、翌月CVRが1.9倍に改善。6枚目以降は一文字も変えていない。
+        </div>
+      </div>
+
+      <div class="belief-card">
+        <span class="belief-card-num">MISBELIEF 02</span>
+        <p class="belief-card-title">「広告費を増やせば、売上は上がる」</p>
+        <p class="belief-card-body">
+          CVRが低いまま広告を回すと、1件あたりの獲得コストが利益を上回ります。広告は「選ばれるページ」に流すから利益が出る仕組みです。選べないページに流しても、広告費の分だけ赤字が積み上がるだけです。
+        </p>
+        <div class="belief-card-result">
+          事例：広告費を一旦止め、ページ改修に集中。3ヶ月後、広告費を半分に減らした状態で以前と同じ売上を達成。
+        </div>
+      </div>
+
+      <div class="belief-card">
+        <span class="belief-card-num">MISBELIEF 03</span>
+        <p class="belief-card-title">「楽天コンサルに依頼すれば、問題は全て解決する」</p>
+        <p class="belief-card-body">
+          多くのコンサルのLP改善は、デザイナーへの外注です。見た目は変わる。しかし「なぜお客様が選べないのか」という購買心理の設計は、変わらない。
+        </p>
+        <div class="belief-card-result">
+          事例：コンサル契約でリニューアル＋RPP強化。月商600万→750万に伸びたが、広告費を差し引くと利益はほぼ変わっていなかった。
+        </div>
+      </div>
+
+    </div>
+
+    <div class="emph-box reveal">
+      <p>3つの誤解の根っこは、ひとつです。<br>
+      「どこで負けているかを特定せずに、見えている部分だけを変えている」——この構造が解消されない限り、何を変えても同じ結果になります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────── SECTION 4：独自メカニズム ──────────────────── -->
+<section class="light" aria-label="独自メカニズム">
+  <div class="inner">
+    <span class="section-label reveal">THE MECHANISM</span>
+    <h2 class="h2 reveal">
+      CVRを決める本当の変数は、<br>
+      「意識レベル」と<br>「構成順序の一致」です。
+    </h2>
+    <div class="gold-rule reveal"></div>
+
+    <p class="body-text reveal">
+      楽天ランキング1位を複数獲得した店舗に共通するのは、デザインのクオリティではありません。<strong>「お客様がそのページを見た瞬間の意識レベル」に合わせた構成順序</strong>でした。
     </p>
 
-    <form class="diag-form" id="diagForm" novalidate>
+    <ul class="level-steps reveal">
+      <li class="level-step"><span class="ls-tag">L1</span><span class="ls-body">問題をまだ認識していない</span></li>
+      <li class="level-step"><span class="ls-tag">L2</span><span class="ls-body">悩みは自覚しているが、解決策がわからない</span></li>
+      <li class="level-step highlighted"><span class="ls-tag">L3</span><span class="ls-body">方向性はわかっているが、何を選べばいいかわからない</span></li>
+      <li class="level-step highlighted"><span class="ls-tag">L4</span><span class="ls-body">複数の商品を比較している ← <strong>楽天検索流入の大半がここ</strong></span></li>
+      <li class="level-step"><span class="ls-tag">L5</span><span class="ls-body">あとは買うだけ</span></li>
+    </ul>
 
-      <div class="form-group">
-        <label class="form-label" for="store_name">
-          店舗名<span class="required">必須</span>
-        </label>
-        <input class="form-input" type="text" id="store_name" name="store_name" placeholder="例：〇〇ショップ" required>
+    <p class="body-text reveal">
+      L4の読者に「うちの商品はこんなに良い」とベネフィットを並べても、選ばれません。L4は「良い商品はいくつかある」という前提のまま見ているため、ベネフィットの追加ではなく<strong>「判断軸の提示」</strong>が必要だからです。
+    </p>
+
+    <h3 class="h3 reveal" style="margin-top:40px;">正しい構成順序</h3>
+
+    <div class="mechanism-grid reveal">
+      <div class="mech-row">
+        <div class="mech-level"><span>2枚目</span></div>
+        <div class="mech-content">
+          <span class="mech-label">巻き戻し</span>
+          <p class="mech-text">読者の失敗体験を言語化し、自己認識を起動する<br>（誤ったL4 → L2への巻き戻し）</p>
+        </div>
       </div>
-
-      <div class="form-group">
-        <label class="form-label" for="name">
-          お名前<span class="required">必須</span>
-        </label>
-        <input class="form-input" type="text" id="name" name="name" placeholder="例：山田 太郎" required>
+      <div class="mech-row">
+        <div class="mech-level"><span>3枚目</span></div>
+        <div class="mech-content">
+          <span class="mech-label">原因の再定義</span>
+          <p class="mech-text">「問題の原因はそこではない」という気づきを与える<br>（L2 → L3の押し上げ）</p>
+        </div>
       </div>
-
-      <div class="form-group">
-        <label class="form-label" for="email">
-          メールアドレス<span class="required">必須</span>
-        </label>
-        <input class="form-input" type="email" id="email" name="email" placeholder="例：yamada@example.com" required>
+      <div class="mech-row">
+        <div class="mech-level"><span>4枚目</span></div>
+        <div class="mech-content">
+          <span class="mech-label">新しい判断軸</span>
+          <p class="mech-text">崩した後の空白を埋める新しい価値基準を提示する<br>（正しいL3の完成）</p>
+        </div>
       </div>
-
-      <div class="form-group">
-        <label class="form-label" for="url">
-          診断したい商品ページURL<span class="required">必須</span>
-        </label>
-        <input class="form-input" type="url" id="url" name="url" placeholder="https://item.rakuten.co.jp/..." required>
-        <p class="form-hint">楽天の商品ページURLをそのまま貼り付けてください</p>
+      <div class="mech-row active">
+        <div class="mech-level"><span>5枚目</span></div>
+        <div class="mech-content">
+          <span class="mech-label">商品の自然登場</span>
+          <p class="mech-text">判断軸の延長線上に、この商品が必然として登場する<br>（L3 → L4遷移の完成）</p>
+        </div>
       </div>
+    </div>
 
-      <div class="form-group">
-        <label class="form-label" for="access">
-          月間アクセス数（訪問数）<span class="required">必須</span>
-          <span class="note">感覚値でOK</span>
-        </label>
-        <select class="form-select" id="access" name="access" required>
-          <option value="" disabled selected>選択してください</option>
-          <option value="under_1000">1,000未満</option>
-          <option value="1000_3000">1,000〜3,000</option>
-          <option value="3000_10000">3,000〜10,000</option>
-          <option value="10000_30000">10,000〜30,000</option>
-          <option value="over_30000">30,000以上</option>
-          <option value="unknown">分からない</option>
-        </select>
-        <p class="form-hint">RMSのアクセス解析で確認できます。おおよそで構いません</p>
+    <div class="emph-box reveal">
+      <p style="color:var(--ink);">この順序が1枚でもズレると、読者は「選べない状態」のまま離脱します。逆に、正しく設計されれば——<em style="color:var(--gold-dark);font-style:normal;font-weight:700;">デザインが変わらなくても、CVRは変わります。</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────── SECTION 5：自己紹介 ──────────────────── -->
+<section class="dark" aria-label="自己紹介">
+  <div class="inner">
+    <span class="section-label reveal">ABOUT</span>
+    <h2 class="h2 reveal">私も、3年間<br>同じ誤解の中に<br>いました。</h2>
+    <div class="gold-rule reveal"></div>
+
+    <p class="body-text reveal">
+      楽天に携わって20年。最初の3年間は失敗の連続でした。「デザインを変えても、売上が伸びない。広告を増やしても、利益が残らない。」当時の私は、問題をデザインと広告の問題だと思っていました。
+    </p>
+    <p class="body-text reveal">
+      転換点は、ひとつの発見でした。同じ商品で、同じデザイン会社に頼んだ2店舗を並べたとき——片方は転換率2.1%、もう片方は0.8%。違いはどこにあったのか。
+    </p>
+    <p class="body-text reveal" style="font-weight:600; color:var(--ivory);">
+      構成の順序でした。
+    </p>
+    <p class="body-text reveal">
+      転換率が高い店舗は、読者の意識レベルに合わせた順序でページが組まれていた。もう一方は、見た目は同じでも、読者が「選べない」まま最後まで読み進める構成になっていた。
+    </p>
+    <p class="body-text reveal">
+      この発見から、私は「CVRを決めるのは構成であり、構成を決めるのは読者の意識レベルだ」という確信に至りました。それ以降、1,000を超えるページ改善に関わり、26店舗で平均CVRを1.8倍に改善してきました。
+    </p>
+
+    <div class="stats-row reveal">
+      <div class="stat-cell">
+        <span class="stat-num">2<span style="font-size:.55em;">回</span></span>
+        <span class="stat-label">楽天総合<br>ランキング1位</span>
       </div>
-
-      <div class="form-group">
-        <label class="form-label" for="cvr">
-          現在のCVR（転換率）<span class="required">必須</span>
-          <span class="note">感覚値でOK</span>
-        </label>
-        <input class="form-input" type="text" id="cvr" name="cvr" placeholder="例：3.2%" required>
-        <p class="form-hint">購入数 ÷ 訪問数 × 100 で計算できます。感覚値で構いません</p>
+      <div class="stat-cell">
+        <span class="stat-num">11<span style="font-size:.55em;">回</span></span>
+        <span class="stat-label">楽天年間<br>ランキング1位</span>
       </div>
+      <div class="stat-cell">
+        <span class="stat-num">1,000<span style="font-size:.45em;">回+</span></span>
+        <span class="stat-label">楽天ランキング<br>1位獲得</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num">1.8<span style="font-size:.55em;">倍</span></span>
+        <span class="stat-label">26店舗<br>平均CVR改善率</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="submit-wrap">
-        <button type="submit" class="submit-btn">▶ 診断を申し込む（無料・30秒）</button>
-        <p class="submit-note">
-          ※ 営業電話は一切いたしません<br>
-          ※ 診断後の有料提案はご希望がない限り行いません<br>
-          ※ 申込後、2営業日以内にレポートをお送りします
+<!-- ──────────────────── SECTION 6：ベネフィット3段構造 ──────────────────── -->
+<section class="light" aria-label="ベネフィット">
+  <div class="inner">
+    <span class="section-label reveal">WHAT CHANGES</span>
+    <h2 class="h2 reveal">診断を受けた後、<br>何が変わるのか。</h2>
+    <div class="gold-rule reveal"></div>
+
+    <div class="benefit-cards reveal">
+      <div class="benefit-card">
+        <span class="bc-num">FUNCTIONAL BENEFIT 01</span>
+        <h3 class="bc-title" style="font-family:var(--serif-font);">「どこで負けているか」が<br>初めて見える</h3>
+        <p class="bc-body">
+          診断レポートには3点が記載されます。①今、売上を止めているポイント（どの段階で離脱が起きているか）、②最初に改善すべき1点、③それにより失っている本来得られる利益。レポートを読んだ後、「次に何をすべきか」が初めて1点に絞られます。
         </p>
       </div>
-
-    </form>
-
-    <div class="success-msg" id="successMsg">
-      <div class="success-icon">✓</div>
-      <h3>お申し込みありがとうございます。</h3>
-      <p>
-        2営業日以内に診断レポートをお送りします。<br>
-        しばらくお待ちください。
-      </p>
+      <div class="benefit-card">
+        <span class="bc-num">EMOTIONAL BENEFIT 02</span>
+        <h3 class="bc-title" style="font-family:var(--serif-font);">「わからない」の霧が晴れる</h3>
+        <p class="bc-body">
+          「次は何をすればいいのかわからない」という状態は、情報が少ないのではなく、情報が多すぎるからです。診断後のオーナーが口にするのは、「ようやく手をつける場所がわかった」という感覚です。
+        </p>
+      </div>
+      <div class="benefit-card">
+        <span class="bc-num">SELF-ACTUALIZATION 03</span>
+        <h3 class="bc-title" style="font-family:var(--serif-font);">利益が出るページを、<br>自分で設計できるようになる</h3>
+        <p class="bc-body">
+          CVRが改善されると、「広告を増やさなくても、利益が増える」という感覚を初めて体験します。そしてその体験は、「次の商品でも同じことができる」という確信に変わります。デザインや広告ではなく、「どういう構成で設計するか」という視点を持つオーナーになることです。
+        </p>
+      </div>
     </div>
-
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-name">小西 秀人（ECコンサルタント）</div>
-  <div class="footer-bio">
-    楽天総合ランキング1位 2回 / 年間ランキング1位 11回受賞<br>
-    楽天ランキング1位 1,000回以上獲得 / CVR改善実績：26店舗・平均改善率180%
+<!-- ──────────────────── SECTION 7：社会的証明 ──────────────────── -->
+<section class="dark" aria-label="お客様の声">
+  <div class="inner">
+    <span class="section-label reveal">RESULTS</span>
+    <h2 class="h2 reveal">診断を受けた<br>店舗様の声。</h2>
+    <div class="gold-rule reveal"></div>
+
+    <div class="testimonials reveal">
+      <div class="testi">
+        <p class="testi-quote">「ページを何度直しても売上が変わらず、診断に申し込みました。レポートで指摘されたのは、サムネ5枚目までの構成順序でした。そこだけを変えた翌月に、CVRが大幅に改善。正直こんなに変わるとは思っていませんでした。」</p>
+        <p class="testi-meta">健康食品店舗様・月商 780万 → 1,380万円</p>
+        <span class="testi-cvr">CVR 2.1% → 4.3%（改善率 205%）</span>
+      </div>
+      <div class="testi">
+        <p class="testi-quote">「コンサルからは『広告を増やしてください』と言われ続けていました。小西さんは逆で、『今は広告を増やすべきではない。まずページを整えましょう』と。その通りにしたら、3ヶ月後に楽天ランキング初受賞できました。」</p>
+        <p class="testi-meta">美容雑貨店舗様</p>
+        <span class="testi-cvr">CVR 7.3% → 14.8%（改善率 203%）</span>
+      </div>
+      <div class="testi">
+        <p class="testi-quote">「診断レポートを読んで、自分が間違った場所に時間とお金を使っていたことに初めて気づきました。指摘通りに構成を修正したら、翌月に売上が1.5倍になりました。」</p>
+        <p class="testi-meta">生活雑貨店舗様・月商 270万 → 400万円</p>
+        <span class="testi-cvr">CVR 3.4% → 6.1%（改善率 179%）</span>
+      </div>
+    </div>
   </div>
-  <div class="footer-disclaimer">
-    ※本診断は分析に基づくものであり成果保証ではありません。<br>
-    ※診断結果は個別のLP・商品・市場状況により異なります。
+</section>
+
+<!-- ──────────────────── SECTION 8：FAQ ──────────────────── -->
+<section class="dark slim" aria-label="よくある質問">
+  <div class="inner">
+    <span class="section-label reveal">FAQ</span>
+    <h2 class="h2 reveal">よくある<br>ご質問。</h2>
+    <div class="gold-rule reveal"></div>
+
+    <ul class="faq-list reveal">
+      <li class="faq-item">
+        <p class="faq-q">診断後、営業電話がかかってきますか？</p>
+        <p class="faq-a">一切ありません。診断レポートをお送りした後、有料提案を希望される場合のみご連絡ください。申し込み時点では、何の義務も発生しません。</p>
+      </li>
+      <li class="faq-item">
+        <p class="faq-q">本当に無料ですか？</p>
+        <p class="faq-a">はい、診断は完全無料です。「まず診断だけ受けて、内容を見てから判断したい」というオーナー様が大半です。診断後、有料支援を希望される場合のみ別途ご提案いたします。</p>
+      </li>
+      <li class="faq-item">
+        <p class="faq-q">診断にはどのくらい時間がかかりますか？</p>
+        <p class="faq-a">申込後、2営業日以内にレポートをお送りします。あなたがすることは、フォームに30秒入力するだけです。</p>
+      </li>
+      <li class="faq-item">
+        <p class="faq-q">うちの商品は特殊なカテゴリですが、診断できますか？</p>
+        <p class="faq-a">はい。意識レベルと構成順序の設計原理は、カテゴリを問わず同じ構造で機能します。健康食品・美容・食品・日用品・家電など、様々なカテゴリで改善実績があります。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ──────────────────── AFTER-AFTER ──────────────────── -->
+<div class="after-after" aria-label="アフターアフター">
+  <div class="inner">
+    <p class="aa-text reveal">
+      広告を増やさなくても、<br><em>利益が残る状態</em>をつくる。
+    </p>
+    <p class="aa-body reveal reveal-d1">
+      ページに流れてきた人が、自分に合っていると判断し、今これを選ぶべきだと気づき、そして買う。
+    </p>
+    <p class="aa-body reveal reveal-d2">
+      この流れが構成で設計されたとき、広告費は「利益を生む装置」に変わります。
+    </p>
+    <p class="aa-body reveal reveal-d3">
+      改善のたびに迷わなくなる。数字が動くたびに、次の手がわかるようになる。<br>
+      それが、CVRを構成で設計できるオーナーになるということです。
+    </p>
+  </div>
+</div>
+
+<!-- ──────────────────── CTA SECTION ──────────────────── -->
+<section class="cta-section" id="cta" aria-label="申し込みフォーム">
+  <div class="inner">
+    <span class="section-label reveal" style="color:var(--gold-dark);">FREE DIAGNOSIS</span>
+    <h2 class="h2 reveal" style="color:var(--ink);">無料LP診断を<br>申し込む。</h2>
+    <div class="gold-rule reveal"></div>
+    <p class="body-text reveal" style="color:#555;">
+      このページを読んで「これはページの構成の問題だ」と感じた方は、以下のフォームから30秒で申込完了です。レポートはお申込みから2営業日以内にお送りします。
+    </p>
+
+    <div class="form-wrap reveal" id="form-wrap">
+      <form class="diag-form" id="diagForm" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="store_name">店舗名<span class="req">必須</span></label>
+          <input class="form-input" type="text" id="store_name" name="store_name" placeholder="例：〇〇ショップ" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="name">お名前<span class="req">必須</span></label>
+          <input class="form-input" type="text" id="name" name="name" placeholder="例：山田 太郎" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">メールアドレス<span class="req">必須</span></label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="例：yamada@example.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="url">診断したい商品ページURL<span class="req">必須</span></label>
+          <input class="form-input" type="url" id="url" name="url" placeholder="https://item.rakuten.co.jp/..." required>
+          <p class="form-hint">楽天の商品ページURLをそのまま貼り付けてください</p>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="access">月間アクセス数（訪問数）<span class="req">必須</span></label>
+          <select class="form-select" id="access" name="access" required>
+            <option value="" disabled selected>選択してください</option>
+            <option>1,000未満</option>
+            <option>1,000〜3,000</option>
+            <option>3,000〜10,000</option>
+            <option>10,000〜30,000</option>
+            <option>30,000以上</option>
+            <option>分からない</option>
+          </select>
+          <p class="form-hint">RMSのアクセス解析で確認できます。おおよそで構いません</p>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cvr">現在のCVR（転換率）<span class="req">必須</span></label>
+          <input class="form-input" type="text" id="cvr" name="cvr" placeholder="例：3.2%" required>
+          <p class="form-hint">購入数 ÷ 訪問数 × 100 で計算できます。感覚値で構いません</p>
+        </div>
+        <div class="submit-wrap">
+          <button type="submit" class="submit-btn">▶ 診断を申し込む（無料・30秒）</button>
+        </div>
+        <div class="form-notes">
+          <span class="form-note">※ 営業電話は一切いたしません</span>
+          <span class="form-note">※ 診断後の有料提案はご希望がない限り行いません</span>
+          <span class="form-note">※ 申込後、2営業日以内にレポートをお送りします</span>
+        </div>
+      </form>
+      <div class="success-msg" id="successMsg">
+        <span class="success-icon">✓</span>
+        <p>お申し込みありがとうございます。<br>2営業日以内に診断レポートをお送りします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────── FOOTER ──────────────────── -->
+<footer>
+  <div class="inner">
+    <p class="footer-name">小西 秀人（ECコンサルタント）</p>
+    <p class="footer-creds">
+      楽天総合ランキング1位 2回 / 年間ランキング1位 11回受賞<br>
+      楽天ランキング1位 1,000回以上獲得 / CVR改善実績：26店舗・平均改善率180%
+    </p>
+    <div class="footer-legal">
+      ※本診断は分析に基づくものであり成果保証ではありません。<br>
+      ※診断結果は個別のLP・商品・市場状況により異なります。
+    </div>
   </div>
 </footer>
 
+<!-- ──────────────────── JS ──────────────────── -->
 <script>
-// Intersection Observer for fade-in
+// Reveal on scroll
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      observer.unobserve(e.target);
     }
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Form submit
+// Form submit → GAS → Spreadsheet
 document.getElementById('diagForm').addEventListener('submit', function(e) {
   e.preventDefault();
 
@@ -831,18 +1267,17 @@ document.getElementById('diagForm').addEventListener('submit', function(e) {
     return;
   }
 
-  // Collect form data
+  // フィールド名は既存GASスプレッドシートのキーに合わせる
   const data = {
-    store_name: document.getElementById('store_name').value,
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    url: document.getElementById('url').value,
-    access: document.getElementById('access').value,
-    cvr: document.getElementById('cvr').value,
+    store_name:   document.getElementById('store_name').value,
+    name:         document.getElementById('name').value,
+    email:        document.getElementById('email').value,
+    url:          document.getElementById('url').value,
+    access:       document.getElementById('access').value,
+    cvr:          document.getElementById('cvr').value,
     submitted_at: new Date().toISOString()
   };
 
-  // GASエンドポイントURL（デプロイ後に差し替え）
   const GAS_URL = 'https://script.google.com/macros/s/AKfycbzQFWwBNina5bUUmdRv10A2D0R0FT9q1TXOy61EF_OiIVf7WZWi05r9tm148uvulhCy/exec';
 
   const btn = this.querySelector('.submit-btn');
@@ -861,12 +1296,18 @@ document.getElementById('diagForm').addEventListener('submit', function(e) {
     document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth', block: 'center' });
   })
   .catch(() => {
-    // no-corsでは常にopaqueレスポンスのためcatchに落ちないが念のため
+    // no-corsではopaqueレスポンスのため常にthenに落ちるが念のため
     this.style.display = 'none';
     document.getElementById('successMsg').classList.add('show');
     document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 });
+
+// バリデーションエラー色のリセット
+document.querySelectorAll('.form-input, .form-select').forEach(inp => {
+  inp.addEventListener('input', () => inp.style.borderColor = '');
+});
 </script>
+
 </body>
 </html>
