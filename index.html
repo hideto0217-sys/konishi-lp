@@ -5,1116 +5,1349 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 <title>楽天LP無料診断｜小西式CVR改善</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700;800&family=Syne:wght@400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 
-/* ── RESET & ROOT ─────────────────────────────────────────── */
+/* ── RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
 
+/* ── DESIGN SYSTEM ── */
 :root {
-  --ink:        #141414;
-  --ivory:      #F5F0E8;
-  --ivory-dark: #EDE8DF;
-  --gold:       #C8A96E;
-  --gold-dark:  #A8893E;
-  --mute:       #888;
-  --rule:       rgba(200,169,110,.25);
-  --body-font:  'DM Sans', 'Noto Sans JP', sans-serif;
-  --serif-font: 'Noto Serif JP', serif;
+  /* Core palette: deep ink / raw paper / vermilion accent */
+  --ink:        #0D0D0D;
+  --ink-mid:    #1A1A1A;
+  --ink-soft:   #2C2C2C;
+  --paper:      #F7F4EE;
+  --paper-dark: #EDEAE2;
+  --paper-mid:  #E4E0D6;
+  --vermilion:  #C8341A;
+  --verm-dark:  #9E2812;
+  --verm-glow:  rgba(200,52,26,.12);
+  --verm-rule:  rgba(200,52,26,.25);
+  --mute:       #8A8480;
+  --mute-light: rgba(13,13,13,.38);
+
+  /* Typography */
+  --font-display: 'Shippori Mincho B1', serif;
+  --font-sans:    'Syne', 'Noto Sans JP', sans-serif;
+  --font-body:    'Noto Sans JP', sans-serif;
+
+  /* Layout */
+  --col:   680px;
+  --gutter: 24px;
 }
 
 body {
-  font-family: var(--body-font);
-  background: var(--ivory);
+  font-family: var(--font-body);
+  background: var(--paper);
   color: var(--ink);
   line-height: 1.85;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
-/* ── UTILITY ──────────────────────────────────────────────── */
-.inner { max-width: 680px; margin: 0 auto; padding: 0 22px; }
-.dark  { background: var(--ink); color: var(--ivory); }
-.light { background: var(--ivory); color: var(--ink); }
-.cream { background: var(--ivory-dark); color: var(--ink); }
+/* Subtle paper grain overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: .025;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
 
-/* ── REVEAL ANIMATION ─────────────────────────────────────── */
-.reveal {
+/* ── UTILITY ── */
+.wrap       { max-width: var(--col); margin: 0 auto; padding: 0 var(--gutter); }
+.on-ink     { background: var(--ink); color: var(--paper); }
+.on-paper   { background: var(--paper); color: var(--ink); }
+.on-paper-d { background: var(--paper-dark); color: var(--ink); }
+
+/* ── REVEAL ── */
+.rv {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity .65s cubic-bezier(.4,0,.2,1),
-              transform .65s cubic-bezier(.4,0,.2,1);
+  transform: translateY(22px);
+  transition: opacity .7s cubic-bezier(.22,1,.36,1),
+              transform .7s cubic-bezier(.22,1,.36,1);
 }
-.reveal.in { opacity: 1; transform: none; }
-.reveal-d1 { transition-delay: .08s; }
-.reveal-d2 { transition-delay: .16s; }
-.reveal-d3 { transition-delay: .24s; }
-.reveal-d4 { transition-delay: .32s; }
+.rv.in { opacity: 1; transform: none; }
+.rv-d1 { transition-delay: .09s; }
+.rv-d2 { transition-delay: .18s; }
+.rv-d3 { transition-delay: .27s; }
+.rv-d4 { transition-delay: .36s; }
 
-/* ── SITE HEADER ──────────────────────────────────────────── */
-.site-header {
-  background: var(--ink);
-  padding: 16px 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid rgba(200,169,110,.2);
-}
-.header-logo {
-  font-family: var(--serif-font);
-  color: var(--gold);
-  font-size: 11px;
-  letter-spacing: .22em;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.header-cta {
-  font-size: 10px;
-  letter-spacing: .12em;
-  color: var(--gold);
-  border: 1px solid var(--gold);
-  padding: 6px 14px;
-  text-decoration: none;
-  transition: background .2s, color .2s;
-}
-.header-cta:hover { background: var(--gold); color: var(--ink); }
-
-/* ── HERO ─────────────────────────────────────────────────── */
+/* ── HERO ── */
 .hero {
   background: var(--ink);
-  color: var(--ivory);
-  padding: 96px 22px 100px;
+  color: var(--paper);
+  padding: 0;
   position: relative;
   overflow: hidden;
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-.hero::before {
-  content: '';
+
+/* Large tate-yomi decorative number */
+.hero-bg-num {
   position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 80% 20%,
-    rgba(200,169,110,.10) 0%, transparent 70%);
+  top: -20px;
+  right: -10px;
+  font-family: var(--font-sans);
+  font-size: clamp(180px, 38vw, 340px);
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(200,52,26,.12);
+  line-height: 1;
+  user-select: none;
   pointer-events: none;
+  letter-spacing: -.04em;
 }
-.hero-eyebrow {
-  display: inline-block;
-  font-size: 10px;
-  letter-spacing: .28em;
-  color: var(--gold);
-  border-top: 1px solid var(--gold);
-  padding-top: 8px;
-  margin-bottom: 36px;
+
+/* Diagonal vermilion accent bar */
+.hero-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--vermilion);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  padding: 80px var(--gutter) 72px;
+  max-width: 720px;
+}
+
+.hero-overline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.hero-overline-bar {
+  width: 32px;
+  height: 2px;
+  background: var(--vermilion);
+  flex-shrink: 0;
+}
+.hero-overline-text {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .34em;
+  color: var(--vermilion);
   text-transform: uppercase;
 }
+
 .hero-headline {
-  font-family: var(--serif-font);
-  font-size: clamp(34px, 7.5vw, 58px);
-  font-weight: 900;
-  line-height: 1.38;
-  letter-spacing: .02em;
-  margin-bottom: 32px;
-  color: var(--ivory);
+  font-family: var(--font-display);
+  font-size: clamp(38px, 8.5vw, 66px);
+  font-weight: 800;
+  line-height: 1.32;
+  letter-spacing: -.01em;
+  margin-bottom: 36px;
+  color: var(--paper);
 }
+.hero-headline .prehead {
+  display: block;
+  font-size: clamp(20px, 4.5vw, 34px);
+  font-weight: 600;
+  color: rgba(247,244,238,.6);
+  margin-bottom: .1em;
+  letter-spacing: 0;
+}
+.h2 .prehead {
+  display: block;
+  font-size: clamp(15px, 3.2vw, 22px);
+  font-weight: 600;
+  color: var(--mute);
+  margin-bottom: .15em;
+  letter-spacing: 0;
+}
+.on-ink .h2 .prehead { color: rgba(247,244,238,.72); }
+.hero-headline .prehead { color: rgba(247,244,238,.72); }
 .hero-headline em {
   font-style: normal;
-  color: var(--gold);
+  color: #fff;
+  position: relative;
 }
+
 .hero-body {
-  font-size: clamp(15px, 3.5vw, 17px);
-  color: rgba(245,240,232,.75);
+  font-size: clamp(14px, 3.2vw, 16px);
+  color: rgba(247,244,238,.88);
   line-height: 2;
-  max-width: 520px;
-  margin-bottom: 20px;
+  max-width: 500px;
+  margin-bottom: 14px;
 }
-.hero-body strong {
-  color: var(--ivory);
-  font-weight: 500;
-}
-.hero-cta-wrap {
-  margin-top: 48px;
+.hero-body strong { color: #fff; font-weight: 600; }
+
+.hero-cta-area {
+  margin-top: 52px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
+  gap: 14px;
 }
-.cta-btn {
+
+/* ── BUTTONS ── */
+.btn-primary {
   display: inline-block;
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--vermilion);
+  color: var(--paper);
+  font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 15px;
-  letter-spacing: .08em;
-  padding: 18px 44px;
+  font-size: 13px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 18px 40px;
   text-decoration: none;
   transition: background .2s, transform .15s;
   position: relative;
 }
-.cta-btn:hover { background: var(--gold-dark); transform: translateY(-1px); }
-.cta-note {
-  font-size: 11px;
-  color: rgba(245,240,232,.45);
+.btn-primary:hover { background: var(--verm-dark); transform: translateY(-2px); }
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; right: -3px;
+  width: 100%; height: 100%;
+  border: 1px solid rgba(200,52,26,.3);
+  pointer-events: none;
+}
+
+.btn-note {
+  font-size: 10px;
+  color: rgba(247,244,238,.38);
   letter-spacing: .06em;
 }
 
-/* ── SECTION BASE ─────────────────────────────────────────── */
-section { padding: 88px 0; }
+/* ── SECTION BASE ── */
+section { padding: 96px 0; }
 section.slim { padding: 72px 0; }
 
-.section-label {
-  display: block;
-  font-size: 10px;
-  letter-spacing: .28em;
-  color: var(--gold);
+/* ── SECTION LABEL ── */
+.sec-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.sec-label-bar {
+  width: 20px; height: 2px;
+  background: var(--vermilion);
+  flex-shrink: 0;
+}
+.sec-label-text {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .32em;
+  color: var(--vermilion);
   text-transform: uppercase;
-  margin-bottom: 20px;
 }
+.on-ink .sec-label-text { color: var(--vermilion); }
 
-/* 大見出し（流し読みで引っかかるジャンプ率設計） */
+/* ── HEADINGS ── */
 .h2 {
-  font-family: var(--serif-font);
-  font-size: clamp(26px, 5.5vw, 42px);
-  font-weight: 900;
-  line-height: 1.42;
-  letter-spacing: .02em;
-  margin-bottom: 32px;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 6vw, 46px);
+  font-weight: 800;
+  line-height: 1.38;
+  letter-spacing: -.01em;
+  margin-bottom: 36px;
 }
-.dark .h2 { color: var(--ivory); }
+/* Dark bg text hierarchy:
+   Level 1 (見出し):    #fff
+   Level 2 (本文):      rgba(.85)
+   Level 3 (補足):      rgba(.62)
+   Level 4 (極小注記):  rgba(.42)
+*/
+.on-ink .h2 { color: #fff; }
+.on-ink .h3 { color: #fff; }
+.on-ink .body-text { color: rgba(247,244,238,.85); }
+.on-ink .body-text strong { color: #fff; font-weight: 600; }
+.on-ink .body-text em { color: #fff; }
+.on-paper .h2, .on-paper-d .h2 { color: var(--ink); }
 
-/* 中見出し */
 .h3 {
-  font-family: var(--serif-font);
-  font-size: clamp(18px, 4vw, 24px);
+  font-family: var(--font-display);
+  font-size: clamp(17px, 3.8vw, 22px);
   font-weight: 700;
   line-height: 1.55;
-  margin-bottom: 14px;
-  margin-top: 52px;
-  padding-left: 16px;
-  border-left: 3px solid var(--gold);
+  margin-bottom: 12px;
+  margin-top: 48px;
 }
-.dark .h3 { color: var(--ivory); border-left-color: var(--gold); }
 
+/* Body text */
 .body-text {
-  font-size: clamp(15px, 3.5vw, 17px);
+  font-size: clamp(14px, 3.2vw, 16px);
   line-height: 2;
-  color: var(--ink);
   margin-bottom: 18px;
 }
-.dark .body-text { color: rgba(245,240,232,.82); }
-
-.body-text strong, .dark .body-text strong {
-  font-weight: 600;
-  color: var(--ink);
-}
-.dark .body-text strong { color: var(--ivory); }
-
+.on-paper .body-text { color: var(--ink-soft); }
+.on-paper .body-text strong { color: var(--ink); font-weight: 600; }
 .body-text em {
   font-style: normal;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--vermilion);
 }
 
-/* ── GOLD RULE ────────────────────────────────────────────── */
-.gold-rule {
-  width: 48px;
-  height: 2px;
-  background: var(--gold);
-  margin-bottom: 40px;
+.v-rule {
+  width: 36px; height: 3px;
+  background: var(--vermilion);
+  margin-bottom: 44px;
 }
 
-/* ── PAIN LIST ────────────────────────────────────────────── */
-.pain-list {
-  list-style: none;
-  margin: 32px 0;
-}
+/* ── PAIN LIST ── */
+.pain-list { list-style: none; margin: 32px 0; }
 .pain-list li {
-  font-size: clamp(15px, 3.5vw, 17px);
-  line-height: 1.75;
-  padding: 16px 0 16px 28px;
+  font-size: clamp(14px, 3.2vw, 16px);
+  line-height: 1.8;
+  padding: 18px 0 18px 36px;
   position: relative;
-  border-bottom: 1px solid var(--rule);
-  color: rgba(245,240,232,.82);
+  border-bottom: 1px solid rgba(247,244,238,.12);
+  color: rgba(247,244,238,.92);
 }
+.pain-list li:first-child { border-top: 1px solid rgba(247,244,238,.12); }
 .pain-list li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--gold);
-  font-weight: 300;
-}
-
-/* ── EMPHASIS BOX ─────────────────────────────────────────── */
-.emph-box {
-  border: 1px solid var(--gold);
-  padding: 28px 28px;
-  margin: 36px 0;
-  position: relative;
-}
-.emph-box::before {
   content: '';
   position: absolute;
-  top: -1px; left: -1px;
-  width: 40px; height: 3px;
-  background: var(--gold);
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 18px; height: 1px;
+  background: var(--vermilion);
 }
+
+/* ── EMPH BOX ── */
+.emph-box {
+  border-left: 3px solid var(--vermilion);
+  padding: 24px 24px 24px 28px;
+  margin: 36px 0;
+  background: rgba(200,52,26,.06);
+}
+.on-paper .emph-box { background: rgba(200,52,26,.05); }
 .emph-box p {
-  font-family: var(--serif-font);
-  font-size: clamp(16px, 3.8vw, 20px);
-  line-height: 1.8;
+  font-family: var(--font-display);
+  font-size: clamp(16px, 3.6vw, 20px);
+  line-height: 1.85;
   font-weight: 700;
 }
-.dark .emph-box p { color: var(--ivory); }
+.on-ink .emph-box p { color: var(--paper); }
+.on-paper .emph-box p { color: var(--ink); }
 
-/* ── STEP LIST ────────────────────────────────────────────── */
+/* ── STEP LIST ── */
 .step-list {
   list-style: none;
   margin: 28px 0;
   counter-reset: steps;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 .step-list li {
   counter-increment: steps;
-  font-size: clamp(14px, 3.2vw, 16px);
+  font-size: clamp(13px, 3vw, 15px);
   line-height: 1.8;
-  padding: 14px 16px 14px 52px;
+  padding: 14px 18px 14px 56px;
   position: relative;
-  background: rgba(200,169,110,.06);
-  margin-bottom: 4px;
-  color: rgba(245,240,232,.82);
 }
-.dark .step-list li { color: rgba(245,240,232,.82); }
-.light .step-list li, section.light .step-list li { 
-  color: var(--ink); 
-  background: rgba(200,169,110,.10);
+.on-ink .step-list li {
+  background: rgba(247,244,238,.05);
+  color: rgba(247,244,238,.92);
+}
+.on-paper .step-list li {
+  background: rgba(13,13,13,.04);
+  color: var(--ink-soft);
 }
 .step-list li::before {
-  content: counter(steps);
+  content: counter(steps, decimal-leading-zero);
   position: absolute;
-  left: 16px;
-  top: 50%; transform: translateY(-50%);
-  font-family: var(--serif-font);
+  left: 18px; top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-sans);
   font-size: 11px;
-  font-weight: 900;
-  color: var(--gold);
-  width: 22px; height: 22px;
-  border: 1px solid var(--gold);
-  display: flex; align-items: center; justify-content: center;
-  line-height: 1;
+  font-weight: 800;
+  color: var(--vermilion);
+  letter-spacing: .04em;
 }
-.step-list li strong { color: var(--gold); font-weight: 600; }
+.step-list li strong { color: var(--vermilion); font-weight: 600; }
 
-/* ── BELIEF CARDS ─────────────────────────────────────────── */
+/* ── BELIEF CARDS ── */
 .belief-cards {
   display: flex;
   flex-direction: column;
   gap: 0;
-  margin: 40px 0;
+  margin: 44px 0;
+  border-top: 1px solid rgba(247,244,238,.22);
 }
 .belief-card {
-  padding: 36px 28px 36px 28px;
-  border-bottom: 1px solid rgba(200,169,110,.2);
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(247,244,238,.22);
   position: relative;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0 24px;
+  align-items: start;
 }
-.belief-card:first-child { border-top: 1px solid rgba(200,169,110,.2); }
+.belief-card-num-col {
+  padding-top: 4px;
+}
 .belief-card-num {
-  font-family: var(--serif-font);
-  font-size: 11px;
-  letter-spacing: .2em;
-  color: var(--gold);
-  margin-bottom: 12px;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .28em;
+  color: var(--vermilion);
   display: block;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
 }
+.belief-card-main {}
 .belief-card-title {
-  font-family: var(--serif-font);
-  font-size: clamp(18px, 4vw, 22px);
+  font-family: var(--font-display);
+  font-size: clamp(17px, 3.8vw, 22px);
   font-weight: 700;
   line-height: 1.5;
-  margin-bottom: 20px;
-  color: rgba(245,240,232,.5);
+  margin-bottom: 18px;
+  color: rgba(247,244,238,.72);
   text-decoration: line-through;
-  text-decoration-color: rgba(200,169,110,.5);
+  text-decoration-color: rgba(200,52,26,.8);
+  text-decoration-thickness: 2px;
 }
 .belief-card-body {
-  font-size: clamp(14px, 3.2vw, 16px);
+  font-size: clamp(13px, 3vw, 15px);
   line-height: 2;
-  color: rgba(245,240,232,.75);
+  color: rgba(247,244,238,.92);
   margin-bottom: 16px;
 }
 .belief-card-result {
-  font-size: clamp(13px, 3vw, 14px);
-  color: var(--gold);
-  letter-spacing: .04em;
-  padding: 10px 16px;
-  border-left: 2px solid var(--gold);
-  background: rgba(200,169,110,.06);
-  margin-top: 16px;
+  font-size: clamp(12px, 2.8vw, 14px);
+  color: rgba(247,244,238,.96);
+  padding: 14px 18px;
+  border-left: 3px solid var(--vermilion);
+  background: rgba(200,52,26,.22);
+  margin-top: 14px;
+  letter-spacing: .02em;
+  line-height: 1.9;
 }
 
-/* ── MECHANISM ────────────────────────────────────────────── */
-/* ── MECHANISM GRID ───────────────────────────────────────── */
+/* ── MECHANISM GRID ── */
 .mechanism-grid {
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  margin: 36px 0;
+  gap: 2px;
+  margin: 40px 0;
 }
 .mech-row {
-  display: flex;
-  align-items: stretch;
-  gap: 3px;
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 2px;
 }
 .mech-level {
-  width: 64px;
-  min-width: 64px;
-  background: var(--ink);
+  background: rgba(13,13,13,.08);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 4px;
+  padding: 20px 6px;
+  border: 1px solid var(--paper-mid);
 }
 .mech-level span {
-  font-family: var(--serif-font);
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--gold);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--mute);
   letter-spacing: .06em;
 }
 .mech-content {
-  flex: 1;
-  background: #f0ece4;
-  border: 1px solid #d8d2c6;
-  padding: 18px 22px;
+  background: var(--paper-dark);
+  border: 1px solid var(--paper-mid);
+  border-left: none;
+  padding: 20px 22px;
 }
 .mech-label {
-  font-size: 10px;
-  letter-spacing: .2em;
-  color: var(--gold-dark);
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: .24em;
+  color: var(--mute);
   text-transform: uppercase;
   margin-bottom: 6px;
   display: block;
   font-weight: 700;
 }
 .mech-text {
-  font-size: clamp(14px, 3.2vw, 15px);
-  line-height: 1.8;
-  color: #333;
+  font-size: clamp(13px, 3vw, 14px);
+  line-height: 1.85;
+  color: var(--ink-soft);
 }
 .mech-text strong { color: var(--ink); }
 
-.mech-row.active .mech-level { background: var(--gold); }
-.mech-row.active .mech-level span { color: var(--ink); }
+.mech-row.active .mech-level {
+  background: var(--vermilion);
+  border-color: var(--vermilion);
+}
+.mech-row.active .mech-level span { color: var(--paper); }
 .mech-row.active .mech-content {
   background: var(--ink);
-  border-color: var(--gold);
+  border-color: var(--vermilion);
+  border-left: 1px solid var(--vermilion);
 }
-.mech-row.active .mech-label { color: var(--gold); }
-.mech-row.active .mech-text { color: var(--ivory); font-weight: 500; }
-.mech-row.active .mech-text strong { color: var(--gold); }
+.mech-row.active .mech-label { color: rgba(247,244,238,.5); }
+.mech-row.active .mech-text { color: var(--paper); font-weight: 500; }
+.mech-row.active .mech-text strong { color: var(--vermilion); }
 
-/* ── LEVEL STEPS ──────────────────────────────────────────── */
+/* ── LEVEL STEPS ── */
 .level-steps {
   list-style: none;
-  margin: 28px 0;
+  margin: 32px 0;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
 }
 .level-step {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 52px 1fr;
   gap: 0;
-  font-size: clamp(14px, 3.2vw, 15px);
+  font-size: clamp(13px, 3vw, 15px);
   line-height: 1.75;
-  overflow: hidden;
 }
-.level-step .ls-tag {
-  font-family: var(--serif-font);
-  font-size: 12px;
-  font-weight: 900;
-  color: var(--ivory);
-  background: #555;
-  min-width: 48px;
-  padding: 14px 0;
-  text-align: center;
+.ls-tag {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(13,13,13,.4);
+  background: var(--paper-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 8px;
+  min-width: 56px;
   flex-shrink: 0;
   letter-spacing: .04em;
+  border: 1px solid var(--paper-mid);
+  text-align: center;
 }
-.level-step .ls-body {
+.ls-body {
   flex: 1;
   padding: 13px 18px;
-  background: #eee;
-  color: #444;
-  border: 1px solid #ddd;
+  background: var(--paper-dark);
+  color: rgba(13,13,13,.55);
+  border: 1px solid var(--paper-mid);
   border-left: none;
 }
 .level-step.highlighted .ls-tag {
   background: var(--ink);
-  color: var(--gold);
+  color: var(--vermilion);
+  border-color: var(--ink);
 }
 .level-step.highlighted .ls-body {
   background: var(--ink);
-  color: var(--ivory);
+  color: rgba(247,244,238,.9);
   border-color: var(--ink);
   font-weight: 500;
 }
-.level-step.highlighted .ls-body strong {
-  color: var(--gold);
-}
+.level-step.highlighted .ls-body strong { color: var(--vermilion); }
 
-/* ── STATS ROW ────────────────────────────────────────────── */
+/* ── STATS ROW ── */
 .stats-row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3px;
-  margin: 44px 0;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2px;
+  margin: 48px 0;
 }
 .stat-cell {
-  background: rgba(200,169,110,.10);
-  border: 1px solid rgba(200,169,110,.20);
-  padding: 32px 16px;
+  background: rgba(247,244,238,.06);
+  border: 1px solid rgba(247,244,238,.14);
+  padding: 36px 16px 32px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.stat-cell::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: var(--vermilion);
 }
 .stat-num {
   display: block;
-  font-family: var(--serif-font);
-  font-size: clamp(32px, 7vw, 48px);
-  font-weight: 900;
-  color: var(--gold);
-  line-height: 1.15;
-  margin-bottom: 10px;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 7.5vw, 54px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  letter-spacing: -.02em;
+}
+.stat-num sub {
+  font-family: var(--font-sans);
+  font-size: .38em;
+  font-weight: 700;
+  vertical-align: baseline;
+  letter-spacing: .04em;
+  color: rgba(247,244,238,.75);
+  margin-left: 2px;
 }
 .stat-label {
-  font-size: clamp(13px, 3vw, 14px);
-  color: rgba(245,240,232,.88);
-  line-height: 1.65;
+  font-size: clamp(11px, 2.6vw, 13px);
+  color: rgba(247,244,238,.80);
+  line-height: 1.7;
   letter-spacing: .04em;
 }
 
-/* ── BENEFIT CARDS ────────────────────────────────────────── */
+/* ── BENEFIT CARDS ── */
 .benefit-cards {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  margin: 36px 0;
+  margin: 40px 0;
 }
 .benefit-card {
-  padding: 32px 24px;
-  background: var(--ivory-dark);
+  padding: 32px 26px;
+  background: var(--paper-dark);
+  border: 1px solid var(--paper-mid);
   position: relative;
   overflow: hidden;
+  transition: border-color .2s;
 }
-.benefit-card::after {
+.benefit-card:hover { border-color: rgba(200,52,26,.3); }
+.benefit-card::before {
   content: '';
   position: absolute;
   top: 0; left: 0;
-  width: 3px; height: 100%;
-  background: var(--gold);
+  width: 100%; height: 2px;
+  background: var(--vermilion);
 }
 .bc-num {
-  font-size: 10px;
-  letter-spacing: .22em;
-  color: var(--gold);
-  margin-bottom: 10px;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .28em;
+  color: var(--vermilion);
+  margin-bottom: 12px;
   display: block;
+  text-transform: uppercase;
 }
 .bc-title {
-  font-family: var(--serif-font);
-  font-size: clamp(16px, 3.8vw, 20px);
+  font-family: var(--font-display);
+  font-size: clamp(16px, 3.6vw, 20px);
   font-weight: 700;
   line-height: 1.5;
   color: var(--ink);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 .bc-body {
-  font-size: clamp(14px, 3.2vw, 15px);
-  line-height: 1.95;
-  color: #444;
+  font-size: clamp(13px, 3vw, 15px);
+  line-height: 2;
+  color: var(--ink-soft);
 }
 
-/* ── TESTIMONIALS ─────────────────────────────────────────── */
+/* ── TESTIMONIALS ── */
 .testimonials {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  margin: 36px 0;
+  margin: 40px 0;
 }
 .testi {
   padding: 36px 28px;
-  background: rgba(200,169,110,.07);
+  background: rgba(247,244,238,.03);
+  border: 1px solid rgba(247,244,238,.08);
   position: relative;
 }
+.testi::before {
+  content: '\201C';
+  position: absolute;
+  top: 20px; left: 20px;
+  font-family: var(--font-display);
+  font-size: 60px;
+  line-height: 1;
+  color: rgba(200,52,26,.2);
+  pointer-events: none;
+}
+/* ── TESTIMONIAL TITLE ── */
+.testi-title {
+  font-family: var(--font-display);
+  font-size: clamp(19px, 4.2vw, 24px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.45;
+  margin-bottom: 18px;
+}
+
 .testi-quote {
-  font-size: clamp(14px, 3.2vw, 16px);
+  font-size: clamp(13px, 3vw, 14px);
   line-height: 2;
-  color: rgba(245,240,232,.82);
-  font-style: italic;
+  color: rgba(247,244,238,.82);
   margin-bottom: 20px;
   padding-left: 20px;
-  border-left: 2px solid rgba(200,169,110,.4);
+  font-weight: 300;
 }
 .testi-meta {
+  font-family: var(--font-sans);
   font-size: 11px;
   letter-spacing: .08em;
-  color: var(--gold);
+  color: rgba(247,244,238,.62);
 }
 .testi-cvr {
   display: inline-block;
-  margin-top: 8px;
-  font-size: 13px;
+  margin-top: 12px;
+  font-family: var(--font-sans);
+  font-size: 15px;
   font-weight: 700;
-  color: var(--ivory);
-  background: rgba(200,169,110,.2);
-  padding: 4px 12px;
-  letter-spacing: .04em;
+  color: var(--paper);
+  background: var(--vermilion);
+  padding: 8px 16px;
+  letter-spacing: .06em;
 }
 
-/* ── FAQ ──────────────────────────────────────────────────── */
-.faq-list {
-  list-style: none;
-  margin: 36px 0;
-}
+.faq-list { list-style: none; margin: 36px 0; }
 .faq-item {
-  border-bottom: 1px solid rgba(200,169,110,.18);
+  border-bottom: 1px solid rgba(247,244,238,.1);
   padding: 28px 0;
 }
-.faq-item:first-child { border-top: 1px solid rgba(200,169,110,.18); }
+.faq-item:first-child { border-top: 1px solid rgba(247,244,238,.1); }
 .faq-q {
-  font-family: var(--serif-font);
-  font-size: clamp(15px, 3.5vw, 17px);
+  font-family: var(--font-display);
+  font-size: clamp(15px, 3.4vw, 17px);
   font-weight: 700;
   line-height: 1.6;
-  color: var(--ivory);
+  color: var(--paper);
   margin-bottom: 14px;
-  padding-left: 24px;
+  padding-left: 28px;
   position: relative;
 }
 .faq-q::before {
   content: 'Q';
   position: absolute;
   left: 0;
+  font-family: var(--font-sans);
   font-size: 11px;
-  color: var(--gold);
-  font-weight: 900;
+  font-weight: 800;
+  color: var(--vermilion);
   top: 3px;
 }
 .faq-a {
-  font-size: clamp(14px, 3.2vw, 15px);
+  font-size: clamp(13px, 3vw, 15px);
   line-height: 2;
-  color: rgba(245,240,232,.72);
-  padding-left: 24px;
+  color: rgba(247,244,238,.86);
+  padding-left: 28px;
 }
 
-/* ── AFTER-AFTER ──────────────────────────────────────────── */
+/* ── AFTER-AFTER ── */
 .after-after {
   background: var(--ink);
-  padding: 96px 22px;
+  padding: 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(200,169,110,.2);
-  border-bottom: 1px solid rgba(200,169,110,.2);
 }
+.after-after-inner {
+  position: relative;
+  z-index: 1;
+  padding: 100px var(--gutter);
+}
+/* Centered vermilion horizontal rule */
 .after-after::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 50% 100%,
-    rgba(200,169,110,.10) 0%, transparent 70%);
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: var(--vermilion);
+}
+.after-after::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 1px;
+  background: rgba(200,52,26,.3);
+}
+/* Large bg text */
+.aa-bg-text {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-sans);
+  font-size: clamp(80px, 18vw, 160px);
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(200,52,26,.08);
+  white-space: nowrap;
   pointer-events: none;
+  letter-spacing: -.04em;
 }
 .aa-text {
-  font-family: var(--serif-font);
-  font-size: clamp(22px, 5vw, 36px);
-  font-weight: 900;
-  line-height: 1.55;
-  color: var(--ivory);
-  max-width: 540px;
+  font-family: var(--font-display);
+  font-size: clamp(24px, 5.5vw, 40px);
+  font-weight: 800;
+  line-height: 1.5;
+  color: var(--paper);
+  max-width: 560px;
   margin: 0 auto 28px;
-  letter-spacing: .02em;
+  letter-spacing: -.01em;
 }
 .aa-text em {
   font-style: normal;
-  color: var(--gold);
+  color: #fff;
 }
 .aa-body {
-  font-size: clamp(14px, 3.2vw, 16px);
+  font-size: clamp(13px, 3vw, 15px);
   line-height: 2;
-  color: rgba(245,240,232,.88);
+  color: rgba(247,244,238,.88);
   max-width: 480px;
-  margin: 0 auto 16px;
+  margin: 0 auto 14px;
 }
 
-/* ── CTA SECTION ──────────────────────────────────────────── */
+/* ── CTA SECTION ── */
 .cta-section {
-  background: var(--ivory);
-  padding: 96px 22px;
+  background: var(--paper);
+  padding: 96px 0;
 }
-.cta-section .h2 { color: var(--ink); }
 
 .form-wrap {
   background: #fff;
-  border: 1px solid var(--ivory-dark);
-  padding: 36px 28px;
-  margin-top: 40px;
-  box-shadow: 0 4px 32px rgba(20,20,20,.07);
+  border: 1px solid var(--paper-mid);
+  padding: 40px 32px;
+  margin-top: 44px;
+  position: relative;
 }
-.form-group {
-  margin-bottom: 22px;
+.form-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: var(--vermilion);
 }
+.form-group { margin-bottom: 24px; }
 .form-label {
   display: block;
-  font-size: 12px;
-  letter-spacing: .12em;
-  color: #666;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--ink);
   margin-bottom: 8px;
-  text-transform: uppercase;
 }
 .form-label .req {
-  color: var(--gold);
-  margin-left: 4px;
+  color: var(--vermilion);
+  margin-left: 6px;
+  font-size: 12px;
 }
 .form-input, .form-select {
   width: 100%;
-  border: 1px solid #ddd;
+  border: 1px solid var(--paper-mid);
   border-radius: 0;
   padding: 13px 16px;
   font-size: 15px;
-  font-family: var(--body-font);
+  font-family: var(--font-body);
   color: var(--ink);
-  background: var(--ivory);
+  background: var(--paper);
   transition: border-color .2s;
   appearance: none;
 }
 .form-input:focus, .form-select:focus {
   outline: none;
-  border-color: var(--gold);
+  border-color: var(--vermilion);
 }
 .form-hint {
-  font-size: 11px;
-  color: var(--mute);
+  font-size: 13px;
+  color: var(--ink-soft);
   margin-top: 6px;
+  letter-spacing: .02em;
 }
-.submit-wrap { margin-top: 8px; }
+.submit-wrap { margin-top: 10px; }
 .submit-btn {
   width: 100%;
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--vermilion);
+  color: var(--paper);
   border: none;
-  padding: 18px 24px;
-  font-size: 16px;
+  padding: 20px 24px;
+  font-family: var(--font-sans);
+  font-size: 13px;
   font-weight: 700;
-  font-family: var(--body-font);
-  letter-spacing: .06em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
   cursor: pointer;
   transition: background .2s, transform .15s;
   margin-top: 8px;
 }
-.submit-btn:hover { background: var(--gold-dark); transform: translateY(-1px); }
+.submit-btn:hover { background: var(--verm-dark); transform: translateY(-1px); }
 .form-notes {
-  margin-top: 16px;
+  margin-top: 18px;
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 .form-note {
-  font-size: 11px;
-  color: var(--mute);
-  letter-spacing: .04em;
+  font-size: 13px;
+  color: var(--ink-soft);
+  letter-spacing: .02em;
 }
 
-/* ── SUCCESS MESSAGE ──────────────────────────────────────── */
+/* ── SUCCESS ── */
 .success-msg {
   display: none;
   text-align: center;
-  padding: 48px 24px;
+  padding: 56px 24px;
 }
 .success-msg.show { display: block; }
+.success-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px; height: 52px;
+  border: 2px solid var(--vermilion);
+  margin-bottom: 20px;
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--vermilion);
+}
 .success-msg p {
-  font-family: var(--serif-font);
+  font-family: var(--font-display);
   font-size: 18px;
   color: var(--ink);
-  line-height: 1.8;
-}
-.success-icon {
-  font-size: 32px;
-  margin-bottom: 16px;
-  display: block;
-  color: var(--gold);
+  line-height: 1.85;
 }
 
-/* ── FOOTER ───────────────────────────────────────────────── */
-footer {
-  background: var(--ink);
-  color: rgba(245,240,232,.45);
-  padding: 48px 22px;
-  border-top: 1px solid rgba(200,169,110,.15);
-}
-.footer-name {
-  font-family: var(--serif-font);
-  font-size: 15px;
-  color: rgba(245,240,232,.8);
-  margin-bottom: 8px;
-  font-weight: 700;
-}
-.footer-creds {
-  font-size: 12px;
-  line-height: 1.85;
-  margin-bottom: 20px;
-}
-.footer-legal {
-  font-size: 11px;
-  line-height: 1.85;
-  border-top: 1px solid rgba(200,169,110,.12);
-  padding-top: 20px;
-  margin-top: 20px;
-}
-
-/* ── SECTION DIVIDER ──────────────────────────────────────── */
+/* ── DIVIDER ── */
 .divider {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 0 22px;
-  max-width: 680px;
+  padding: 0 var(--gutter);
+  max-width: var(--col);
   margin: 0 auto;
 }
-.divider-line { flex: 1; height: 1px; background: var(--rule); }
+.divider-line { flex: 1; height: 1px; }
+.on-ink-d .divider-line { background: rgba(247,244,238,.1); }
+.on-paper-d .divider-line { background: var(--paper-mid); }
 .divider-mark {
-  font-size: 9px;
-  letter-spacing: .3em;
-  color: var(--gold);
+  font-family: var(--font-sans);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .4em;
+  color: var(--vermilion);
   text-transform: uppercase;
 }
 
-/* ── RESPONSIVE ───────────────────────────────────────────── */
-@media (max-width: 480px) {
+/* ── FOOTER ── */
+footer {
+  background: var(--ink-mid);
+  color: rgba(247,244,238,.80);
+  padding: 52px var(--gutter);
+  border-top: 1px solid rgba(247,244,238,.12);
+}
+.footer-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: rgba(247,244,238,.98);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.footer-creds {
+  font-size: 13px;
+  line-height: 2;
+  color: rgba(247,244,238,.82);
+  margin-bottom: 20px;
+}
+.footer-legal {
+  font-size: 12px;
+  line-height: 2;
+  color: rgba(247,244,238,.65);
+  border-top: 1px solid rgba(247,244,238,.15);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+/* ── UTILITY CLASSES（inline style置き換え） ── */
+.divider-full {
+  padding-top: 0;
+  padding-bottom: 0;
+  max-width: 100%;
+  background: var(--paper-dark);
+}
+.divider-line-inner {
+  flex: 1;
+  height: 1px;
+  background: var(--paper-mid);
+}
+.body-text--lead {
+  font-weight: 600;
+  font-size: clamp(16px, 3.8vw, 18px);
+  line-height: 1.85;
+  color: var(--ink);
+}
+.body-text--strong {
+  font-weight: 600;
+  color: var(--paper);
+}
+.aa-proof {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(247,244,238,.18);
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.aa-proof-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(16px, 3.6vw, 20px);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.aa-proof-body {
+  font-size: clamp(13px, 3vw, 15px);
+  color: rgba(247,244,238,.82);
+}
+.cta-intro {
+  color: #555;
+}
+.cta-h2 {
+  color: var(--ink);
+}
+.form-notes--top {
+  margin-top: -8px;
+  margin-bottom: 28px;
+}
+.form-note--mute {
+  color: #888;
+}
+
+
+@media (max-width: 520px) {
+  .hero-inner { padding: 64px var(--gutter) 60px; }
+  .belief-card { grid-template-columns: 1fr; }
+  .belief-card-num-col { display: none; }
   .stats-row { grid-template-columns: repeat(2,1fr); }
-  .hero { padding: 72px 22px 80px; }
-  section { padding: 72px 0; }
   .form-wrap { padding: 28px 20px; }
-  .belief-card { padding: 28px 20px; }
-  .emph-box { padding: 22px 20px; }
+  section { padding: 72px 0; }
 }
 
 </style>
 </head>
 <body>
 
-<!-- ──────────────────── HEADER ──────────────────── -->
-<header class="site-header">
-  <span class="header-logo">KONISHI LP DIAGNOSTICS</span>
-  <a href="#cta" class="header-cta">無料診断を受ける</a>
-</header>
-
-<!-- ──────────────────── HERO ──────────────────── -->
-<section class="hero" aria-label="ヒーロー">
-  <div class="inner">
-    <span class="hero-eyebrow reveal">RAKUTEN LP DIAGNOSIS</span>
-    <h1 class="hero-headline reveal reveal-d1">
-      改善するたびに、<br>
-      <em>何かが違う</em>気がしていた。
+<!-- HERO -->
+<section class="hero on-ink" aria-label="ヒーロー">
+  <div class="hero-accent"></div>
+  <div class="hero-bg-num" aria-hidden="true">CVR</div>
+  <div class="hero-inner">
+    <div class="hero-overline rv">
+      <div class="hero-overline-bar"></div>
+      <span class="hero-overline-text">Rakuten LP Diagnosis</span>
+    </div>
+    <h1 class="hero-headline rv rv-d1">
+      <span class="prehead">同じ商品、同じデザイナー。</span>
+      なのに売上に、<em>3倍の差</em>が生まれた。
     </h1>
-    <p class="hero-body reveal reveal-d2">
-      写真を撮り直した。バナーを新しくした。コンサルに相談した。
+    <p class="hero-body rv rv-d2">
+      違いはページの見た目ではありませんでした。
     </p>
-    <p class="hero-body reveal reveal-d2">
-      それでも数字は動かず、「次は何をすればいいのか」がわからなくなってきた。
+    <p class="hero-body rv rv-d3">
+      広告を増やすと、確かに売上は上がる。でも利益が残らない。その原因が、実はページにあるとしたら——<br>あなたのページは、これから話す基準をクリアしているでしょうか。
     </p>
-    <p class="hero-body reveal reveal-d3">
-      この違和感の正体は、スキル不足でも努力不足でもありません。<br>
-      <strong>「どこで負けているか」を見ないまま改善を繰り返しているからです。</strong>
-    </p>
-    <div class="hero-cta-wrap reveal reveal-d4">
-      <a href="#cta" class="cta-btn">▼ 無料診断を申し込む（30秒）</a>
-      <span class="cta-note">※ 営業電話一切なし　※ 診断後の有料提案はご希望の場合のみ</span>
+    <div class="hero-cta-area rv rv-d4">
+      <a href="#cta" class="btn-primary">診断を申し込む（無料・30秒）</a>
+      <span class="btn-note">※ 営業電話一切なし　※ 診断後の有料提案はご希望の場合のみ</span>
     </div>
   </div>
 </section>
 
-<!-- ──────────────────── SECTION 1：共感 ──────────────────── -->
-<section class="dark slim" aria-label="共感">
-  <div class="inner">
-    <span class="section-label reveal">CURRENT STATE</span>
-    <h2 class="h2 reveal">あなたは今、<br>こんな状態に<br>ありませんか？</h2>
-    <div class="gold-rule reveal"></div>
-    <ul class="pain-list reveal">
-      <li>広告費を増やしても、利益が比例しない</li>
-      <li>ページを修正しても、CVRが上がらない</li>
-      <li>デザインを綺麗にしたのに、売上が変わらなかった</li>
-      <li>楽天コンサルに頼んだら、広告費だけが増えた</li>
-      <li>「次は何をすればいいのか」が、もうわからない</li>
+<!-- SECTION 1：共感 -->
+<section class="on-ink slim" aria-label="共感">
+  <div class="wrap">
+    <div class="sec-label rv">
+      <div class="sec-label-bar"></div>
+      <span class="sec-label-text">Current State</span>
+    </div>
+    <h2 class="h2 rv">心当たりは<br>ありませんか？</h2>
+    <div class="v-rule rv"></div>
+    <ul class="pain-list rv">
+      <li>広告を増やすと売上は上がるが、利益が残らない</li>
+      <li>商品には自信があるのに、なぜか競合に負ける</li>
+      <li>ページはデザイナーに作ってもらったから、十分なはずだ</li>
+      <li>楽天コンサルに任せているが、広告費だけが増えていく</li>
+      <li>何を変えれば利益が増えるのか、正直わからない</li>
     </ul>
-    <div class="emph-box reveal">
-      <p>もしひとつでも当てはまるなら、原因は広告でも、デザインでも、コンサルでもありません。</p>
+    <div class="emph-box rv">
+      <p>「ページは十分なはず」——その確信が、利益を止め続けている原因かもしれません。</p>
     </div>
   </div>
 </section>
 
-<!-- ──────────────────── SECTION 2：原因の再定義 ──────────────────── -->
-<section class="light" aria-label="原因の再定義">
-  <div class="inner">
-    <span class="section-label reveal">ROOT CAUSE</span>
-    <h2 class="h2 reveal">
-      同じデザイン会社に頼んだのに、<br>
-      A店は転換率が2倍になり、<br>
-      B店は何も変わらなかった。
+<!-- DIVIDER -->
+<div class="on-paper-d divider divider-full">
+  <div class="divider-line-inner"></div>
+  <span class="divider-mark">§</span>
+  <div class="divider-line-inner"></div>
+</div>
+
+<!-- SECTION 2：原因の再定義 -->
+<section class="on-paper" aria-label="原因の再定義">
+  <div class="wrap">
+    <div class="sec-label rv">
+      <div class="sec-label-bar"></div>
+      <span class="sec-label-text">Root Cause</span>
+    </div>
+    <h2 class="h2 rv">
+      では、その2つのページ。<br>
+      何が違ったのか。
     </h2>
-    <div class="gold-rule reveal"></div>
-    <p class="body-text reveal">この差はどこにあるのか。</p>
-    <p class="body-text reveal">
-      多くの楽天店舗が遠回りする理由は、こういう構造にあります。
+    <div class="v-rule rv"></div>
+    <p class="body-text rv">
+      写真も、価格も、商品説明も同じ。デザイン会社も同じ。それでも売上に3倍の差が生まれた。
     </p>
-    <p class="body-text reveal">
-      ページを見に来た人が「買わなかった」のではない。
+    <p class="body-text rv">
+      違いはひとつでした。ページを見たお客様が「買わなかった」のではない。
     </p>
-    <div class="emph-box reveal" style="border-color: var(--gold);">
-      <p style="color: var(--ink);">「<em style="color: var(--gold-dark); font-style:normal; font-weight:700;">選べなかった</em>」のです。</p>
+    <div class="emph-box rv">
+      <p>一方は「<em>選べた</em>」。もう一方は「<em>選べなかった</em>」——ただ、それだけです。</p>
     </div>
-    <p class="body-text reveal">
-      「選べなかった」のは、読者の頭の中にある判断軸と、ページが語りかける順序が<strong>ズレていた</strong>から。このズレはデザインでは解決できません。
+    <p class="body-text rv">
+      楽天で商品を探すお客様の大半は、すでに複数の選択肢を比べている状態でページに来ます。その瞬間に求めているのは「なぜこれを選ぶべきか」という判断の根拠です。その根拠を渡せたページが売れ、渡せなかったページが負けた。
     </p>
-    <p class="body-text reveal">
-      なぜなら、デザインは「見やすさ」のプロであり、「なぜお客様が選べないのか」を分析するプロではないからです。
-    </p>
-    <p class="body-text reveal" style="font-weight:600; font-size: clamp(16px,3.8vw,19px); line-height:1.85;">
-      必要なのは、ページの見た目ではなく——<br>
-      「お客様が自分に合っている、今これを選ぶべきだと<br>判断できる<em>順序</em>」を設計することです。
+    <p class="body-text rv body-text--lead">
+      デザインの良し悪しではなく——<br>
+      「お客様が<em>判断できる状態になっているか</em>」。<br>それだけが、売上の差を生んでいます。
     </p>
   </div>
 </section>
 
-<!-- ──────────────────── SECTION 3：Belief崩し ──────────────────── -->
-<section class="dark" aria-label="3つの誤解">
-  <div class="inner">
-    <span class="section-label reveal">THREE MISBELIEFS</span>
-    <h2 class="h2 reveal">楽天店舗が遠回りする、<br>3つの構造的誤解。</h2>
-    <div class="gold-rule reveal"></div>
+<!-- SECTION 3：Belief崩し -->
+<section class="on-ink" aria-label="3つの誤解">
+  <div class="wrap">
+    <div class="sec-label rv">
+      <div class="sec-label-bar"></div>
+      <span class="sec-label-text">Three Misbeliefs</span>
+    </div>
+    <h2 class="h2 rv"><span class="prehead">広告するほど利益が消える店舗に共通する、</span>3つの思い込み。</h2>
+    <div class="v-rule rv"></div>
 
-    <div class="belief-cards reveal">
-
+    <div class="belief-cards rv">
       <div class="belief-card">
-        <span class="belief-card-num">MISBELIEF 01</span>
-        <p class="belief-card-title">「LPを修正したら、CVRは上がる」</p>
-        <p class="belief-card-body">
-          ある食品店舗のオーナーは、半年間で4回のリニューアルを繰り返しました。写真、バナー、商品説明、レイアウト——変えられるものはすべて変えた。それでもCVRは変わらなかった。
-        </p>
-        <p class="belief-card-body">
-          なぜか。楽天では商品は3段階でふるいにかけられています。①クリック前（サムネ1枚目）→②比較段階（2〜5枚目）→③最終判断（6枚目以降）。<strong>どの段階で落とされているかを特定せずに修正しても、原因は解消されない。</strong>
-        </p>
-        <div class="belief-card-result">
-          事例：5枚目までのサムネだけを変えた結果、翌月CVRが1.9倍に改善。6枚目以降は一文字も変えていない。
+        <div class="belief-card-num-col">
+          <span class="belief-card-num">MISBELIEF 01</span>
+        </div>
+        <div class="belief-card-main">
+          <p class="belief-card-title">「売れないのは、商品か価格の問題だ」</p>
+          <p class="belief-card-body">
+            ある食品店舗のオーナーは、2年間にわたって商品のリニューアルと価格調整を繰り返しました。売上は微増したものの、利益は増えなかった。原因は商品でも価格でもなく、ページを見たお客様が「選べないまま離脱していた」ことでした。
+          </p>
+          <p class="belief-card-body">
+            商品が良くても、ページがその価値を伝える順序になっていなければ、お客様は判断できません。<strong>商品力とページ設計は、別の問題です。</strong>
+          </p>
+          <div class="belief-card-result">
+            事例：商品は変えず、サムネ5枚目までのページ設計だけを変えた結果、翌月CVRが1.9倍に改善。
+          </div>
         </div>
       </div>
 
       <div class="belief-card">
-        <span class="belief-card-num">MISBELIEF 02</span>
-        <p class="belief-card-title">「広告費を増やせば、売上は上がる」</p>
-        <p class="belief-card-body">
-          CVRが低いまま広告を回すと、1件あたりの獲得コストが利益を上回ります。広告は「選ばれるページ」に流すから利益が出る仕組みです。選べないページに流しても、広告費の分だけ赤字が積み上がるだけです。
-        </p>
-        <div class="belief-card-result">
-          事例：広告費を一旦止め、ページ改修に集中。3ヶ月後、広告費を半分に減らした状態で以前と同じ売上を達成。
+        <div class="belief-card-num-col">
+          <span class="belief-card-num">MISBELIEF 02</span>
+        </div>
+        <div class="belief-card-main">
+          <p class="belief-card-title">「広告費を増やせば、売上は解決する」</p>
+          <p class="belief-card-body">
+            「選べないページ」に広告でアクセスを集めても、離脱率は変わりません。1件あたりの獲得コストが上がるだけで、利益は減っていきます。広告は「選ばれるページ」があって初めて機能する仕組みです。
+          </p>
+          <div class="belief-card-result">
+            事例：広告費を止め、ページ設計に集中。3ヶ月後、広告費を半分に抑えた状態で以前と同じ売上を達成。
+          </div>
         </div>
       </div>
 
       <div class="belief-card">
-        <span class="belief-card-num">MISBELIEF 03</span>
-        <p class="belief-card-title">「楽天コンサルに依頼すれば、問題は全て解決する」</p>
-        <p class="belief-card-body">
-          多くのコンサルのLP改善は、デザイナーへの外注です。見た目は変わる。しかし「なぜお客様が選べないのか」という購買心理の設計は、変わらない。
-        </p>
-        <div class="belief-card-result">
-          事例：コンサル契約でリニューアル＋RPP強化。月商600万→750万に伸びたが、広告費を差し引くと利益はほぼ変わっていなかった。
+        <div class="belief-card-num-col">
+          <span class="belief-card-num">MISBELIEF 03</span>
+        </div>
+        <div class="belief-card-main">
+          <p class="belief-card-title">「ページは作ったから、もう十分だ」</p>
+          <p class="belief-card-body">
+            新商品を登録したとき作ったページを、そのまま使い続けている店舗は少なくありません。しかし、「作ること」と「選ばれる状態に設計すること」は別です。丁寧に作られたページでも、お客様の判断を導く設計になっていなければ、アクセスは離脱に変わり続けます。
+          </p>
+          <div class="belief-card-result">
+            事例：開店から2年放置していたページを設計し直した結果、月商が3ヶ月で1,800万→3,200万円に。
+          </div>
         </div>
       </div>
-
     </div>
 
-    <div class="emph-box reveal">
+    <div class="emph-box rv">
       <p>3つの誤解の根っこは、ひとつです。<br>
       「どこで負けているかを特定せずに、見えている部分だけを変えている」——この構造が解消されない限り、何を変えても同じ結果になります。</p>
     </div>
   </div>
 </section>
 
-<!-- ──────────────────── SECTION 4：独自メカニズム ──────────────────── -->
-<section class="light" aria-label="独自メカニズム">
-  <div class="inner">
-    <span class="section-label reveal">THE MECHANISM</span>
-    <h2 class="h2 reveal">
-      CVRを決める本当の変数は、<br>
-      「意識レベル」と<br>「構成順序の一致」です。
+<!-- SECTION 4：独自メカニズム -->
+<section class="on-paper" aria-label="独自メカニズム">
+  <div class="wrap">
+    <div class="sec-label rv">
+      <div class="sec-label-bar"></div>
+      <span class="sec-label-text">The Mechanism</span>
+    </div>
+    <h2 class="h2 rv">
+      <span class="prehead">CVRを決める本当の変数は、</span>「意識レベル」と<br>「購買判断の設計」です。
     </h2>
-    <div class="gold-rule reveal"></div>
+    <div class="v-rule rv"></div>
 
-    <p class="body-text reveal">
-      楽天ランキング1位を複数獲得した店舗に共通するのは、デザインのクオリティではありません。<strong>「お客様がそのページを見た瞬間の意識レベル」に合わせた構成順序</strong>でした。
+    <p class="body-text rv">
+      楽天ランキング1位を複数獲得した店舗に共通するのは、デザインのクオリティではありません。<strong>「お客様がそのページを見た瞬間の意識レベル」に合わせた購買心理の設計</strong>でした。
     </p>
 
-    <ul class="level-steps reveal">
-      <li class="level-step"><span class="ls-tag">L1</span><span class="ls-body">問題をまだ認識していない</span></li>
-      <li class="level-step"><span class="ls-tag">L2</span><span class="ls-body">悩みは自覚しているが、解決策がわからない</span></li>
-      <li class="level-step highlighted"><span class="ls-tag">L3</span><span class="ls-body">方向性はわかっているが、何を選べばいいかわからない</span></li>
-      <li class="level-step highlighted"><span class="ls-tag">L4</span><span class="ls-body">複数の商品を比較している ← <strong>楽天検索流入の大半がここ</strong></span></li>
-      <li class="level-step"><span class="ls-tag">L5</span><span class="ls-body">あとは買うだけ</span></li>
+    <ul class="level-steps rv">
+      <li class="level-step"><span class="ls-tag">無関心</span><span class="ls-body">そもそも問題を認識していない</span></li>
+      <li class="level-step"><span class="ls-tag">気づき</span><span class="ls-body">悩みは自覚しているが、解決策がわからない</span></li>
+      <li class="level-step highlighted"><span class="ls-tag">探索中</span><span class="ls-body">方向性はわかっているが、何を選べばいいかわからない</span></li>
+      <li class="level-step highlighted"><span class="ls-tag">比較中</span><span class="ls-body">複数の商品を比較している ← <strong>楽天検索流入の大半がここ</strong></span></li>
+      <li class="level-step"><span class="ls-tag">決定済</span><span class="ls-body">あとは買うだけ</span></li>
     </ul>
 
-    <p class="body-text reveal">
-      L4の読者に「うちの商品はこんなに良い」とベネフィットを並べても、選ばれません。L4は「良い商品はいくつかある」という前提のまま見ているため、ベネフィットの追加ではなく<strong>「判断軸の提示」</strong>が必要だからです。
+    <p class="body-text rv">
+      「比較中」の読者に「うちの商品はこんなに良い」とベネフィットを並べても、選ばれません。「良い商品はいくつかある」という前提のまま見ているため、ベネフィットの追加ではなく<strong>「判断できる根拠の提示」</strong>が必要だからです。
     </p>
 
-    <h3 class="h3 reveal" style="margin-top:40px;">正しい構成順序</h3>
+    <p class="body-text rv">
+      楽天では、読者はサムネイル1枚目から5〜6枚目を見る数秒の間に、買うかどうかの判断をほぼ終えています。この数枚の中で「自分に合っている」「これを選ぶべき理由がわかった」という状態を作れなければ、どれだけ下部のページを作り込んでも、読まれないまま離脱されます。
+    </p>
 
-    <div class="mechanism-grid reveal">
-      <div class="mech-row">
-        <div class="mech-level"><span>2枚目</span></div>
-        <div class="mech-content">
-          <span class="mech-label">巻き戻し</span>
-          <p class="mech-text">読者の失敗体験を言語化し、自己認識を起動する<br>（誤ったL4 → L2への巻き戻し）</p>
-        </div>
-      </div>
-      <div class="mech-row">
-        <div class="mech-level"><span>3枚目</span></div>
-        <div class="mech-content">
-          <span class="mech-label">原因の再定義</span>
-          <p class="mech-text">「問題の原因はそこではない」という気づきを与える<br>（L2 → L3の押し上げ）</p>
-        </div>
-      </div>
-      <div class="mech-row">
-        <div class="mech-level"><span>4枚目</span></div>
-        <div class="mech-content">
-          <span class="mech-label">新しい判断軸</span>
-          <p class="mech-text">崩した後の空白を埋める新しい価値基準を提示する<br>（正しいL3の完成）</p>
-        </div>
-      </div>
-      <div class="mech-row active">
-        <div class="mech-level"><span>5枚目</span></div>
-        <div class="mech-content">
-          <span class="mech-label">商品の自然登場</span>
-          <p class="mech-text">判断軸の延長線上に、この商品が必然として登場する<br>（L3 → L4遷移の完成）</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="emph-box reveal">
-      <p style="color:var(--ink);">この順序が1枚でもズレると、読者は「選べない状態」のまま離脱します。逆に、正しく設計されれば——<em style="color:var(--gold-dark);font-style:normal;font-weight:700;">デザインが変わらなくても、CVRは変わります。</em></p>
+    <div class="emph-box rv">
+      <p>ただし、「どの段階で読者が離脱しているか」は店舗によって異なります。ページの設計が問題なのか、意識レベルの設定がズレているのか、それとも別の箇所か——原因を特定せずに手を動かしても、また同じ結果になります。</p>
     </div>
   </div>
 </section>
 
-<!-- ──────────────────── SECTION 5：自己紹介 ──────────────────── -->
-<section class="dark" aria-label="自己紹介">
-  <div class="inner">
-    <span class="section-label reveal">ABOUT</span>
-    <h2 class="h2 reveal">私も、3年間<br>同じ誤解の中に<br>いました。</h2>
-    <div class="gold-rule reveal"></div>
+<!-- SECTION 5：自己紹介 -->
+<section class="on-ink" aria-label="自己紹介">
+  <div class="wrap">
+    <div class="sec-label rv">
+      <div class="sec-label-bar"></div>
+      <span class="sec-label-text">About</span>
+    </div>
+    <h2 class="h2 rv"><span class="prehead">なぜ、この診断に</span>意味があるのか。</h2>
+    <div class="v-rule rv"></div>
 
-    <p class="body-text reveal">
-      楽天に携わって20年。最初の3年間は失敗の連続でした。「デザインを変えても、売上が伸びない。広告を増やしても、利益が残らない。」当時の私は、問題をデザインと広告の問題だと思っていました。
+    <p class="body-text rv">
+      楽天ショップオブザイヤー受賞店舗の店長として、そしてショップオブジエリア受賞店舗のCVR改善責任者として——私は「表彰される側」の現場で、ページの購買心理設計を直接担い、その結果を数字で見てきました。
     </p>
-    <p class="body-text reveal">
-      転換点は、ひとつの発見でした。同じ商品で、同じデザイン会社に頼んだ2店舗を並べたとき——片方は転換率2.1%、もう片方は0.8%。違いはどこにあったのか。
+    <p class="body-text rv">
+      関わってきた店舗で繰り返し目にしたのは、同じ商品・同じ価格帯でも、ページの設計次第で転換率に2倍以上の差が生まれるという事実です。デザインの差ではありません。お客様がページを通じて「判断できる状態になっているか」——その一点だけが、結果を分けていました。
     </p>
-    <p class="body-text reveal" style="font-weight:600; color:var(--ivory);">
-      構成の順序でした。
-    </p>
-    <p class="body-text reveal">
-      転換率が高い店舗は、読者の意識レベルに合わせた順序でページが組まれていた。もう一方は、見た目は同じでも、読者が「選べない」まま最後まで読み進める構成になっていた。
-    </p>
-    <p class="body-text reveal">
-      この発見から、私は「CVRを決めるのは構成であり、構成を決めるのは読者の意識レベルだ」という確信に至りました。それ以降、1,000を超えるページ改善に関わり、26店舗で平均CVRを1.8倍に改善してきました。
+    <p class="body-text rv body-text--strong">
+      この確信をもとに、1,000を超えるページ改善に関わり、26店舗で平均CVRを1.8倍に改善してきました。
     </p>
 
-    <div class="stats-row reveal">
+    <div class="stats-row rv">
       <div class="stat-cell">
-        <span class="stat-num">2<span style="font-size:.55em;">回</span></span>
+        <span class="stat-num">2<sub>回</sub></span>
         <span class="stat-label">楽天総合<br>ランキング1位</span>
       </div>
       <div class="stat-cell">
-        <span class="stat-num">11<span style="font-size:.55em;">回</span></span>
+        <span class="stat-num">11<sub>回</sub></span>
         <span class="stat-label">楽天年間<br>ランキング1位</span>
       </div>
       <div class="stat-cell">
-        <span class="stat-num">1,000<span style="font-size:.45em;">回+</span></span>
+        <span class="stat-num">1,000<sub>+</sub></span>
         <span class="stat-label">楽天ランキング<br>1位獲得</span>
       </div>
       <div class="stat-cell">
-        <span class="stat-num">1.8<span style="font-size:.55em;">倍</span></span>
+        <span class="stat-num">1.8<sub>倍</sub></span>
         <span class="stat-label">26店舗<br>平均CVR改善率</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ──────────────────── SECTION 6：ベネフィット3段構造 ──────────────────── -->
-<section class="light" aria-label="ベネフィット">
-  <div class="inner">
-    <span class="section-label reveal">WHAT CHANGES</span>
-    <h2 class="h2 reveal">診断を受けた後、<br>何が変わるのか。</h2>
-    <div class="gold-rule reveal"></div>
+<!-- SECTION 6：ベネフィット -->
+<section class="on-paper" aria-label="ベネフィット">
+  <div class="wrap">
+    <div class="sec-label rv">
+      <div class="sec-label-bar"></div>
+      <span class="sec-label-text">What Changes</span>
+    </div>
+    <h2 class="h2 rv">診断を受けた後、<br>何が変わるのか。</h2>
+    <div class="v-rule rv"></div>
 
-    <div class="benefit-cards reveal">
+    <div class="benefit-cards rv">
       <div class="benefit-card">
-        <span class="bc-num">FUNCTIONAL BENEFIT 01</span>
-        <h3 class="bc-title" style="font-family:var(--serif-font);">「どこで負けているか」が<br>初めて見える</h3>
+        <span class="bc-num">Functional Benefit 01</span>
+        <h3 class="bc-title">「どこで負けているか」が<br>初めて見える</h3>
         <p class="bc-body">
           診断レポートには3点が記載されます。①今、売上を止めているポイント（どの段階で離脱が起きているか）、②最初に改善すべき1点、③それにより失っている本来得られる利益。レポートを読んだ後、「次に何をすべきか」が初めて1点に絞られます。
         </p>
       </div>
       <div class="benefit-card">
-        <span class="bc-num">EMOTIONAL BENEFIT 02</span>
-        <h3 class="bc-title" style="font-family:var(--serif-font);">「わからない」の霧が晴れる</h3>
+        <span class="bc-num">Emotional Benefit 02</span>
+        <h3 class="bc-title">「わからない」の霧が晴れる</h3>
         <p class="bc-body">
           「次は何をすればいいのかわからない」という状態は、情報が少ないのではなく、情報が多すぎるからです。診断後のオーナーが口にするのは、「ようやく手をつける場所がわかった」という感覚です。
         </p>
       </div>
       <div class="benefit-card">
-        <span class="bc-num">SELF-ACTUALIZATION 03</span>
-        <h3 class="bc-title" style="font-family:var(--serif-font);">利益が出るページを、<br>自分で設計できるようになる</h3>
+        <span class="bc-num">Self-Actualization 03</span>
+        <h3 class="bc-title">LPの質に、<br>もう悩まなくていい</h3>
         <p class="bc-body">
-          CVRが改善されると、「広告を増やさなくても、利益が増える」という感覚を初めて体験します。そしてその体験は、「次の商品でも同じことができる」という確信に変わります。デザインや広告ではなく、「どういう構成で設計するか」という視点を持つオーナーになることです。
+          CVRが改善された後、オーナーが口にするのは「ようやく商品開発に集中できる」という言葉です。ページのことを考えなくていい。広告の数字に振り回されなくていい。売上が伸びる仕組みをプロに任せ、自分は次の事業判断だけに集中できる——それが、この診断を起点にして手に入る状態です。
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ──────────────────── SECTION 7：社会的証明 ──────────────────── -->
-<section class="dark" aria-label="お客様の声">
-  <div class="inner">
-    <span class="section-label reveal">RESULTS</span>
-    <h2 class="h2 reveal">診断を受けた<br>店舗様の声。</h2>
-    <div class="gold-rule reveal"></div>
+<!-- SECTION 7：社会的証明 -->
+<section class="on-ink" aria-label="お客様の声">
+  <div class="wrap">
+    <div class="sec-label rv">
+      <div class="sec-label-bar"></div>
+      <span class="sec-label-text">Results</span>
+    </div>
+    <h2 class="h2 rv">診断を受けた<br>店舗様の声。</h2>
+    <div class="v-rule rv"></div>
 
-    <div class="testimonials reveal">
+    <div class="testimonials rv">
       <div class="testi">
-        <p class="testi-quote">「ページを何度直しても売上が変わらず、診断に申し込みました。レポートで指摘されたのは、サムネ5枚目までの構成順序でした。そこだけを変えた翌月に、CVRが大幅に改善。正直こんなに変わるとは思っていませんでした。」</p>
-        <p class="testi-meta">健康食品店舗様・月商 780万 → 1,380万円</p>
+        <p class="testi-title">デザインは一切変えず、CVRが2倍を超えた。</p>
+        <p class="testi-quote">「半年間で4回リニューアルしても売上が変わらず、診断に申し込みました。レポートで指摘されたのはサムネ5枚目までのページ設計でした。そこだけを変えた翌月、CVRが2倍を超えました。デザインは一切変えていません。」</p>
+        <p class="testi-meta">健康食品店舗様・月商 1,800万 → 3,200万円</p>
         <span class="testi-cvr">CVR 2.1% → 4.3%（改善率 205%）</span>
       </div>
       <div class="testi">
-        <p class="testi-quote">「コンサルからは『広告を増やしてください』と言われ続けていました。小西さんは逆で、『今は広告を増やすべきではない。まずページを整えましょう』と。その通りにしたら、3ヶ月後に楽天ランキング初受賞できました。」</p>
-        <p class="testi-meta">美容雑貨店舗様</p>
+        <p class="testi-title">広告費を減らしながら、ランキング初受賞。</p>
+        <p class="testi-quote">「楽天コンサルからは『広告を増やしてください』と言われ続けていました。小西さんは逆で、『今は広告を増やすべきではない。まずページを整えましょう』と。その通りに進めたら、3ヶ月後に楽天ランキング初受賞。広告費は以前より減っています。」</p>
+        <p class="testi-meta">食品・健康雑貨店舗様・月商 2,400万 → 3,900万円</p>
         <span class="testi-cvr">CVR 7.3% → 14.8%（改善率 203%）</span>
       </div>
       <div class="testi">
-        <p class="testi-quote">「診断レポートを読んで、自分が間違った場所に時間とお金を使っていたことに初めて気づきました。指摘通りに構成を修正したら、翌月に売上が1.5倍になりました。」</p>
-        <p class="testi-meta">生活雑貨店舗様・月商 270万 → 400万円</p>
-        <span class="testi-cvr">CVR 3.4% → 6.1%（改善率 179%）</span>
+        <p class="testi-title">任せたら、翌月に売上1.5倍。今は商品開発だけに集中できている。</p>
+        <p class="testi-quote">「診断レポートを読んで、自分が見当違いの場所に時間と予算を使っていたと初めてわかりました。改修をすべて任せたら、翌月に売上が1.5倍。今は商品開発だけに集中できています。」</p>
+        <p class="testi-meta">日用品・生活雑貨店舗様・月商 3,100万 → 4,700万円</p>
+        <span class="testi-cvr">CVR 1.8% → 3.2%（改善率 178%）</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ──────────────────── SECTION 8：FAQ ──────────────────── -->
-<section class="dark slim" aria-label="よくある質問">
-  <div class="inner">
-    <span class="section-label reveal">FAQ</span>
-    <h2 class="h2 reveal">よくある<br>ご質問。</h2>
-    <div class="gold-rule reveal"></div>
+<!-- SECTION 8：FAQ -->
+<section class="on-ink slim" aria-label="よくある質問">
+  <div class="wrap">
+    <div class="sec-label rv">
+      <div class="sec-label-bar"></div>
+      <span class="sec-label-text">FAQ</span>
+    </div>
+    <h2 class="h2 rv">よくある<br>ご質問。</h2>
+    <div class="v-rule rv"></div>
 
-    <ul class="faq-list reveal">
+    <ul class="faq-list rv">
       <li class="faq-item">
         <p class="faq-q">診断後、営業電話がかかってきますか？</p>
         <p class="faq-a">一切ありません。診断レポートをお送りした後、有料提案を希望される場合のみご連絡ください。申し込み時点では、何の義務も発生しません。</p>
@@ -1129,42 +1362,55 @@ footer {
       </li>
       <li class="faq-item">
         <p class="faq-q">うちの商品は特殊なカテゴリですが、診断できますか？</p>
-        <p class="faq-a">はい。意識レベルと構成順序の設計原理は、カテゴリを問わず同じ構造で機能します。健康食品・美容・食品・日用品・家電など、様々なカテゴリで改善実績があります。</p>
+        <p class="faq-a">はい。お客様の購買心理を読んで判断できる状態を設計する原理は、カテゴリを問わず同じ構造で機能します。健康食品・美容・食品・日用品・家電など、様々なカテゴリで改善実績があります。</p>
       </li>
     </ul>
   </div>
 </section>
 
-<!-- ──────────────────── AFTER-AFTER ──────────────────── -->
+<!-- AFTER-AFTER -->
 <div class="after-after" aria-label="アフターアフター">
-  <div class="inner">
-    <p class="aa-text reveal">
-      広告を増やさなくても、<br><em>利益が残る状態</em>をつくる。
+  <div class="aa-bg-text" aria-hidden="true">AFTER</div>
+  <div class="after-after-inner">
+    <p class="aa-text rv">
+      同じ広告費で、<br><em>利益だけが増えていく</em>状態をつくる。
     </p>
-    <p class="aa-body reveal reveal-d1">
+    <p class="aa-body rv rv-d1">
       ページに流れてきた人が、自分に合っていると判断し、今これを選ぶべきだと気づき、そして買う。
     </p>
-    <p class="aa-body reveal reveal-d2">
+    <p class="aa-body rv rv-d2">
       この流れが構成で設計されたとき、広告費は「利益を生む装置」に変わります。
     </p>
-    <p class="aa-body reveal reveal-d3">
-      改善のたびに迷わなくなる。数字が動くたびに、次の手がわかるようになる。<br>
-      それが、CVRを構成で設計できるオーナーになるということです。
+    <p class="aa-body rv rv-d3">
+      LP改善をプロに任せ、オーナーは次の商品と事業判断だけに集中する。<br>
+      その状態をつくることが、この診断の本当のゴールです。
+    </p>
+    <p class="aa-body rv rv-d4 aa-proof">
+      <span class="aa-proof-title">なぜ、この診断が機能するのか。</span>
+      <span class="aa-proof-body">この診断を設計したのは、楽天ショップオブザイヤー受賞店舗で店長を務め、その後ショップオブジエリア受賞店舗ではCVR改善の責任者として設計に携わってきた人間です。表彰される側の現場で、結果に責任を持つ立場でCVRを見てきました。</span>
     </p>
   </div>
 </div>
 
-<!-- ──────────────────── CTA SECTION ──────────────────── -->
+<!-- CTA SECTION -->
 <section class="cta-section" id="cta" aria-label="申し込みフォーム">
-  <div class="inner">
-    <span class="section-label reveal" style="color:var(--gold-dark);">FREE DIAGNOSIS</span>
-    <h2 class="h2 reveal" style="color:var(--ink);">無料LP診断を<br>申し込む。</h2>
-    <div class="gold-rule reveal"></div>
-    <p class="body-text reveal" style="color:#555;">
-      このページを読んで「これはページの構成の問題だ」と感じた方は、以下のフォームから30秒で申込完了です。レポートはお申込みから2営業日以内にお送りします。
+  <div class="wrap">
+    <div class="sec-label rv">
+      <div class="sec-label-bar"></div>
+      <span class="sec-label-text">Free Diagnosis</span>
+    </div>
+    <h2 class="h2 rv cta-h2">無料LP診断は、<br>わずか30秒で。</h2>
+    <div class="v-rule rv"></div>
+    <p class="body-text rv cta-intro">
+      読んでいて、自分のページのことが頭に浮かんだ方は、まず診断を受けてみてください。フォームへの入力は30秒、レポートはお申込みから2営業日以内にお送りします。
     </p>
+    <div class="form-notes rv form-notes--top">
+      <span class="form-note form-note--mute">※ 営業電話は一切いたしません</span>
+      <span class="form-note form-note--mute">※ 診断後の有料提案はご希望がない限り行いません</span>
+      <span class="form-note form-note--mute">※ 申込後、2営業日以内にレポートをお送りします</span>
+    </div>
 
-    <div class="form-wrap reveal" id="form-wrap">
+    <div class="form-wrap rv" id="form-wrap">
       <form class="diag-form" id="diagForm" novalidate>
         <div class="form-group">
           <label class="form-label" for="store_name">店舗名<span class="req">必須</span></label>
@@ -1202,25 +1448,20 @@ footer {
           <p class="form-hint">購入数 ÷ 訪問数 × 100 で計算できます。感覚値で構いません</p>
         </div>
         <div class="submit-wrap">
-          <button type="submit" class="submit-btn">▶ 診断を申し込む（無料・30秒）</button>
-        </div>
-        <div class="form-notes">
-          <span class="form-note">※ 営業電話は一切いたしません</span>
-          <span class="form-note">※ 診断後の有料提案はご希望がない限り行いません</span>
-          <span class="form-note">※ 申込後、2営業日以内にレポートをお送りします</span>
+          <button type="submit" class="submit-btn">診断を申し込む ── 無料・30秒</button>
         </div>
       </form>
       <div class="success-msg" id="successMsg">
-        <span class="success-icon">✓</span>
+        <div class="success-mark">✓</div>
         <p>お申し込みありがとうございます。<br>2営業日以内に診断レポートをお送りします。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ──────────────────── FOOTER ──────────────────── -->
+<!-- FOOTER -->
 <footer>
-  <div class="inner">
+  <div class="wrap">
     <p class="footer-name">小西 秀人（ECコンサルタント）</p>
     <p class="footer-creds">
       楽天総合ランキング1位 2回 / 年間ランキング1位 11回受賞<br>
@@ -1233,9 +1474,9 @@ footer {
   </div>
 </footer>
 
-<!-- ──────────────────── JS ──────────────────── -->
+<!-- JS -->
 <script>
-// Reveal on scroll
+// Scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -1243,31 +1484,24 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(e.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
+document.querySelectorAll('.rv').forEach(el => observer.observe(el));
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// Form submit → GAS → Spreadsheet
+// Form
 document.getElementById('diagForm').addEventListener('submit', function(e) {
   e.preventDefault();
-
   const required = this.querySelectorAll('[required]');
   let valid = true;
   required.forEach(field => {
     if (!field.value.trim()) {
-      field.style.borderColor = '#e74c3c';
+      field.style.borderColor = '#C8341A';
       valid = false;
     } else {
       field.style.borderColor = '';
     }
   });
+  if (!valid) { alert('必須項目をすべて入力してください。'); return; }
 
-  if (!valid) {
-    alert('必須項目をすべて入力してください。');
-    return;
-  }
-
-  // フィールド名は既存GASスプレッドシートのキーに合わせる
   const data = {
     store_name:   document.getElementById('store_name').value,
     name:         document.getElementById('name').value,
@@ -1279,7 +1513,6 @@ document.getElementById('diagForm').addEventListener('submit', function(e) {
   };
 
   const GAS_URL = 'https://script.google.com/macros/s/AKfycbzQFWwBNina5bUUmdRv10A2D0R0FT9q1TXOy61EF_OiIVf7WZWi05r9tm148uvulhCy/exec';
-
   const btn = this.querySelector('.submit-btn');
   btn.textContent = '送信中...';
   btn.disabled = true;
@@ -1296,14 +1529,12 @@ document.getElementById('diagForm').addEventListener('submit', function(e) {
     document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth', block: 'center' });
   })
   .catch(() => {
-    // no-corsではopaqueレスポンスのため常にthenに落ちるが念のため
     this.style.display = 'none';
     document.getElementById('successMsg').classList.add('show');
     document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 });
 
-// バリデーションエラー色のリセット
 document.querySelectorAll('.form-input, .form-select').forEach(inp => {
   inp.addEventListener('input', () => inp.style.borderColor = '');
 });
