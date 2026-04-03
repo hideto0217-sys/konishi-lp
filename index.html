@@ -680,17 +680,17 @@ body {
 
   <div class="fg">
     <label class="fl">お名前<span class="req">必須</span></label>
-    <input type="text" class="fi" placeholder="小西 秀人">
+    <input type="text" id="f-name" class="fi" placeholder="小西 秀人">
   </div>
 
   <div class="fg">
     <label class="fl">メールアドレス<span class="req">必須</span></label>
-    <input type="email" class="fi" placeholder="name@example.com">
+    <input type="email" id="f-email" class="fi" placeholder="name@example.com">
   </div>
 
   <div class="fg">
     <label class="fl">販売チャネル<span class="req">必須</span></label>
-    <select class="fs">
+    <select id="f-channel" class="fs">
       <option value="">選択してください</option>
       <option>楽天市場</option>
       <option>Amazon</option>
@@ -702,13 +702,13 @@ body {
 
   <div class="fg">
     <label class="fl">商品ページまたはプロジェクトページURL<span class="req">必須</span></label>
-    <input type="url" class="fi" placeholder="https://...">
+    <input type="url" id="f-url" class="fi" placeholder="https://...">
     <p class="fh">過去のプロジェクトページURLでも構いません</p>
   </div>
 
   <div class="fg">
     <label class="fl">月間アクセス数（訪問数）</label>
-    <select class="fs">
+    <select id="f-access" class="fs">
       <option value="">おおよそで構いません</option>
       <option>1,000未満</option>
       <option>1,000〜3,000</option>
@@ -721,11 +721,11 @@ body {
 
   <div class="fg">
     <label class="fl">現在のCVRまたは転換率</label>
-    <input type="text" class="fi" placeholder="例：2.3%（分からない場合は空白で）">
+    <input type="text" id="f-cvr" class="fi" placeholder="例：2.3%（分からない場合は空白で）">
     <p class="fh">感覚値で構いません。分からない場合は空白のままで大丈夫です。</p>
   </div>
 
-  <button class="f-submit">診断を申し込む ── 無料・2営業日以内に返送</button>
+  <button class="f-submit" onclick="submitForm(event)">診断を申し込む ── 無料・2営業日以内に返送</button>
 
   <div class="f-notes">
     <p class="f-note">営業電話は一切いたしません</p>
@@ -733,6 +733,54 @@ body {
     <p class="f-note">申込後、2営業日以内にレポートをお送りします</p>
   </div>
 </section>
+
+
+<script>
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbwpJvmATo5gaz-Pnek4L_823s9GoMZGc2DcygMQ5b5jKyzriFTWvMx4EZlSbd6ckPO2rQ/exec';
+
+function submitForm(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('f-name').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const channel = document.getElementById('f-channel').value;
+  const url = document.getElementById('f-url').value.trim();
+  const access = document.getElementById('f-access').value;
+  const cvr = document.getElementById('f-cvr').value.trim();
+
+  if (!name || !email || !channel || !url) {
+    alert('お名前・メールアドレス・販売チャネル・URLは必須です。');
+    return;
+  }
+
+  const btn = document.querySelector('.f-submit');
+  btn.textContent = '送信中...';
+  btn.disabled = true;
+
+  const data = { name, email, channel, url, access, cvr };
+
+  fetch(GAS_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    btn.textContent = '送信完了しました。2営業日以内にご連絡いたします。';
+    btn.style.background = 'var(--gold)';
+    document.getElementById('f-name').value = '';
+    document.getElementById('f-email').value = '';
+    document.getElementById('f-channel').value = '';
+    document.getElementById('f-url').value = '';
+    document.getElementById('f-access').value = '';
+    document.getElementById('f-cvr').value = '';
+  })
+  .catch(() => {
+    btn.textContent = '送信に失敗しました。メールでご連絡ください。';
+    btn.disabled = false;
+  });
+}
+</script>
 
 <!-- FOOTER -->
 <footer class="footer">
