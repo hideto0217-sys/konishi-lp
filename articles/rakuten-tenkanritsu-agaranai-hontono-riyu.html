@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>楽天商品ページのCVRが上がらない本当の理由｜小西マーケティング</title>
+<meta name="description" content="広告を増やしてもCVRが改善しない。デザインを変えても数字が動かない。その原因は商品ページの設計にあります。100店舗超の現場から見えてきた構造的な問題を解説します。">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SWS3R3K4W5');
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "楽天商品ページのCVRが上がらない本当の理由",
+  "description": "広告を増やしてもCVRが改善しない。デザインを変えても数字が動かない。その原因は商品ページの設計にあります。",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com",
+    "jobTitle": "ECコンサルタント",
+    "description": "楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援専門。18年のEC実務経験。楽天総合ランキング1位2回、Makuake総合1位3回、D2C CPO3,000円以下を安定達成。"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html"
+  }
+}
+</script>
+<style>
+:root {
+  --navy: #162840;
+  --navy-mid: #1e3a5f;
+  --gold: #9a7a3a;
+  --gold-light: #c8a96e;
+  --ink: #111118;
+  --ink-mid: #3a3a4a;
+  --ink-light: #7a7a8a;
+  --paper: #faf9f7;
+  --paper-dark: #f0ede8;
+  --white: #ffffff;
+  --rule: #ddd9d0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  background: var(--white);
+  color: var(--ink);
+  line-height: 1.8;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+}
+
+.site-logo {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+/* ===== ARTICLE HERO ===== */
+.article-hero {
+  background: var(--navy);
+  padding: 56px 28px 48px;
+}
+
+.article-hero-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.article-category {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--gold-light);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.article-meta {
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 1px;
+}
+
+/* ===== ARTICLE BODY ===== */
+.article-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 28px;
+  background: var(--white);
+}
+
+.article-body {
+  padding: 56px 0 40px;
+}
+
+.article-lead {
+  font-size: 17px;
+  color: var(--ink-mid);
+  line-height: 2.4;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--rule);
+  font-weight: 400;
+}
+
+.article-p {
+  font-size: 16px;
+  color: var(--ink-mid);
+  line-height: 2.5;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.article-h2 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1.65;
+  margin: 52px 0 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--navy);
+}
+
+.article-h3 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.7;
+  margin: 40px 0 16px;
+}
+
+.article-callout {
+  border-left: 3px solid var(--navy);
+  padding: 22px 22px;
+  margin: 36px 0;
+  background: var(--paper);
+}
+
+.article-callout-txt {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 2.0;
+}
+
+.article-list {
+  margin: 20px 0 28px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.article-list li {
+  font-size: 16px;
+  color: var(--ink-mid);
+  line-height: 2.2;
+  padding: 12px 0 12px 24px;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+
+.article-list li:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.article-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* ===== CTA BOX ===== */
+.cta-box {
+  background: var(--navy);
+  padding: 36px 32px;
+  margin: 52px 0;
+}
+
+.cta-box-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--gold-light);
+  display: block;
+  margin-bottom: 14px;
+}
+
+.cta-box-heading {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.cta-box-text {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  line-height: 2.0;
+  margin-bottom: 24px;
+}
+
+.cta-box-btn {
+  display: flex;
+  width: 100%;
+  height: 56px;
+  background: var(--gold);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  transition: opacity 0.2s;
+}
+
+.cta-box-btn:hover {
+  opacity: 0.85;
+}
+
+/* ===== RELATED ===== */
+.article-related {
+  margin: 52px 0 0;
+  padding-top: 40px;
+  border-top: 1px solid var(--rule);
+}
+
+.related-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.related-item {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.related-item:first-of-type {
+  border-top: 1px solid var(--rule);
+}
+
+.related-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.7;
+  text-decoration: none;
+  display: block;
+}
+
+.related-title:hover {
+  color: var(--gold);
+}
+
+/* ===== マイクロ著者紹介 ===== */
+.micro-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--paper);
+  border-left: 3px solid var(--gold);
+  padding: 14px 18px;
+  margin: 24px 0 36px;
+}
+
+.micro-author-text {
+  font-size: 13px;
+  color: var(--ink-mid);
+  line-height: 1.8;
+}
+
+.micro-author-text strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* ===== 著者情報 ===== */
+.author-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: var(--paper);
+  padding: 28px 24px;
+  margin: 52px 0;
+  border-top: 2px solid var(--navy);
+}
+
+.author-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.author-name {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.author-bio {
+  font-size: 14px;
+  color: var(--ink-mid);
+  line-height: 2.0;
+}
+
+/* ===== FAQボックス ===== */
+.faq-box {
+  margin: 52px 0;
+}
+
+.faq-item {
+  border-top: 1px solid var(--rule);
+  padding: 24px 0;
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.faq-q {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.7;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.faq-q-icon {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.faq-a {
+  font-size: 16px;
+  color: var(--ink-mid);
+  line-height: 2.4;
+  padding-left: 28px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--navy);
+  padding: 48px 28px;
+  text-align: center;
+  margin-top: 64px;
+}
+
+.footer-logo {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.footer-rule {
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+  margin: 14px auto;
+}
+
+.footer-info {
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+  line-height: 2.2;
+}
+
+/* ===== PC ===== */
+@media (min-width: 640px) {
+  .site-header-inner { padding: 24px 48px; }
+  .article-hero { padding: 72px 48px 64px; }
+  .article-title { font-size: 34px; }
+  .article-wrap { padding: 0 48px; }
+  .article-lead { font-size: 18px; }
+  .article-p { font-size: 17px; }
+  .article-h2 { font-size: 28px; }
+  .article-h3 { font-size: 22px; }
+  .article-callout-txt { font-size: 20px; }
+  .cta-box { padding: 44px 40px; }
+  .cta-box-heading { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-logo">小西マーケティング</a>
+  </div>
+</header>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <span class="article-category">楽天商品ページ改善</span>
+    <h1 class="article-title">楽天商品ページのCVRが<br>上がらない本当の理由</h1>
+    <span class="article-meta">小西マーケティング｜2026.04</span>
+  </div>
+</section>
+
+<!-- ARTICLE BODY -->
+<div class="article-wrap">
+  <div class="article-body">
+
+    <p class="article-lead">広告費を増やした。デザインを刷新した。レビューも増やした。それでもCVRが変わらない。楽天EC運営者から最もよく聞く悩みです。原因はどこにあるのか。100を超える店舗を見てきた現場から、構造的な問題を解説します。</p>
+
+    <!-- マイクロ著者紹介（E-E-A-T対応） -->
+    <div class="micro-author">
+      <p class="micro-author-text">この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得した実績を持つECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。</p>
+    </div>
+
+    <!-- S1: ギャップ提示 -->
+    <h2 class="article-h2">なぜ、何を変えても数字が動かないのか</h2>
+
+    <p class="article-p">楽天のRMS画面を開く。昨日のアクセス数は悪くない。にもかかわらず、売上は動いていない。広告費は出ている。カゴには入っている。でも、最後の一歩が起きない。</p>
+
+    <p class="article-p">最初は「サムネが悪いんだろう」と思って変えた。変わらなかった。次は「スマホ対応が甘いのかも」と思って専用バナーを作った。それでも変わらなかった——。</p>
+
+    <p class="article-p">多くの事業者はこう考えます。集客が足りないのではないか。ページの見た目が弱いのではないか。レビュー数が足りないのではないか。</p>
+
+    <p class="article-p">ですが、100を超える店舗の停滞を見てきた結論として、それらはすべて原因ではありません。</p>
+
+    <p class="article-p">では、なぜ改善しても数字が動かないのか。</p>
+
+    <div class="article-callout">
+      <p class="article-callout-txt">情報が足りないから買わないのではありません。<br>判断できないから、買わないのです。</p>
+    </div>
+
+    <p class="article-p">楽天で商品を探している買い手は、すでに複数の選択肢を比べている状態でページに来ます。その瞬間に求めているのは「なぜこれを選ぶべきか」という判断の根拠です。その根拠を渡せたページが売れ、渡せなかったページが負ける。デザインの差でも、広告費の差でもありません。</p>
+
+    <!-- S2: 問題の再定義 -->
+    <h2 class="article-h2">デザインを変えても売れない理由は、デザインの問題ではない。</h2>
+
+    <p class="article-p">多くの店舗が、CVRが上がらない原因を「デザインの古さ」か「情報量の不足」に求めます。だから制作会社に依頼し、リニューアルを行う。</p>
+
+    <p class="article-p">しかし、リニューアル後のCVRが改善しないケースは珍しくありません。なぜか。</p>
+
+    <p class="article-p">問題は見た目にあるのではなく、ページの中に「読者が買うまでの論理の流れ」が設計されていないことにあります。どれだけ綺麗な画像を並べても、読者の中に「なぜこれを選ぶべきなのか」という確信が生まれなければ、カゴ落ちは起きる。</p>
+
+    <div class="article-callout">
+      <p class="article-callout-txt">楽天は比較が前提のプラットフォームです。<br>美しさは、選択の理由にはなりません。</p>
+    </div>
+
+    <!-- S3: 原因の再定義 -->
+    <h2 class="article-h2">「デザインが古い」は原因ではなく、結果だ。</h2>
+
+    <h3 class="article-h3">楽天のユーザーが商品ページに到達する前に、何をしているか</h3>
+
+    <p class="article-p">楽天で検索する人は、すでに何かを求めています。しかしその多くは、具体的な商品をまだ決めていない状態で一覧ページにいる。</p>
+
+    <p class="article-p">この状態を「購買心理の段階」で言えば、「問題は自覚しているが、解決策をまだ選んでいない」段階です。複数の選択肢を見比べながら、なんとなく判断している。</p>
+
+    <p class="article-p">一方で、ほとんどの楽天LPは何を見せているか。商品スペック、成分表、使い方説明、受賞歴——これらはすべて、「すでにその商品を選ぼうとしている人」向けの情報です。</p>
+
+    <div class="article-callout">
+      <p class="article-callout-txt">判断軸がまだ定まっていない読者に、<br>判断が完了した人向けの情報を見せている。<br>これが、構造的なミスマッチです。</p>
+    </div>
+
+    <p class="article-p">このミスマッチは、なぜ気づかれないのか。理由は業界構造にあります。商品ページの制作会社は「綺麗なデザインのページ」を売っています。楽天コンサルは「アクセス数の増加」を売っています。誰も、読者の購買心理の段階とページ設計の整合性を起点に仕事をしていない。だから店舗運営者は、正しい問いを立てる機会がないまま、改善を繰り返しています。</p>
+
+    <!-- S4: 変形LP構造 -->
+    <h2 class="article-h2">楽天の商品ページは「変形LP構造」になっている</h2>
+
+    <p class="article-p">ここに、楽天特有の構造的な問題があります。</p>
+
+    <p class="article-p">楽天の商品ページは一見、1本のLPのように見えます。しかし実際は、</p>
+
+    <ul class="article-list">
+      <li>検索一覧（サムネイル）——「なんとなく良さそう」でクリックされる場所</li>
+      <li>商品ページ上部（サムネイル詳細）——「他と何が違うのか」を探す場所</li>
+      <li>商品ページ下部（通常LP）——「結局これでいいのか」を判断する場所</li>
+    </ul>
+
+    <p class="article-p">という3つに分断された変形LP構造になっています。買い手は1本のストーリーとして読んでいない。この前提を理解せずに設計すると、どれだけ内容を改善しても読者の頭の中の判断プロセスとズレ続けます。</p>
+
+    <!-- S5: 3つの構造的問題 -->
+    <h2 class="article-h2">多くのページが抱える3つの構造的問題</h2>
+
+    <h3 class="article-h3">1. 判断軸を渡す前に機能説明が始まる</h3>
+
+    <p class="article-p">サムネイル1枚目から「〇〇配合」「〇〇製法」「〇〇素材」という機能説明が始まるページは非常に多い。作る側が商品の機能を一番よく知っているから、知っていることから書き始めてしまう。</p>
+
+    <p class="article-p">ですが買い手は、機能説明を受け取る準備ができていない状態でページに来ています。準備ができていない状態で機能を説明されても「だから何？」で終わる。先に渡すべきは「何を基準に選べばいいか」という判断軸です。</p>
+
+    <h3 class="article-h3">2. フィロソフィーなしで機能を語る</h3>
+
+    <p class="article-p">「なぜこの商品が存在するのか」「作り手は何にこだわっているのか」という思想が伝わって初めて、買い手に「この機能の説明を聞く理由」が生まれます。フィロソフィーなしの機能説明はスペックシートと同じです。機能は思想の証拠として出す——この順序が逆になっているページが大半です。</p>
+
+    <h3 class="article-h3">3. 競合との差分を見せようとする</h3>
+
+    <p class="article-p">比較モールだから違いを言わなければいけない、という発想から「他社との機能の違い」を前面に出すページがあります。ですがこれは比較の土俵に乗ってしまう設計です。商品の「違い」ではなく「良さ」を伝える。この発想の差が、同じ商品でも全く異なるCVRを生みます。</p>
+
+    <!-- 中間CTA -->
+    <div class="cta-box">
+      <span class="cta-box-label">無料診断</span>
+      <p class="cta-box-heading">あなたのページは<br>どこで負けているか。</p>
+      <p class="cta-box-text">診断を受けた事業者の多くが、初めて「自分のページのどこが問題だったか」を言語化できたと言います。設計の問題が特定できれば、広告費を変えずに数字が動き始める。URLを送るだけで、2営業日以内に診断レポートをお送りします。営業電話は一切いたしません。</p>
+      <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-box-btn">あなたのページ、どこで負けているか診断する</a>
+    </div>
+
+    <!-- S6: 設計が先 -->
+    <h2 class="article-h2">設計が先、デザインが後</h2>
+
+    <p class="article-p">CVRを改善するとき、多くの事業者がまずデザインに手をつけます。画像を差し替える、レイアウトを変える、バナーを綺麗にする。ですがCVRはデザインの問題ではなく、設計の問題である場合がほとんどです。</p>
+
+    <p class="article-p">どんな情報を、どの順番で、どう渡すか。その設計が決まって初めて、デザインが意味を持ちます。正しい順序は、読者の購買心理の段階を推定する→感情導線の設計→コピー→視覚化です。デザインが先になっているページは、いくら見た目を変えても数字が動かない。</p>
+
+    <ul class="article-list">
+      <li>何を変えてもCVRが改善しない</li>
+      <li>広告を増やすと売上は上がるが利益が残らない</li>
+      <li>デザイナーに作ってもらったのに数字が動かない</li>
+      <li>楽天コンサルに任せているが広告費だけが増えていく</li>
+    </ul>
+
+    <p class="article-p">これらの症状がある場合、多くはページの設計に問題があります。デザインや広告の問題ではない。</p>
+
+    <!-- まとめ -->
+    <h2 class="article-h2">まとめ</h2>
+
+    <p class="article-p">楽天商品ページのCVRが上がらない本当の理由は、施策の量や質の問題ではなく、変形LP構造への理解不足と、情報を渡す順序・設計の問題であることがほとんどです。</p>
+
+    <div class="article-callout">
+      <p class="article-callout-txt">設計の問題なのか、別の箇所か——原因を特定せずに手を動かしても、また同じ結果になります。</p>
+    </div>
+
+    <!-- FAQ（AIO対応：構造化問答） -->
+    <div class="faq-box">
+      <h2 class="article-h2">よくある質問</h2>
+      <div class="faq-item">
+        <p class="faq-q"><span class="faq-q-icon">Q.</span>楽天の商品ページCVRを上げるために、まず何から手をつければいいですか？</p>
+        <p class="faq-a">最初に確認すべきは「情報の渡し順」です。デザインや広告の前に、買い手が判断できる根拠を正しい順番で渡せているかを見てください。多くのページはサムネイル1枚目から機能説明を始めますが、買い手はその時点でまだ判断軸を持っていません。先に「何を基準に選ぶか」を渡す設計にすることが出発点です。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q"><span class="faq-q-icon">Q.</span>デザインを変えてもCVRが改善しないのはなぜですか？</p>
+        <p class="faq-a">CVRはデザインではなく設計の問題である場合がほとんどです。どんな情報を、どの順番で、どう渡すかという設計が先に決まっていないと、デザインをいくら変えても数字は動きません。設計が間違っていれば、綺麗なページほど離脱が増えることすらあります。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q"><span class="faq-q-icon">Q.</span>楽天の商品ページ改善はどれくらいの期間で効果が出ますか？</p>
+        <p class="faq-a">設計の問題が特定できていれば、ページ更新後1〜2週間のデータで変化が現れ始めます。ただし変更箇所が多い場合や、競合環境が激しいカテゴリでは判断に4週間程度かかることもあります。</p>
+      </div>
+    </div>
+
+    <!-- 著者情報（E-E-A-T対応） -->
+    <div class="author-box">
+      <div>
+        <span class="author-label">この記事を書いた人</span>
+        <p class="author-name">小西 秀人｜小西マーケティング</p>
+        <p class="author-bio">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</p>
+      </div>
+    </div>
+
+    <!-- 最終CTA -->
+    <div class="cta-box">
+      <span class="cta-box-label">無料診断</span>
+      <p class="cta-box-heading">まず、診断を。</p>
+      <p class="cta-box-text">どこで負けているかが分かれば、何を変えればいいかが分かる。何を変えればいいかが分かれば、広告費を変えずに数字が動き始める。フォームに入力するだけで、2営業日以内に診断レポートをお送りします。</p>
+      <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-box-btn">無料で診断を申し込む ── 2営業日以内に返送</a>
+      <p style="font-size:12px; color:rgba(255,255,255,0.45); margin-top:14px; letter-spacing:0.5px;">※営業電話はいたしません。</p>
+    </div>
+
+    <!-- 関連記事 -->
+    <div class="article-related">
+      <span class="related-label">関連記事</span>
+      <div class="related-item">
+        <a href="/articles/rakuten-access-aru-noni-urenai-kyotsuten.html" class="related-title">楽天でアクセスはあるのに売れない店舗に共通する課題</a>
+      </div>
+      <div class="related-item">
+        <a href="/articles/rakuten-shohin-page-design-yori-sekkei-ga-saki.html" class="related-title">楽天の商品ページはデザインより構成が先である理由</a>
+      </div>
+      <div class="related-item">
+        <a href="/articles/rakuten-mazu-samune-kara-tetsukeru-tadashii-riyu.html" class="related-title">楽天商品ページ改善で「まずサムネから手をつける」が正しい理由</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">小西マーケティング</div>
+  <div class="footer-rule"></div>
+  <div class="footer-info">
+    <a href="https://konishi-marketing.com" style="color:rgba(255,255,255,0.55); text-decoration:none;">https://konishi-marketing.com</a><br>
+    <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cf
