@@ -801,6 +801,15 @@ function submitForm(e) {
   img.src = sendUrl;
   
   setTimeout(() => {
+    // GA4イベント送信
+    if (typeof gtag === 'function') {
+      gtag('event', 'form_submit', {
+        'event_category': 'lead',
+        'event_label': '無料診断申し込み',
+        'channel': channel
+      });
+    }
+
     btn.textContent = '送信完了しました。2営業日以内にご連絡いたします。';
     btn.style.background = 'var(--gold)';
     document.getElementById('f-name').value = '';
