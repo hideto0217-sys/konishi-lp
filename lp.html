@@ -1036,7 +1036,6 @@ footer {
 </head>
 <body>
 
-<!-- HERO -->
 <section class="hero on-ink" aria-label="ヒーロー">
   <div class="hero-accent"></div>
   <div class="hero-bg-num" aria-hidden="true">CVR</div>
@@ -1062,7 +1061,6 @@ footer {
   </div>
 </section>
 
-<!-- SECTION 1：共感 -->
 <section class="on-ink slim" aria-label="共感">
   <div class="wrap">
     <div class="sec-label rv">
@@ -1084,14 +1082,12 @@ footer {
   </div>
 </section>
 
-<!-- DIVIDER -->
 <div class="on-paper-d divider divider-full">
   <div class="divider-line-inner"></div>
   <span class="divider-mark">§</span>
   <div class="divider-line-inner"></div>
 </div>
 
-<!-- SECTION 2：原因の再定義 -->
 <section class="on-paper" aria-label="原因の再定義">
   <div class="wrap">
     <div class="sec-label rv">
@@ -1122,7 +1118,6 @@ footer {
   </div>
 </section>
 
-<!-- SECTION 3：Belief崩し -->
 <section class="on-ink" aria-label="3つの誤解">
   <div class="wrap">
     <div class="sec-label rv">
@@ -1189,7 +1184,6 @@ footer {
   </div>
 </section>
 
-<!-- SECTION 4：独自メカニズム -->
 <section class="on-paper" aria-label="独自メカニズム">
   <div class="wrap">
     <div class="sec-label rv">
@@ -1227,7 +1221,6 @@ footer {
   </div>
 </section>
 
-<!-- SECTION 5：自己紹介 -->
 <section class="on-ink" aria-label="自己紹介">
   <div class="wrap">
     <div class="sec-label rv">
@@ -1268,7 +1261,6 @@ footer {
   </div>
 </section>
 
-<!-- SECTION 6：ベネフィット -->
 <section class="on-paper" aria-label="ベネフィット">
   <div class="wrap">
     <div class="sec-label rv">
@@ -1304,7 +1296,6 @@ footer {
   </div>
 </section>
 
-<!-- SECTION 7：社会的証明 -->
 <section class="on-ink" aria-label="お客様の声">
   <div class="wrap">
     <div class="sec-label rv">
@@ -1337,7 +1328,6 @@ footer {
   </div>
 </section>
 
-<!-- SECTION 8：FAQ -->
 <section class="on-ink slim" aria-label="よくある質問">
   <div class="wrap">
     <div class="sec-label rv">
@@ -1368,7 +1358,6 @@ footer {
   </div>
 </section>
 
-<!-- AFTER-AFTER -->
 <div class="after-after" aria-label="アフターアフター">
   <div class="aa-bg-text" aria-hidden="true">AFTER</div>
   <div class="after-after-inner">
@@ -1392,7 +1381,6 @@ footer {
   </div>
 </div>
 
-<!-- CTA SECTION -->
 <section class="cta-section" id="cta" aria-label="申し込みフォーム">
   <div class="wrap">
     <div class="sec-label rv">
@@ -1459,7 +1447,6 @@ footer {
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <p class="footer-name">小西 秀人（ECコンサルタント）</p>
@@ -1474,7 +1461,6 @@ footer {
   </div>
 </footer>
 
-<!-- JS -->
 <script>
 // Scroll reveal
 const observer = new IntersectionObserver((entries) => {
@@ -1492,6 +1478,7 @@ document.getElementById('diagForm').addEventListener('submit', function(e) {
   e.preventDefault();
   const required = this.querySelectorAll('[required]');
   let valid = true;
+  
   required.forEach(field => {
     if (!field.value.trim()) {
       field.style.borderColor = '#C8341A';
@@ -1500,17 +1487,21 @@ document.getElementById('diagForm').addEventListener('submit', function(e) {
       field.style.borderColor = '';
     }
   });
-  if (!valid) { alert('必須項目をすべて入力してください。'); return; }
+  
+  if (!valid) { 
+    alert('必須項目をすべて入力してください。'); 
+    return; 
+  }
 
-  const data = {
-    store_name:   document.getElementById('store_name').value,
-    name:         document.getElementById('name').value,
-    email:        document.getElementById('email').value,
-    url:          document.getElementById('url').value,
-    access:       document.getElementById('access').value,
-    cvr:          document.getElementById('cvr').value,
-    submitted_at: new Date().toISOString()
-  };
+  // ★ 修正箇所：JSONではなく、URLSearchParams（フォームデータ形式）で送信する
+  const formData = new URLSearchParams();
+  formData.append('store_name', document.getElementById('store_name').value);
+  formData.append('name', document.getElementById('name').value);
+  formData.append('email', document.getElementById('email').value);
+  formData.append('url', document.getElementById('url').value);
+  formData.append('access', document.getElementById('access').value);
+  formData.append('cvr', document.getElementById('cvr').value);
+  formData.append('submitted_at', new Date().toISOString());
 
   const GAS_URL = 'https://script.google.com/macros/s/AKfycbzQFWwBNina5bUUmdRv10A2D0R0FT9q1TXOy61EF_OiIVf7WZWi05r9tm148uvulhCy/exec';
   const btn = this.querySelector('.submit-btn');
@@ -1519,19 +1510,24 @@ document.getElementById('diagForm').addEventListener('submit', function(e) {
 
   fetch(GAS_URL, {
     method: 'POST',
-    mode: 'no-cors',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
+    mode: 'no-cors', // CORSエラーを回避
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded' // ★修正箇所：GASが最も読み込みやすい形式
+    },
+    body: formData.toString() // ★修正箇所：formDataを文字列化して送信
   })
   .then(() => {
+    // no-corsの場合、レスポンスの詳細は読めないが、通信完了でここに来る
     this.style.display = 'none';
     document.getElementById('successMsg').classList.add('show');
     document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth', block: 'center' });
   })
-  .catch(() => {
-    this.style.display = 'none';
-    document.getElementById('successMsg').classList.add('show');
-    document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  .catch((error) => {
+    // ★ 修正箇所：エラー時はちゃんとエラーを出すように修正（偽装成功の防止）
+    console.error('送信エラー:', error);
+    alert('通信エラーが発生しました。時間をおいて再度お試しください。');
+    btn.textContent = '診断を申し込む ── 無料・30秒';
+    btn.disabled = false;
   });
 });
 
