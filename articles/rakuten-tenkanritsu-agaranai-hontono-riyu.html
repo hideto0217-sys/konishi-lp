@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>楽天商品ページのCVRが上がらない本当の理由｜小西マーケティング</title>
 <meta name="description" content="広告費を増やしても、デザインを変えても数字が動かない。その原因は施策の量や質ではなく、見当違いの場所を直し続けていることにあります。100店舗超の現場から構造的に解説します。">
@@ -119,24 +120,27 @@ body {
 }
 
 .article-body h2 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: var(--navy);
-  line-height: 1.5;
-  margin: 2.5rem 0 1rem;
-  padding-bottom: .5rem;
-  border-bottom: 2px solid var(--gray-200);
+  color: var(--navy) !important;
+  line-height: 1.4;
+  margin: 4.5rem 0 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: .75rem;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 2px solid var(--gold);
 }
 .article-body h2:first-child { margin-top: 0; }
 
 .article-body h3 {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--navy);
-  margin: 2rem 0 .75rem;
-  padding-left: .75rem;
+  color: var(--navy) !important;
+  margin: 3.5rem 0 1rem;
+  padding: .6rem 0 .6rem .75rem;
   border-left: 3px solid var(--gold);
-  line-height: 1.55;
+  background-color: var(--gray-100);
+  line-height: 1.45;
 }
 
 .article-body p {
@@ -436,6 +440,79 @@ table.misrec-block td.misrec-cell.label {
   width: 40%;
 }
 
+
+
+/* ── 記事FAQ（よくある質問）専用スタイル ── */
+#article-faq {
+  background-color: var(--gray-100);
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid var(--gray-200);
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+#article-faq .faq-label {
+  color: var(--navy);
+  font-size: 0.75rem;
+}
+#article-faq .faq-item {
+  border-bottom: 1px solid var(--gray-200);
+  padding-left: 0;
+}
+#article-faq .faq-q {
+  font-size: 1.0rem;
+  color: var(--navy) !important;
+}
+#article-faq .faq-a {
+  background-color: var(--white);
+  padding: 1rem 1.25rem 1rem 2.25rem;
+  border-radius: 0;
+  margin-top: 0.5rem;
+  line-height: 2;
+  color: var(--gray-800);
+}
+
+/* ── Next Step（診断FAQ）専用スタイル ── */
+.nextstep-faq {
+  background-color: var(--navy-light);
+  border-top: none;
+  padding: 2.5rem 2.5rem;
+}
+.nextstep-faq .faq-label {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-item {
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q {
+  color: var(--white);
+}
+.nextstep-faq .faq-q::before {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-a {
+  color: rgba(255,255,255,.78);
+}
+.nextstep-faq .faq-a::before {
+  color: var(--gold-light);
+}
+
+/* ── ダークモード完全無効化 ── */
+:root {
+  color-scheme: only light;
+}
+html, body {
+  background-color: #f8f7f4 !important;
+  color: #1e1d1a;
+}
+.prob-list li {
+  background-color: #ffffff;
+}
+.article-body {
+  background-color: #ffffff;
+}
+
 /* responsive */
 @media (max-width: 640px) {
   .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer {
@@ -457,26 +534,26 @@ table.misrec-block td.misrec-cell.label {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "診断では、具体的に何がわかるのですか？",
+      "name": "転換率（CVR）を上げるには、まず何を変えればいいですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "どこで見当違いが起きているかを特定します。「デザインが問題か、設計の順序が問題か、判断軸の提示が問題か」を現行LPのURLから読み取り、レポートとしてお送りします。「どこから手をつければいいか」が初めて言語化できます。"
+        "text": "「何を変えるか」より先に、「どこで読者が止まっているか」を特定することが必要です。多くの店舗がサムネやLPのデザインから手をつけますが、転換率はデザインの問題ではなく情報を渡す順序の問題です。先に読者の判断が止まっている箇所を特定し、そこに「選ぶ根拠」を渡す設計を置く。施策はその後です。"
       }
     },
     {
       "@type": "Question",
-      "name": "URLを送るだけで、何が返ってくるのですか？",
+      "name": "楽天の転換率（CVR）の平均はどれくらいですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "現行LPの構成診断レポートを2営業日以内にお送りします。CVRが上がらない構造的な原因と、優先して手をつけるべき箇所を明記します。診断後の打ち合わせは、ご希望の方のみです。送付するだけで何かを売りつけることはありません。"
+        "text": "カテゴリによって大きく異なります。ケーブル・充電池などの消耗品系は20%超、スピーカーや家電は2〜4%台が実態です。ただし「平均に近づけること」を目標にすると、競合と同じ設計に収束します。転換率が高いページに共通しているのは平均値ではなく、読者の判断軸を変える構成が機能していることです。"
       }
     },
     {
       "@type": "Question",
-      "name": "どんなカテゴリ・商品でも対象になりますか？",
+      "name": "商品ページのリニューアルをしたのに転換率が変わりませんでした。なぜですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "食品・家電・美容・健康・雑貨・家具・スポーツグッズなど、カテゴリを問いません。診断の起点は「商品の特性」ではなく「読者の購買判断の段階とページ設計の整合性」です。商品ジャンルが変わっても、どこで手を間違えているかの診断は同じ視点で行えます。"
+        "text": "デザインを変えても転換率が動かないのは、変えるべき場所が違うからです。制作会社が変えるのは「見た目の質」であって、「情報を渡す順序」ではありません。読者は美しいページに反応するのではなく、自分が判断できる根拠を渡してくれるページに反応します。設計の順序が変わらない限り、デザインをいくら更新しても結果は変わりません。"
       }
     }
   ]
@@ -529,7 +606,7 @@ table.misrec-block td.misrec-cell.label {
 <!-- article body -->
 <div class="article-body">
 
-  <h2>「何を変えても動かない」の本当の意味</h2>
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「何を変えても動かない」の本当の意味</h2>
 
   <p>楽天のRMS画面を開く。昨日のアクセス数は悪くない。にもかかわらず、売上は動いていない。広告費は出ている。カゴには入っている。でも、最後の一歩が起きない。</p>
 
@@ -542,7 +619,7 @@ table.misrec-block td.misrec-cell.label {
 
   <p>楽天で商品を探している買い手は、すでに複数の選択肢を比べている状態でページに来ます。その瞬間に求めているのは「なぜこれを選ぶべきか」という判断の根拠です。その根拠を渡せたページが売れ、渡せなかったページが負ける。デザインの差でも、広告費の差でもありません。</p>
 
-  <h2>そもそも、見ている場所が違う——「デザインが古い」は原因ではなく、症状だ</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">そもそも、見ている場所が違う——「デザインが古い」は原因ではなく、症状だ</h2>
 
   <p>多くの店舗が、CVRが上がらない原因を「デザインの古さ」か「情報量の不足」に求めます。だから制作会社に依頼し、リニューアルを行う。しかし、リニューアル後のCVRが改善しないケースは珍しくありません。</p>
 
@@ -564,7 +641,7 @@ table.misrec-block td.misrec-cell.label {
     楽天は比較が前提のプラットフォームです。美しさは、選択の理由にはなりません。
   </div>
 
-  <h2>なぜ「正しい問い」を立てられないのか——根っこの話</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">なぜ「正しい問い」を立てられないのか——根っこの話</h2>
 
   <p>見ている場所がズレているだけでなく、原因の特定も構造的にズレています。</p>
 
@@ -590,7 +667,7 @@ table.misrec-block td.misrec-cell.label {
 
   <p>楽天ユーザーは「Amazon並みの手軽さと安心」を無意識に求めており、少しでも不明点があると「後でいいか」と離脱する傾向が年々強まっています。その離脱の原因が「デザイン」ではなく「動線と安心材料の欠如」であることは、制作会社の設計書には書かれません。</p>
 
-  <h2>楽天の商品ページは「変形LP構造」になっている</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">楽天の商品ページは「変形LP構造」になっている</h2>
 
   <p>楽天の商品ページは一見、1本のLPのように見えます。しかし実際は、</p>
 
@@ -602,7 +679,7 @@ table.misrec-block td.misrec-cell.label {
 
   <p>という3つに分断された変形LP構造になっています。買い手は1本のストーリーとして読んでいません。この前提を理解せずに設計すると、どれだけ内容を改善しても読者の頭の中の判断プロセスとズレ続けます。</p>
 
-  <h2>その対策が、なぜ効かないのか——同じ土俵の改善をしている限り</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">その対策が、なぜ効かないのか——同じ土俵の改善をしている限り</h2>
 
   <p>見ている場所と原因の特定がズレているため、打つ手もズレます。</p>
 
@@ -642,23 +719,23 @@ table.misrec-block td.misrec-cell.label {
     </div>
   </div>
 
-  <h2>多くのページが抱える3つの構造的問題</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">多くのページが抱える3つの構造的問題</h2>
 
-  <h3>判断軸を渡す前に機能説明が始まる</h3>
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">判断軸を渡す前に機能説明が始まる</h3>
 
   <p>サムネイル1枚目から「〇〇配合」「〇〇製法」「〇〇素材」という機能説明が始まるページは非常に多い。作る側が商品の機能を一番よく知っているから、知っていることから書き始めてしまう。</p>
 
   <p>ですが買い手は、機能説明を受け取る準備ができていない状態でページに来ています。準備ができていない状態で機能を説明されても「だから何？」で終わる。先に渡すべきは「何を基準に選べばいいか」という判断軸です。</p>
 
-  <h3>フィロソフィーなしで機能を語る</h3>
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">フィロソフィーなしで機能を語る</h3>
 
   <p>「なぜこの商品が存在するのか」「作り手は何にこだわっているのか」という思想が伝わって初めて、買い手に「この機能の説明を聞く理由」が生まれます。フィロソフィーなしの機能説明はスペックシートと同じです。機能は思想の証拠として出す——この順序が逆になっているページが大半です。</p>
 
-  <h3>競合との「差分」を見せようとする</h3>
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">競合との「差分」を見せようとする</h3>
 
   <p>比較モールだから違いを言わなければいけない、という発想から「他社との機能の違い」を前面に出すページがあります。ですがこれは比較の土俵に乗ってしまう設計です。商品の「違い」ではなく「判断軸そのもの」を渡す——この発想の差が、同じ商品でも全く異なるCVRを生みます。</p>
 
-  <h2>設計が先、デザインが後——正しい順序とは</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">設計が先、デザインが後——正しい順序とは</h2>
 
   <p>CVRを改善するとき、多くの事業者がまずデザインに手をつけます。画像を差し替える、レイアウトを変える、バナーを綺麗にする。ですがCVRはデザインの問題ではなく、設計の問題である場合がほとんどです。</p>
 
@@ -690,16 +767,37 @@ table.misrec-block td.misrec-cell.label {
     <div class="cta-note">※営業電話は一切いたしません。</div>
   </div>
 
-  <h2>まとめ</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
 
   <p>楽天商品ページのCVRが上がらない理由は、3つのズレが積み重なっています。「デザインが問題だ」という見当違い、「景気や競合のせいだ」という原因の履き違え、「クーポンや広告を増やせば解決する」という手段の取り違え——この3つがすべてズレたまま施策を打ち続けることが、「何を変えても動かない」状態を作っています。</p>
 
   <p>変形LP構造への理解と、情報を渡す順序の設計。この2点が確立して初めて、施策が意味を持ち始めます。</p>
 
+
 </div><!-- /article-body -->
 
+<!-- 記事FAQ -->
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+
+  <div class="faq-item">
+    <div class="faq-q">転換率（CVR）を上げるには、まず何を変えればいいですか？</div>
+    <div class="faq-a">「何を変えるか」より先に、「どこで読者が止まっているか」を特定することが必要です。多くの店舗がサムネやLPのデザインから手をつけますが、転換率はデザインの問題ではなく情報を渡す順序の問題です。先に読者の判断が止まっている箇所を特定し、そこに「選ぶ根拠」を渡す設計を置く。施策はその後です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">楽天の転換率（CVR）の平均はどれくらいですか？</div>
+    <div class="faq-a">カテゴリによって大きく異なります。ケーブル・充電池などの消耗品系は20%超、スピーカーや家電は2〜4%台が実態です。ただし「平均に近づけること」を目標にすると、競合と同じ設計に収束します。転換率が高いページに共通しているのは平均値ではなく、読者の判断軸を変える構成が機能していることです。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">商品ページのリニューアルをしたのに転換率が変わりませんでした。なぜですか？</div>
+    <div class="faq-a">デザインを変えても転換率が動かないのは、変えるべき場所が違うからです。制作会社が変えるのは「見た目の質」であって、「情報を渡す順序」ではありません。読者は美しいページに反応するのではなく、自分が判断できる根拠を渡してくれるページに反応します。設計の順序が変わらない限り、デザインをいくら更新しても結果は変わりません。</div>
+  </div>
+</div><!-- /記事FAQ -->
+
 <!-- FAQ：推進型 -->
-<div class="faq-section">
+<div class="faq-section nextstep-faq">
   <div class="faq-label">Next Step</div>
 
   <div class="faq-item">

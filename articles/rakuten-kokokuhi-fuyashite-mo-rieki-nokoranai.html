@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>楽天で広告費を増やしても利益が残らない構造｜小西マーケティング</title>
 <meta name="description" content="RPP広告を回すほど売上は立つ。しかし月末に手元に現金が残らない。この状態は広告の運用問題ではありません。100店舗超の現場から、その構造的な原因を解説します。">
@@ -119,24 +120,27 @@ body {
 }
 
 .article-body h2 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: var(--navy);
-  line-height: 1.5;
-  margin: 2.5rem 0 1rem;
-  padding-bottom: .5rem;
-  border-bottom: 2px solid var(--gray-200);
+  color: var(--navy) !important;
+  line-height: 1.4;
+  margin: 4.5rem 0 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: .75rem;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 2px solid var(--gold);
 }
 .article-body h2:first-child { margin-top: 0; }
 
 .article-body h3 {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--navy);
-  margin: 2rem 0 .75rem;
-  padding-left: .75rem;
+  color: var(--navy) !important;
+  margin: 3.5rem 0 1rem;
+  padding: .6rem 0 .6rem .75rem;
   border-left: 3px solid var(--gold);
-  line-height: 1.55;
+  background-color: var(--gray-100);
+  line-height: 1.45;
 }
 
 .article-body p {
@@ -436,6 +440,79 @@ table.misrec-block td.misrec-cell.label {
   width: 40%;
 }
 
+
+
+/* ── 記事FAQ（よくある質問）専用スタイル ── */
+#article-faq {
+  background-color: var(--gray-100);
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid var(--gray-200);
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+#article-faq .faq-label {
+  color: var(--navy);
+  font-size: 0.75rem;
+}
+#article-faq .faq-item {
+  border-bottom: 1px solid var(--gray-200);
+  padding-left: 0;
+}
+#article-faq .faq-q {
+  font-size: 1.0rem;
+  color: var(--navy) !important;
+}
+#article-faq .faq-a {
+  background-color: var(--white);
+  padding: 1rem 1.25rem 1rem 2.25rem;
+  border-radius: 0;
+  margin-top: 0.5rem;
+  line-height: 2;
+  color: var(--gray-800);
+}
+
+/* ── Next Step（診断FAQ）専用スタイル ── */
+.nextstep-faq {
+  background-color: var(--navy-light);
+  border-top: none;
+  padding: 2.5rem 2.5rem;
+}
+.nextstep-faq .faq-label {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-item {
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q {
+  color: var(--white);
+}
+.nextstep-faq .faq-q::before {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-a {
+  color: rgba(255,255,255,.78);
+}
+.nextstep-faq .faq-a::before {
+  color: var(--gold-light);
+}
+
+/* ── ダークモード完全無効化 ── */
+:root {
+  color-scheme: only light;
+}
+html, body {
+  background-color: #f8f7f4 !important;
+  color: #1e1d1a;
+}
+.prob-list li {
+  background-color: #ffffff;
+}
+.article-body {
+  background-color: #ffffff;
+}
+
 /* responsive */
 @media (max-width: 640px) {
   .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer {
@@ -457,26 +534,26 @@ table.misrec-block td.misrec-cell.label {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "広告を止めると売上が完全に消えます。このリスクを取らずに改善できますか？",
+      "name": "楽天のRPP広告のROASが低い場合、まず何を見ればいいですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "広告を止めずに改善できます。まず現状の広告予算を維持したまま、LPの設計を組み直します。転換率が上がれば、同じ広告費でより多くの注文が入るため、ROASが改善します。ROASが改善してから、必要に応じて広告予算の最適化を行う順序です。「止める」のではなく「受け皿を先に直す」が正しい手順です。"
+        "text": "広告の入札設定より先に、転換率を確認してください。ROASは「転換率×客単価÷CPC」で決まります。CPCが高騰していても、転換率が十分高ければROASは成立します。逆に転換率が低いままCPCだけを下げようとしても、限界があります。ROASが低い根本原因は広告の設定ではなく、ページが来た人を購入に変換できていないことです。"
       }
     },
     {
       "@type": "Question",
-      "name": "診断では、何がわかるのですか？",
+      "name": "広告費を使わずに楽天で売上を上げることはできますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "現行LPのどこで読者が離脱しているか、「価格以外の判断基準」がページ内に存在しているかを特定します。「広告の問題か、LPの設計の問題か」を現行ページのURLから読み取り、レポートとしてお送りします。「次に何を変えればROASが改善するか」が初めて言語化できます。"
+        "text": "転換率が高いページは、広告なしでも検索上位に表示される頻度が増えます。楽天のアルゴリズムは転換率を評価指標として使うため、転換率が高いページは自然検索でも優遇されます。広告依存から抜け出す唯一の道は、転換率の改善です。広告を止めると売上が消えるなら、それはページが広告なしでは選ばれない設計のままであることを示しています。"
       }
     },
     {
       "@type": "Question",
-      "name": "転換率を上げると、自然検索の順位も上がりますか？",
+      "name": "ポイント倍率を上げると転換率は上がりますが、これは正しい改善ですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "楽天のアルゴリズムは転換率を重視します。転換率が改善されると、同じキーワードで広告なしでも上位表示される頻度が増えていきます。広告依存から抜け出すための唯一の出口は、転換率の改善です。広告投資を減らしながら売上を維持・拡大できる構造は、転換率の改善からしか生まれません。"
+        "text": "転換率は上がりますが、改善ではありません。ポイント倍率による転換率の引き上げは、値引きで購買決断を代替しているだけです。ページ自体の「選ばれる構造」は何も変わっていないため、ポイントを戻した瞬間に転換率も戻ります。さらに、ポイント原資が利益を直撃します。正しい改善は、値引きなしで選ばれる判断軸をページ内に設計することです。"
       }
     }
   ]
@@ -529,7 +606,7 @@ table.misrec-block td.misrec-cell.label {
 <!-- article body -->
 <div class="article-body">
 
-  <h2>売上は立っている。なのに、手元に現金が残らない</h2>
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">売上は立っている。なのに、手元に現金が残らない</h2>
 
   <p>RMS画面の売上数字は悪くない。RPP広告は常時稼働させている。スーパーSALEのたびに予算を積み、それなりの注文数が入る。しかし月末に広告費とポイント原資を差し引くと、手元に残る現金は驚くほど少ない。</p>
 
@@ -542,7 +619,7 @@ table.misrec-block td.misrec-cell.label {
 
   <p>この状態を「広告代理店を変える」「AI入札ツールを入れる」で解決しようとすると、穴の空いたバケツを持ち替えるだけで終わります。水の注ぎ方を変えても、穴が残っている限り結果は変わらない。</p>
 
-  <h2>「広告の運用が最適化されていない」——この診断がズレている</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「広告の運用が最適化されていない」——この診断がズレている</h2>
 
   <p>利益が残らない状態が続くと、最初に疑われるのは広告の設定です。「キーワードの除外が甘い」「入札単価の調整が間違っている」「クリック単価が高すぎる」。こうした診断のもと、広告代理店に乗り換えたり、運用ツールを導入したりする。</p>
 
@@ -564,7 +641,7 @@ table.misrec-block td.misrec-cell.label {
     CPCが高騰して苦しいのは事実です。しかし、競合より高いCPCを払っても利益が残るだけの転換率を構築できていれば、CPCの高騰は問題になりません。本質の問いは「入札単価」ではなく「転換率」にあります。
   </div>
 
-  <h2>なぜ「楽天のシステムが搾取している」と感じるのか</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">なぜ「楽天のシステムが搾取している」と感じるのか</h2>
 
   <p>広告費を入れれば入れるほど売上が立ち、止めれば売上が消える。この構造が続くと、「楽天の広告システムに搾取されている」という感覚が生まれます。しかしこの認識も、原因の特定としてはズレています。</p>
 
@@ -588,7 +665,7 @@ table.misrec-block td.misrec-cell.label {
     ROASが低い本当の原因は「キーワード選定の甘さ」ではありません。ページが読者の意識を「比較段階（L2）」から「購買段階（L3〜L4）」へ引き上げる設計になっていないことです。アクセスをいくら増やしても、穴が残っている限り状況は変わりません。
   </div>
 
-  <h2>「代理店を変える」「ツールを入れる」が効かない理由</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「代理店を変える」「ツールを入れる」が効かない理由</h2>
 
   <p>広告費が利益を圧迫している状態で選ばれやすい解決策が、「優秀な広告代理店への乗り換え」と「AI自動入札ツールの導入」です。確かに、広告の運用精度は上がる可能性があります。しかしLPの設計が変わらない限り、改善できるのはCPCの数パーセントだけです。</p>
 
@@ -616,27 +693,27 @@ table.misrec-block td.misrec-cell.label {
     </div>
   </div>
 
-  <h2>広告依存から抜け出せない店舗に共通する3つの構造</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">広告依存から抜け出せない店舗に共通する3つの構造</h2>
 
-  <h3>「売れている錯覚」がブレーキを踏ませない</h3>
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">「売れている錯覚」がブレーキを踏ませない</h3>
 
   <p>RMSの売上数字は動いている。注文数は入っている。だから「事業が動いている感覚」が生まれます。しかし広告費・ポイント原資・送料・モール手数料を引いた後の実利益を月次で計算している事業者は、思いのほか少ない。</p>
 
   <p>「売上が立っている」と「利益が残っている」は、全く別の状態です。売上は動いているが手元に現金が残らない状態が続いているなら、そのビジネスモデルは広告費を楽天に移転し続けているだけです。</p>
 
-  <h3>「止めたら終わり」という恐怖が思考を停止させる</h3>
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">「止めたら終わり」という恐怖が思考を停止させる</h3>
 
   <p>「広告を止めたらアクセスがゼロになり、売上が完全に消える」。この恐怖は事実です。しかしこの状態自体が、「広告なしでは選ばれない商品ページ」であることを示しています。</p>
 
   <p>広告がなくても検索上位に表示されるには、転換率が高いことが前提条件です。楽天のアルゴリズムは転換率を重視します。転換率が低いまま広告で順位を保とうとすると、「転換率の低いページ」として評価が下がり続け、広告を止めた瞬間に圏外に落ちる。この悪循環から出るには、転換率そのものを改善するしかありません。</p>
 
-  <h3>イベント依存が「本当の実力」を見えなくさせる</h3>
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">イベント依存が「本当の実力」を見えなくさせる</h3>
 
   <p>スーパーSALEやお買い物マラソンでは売れる。だから「このページは大丈夫だ」と思ってしまう。しかしイベント中の購入は、ポイント還元という外部装置が購買決断を後押ししているだけです。ページ自体の転換率が改善されたわけではありません。</p>
 
   <p>イベント中に競合も入札を強めるためCPCが高騰し、結局「忙しいだけで儲からない」期間になる。通常期に戻るとまた売れなくなる。この繰り返しが続いているなら、ページの設計が原因として残っています。</p>
 
-  <h2>利益が残る構造と、残らない構造の違い</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">利益が残る構造と、残らない構造の違い</h2>
 
   <p>広告費を投じても利益が残る店舗と残らない店舗の差は、広告の運用精度ではありません。ページが「価格以外の判断基準」を読者に渡せているかどうかです。</p>
 
@@ -670,16 +747,37 @@ table.misrec-block td.misrec-cell.label {
     <div class="cta-note">※営業電話は一切いたしません。</div>
   </div>
 
-  <h2>まとめ</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
 
   <p>楽天で広告費を増やしても利益が残らない理由は、3つのズレが積み重なっています。「広告の運用が問題だ」という見当違い、「楽天のシステムが搾取している」という原因の履き違え、「代理店を変えれば・ポイントを積めば解決する」という手段の取り違え——この3つがズレたまま施策を打ち続けることが、「広告依存・利益ゼロ」の状態を固定化します。</p>
 
   <p>解決の起点は、広告費を1円も増やす前に、ページ内で「価格以外の判断基準」を渡す設計を組み直すことです。受け皿の穴が塞がれて初めて、広告投資が利益に変わり始めます。</p>
 
+
 </div><!-- /article-body -->
 
+<!-- 記事FAQ -->
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+
+  <div class="faq-item">
+    <div class="faq-q">楽天のRPP広告のROASが低い場合、まず何を見ればいいですか？</div>
+    <div class="faq-a">広告の入札設定より先に、転換率を確認してください。ROASは「転換率×客単価÷CPC」で決まります。CPCが高騰していても、転換率が十分高ければROASは成立します。逆に転換率が低いままCPCだけを下げようとしても、限界があります。ROASが低い根本原因は広告の設定ではなく、ページが来た人を購入に変換できていないことです。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">広告費を使わずに楽天で売上を上げることはできますか？</div>
+    <div class="faq-a">転換率が高いページは、広告なしでも検索上位に表示される頻度が増えます。楽天のアルゴリズムは転換率を評価指標として使うため、転換率が高いページは自然検索でも優遇されます。広告依存から抜け出す唯一の道は、転換率の改善です。広告を止めると売上が消えるなら、それはページが広告なしでは選ばれない設計のままであることを示しています。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">ポイント倍率を上げると転換率は上がりますが、これは正しい改善ですか？</div>
+    <div class="faq-a">転換率は上がりますが、改善ではありません。ポイント倍率による転換率の引き上げは、値引きで購買決断を代替しているだけです。ページ自体の「選ばれる構造」は何も変わっていないため、ポイントを戻した瞬間に転換率も戻ります。さらに、ポイント原資が利益を直撃します。正しい改善は、値引きなしで選ばれる判断軸をページ内に設計することです。</div>
+  </div>
+</div><!-- /記事FAQ -->
+
 <!-- FAQ：推進型 -->
-<div class="faq-section">
+<div class="faq-section nextstep-faq">
   <div class="faq-label">Next Step</div>
 
   <div class="faq-item">

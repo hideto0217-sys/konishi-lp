@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>楽天でアクセスはあるのに売れない店舗に共通する課題｜小西マーケティング</title>
 <meta name="description" content="広告でアクセスは取れている。なのに転換率が上がらない。この状態が続く店舗には、共通する構造的な誤りがあります。100店舗超の現場から、その正体を解説します。">
@@ -119,24 +120,27 @@ body {
 }
 
 .article-body h2 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: var(--navy);
-  line-height: 1.5;
-  margin: 2.5rem 0 1rem;
-  padding-bottom: .5rem;
-  border-bottom: 2px solid var(--gray-200);
+  color: var(--navy) !important;
+  line-height: 1.4;
+  margin: 4.5rem 0 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: .75rem;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 2px solid var(--gold);
 }
 .article-body h2:first-child { margin-top: 0; }
 
 .article-body h3 {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--navy);
-  margin: 2rem 0 .75rem;
-  padding-left: .75rem;
+  color: var(--navy) !important;
+  margin: 3.5rem 0 1rem;
+  padding: .6rem 0 .6rem .75rem;
   border-left: 3px solid var(--gold);
-  line-height: 1.55;
+  background-color: var(--gray-100);
+  line-height: 1.45;
 }
 
 .article-body p {
@@ -436,6 +440,79 @@ table.misrec-block td.misrec-cell.label {
   width: 40%;
 }
 
+
+
+/* ── 記事FAQ（よくある質問）専用スタイル ── */
+#article-faq {
+  background-color: var(--gray-100);
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid var(--gray-200);
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+#article-faq .faq-label {
+  color: var(--navy);
+  font-size: 0.75rem;
+}
+#article-faq .faq-item {
+  border-bottom: 1px solid var(--gray-200);
+  padding-left: 0;
+}
+#article-faq .faq-q {
+  font-size: 1.0rem;
+  color: var(--navy) !important;
+}
+#article-faq .faq-a {
+  background-color: var(--white);
+  padding: 1rem 1.25rem 1rem 2.25rem;
+  border-radius: 0;
+  margin-top: 0.5rem;
+  line-height: 2;
+  color: var(--gray-800);
+}
+
+/* ── Next Step（診断FAQ）専用スタイル ── */
+.nextstep-faq {
+  background-color: var(--navy-light);
+  border-top: none;
+  padding: 2.5rem 2.5rem;
+}
+.nextstep-faq .faq-label {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-item {
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q {
+  color: var(--white);
+}
+.nextstep-faq .faq-q::before {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-a {
+  color: rgba(255,255,255,.78);
+}
+.nextstep-faq .faq-a::before {
+  color: var(--gold-light);
+}
+
+/* ── ダークモード完全無効化 ── */
+:root {
+  color-scheme: only light;
+}
+html, body {
+  background-color: #f8f7f4 !important;
+  color: #1e1d1a;
+}
+.prob-list li {
+  background-color: #ffffff;
+}
+.article-body {
+  background-color: #ffffff;
+}
+
 /* responsive */
 @media (max-width: 640px) {
   .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer {
@@ -457,26 +534,26 @@ table.misrec-block td.misrec-cell.label {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "転換率を上げるために、まず何から手をつければいいですか？",
+      "name": "楽天でアクセスがあるのに売れない場合、最初に確認すべきことは何ですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "最初に行うべきは、現状のページのどこで読者が「止まっているか」の特定です。サムネで離脱しているのか、商品ページの途中で止まっているのか、カゴ落ちが起きているのかによって、介入すべき箇所が変わります。施策より先に、止まっている場所の特定が必要です。"
+        "text": "最初に確認すべきは広告でも価格でもなく、ページ内で「読者が選ぶ根拠」を受け取れているかどうかです。アクセスがあって売れない状態は、集客の失敗ではなくページの設計の失敗を意味します。サムネのどこで離脱しているか、商品ページ内のどこで判断が止まっているかを特定することが、すべての施策より先に来ます。"
       }
     },
     {
       "@type": "Question",
-      "name": "RPP広告の予算はどう考えればいいですか？",
+      "name": "RPP広告を増やせば転換率も上がりますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "転換率が改善される前に広告費を増やすと、ROASは悪化します。広告費の最適化は、ページの転換率が改善した後の話です。先にページの「穴」を塞ぎ、転換率が一定水準に達してから広告入札を最適化する順序が正しい。転換率が低いまま広告費を増やしても、損失を拡大するだけです。"
+        "text": "上がりません。RPP広告はアクセスを増やす装置であって、転換率を上げる装置ではありません。転換率が1%のページに広告で10,000人を送り込んでも、100人しか買わない。広告費を増やす前に、ページが来た人を購入に変換できる設計になっているかを確認することが先です。穴の空いたバケツに水を注ぎ続けても、バケツは満たされません。"
       }
     },
     {
       "@type": "Question",
-      "name": "診断では、具体的に何がわかるのですか？",
+      "name": "競合より価格が高くても転換率を上げることはできますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "現行LPのどこで読者が止まっているかを特定します。「デザインが問題か、情報の順序が問題か、判断軸の提示が問題か」を現行ページのURLから読み取り、レポートとしてお送りします。「次に何を変えればいいか」が初めて言語化できる状態になります。"
+        "text": "できます。価格が判断基準になっているページは、価格で負けた瞬間に選ばれなくなります。しかし読者の判断基準そのものが変わると、価格は比較の対象から外れます。「この商品でなければならない理由」が伝わっているページは、競合より価格が高くても転換率が高い。価格競争から外れるための唯一の出口は、判断軸の設計です。"
       }
     }
   ]
@@ -529,7 +606,7 @@ table.misrec-block td.misrec-cell.label {
 <!-- article body -->
 <div class="article-body">
 
-  <h2>アクセスがあって売れない。この状態が意味すること</h2>
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">アクセスがあって売れない。この状態が意味すること</h2>
 
   <p>RMS画面を開く。アクセス人数の数字は悪くない。RPP広告は回っている。商品のレビューも、ライバル店に比べれば十分ある。それでも、転換率は1%台のまま動かない。</p>
 
@@ -542,7 +619,7 @@ table.misrec-block td.misrec-cell.label {
 
   <p>楽天は検索→比較→選別という三段階の選抜構造で動いています。1枚目のサムネでクリックされ、商品ページで競合と比較され、そこで「選ばれる理由」が伝わって初めて購入が起きる。アクセスがあるということは最初の関門は通過している。問題は、その先の設計にあります。</p>
 
-  <h2>「デザインを変えれば動く」——この前提がズレている</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「デザインを変えれば動く」——この前提がズレている</h2>
 
   <p>転換率が上がらないとき、最初に疑われるのはページの見た目です。「サムネが古い」「LPの画像がダサい」「スマホで見たときのレイアウトが崩れている」。こうした診断のもと、制作会社へ依頼してリニューアルを行う。</p>
 
@@ -564,7 +641,7 @@ table.misrec-block td.misrec-cell.label {
     楽天の買い手は、複数の選択肢を並べて比較している状態でページに来ます。そこで求めているのは「綺麗な画像」ではなく「選ぶ根拠」です。
   </div>
 
-  <h2>なぜ「広告を増やせば解決する」と思い込むのか</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">なぜ「広告を増やせば解決する」と思い込むのか</h2>
 
   <p>転換率の問題を、多くの事業者がアクセスの問題として扱います。「もっと露出を増やせば、そのうち売れる人が出てくる」。だからRPP広告の予算を増やし、楽天コンサルに相談する。</p>
 
@@ -588,7 +665,7 @@ table.misrec-block td.misrec-cell.label {
 
   <p>転換率が1%のページに10,000人を送り込んでも、100人しか買わない。転換率が3%なら、同じ10,000人から300人が買う。この差は、広告費を増やしても埋まりません。</p>
 
-  <h2>ポイント・クーポンが「麻薬」になる理由</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">ポイント・クーポンが「麻薬」になる理由</h2>
 
   <p>転換率が低いとき、もう一つよく使われる手段がポイント倍率の引き上げとクーポンの発行です。確かにイベント中は売れる。しかし、イベントが終わった翌日から、また元の転換率に戻る。</p>
 
@@ -608,27 +685,27 @@ table.misrec-block td.misrec-cell.label {
 
   <p>本来の解決策は、値引きなしで選ばれる「判断軸」をページの中に作ることです。「この商品でなければならない理由」が伝わって初めて、価格以外の基準で購入が起きます。</p>
 
-  <h2>アクセスがあって売れない店舗に共通する3つの構造</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">アクセスがあって売れない店舗に共通する3つの構造</h2>
 
-  <h3>「バケツの穴」を塞がずに水を注ぎ続けている</h3>
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">「バケツの穴」を塞がずに水を注ぎ続けている</h3>
 
   <p>転換率が低いままのページに広告費を注ぎ込むのは、穴の空いたバケツに水を入れ続けるのと同じです。入ってくる量を増やしても、穴から抜ける量は変わらない。むしろROASが悪化し続けるため、売るほど利益が減っていく状態が続きます。</p>
 
   <p>この状態を止めるには、水を増やすことより先に、穴を特定して塞ぐ必要があります。穴の場所は、ページのどこで読者が離脱しているかを見れば分かります。しかしほとんどの店舗が、その工程を踏まないまま広告費の増額を続けています。</p>
 
-  <h3>読者の「物差し」を変えずに機能を説明している</h3>
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">読者の「物差し」を変えずに機能を説明している</h3>
 
   <p>楽天の商品ページで最も多いのが、スペックと機能の羅列です。「〇〇配合」「〇〇製法」「〇〇素材」——作る側が一番よく知っていることから書き始めるため、こうなります。</p>
 
   <p>しかし買い手は、機能説明を受け取る準備ができていない状態でページに来ています。準備ができていない状態で機能を説明されても「だから何？」で終わる。先に渡すべきは「何を基準に選べばいいか」という物差し（判断軸）です。物差しが変わって初めて、機能の説明が「選ぶ根拠」として機能します。</p>
 
-  <h3>競合と同じ土俵で戦っている</h3>
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">競合と同じ土俵で戦っている</h3>
 
   <p>比較されることを前提に、競合との「違い」を前面に出すページがあります。価格比較表、他社との機能比較、「〇〇より優れている」という訴求。この設計は、比較の土俵に乗り続ける選択です。</p>
 
   <p>比較の土俵から降りるには、「違いを見せる」ではなく「判断軸そのものを変える」設計が必要です。同じ商品でも、読者の物差しが変われば、比較対象がなくなります。「これしかない」という状態を作るのは、機能の差分ではなく判断軸の差分です。</p>
 
-  <h2>転換率が上がる設計と、上がらない設計の違い</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">転換率が上がる設計と、上がらない設計の違い</h2>
 
   <p>転換率が改善していくページには、共通した順序があります。読者の現在の誤認を特定する→その誤認が生まれた構造的な理由を説明する（免罪）→正しい判断軸を渡す→その延長線上に商品が「必然」として登場する。</p>
 
@@ -660,16 +737,37 @@ table.misrec-block td.misrec-cell.label {
     <div class="cta-note">※営業電話は一切いたしません。</div>
   </div>
 
-  <h2>まとめ</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
 
   <p>アクセスがあって売れない状態には、3つのズレが積み重なっています。「デザインが問題だ」という見当違い、「広告を増やせば解決する」という原因の履き違え、「ポイントやクーポンで転換率を補う」という手段の取り違え——この3つがズレたまま施策を打ち続けることが、「アクセスがあるのに売れない」状態を長期化させます。</p>
 
   <p>解決の起点は、ページ上で「読者の物差しを変える順序」を設計することです。その設計が確立して初めて、アクセスが転換に変わり始めます。</p>
 
+
 </div><!-- /article-body -->
 
+<!-- 記事FAQ -->
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+
+  <div class="faq-item">
+    <div class="faq-q">楽天でアクセスがあるのに売れない場合、最初に確認すべきことは何ですか？</div>
+    <div class="faq-a">最初に確認すべきは広告でも価格でもなく、ページ内で「読者が選ぶ根拠」を受け取れているかどうかです。アクセスがあって売れない状態は、集客の失敗ではなくページの設計の失敗を意味します。サムネのどこで離脱しているか、商品ページ内のどこで判断が止まっているかを特定することが、すべての施策より先に来ます。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">RPP広告を増やせば転換率も上がりますか？</div>
+    <div class="faq-a">上がりません。RPP広告はアクセスを増やす装置であって、転換率を上げる装置ではありません。転換率が1%のページに広告で10,000人を送り込んでも、100人しか買わない。広告費を増やす前に、ページが来た人を購入に変換できる設計になっているかを確認することが先です。穴の空いたバケツに水を注ぎ続けても、バケツは満たされません。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">競合より価格が高くても転換率を上げることはできますか？</div>
+    <div class="faq-a">できます。価格が判断基準になっているページは、価格で負けた瞬間に選ばれなくなります。しかし読者の判断基準そのものが変わると、価格は比較の対象から外れます。「この商品でなければならない理由」が伝わっているページは、競合より価格が高くても転換率が高い。価格競争から外れるための唯一の出口は、判断軸の設計です。</div>
+  </div>
+</div><!-- /記事FAQ -->
+
 <!-- FAQ：推進型 -->
-<div class="faq-section">
+<div class="faq-section nextstep-faq">
   <div class="faq-label">Next Step</div>
 
   <div class="faq-item">
