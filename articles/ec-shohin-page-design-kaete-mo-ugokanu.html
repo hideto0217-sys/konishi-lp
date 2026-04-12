@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECで商品ページのデザインを変えても数字が動かない理由｜小西マーケティング</title>
+<meta name="description" content="プロに頼んで綺麗にしたのに、CVRが1ミリも動かない。デザインを変えるたびに感じるこの虚脱感には、構造的な原因があります。100店舗超の現場から解説します。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --red: #b71c1c;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--off-white);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── layout ── */
+.site-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--white);
+}
+
+/* ── header ── */
+.site-header {
+  background: var(--navy);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--gold);
+}
+.site-header a {
+  color: var(--gold-light);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+/* ── hero ── */
+.hero {
+  background: var(--navy);
+  padding: 3rem 2.5rem 2.5rem;
+  border-bottom: 3px solid var(--gold);
+}
+.hero-category {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.hero-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+}
+.hero-lead {
+  font-size: 1rem;
+  color: rgba(255,255,255,.78);
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+.hero-meta {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,.45);
+}
+
+/* ── author box ── */
+.author-box {
+  background: var(--gray-100);
+  border-left: 3px solid var(--gold);
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+}
+.author-box strong { color: var(--navy); }
+
+/* ── article body ── */
+.article-body {
+  padding: 2.5rem 2.5rem;
+}
+
+.article-body h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy) !important;
+  line-height: 1.4;
+  margin: 4.5rem 0 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: .75rem;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 2px solid var(--gold);
+}
+.article-body h2:first-child { margin-top: 0; }
+
+.article-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy) !important;
+  margin: 3.5rem 0 1rem;
+  padding: .6rem 0 .6rem .75rem;
+  border-left: 3px solid var(--gold);
+  background-color: var(--gray-100);
+  line-height: 1.45;
+}
+
+.article-body p {
+  font-size: 1rem;
+  color: var(--gray-800);
+  line-height: 2.1;
+  margin-bottom: 1.25rem;
+}
+.article-body p:last-child { margin-bottom: 0; }
+
+.article-body strong { color: var(--navy); }
+
+/* insight box */
+.insight {
+  background: var(--navy);
+  color: var(--white);
+  padding: 1.25rem 1.75rem;
+  margin: 1.75rem 0;
+  font-size: 1rem;
+  line-height: 2;
+  font-weight: 700;
+}
+.insight em {
+  font-style: normal;
+  color: var(--gold-light);
+}
+
+/* quote / callout */
+.callout {
+  background: var(--off-white);
+  border-left: 3px solid var(--navy);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 2;
+}
+.callout strong { color: var(--navy); }
+
+/* misrecognition 3-layer table */
+.misrec-block {
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+.misrec-header {
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  padding: .6rem 1.25rem;
+}
+.misrec-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--gray-200);
+}
+.misrec-row:first-of-type { border-top: none; }
+.misrec-cell {
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--gray-800);
+}
+.misrec-cell.label {
+  background: var(--gray-100);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  letter-spacing: .05em;
+  border-right: 1px solid var(--gray-200);
+}
+.misrec-cell.belief { background: var(--white); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+
+/* structure problems list */
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li {
+  padding: 1rem 1.25rem 1rem 3rem;
+  position: relative;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 1.9;
+}
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before {
+  content: attr(data-num);
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* CTA block */
+.cta-block {
+  background: var(--navy);
+  padding: 2rem 2.5rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+.cta-block-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.cta-block-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.6;
+  margin-bottom: .75rem;
+}
+.cta-block-sub {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,.7);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+.cta-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: .85rem 2.5rem;
+  text-decoration: none;
+  letter-spacing: .06em;
+  border-bottom: 3px solid #a8893a;
+  transition: opacity .2s;
+}
+.cta-btn:hover { opacity: .88; }
+.cta-note {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,.4);
+  margin-top: .75rem;
+}
+
+/* FAQ */
+.faq-section {
+  padding: 2.5rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.faq-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.faq-item {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.6;
+  margin-bottom: .75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.faq-q::before {
+  content: 'Q';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.faq-a {
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 2;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.faq-a::before {
+  content: 'A';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* author profile */
+.author-profile {
+  background: var(--gray-100);
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.author-profile-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.author-profile-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: .5rem;
+}
+.author-profile-body {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.95;
+}
+
+/* related */
+.related-section {
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.related-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.related-list { list-style: none; }
+.related-list li {
+  padding: .75rem 0 .75rem 1rem;
+  border-bottom: 1px solid var(--gray-100);
+  position: relative;
+}
+.related-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.1em;
+  width: 6px;
+  height: 1px;
+  background: var(--navy);
+}
+.related-list li:last-child { border-bottom: none; }
+.related-list a {
+  font-size: 0.9rem;
+  color: var(--navy);
+  text-decoration: underline;
+  line-height: 1.7;
+}
+
+/* footer */
+.site-footer {
+  background: var(--navy);
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+}
+.site-footer a {
+  color: rgba(255,255,255,.55);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+/* misrec-block table override */
+table.misrec-block {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+table.misrec-block th.misrec-header {
+  text-align: left;
+  display: table-cell;
+  width: 100%;
+}
+table.misrec-block td.misrec-cell.label {
+  width: 40%;
+}
+
+/* ── 記事FAQ（よくある質問）専用スタイル ── */
+#article-faq {
+  background-color: var(--gray-100);
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid var(--gray-200);
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+#article-faq .faq-label {
+  color: var(--navy);
+  font-size: 0.75rem;
+}
+#article-faq .faq-item {
+  border-bottom: 1px solid var(--gray-200);
+  padding-left: 0;
+}
+#article-faq .faq-q {
+  font-size: 1.0rem;
+  color: var(--navy) !important;
+}
+#article-faq .faq-a {
+  background-color: var(--white);
+  padding: 1rem 1.25rem 1rem 2.25rem;
+  border-radius: 0;
+  margin-top: 0.5rem;
+  line-height: 2;
+  color: var(--gray-800);
+}
+
+/* ── Next Step（診断FAQ）専用スタイル ── */
+.nextstep-faq {
+  background-color: var(--navy-light);
+  border-top: none;
+  padding: 2.5rem 2.5rem;
+}
+.nextstep-faq .faq-label {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-item {
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q {
+  color: var(--white);
+}
+.nextstep-faq .faq-q::before {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-a {
+  color: rgba(255,255,255,.78);
+}
+.nextstep-faq .faq-a::before {
+  color: var(--gold-light);
+}
+
+/* ── ダークモード完全無効化 ── */
+:root {
+  color-scheme: only light;
+}
+html, body {
+  background-color: #f8f7f4 !important;
+  color: #1e1d1a;
+}
+.prob-list li {
+  background-color: #ffffff;
+}
+.article-body {
+  background-color: #ffffff;
+}
+
+/* responsive */
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "商品ページのデザインをリニューアルしたのにCVRが変わりません。なぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "変えるべき場所が違うからです。デザインは「情報の容器」であって、売れる理由を作る装置ではありません。CVRを動かすのは情報の並び順（心理導線）です。読者が「なぜこれを選ぶべきか」を理解できる順序で情報が並んでいないページは、どれだけ綺麗にしても購買判断が起きません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "デザイナーに依頼してもCVRが上がらないのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "デザイナーのKPIは「美しいページを作ること」であって、「CVRを上げること」ではないからです。デザインの美しさと購買率には直接の因果関係がありません。CVRを上げるには、読者の意識レベルに合わせた情報の設計順序が必要です。これはデザインの仕事ではなく、セールスライティングと構成設計の仕事です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "UI/UX改善とCVR改善は違うのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "根本的に違います。UI/UX改善は「使いやすさ」を上げますが、「欲しい」という感情は作れません。CVRを上げるのは、読者の既存の思い込み（Belief）を崩し、「この商品でなければならない」という必然性を論理で構築するプロセスです。使いやすいページと売れるページは別物です。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ECで商品ページのデザインを変えても数字が動かない理由",
+  "description": "プロに頼んで綺麗にしたのに、CVRが1ミリも動かない。デザインを変えるたびに感じるこの虚脱感には、構造的な原因があります。100店舗超の現場から解説します。",
+  "url": "https://konishi-marketing.com/articles/ec-shohin-page-design-kaete-mo-ugokanu.html",
+  "datePublished": "2026-04-13",
+  "dateModified": "2026-04-13",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<!-- header -->
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<!-- hero -->
+<div class="hero">
+  <span class="hero-category">EC商品ページ改善</span>
+  <h1 class="hero-title">ECで商品ページのデザインを<br>変えても数字が動かない理由</h1>
+  <p class="hero-lead">プロに頼んで綺麗にした。競合のランキングページを参考にレイアウトを整えた。それでもCVRは1ミリも動かなかった。この状態には、施策の量や質ではなく、介入する場所の根本的なズレがあります。100店舗超の現場から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<!-- author micro box -->
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
+</div>
+
+<!-- article body -->
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">綺麗にするたびに、虚脱感だけが残る</h2>
+
+  <p>制作会社に依頼して30万円かけてリニューアルした。スマホファーストで整えた。競合のランキング上位ページのレイアウトを参考に「それっぽい」ページを作った。公開した翌日、「綺麗になった」と満足した。</p>
+
+  <p>1ヶ月後、RMS画面を開く。転換率は0.1%も動いていない。むしろ微妙に下がっている。</p>
+
+  <div class="insight">
+    デザインをいくら変えても数字が動かないのは、施策の質の問題ではありません。<br>
+    <em>「デザイン」と「CVR」の間に、因果関係がそもそも存在しない</em>からです。
+  </div>
+
+  <p>デザインは「情報の容器」です。容器をどれだけ磨いても、中に入っている情報の並び順が狂っていれば、読者の脳内で購買判断は起きません。綺麗な皿に泥水を盛っても、誰も口をつけないのと同じ構造です。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「デザインが古いから売れない」——この診断がズレている</h2>
+
+  <p>CVRが低い状態が続くと、多くの事業者が最初に疑うのは見た目です。「古臭い」「ダサい」「今の客層に刺さっていない」。この診断のもと、制作会社に発注し、リニューアルを繰り返す。</p>
+
+  <table class="misrec-block">
+    <thead><tr><th colspan="2" class="misrec-header">見当違いになっている場所</th></tr></thead>
+    <tbody>
+      <tr><td class="misrec-cell label">事業者が思っている問題</td><td class="misrec-cell belief">デザインが古い・競合より見た目が劣っているから売れない</td></tr>
+      <tr><td class="misrec-cell label">実際の問題</td><td class="misrec-cell truth">情報の「並び順（心理導線）」が狂っており、読者の脳内で「購入する理由」が積み上がっていない</td></tr>
+    </tbody>
+  </table>
+
+  <p>買い手がページに来たとき、最初に求めているのは「美しさ」ではありません。「なぜこれを選ぶべきか」という判断の根拠です。その根拠が、正しい順序で渡されているかどうか。それだけがCVRを決めます。</p>
+
+  <div class="callout">
+    綺麗なページが売れるなら、デザイン賞を受賞したECサイトはすべて高CVRのはずです。実際はそうではない。美しさと購買率の間に、相関はありません。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">なぜ「デザインが原因だ」という誤認が生まれるのか</h2>
+
+  <p>デザインが問題だという診断が広まるには、構造的な背景があります。</p>
+
+  <table class="misrec-block">
+    <thead><tr><th colspan="2" class="misrec-header">原因の履き違え</th></tr></thead>
+    <tbody>
+      <tr><td class="misrec-cell label">事業者が信じている原因</td><td class="misrec-cell belief">視覚的な魅力が足りないから離脱されている</td></tr>
+      <tr><td class="misrec-cell label">実際の原因</td><td class="misrec-cell truth">読者の既存の思い込み（Belief）を崩す言葉が欠落しており、感情が動いていない。デザインの前に、情報の設計順序が機能していない</td></tr>
+    </tbody>
+  </table>
+
+  <p>この誤認が生まれる背景は3つあります。第一に、制作会社の営業トークです。「今はスマホファーストの洗練されたデザインが必要です」という言葉を真に受けると、デザインが原因だと思い込みます。第二に、オーナーとしての自己満足です。「綺麗なお店にしたい」という欲求と「売上を上げたい」という目的は、別のものです。第三に、デザインという「目に見えるもの」を変えることが、最も「仕事をした気」になりやすいからです。</p>
+
+  <div class="callout">
+    「デザインを変えた」という行動は、周囲から見ても自分から見ても「施策を打った」という満足感を生みます。しかしCVRは、その満足感に一切反応しません。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「デザイナーに頼む」「UI/UXを改善する」が効かない理由</h2>
+
+  <p>問題とその原因の特定がズレているため、解決策もズレます。</p>
+
+  <table class="misrec-block">
+    <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え①：デザイナーへの外注</th></tr></thead>
+    <tbody>
+      <tr><td class="misrec-cell label">事業者が選ぶ解決策</td><td class="misrec-cell belief">有名デザイナーに依頼して商品ページを作り直す</td></tr>
+      <tr><td class="misrec-cell label">残る問題</td><td class="misrec-cell truth">デザイナーのKPIは「施主が納得する美しいページを作ること」であり、CVRではない。情報の設計順序は、デザインの仕事の範囲外</td></tr>
+    </tbody>
+  </table>
+
+  <table class="misrec-block">
+    <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え②：UI/UX改善</th></tr></thead>
+    <tbody>
+      <tr><td class="misrec-cell label">事業者が選ぶ解決策</td><td class="misrec-cell belief">ボタンの色・フォント・レイアウトをABテストで最適化する</td></tr>
+      <tr><td class="misrec-cell label">残る問題</td><td class="misrec-cell truth">UI/UX改善は「使い勝手」を上げるが、「欲しい」という感情は作れない。根本的な設計順序が狂ったまま微調整しても、CVRへの影響は誤差の範囲</td></tr>
+    </tbody>
+  </table>
+
+  <table class="misrec-block">
+    <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え③：テンプレート導入</th></tr></thead>
+    <tbody>
+      <tr><td class="misrec-cell label">事業者が選ぶ解決策</td><td class="misrec-cell belief">ランキング上位店のデザインを模倣したテンプレートを導入する</td></tr>
+      <tr><td class="misrec-cell label">残る問題</td><td class="misrec-cell truth">売れているページの「見た目」を真似しても、その背後にある「情報の設計順序」は真似できない。表層だけをコピーしても、CVRは動かない</td></tr>
+    </tbody>
+  </table>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">CVRを動かす「設計」とデザインの違い</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">デザインは容器、設計は中身の順序</h3>
+
+  <p>デザインは「どう見せるか」を決めます。設計は「何を、どの順番で伝えるか」を決めます。CVRに直接影響するのは後者です。読者の脳内で「なぜこれを選ぶべきか」という確信が積み上がる順序で情報が並んでいるか。ここがCVRの分岐点です。</p>
+
+  <p>設計が先に完成してから、それを視覚化するのがデザインの役割です。この順序が逆になっているページは、どれだけ見た目を磨いても数字が動きません。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">読者の「思い込み」を崩す工程が存在しない</h3>
+
+  <p>売れないページに共通しているのは、読者の既存の認識（Belief）をそのままにして商品説明を始めることです。読者は自分の物差しでページを読みます。その物差しを変えないまま機能やスペックを並べても、「だから何？」で終わります。</p>
+
+  <p>CVRが高いページは、最初に読者の物差しを変える工程を持っています。「あなたが今使っている判断基準は、実はこういう理由で機能しない」という気づきを先に渡す。その後に商品が登場するから、「これしかない」という確信が生まれます。この工程は、デザインでは実現できません。言葉と構成の仕事です。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">正しい介入の順序</h3>
+
+  <p>CVRを改善する正しい順序は、読者の意識レベルを推定する→既存の誤認を特定する→その誤認を解体する順序で情報を設計する→視覚化する、の4段階です。デザインは最後の工程です。</p>
+
+  <p>この順序を守っているページは、見た目が平凡でも転換率が高い。この順序が逆になっているページは、見た目が洗練されていても転換率が低い。これが「デザインを変えても数字が動かない」の正体です。</p>
+
+  <div class="insight">
+    CVRはデザインの問題ではなく、設計の問題です。<br>
+    <em>「何を、どの順番で伝えるか」が変わらない限り、数字は動きません。</em>
+  </div>
+
+  <p>以下の状態が続いているなら、設計の問題が残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">デザインをリニューアルしたのにCVRが変わらなかった</li>
+    <li data-num="✓">ABテストを繰り返しているが根本的に改善しない</li>
+    <li data-num="✓">競合のページを参考に作ったのに負けている</li>
+    <li data-num="✓">スマホで見ると綺麗なのに直帰率が高い</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">あなたのページは、設計で止まっているか。デザインで止まっているか。</div>
+    <div class="cta-block-sub">
+      診断を受けた事業者の多くが、初めて「デザインではなく設計が問題だった」と言語化できたと言います。<br>
+      介入する場所が変われば、広告費を変えずに数字が動き始める。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">あなたのページ、どこで止まっているか診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>ECで商品ページのデザインを変えても数字が動かない理由は、3つのズレが積み重なっています。「デザインが問題だ」という見当違い、「視覚的魅力の欠如が原因だ」という原因の履き違え、「デザイナーやUI改善で解決できる」という手段の取り違え——この3つがズレたまま施策を打ち続けることが、「何を変えても動かない」状態を固定します。</p>
+
+  <p>デザインに手をつける前に、「何を、どの順番で伝えるか」という設計を整えること。それだけが、CVRを構造的に改善する唯一の出口です。</p>
+
+</div><!-- /article-body -->
+
+<!-- 記事FAQ -->
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+
+  <div class="faq-item">
+    <div class="faq-q">商品ページのデザインをリニューアルしたのにCVRが変わりません。なぜですか？</div>
+    <div class="faq-a">変えるべき場所が違うからです。デザインは「情報の容器」であって、売れる理由を作る装置ではありません。CVRを動かすのは情報の並び順（心理導線）です。読者が「なぜこれを選ぶべきか」を理解できる順序で情報が並んでいないページは、どれだけ綺麗にしても購買判断が起きません。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">デザイナーに依頼してもCVRが上がらないのはなぜですか？</div>
+    <div class="faq-a">デザイナーのKPIは「美しいページを作ること」であって、「CVRを上げること」ではないからです。デザインの美しさと購買率には直接の因果関係がありません。CVRを上げるには読者の意識レベルに合わせた情報の設計順序が必要で、これはデザインではなくセールスライティングと構成設計の仕事です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">UI/UX改善とCVR改善は違うのですか？</div>
+    <div class="faq-a">根本的に違います。UI/UX改善は「使いやすさ」を上げますが、「欲しい」という感情は作れません。CVRを上げるのは、読者の既存の思い込みを崩し「この商品でなければならない」という必然性を論理で構築するプロセスです。使いやすいページと売れるページは別物です。</div>
+  </div>
+</div><!-- /記事FAQ -->
+
+<!-- FAQ：推進型 -->
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+
+  <div class="faq-item">
+    <div class="faq-q">診断では、具体的に何がわかるのですか？</div>
+    <div class="faq-a">現行ページの設計で「どこで読者の判断が止まっているか」を特定します。デザインの問題か、情報の設計順序の問題か、判断軸の提示が問題かを現行ページのURLから読み取り、レポートとしてお送りします。「次に何を変えればCVRが動くか」が初めて言語化できます。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">URLを送るだけで、何が返ってくるのですか？</div>
+    <div class="faq-a">現行ページの構成診断レポートを2営業日以内にお送りします。CVRが上がらない構造的な原因と、優先して手をつけるべき箇所を明記します。診断後の打ち合わせは、ご希望の方のみです。送付するだけで何かを売りつけることはありません。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">楽天以外のECモールや自社ECでも対象になりますか？</div>
+    <div class="faq-a">なります。診断の起点は「チャネルの特性」ではなく「読者の購買判断の段階とページ設計の整合性」です。楽天・Amazon・Yahoo!・自社EC・Makuakeなど、モールを問わず同じ視点で診断できます。</div>
+  </div>
+
+</div><!-- /faq -->
+
+<!-- bottom CTA -->
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、止まっている場所を特定する。</div>
+  <div class="cta-block-sub">
+    デザインではなく設計が問題だと分かれば、何を変えればいいかが分かる。<br>
+    何を変えればいいかが分かれば、広告費を変えずにCVRが動き始める。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<!-- author profile -->
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div class="author-profile-name">小西 秀人｜小西マーケティング</div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<!-- related -->
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率（CVR）が上がらない本当の理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-access-aru-noni-urenai-kyotsuten.html">楽天でアクセスはあるのに売れない店舗に共通する課題</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-kokokuhi-fuyashite-mo-rieki-nokoranai.html">楽天で広告費を増やしても利益が残らない構造</a></li>
+  </ul>
+</div>
+
+<!-- footer -->
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+
+</body>
+</html>
