@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楽天で広告費を増やしても利益が残らない構造｜小西マーケティング</title>
+<meta name="description" content="RPP広告を回すほど売上は立つ。しかし月末に手元に現金が残らない。この状態は広告の運用問題ではありません。100店舗超の現場から、その構造的な原因を解説します。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --red: #b71c1c;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--off-white);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── layout ── */
+.site-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--white);
+}
+
+/* ── header ── */
+.site-header {
+  background: var(--navy);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--gold);
+}
+.site-header a {
+  color: var(--gold-light);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+/* ── hero ── */
+.hero {
+  background: var(--navy);
+  padding: 3rem 2.5rem 2.5rem;
+  border-bottom: 3px solid var(--gold);
+}
+.hero-category {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.hero-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+}
+.hero-lead {
+  font-size: 1rem;
+  color: rgba(255,255,255,.78);
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+.hero-meta {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,.45);
+}
+
+/* ── author box ── */
+.author-box {
+  background: var(--gray-100);
+  border-left: 3px solid var(--gold);
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+}
+.author-box strong { color: var(--navy); }
+
+/* ── article body ── */
+.article-body {
+  padding: 2.5rem 2.5rem;
+}
+
+.article-body h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.5;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 2px solid var(--gray-200);
+}
+.article-body h2:first-child { margin-top: 0; }
+
+.article-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 2rem 0 .75rem;
+  padding-left: .75rem;
+  border-left: 3px solid var(--gold);
+  line-height: 1.55;
+}
+
+.article-body p {
+  font-size: 1rem;
+  color: var(--gray-800);
+  line-height: 2.1;
+  margin-bottom: 1.25rem;
+}
+.article-body p:last-child { margin-bottom: 0; }
+
+.article-body strong { color: var(--navy); }
+
+/* insight box */
+.insight {
+  background: var(--navy);
+  color: var(--white);
+  padding: 1.25rem 1.75rem;
+  margin: 1.75rem 0;
+  font-size: 1rem;
+  line-height: 2;
+  font-weight: 700;
+}
+.insight em {
+  font-style: normal;
+  color: var(--gold-light);
+}
+
+/* quote / callout */
+.callout {
+  background: var(--off-white);
+  border-left: 3px solid var(--navy);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 2;
+}
+.callout strong { color: var(--navy); }
+
+/* misrecognition 3-layer table */
+.misrec-block {
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+.misrec-header {
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  padding: .6rem 1.25rem;
+}
+.misrec-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--gray-200);
+}
+.misrec-row:first-of-type { border-top: none; }
+.misrec-cell {
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--gray-800);
+}
+.misrec-cell.label {
+  background: var(--gray-100);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  letter-spacing: .05em;
+  border-right: 1px solid var(--gray-200);
+}
+.misrec-cell.belief { background: var(--white); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+
+/* structure problems list */
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li {
+  padding: 1rem 1.25rem 1rem 3rem;
+  position: relative;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 1.9;
+}
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before {
+  content: attr(data-num);
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* CTA block */
+.cta-block {
+  background: var(--navy);
+  padding: 2rem 2.5rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+.cta-block-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.cta-block-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.6;
+  margin-bottom: .75rem;
+}
+.cta-block-sub {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,.7);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+.cta-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: .85rem 2.5rem;
+  text-decoration: none;
+  letter-spacing: .06em;
+  border-bottom: 3px solid #a8893a;
+  transition: opacity .2s;
+}
+.cta-btn:hover { opacity: .88; }
+.cta-note {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,.4);
+  margin-top: .75rem;
+}
+
+/* FAQ */
+.faq-section {
+  padding: 2.5rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.faq-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.faq-item {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.6;
+  margin-bottom: .75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.faq-q::before {
+  content: 'Q';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.faq-a {
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 2;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.faq-a::before {
+  content: 'A';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* author profile */
+.author-profile {
+  background: var(--gray-100);
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.author-profile-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.author-profile-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: .5rem;
+}
+.author-profile-body {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.95;
+}
+
+/* related */
+.related-section {
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.related-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.related-list { list-style: none; }
+.related-list li {
+  padding: .75rem 0 .75rem 1rem;
+  border-bottom: 1px solid var(--gray-100);
+  position: relative;
+}
+.related-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.1em;
+  width: 6px;
+  height: 1px;
+  background: var(--navy);
+}
+.related-list li:last-child { border-bottom: none; }
+.related-list a {
+  font-size: 0.9rem;
+  color: var(--navy);
+  text-decoration: underline;
+  line-height: 1.7;
+}
+
+/* footer */
+.site-footer {
+  background: var(--navy);
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+}
+.site-footer a {
+  color: rgba(255,255,255,.55);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+/* responsive */
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<!-- header -->
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<!-- hero -->
+<div class="hero">
+  <span class="hero-category">楽天商品ページ改善</span>
+  <h1 class="hero-title">楽天で広告費を増やしても<br>利益が残らない構造</h1>
+  <p class="hero-lead">RPP広告を回せば売上は立つ。スーパーSALEのたびに予算を積む。それでも月末の手元には現金が残っていない。この状態は、広告の運用方法の問題ではありません。100店舗超の現場から、構造的な原因を解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<!-- author micro box -->
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
+</div>
+
+<!-- article body -->
+<div class="article-body">
+
+  <h2>売上は立っている。なのに、手元に現金が残らない</h2>
+
+  <p>RMS画面の売上数字は悪くない。RPP広告は常時稼働させている。スーパーSALEのたびに予算を積み、それなりの注文数が入る。しかし月末に広告費とポイント原資を差し引くと、手元に残る現金は驚くほど少ない。</p>
+
+  <p>「売れている感覚」と「利益が残る現実」が乖離している。この状態が数ヶ月続いても、「広告を止めたらアクセスがゼロになる」という恐怖から、赤字スレスレでも広告を止められない。そして楽天のECC（営業担当）からは、さらなる広告入札の引き上げを勧められる。</p>
+
+  <div class="insight">
+    「広告費を増やしても利益が残らない」のは、広告の運用効率の問題ではありません。<br>
+    <em>広告で集めたアクセスを確実に購入へ変換する「受け皿」が、最初から存在していない状態</em>です。
+  </div>
+
+  <p>この状態を「広告代理店を変える」「AI入札ツールを入れる」で解決しようとすると、穴の空いたバケツを持ち替えるだけで終わります。水の注ぎ方を変えても、穴が残っている限り結果は変わらない。</p>
+
+  <h2>「広告の運用が最適化されていない」——この診断がズレている</h2>
+
+  <p>利益が残らない状態が続くと、最初に疑われるのは広告の設定です。「キーワードの除外が甘い」「入札単価の調整が間違っている」「クリック単価が高すぎる」。こうした診断のもと、広告代理店に乗り換えたり、運用ツールを導入したりする。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">見当違いになっている場所</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">事業者が思っている問題</div>
+      <div class="misrec-cell belief">広告の入札単価やキーワード設定が最適化されていないから利益が残らない</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">お金を払って集めたアクセスを購入へ変換する「受け皿（LP）」が機能していない。転換率が低いまま広告を回しているため、クリック費用だけが積み上がる</div>
+    </div>
+  </div>
+
+  <p>転換率が1%のページへ10,000人を送り込んでも、100人しか買わない。広告の設定がどれだけ精緻であっても、ページ内で購入の決断が起きなければ意味がありません。広告は「人を連れてくる装置」であって、「人を買わせる装置」ではない。</p>
+
+  <div class="callout">
+    CPCが高騰して苦しいのは事実です。しかし、競合より高いCPCを払っても利益が残るだけの転換率を構築できていれば、CPCの高騰は問題になりません。本質の問いは「入札単価」ではなく「転換率」にあります。
+  </div>
+
+  <h2>なぜ「楽天のシステムが搾取している」と感じるのか</h2>
+
+  <p>広告費を入れれば入れるほど売上が立ち、止めれば売上が消える。この構造が続くと、「楽天の広告システムに搾取されている」という感覚が生まれます。しかしこの認識も、原因の特定としてはズレています。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の履き違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">事業者が信じている原因</div>
+      <div class="misrec-cell belief">楽天の広告システムの構造上、利益が抜かれる仕組みになっている</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">LPの設計順序が間違っており、「価格以外の判断基準」を読者に渡せていないため、最安値の競合に流れている。広告で来た人が、ページを読んで競合に移動している</div>
+    </div>
+  </div>
+
+  <p>この誤認が生まれる背景に、構造的な理由があります。楽天のRMS（管理画面）ではアクセス数と売上が数字として強調されます。「どのタイミングで読者が離脱しているか」「ページのどこで購買決断が止まっているか」は、RMSの画面からは見えません。見えないものは原因として認識されない。</p>
+
+  <p>さらに、楽天のECC（営業担当）は広告費の増額を提案することが仕事です。LPの構造改善を起点に相談に乗るECCは、構造上、存在しません。「アクセスが少ない」と言われ続けると、「アクセスを増やせば解決する」が自然な思い込みになる。これはあなたの判断力の問題ではなく、情報環境の問題です。</p>
+
+  <div class="callout">
+    ROASが低い本当の原因は「キーワード選定の甘さ」ではありません。ページが読者の意識を「比較段階（L2）」から「購買段階（L3〜L4）」へ引き上げる設計になっていないことです。アクセスをいくら増やしても、穴が残っている限り状況は変わりません。
+  </div>
+
+  <h2>「代理店を変える」「ツールを入れる」が効かない理由</h2>
+
+  <p>広告費が利益を圧迫している状態で選ばれやすい解決策が、「優秀な広告代理店への乗り換え」と「AI自動入札ツールの導入」です。確かに、広告の運用精度は上がる可能性があります。しかしLPの設計が変わらない限り、改善できるのはCPCの数パーセントだけです。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え①</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">事業者が選んでいる解決策</div>
+      <div class="misrec-cell belief">優秀な広告代理店に乗り換える・AI自動入札ツールを導入する</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">LPの転換率が変わらない限り、クリック単価が数%改善しても利益構造は根本から変わらない。受け皿の穴を塞がずに、水の注ぎ方を変えているだけ</div>
+    </div>
+  </div>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え②</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">事業者が選んでいる解決策</div>
+      <div class="misrec-cell belief">転換率を補うためにポイント倍率を上げ、クーポンをさらに発行する</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">値引きによる転換率の引き上げは利益率を直撃する。広告費の圧迫に加えてポイント・クーポン原資が積み上がり、「忙しいだけで儲からない」状態がさらに悪化する</div>
+    </div>
+  </div>
+
+  <h2>広告依存から抜け出せない店舗に共通する3つの構造</h2>
+
+  <h3>「売れている錯覚」がブレーキを踏ませない</h3>
+
+  <p>RMSの売上数字は動いている。注文数は入っている。だから「事業が動いている感覚」が生まれます。しかし広告費・ポイント原資・送料・モール手数料を引いた後の実利益を月次で計算している事業者は、思いのほか少ない。</p>
+
+  <p>「売上が立っている」と「利益が残っている」は、全く別の状態です。売上は動いているが手元に現金が残らない状態が続いているなら、そのビジネスモデルは広告費を楽天に移転し続けているだけです。</p>
+
+  <h3>「止めたら終わり」という恐怖が思考を停止させる</h3>
+
+  <p>「広告を止めたらアクセスがゼロになり、売上が完全に消える」。この恐怖は事実です。しかしこの状態自体が、「広告なしでは選ばれない商品ページ」であることを示しています。</p>
+
+  <p>広告がなくても検索上位に表示されるには、転換率が高いことが前提条件です。楽天のアルゴリズムは転換率を重視します。転換率が低いまま広告で順位を保とうとすると、「転換率の低いページ」として評価が下がり続け、広告を止めた瞬間に圏外に落ちる。この悪循環から出るには、転換率そのものを改善するしかありません。</p>
+
+  <h3>イベント依存が「本当の実力」を見えなくさせる</h3>
+
+  <p>スーパーSALEやお買い物マラソンでは売れる。だから「このページは大丈夫だ」と思ってしまう。しかしイベント中の購入は、ポイント還元という外部装置が購買決断を後押ししているだけです。ページ自体の転換率が改善されたわけではありません。</p>
+
+  <p>イベント中に競合も入札を強めるためCPCが高騰し、結局「忙しいだけで儲からない」期間になる。通常期に戻るとまた売れなくなる。この繰り返しが続いているなら、ページの設計が原因として残っています。</p>
+
+  <h2>利益が残る構造と、残らない構造の違い</h2>
+
+  <p>広告費を投じても利益が残る店舗と残らない店舗の差は、広告の運用精度ではありません。ページが「価格以外の判断基準」を読者に渡せているかどうかです。</p>
+
+  <p>価格以外の判断基準が渡せていないページは、最終的に「最安値の競合」との比較になります。そこで勝つには価格を下げるか、ポイントを積むしかない。これが利益を削り続ける構造の正体です。</p>
+
+  <p>判断基準が渡せているページは、読者が「値段より先にこのページで決めよう」と動く。広告で来た人が、他のページに流れずに購入する。これが転換率であり、転換率が高ければ同じ広告費でより多くの利益が残ります。</p>
+
+  <div class="insight">
+    利益が残るか残らないかの分岐点は、広告の入札単価ではありません。<br>
+    <em>ページ内で「価格以外の判断基準」を読者に渡せているかどうか</em>、ただその一点です。
+  </div>
+
+  <p>以下の状態が続いているなら、LPの設計に問題が残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">売上は立っているが月末に現金が残らない</li>
+    <li data-num="✓">広告を止めると売上がゼロに近くなる</li>
+    <li data-num="✓">スーパーSALEのたびに忙しいが利益が出ない</li>
+    <li data-num="✓">ROASが改善しないまま広告費だけが増えていく</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">あなたのページは、どこで利益を漏らしているか。</div>
+    <div class="cta-block-sub">
+      広告費が利益を圧迫している状態が続いているなら、ページのどこかに構造的な穴があります。<br>
+      診断を受けた事業者の多くが、初めて「広告ではなくLPが原因だった」と言語化できたと言います。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">あなたのページ、どこで利益が漏れているか診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2>まとめ</h2>
+
+  <p>楽天で広告費を増やしても利益が残らない理由は、3つのズレが積み重なっています。「広告の運用が問題だ」という見当違い、「楽天のシステムが搾取している」という原因の履き違え、「代理店を変えれば・ポイントを積めば解決する」という手段の取り違え——この3つがズレたまま施策を打ち続けることが、「広告依存・利益ゼロ」の状態を固定化します。</p>
+
+  <p>解決の起点は、広告費を1円も増やす前に、ページ内で「価格以外の判断基準」を渡す設計を組み直すことです。受け皿の穴が塞がれて初めて、広告投資が利益に変わり始めます。</p>
+
+</div><!-- /article-body -->
+
+<!-- FAQ：推進型 -->
+<div class="faq-section">
+  <div class="faq-label">Next Step</div>
+
+  <div class="faq-item">
+    <div class="faq-q">広告を止めると売上が完全に消えます。このリスクを取らずに改善できますか？</div>
+    <div class="faq-a">広告を止めずに改善できます。まず現状の広告予算を維持したまま、LPの設計を組み直します。転換率が上がれば、同じ広告費でより多くの注文が入るため、ROASが改善します。ROASが改善してから、必要に応じて広告予算の最適化を行う順序です。「止める」のではなく「受け皿を先に直す」が正しい手順です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">診断では、何がわかるのですか？</div>
+    <div class="faq-a">現行LPのどこで読者が離脱しているか、「価格以外の判断基準」がページ内に存在しているかを特定します。「広告の問題か、LPの設計の問題か」を現行ページのURLから読み取り、レポートとしてお送りします。「次に何を変えればROASが改善するか」が初めて言語化できます。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">転換率を上げると、自然検索の順位も上がりますか？</div>
+    <div class="faq-a">楽天のアルゴリズムは転換率を重視します。転換率が改善されると、同じキーワードで広告なしでも上位表示される頻度が増えていきます。広告依存から抜け出すための唯一の出口は、転換率の改善です。広告投資を減らしながら売上を維持・拡大できる構造は、転換率の改善からしか生まれません。</div>
+  </div>
+
+</div><!-- /faq -->
+
+<!-- bottom CTA -->
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、穴の場所を特定する。</div>
+  <div class="cta-block-sub">
+    どこで利益が漏れているかが分かれば、何を変えればいいかが分かる。<br>
+    何を変えればいいかが分かれば、広告費を変えずに利益が残り始める。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<!-- author profile -->
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div class="author-profile-name">小西 秀人｜小西マーケティング</div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<!-- related -->
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率（CVR）が上がらない本当の理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/ec-roas-kaizen-shinai-genin.html">ECで広告ROASが改善しない根本原因</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-supersale-urete-mo-fudan-urenai-mondai.html">楽天スーパーSALEでは売れるのに普段売れない店舗の問題点</a></li>
+  </ul>
+</div>
+
+<!-- footer -->
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+
+</body>
+</html>
