@@ -418,6 +418,24 @@ body {
   font-size: 0.8rem;
 }
 
+
+/* misrec-block table override */
+table.misrec-block {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+table.misrec-block th.misrec-header {
+  text-align: left;
+  display: table-cell;
+  width: 100%;
+}
+table.misrec-block td.misrec-cell.label {
+  width: 40%;
+}
+
 /* responsive */
 @media (max-width: 640px) {
   .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer {
@@ -431,6 +449,60 @@ body {
   .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "診断では、具体的に何がわかるのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "どこで見当違いが起きているかを特定します。「デザインが問題か、設計の順序が問題か、判断軸の提示が問題か」を現行LPのURLから読み取り、レポートとしてお送りします。「どこから手をつければいいか」が初めて言語化できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "URLを送るだけで、何が返ってくるのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "現行LPの構成診断レポートを2営業日以内にお送りします。CVRが上がらない構造的な原因と、優先して手をつけるべき箇所を明記します。診断後の打ち合わせは、ご希望の方のみです。送付するだけで何かを売りつけることはありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "どんなカテゴリ・商品でも対象になりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "食品・家電・美容・健康・雑貨・家具・スポーツグッズなど、カテゴリを問いません。診断の起点は「商品の特性」ではなく「読者の購買判断の段階とページ設計の整合性」です。商品ジャンルが変わっても、どこで手を間違えているかの診断は同じ視点で行えます。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "楽天商品ページのCVRが上がらない本当の理由",
+  "description": "広告費を増やしても、デザインを変えても数字が動かない。その原因は施策の量や質ではなく、見当違いの場所を直し続けていることにあります。100店舗超の現場から構造的に解説します。",
+  "url": "https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html",
+  "datePublished": "2026-04-12",
+  "dateModified": "2026-04-12",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -474,12 +546,12 @@ body {
 
   <p>多くの店舗が、CVRが上がらない原因を「デザインの古さ」か「情報量の不足」に求めます。だから制作会社に依頼し、リニューアルを行う。しかし、リニューアル後のCVRが改善しないケースは珍しくありません。</p>
 
-  <div class="misrec-block">
-    <div class="misrec-header">見当違いになっている場所</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">事業者が思っている問題</div>
-      <div class="misrec-cell belief">デザインが古臭い・ダサいから売れない</div>
-    </div>
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">見当違いになっている場所</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が思っている問題</td><td class="misrec-cell belief">デザインが古臭い・ダサいから売れない</td></tr>
+  </tbody>
+</table>
     <div class="misrec-row">
       <div class="misrec-cell label">実際の問題</div>
       <div class="misrec-cell truth">「購入の決め手」がファーストビューで瞬時に理解できない情報設計の欠如</div>
@@ -496,12 +568,12 @@ body {
 
   <p>見ている場所がズレているだけでなく、原因の特定も構造的にズレています。</p>
 
-  <div class="misrec-block">
-    <div class="misrec-header">原因の履き違え</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">事業者が信じている原因</div>
-      <div class="misrec-cell belief">景気の悪さ、競合の安売り、広告費の不足</div>
-    </div>
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">原因の履き違え</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が信じている原因</td><td class="misrec-cell belief">景気の悪さ、競合の安売り、広告費の不足</td></tr>
+  </tbody>
+</table>
     <div class="misrec-row">
       <div class="misrec-cell label">実際の原因</div>
       <div class="misrec-cell truth">スマホでの購入ボタンまでの動線に迷いがあるか、保証・安心材料が不足していること</div>
@@ -534,36 +606,36 @@ body {
 
   <p>見ている場所と原因の特定がズレているため、打つ手もズレます。</p>
 
-  <div class="misrec-block">
-    <div class="misrec-header">対症療法①：値引き・クーポン</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">市場の解決策</div>
-      <div class="misrec-cell belief">ポイント倍率を上げ、クーポンを配る</div>
-    </div>
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">対症療法①：値引き・クーポン</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">市場の解決策</td><td class="misrec-cell belief">ポイント倍率を上げ、クーポンを配る</td></tr>
+  </tbody>
+</table>
     <div class="misrec-row">
       <div class="misrec-cell label">残る問題</div>
       <div class="misrec-cell truth">利益が残らず、クーポンが切れた瞬間にまた売れなくなる。転換率の低さを値引きで補っているだけで、ページの判断軸そのものは何も変わっていない</div>
     </div>
   </div>
 
-  <div class="misrec-block">
-    <div class="misrec-header">対症療法②：LP長文化・権威性の積み増し</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">市場の解決策</div>
-      <div class="misrec-cell belief">LPを長くしてランキング受賞歴を盛り込む</div>
-    </div>
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">対症療法②：LP長文化・権威性の積み増し</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">市場の解決策</td><td class="misrec-cell belief">LPを長くしてランキング受賞歴を盛り込む</td></tr>
+  </tbody>
+</table>
     <div class="misrec-row">
       <div class="misrec-cell label">残る問題</div>
       <div class="misrec-cell truth">スマホユーザーが途中で離脱し、クロージングまで到達しない。最上部で「自分に関係がある」と思わせる設計ができていない限り、長尺のLPは単なるノイズとして処理される</div>
     </div>
   </div>
 
-  <div class="misrec-block">
-    <div class="misrec-header">対症療法③：広告入札単価の引き上げ</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">市場の解決策</div>
-      <div class="misrec-cell belief">広告の入札単価を上げて検索上位を取る</div>
-    </div>
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">対症療法③：広告入札単価の引き上げ</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">市場の解決策</td><td class="misrec-cell belief">広告の入札単価を上げて検索上位を取る</td></tr>
+  </tbody>
+</table>
     <div class="misrec-row">
       <div class="misrec-cell label">残る問題</div>
       <div class="misrec-cell truth">無駄なクリック課金が発生し、長期的には検索順位も下がる。楽天のアルゴリズムは転換率を重視するため、CVRが低いまま露出だけを増やすと「質の低いページ」と見なされる</td>

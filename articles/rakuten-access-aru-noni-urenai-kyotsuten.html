@@ -418,6 +418,24 @@ body {
   font-size: 0.8rem;
 }
 
+
+/* misrec-block table override */
+table.misrec-block {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+table.misrec-block th.misrec-header {
+  text-align: left;
+  display: table-cell;
+  width: 100%;
+}
+table.misrec-block td.misrec-cell.label {
+  width: 40%;
+}
+
 /* responsive */
 @media (max-width: 640px) {
   .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer {
@@ -431,6 +449,60 @@ body {
   .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "転換率を上げるために、まず何から手をつければいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "最初に行うべきは、現状のページのどこで読者が「止まっているか」の特定です。サムネで離脱しているのか、商品ページの途中で止まっているのか、カゴ落ちが起きているのかによって、介入すべき箇所が変わります。施策より先に、止まっている場所の特定が必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "RPP広告の予算はどう考えればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "転換率が改善される前に広告費を増やすと、ROASは悪化します。広告費の最適化は、ページの転換率が改善した後の話です。先にページの「穴」を塞ぎ、転換率が一定水準に達してから広告入札を最適化する順序が正しい。転換率が低いまま広告費を増やしても、損失を拡大するだけです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "診断では、具体的に何がわかるのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "現行LPのどこで読者が止まっているかを特定します。「デザインが問題か、情報の順序が問題か、判断軸の提示が問題か」を現行ページのURLから読み取り、レポートとしてお送りします。「次に何を変えればいいか」が初めて言語化できる状態になります。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "楽天でアクセスはあるのに売れない店舗に共通する課題",
+  "description": "広告でアクセスは取れている。なのに転換率が上がらない。この状態が続く店舗には、共通する構造的な誤りがあります。100店舗超の現場から、その正体を解説します。",
+  "url": "https://konishi-marketing.com/articles/rakuten-access-aru-noni-urenai-kyotsuten.html",
+  "datePublished": "2026-04-12",
+  "dateModified": "2026-04-12",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -474,12 +546,12 @@ body {
 
   <p>転換率が上がらないとき、最初に疑われるのはページの見た目です。「サムネが古い」「LPの画像がダサい」「スマホで見たときのレイアウトが崩れている」。こうした診断のもと、制作会社へ依頼してリニューアルを行う。</p>
 
-  <div class="misrec-block">
-    <div class="misrec-header">見当違いになっている場所</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">事業者が思っている問題</div>
-      <div class="misrec-cell belief">デザインやサムネの質が低いから売れない</div>
-    </div>
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">見当違いになっている場所</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が思っている問題</td><td class="misrec-cell belief">デザインやサムネの質が低いから売れない</td></tr>
+  </tbody>
+</table>
     <div class="misrec-row">
       <div class="misrec-cell label">実際の問題</div>
       <div class="misrec-cell truth">ページに来た読者に「なぜ今、これを選ぶべきか」という判断軸が、ファーストビューから一度も渡されていない</div>
@@ -496,12 +568,12 @@ body {
 
   <p>転換率の問題を、多くの事業者がアクセスの問題として扱います。「もっと露出を増やせば、そのうち売れる人が出てくる」。だからRPP広告の予算を増やし、楽天コンサルに相談する。</p>
 
-  <div class="misrec-block">
-    <div class="misrec-header">原因の履き違え</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">事業者が信じている原因</div>
-      <div class="misrec-cell belief">アクセス数が足りないから売れない。広告をもっと増やせば解決する</div>
-    </div>
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">原因の履き違え</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が信じている原因</td><td class="misrec-cell belief">アクセス数が足りないから売れない。広告をもっと増やせば解決する</td></tr>
+  </tbody>
+</table>
     <div class="misrec-row">
       <div class="misrec-cell label">実際の原因</div>
       <div class="misrec-cell truth">ページ自体が「穴の空いたバケツ」の状態のまま、集客だけを増やし続けている。転換率が低いまま露出を増やしても、広告費だけが膨らむ</div>
@@ -520,12 +592,12 @@ body {
 
   <p>転換率が低いとき、もう一つよく使われる手段がポイント倍率の引き上げとクーポンの発行です。確かにイベント中は売れる。しかし、イベントが終わった翌日から、また元の転換率に戻る。</p>
 
-  <div class="misrec-block">
-    <div class="misrec-header">解決策の取り違え</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">事業者が選んでいる解決策</div>
-      <div class="misrec-cell belief">ポイント10倍・クーポン発行で転換率を上げる</div>
-    </div>
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が選んでいる解決策</td><td class="misrec-cell belief">ポイント10倍・クーポン発行で転換率を上げる</td></tr>
+  </tbody>
+</table>
     <div class="misrec-row">
       <div class="misrec-cell label">残る問題</div>
       <div class="misrec-cell truth">値引きによる転換率向上は利益を削るだけで、ページの「選ばれる構造」は何も変わっていない。値引きをやめた瞬間にまた元に戻る</div>

@@ -418,6 +418,24 @@ body {
   font-size: 0.8rem;
 }
 
+
+/* misrec-block table override */
+table.misrec-block {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+table.misrec-block th.misrec-header {
+  text-align: left;
+  display: table-cell;
+  width: 100%;
+}
+table.misrec-block td.misrec-cell.label {
+  width: 40%;
+}
+
 /* responsive */
 @media (max-width: 640px) {
   .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer {
@@ -431,6 +449,60 @@ body {
   .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "広告を止めると売上が完全に消えます。このリスクを取らずに改善できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "広告を止めずに改善できます。まず現状の広告予算を維持したまま、LPの設計を組み直します。転換率が上がれば、同じ広告費でより多くの注文が入るため、ROASが改善します。ROASが改善してから、必要に応じて広告予算の最適化を行う順序です。「止める」のではなく「受け皿を先に直す」が正しい手順です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "診断では、何がわかるのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "現行LPのどこで読者が離脱しているか、「価格以外の判断基準」がページ内に存在しているかを特定します。「広告の問題か、LPの設計の問題か」を現行ページのURLから読み取り、レポートとしてお送りします。「次に何を変えればROASが改善するか」が初めて言語化できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "転換率を上げると、自然検索の順位も上がりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "楽天のアルゴリズムは転換率を重視します。転換率が改善されると、同じキーワードで広告なしでも上位表示される頻度が増えていきます。広告依存から抜け出すための唯一の出口は、転換率の改善です。広告投資を減らしながら売上を維持・拡大できる構造は、転換率の改善からしか生まれません。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "楽天で広告費を増やしても利益が残らない構造",
+  "description": "RPP広告を回しても月末に手元に現金が残らない。この状態は広告の運用問題ではありません。100店舗超の現場から、その構造的な原因を解説します。",
+  "url": "https://konishi-marketing.com/articles/rakuten-kokokuhi-fuyashite-mo-rieki-nokoranai.html",
+  "datePublished": "2026-04-12",
+  "dateModified": "2026-04-12",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -474,12 +546,12 @@ body {
 
   <p>利益が残らない状態が続くと、最初に疑われるのは広告の設定です。「キーワードの除外が甘い」「入札単価の調整が間違っている」「クリック単価が高すぎる」。こうした診断のもと、広告代理店に乗り換えたり、運用ツールを導入したりする。</p>
 
-  <div class="misrec-block">
-    <div class="misrec-header">見当違いになっている場所</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">事業者が思っている問題</div>
-      <div class="misrec-cell belief">広告の入札単価やキーワード設定が最適化されていないから利益が残らない</div>
-    </div>
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">見当違いになっている場所</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が思っている問題</td><td class="misrec-cell belief">広告の入札単価やキーワード設定が最適化されていないから利益が残らない</td></tr>
+  </tbody>
+</table>
     <div class="misrec-row">
       <div class="misrec-cell label">実際の問題</div>
       <div class="misrec-cell truth">お金を払って集めたアクセスを購入へ変換する「受け皿（LP）」が機能していない。転換率が低いまま広告を回しているため、クリック費用だけが積み上がる</div>
@@ -496,12 +568,12 @@ body {
 
   <p>広告費を入れれば入れるほど売上が立ち、止めれば売上が消える。この構造が続くと、「楽天の広告システムに搾取されている」という感覚が生まれます。しかしこの認識も、原因の特定としてはズレています。</p>
 
-  <div class="misrec-block">
-    <div class="misrec-header">原因の履き違え</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">事業者が信じている原因</div>
-      <div class="misrec-cell belief">楽天の広告システムの構造上、利益が抜かれる仕組みになっている</div>
-    </div>
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">原因の履き違え</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が信じている原因</td><td class="misrec-cell belief">楽天の広告システムの構造上、利益が抜かれる仕組みになっている</td></tr>
+  </tbody>
+</table>
     <div class="misrec-row">
       <div class="misrec-cell label">実際の原因</div>
       <div class="misrec-cell truth">LPの設計順序が間違っており、「価格以外の判断基準」を読者に渡せていないため、最安値の競合に流れている。広告で来た人が、ページを読んで競合に移動している</div>
@@ -520,24 +592,24 @@ body {
 
   <p>広告費が利益を圧迫している状態で選ばれやすい解決策が、「優秀な広告代理店への乗り換え」と「AI自動入札ツールの導入」です。確かに、広告の運用精度は上がる可能性があります。しかしLPの設計が変わらない限り、改善できるのはCPCの数パーセントだけです。</p>
 
-  <div class="misrec-block">
-    <div class="misrec-header">解決策の取り違え①</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">事業者が選んでいる解決策</div>
-      <div class="misrec-cell belief">優秀な広告代理店に乗り換える・AI自動入札ツールを導入する</div>
-    </div>
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え①</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が選んでいる解決策</td><td class="misrec-cell belief">優秀な広告代理店に乗り換える・AI自動入札ツールを導入する</td></tr>
+  </tbody>
+</table>
     <div class="misrec-row">
       <div class="misrec-cell label">残る問題</div>
       <div class="misrec-cell truth">LPの転換率が変わらない限り、クリック単価が数%改善しても利益構造は根本から変わらない。受け皿の穴を塞がずに、水の注ぎ方を変えているだけ</div>
     </div>
   </div>
 
-  <div class="misrec-block">
-    <div class="misrec-header">解決策の取り違え②</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">事業者が選んでいる解決策</div>
-      <div class="misrec-cell belief">転換率を補うためにポイント倍率を上げ、クーポンをさらに発行する</div>
-    </div>
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え②</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が選んでいる解決策</td><td class="misrec-cell belief">転換率を補うためにポイント倍率を上げ、クーポンをさらに発行する</td></tr>
+  </tbody>
+</table>
     <div class="misrec-row">
       <div class="misrec-cell label">残る問題</div>
       <div class="misrec-cell truth">値引きによる転換率の引き上げは利益率を直撃する。広告費の圧迫に加えてポイント・クーポン原資が積み上がり、「忙しいだけで儲からない」状態がさらに悪化する</div>
