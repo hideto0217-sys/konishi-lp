@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/rakuten-supersale-urete-mo-fudan-urenai-mondai.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楽天スーパーSALEでは売れるのに普段売れない店舗の問題点｜小西マーケティング</title>
+<meta name="description" content="イベント期間は売上が跳ね上がるのに、翌日から閑古鳥。この繰り返しはアクセス数の問題ではありません。EC100店舗超の停滞を見てきた経験から、構造的に解説します。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --red: #b71c1c;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--off-white);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+.site-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--white);
+}
+
+.site-header {
+  background: var(--navy);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--gold);
+}
+.site-header a {
+  color: var(--gold-light);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+.hero {
+  background: var(--navy);
+  padding: 3rem 2.5rem 2.5rem;
+  border-bottom: 3px solid var(--gold);
+}
+.hero-category {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.hero-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+}
+.hero-lead {
+  font-size: 1rem;
+  color: rgba(255,255,255,.78);
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+.hero-meta {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,.45);
+}
+
+.author-box {
+  background: var(--gray-100);
+  border-left: 3px solid var(--gold);
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+}
+.author-box strong { color: var(--navy); }
+
+.article-body {
+  padding: 2.5rem 2.5rem;
+}
+
+.article-body h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy) !important;
+  line-height: 1.4;
+  margin: 4.5rem 0 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: .75rem;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 2px solid var(--gold);
+}
+.article-body h2:first-child { margin-top: 0; }
+
+.article-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy) !important;
+  margin: 3.5rem 0 1rem;
+  padding: .6rem 0 .6rem .75rem;
+  border-left: 3px solid var(--gold);
+  background-color: var(--gray-100);
+  line-height: 1.45;
+}
+
+.article-body p {
+  font-size: 1rem;
+  color: var(--gray-800);
+  line-height: 2.1;
+  margin-bottom: 1.25rem;
+}
+.article-body p:last-child { margin-bottom: 0; }
+
+.article-body strong { color: var(--navy); }
+
+.insight {
+  background: var(--navy);
+  color: var(--white);
+  padding: 1.25rem 1.75rem;
+  margin: 1.75rem 0;
+  font-size: 1rem;
+  line-height: 2;
+  font-weight: 700;
+}
+.insight em {
+  font-style: normal;
+  color: var(--gold-light);
+}
+
+.callout {
+  background: var(--off-white);
+  border-left: 3px solid var(--navy);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 2;
+}
+.callout strong { color: var(--navy); }
+
+.misrec-block {
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+.misrec-header {
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  padding: .6rem 1.25rem;
+}
+.misrec-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--gray-200);
+}
+.misrec-row:first-of-type { border-top: none; }
+.misrec-cell {
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--gray-800);
+}
+.misrec-cell.label {
+  background: var(--gray-100);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  letter-spacing: .05em;
+  border-right: 1px solid var(--gray-200);
+}
+.misrec-cell.belief { background: var(--white); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li {
+  padding: 1rem 1.25rem 1rem 3rem;
+  position: relative;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 1.9;
+}
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before {
+  content: attr(data-num);
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cta-block {
+  background: var(--navy);
+  padding: 2rem 2.5rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+.cta-block-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.cta-block-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.6;
+  margin-bottom: .75rem;
+}
+.cta-block-sub {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,.7);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+.cta-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: .85rem 2.5rem;
+  text-decoration: none;
+  letter-spacing: .06em;
+  border-bottom: 3px solid #a8893a;
+  transition: opacity .2s;
+}
+.cta-btn:hover { opacity: .88; }
+.cta-note {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,.4);
+  margin-top: .75rem;
+}
+
+.faq-section {
+  padding: 2.5rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.faq-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.faq-item {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.6;
+  margin-bottom: .75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.faq-q::before {
+  content: 'Q';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.faq-a {
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 2;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.faq-a::before {
+  content: 'A';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.author-profile {
+  background: var(--gray-100);
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.author-profile-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.author-profile-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: .5rem;
+}
+.author-profile-body {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.95;
+}
+
+.related-section {
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.related-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.related-list { list-style: none; }
+.related-list li {
+  padding: .75rem 0 .75rem 1rem;
+  border-bottom: 1px solid var(--gray-100);
+  position: relative;
+}
+.related-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.1em;
+  width: 6px;
+  height: 1px;
+  background: var(--navy);
+}
+.related-list li:last-child { border-bottom: none; }
+.related-list a {
+  font-size: 0.9rem;
+  color: var(--navy);
+  text-decoration: underline;
+  line-height: 1.7;
+}
+
+.site-footer {
+  background: var(--navy);
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+}
+.site-footer a {
+  color: rgba(255,255,255,.55);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+table.misrec-block {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+table.misrec-block th.misrec-header {
+  text-align: left;
+  display: table-cell;
+  width: 100%;
+}
+table.misrec-block td.misrec-cell.label {
+  width: 40%;
+}
+
+#article-faq {
+  background-color: var(--gray-100);
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid var(--gray-200);
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+#article-faq .faq-label {
+  color: var(--navy);
+  font-size: 0.75rem;
+}
+#article-faq .faq-item {
+  border-bottom: 1px solid var(--gray-200);
+  padding-left: 0;
+}
+#article-faq .faq-q {
+  font-size: 1.0rem;
+  color: var(--navy) !important;
+}
+#article-faq .faq-a {
+  background-color: var(--white);
+  padding: 1rem 1.25rem 1rem 2.25rem;
+  border-radius: 0;
+  margin-top: 0.5rem;
+  line-height: 2;
+  color: var(--gray-800);
+}
+
+.nextstep-faq {
+  background-color: var(--navy-light);
+  border-top: none;
+  padding: 2.5rem 2.5rem;
+}
+.nextstep-faq .faq-label {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-item {
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q {
+  color: var(--white);
+}
+.nextstep-faq .faq-q::before {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-a {
+  color: rgba(255,255,255,.78);
+}
+.nextstep-faq .faq-a::before {
+  color: var(--gold-light);
+}
+
+:root {
+  color-scheme: only light;
+}
+html, body {
+  background-color: #f8f7f4 !important;
+  color: #1e1d1a;
+}
+.prob-list li {
+  background-color: #ffffff;
+}
+.article-body {
+  background-color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "楽天のスーパーSALEでは売れるのに普段売れない原因は何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ページが「ポイント・値引き」という外部要因がなければ購買判断を起こせない設計になっているからです。イベント期間中は「お得感」という外部エネルギーが読者の背中を押しますが、通常期にはそれがありません。通常期でも転換するには、読者の悩みを再定義し「なぜ今この商品でなければならないか」を伝える設計がページ内に必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "楽天の通常期の転換率（CVR）を上げるにはどうすればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ページ内で「イベントなしでも今すぐ欲しい」と確信させるロジックを実装することが必要です。具体的には、読者が現在使っている解決策では不十分な理由を示し、自社商品が唯一の正解である必然性を順序立てて伝える設計です。この設計が整うと、ポイント倍率やイベントの有無に関わらず転換率が安定します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "楽天の通常期に広告を打ってもROASが悪い理由は何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ページの転換率が低いまま広告を打っているからです。イベント期間は「お得感」が転換率を底上げしているため広告が機能しているように見えますが、通常期はその底上げがなくなります。転換率が低いページに広告費を投入しても、クリック数が増えるだけで購入につながりません。先にページの転換率を改善することが、通常期のROAS改善につながります。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "楽天スーパーSALEでは売れるのに普段売れない店舗の問題点",
+  "description": "イベント期間は売上が跳ね上がるのに、翌日から閑古鳥。この繰り返しはアクセス数の問題ではありません。EC100店舗超の停滞を見てきた経験から、構造的に解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/rakuten-supersale-urete-mo-fudan-urenai-mondai.html",
+  "datePublished": "2026-04-14",
+  "dateModified": "2026-04-14",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<div class="hero">
+  <span class="hero-category">楽天商品ページ改善</span>
+  <h1 class="hero-title">楽天スーパーSALEでは売れるのに<br>普段売れない店舗の問題点</h1>
+  <p class="hero-lead">スーパーSALEやお買い物マラソンの期間は売上が平常時の5倍になる。しかしイベントが終わった翌日から、アクセスも注文もゼロに近くなる。この状態は平常時のアクセス数の問題ではありません。EC100店舗超の停滞を見てきた経験から、構造的に解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
+</div>
+
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">イベントが終わった翌日、売上がゼロに戻る</h2>
+
+  <p>スーパーSALEのカレンダーを開き、次のイベントまでの日数を数える。広告費と施策の準備を始める。イベント期間中は売上が跳ね上がる。そして終わった翌日から、またアクセスがなくなる。この繰り返しが年間の経営を支配している。</p>
+
+  <p>「平常時は楽天にユーザーがいない」「賢いユーザーはポイントが高い時しか買わない」——そう自分に言い聞かせて、次のイベントの準備を始める。しかし競合の中には、イベント期間だけでなく通常日もランキングに入り続けている店舗が存在します。</p>
+
+  <div class="insight">
+    イベントでしか売れないのは、アクセス数の問題ではありません。<br>
+    <em>「ポイントや値引き」という外部のドーピングがなければ、読者を購入まで導けないページ設計の問題です。</em>
+  </div>
+
+  <p>イベント期間中に売れているのは、ページの設計が機能しているからではありません。「お得感」という外部エネルギーが、読者の購買判断を代替しているだけです。そのエネルギーがなくなった瞬間、ページの実力が露わになります。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「平常時はアクセスが足りない」——この診断がズレている</h2>
+
+  <p>通常期に売れない状態が続くと、アクセス数の不足が問題だと判断されます。RPP広告を強化する、小規模なセールを頻発させる、独自ポイントを上乗せする。この診断のもとで施策を積み重ねても、構造は変わりません。</p>
+
+  <table class="misrec-block">
+    <thead><tr><th colspan="2" class="misrec-header">見当違いになっている場所</th></tr></thead>
+    <tbody>
+      <tr><td class="misrec-cell label">事業者が思っている問題</td><td class="misrec-cell belief">平常時はアクセスが少ない。ポイント倍率が低いから賢いユーザーに選ばれないのは当然だ</td></tr>
+      <tr><td class="misrec-cell label">実際の問題</td><td class="misrec-cell belief">ポイントや値引きを排除した状態で、商品の価値を感じさせる設計がページにない。「お得感」という外部要因がなければ購買判断を起こせない接客力の低さが問題</td></tr>
+    </tbody>
+  </table>
+
+  <p>通常期に楽天を訪れているユーザーは確実に存在します。競合の中に通常期もランキング上位にいる店舗があることが、その証拠です。問題はユーザーの数ではなく、来訪したユーザーを購入まで導けていないページ設計にあります。</p>
+
+  <div class="callout">
+    楽天の「買い回りユーザー」に依存した構造は、長期的にリスクです。ポイント目的で購入するユーザーはリピートしにくく、利益率も低い。通常期に「ポイントがなくても欲しい」と感じさせる設計が、経営の安定を作ります。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">なぜ「ポイントが低いから売れない」と思い込むのか</h2>
+
+  <p>ポイント倍率や値引きが原因だという誤認には、構造的な背景があります。</p>
+
+  <table class="misrec-block">
+    <thead><tr><th colspan="2" class="misrec-header">原因の履き違え</th></tr></thead>
+    <tbody>
+      <tr><td class="misrec-cell label">事業者が信じている原因</td><td class="misrec-cell belief">平常時は楽天ユーザーが買い控えをしている。ポイント倍率が低いから選ばれないのは構造的に仕方ない</td></tr>
+      <tr><td class="misrec-cell label">実際の原因</td><td class="misrec-cell belief">ページが「価格比較・お得感探し（L4層）」にしか刺さらない構成になっている。「なぜ今、この商品が必要なのか」というBeliefの破壊と問題の再定義がページ内で行われていない</td></tr>
+    </tbody>
+  </table>
+
+  <p>この誤認が生まれる背景は2つあります。第一に、イベント期間と通常期の売上差があまりにも大きいため、「イベントがあるから売れた」という因果関係が強化されることです。しかし実際には、イベントが「ページの設計力のなさ」を補填しているだけです。</p>
+
+  <p>第二に、楽天のECCから「イベントに合わせた施策を打ちましょう」と指導されることで、イベント依存の思考が正解として刷り込まれることです。イベント施策はプラットフォーム側にとって都合がよい施策ですが、店舗の自律的な収益構造を育てるものではありません。</p>
+
+  <div class="callout">
+    「ポイント倍率が低いから売れない」という診断が正しいなら、楽天内で通常期もランキング入りしている店舗の説明がつきません。同じプラットフォームで、同じポイント環境の中で、通常期も転換率を維持している店舗との差は、ページの設計にあります。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「広告強化・セール頻発」が機能しない理由</h2>
+
+  <p>通常期に売れない状態が続くと、外部施策で補おうとします。しかしどれも、問題の本質を解決しません。</p>
+
+  <table class="misrec-block">
+    <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え①：通常期もRPP広告を強化して集客する</th></tr></thead>
+    <tbody>
+      <tr><td class="misrec-cell label">事業者が選ぶ解決策</td><td class="misrec-cell belief">平常時もRPP広告を積み上げ、無理やりアクセスを流し込む</td></tr>
+      <tr><td class="misrec-cell label">残る問題</td><td class="misrec-cell belief">転換率が低いまま広告費を積んでも、クリックが増えるぶんだけ損失が拡大します。イベント期間のROASが良く見えるのは「お得感」が転換率を底上げしているからで、通常期は広告のROASが悪化するだけです</td></tr>
+    </tbody>
+  </table>
+
+  <table class="misrec-block">
+    <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え②：独自ポイントアップや小規模セールを頻発させる</th></tr></thead>
+    <tbody>
+      <tr><td class="misrec-cell label">事業者が選ぶ解決策</td><td class="misrec-cell belief">独自ポイントを上乗せしたり、週末セールなどを設定して通常期の売上を補う</td></tr>
+      <tr><td class="misrec-cell label">残る問題</td><td class="misrec-cell belief">「値引きがあれば買う」読者を集め続けることで、「安売り店舗」のブランドイメージが定着します。利益率が下がり続け、値引きなしでは売れない体質から抜け出せなくなります</td></tr>
+    </tbody>
+  </table>
+
+  <table class="misrec-block">
+    <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え③：次のイベントのための施策に集中する</th></tr></thead>
+    <tbody>
+      <tr><td class="misrec-cell label">事業者が選ぶ解決策</td><td class="misrec-cell belief">通常期は割り切り、次のスーパーSALEやお買い物マラソンに向けた準備に集中する</td></tr>
+      <tr><td class="misrec-cell label">残る問題</td><td class="misrec-cell belief">イベント依存の経営が固定化され、通常期の収益がゼロに近い体質が続きます。イベントが縮小・廃止されたとき、または競合がイベント期間に価格競争を仕掛けてきたとき、対応できる余力がなくなります</td></tr>
+    </tbody>
+  </table>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">通常期も売れる店舗と売れない店舗の違い</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">「今すぐ欲しい」を価格以外の理由で作っている</h3>
+
+  <p>通常期も転換率が安定している店舗のページには、ポイントや値引きがなくても「今すぐ欲しい」と感じさせるロジックが存在します。読者が現在抱えている悩みを言語化し、今まで試してきた解決策がなぜうまくいかないかを示し、自社商品がその悩みを解決する唯一の正解であるという必然性を順序立てて伝えています。</p>
+
+  <p>この設計が機能しているページは、ポイント倍率が低くても、イベント期間でなくても、「これしかない」という確信が読者の中に生まれます。購買の動機がページ内部から生まれているため、外部要因に左右されません。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">価格比較を無力化する判断軸を渡している</h3>
+
+  <p>楽天は比較が前提のプラットフォームです。ページ設計が弱い場合、読者は「どこが一番安いか」「ポイントが一番多いか」という価格軸で比較します。この土俵に乗ると、常に価格競争を強いられます。</p>
+
+  <p>通常期も強い店舗は、この比較の土俵に乗らない設計をしています。「なぜ価格だけで比較してはいけないか」という判断軸を先に渡すことで、読者の選択基準そのものを変えています。判断軸が変わった読者は、他店との価格比較ではなく「この店舗の商品かどうか」という基準で選びます。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">イベントをページの実力を検証する場として使っている</h3>
+
+  <p>イベント期間は大量のアクセスが集まります。これは通常では得られないトラフィックを低コストで獲得できる機会です。通常期も強い店舗は、このアクセスを「売上を稼ぐ機会」としてだけでなく、「ページの転換率を検証する機会」として活用しています。</p>
+
+  <p>「イベントのお得感を除いた転換率はどのくらいか」を確認し、通常期の実力を把握した上でページ改善に取り組む。この視点があるかどうかが、イベント依存から抜け出せる店舗と抜け出せない店舗を分けます。</p>
+
+  <div class="insight">
+    イベントでしか売れないページは、外部エネルギーで動く機械です。<br>
+    <em>通常期に転換するページは、ページ内部に動力を持っています。その動力の正体が、設計の順序です。</em>
+  </div>
+
+  <p>以下の状態が続いているなら、ページ設計の問題が残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">イベント期間と通常期の転換率に3倍以上の差がある</li>
+    <li data-num="✓">通常期に広告を打ってもROASが損益分岐点を超えない</li>
+    <li data-num="✓">ポイントやクーポンがないと「見向きもされない」と感じている</li>
+    <li data-num="✓">競合が通常期もランキングに入っている理由が説明できない</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">あなたのページは、イベントなしでも転換できる設計ですか。</div>
+    <div class="cta-block-sub">
+      診断を受けた事業者の多くが、初めて「イベント依存ではなくページ設計が問題だった」と言語化できたと言います。<br>
+      通常期の転換率が整えば、イベントはさらなる上乗せ装置として機能します。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">あなたのページ、どこで止まっているか診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>楽天スーパーSALEでは売れるのに普段売れない理由は、3つのズレが積み重なっています。「平常時はアクセスが足りない」という見当違い、「ポイント倍率が低いから選ばれない」という原因の履き違え、「広告強化・セール頻発で補う」という手段の取り違え——この3つがズレたまま施策を打ち続けることが、「イベント依存症」の状態を固定します。</p>
+
+  <p>イベントという外部エネルギーがなくても転換できるページ設計を整えること。その設計が完成して初めて、イベントは「底上げ」ではなく「さらなる上乗せ」の装置として機能し始めます。通年で黒字の構造は、ページ設計の見直しから始まります。</p>
+
+</div><!-- /article-body -->
+
+<!-- 記事FAQ -->
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+
+  <div class="faq-item">
+    <div class="faq-q">楽天のスーパーSALEでは売れるのに普段売れない原因は何ですか？</div>
+    <div class="faq-a">ページが「ポイント・値引き」という外部要因がなければ購買判断を起こせない設計になっているからです。イベント期間中は「お得感」という外部エネルギーが読者の背中を押しますが、通常期にはそれがありません。通常期でも転換するには、読者の悩みを再定義し「なぜ今この商品でなければならないか」を伝える設計がページ内に必要です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">楽天の通常期の転換率（CVR）を上げるにはどうすればいいですか？</div>
+    <div class="faq-a">ページ内で「イベントなしでも今すぐ欲しい」と確信させるロジックを実装することが必要です。具体的には、読者が現在使っている解決策では不十分な理由を示し、自社商品が唯一の正解である必然性を順序立てて伝える設計です。この設計が整うと、ポイント倍率やイベントの有無に関わらず転換率が安定します。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">楽天の通常期に広告を打ってもROASが悪い理由は何ですか？</div>
+    <div class="faq-a">ページの転換率が低いまま広告を打っているからです。イベント期間は「お得感」が転換率を底上げしているため広告が機能しているように見えますが、通常期はその底上げがなくなります。転換率が低いページに広告費を投入しても、クリック数が増えるだけで購入につながりません。先にページの転換率を改善することが、通常期のROAS改善につながります。</div>
+  </div>
+</div><!-- /記事FAQ -->
+
+<!-- FAQ：推進型 -->
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+
+  <div class="faq-item">
+    <div class="faq-q">診断では、具体的に何がわかるのですか？</div>
+    <div class="faq-a">現行ページが「イベントなしでも転換できる設計になっているか」を特定します。ページ内に価格以外の購買動機が設計されているか、読者のBeliefを崩す工程が存在するかを現行ページのURLから読み取り、レポートとしてお送りします。「次に何を変えれば通常期の転換率が動くか」が初めて言語化できます。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">URLを送るだけで、何が返ってくるのですか？</div>
+    <div class="faq-a">現行LPの構成診断レポートを2営業日以内にお送りします。通常期の転換率が上がらない構造的な原因と、優先して手をつけるべき箇所を明記します。診断後の打ち合わせは、ご希望の方のみです。送付するだけで何かを売りつけることはありません。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">どんなカテゴリ・商品でも対象になりますか？</div>
+    <div class="faq-a">食品・家電・美容・健康・雑貨・家具・スポーツグッズなど、カテゴリを問いません。診断の起点は「商品の特性」ではなく「読者の購買判断の段階とページ設計の整合性」です。商品ジャンルが変わっても、どこで手を間違えているかの診断は同じ視点で行えます。</div>
+  </div>
+
+</div><!-- /faq -->
+
+<!-- bottom CTA -->
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、通常期の転換率を確認する。</div>
+  <div class="cta-block-sub">
+    イベントなしで転換できる設計が整えば、何を変えればいいかが分かる。<br>
+    通常期の転換率が底上げされれば、イベントはさらなる上乗せ装置になる。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<!-- author profile -->
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<!-- related -->
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率（CVR）が上がらない本当の理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-ranking-haitte-mo-uriage-tsudukanu-tokcho.html">楽天ランキングに入っても売上が続かない店舗の特徴</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-kokokuhi-fuyashite-mo-rieki-nokoranai.html">楽天で広告費を増やしても利益が残らない構造</a></li>
+  </ul>
+</div>
+
+<!-- footer -->
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+
+</body>
+</html>
