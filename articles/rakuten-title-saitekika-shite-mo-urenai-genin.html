@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/rakuten-title-saitekika-shite-mo-urenai-genin.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楽天で商品タイトルを最適化しても売れない場合の原因｜小西マーケティング</title>
+<meta name="description" content="サジェストキーワードを詰め込んだ。競合のタイトルも参考にした。それでもアクセスが増えない、増えても売れない。この状態はキーワード選定の問題ではありません。EC100店舗超の停滞を見てきた経験から、構造的に解説します。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --red: #b71c1c;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--off-white);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+.article-body { padding: 2.5rem 2.5rem; }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-row:first-of-type { border-top: none; }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.belief { background: var(--white); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+table.misrec-block { width: 100%; border-collapse: collapse; margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+table.misrec-block th.misrec-header { text-align: left; display: table-cell; width: 100%; }
+table.misrec-block td.misrec-cell.label { width: 40%; }
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-q { font-size: 1.0rem; color: var(--navy) !important; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; border-radius: 0; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+.prob-list li { background-color: #ffffff; }
+.article-body { background-color: #ffffff; }
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "楽天で商品タイトルを最適化しても売れない原因は何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "タイトルを「検索エンジン用のタグ」としか見ておらず、「顧客への最初の約束」として機能させていないことが原因です。キーワードを詰め込んでアクセスが増えても、タイトルがクリック後のページ内容と連動していなければ、「期待と違う」と感じた読者はすぐ離脱します。転換率はキーワードの量ではなく、タイトルが読者の悩みの解決を予感させているかどうかで決まります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "楽天商品タイトルのSEO対策と転換率（CVR）の関係はどうなっていますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SEO対策（アクセスを増やすこと）と転換率向上（来た人を購入に変えること）は別の仕事です。キーワードを増やすとアクセスは上がる可能性がありますが、タイトルとページ内容のBeliefが連動していなければ直帰率が上がり、転換率は下がります。楽天のアルゴリズムは転換率を評価するため、転換率が下がると長期的には検索順位も落ちます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "楽天商品タイトルで転換率を上げるにはどうすればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "タイトルをページ構成とセットの「セールスコピーの一行目」として設計することが必要です。検索ワードから推測される読者の悩みをタイトルの冒頭で刺激し、「このページなら自分の問題が解決しそうだ」という予感を届ける。その予感とページ内容が一致していれば、読者は離脱せずに読み進め、転換率が上がります。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "楽天で商品タイトルを最適化しても売れない場合の原因",
+  "description": "サジェストキーワードを詰め込んだ。競合のタイトルも参考にした。それでもアクセスが増えない、増えても売れない。この状態はキーワード選定の問題ではありません。EC100店舗超の停滞を見てきた経験から、構造的に解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/rakuten-title-saitekika-shite-mo-urenai-genin.html",
+  "datePublished": "2026-04-14",
+  "dateModified": "2026-04-14",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<div class="hero">
+  <span class="hero-category">楽天商品ページ改善</span>
+  <h1 class="hero-title">楽天で商品タイトルを最適化しても<br>売れない場合の原因</h1>
+  <p class="hero-lead">127文字ギリギリまでサジェストキーワードを詰め込んだ。競合のタイトルを参考に入れ替えた。それでも検索順位が上がらない、あるいは上がっても転換率（CVR）が下がった。この状態はキーワード選定の問題ではありません。EC100店舗超の停滞を見てきた経験から、構造的に解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
+</div>
+
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">キーワードを増やすたびに、何かがズレていく</h2>
+
+  <p>RMSのアクセス画面を確認する。タイトルを変えた翌週、わずかにアクセスが増えた。しかし転換率が下がっている。結果として売上は変わらない。「送料無料 ポイント20倍 ○○ △△ □□配合 ◇◇対応 ●●用」——127文字を埋めたタイトルを改めて読んでみると、何の商品なのか自分でも瞬時にわからない。</p>
+
+  <p>サジェストツールで見つけたキーワードをさらに追加する。競合の売れているタイトルをコピーする。アルゴリズムの反応を見るためにタイトルを頻繁に入れ替える。それでも「アクセスは増えたが売上に繋がらない」という状態が続いている。</p>
+
+  <div class="insight">
+    タイトルをキーワードの置き場として使っている限り、転換率は上がりません。<br>
+    <em>タイトルは「検索エンジンへのタグ」ではなく、「読者への最初の約束」です。</em>
+  </div>
+
+  <p>楽天の検索結果画面でスマホユーザーが見るタイトルは、先頭から約30文字です。その30文字で「このページは自分の問題を解決してくれる」という予感を届けられなければ、どれだけ後ろにキーワードを詰め込んでも、クリックは起きません。クリックされても、ページ内容がタイトルの予感と一致していなければ、離脱するだけです。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「キーワードの選定ミスが原因だ」——この診断がズレている</h2>
+
+  <p>タイトル最適化で成果が出ない状態が続くと、キーワードの種類や配置が問題だと判断されます。「お宝キーワードがまだある」「重要語を先頭に置いていないからだ」「競合がより強いキーワードを使っているからだ」——この診断のもとで作業を続けても、根本は変わりません。</p>
+
+  <table class="misrec-block">
+    <thead><tr><th colspan="2" class="misrec-header">見当違いになっている場所</th></tr></thead>
+    <tbody>
+      <tr><td class="misrec-cell label">事業者が思っている問題</td><td class="misrec-cell belief">キーワードの選定ミスやアルゴリズムへの適合不足が原因で、アクセスも売上も上がらない</td></tr>
+      <tr><td class="misrec-cell label">実際の問題</td><td class="misrec-cell belief">タイトルを「SEOのタグ」としか見ておらず、読者への「最初の約束（悩み解決の予感）」として機能させていない。「見つけられること」に必死で、「期待を持ってクリックされること」を疎かにしている</td></tr>
+    </tbody>
+  </table>
+
+  <p>楽天のアルゴリズムは転換率を重視します。アクセスが増えても転換率が下がると、長期的には検索順位も下がります。キーワードを増やしてアクセスを取りにいく施策が、転換率低下を通じて検索順位にマイナスに作用するというループに陥っている店舗は少なくありません。</p>
+
+  <div class="callout">
+    スマホ検索結果画面でのタイトル視認は先頭約30文字です。「送料無料 ポイント20倍」から始まるタイトルは、その30文字を装飾語に消費します。読者が「この商品は自分向けか」を判断するための情報が、画面外に追い出されています。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">なぜ「キーワードを増やせば解決する」と思い込むのか</h2>
+
+  <p>キーワードの量や配置が解決策だという誤認には、構造的な背景があります。</p>
+
+  <table class="misrec-block">
+    <thead><tr><th colspan="2" class="misrec-header">原因の履き違え</th></tr></thead>
+    <tbody>
+      <tr><td class="misrec-cell label">事業者が信じている原因</td><td class="misrec-cell belief">お宝キーワードがまだある。先頭に重要語が来ていないからだ。競合がより強いキーワードを使っているからだ</td></tr>
+      <tr><td class="misrec-cell label">実際の原因</td><td class="misrec-cell belief">タイトルとページ内容（Beliefの破壊）が連動していない。検索キーワードに対する読者の悩みを解決する予感をタイトルで出せていないため、質の低いアクセス（とりあえずクリックしただけ）ばかりを集めている</td></tr>
+    </tbody>
+  </table>
+
+  <p>この誤認が生まれる背景は2つあります。第一に、SEOツールや外部コンサルの指示が「キーワードの種類と配置」に集中しており、「タイトルとページ内容の整合性」という視点がほぼ存在しないことです。ツールが教えてくれるのはキーワードの検索ボリュームであり、「そのキーワードで来た読者の悩みが、ページで解消されているか」は教えてくれません。</p>
+
+  <p>第二に、「アクセスが増えた＝施策が効いた」という短期的な成功体験が、転換率の低下を見えにくくすることです。アクセスが増えても転換率が下がれば売上は変わらない、あるいは下がります。しかし「アクセスが増えた」という事実が施策の正しさを証明しているように見えるため、根本的な問い直しが起きません。</p>
+
+  <div class="callout">
+    タイトルとページの関係は、「予告と本編」です。タイトルで「この悩みを解決できる」と予感させ、ページで「その悩みがなぜ今まで解決しなかったか」を説明し、「この商品なら解決できる」という確信に繋げる。この流れが断ち切れていると、どれだけ精度の高いキーワードを入れても、読者の購買判断は起きません。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「さらなるKW追加・競合コピー・頻繁な入れ替え」が機能しない理由</h2>
+
+  <p>タイトル最適化で成果が出ない状態が続くと、作業の量を増やす方向に動きます。しかしどれも、問題の本質を解決しません。</p>
+
+  <table class="misrec-block">
+    <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え①：サジェストツールでさらに細かいKWを追加する</th></tr></thead>
+    <tbody>
+      <tr><td class="misrec-cell label">事業者が選ぶ解決策</td><td class="misrec-cell belief">サジェストツールで関連キーワードを網羅し、127文字の上限まで種類を増やす</td></tr>
+      <tr><td class="misrec-cell label">残る問題</td><td class="misrec-cell belief">キーワードを増やすほど、タイトルの中での「商品の正体」が薄まります。スマホ画面の30文字に入る情報の質が下がり、「自分向けか」の判断がつかず、クリック率と転換率が同時に下がるリスクがあります</td></tr>
+    </tbody>
+  </table>
+
+  <table class="misrec-block">
+    <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え②：売れている競合のタイトルをそのままコピーする</th></tr></thead>
+    <tbody>
+      <tr><td class="misrec-cell label">事業者が選ぶ解決策</td><td class="misrec-cell belief">ランキング上位店舗のタイトル構成を参考に、自社商品のタイトルを組み替える</td></tr>
+      <tr><td class="misrec-cell label">残る問題</td><td class="misrec-cell belief">競合のタイトルが機能しているのは、そのページ内容と整合しているからです。タイトルだけをコピーしてページ内容と一致しない状態にすると、クリック後の離脱が増えます。表層だけの模倣は転換率に貢献しません</td></tr>
+    </tbody>
+  </table>
+
+  <table class="misrec-block">
+    <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え③：タイトルの入れ替え頻度を上げてアルゴリズムの反応を見る</th></tr></thead>
+    <tbody>
+      <tr><td class="misrec-cell label">事業者が選ぶ解決策</td><td class="misrec-cell belief">タイトルを頻繁に変えながらアクセス数の変動を観察し、効くキーワードを探し続ける</td></tr>
+      <tr><td class="misrec-cell label">残る問題</td><td class="misrec-cell belief">転換率との連動を見ずにアクセス数だけを追う作業は、「質の低いアクセスを集めるキーワード」の精度を上げているだけです。転換率が上がっているかどうかを同時に確認しない限り、この作業に終わりはありません</td></tr>
+    </tbody>
+  </table>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">転換率が上がるタイトルと上がらないタイトルの違い</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">「読者の悩み」を起点にタイトルを設計している</h3>
+
+  <p>転換率が上がるタイトルは、検索ワードの裏側にある読者の悩みを起点に設計されています。「楽天 ○○ 効かない」で検索している人は、すでに別の商品で失敗しています。「楽天 ○○ 選び方」で検索している人は、選択肢の多さに迷っています。同じカテゴリでも検索ワードによって読者の状態は異なり、タイトルが届けるべき「予感」も変わります。</p>
+
+  <p>この視点があるタイトルは、特定の状態の読者にだけ強く刺さります。アクセス数は絞られても、クリックした読者の転換率が上がるため、結果として売上は改善します。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">タイトルとページ内容のBeliefが連動している</h3>
+
+  <p>「転換率を上げるタイトル」と「転換率を上げるページ」は、同じ設計思想で作られています。タイトルで「今まで○○で失敗してきた人へ」という問いを立て、ページでその失敗の理由を明示し、自社商品が唯一の正解である必然性を伝える。この流れが連動しているページは、タイトルでクリックした読者がそのまま読み進め、購入に至る確率が上がります。</p>
+
+  <p>逆に、タイトルにキーワードを詰め込んでいても、ページの冒頭で「○○配合！高品質なこだわり素材」から始まる商品説明が並んでいれば、タイトルで生まれた「解決してくれそう」という期待が即座に裏切られます。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">「SEO用」と「CVR用」の役割を前半・後半に分けている</h3>
+
+  <p>楽天の商品タイトルは、前半（スマホ画面に表示される約30文字）と後半（検索インデックスに読み込まれるが画面外になる残り文字）で役割を分けて設計するのが理想的な構造です。前半はクリックを誘発するキャッチコピーとして「読者の悩みへの共鳴」を置き、後半に検索キーワードを詰め込む。</p>
+
+  <p>この構造を意識したタイトルは、クリック率と転換率の両方を維持しながら、検索インデックスにも対応できます。「SEOのためにキーワードを詰め込む」と「読者に解決の予感を届ける」は、前半・後半の役割分担によって両立します。</p>
+
+  <div class="insight">
+    タイトルの仕事は「見つけられること」だけではありません。<br>
+    <em>「このページなら自分の問題が解決しそうだ」という予感を、スマホ画面の30文字で届けることが、タイトルの本来の仕事です。</em>
+  </div>
+
+  <p>以下の状態が続いているなら、タイトルとページ設計の連動に問題が残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">タイトルを変えるたびにアクセスは変動するが売上が連動しない</li>
+    <li data-num="✓">アクセスが増えた週に転換率が下がっている</li>
+    <li data-num="✓">自分の商品タイトルを見て、何の商品か瞬時にわからない</li>
+    <li data-num="✓">サジェストキーワードを網羅しているのに検索順位が上がらない</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">あなたのタイトルは、読者に「解決の予感」を届けられていますか。</div>
+    <div class="cta-block-sub">
+      診断を受けた事業者の多くが、初めて「キーワードではなくタイトルとページの連動が問題だった」と言語化できたと言います。<br>
+      タイトルとページの連動が整えば、アクセスの質が変わり転換率が動き始めます。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">あなたのページ、どこで止まっているか診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>楽天で商品タイトルを最適化しても売れない理由は、3つのズレが積み重なっています。「キーワードの選定ミスが問題だ」という見当違い、「お宝KW不足・語順・競合のKWが強いからだ」という原因の履き違え、「さらなるKW追加・競合コピー・頻繁な入れ替えで解決できる」という手段の取り違え——この3つがズレたまま作業を続けることが、「転換率が下がり続けるのにアクセス改善作業が止まらない」状態を固定します。</p>
+
+  <p>タイトルを「SEOのタグ」から「ページ構成とセットのセールスコピーの一行目」に再定義すること。前半30文字で読者に解決の予感を届け、その予感とページ内容を連動させること。この設計が確立して初めて、タイトル最適化の投資が転換率と売上に反映されます。</p>
+
+</div><!-- /article-body -->
+
+<!-- 記事FAQ -->
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+
+  <div class="faq-item">
+    <div class="faq-q">楽天で商品タイトルを最適化しても売れない原因は何ですか？</div>
+    <div class="faq-a">タイトルを「検索エンジン用のタグ」としか見ておらず、「顧客への最初の約束」として機能させていないことが原因です。キーワードを詰め込んでアクセスが増えても、タイトルがクリック後のページ内容と連動していなければ読者はすぐ離脱します。転換率はキーワードの量ではなく、タイトルが読者の悩みの解決を予感させているかどうかで決まります。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">楽天商品タイトルのSEO対策と転換率（CVR）の関係はどうなっていますか？</div>
+    <div class="faq-a">SEO対策（アクセスを増やすこと）と転換率向上（来た人を購入に変えること）は別の仕事です。キーワードを増やすとアクセスは上がる可能性がありますが、タイトルとページ内容のBeliefが連動していなければ直帰率が上がり転換率は下がります。楽天のアルゴリズムは転換率を評価するため、転換率が下がると長期的には検索順位も落ちます。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">楽天商品タイトルで転換率を上げるにはどうすればいいですか？</div>
+    <div class="faq-a">タイトルをページ構成とセットの「セールスコピーの一行目」として設計することが必要です。前半約30文字（スマホ表示範囲）で読者の悩みを刺激し「このページなら自分の問題が解決しそうだ」という予感を届ける。その予感とページ内容が一致していれば読者は離脱せずに読み進め、転換率が上がります。</div>
+  </div>
+</div><!-- /記事FAQ -->
+
+<!-- FAQ：推進型 -->
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+
+  <div class="faq-item">
+    <div class="faq-q">診断では、具体的に何がわかるのですか？</div>
+    <div class="faq-a">現行タイトルが「読者に解決の予感を届けられているか」と「ページ内容との連動が取れているか」を特定します。どのキーワードで来た読者がどこで離脱しているか、タイトルとページのBeliefが一致しているかを現行ページのURLから読み取り、レポートとしてお送りします。「次に何を変えれば転換率が動くか」が初めて言語化できます。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">URLを送るだけで、何が返ってくるのですか？</div>
+    <div class="faq-a">現行LPの構成診断レポートを2営業日以内にお送りします。転換率が上がらない構造的な原因と、優先して手をつけるべき箇所を明記します。診断後の打ち合わせは、ご希望の方のみです。送付するだけで何かを売りつけることはありません。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">どんなカテゴリ・商品でも対象になりますか？</div>
+    <div class="faq-a">食品・家電・美容・健康・雑貨・家具・スポーツグッズなど、カテゴリを問いません。診断の起点は「商品の特性」ではなく「読者の購買判断の段階とページ設計の整合性」です。商品ジャンルが変わっても、どこで手を間違えているかの診断は同じ視点で行えます。</div>
+  </div>
+
+</div><!-- /faq -->
+
+<!-- bottom CTA -->
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、タイトルとページの連動を確認する。</div>
+  <div class="cta-block-sub">
+    タイトルが読者に届けている予感とページ内容が一致しているかが分かれば、何を変えればいいかが分かる。<br>
+    連動が整えば、アクセスの質が変わり転換率が動き始める。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<!-- author profile -->
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<!-- related -->
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/rakuten-access-aru-noni-urenai-kyotsuten.html">楽天でアクセスはあるのに売れない店舗に共通する課題</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率（CVR）が上がらない本当の理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-ranking-haitte-mo-uriage-tsudukanu-tokcho.html">楽天ランキングに入っても売上が続かない店舗の特徴</a></li>
+  </ul>
+</div>
+
+<!-- footer -->
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+
+</body>
+</html>
