@@ -850,27 +850,13 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <div class="fld">
   <div class="fld-ttl">ご相談内容<span class="req">必須</span></div>
 
-  <div class="radio-group">
-
-    <label class="radio-card">
-      <input type="radio" name="consult_type" value="ページ診断" required>
-      <span class="radio-ui"></span>
-      <span class="radio-text">
-        <strong>ページ診断を受けたい</strong>
-        <small>商品ページの改善点を具体的に知りたい方</small>
-      </span>
-    </label>
-
-    <label class="radio-card">
-      <input type="radio" name="consult_type" value="事業相談">
-      <span class="radio-ui"></span>
-      <span class="radio-text">
-        <strong>事業について相談したい</strong>
-        <small>売上・戦略・方向性を含めて相談したい方</small>
-      </span>
-    </label>
-
-  </div>
+ <div class="fld">
+  <label>ご相談内容（任意）</label>
+  <textarea name="message" rows="5" placeholder="例：
+・現在の課題（利益率が低い、売上が伸びない 等）
+・検討している施策（広告強化、クラファンなど）
+・今回相談したいこと"></textarea>
+  <span class="hint">分かる範囲で構いません。簡単で大丈夫です。</span>
 </div>
       
       <button type="submit" class="form-submit">診断・相談する</button>
