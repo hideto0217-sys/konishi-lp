@@ -296,9 +296,13 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   background:var(--white);line-height:1.6;
 }
 .fld{margin-bottom:1.5rem;}
-.fld label{
-  display:block;font-size:.8rem;font-weight:700;
-  color:var(--navy);margin-bottom:.45rem;letter-spacing:.04em;
+.fld > label{
+  display:block;
+  font-size:.8rem;
+  font-weight:700;
+  color:var(--navy);
+  margin-bottom:.45rem;
+  letter-spacing:.04em;
 }
 .fld label .req{
   font-size:.65rem;font-weight:700;color:var(--gold);
@@ -362,6 +366,71 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   margin-bottom:.6rem;
   letter-spacing:.04em;
 }
+
+.radio-group{
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+}
+
+.radio-card{
+  display:flex;
+  align-items:flex-start;
+  gap:.75rem;
+  padding:.9rem 1rem;
+  border:1px solid var(--g200);
+  background:var(--white);
+  cursor:pointer;
+  transition:.15s;
+}
+
+.radio-card:hover{
+  border-color:var(--navy);
+}
+
+.radio-card input{
+  display:none;
+}
+
+.radio-ui{
+  width:16px;
+  height:16px;
+  border:2px solid var(--g400);
+  border-radius:50%;
+  margin-top:.25rem;
+  position:relative;
+  flex-shrink:0;
+}
+
+.radio-card input:checked + .radio-ui{
+  border-color:var(--navy);
+}
+
+.radio-card input:checked + .radio-ui::after{
+  content:'';
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:8px;
+  height:8px;
+  background:var(--navy);
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+}
+
+.radio-text strong{
+  display:block;
+  font-size:.9rem;
+  color:var(--navy);
+}
+
+.radio-text small{
+  display:block;
+  font-size:.75rem;
+  color:var(--g600);
+  line-height:1.6;
+}
+
 /* ── footer ── */
 .foot{
   padding:1.75rem 2rem;background:var(--navy);
@@ -777,14 +846,33 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
         <input type="text" name="cvr" placeholder="例：2.3% または 1.8%">
         <span class="hint">購入数 ÷ 訪問数 × 100 で計算できます。分からない場合は空欄で大丈夫です</span>
       </div>
+
 <div class="fld">
-  <label>ご相談内容（任意）</label>
-  <textarea name="message" rows="5" placeholder="例：
-・現在の課題（利益率が低い、売上が伸びない 等）
-・検討している施策（広告強化、クラファンなど）
-・今回相談したいこと"></textarea>
-  <span class="hint">分かる範囲で構いません。簡単で大丈夫です。</span>
+  <div class="fld-ttl">ご相談内容<span class="req">必須</span></div>
+
+  <div class="radio-group">
+
+    <label class="radio-card">
+      <input type="radio" name="consult_type" value="ページ診断" required>
+      <span class="radio-ui"></span>
+      <span class="radio-text">
+        <strong>ページ診断を受けたい</strong>
+        <small>商品ページの改善点を具体的に知りたい方</small>
+      </span>
+    </label>
+
+    <label class="radio-card">
+      <input type="radio" name="consult_type" value="事業相談">
+      <span class="radio-ui"></span>
+      <span class="radio-text">
+        <strong>事業について相談したい</strong>
+        <small>売上・戦略・方向性を含めて相談したい方</small>
+      </span>
+    </label>
+
+  </div>
 </div>
+      
       <button type="submit" class="form-submit">診断・相談する</button>
       <div class="form-disc">
         ※本診断は分析に基づくものであり成果保証ではありません。<br>
