@@ -704,11 +704,29 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
         <label>メールアドレス<span class="req">必須</span></label>
         <input type="email" name="email" placeholder="例：info@example.com" required>
       </div>
-      <div class="fld">
-  <label>ご相談種別<span class="req">必須</span></label>
-  <div style="display:flex;flex-direction:column;gap:.5rem;font-size:.9rem;color:var(--g800);">
-    <label><input type="radio" name="consult_type" value="ページ診断" required> ページ診断を受けたい</label>
-    <label><input type="radio" name="consult_type" value="事業相談"> 事業について相談したい</label>
+<div class="fld">
+  <label>ご相談内容<span class="req">必須</span></label>
+
+  <div class="radio-group">
+    
+    <label class="radio-card">
+      <input type="radio" name="consult_type" value="ページ診断" required>
+      <span class="radio-ui"></span>
+      <span class="radio-text">
+        <strong>ページ診断を受けたい</strong>
+        <small>商品ページの改善点を具体的に知りたい方</small>
+      </span>
+    </label>
+
+    <label class="radio-card">
+      <input type="radio" name="consult_type" value="事業相談">
+      <span class="radio-ui"></span>
+      <span class="radio-text">
+        <strong>事業について相談したい</strong>
+        <small>売上・戦略・方向性を含めて相談したい方</small>
+      </span>
+    </label>
+
   </div>
 </div>
       <div class="fld">
