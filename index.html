@@ -355,6 +355,13 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   margin-right:.5rem;
   transform:scale(1.1);
 }
+.fld-ttl{
+  font-size:.8rem;
+  font-weight:700;
+  color:var(--navy);
+  margin-bottom:.6rem;
+  letter-spacing:.04em;
+}
 /* ── footer ── */
 .foot{
   padding:1.75rem 2rem;background:var(--navy);
@@ -704,11 +711,12 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
         <label>メールアドレス<span class="req">必須</span></label>
         <input type="email" name="email" placeholder="例：info@example.com" required>
       </div>
+
 <div class="fld">
-  <label>ご相談内容<span class="req">必須</span></label>
+  <div class="fld-ttl">ご相談内容<span class="req">必須</span></div>
 
   <div class="radio-group">
-    
+
     <label class="radio-card">
       <input type="radio" name="consult_type" value="ページ診断" required>
       <span class="radio-ui"></span>
@@ -729,6 +737,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 
   </div>
 </div>
+      
       <div class="fld">
         <label>販売チャネル<span class="req">必須</span></label>
         <div class="select-wrap">
