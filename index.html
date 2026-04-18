@@ -431,6 +431,10 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   line-height:1.6;
 }
 
+/* ── URL フィールドの表示切り替え ── */
+#urlField{transition:opacity .2s;}
+#urlField.hidden{display:none;}
+
 /* ── footer ── */
 .foot{
   padding:1.75rem 2rem;background:var(--navy);
@@ -633,32 +637,26 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
     <p class="sec-p" style="margin-bottom:2.5rem;">小西式CVR設計は、モール・クラウドファンディング・自社ECの主要プラットフォームに対応しています。各チャネルの購買行動と判断段階に合わせた設計を行います。</p>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;">
-      
       <div style="padding:1.75rem;border:1px solid var(--g200);">
         <div style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;">楽天市場</div>
         <p style="font-size:.9rem;color:var(--g600);line-height:1.9;">商品ページのサムネイル設計から下部LP構成まで。楽天固有の購買行動に合わせた設計を行います。</p>
       </div>
-
       <div style="padding:1.75rem;border:1px solid var(--g200);">
         <div style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;">Amazon</div>
         <p style="font-size:.9rem;color:var(--g600);line-height:1.9;">メイン画像・サブ画像設計から商品説明文の構成まで。検索流入から購買判断までの導線を整えます。</p>
       </div>
-
       <div style="padding:1.75rem;border:1px solid var(--g200);">
         <div style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;">Makuake・クラウドファンディング</div>
         <p style="font-size:.9rem;color:var(--g600);line-height:1.9;">プロジェクトページの設計。支援者が「応援したい」と感じる順序と感情導線を設計します。</p>
       </div>
-
       <div style="padding:1.75rem;border:1px solid var(--g200);">
         <div style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;">Yahoo!ショッピング</div>
         <p style="font-size:.9rem;color:var(--g600);line-height:1.9;">楽天と近い購買行動に合わせた設計。モール特有の比較環境での差別化を図ります。</p>
       </div>
-
       <div style="padding:1.75rem;border:1px solid var(--g200);">
         <div style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;">自社EC / Meta広告</div>
         <p style="font-size:.9rem;color:var(--g600);line-height:1.9;">記事LPまたは一体型LPの設計。Meta経由のコールドトラフィックを購買判断まで引き上げる導線を設計します。</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -678,15 +676,12 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   </div>
 </section>
 
-<!-- articles（プラットフォーム別） -->
+<!-- articles -->
 <section class="sec sec--paper">
   <div class="inner">
     <span class="sec-label">Articles</span>
     <h2 class="sec-h2" style="margin-bottom:0.5rem;">まずは構造を理解する。</h2>
-    <p style="font-size:1.05rem; color:var(--g600); margin-bottom:2.5rem; line-height:1.7;">
-      プラットフォーム別に読む。
-    </p>
-    
+    <p style="font-size:1.05rem; color:var(--g600); margin-bottom:2.5rem; line-height:1.7;">プラットフォーム別に読む。</p>
     <div style="margin-top:2.5rem;">
       <div style="margin-bottom:2.5rem;">
         <div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">楽天市場</div>
@@ -703,7 +698,6 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
           </a>
         </div>
       </div>
-
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:2rem;">
         <div>
           <div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">Amazon</div>
@@ -781,81 +775,80 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
         <input type="email" name="email" placeholder="例：info@example.com" required>
       </div>
 
-<div class="fld">
-  <label>ご相談内容<span class="req">必須</span></label>
-
-  <div class="radio-group">
-
-    <label class="radio-card">
-      <input type="radio" name="consult_type" value="ページ診断" required>
-      <span class="radio-ui"></span>
-      <span class="radio-text">
-        <strong>ページ診断を受けたい</strong>
-        <small>商品ページの改善点を具体的に知りたい方</small>
-      </span>
-    </label>
-
-    <label class="radio-card">
-      <input type="radio" name="consult_type" value="事業相談">
-      <span class="radio-ui"></span>
-      <span class="radio-text">
-        <strong>事業について相談したい</strong>
-        <small>売上・戦略・方向性を含めて相談したい方</small>
-      </span>
-    </label>
-
-  </div>
-</div>
-      
       <div class="fld">
-        <label>販売チャネル<span class="req">必須</span></label>
-        <div class="select-wrap">
-          <select name="channel" required>
-            <option value="" disabled selected>選択してください</option>
-            <option value="楽天市場">楽天市場</option>
-            <option value="Amazon">Amazon</option>
-            <option value="Makuake・クラウドファンディング">Makuake・クラウドファンディング</option>
-            <option value="Yahoo!ショッピング">Yahoo!ショッピング</option>
-            <option value="自社EC（Meta広告）">自社EC（Meta広告）</option>
-            <option value="その他">その他</option>
-          </select>
+        <label>ご相談内容<span class="req">必須</span></label>
+        <div class="radio-group">
+          <label class="radio-card">
+            <input type="radio" name="consult_type" value="ページ診断" required>
+            <span class="radio-ui"></span>
+            <span class="radio-text">
+              <strong>ページ診断を受けたい</strong>
+              <small>商品ページの改善点を具体的に知りたい方</small>
+            </span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="consult_type" value="事業相談">
+            <span class="radio-ui"></span>
+            <span class="radio-text">
+              <strong>事業について相談したい</strong>
+              <small>売上・戦略・方向性を含めて相談したい方</small>
+            </span>
+          </label>
         </div>
       </div>
-      <div class="fld">
-        <label>商品ページまたはプロジェクトページURL<span class="req">必須</span></label>
-        <input type="url" name="url" placeholder="https://item.rakuten.co.jp/..." required>
-        <span class="hint">楽天・Amazon・Makuakeなど、診断したいページのURLをそのまま貼り付けてください</span>
-      </div>
-      <div class="fld">
-        <label>月間アクセス数（訪問数）</label>
-        <div class="select-wrap">
-          <select name="pv">
-            <option value="" disabled selected>選択してください（任意）</option>
-            <option>1,000未満</option>
-            <option>1,000〜3,000</option>
-            <option>3,000〜10,000</option>
-            <option>10,000〜30,000</option>
-            <option>30,000以上</option>
-            <option>分からない</option>
-          </select>
+
+      <!-- 診断タイプのみ表示するフィールド群 -->
+      <div id="diagFields">
+        <div class="fld">
+          <label>販売チャネル<span class="req">必須</span></label>
+          <div class="select-wrap">
+            <select name="channel" id="channelSelect">
+              <option value="" disabled selected>選択してください</option>
+              <option value="楽天市場">楽天市場</option>
+              <option value="Amazon">Amazon</option>
+              <option value="Makuake・クラウドファンディング">Makuake・クラウドファンディング</option>
+              <option value="Yahoo!ショッピング">Yahoo!ショッピング</option>
+              <option value="自社EC（Meta広告）">自社EC（Meta広告）</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
         </div>
-        <span class="hint">RMSやGoogle Analyticsなどで確認できるおおよその数字で構いません</span>
-      </div>
-      <div class="fld">
-        <label>現在のCVR（転換率）</label>
-        <input type="text" name="cvr" placeholder="例：2.3% または 1.8%">
-        <span class="hint">購入数 ÷ 訪問数 × 100 で計算できます。分からない場合は空欄で大丈夫です</span>
+        <div class="fld" id="urlField">
+          <label>商品ページまたはプロジェクトページURL<span class="req">必須</span></label>
+          <input type="url" name="url" id="urlInput" placeholder="https://item.rakuten.co.jp/...">
+          <span class="hint">楽天・Amazon・Makuakeなど、診断したいページのURLをそのまま貼り付けてください</span>
+        </div>
+        <div class="fld">
+          <label>月間アクセス数（訪問数）</label>
+          <div class="select-wrap">
+            <select name="pv">
+              <option value="" disabled selected>選択してください（任意）</option>
+              <option>1,000未満</option>
+              <option>1,000〜3,000</option>
+              <option>3,000〜10,000</option>
+              <option>10,000〜30,000</option>
+              <option>30,000以上</option>
+              <option>分からない</option>
+            </select>
+          </div>
+          <span class="hint">RMSやGoogle Analyticsなどで確認できるおおよその数字で構いません</span>
+        </div>
+        <div class="fld">
+          <label>現在のCVR（転換率）</label>
+          <input type="text" name="cvr" placeholder="例：2.3% または 1.8%">
+          <span class="hint">購入数 ÷ 訪問数 × 100 で計算できます。分からない場合は空欄で大丈夫です</span>
+        </div>
       </div>
 
- <div class="fld">
-  <label>ご相談内容（任意）</label>
-  <textarea name="message" rows="5" placeholder="例：
+      <div class="fld">
+        <label>ご相談内容（任意）</label>
+        <textarea name="message" rows="5" id="messagePlaceholder" placeholder="例：
 ・現在の課題（利益率が低い、売上が伸びない 等）
 ・検討している施策（広告強化、クラファンなど）
 ・今回相談したいこと"></textarea>
-  <span class="hint">分かる範囲で構いません。簡単で大丈夫です。</span>
-</div>
-      
+        <span class="hint">分かる範囲で構いません。簡単で大丈夫です。</span>
+      </div>
+
       <button type="submit" class="form-submit">診断・相談する</button>
       <div class="form-disc">
         ※本診断は分析に基づくものであり成果保証ではありません。<br>
@@ -863,8 +856,8 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
       </div>
     </form>
 
-    <!-- 成功メッセージ（ここを優先表示） -->
-    <div class="form-success" id="formSuccess">
+    <!-- 診断申し込み 成功メッセージ -->
+    <div class="form-success" id="formSuccessDiag">
       <div class="success-icon">✓</div>
       <div class="success-ttl">お申し込みありがとうございます。</div>
       <p class="success-p">
@@ -874,6 +867,18 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
         ② 最初に改善すべき1点<br>
         ③ それにより失っている本来得られる利益の試算<br><br>
         レポートを読んだ後、「次に何をすべきか」が初めて1点に絞られます。
+      </p>
+    </div>
+
+    <!-- 事業相談 成功メッセージ -->
+    <div class="form-success" id="formSuccessConsult">
+      <div class="success-icon">✓</div>
+      <div class="success-ttl">お問い合わせありがとうございます。</div>
+      <p class="success-p">
+        内容を確認のうえ、2営業日以内にご連絡いたします。<br><br>
+        ご相談の方向性や課題感を事前にお聞きしたうえで、<br>
+        最適な対応をご提案します。<br><br>
+        しばらくお待ちください。
       </p>
     </div>
   </div>
@@ -890,48 +895,114 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 
 <script>
 const GAS_URL = 'https://script.google.com/macros/s/AKfycbwpJvmATo5gaz-Pnek4L_823s9GoMZGc2DcygMQ5b5jKyzriFTWvMx4EZlSbd6ckPO2rQ/exec';
+const NOTIFY_EMAIL = 'konishi@konishi-marketing.com';
 
+// ─── 相談タイプ切り替え ───
+const radios = document.querySelectorAll('input[name="consult_type"]');
+const diagFields = document.getElementById('diagFields');
+const urlField = document.getElementById('urlField');
+const urlInput = document.getElementById('urlInput');
+const channelSelect = document.getElementById('channelSelect');
+const messagePlaceholder = document.getElementById('messagePlaceholder');
+
+function applyConsultType(type) {
+  if (type === '事業相談') {
+    // 診断専用フィールドを非表示・必須解除
+    diagFields.style.display = 'none';
+    urlInput.required = false;
+    channelSelect.required = false;
+    // テキストエリアのplaceholderを変更
+    messagePlaceholder.placeholder = '例：\n・現在の事業状況（チャネル・月商・課題感など）\n・相談したいテーマ（戦略・施策・方向性など）\n・その他、気になっていること';
+  } else {
+    // ページ診断：フィールドを表示・必須に戻す
+    diagFields.style.display = 'block';
+    urlInput.required = true;
+    channelSelect.required = true;
+    messagePlaceholder.placeholder = '例：\n・現在の課題（利益率が低い、売上が伸びない 等）\n・検討している施策（広告強化、クラファンなど）\n・今回相談したいこと';
+  }
+}
+
+radios.forEach(radio => {
+  radio.addEventListener('change', () => applyConsultType(radio.value));
+});
+
+// ─── フォーム送信 ───
 document.getElementById('diagForm').addEventListener('submit', function(e) {
   e.preventDefault();
 
-  const name = this.querySelector('input[name="name"]').value.trim();
-  const email = this.querySelector('input[name="email"]').value.trim();
-  const channel = this.querySelector('select[name="channel"]').value;
-  const url = this.querySelector('input[name="url"]').value.trim();
-  const pv = this.querySelector('select[name="pv"]').value;
-  const cvr = this.querySelector('input[name="cvr"]').value.trim();
+  const name    = this.querySelector('input[name="name"]').value.trim();
+  const email   = this.querySelector('input[name="email"]').value.trim();
+  const message = this.querySelector('textarea[name="message"]').value.trim();
+  const consultTypeEl = this.querySelector('input[name="consult_type"]:checked');
 
-  if (!name || !email || !channel || !url) {
-    alert('お名前・メールアドレス・販売チャネル・URLは必須です。');
+  if (!name || !email || !consultTypeEl) {
+    alert('お名前・メールアドレス・ご相談内容は必須です。');
     return;
   }
+
+  const consultType = consultTypeEl.value;
+  const isConsult = (consultType === '事業相談');
 
   const btn = this.querySelector('.form-submit');
   btn.textContent = '送信中...';
   btn.disabled = true;
 
-  const params = new URLSearchParams({ name, email, channel, url, pv, cvr });
-  const sendUrl = GAS_URL + '?' + params.toString();
+  if (isConsult) {
+    // ── 事業相談：GAS経由せずメール通知のみ ──
+    // Web Fetch API でサーバーレス通知（EmailJS等が不要な簡易実装）
+    // ここではGASの別エンドポイントとして notify パラメータで分岐させる
+    const params = new URLSearchParams({
+      mode: 'notify',
+      name,
+      email,
+      message,
+      consult_type: consultType,
+      to: NOTIFY_EMAIL
+    });
+    const img = new Image();
+    img.src = GAS_URL + '?' + params.toString();
 
-  const img = new Image();
-  img.src = sendUrl;
+    setTimeout(() => {
+      if (typeof gtag === 'function') {
+        gtag('event', 'form_submit', {
+          'event_category': 'lead',
+          'event_label': '事業相談',
+        });
+      }
+      this.style.display = 'none';
+      document.getElementById('formSuccessConsult').classList.add('show');
+    }, 1500);
 
-  setTimeout(() => {
-    if (typeof gtag === 'function') {
-      gtag('event', 'form_submit', {
-        'event_category': 'lead',
-        'event_label': '無料診断申し込み',
-        'channel': channel
-      });
+  } else {
+    // ── ページ診断：既存GASフロー ──
+    const channel = channelSelect.value;
+    const url     = urlInput.value.trim();
+    const pv      = this.querySelector('select[name="pv"]').value;
+    const cvr     = this.querySelector('input[name="cvr"]').value.trim();
+
+    if (!channel || !url) {
+      btn.textContent = '診断・相談する';
+      btn.disabled = false;
+      alert('販売チャネルと商品ページURLは必須です。');
+      return;
     }
 
-    // 成功メッセージを表示
-    document.getElementById('formSuccess').classList.add('show');
+    const params = new URLSearchParams({ name, email, channel, url, pv, cvr, consult_type: consultType });
+    const img = new Image();
+    img.src = GAS_URL + '?' + params.toString();
 
-    // フォームを非表示にして成功メッセージだけ見せる
-    this.style.display = 'none';
-
-  }, 1500);
+    setTimeout(() => {
+      if (typeof gtag === 'function') {
+        gtag('event', 'form_submit', {
+          'event_category': 'lead',
+          'event_label': '無料診断申し込み',
+          'channel': channel
+        });
+      }
+      this.style.display = 'none';
+      document.getElementById('formSuccessDiag').classList.add('show');
+    }, 1500);
+  }
 });
 </script>
 
