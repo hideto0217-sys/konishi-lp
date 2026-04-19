@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/rakuten-sumaho-tenkanritsu-dake-hikui-riyu.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楽天でスマホ経由の転換率（CVR）だけが低い理由｜小西マーケティング</title>
+<meta name="description" content="PCでは売れているのに、スマホ経由だけ転換率が低い。デザインを直しても数字が動かない。この状態が続く店舗には、共通する設計上の問題があります。EC100店舗超の現場から、その構造を解説します。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --red: #b71c1c;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--off-white);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── layout ── */
+.site-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--white);
+}
+
+/* ── header ── */
+.site-header {
+  background: var(--navy);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--gold);
+}
+.site-header a {
+  color: var(--gold-light);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+/* ── hero ── */
+.hero {
+  background: var(--navy);
+  padding: 3rem 2.5rem 2.5rem;
+  border-bottom: 3px solid var(--gold);
+}
+.hero-category {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.hero-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+}
+.hero-lead {
+  font-size: 1rem;
+  color: rgba(255,255,255,.78);
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+.hero-meta {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,.45);
+}
+
+/* ── author box ── */
+.author-box {
+  background: var(--gray-100);
+  border-left: 3px solid var(--gold);
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+}
+.author-box strong { color: var(--navy); }
+
+/* ── article body ── */
+.article-body {
+  padding: 2.5rem 2.5rem;
+}
+
+.article-body h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy) !important;
+  line-height: 1.4;
+  margin: 4.5rem 0 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: .75rem;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 2px solid var(--gold);
+}
+.article-body h2:first-child { margin-top: 0; }
+
+.article-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy) !important;
+  margin: 3.5rem 0 1rem;
+  padding: .6rem 0 .6rem .75rem;
+  border-left: 3px solid var(--gold);
+  background-color: var(--gray-100);
+  line-height: 1.45;
+}
+
+.article-body p {
+  font-size: 1rem;
+  color: var(--gray-800);
+  line-height: 2.1;
+  margin-bottom: 1.25rem;
+}
+.article-body p:last-child { margin-bottom: 0; }
+
+.article-body strong { color: var(--navy); }
+
+/* insight box */
+.insight {
+  background: var(--navy);
+  color: var(--white);
+  padding: 1.25rem 1.75rem;
+  margin: 1.75rem 0;
+  font-size: 1rem;
+  line-height: 2;
+  font-weight: 700;
+}
+.insight em {
+  font-style: normal;
+  color: var(--gold-light);
+}
+
+/* quote / callout */
+.callout {
+  background: var(--off-white);
+  border-left: 3px solid var(--navy);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 2;
+}
+.callout strong { color: var(--navy); }
+
+/* misrecognition 3-layer table */
+.misrec-block {
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+.misrec-header {
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  padding: .6rem 1.25rem;
+}
+.misrec-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--gray-200);
+}
+.misrec-row:first-of-type { border-top: none; }
+.misrec-cell {
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--gray-800);
+}
+.misrec-cell.label {
+  background: var(--gray-100);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  letter-spacing: .05em;
+  border-right: 1px solid var(--gray-200);
+}
+.misrec-cell.belief { background: var(--white); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+
+/* structure problems list */
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li {
+  padding: 1rem 1.25rem 1rem 3rem;
+  position: relative;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 1.9;
+}
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before {
+  content: attr(data-num);
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* CTA block */
+.cta-block {
+  background: var(--navy);
+  padding: 2rem 2.5rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+.cta-block-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.cta-block-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.6;
+  margin-bottom: .75rem;
+}
+.cta-block-sub {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,.7);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+.cta-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: .85rem 2.5rem;
+  text-decoration: none;
+  letter-spacing: .06em;
+  border-bottom: 3px solid #a8893a;
+  transition: opacity .2s;
+}
+.cta-btn:hover { opacity: .88; }
+.cta-note {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,.4);
+  margin-top: .75rem;
+}
+
+/* FAQ */
+.faq-section {
+  padding: 2.5rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.faq-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.faq-item {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.6;
+  margin-bottom: .75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.faq-q::before {
+  content: 'Q';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.faq-a {
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 2;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.faq-a::before {
+  content: 'A';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* author profile */
+.author-profile {
+  background: var(--gray-100);
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.author-profile-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.author-profile-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: .5rem;
+}
+.author-profile-body {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.95;
+}
+
+/* related */
+.related-section {
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.related-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.related-list { list-style: none; }
+.related-list li {
+  padding: .75rem 0 .75rem 1rem;
+  border-bottom: 1px solid var(--gray-100);
+  position: relative;
+}
+.related-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.1em;
+  width: 6px;
+  height: 1px;
+  background: var(--navy);
+}
+.related-list li:last-child { border-bottom: none; }
+.related-list a {
+  font-size: 0.9rem;
+  color: var(--navy);
+  text-decoration: underline;
+  line-height: 1.7;
+}
+
+/* footer */
+.site-footer {
+  background: var(--navy);
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+}
+.site-footer a {
+  color: rgba(255,255,255,.55);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+
+/* misrec-block table override */
+table.misrec-block {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+table.misrec-block th.misrec-header {
+  text-align: left;
+  display: table-cell;
+  width: 100%;
+}
+table.misrec-block td.misrec-cell.label {
+  width: 40%;
+}
+
+
+
+/* ── 記事FAQ（よくある質問）専用スタイル ── */
+#article-faq {
+  background-color: var(--gray-100);
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid var(--gray-200);
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+#article-faq .faq-label {
+  color: var(--navy);
+  font-size: 0.75rem;
+}
+#article-faq .faq-item {
+  border-bottom: 1px solid var(--gray-200);
+  padding-left: 0;
+}
+#article-faq .faq-q {
+  font-size: 1.0rem;
+  color: var(--navy) !important;
+}
+#article-faq .faq-a {
+  background-color: var(--white);
+  padding: 1rem 1.25rem 1rem 2.25rem;
+  border-radius: 0;
+  margin-top: 0.5rem;
+  line-height: 2;
+  color: var(--gray-800);
+}
+
+/* ── Next Step（診断FAQ）専用スタイル ── */
+.nextstep-faq {
+  background-color: var(--navy-light);
+  border-top: none;
+  padding: 2.5rem 2.5rem;
+}
+.nextstep-faq .faq-label {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-item {
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q {
+  color: var(--white);
+}
+.nextstep-faq .faq-q::before {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-a {
+  color: rgba(255,255,255,.78);
+}
+.nextstep-faq .faq-a::before {
+  color: var(--gold-light);
+}
+
+/* ── ダークモード完全無効化 ── */
+:root {
+  color-scheme: only light;
+}
+html, body {
+  background-color: #f8f7f4 !important;
+  color: #1e1d1a;
+}
+.prob-list li {
+  background-color: #ffffff;
+}
+.article-body {
+  background-color: #ffffff;
+}
+
+/* responsive */
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "楽天でスマホ経由の転換率だけが低い場合、まず何を確認すべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "まずスマホとPCの転換率の差を数値で把握し、スマホ経由のアクセスが全体の何割を占めているかを確認します。その上で、スマホ画面でページを上から順にスクロールしたとき、どこで「なぜこの商品なのか」が伝わっているかを確認します。PCのレイアウトをそのままスマホに縮小しているだけの場合、購入を決断するために必要な情報が途中で途切れていることがほとんどです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "スマホページのデザインをレスポンシブ対応にすれば転換率は改善しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "レスポンシブ対応は「崩れた表示を整える」施策であり、転換率を上げる施策ではありません。スマホで転換率が低い根本の理由は、スマホユーザーが一画面ずつスクロールしながら購入を判断するという行動に対して、情報が届く順序が設計されていないことです。見た目を整えても、情報の届く順序が変わらなければ転換率は動きません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PCとスマホで転換率に差が出るのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PCユーザーは画面が広いため、複数の情報を同時に視野に収めながら判断できます。一方スマホユーザーは、一画面に表示される情報量が少なく、縦スクロールで順番に情報を受け取ります。PCで成立していた「同時に見える情報量による判断」がスマホでは機能しません。この違いを前提に、スマホ固有の情報の届き方を設計していないページが、スマホだけ転換率が低い状態を生み出しています。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "楽天でスマホ経由の転換率（CVR）だけが低い理由",
+  "description": "PCでは売れているのに、スマホ経由だけ転換率が低い。デザインを直しても数字が動かない。この状態が続く店舗には、共通する設計上の問題があります。EC100店舗超の現場から、その構造を解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/rakuten-sumaho-tenkanritsu-dake-hikui-riyu.html",
+  "datePublished": "2026-04-20",
+  "dateModified": "2026-04-20",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<!-- header -->
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<!-- hero -->
+<div class="hero">
+  <span class="hero-category">楽天商品ページ改善</span>
+  <h1 class="hero-title">楽天でスマホ経由の転換率（CVR）<br>だけが低い理由</h1>
+  <p class="hero-lead">PCでは売れている。レビューも付いている。アクセスも悪くない。それでも、スマホ経由の転換率だけが明らかに低い。デザインを手直しして、バナーを追加しても、数字はほとんど動かない。この状態が続く店舗には、見た目の問題ではなく、構造の問題があります。EC100店舗超の停滞を見てきた経験から、その正体を解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<!-- author micro box -->
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
+</div>
+
+<!-- article body -->
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">PCでは売れる。スマホでは止まる。この差が意味すること</h2>
+
+  <p>RMSのアナリティクスを開く。PC経由の転換率は4〜5%台で推移している。同じ商品ページへのスマホ経由の転換率は1%台のまま、動かない。アクセス数はスマホの方が多い。それでも、売上に換算するとPCの数字が引っ張っている状態が続く。</p>
+
+  <p>こうした数字を前にすると、「スマホユーザーは購買意欲が低い」「スマホはながら見が多いから仕方ない」という解釈に落ち着きやすい。しかしその解釈のまま放置すると、売上全体の成長余力のかなりの部分が手つかずになります。</p>
+
+  <div class="insight">
+    スマホで転換率が低い状態は、スマホユーザーの購買意欲の問題ではありません。<br>
+    <em>スマホ画面で購入を決断するために必要な情報が、届いていない状態</em>を示しています。
+  </div>
+
+  <p>楽天のスマホユーザーは、検索→複数ページの比較→選別という行動をスマホ上で完結させています。PCに比べて購買率が構造的に低いわけではない。実際、スマホ経由で高い転換率を出しているページは存在します。差があるとすれば、ページの設計にあります。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「見づらいから売れない」——この前提がズレている</h2>
+
+  <p>スマホ転換率が低いとき、最初に疑われるのはページの見た目です。「スマホで見ると画像が大きすぎる」「文字が小さい」「レイアウトが崩れている」。こうした診断のもと、制作会社に依頼してスマホ対応のリニューアルを行う。</p>
+
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">見当違いになっている場所</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が思っている問題</td><td class="misrec-cell belief">スマホで見づらいデザインだから転換率が低い</td></tr>
+  </tbody>
+</table>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">スマホでスクロールする順序に沿って、購入を決断するための情報が届いていない</div>
+    </div>
+  </div>
+
+  <p>制作会社がスマホ対応として行うのは、「崩れた表示を整える」作業です。画像サイズの調整、テキストの折り返し修正、ボタンの配置変更。これらは「見やすくなる」施策であって、「買いやすくなる」施策ではありません。リニューアル後も転換率が動かないのは、直すべき場所が違うからです。</p>
+
+  <div class="callout">
+    スマホの買い手は、一画面ずつスクロールしながら「この商品でいいか」を判断しています。その判断に必要な情報が届く順序を設計しているページと、していないページでは、転換率に明確な差が生まれます。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">なぜ「ツール未導入」が原因だと思い込むのか</h2>
+
+  <p>スマホ転換率の問題について、楽天のノウハウ記事や公式のガイドラインが提示するのは「スマホ最適化ツールの導入」「レスポンシブ対応テンプレートへの切り替え」です。結果として、「正しいツールを使っていないから」という方向に問題が定義されます。</p>
+
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">原因の履き違え</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が信じている原因</td><td class="misrec-cell belief">スマホ対応ツールやテンプレートを導入していないから転換率が低い</td></tr>
+  </tbody>
+</table>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">スマホユーザーが一画面ずつスクロールして購入を判断するという行動に対して、情報が届く順序が設計されていない</td>
+    </div>
+  </div>
+
+  <p>この誤認が広がる背景には、情報環境の構造的な問題があります。楽天の公式ガイドラインは機能改善の方法を案内する構造になっており、「どういう順序で情報を届けるか」という設計の観点は含まれません。制作会社も同様で、ツールや機能の実装を商品として提供しているため、「情報の届き方」の設計はその仕事の範囲外になっています。</p>
+
+  <div class="callout">
+    スマホ対応ツールを導入しても転換率が動かないのは、能力の問題でも予算の問題でもありません。業界全体が「見た目の最適化」を解決策として教えてきた情報環境の問題です。
+  </div>
+
+  <p>ツールを変えても、テンプレートを変えても、情報が届く順序が変わらなければ転換率は動きません。スマホ経由の転換率が低い原因は、ページのコードではなくページの構造にあります。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「バナー追加・訴求追加」が逆効果になる理由</h2>
+
+  <p>転換率が上がらないとき、もう一つよく行われる施策が「情報の追加」です。訴求バナーを追加する、コピーを増やす、レビューの抜粋を貼り付ける。確かに情報量は増える。しかし転換率はほとんど動かない。場合によっては下がることすらあります。</p>
+
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が選んでいる解決策</td><td class="misrec-cell belief">バナーや訴求を追加して情報を増やせばスマホの転換率が上がる</td></tr>
+  </tbody>
+</table>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">スマホの一画面に収まる情報量は限られているため、情報を追加するほど「何を見ればいいか分からない」状態になり、離脱が増える</div>
+    </div>
+  </div>
+
+  <p>スマホでは、一度に視野に入る情報量がPCより大幅に少ない。そこに「追加施策」として情報を積み上げると、最初に伝えるべきことが後ろに押し込まれる。あるいは、何が重要かが伝わらないまま情報だけが増える。スマホ転換率が下がるページのリニューアルで最も多いのが、このパターンです。</p>
+
+  <p>スマホ画面の制約の中で転換率を上げるには、情報を増やすことではなく、情報を届ける順序を決めることが先です。何を、いつ、どの順序で届けるかが設計されて初めて、スマホユーザーは購入を判断できる状態になります。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">スマホ転換率が上がらない店舗に共通する3つの構造</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">PCのページをそのままスマホに流している</h3>
+
+  <p>最も多いケースが、PCで設計したページをスマホに縮小表示しているだけの状態です。PCでは画面の広さによって、複数の情報が同時に視野に入ります。比較表も、商品のメリットも、購入ボタンも、一度に視認できる。しかしスマホでは、同じ情報が縦一列に並び、スクロールしないと次が見えない構造になります。</p>
+
+  <p>PCで通用していた「情報の同時表示による判断」がスマホでは機能しません。スマホでは、スクロールの順序がそのまま「情報の届く順序」になります。その前提で設計されていないページは、スマホでの購入判断を支援できません。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">最初の数画面で「なぜこれか」が伝わっていない</h3>
+
+  <p>スマホユーザーがページに来てから離脱するまでの時間は短い。複数の商品を比較している状態でページに来ているため、最初の数スクロールで「見続ける理由」が見つからなければ、次のページへ移動します。</p>
+
+  <p>スマホの転換率が高いページに共通するのは、最初の数画面のうちに「なぜ他の商品ではなくこれなのか」という判断の根拠が渡されていることです。機能の説明が先に来るページでは、その根拠が後半まで登場しません。スクロールが後半まで到達しないスマホ環境では、判断に必要な情報が届かないまま離脱が起きます。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">不安の処理が後半に固まっている</h3>
+
+  <p>楽天のスマホユーザーは、商品を比較している段階でページに来ます。「本当にこれでいいか」という不安を持った状態で、スクロールしながら答えを探しています。この不安が処理されない限り、購入ボタンは押されません。</p>
+
+  <p>多くのページでは、FAQや保証情報、レビュー抜粋といった不安を処理するコンテンツがページの後半に置かれています。スマホではその後半まで読まれないケースが多い。不安を持ったまま後半まで到達できず、離脱する。スマホ転換率が低い店舗の多くが、この流れを繰り返しています。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">スマホ転換率が上がる設計と、上がらない設計の違い</h2>
+
+  <p>スマホ転換率が上がらないページに共通しているのは、情報の並びがページを作る側の都合で決まっていることです。商品紹介→機能説明→スペック→レビュー→保証、という並びは、作り手が「伝えたい順番」であって、買い手が「判断したい順番」ではありません。</p>
+
+  <p>スマホ転換率が上がるページは、スマホでスクロールする人間の行動に沿って情報が並んでいます。「これは自分向けか」→「なぜこれがいいのか」→「本当に大丈夫か」という判断の流れに、情報が届く順序が合っている。その差が転換率の差になります。</p>
+
+  <div class="insight">
+    スマホ転換率を上げる施策は、デザインの改善でも情報量の増加でもありません。<br>
+    <em>スマホでスクロールする人間の判断の流れに、情報の届く順序を合わせること</em>です。
+  </div>
+
+  <p>以下の状態が続いているなら、設計の問題が残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">スマホとPCで転換率に2倍以上の差がある</li>
+    <li data-num="✓">スマホページのデザインをリニューアルしたが数字がほとんど動かなかった</li>
+    <li data-num="✓">スマホ向けにバナーや訴求を追加したが転換率が変わらない、または下がった</li>
+    <li data-num="✓">スマホアクセスは多いのに、売上はPC経由に偏っている</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">スマホページのどこで止まっているか。</div>
+    <div class="cta-block-sub">
+      スマホ転換率が低い状態が続いているなら、ページのどこかで「判断に必要な情報」が届いていません。<br>
+      診断を受けた事業者の多くが、初めて「スマホページのどこが止まっていたか」を言語化できたと言います。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">スマホページ、どこで止まっているか診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>楽天の現場では長年、スマホ転換率が低い原因として「スマホ表示の見づらさ」「ツールやテンプレートの未整備」「スマホ向けコンテンツの不足」が語られてきました。制作会社も、楽天の公式ガイドラインも、この方向でスマホ対策を提案し続けています。その診断のまま施策を打ち続けることが、「PCでは売れるのにスマホでは止まる」状態を長期化させます。</p>
+
+  <p>転換率の差は、デバイスの差ではなく設計の差です。スマホでスクロールする人間の判断の流れに情報が届く順序が合ったとき、スマホ経由の転換率は動き始めます。</p>
+
+
+</div><!-- /article-body -->
+
+<!-- 記事FAQ -->
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+
+  <div class="faq-item">
+    <div class="faq-q">楽天でスマホ経由の転換率だけが低い場合、まず何を確認すべきですか？</div>
+    <div class="faq-a">まずスマホとPCの転換率の差を数値で把握し、スマホ経由のアクセスが全体の何割を占めているかを確認します。その上で、スマホ画面でページを上から順にスクロールしたとき、どこで「なぜこの商品なのか」が伝わっているかを確認します。PCのレイアウトをそのままスマホに縮小しているだけの場合、購入を決断するために必要な情報が途中で途切れていることがほとんどです。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">スマホページのデザインをレスポンシブ対応にすれば転換率は改善しますか？</div>
+    <div class="faq-a">レスポンシブ対応は「崩れた表示を整える」施策であり、転換率を上げる施策ではありません。スマホで転換率が低い根本の理由は、スマホユーザーが一画面ずつスクロールしながら購入を判断するという行動に対して、情報が届く順序が設計されていないことです。見た目を整えても、情報の届く順序が変わらなければ転換率は動きません。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">PCとスマホで転換率に差が出るのはなぜですか？</div>
+    <div class="faq-a">PCユーザーは画面が広いため、複数の情報を同時に視野に収めながら判断できます。一方スマホユーザーは、一画面に表示される情報量が少なく、縦スクロールで順番に情報を受け取ります。PCで成立していた「同時に見える情報量による判断」がスマホでは機能しません。この違いを前提に、スマホ固有の情報の届き方を設計していないページが、スマホだけ転換率が低い状態を生み出しています。</div>
+  </div>
+</div><!-- /記事FAQ -->
+
+<!-- FAQ：推進型 -->
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+
+  <div class="faq-item">
+    <div class="faq-q">スマホ転換率を上げるために、まず何から手をつければいいですか？</div>
+    <div class="faq-a">最初に行うべきは、スマホでページを実際にスクロールして「どこで判断の流れが止まるか」を確認することです。購入を決断するために必要な情報がいつ届くかを、スマホ画面の順序で確認します。その確認なしにデザインや情報量を変えても、止まっている場所を変えることはできません。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">スマホとPCで転換率の差をどこまで縮められますか？</div>
+    <div class="faq-a">設計の問題であれば、差は大幅に縮まります。スマホ経由の転換率がPC経由の半分以下になっている場合、設計を変えることで同等水準に近づいた事例は複数あります。一方、商品の性質上スマホでは判断に時間がかかるカテゴリ（高額品・複数部位への適用が必要な商品など）では、差が残ることもあります。まず現状のページが設計の問題かどうかを見極めることが先です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">診断では、スマホページのどこを具体的に確認しますか？</div>
+    <div class="faq-a">スマホ画面でのスクロール順序に沿って、「最初の数画面で何が伝わっているか」「不安を処理する情報がどこに置かれているか」「購入を後押しする情報が届く前に離脱が起きていないか」を確認します。「どこを変えれば転換率が動くか」が初めて言語化できる状態になります。</div>
+  </div>
+
+</div><!-- /faq -->
+
+<!-- bottom CTA -->
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、止まっている場所を特定する。</div>
+  <div class="cta-block-sub">
+    スマホページのどこで止まっているかが分かれば、何を変えればいいかが分かる。<br>
+    何を変えればいいかが分かれば、デザイン費をかけずにスマホ転換率が動き始める。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<!-- author profile -->
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<!-- related -->
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/ec-shohin-page-chokkiritsu-takai.html">ECで商品ページの直帰率が高い店舗に共通する設計の問題</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-sumaho-pc-shohin-page-wakeru-beki-ka.html">楽天でスマホ商品ページとPC商品ページの設計を分けるべきかどうか</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率（CVR）が上がらない本当の理由</a></li>
+  </ul>
+</div>
+
+<!-- footer -->
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+
+</body>
+</html>
