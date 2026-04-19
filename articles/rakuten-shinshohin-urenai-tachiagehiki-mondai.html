@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/rakuten-shinshohin-urenai-tachiagehiki-mondai.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楽天で新商品が売れない立ち上げ期の問題｜小西マーケティング</title>
+<meta name="description" content="RPP広告を回してもアクセスは来るのに売れない。レビューがないから仕方ないと言われ続けている。この状態が続く新商品には、露出の問題ではなく、ページ設計の問題があります。EC100店舗超の現場から、その構造を解説します。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --red: #b71c1c;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--off-white);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── layout ── */
+.site-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--white);
+}
+
+/* ── header ── */
+.site-header {
+  background: var(--navy);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--gold);
+}
+.site-header a {
+  color: var(--gold-light);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+/* ── hero ── */
+.hero {
+  background: var(--navy);
+  padding: 3rem 2.5rem 2.5rem;
+  border-bottom: 3px solid var(--gold);
+}
+.hero-category {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.hero-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+}
+.hero-lead {
+  font-size: 1rem;
+  color: rgba(255,255,255,.78);
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+.hero-meta {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,.45);
+}
+
+/* ── author box ── */
+.author-box {
+  background: var(--gray-100);
+  border-left: 3px solid var(--gold);
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+}
+.author-box strong { color: var(--navy); }
+
+/* ── article body ── */
+.article-body {
+  padding: 2.5rem 2.5rem;
+}
+
+.article-body h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy) !important;
+  line-height: 1.4;
+  margin: 4.5rem 0 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: .75rem;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 2px solid var(--gold);
+}
+.article-body h2:first-child { margin-top: 0; }
+
+.article-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy) !important;
+  margin: 3.5rem 0 1rem;
+  padding: .6rem 0 .6rem .75rem;
+  border-left: 3px solid var(--gold);
+  background-color: var(--gray-100);
+  line-height: 1.45;
+}
+
+.article-body p {
+  font-size: 1rem;
+  color: var(--gray-800);
+  line-height: 2.1;
+  margin-bottom: 1.25rem;
+}
+.article-body p:last-child { margin-bottom: 0; }
+
+.article-body strong { color: var(--navy); }
+
+/* insight box */
+.insight {
+  background: var(--navy);
+  color: var(--white);
+  padding: 1.25rem 1.75rem;
+  margin: 1.75rem 0;
+  font-size: 1rem;
+  line-height: 2;
+  font-weight: 700;
+}
+.insight em {
+  font-style: normal;
+  color: var(--gold-light);
+}
+
+/* quote / callout */
+.callout {
+  background: var(--off-white);
+  border-left: 3px solid var(--navy);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 2;
+}
+.callout strong { color: var(--navy); }
+
+/* misrecognition 3-layer table */
+.misrec-block {
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+.misrec-header {
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  padding: .6rem 1.25rem;
+}
+.misrec-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--gray-200);
+}
+.misrec-row:first-of-type { border-top: none; }
+.misrec-cell {
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--gray-800);
+}
+.misrec-cell.label {
+  background: var(--gray-100);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  letter-spacing: .05em;
+  border-right: 1px solid var(--gray-200);
+}
+.misrec-cell.belief { background: var(--white); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+
+/* structure problems list */
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li {
+  padding: 1rem 1.25rem 1rem 3rem;
+  position: relative;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 1.9;
+}
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before {
+  content: attr(data-num);
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* CTA block */
+.cta-block {
+  background: var(--navy);
+  padding: 2rem 2.5rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+.cta-block-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.cta-block-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.6;
+  margin-bottom: .75rem;
+}
+.cta-block-sub {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,.7);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+.cta-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: .85rem 2.5rem;
+  text-decoration: none;
+  letter-spacing: .06em;
+  border-bottom: 3px solid #a8893a;
+  transition: opacity .2s;
+}
+.cta-btn:hover { opacity: .88; }
+.cta-note {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,.4);
+  margin-top: .75rem;
+}
+
+/* FAQ */
+.faq-section {
+  padding: 2.5rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.faq-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.faq-item {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.6;
+  margin-bottom: .75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.faq-q::before {
+  content: 'Q';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.faq-a {
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 2;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.faq-a::before {
+  content: 'A';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* author profile */
+.author-profile {
+  background: var(--gray-100);
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.author-profile-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.author-profile-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: .5rem;
+}
+.author-profile-body {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.95;
+}
+
+/* related */
+.related-section {
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.related-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.related-list { list-style: none; }
+.related-list li {
+  padding: .75rem 0 .75rem 1rem;
+  border-bottom: 1px solid var(--gray-100);
+  position: relative;
+}
+.related-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.1em;
+  width: 6px;
+  height: 1px;
+  background: var(--navy);
+}
+.related-list li:last-child { border-bottom: none; }
+.related-list a {
+  font-size: 0.9rem;
+  color: var(--navy);
+  text-decoration: underline;
+  line-height: 1.7;
+}
+
+/* footer */
+.site-footer {
+  background: var(--navy);
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+}
+.site-footer a {
+  color: rgba(255,255,255,.55);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+
+/* misrec-block table override */
+table.misrec-block {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+table.misrec-block th.misrec-header {
+  text-align: left;
+  display: table-cell;
+  width: 100%;
+}
+table.misrec-block td.misrec-cell.label {
+  width: 40%;
+}
+
+
+
+/* ── 記事FAQ（よくある質問）専用スタイル ── */
+#article-faq {
+  background-color: var(--gray-100);
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid var(--gray-200);
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+#article-faq .faq-label {
+  color: var(--navy);
+  font-size: 0.75rem;
+}
+#article-faq .faq-item {
+  border-bottom: 1px solid var(--gray-200);
+  padding-left: 0;
+}
+#article-faq .faq-q {
+  font-size: 1.0rem;
+  color: var(--navy) !important;
+}
+#article-faq .faq-a {
+  background-color: var(--white);
+  padding: 1rem 1.25rem 1rem 2.25rem;
+  border-radius: 0;
+  margin-top: 0.5rem;
+  line-height: 2;
+  color: var(--gray-800);
+}
+
+/* ── Next Step（診断FAQ）専用スタイル ── */
+.nextstep-faq {
+  background-color: var(--navy-light);
+  border-top: none;
+  padding: 2.5rem 2.5rem;
+}
+.nextstep-faq .faq-label {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-item {
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q {
+  color: var(--white);
+}
+.nextstep-faq .faq-q::before {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-a {
+  color: rgba(255,255,255,.78);
+}
+.nextstep-faq .faq-a::before {
+  color: var(--gold-light);
+}
+
+/* ── ダークモード完全無効化 ── */
+:root {
+  color-scheme: only light;
+}
+html, body {
+  background-color: #f8f7f4 !important;
+  color: #1e1d1a;
+}
+.prob-list li {
+  background-color: #ffffff;
+}
+.article-body {
+  background-color: #ffffff;
+}
+
+/* responsive */
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "楽天で新商品を出してもレビューがないと売れないのは本当ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "レビューがないから売れないという診断は、部分的にしか正しくありません。レビューがない状態でも、ページが読者に対して「なぜ今この商品を選ぶのか」という根拠を届けられているなら、転換は起きます。レビュー数よりも先に、既存の比較基準では測れない軸がページ上で示されているかどうかが問題です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "新商品の立ち上げ期に転換率が低いのは仕方ないですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「立ち上げ期は赤字覚悟で広告を回してレビューを貯める」という指導は楽天の現場で長年語られてきました。しかし、ページ設計の問題を露出量で補おうとしているにすぎません。新商品であっても、読者が商品を選ぶ根拠をページ上で得られる状態になっていれば、転換率は立ち上げ期から動きます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "新商品のRPP広告を増やしても転換率が上がらないのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RPP広告はアクセスを増やしますが、ページの構造は変えません。転換率はアクセス数に左右されず、ページに来た人が「この商品を選ぶ理由」を得られるかどうかで決まります。広告を増やすほど、転換しないアクセスに費用がかかる状態が拡大します。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "楽天で新商品が売れない立ち上げ期の問題",
+  "description": "RPP広告を回してもアクセスは来るのに売れない。レビューがないから仕方ないと言われ続けている。この状態が続く新商品には、露出の問題ではなく、ページ設計の問題があります。EC100店舗超の現場から、その構造を解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/rakuten-shinshohin-urenai-tachiagehiki-mondai.html",
+  "datePublished": "2026-04-20",
+  "dateModified": "2026-04-20",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<!-- header -->
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<!-- hero -->
+<div class="hero">
+  <span class="hero-category">楽天商品ページ改善</span>
+  <h1 class="hero-title">楽天で新商品が売れない<br>立ち上げ期の問題</h1>
+  <p class="hero-lead">広告費をかけてアクセスは来ている。商品の品質には自信がある。それでも、転換率は1%を切ったまま動かない。「レビューがないから仕方ない」と言われ、値引きとポイント変倍を繰り返しても、利益は残らない。この状態が続く新商品には、露出の問題ではなく、ページ設計の問題があります。EC100店舗超の停滞を見てきた経験から、その構造を解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<!-- author micro box -->
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
+</div>
+
+<!-- article body -->
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">広告費が溶けていく。でも「どこが問題か」が分からない</h2>
+
+  <p>RMSのアナリティクスを開く。RPP広告を走らせてアクセス数は確保できている。それでも、転換率の欄には0.8%という数字が変わらずに並んでいる。レビュー件数はゼロのままだ。</p>
+
+  <p>こうした数字を前にすると、「レビューが貯まれば転換率は上がる」「今はとにかく露出を稼いで実績を作る時期だ」という方向に思考が向きやすい。しかし、その前提のまま広告費を積み続けると、問題の場所を一度も特定しないまま資金だけが減っていきます。</p>
+
+  <div class="insight">
+    新商品の転換率が低い状態は、レビュー不足の問題でも露出不足の問題でもありません。<br>
+    <em>ページに来た読者が、「なぜ今この商品を選ぶのか」という根拠を得られていない状態</em>を示しています。
+  </div>
+
+  <p>楽天のユーザーは、検索結果から複数のページを比較しながら商品を選んでいます。その状態でページに来ているにもかかわらず、ページが既存の比較基準（レビュー数・価格・実績）に沿った情報しか届けていないとき、新商品は構造的に選ばれません。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「アクセスが足りない」——この前提がズレている</h2>
+
+  <p>新商品が売れないとき、最初に向かう施策がRPP広告の増額です。アクセスが増えれば、確率論で転換数も増えるはずだという発想です。楽天のコンサルや運用代行から「まずは露出を稼いでレビューを貯めましょう」と指導される方向も、この前提に基づいています。</p>
+
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">見当違いになっている場所</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が思っている問題</td><td class="misrec-cell belief">アクセスが足りないから新商品が転換しない</td></tr>
+  </tbody>
+</table>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">ページに来た読者が、レビュー数や実績以外の根拠で商品を選べる状態になっていない</div>
+    </div>
+  </div>
+
+  <p>RPP広告が届けるのはアクセスです。しかし転換率は、ページの構造によって決まります。転換率が0.8%のページに広告費を2倍投じても、転換率は変わりません。増えるのは、転換しないアクセスと広告費だけです。</p>
+
+  <div class="callout">
+    アクセスを増やす施策と、転換率を上げる施策は、働く場所が違います。アクセスが問題なのか、転換率が問題なのかを分けて考えない限り、投じた広告費は問題の上をそのまま通過していきます。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">なぜ「レビュー不足」が原因だと思い込むのか</h2>
+
+  <p>楽天の検索結果画面には、レビュー0件の新商品とレビュー数百件の競合商品が同じ画面に並びます。並んだ瞬間、数字の差は視覚的に明らかです。その状況で売れなければ、「レビューがないから負けた」という解釈は自然に生まれます。楽天の公式ガイドラインや運用コンサルも、この方向で「まずレビューを貯める施策を」と案内します。</p>
+
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">原因の履き違え</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が信じている原因</td><td class="misrec-cell belief">レビューがないから新商品が選ばれない</td></tr>
+  </tbody>
+</table>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">既存の比較基準（レビュー数・価格・実績）を使って選ぼうとしている読者に対して、別の根拠を渡せていない</div>
+    </div>
+  </div>
+
+  <p>楽天は比較のプラットフォームです。読者は「どれにしようか」と迷いながら、複数のページを往復しています。その状態で商品ページを開いたとき、ページが競合と同じような「スペックの列挙」「成分説明」「実績の強調」だけを並べていると、読者は手持ちの物差し——レビュー数と価格——でしか判断できません。その物差しを使えば、新商品は構造的に不利な位置に置かれます。</p>
+
+  <div class="callout">
+    この状況が長年続く背景には、業界の情報環境の問題があります。楽天の公式施策案内は「レビュー件数の増加」「広告露出の拡大」「値引き・ポイント変倍」を推奨する構造になっており、「ページが読者にどんな根拠を渡しているか」という観点は含まれません。その診断の枠組みが、問題の場所を別の方向に向け続けています。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「値引きとポイント変倍」が根本を動かさない理由</h2>
+
+  <p>転換率が上がらないとき、もう一つよく取られる施策が価格の調整です。大幅な値引きやポイント変倍で「お得感」を演出し、レビューの起点になる初回購入者を獲得しようとする。短期的には数字が動くこともあります。しかし転換率の改善としては機能しません。</p>
+
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が選んでいる解決策</td><td class="misrec-cell belief">値引きとポイント変倍で初回購入者を獲得し、レビューを貯める</td></tr>
+  </tbody>
+</table>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">価格目当てで来た購入者はリピートせず、利益が残らないまま疲弊する。ページの構造は変わっていないため、値引きをやめた瞬間に転換率は元に戻る</div>
+    </div>
+  </div>
+
+  <p>値引きで転換するのは、「価格という既存の判断軸」で選ばれた結果です。ページの構造が変わっていないため、値引きをやめた段階で転換率はもとに戻ります。加えて、価格目当てで来た買い手は、価格が戻ったタイミングで離れます。レビューは貯まっても、利益構造は改善されません。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">新商品の転換率が上がらない店舗に共通する3つの構造</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">競合と同じ物差しの上に立っている</h3>
+
+  <p>最も多いケースが、競合商品と同じ比較軸の上でページを設計している状態です。「〇〇mg配合」「国産原料使用」「無添加」「〇〇特許取得」——これらの情報は、読者がすでに持っている物差しの上に乗った訴求です。その物差しを使って比べられる限り、レビュー数や実績での判断に戻ります。</p>
+
+  <p>新商品が既存の物差しの上で勝負する必要はありません。しかしそのためには、ページが読者に対して「別の根拠で選ぶ」という文脈を渡せている必要があります。その文脈を渡せていないページは、自ら競合と同じ土俵に立ち続けています。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">「品質の自信」が読者に届く形になっていない</h3>
+
+  <p>事業者が「この商品には品質的な自信がある」と感じているとき、その確信は多くの場合、成分・製法・原料・認証といった情報の羅列として表現されます。しかし読者の側から見ると、その羅列は「専門的な情報が並んでいる」という印象は与えても、「だから自分はこれを選ぶべきだ」という確信にはなりません。</p>
+
+  <p>品質の根拠がどれだけ正確でも、それが読者の「選ぶ理由」として機能しているかどうかは別の問題です。読者が自分ごとにできる形で届いていないとき、品質への自信はページの上で静止したままになります。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">「なぜ今、実績なしで選ぶのか」が空白になっている</h3>
+
+  <p>楽天ユーザーは比較しながら商品を選んでいます。その状態でページに来たとき、「なぜ実績のある既存商品ではなく、このページの商品を選ぶのか」という問いへの答えが、ページのどこにも見当たらないことがあります。</p>
+
+  <p>この空白が残っているとき、読者は判断を保留します。保留された判断は多くの場合、実績のある競合商品への回帰で終わります。新商品のページで転換率が上がらない状態は、この問いへの答えが届いているかどうかで決まっていることが大半です。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">転換率が動く新商品ページと、動かないページの違い</h2>
+
+  <p>転換率が動かない新商品ページに共通しているのは、「伝えるべき情報を揃えた」という発想で設計されていることです。スペック、成分、製法、認証——情報の網羅性は高くても、読者が「これを選ぶ」という判断に至る順序が設計されていません。</p>
+
+  <p>立ち上げ期から転換率が動く新商品ページは、読者が商品を選ぶ根拠を、ページの前半で渡しています。その根拠は、レビュー数や価格という既存の比較基準とは別の軸で示されています。競合と同じ土俵に立たない根拠が先に渡されているとき、読者はその根拠で選ぶことができます。</p>
+
+  <div class="insight">
+    新商品の転換率を動かすのは、広告費の増額でも値引きでもありません。<br>
+    <em>「レビューのない状態で、なぜこれを選ぶのか」という問いに、ページが答えられている状態</em>を作ることです。
+  </div>
+
+  <p>以下の状態が続いているなら、設計の問題が残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">RPP広告でアクセスは来ているのに、転換率が1%を切ったまま動かない</li>
+    <li data-num="✓">値引きやポイント変倍をやめると、転換率がもとに戻る</li>
+    <li data-num="✓">商品の品質には自信があるのに、なぜ売れないか説明できない</li>
+    <li data-num="✓">「レビューが貯まれば改善する」という判断のまま、広告費だけが積み上がっている</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">新商品のどこで転換が止まっているか。</div>
+    <div class="cta-block-sub">
+      新商品の転換率が低い状態が続いているなら、ページのどこかで「この商品を選ぶ根拠」が届いていません。<br>
+      診断を受けた事業者の多くが、初めて「どこが問題だったか」を言語化できたと言います。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">新商品ページ、どこで止まっているか診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>楽天の現場では長年、新商品が売れない原因として「レビューの少なさ」「広告露出の不足」「価格競争力の弱さ」が語られてきました。楽天のコンサル会社も、公式ガイドラインも、運用代行も、この方向で新商品の立ち上げ支援を提案し続けています。その診断のまま施策を打ち続けることが、「アクセスは来るのに転換しない」状態と「広告費だけが溶けていく」構造を固定します。</p>
+
+  <p>転換率の差は、レビュー数の差でも価格の差でもありません。ページが読者に対して「なぜ今この商品を選ぶのか」という根拠を届けられているかどうかの差です。その根拠がページの上に存在したとき、新商品の転換率は立ち上げ期から動き始めます。</p>
+
+
+</div><!-- /article-body -->
+
+<!-- 記事FAQ -->
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+
+  <div class="faq-item">
+    <div class="faq-q">楽天で新商品を出してもレビューがないと売れないのは本当ですか？</div>
+    <div class="faq-a">レビューがないから売れないという診断は、部分的にしか正しくありません。レビューがない状態でも、ページが読者に対して「なぜ今この商品を選ぶのか」という根拠を届けられているなら、転換は起きます。レビュー数よりも先に、既存の比較基準では測れない軸がページ上で示されているかどうかが問題です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">新商品の立ち上げ期に転換率が低いのは仕方ないですか？</div>
+    <div class="faq-a">「立ち上げ期は赤字覚悟で広告を回してレビューを貯める」という指導は楽天の現場で長年語られてきました。しかし、ページ設計の問題を露出量で補おうとしているにすぎません。新商品であっても、読者が商品を選ぶ根拠をページ上で得られる状態になっていれば、転換率は立ち上げ期から動きます。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">新商品のRPP広告を増やしても転換率が上がらないのはなぜですか？</div>
+    <div class="faq-a">RPP広告はアクセスを増やしますが、ページの構造は変えません。転換率はアクセス数に左右されず、ページに来た人が「この商品を選ぶ理由」を得られるかどうかで決まります。広告を増やすほど、転換しないアクセスに費用がかかる状態が拡大します。</div>
+  </div>
+</div><!-- /記事FAQ -->
+
+<!-- FAQ：推進型 -->
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+
+  <div class="faq-item">
+    <div class="faq-q">新商品の転換率を改善するために、まず何から手をつければいいですか？</div>
+    <div class="faq-a">最初に行うべきは、現在のページが読者に対して「なぜこの商品を選ぶのか」という根拠をどこで渡しているかを確認することです。商品説明の前に、その根拠があるかどうかを確認します。根拠が後半にしかない、あるいはどこにも見当たらない場合、広告費や値引きの前にページの構造を見直すことが先です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">レビューが0件でも転換率が上がる新商品ページは、どこが違いますか？</div>
+    <div class="faq-a">レビューがない状態で転換率が動くページは、読者が既存の比較軸（レビュー数・価格）以外の根拠で選べる状態を作っています。競合商品と同じ物差しで並ばず、読者が「なぜこちらなのか」を別の軸で理解できる構造がページの前半に存在しています。その有無が、立ち上げ期の転換率の差になります。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">診断では、新商品ページのどこを具体的に確認しますか？</div>
+    <div class="faq-a">ページのどこで「この商品を選ぶ根拠」が渡されているか、その根拠が既存の比較基準に乗ったものになっていないか、読者が商品を選ぶ判断の順序に沿って情報が届く構造になっているかを確認します。「どこを変えれば転換率が動くか」が初めて言語化できる状態になります。</div>
+  </div>
+
+</div><!-- /faq -->
+
+<!-- bottom CTA -->
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、止まっている場所を特定する。</div>
+  <div class="cta-block-sub">
+    新商品のどこで転換が止まっているかが分かれば、何を変えればいいかが分かる。<br>
+    何を変えればいいかが分かれば、広告費や値引きに頼らず転換率が動き始める。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<!-- author profile -->
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<!-- related -->
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率（CVR）が上がらない本当の理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-access-aru-noni-urenai-kyotsuten.html">楽天でアクセスはあるのに売れない店舗に共通する課題</a></li>
+    <li><a href="https://konishi-marketing.com/articles/ec-kakaku-sagete-mo-uriage-nobinai-hontono-riyu.html">ECで価格を下げても売上が伸びない本当の理由</a></li>
+  </ul>
+</div>
+
+<!-- footer -->
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+
+</body>
+</html>
