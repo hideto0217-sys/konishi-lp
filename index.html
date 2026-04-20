@@ -807,7 +807,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
     <label>ご相談内容<span class="req">必須</span></label>
     <div class="radio-group">
       <label class="radio-card">
-        <input type="radio" name="consult_type" value="ページ診断" required>
+        <input type="radio" name="consult_type" value="ページ診断" required checked>
         <span class="radio-ui"></span>
         <span class="radio-text">
           <strong>ページ診断を受けたい</strong>
@@ -959,6 +959,10 @@ function applyConsultType(type) {
 radios.forEach(radio => {
   radio.addEventListener('change', () => applyConsultType(radio.value));
 });
+
+// 初期状態を確定させる
+const checkedRadio = document.querySelector('input[name="consult_type"]:checked');
+applyConsultType(checkedRadio ? checkedRadio.value : 'ページ診断');
 
 // ─── フォーム送信 ───
 document.getElementById('diagForm').addEventListener('submit', function(e) {
