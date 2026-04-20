@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/ec-kisetsu-shohin-igai-urenai.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECで季節商品以外が売れない店舗の構造的な問題｜小西マーケティング</title>
+<meta name="description" content="母の日・年末年始だけ売れて、あとは閑散期。広告を回しても数字が動かない。その状態が続く店舗には、需要の問題ではなく、ページ設計の問題があります。EC100店舗超の現場から、その構造を解説します。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --red: #b71c1c;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--off-white);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── layout ── */
+.site-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--white);
+}
+
+/* ── header ── */
+.site-header {
+  background: var(--navy);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--gold);
+}
+.site-header a {
+  color: var(--gold-light);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+/* ── hero ── */
+.hero {
+  background: var(--navy);
+  padding: 3rem 2.5rem 2.5rem;
+  border-bottom: 3px solid var(--gold);
+}
+.hero-category {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.hero-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+}
+.hero-lead {
+  font-size: 1rem;
+  color: rgba(255,255,255,.78);
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+.hero-meta {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,.45);
+}
+
+/* ── author box ── */
+.author-box {
+  background: var(--gray-100);
+  border-left: 3px solid var(--gold);
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+}
+.author-box strong { color: var(--navy); }
+
+/* ── article body ── */
+.article-body {
+  padding: 2.5rem 2.5rem;
+}
+
+.article-body h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy) !important;
+  line-height: 1.4;
+  margin: 4.5rem 0 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: .75rem;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 2px solid var(--gold);
+}
+.article-body h2:first-child { margin-top: 0; }
+
+.article-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy) !important;
+  margin: 3.5rem 0 1rem;
+  padding: .6rem 0 .6rem .75rem;
+  border-left: 3px solid var(--gold);
+  background-color: var(--gray-100);
+  line-height: 1.45;
+}
+
+.article-body p {
+  font-size: 1rem;
+  color: var(--gray-800);
+  line-height: 2.1;
+  margin-bottom: 1.25rem;
+}
+.article-body p:last-child { margin-bottom: 0; }
+
+.article-body strong { color: var(--navy); }
+
+/* insight box */
+.insight {
+  background: var(--navy);
+  color: var(--white);
+  padding: 1.25rem 1.75rem;
+  margin: 1.75rem 0;
+  font-size: 1rem;
+  line-height: 2;
+  font-weight: 700;
+}
+.insight em {
+  font-style: normal;
+  color: var(--gold-light);
+}
+
+/* quote / callout */
+.callout {
+  background: var(--off-white);
+  border-left: 3px solid var(--navy);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 2;
+}
+.callout strong { color: var(--navy); }
+
+/* misrecognition 3-layer table */
+.misrec-block {
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+.misrec-header {
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  padding: .6rem 1.25rem;
+}
+.misrec-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--gray-200);
+}
+.misrec-row:first-of-type { border-top: none; }
+.misrec-cell {
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--gray-800);
+}
+.misrec-cell.label {
+  background: var(--gray-100);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  letter-spacing: .05em;
+  border-right: 1px solid var(--gray-200);
+}
+.misrec-cell.belief { background: var(--white); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+
+/* structure problems list */
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li {
+  padding: 1rem 1.25rem 1rem 3rem;
+  position: relative;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 1.9;
+}
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before {
+  content: attr(data-num);
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* CTA block */
+.cta-block {
+  background: var(--navy);
+  padding: 2rem 2.5rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+.cta-block-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.cta-block-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.6;
+  margin-bottom: .75rem;
+}
+.cta-block-sub {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,.7);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+.cta-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: .85rem 2.5rem;
+  text-decoration: none;
+  letter-spacing: .06em;
+  border-bottom: 3px solid #a8893a;
+  transition: opacity .2s;
+}
+.cta-btn:hover { opacity: .88; }
+.cta-note {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,.4);
+  margin-top: .75rem;
+}
+
+/* FAQ */
+.faq-section {
+  padding: 2.5rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.faq-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.faq-item {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.6;
+  margin-bottom: .75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.faq-q::before {
+  content: 'Q';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.faq-a {
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 2;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.faq-a::before {
+  content: 'A';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* author profile */
+.author-profile {
+  background: var(--gray-100);
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.author-profile-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.author-profile-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: .5rem;
+}
+.author-profile-body {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.95;
+}
+
+/* related */
+.related-section {
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.related-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.related-list { list-style: none; }
+.related-list li {
+  padding: .75rem 0 .75rem 1rem;
+  border-bottom: 1px solid var(--gray-100);
+  position: relative;
+}
+.related-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.1em;
+  width: 6px;
+  height: 1px;
+  background: var(--navy);
+}
+.related-list li:last-child { border-bottom: none; }
+.related-list a {
+  font-size: 0.9rem;
+  color: var(--navy);
+  text-decoration: underline;
+  line-height: 1.7;
+}
+
+/* footer */
+.site-footer {
+  background: var(--navy);
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+}
+.site-footer a {
+  color: rgba(255,255,255,.55);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+
+/* misrec-block table override */
+table.misrec-block {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+table.misrec-block th.misrec-header {
+  text-align: left;
+  display: table-cell;
+  width: 100%;
+}
+table.misrec-block td.misrec-cell.label {
+  width: 40%;
+}
+
+
+
+/* ── 記事FAQ（よくある質問）専用スタイル ── */
+#article-faq {
+  background-color: var(--gray-100);
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid var(--gray-200);
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+#article-faq .faq-label {
+  color: var(--navy);
+  font-size: 0.75rem;
+}
+#article-faq .faq-item {
+  border-bottom: 1px solid var(--gray-200);
+  padding-left: 0;
+}
+#article-faq .faq-q {
+  font-size: 1.0rem;
+  color: var(--navy) !important;
+}
+#article-faq .faq-a {
+  background-color: var(--white);
+  padding: 1rem 1.25rem 1rem 2.25rem;
+  border-radius: 0;
+  margin-top: 0.5rem;
+  line-height: 2;
+  color: var(--gray-800);
+}
+
+/* ── Next Step（診断FAQ）専用スタイル ── */
+.nextstep-faq {
+  background-color: var(--navy-light);
+  border-top: none;
+  padding: 2.5rem 2.5rem;
+}
+.nextstep-faq .faq-label {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-item {
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q {
+  color: var(--white);
+}
+.nextstep-faq .faq-q::before {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-a {
+  color: rgba(255,255,255,.78);
+}
+.nextstep-faq .faq-a::before {
+  color: var(--gold-light);
+}
+
+/* ── ダークモード完全無効化 ── */
+:root {
+  color-scheme: only light;
+}
+html, body {
+  background-color: #f8f7f4 !important;
+  color: #1e1d1a;
+}
+.prob-list li {
+  background-color: #ffffff;
+}
+.article-body {
+  background-color: #ffffff;
+}
+
+/* responsive */
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "季節商品以外が売れないのは、閑散期に需要がないからですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "需要がないという診断は、部分的にしか正しくありません。通年で使える商品であっても、ページが「なぜ今の自分にこれが必要か」という根拠を読者に届けられていない場合、閑散期の転換率は低いままになります。需要の有無よりも先に、ページが通年の読者に対してどんな根拠を渡しているかが問題です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "閑散期にRPP広告を増やしても転換率が変わらないのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RPP広告が届けるのはアクセスだけです。転換率はページの構造によって決まります。ギフトシーズン向けに設計されたページのまま広告を流し込んでも、通年の読者が「自分ごと」として受け取れる根拠がページ上にないため、転換率は変わりません。増えるのは転換しないアクセスと広告費だけです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "閑散期の転換率を改善するために、まず何をすればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "最初に確認すべきは、現在のページが通年の読者に対して「なぜ今これを選ぶのか」という根拠をどこで渡しているかです。ギフト訴求のままのページや、機能説明の羅列で終わっているページは、閑散期の読者の状況に接続していません。その根拠がどこにも存在しないなら、広告費よりもページの構造を先に見直すことになります。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ECで季節商品以外が売れない店舗の構造的な問題",
+  "description": "母の日・年末年始だけ売れて、あとは閑散期。広告を回しても数字が動かない。その状態が続く店舗には、需要の問題ではなく、ページ設計の問題があります。EC100店舗超の現場から、その構造を解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/ec-kisetsu-shohin-igai-urenai.html",
+  "datePublished": "2026-04-20",
+  "dateModified": "2026-04-20",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<!-- header -->
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<!-- hero -->
+<div class="hero">
+  <span class="hero-category">EC 転換率改善</span>
+  <h1 class="hero-title">ECで季節商品以外が<br>売れない店舗の構造的な問題</h1>
+  <p class="hero-lead">母の日が終わった翌朝、RMSの管理画面を開く。昨日まであった注文が、嘘のようにゼロに戻っている。RPP広告の予算を上げてみる。クーポンを発行してみる。それでも転換率は動かない。「閑散期だから仕方ない」——その判断のまま広告費だけが積み上がっていく店舗には、需要の問題ではなく、ページ設計の問題があります。EC100店舗超の停滞を見てきた経験から、その構造を解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<!-- author micro box -->
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
+</div>
+
+<!-- article body -->
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">イベントが終わった瞬間、管理画面が静まり返る</h2>
+
+  <p>母の日、お中元、敬老の日、年末年始——これらのイベント期間だけ売上が急増し、シーズンが終わると同時に注文がほぼゼロに戻る。この繰り返しを「季節商品だから当然だ」と解釈したとき、次に向かう施策はRPP広告の増額か、無計画なクーポン発行になります。</p>
+
+  <p>しかし、その状態が続いている店舗に共通しているのは、「需要がなくなった」のではなく、ページが「ギフト需要を刈り取る構造」のまま止まっているということです。閑散期にアクセスしてくる読者は、ギフト目的ではなく、日常の何らかの文脈でページに来ています。その読者に対して、ギフト訴求のページが「今の自分ごと」として届くことは、構造上ありません。</p>
+
+  <div class="insight">
+    季節商品以外が売れない状態は、閑散期の需要がない問題ではありません。<br>
+    <em>ページが「ギフトを探している人」にしか設計されておらず、通年の読者が自分のために選ぶ根拠を得られていない状態</em>を示しています。
+  </div>
+
+  <p>通年で使える商品であっても、ページが「誰かへのプレゼント」という文脈の上に設計されていれば、日常の購入者は自分事として受け取れません。この状態のままで広告費を積み上げることは、問題の場所を特定しないまま資金だけを使い続けることになります。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「閑散期は需要がない」——この診断がズレている</h2>
+
+  <p>閑散期に転換率が下がると、「そもそもニーズがない時期だから」という解釈が自然に生まれます。EC運営の現場でも、コンサルや代理店から「閑散期は広告を絞って、シーズン前に仕込みを」と指導されることが多い。その方向でPDCAを回し続けていると、閑散期の転換率を「仕方のない数字」として固定する習慣が生まれます。</p>
+
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">見当違いになっている場所</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が思っている問題</td><td class="misrec-cell belief">閑散期は市場の需要がないから転換率が下がる。広告と値引きで耐えるしかない</td></tr>
+  </tbody>
+</table>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">閑散期にページへ来ている読者に対して、「なぜ今の自分にこれが必要か」という日常文脈の根拠が、ページのどこにも存在していない</div>
+    </div>
+  </div>
+
+  <p>閑散期にRPP広告経由でページに来る読者が、まったくの無関心層であることはほとんどありません。何らかの用途や目的を持って検索し、ページにたどり着いています。問題は、そのページが「ギフトを探している人のための文脈」で設計されており、日常使いの購入者が自分のために選ぶ根拠を受け取れない状態になっていることです。</p>
+
+  <div class="callout">
+    広告を増やすことと、転換率を上げることは、働く場所が違います。アクセスが問題なのか、ページが問題なのかを分けて考えない限り、投じた広告費は問題の上をそのまま通過していきます。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">なぜ「広告運用の調整」が根本を動かさないのか</h2>
+
+  <p>閑散期の転換率対策として次に向かうのが、RPP広告のキーワード設定の見直しや入札単価の調整です。「自分用」「普段使い」「日常」といった通年系のキーワードに切り替えることで、アクセスの質を上げようとします。これは方向として間違っていません。しかし、多くの場合は「アクセスは少し変わったが、転換率は変わらなかった」という結果に終わります。</p>
+
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">原因の履き違え</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が信じている原因</td><td class="misrec-cell belief">広告のキーワード設定や入札単価が最適化されていないから閑散期に売れない</td></tr>
+  </tbody>
+</table>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">ページ自体が「ギフト需要の刈り取り構造」のままであり、日常文脈で来た読者が「なぜ今の自分にこれを選ぶのか」という根拠をページ上で得られていない</div>
+    </div>
+  </div>
+
+  <p>広告運用の最適化はアクセスの量と質に影響しますが、ページの構造は変えません。「自分用に」というキーワードで来た読者に対して、ギフト用のパッケージや「大切な方への贈り物に」という文脈だけを届け続けていると、読者はページと自分の状況のズレを感じて離脱します。</p>
+
+  <div class="callout">
+    この状況が続く背景には、業界の情報環境に構造的な問題があります。広告代理店・運用コンサルは広告運用の最適化を提案しますが、ページ内部の「読者が自分のために選ぶ根拠の設計」には責任を持ちません。その診断の枠組みが、問題の場所を別の方向へ向け続けています。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「キーワード対策とバナー変更」が解決しない理由</h2>
+
+  <p>「通年で売れる」を目的に最初に動くのが、商品タイトルやサムネイルの変更です。「自宅用にも」「自分へのご褒美に」というコピーをトップ画像に乗せ、キーワードに「普段使い」「通年」を加える。短期的にアクセスが変化することはあります。しかし転換率は動きません。</p>
+
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">市場が選んでいる解決策</td><td class="misrec-cell belief">キーワードを通年系に変更し、トップ画像を「自分用」訴求に切り替える</td></tr>
+  </tbody>
+</table>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">アクセスは変わっても、ページの中で読者が「なぜ今の自分にこれを選ぶのか」という根拠を得られる構造になっていないため、転換率は変わらない</div>
+    </div>
+  </div>
+
+  <p>「自分へのご褒美に！」というコピーをトップに置いた瞬間に、通年転換が解決するわけではありません。キーワードとコピーの表面を変えても、ページの中で読者が「自分の日常にこれが必要な理由」を受け取れる構造になっていなければ、転換率は変わりません。</p>
+
+  <p>また、デザイン会社にページのリニューアルを依頼しても、同じ結果に終わることがあります。制作会社は「綺麗なページ」を納品しますが、読者が「なぜ今の自分にこれを選ぶのか」という根拠の構造を設計することは、その業務範囲には含まれていないことがほとんどです。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">閑散期の転換率が動かない店舗に共通する3つの構造</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">ページがイベント需要を前提に組まれたまま止まっている</h3>
+
+  <p>最も多いのが、ページ全体の設計がギフト用途を起点に組まれたまま、閑散期もそのまま運用し続けているケースです。「〇〇の記念に」「感謝の気持ちを込めて」という文脈が前半で優先されていると、日常の用途で来た読者は、自分の購入目的とページのトーンがズレていることを感じます。</p>
+
+  <p>読者が「このページは自分のためのものではないかもしれない」と感じた瞬間に、判断は保留されます。保留された判断は多くの場合、離脱で終わります。ページのコピーやビジュアルがギフト文脈に固定されている限り、通年の転換率は構造的に上がりません。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">「通年で使える」という事実が、選ぶ根拠になっていない</h3>
+
+  <p>「この商品は通年で使えます」「自宅用にも最適です」という情報がページに存在していても、それが「今の自分が選ぶ理由」として機能しているかどうかは別の問題です。「使えること」と「選ぶ根拠になること」の間には、読者の日常の状況と商品が接続するプロセスが必要です。</p>
+
+  <p>そのプロセスがなければ、「通年で使える」は単なる機能説明として受け取られます。機能の説明は「知識」として届きますが、「今自分が買う理由」としては機能しません。閑散期の読者が「これは自分のために今買うものだ」と確信するためには、別の接続が必要です。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">競合と同じ比較軸の上に立ち続けている</h3>
+
+  <p>閑散期の検索は、イベント期間の検索とは状況が違います。ギフトを探している読者は「誰かに贈るもの」という軸で商品を選びます。日常用途で来た読者は「自分の生活の中に取り入れる価値があるか」という軸で商品を評価します。</p>
+
+  <p>その違いに対してページが何も応答していないとき、読者はモール内の別の比較軸——価格、レビュー数、認知度——で判断するしかなくなります。その比較軸の上で戦う限り、閑散期の転換率は競合の値引きやレビュー数の影響を受け続けます。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">閑散期に転換率が動くページと、動かないページの違い</h2>
+
+  <p>転換率が動かないページに共通しているのは、「情報を揃えた」という発想で設計されていることです。商品スペック、成分、製法、受賞歴——情報の網羅性は高くても、閑散期の読者が「自分のために今買う」という判断に至る順序が設計されていません。</p>
+
+  <p>閑散期でも転換率が安定しているページは、読者が「今の自分の状況にこれが必要な理由」を、ページの前半で受け取れる構造になっています。その根拠は、ギフト文脈の外側にある日常の場面や用途から組まれており、競合と同じ比較軸の上には立っていません。</p>
+
+  <div class="insight">
+    閑散期の転換率を動かすのは、広告費の増額でも値引きでもありません。<br>
+    <em>「今の自分が、なぜ今これを選ぶのか」という根拠を、ページが日常の読者に届けられている状態</em>を作ることです。
+  </div>
+
+  <p>以下の状態が続いているなら、設計の問題が残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">イベントが終わった翌日から、注文がほぼゼロに戻る</li>
+    <li data-num="✓">閑散期に広告を回すとアクセスは来るが、転換率が1%を切ったまま動かない</li>
+    <li data-num="✓">「自分用に」のコピーをトップに追加しても、数字が変わらない</li>
+    <li data-num="✓">「閑散期は仕方ない」という判断のまま、クーポンと値引きで耐えている</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">閑散期の転換率が動かない場所を特定する。</div>
+    <div class="cta-block-sub">
+      季節商品以外が売れない状態が続いているなら、ページのどこかで日常の読者が「自分のために選ぶ根拠」を受け取れていません。<br>
+      診断を受けた事業者の多くが、初めて「どこが問題だったか」を言語化できたと言います。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">閑散期の転換率、どこで止まっているか診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>ECの現場では長年、季節商品以外が売れない原因として「閑散期の需要のなさ」「広告運用の最適化不足」「価格競争力の弱さ」が語られてきました。楽天のコンサル会社も、広告代理店も、EC支援の現場も、この方向で閑散期対策を提案し続けています。その診断のまま施策を打ち続けることが、「アクセスは来るのに転換しない」状態と「広告費だけが溶けていく」構造を固定します。</p>
+
+  <p>転換率の差は、需要の差でも広告運用の差でもありません。ページが閑散期の読者に対して「なぜ今の自分にこれを選ぶのか」という根拠を届けられているかどうかの差です。その根拠がページの上に存在したとき、閑散期の転換率は動き始めます。</p>
+
+
+</div><!-- /article-body -->
+
+<!-- 記事FAQ -->
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+
+  <div class="faq-item">
+    <div class="faq-q">季節商品以外が売れないのは、閑散期に需要がないからですか？</div>
+    <div class="faq-a">需要がないという診断は、部分的にしか正しくありません。通年で使える商品であっても、ページが「なぜ今の自分にこれが必要か」という根拠を読者に届けられていない場合、閑散期の転換率は低いままになります。需要の有無よりも先に、ページが通年の読者に対してどんな根拠を渡しているかが問題です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">閑散期にRPP広告を増やしても転換率が変わらないのはなぜですか？</div>
+    <div class="faq-a">RPP広告が届けるのはアクセスだけです。転換率はページの構造によって決まります。ギフトシーズン向けに設計されたページのまま広告を流し込んでも、通年の読者が「自分ごと」として受け取れる根拠がページ上にないため、転換率は変わりません。増えるのは転換しないアクセスと広告費だけです。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">トップ画像を「自分へのご褒美に」に変えたのに転換率が変わりませんでした</div>
+    <div class="faq-a">コピーの表面を変えることと、ページが読者の日常状況に接続することは別の問題です。「自分へのご褒美に」というコピーが追加されても、その後のページが「なぜ今の自分にこれを選ぶのか」という根拠の構造を持っていなければ、読者の判断は前に進みません。表面のコピーではなく、ページが読者の状況と接続できているかどうかが問われています。</div>
+  </div>
+</div><!-- /記事FAQ -->
+
+<!-- FAQ：推進型 -->
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+
+  <div class="faq-item">
+    <div class="faq-q">閑散期の転換率を改善するために、まず何から手をつければいいですか？</div>
+    <div class="faq-a">最初に確認すべきは、現在のページが通年の読者に対して「なぜ今これを選ぶのか」という根拠をどこで渡しているかです。ギフト訴求のままのページや、機能説明の羅列で終わっているページは、閑散期の読者の状況に接続していません。その根拠がどこにも存在しないなら、広告費よりもページの構造を先に見直すことが先です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">閑散期でも転換率が安定しているページは、何が違いますか？</div>
+    <div class="faq-a">閑散期でも転換率が動くページは、日常の読者が「自分のために今買う理由」を受け取れる構造をページの前半に持っています。ギフト文脈の外側にある日常の場面や用途から設計されており、競合と同じ比較軸の上には立っていません。その有無が、シーズン終了後の転換率の安定に直結しています。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">診断では、どこを具体的に確認しますか？</div>
+    <div class="faq-a">ページのどこで「閑散期の読者が自分のために選ぶ根拠」が渡されているか、その根拠がギフト文脈に固定されていないか、日常用途の読者が自分ごととして受け取れる構造になっているかを確認します。「どこを変えれば転換率が動くか」が初めて言語化できる状態になります。</div>
+  </div>
+
+</div><!-- /faq -->
+
+<!-- bottom CTA -->
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、止まっている場所を特定する。</div>
+  <div class="cta-block-sub">
+    閑散期の転換率がどこで止まっているかが分かれば、何を変えればいいかが分かる。<br>
+    何を変えればいいかが分かれば、広告費や値引きに頼らず転換率が動き始める。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<!-- author profile -->
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<!-- related -->
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/ec-kakaku-sagete-mo-uriage-nobinai-hontono-riyu.html">ECで価格を下げても売上が伸びない本当の理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-access-aru-noni-urenai-kyotsuten.html">楽天でアクセスはあるのに売れない店舗に共通する課題</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率（CVR）が上がらない本当の理由</a></li>
+  </ul>
+</div>
+
+<!-- footer -->
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+
+</body>
+</html>
