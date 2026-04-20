@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/rakuten-design-gaisha-ni-irai-shite-mo-uriage-kawaranu.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楽天でデザイン会社に依頼しても売上が変わらない理由｜小西マーケティング</title>
+<meta name="description" content="楽天実績豊富なデザイン会社に数十万円を払った。きれいなページが仕上がった。でもRMSの数字は変わらなかった。デザイン会社が悪いわけではありません。発注の構造に、最初から解決できない問題が埋め込まれていました。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --red: #b71c1c;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--off-white);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+
+.article-body { padding: 2.5rem 2.5rem; }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-row:first-of-type { border-top: none; }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.belief { background: var(--white); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+
+table.misrec-block { width: 100%; border-collapse: collapse; margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+table.misrec-block th.misrec-header { text-align: left; display: table-cell; width: 100%; }
+table.misrec-block td.misrec-cell.label { width: 40%; }
+
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-q { font-size: 1.0rem; color: var(--navy) !important; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; border-radius: 0; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+.prob-list li { background-color: #ffffff; }
+.article-body { background-color: #ffffff; }
+
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "デザイン会社に「売れるようにしてほしい」と依頼しても難しいのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "デザイン会社は「渡された情報を視覚的に整える」専門家です。ページに来た読者が購買判断に至るかどうかを左右する情報の構造や順序を設計することは、デザインの技術とは別の専門領域です。「売れるようにしてほしい」という依頼を受けても、デザイン会社はその業務範囲外の問題を解決することはできません。数字が上がらなかった責任はデザイン会社にあるのではなく、発注の構造に問題があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "より実績のある別のデザイン会社に乗り換えれば改善しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "デザイン会社を乗り換えることで、より洗練されたビジュアルが仕上がることはあります。しかし「何を・誰に・どの順番で届けるか」という設計図が存在しないまま発注する構造が変わらなければ、仕上がりの見た目が変わっても転換率の問題は残ったままになります。デザイン会社を変える前に、何が問題の場所なのかを確認することが先です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ヒートマップを入れて改善すれば変わりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ヒートマップは「どこで離脱しているか」を可視化するツールです。しかし「なぜそこで離脱しているか」の答えはヒートマップからは出てきません。離脱している箇所の画像を差し替えることと、なぜその箇所で離脱が起きているかを理解することは別の問題です。箇所ごとの部分最適より先に、ページ全体の情報の流れを問う必要があります。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "楽天でデザイン会社に依頼しても売上が変わらない理由",
+  "description": "楽天実績豊富なデザイン会社に数十万円を払った。きれいなページが仕上がった。でもRMSの数字は変わらなかった。デザイン会社が悪いわけではありません。発注の構造に、最初から解決できない問題が埋め込まれていました。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/rakuten-design-gaisha-ni-irai-shite-mo-uriage-kawaranu.html",
+  "datePublished": "2026-04-21",
+  "dateModified": "2026-04-21",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<div class="hero">
+  <span class="hero-category">楽天商品ページ改善</span>
+  <h1 class="hero-title">楽天でデザイン会社に依頼しても<br>売上が変わらない理由</h1>
+  <p class="hero-lead">「楽天実績豊富」を謳う制作会社に数十万円を払った。何度もヒアリングを重ね、修正を繰り返し、きれいなページが納品された。公開ボタンを押し、一週間後にRMSを開く。転換率の欄には、リニューアル前と同じ数字が並んでいた。デザイン会社が悪いわけではありません。発注の構造に、最初から転換率の問題を解決できない仕組みが埋め込まれていました。EC100店舗超の停滞を見てきた経験から、その構造を解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
+</div>
+
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">納品されたきれいなページを、虚しくスクロールした</h2>
+
+  <p>リニューアルが完了し、新しいページを確認する。スマホで見やすく整ったバナー、洗練された配色、丁寧に並べられた商品情報——見た目の完成度は確かに上がっていた。しかし公開から一週間後、RMSのアナリティクスを開く。転換率の欄は、リニューアル前と同じ数字を刻んでいた。</p>
+
+  <p>「なぜ変わらないのか」という疑問を持って制作会社に相談すると、「RPP広告の予算を増やしてアクセスを増やしましょう」「次のイベントに合わせてバナーを変えましょう」という提案が返ってくる。ページの内部に踏み込んだ提案は出てこない。「あれだけのお金を払ったのに」という感情と、「次は別の会社なら違うかもしれない」という期待が交差する——この経験をした事業者に共通する構造があります。</p>
+
+  <div class="insight">
+    デザイン会社に依頼しても転換率が変わらない状態は、デザイン会社の実力の問題でも熱量の問題でもありません。<br>
+    <em>デザイン会社が担える業務（情報の視覚化）と、転換率が決まる問題（何を・誰に・どの順番で届けるかの設計）が、もともと別の場所にある</em>という構造の問題です。
+  </div>
+
+  <p>デザイン会社は「依頼主から渡された情報と素材を、視覚的に美しく整える」専門家です。どの情報をページのどの位置に、どの順番で届けるかを決めることは、デザインの技術とは別の専門領域です。その設計図が存在しないまま発注が始まったとき、数字が変わらない結果は最初から決まっています。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「デザイン会社のスキルや提案力が足りなかった」——この診断がズレている</h2>
+
+  <p>転換率が変わらないとき、最初に向かう解釈が「この会社の実力が足りなかった」です。担当者が若かった、提案が少なかった、楽天の理解が浅かった——次は「もっと実績のある会社」「もっと高単価な専門家」を探し始めます。しかし乗り換え先でも、同じ結果が繰り返されます。</p>
+
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">見当違いになっている場所</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が思っている問題</td><td class="misrec-cell belief">依頼したデザイン会社の実績やスキル、提案力が不十分だったから転換率が変わらなかった</td></tr>
+  </tbody>
+</table>
+  <div class="misrec-row">
+    <div class="misrec-cell label">実際の問題</div>
+    <div class="misrec-cell truth">デザイン会社は「渡された情報を視覚化するプロ」であり、「何を・誰に・どの順番で届けるか」を決める設計は業務範囲外。設計図のないまま発注する構造が変わらなければ、会社を変えても結果は変わらない</div>
+  </div>
+  </div>
+
+  <p>デザイン会社への発注は「素材と情報を渡し、視覚的に整えたページを受け取る」という契約です。転換率が上がるかどうかは、その契約の外側にある問題です。どれだけ高単価な制作会社に頼んでも、Excelの箇条書きで渡したテキストが綺麗に装飾されて配置されるという構造は変わりません。変えるべきは会社ではなく、発注の前に行うべきことの有無です。</p>
+
+  <div class="callout">
+    制作業界の構造にも背景があります。デザイン会社のビジネスモデルは「デザインデータという目に見える成果物を納品すること」で売上を立てます。ページの転換率が改善するかどうかは、その成果物の評価基準に含まれていません。数字が変わらなかった責任を制作会社に問うことは、土台として難しい構造になっています。デザイン会社が悪いのではなく、業界の発注慣行がこの構造を作っています。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">なぜ「楽天実績豊富」を謳う会社でも同じ結果になるのか</h2>
+
+  <p>「楽天特化」「売れるLP制作」を名乗る制作会社に依頼した場合でも、転換率が変わらなかったという経験は広く見られます。楽天のデザイントレンドを知っており、他のECページとは異なるレイアウト提案が出てくることもある。それでも数字は変わりません。</p>
+
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">原因の履き違え</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が信じている原因</td><td class="misrec-cell belief">楽天に精通した専門会社に依頼すれば、売れているページの「型」を持ち込んで転換率を改善してくれる</td></tr>
+  </tbody>
+</table>
+  <div class="misrec-row">
+    <div class="misrec-cell label">実際の原因</div>
+    <div class="misrec-cell truth">「楽天実績豊富」はデザインのトレンドや見た目の型に精通しているという意味であり、読者が購買判断に至る情報の順序を設計することとは別の専門性。型を真似ることと、読者に届く構造を持つことは異なる</div>
+  </div>
+  </div>
+
+  <p>売れている競合ページのレイアウトや配色を参考にして作られたページは、見た目の類似度は高くなります。しかしそのページが転換率を持つ理由は、デザインの型ではありません。そのページが読者に「なぜ今この商品を選ぶのか」という根拠を届けられている構造にあります。型を取り出して当てはめても、その構造は再現されません。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「ヒートマップで離脱箇所を直し続ける」が終わらない理由</h2>
+
+  <p>転換率が変わらない状態が続くとき、次の施策としてヒートマップツールを入れる選択があります。離脱が多い箇所を特定し、その画像や文章を修正する。また確認する。また修正する——この作業が繰り返されますが、転換率の数字は動きません。</p>
+
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">市場が選んでいる解決策</td><td class="misrec-cell belief">ヒートマップで離脱が多い箇所を特定し、その部分の画像や文章を修正して転換率を改善する</td></tr>
+  </tbody>
+</table>
+  <div class="misrec-row">
+    <div class="misrec-cell label">残る問題</div>
+    <div class="misrec-cell truth">ヒートマップは「どこで離脱しているか」を示すが「なぜ離脱しているか」の答えは出ない。離脱の原因がページ全体の情報の流れにある場合、箇所ごとの修正を繰り返しても根本は変わらない</div>
+  </div>
+  </div>
+
+  <p>ヒートマップで特定できるのは「離脱が起きている場所」です。「その前のページの流れで、読者が自分ごとに受け取れる根拠を得られていない」という原因は、ヒートマップからは見えません。離脱している箇所の画像を差し替えることと、なぜその箇所で離脱が起きているかの原因を理解することは、別の問題です。箇所の修正の積み重ねが、全体の問題に到達しない理由がここにあります。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">デザイン外注が機能しない状態に共通する3つの構造</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">発注側がExcelの箇条書きでテキストを渡している</h3>
+
+  <p>デザイン会社への発注で最も多いパターンが、発注側が「伝えたいこと」をExcelの箇条書きにまとめ、それを渡すという流れです。デザイン会社はその箇条書きを元に、視覚的に整ったページを作ります。完成したページには、渡したテキストが綺麗に装飾されて並んでいます。</p>
+
+  <p>このパターンでは、「どの情報を・どの読者に・どの順番で届けるか」の判断が、発注側の箇条書きの並び順に委ねられています。その並び順に意図的な設計がなければ、デザイン会社がいくら丁寧に作っても、読者への情報の届き方は変わりません。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">修正のやりとりが「見た目の調整」で終わっている</h3>
+
+  <p>デザイン会社との修正のやりとりは、多くの場合「文字をもっと大きく」「この色を変えて」「バナーの余白を調整して」という見た目の層で進みます。この修正を何度繰り返しても、「読者に何をどの順番で届けるか」という問いは一度も登場しません。</p>
+
+  <p>修正が視覚の層だけで完結するとき、ページが読者に届ける情報の構造は最初の箇条書きから変わっていません。修正の回数が多いほど「頑張った」という感覚は生まれますが、転換率の問題に触れた修正は一度も行われていないことになります。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rum;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">納品物が「カタログ」として完成している</h3>
+
+  <p>リニューアル後のページに共通しているのが、商品の情報が整然と並んだ「視覚的に優れたカタログ」が完成していることです。写真の品質は上がり、フォントは整い、バナーは洗練されています。しかし読者が「今の自分にとってなぜこの商品が必要か」という根拠を得られる場所が、ページのどこにも存在していません。</p>
+
+  <p>カタログとして優れたページは、読者に情報を届けます。しかし読者が購買判断に至るためには、情報の受け取り方を決める文脈が先に必要です。その文脈がないページは、どれだけ美しいカタログに仕上がっていても、購買判断とは切り離されたところで完成しています。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">デザイン外注が転換率に結びつくケースと、結びつかないケースの違い</h2>
+
+  <p>デザイン外注で転換率が結びつかないケースに共通しているのは、「何を・誰に・どの順番で届けるか」の設計が存在しないまま発注が始まっていることです。デザイン会社が最善を尽くしても、設計図のない状態で作られたページは、読者への情報の届き方が設計されていません。</p>
+
+  <p>転換率に結びつくデザイン外注は、発注の前に「誰に・何を・どの順番で届けるか」が文書として存在しています。デザイン会社はその設計図を視覚的に補強する役割を担います。設計図がある状態でのデザイン外注は、読者の購買判断を前に進める力を持ちます。設計図がない状態でのデザイン外注は、どれだけ美しくても購買判断とは接続されないまま完成します。</p>
+
+  <div class="insight">
+    デザイン会社に依頼しても転換率が変わらない理由は、デザイン会社の実力ではありません。<br>
+    <em>発注の前に「誰に・何を・どの順番で届けるか」という設計図が存在していないこと</em>が、問題の所在です。
+  </div>
+
+  <p>以下の状態が続いているなら、デザイン外注の前に確認すべき問題が残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">デザインをリニューアルしたのに、転換率が変わらないかむしろ下がった</li>
+    <li data-num="✓">修正のやりとりが「文字の大きさ」「色の変更」「バナーの余白」だけで繰り返された</li>
+    <li data-num="✓">納品されたページは綺麗だが、「何が一番のウリか」が読者に伝わっている感覚がない</li>
+    <li data-num="✓">数字が変わらないと相談すると「広告費を増やしましょう」という提案しか出てこない</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">デザインの前に、止まっている場所を特定する。</div>
+    <div class="cta-block-sub">
+      デザインをリニューアルしても転換率が動かないなら、ページのどこかで読者が「この商品を選ぶ根拠」を受け取れていません。<br>
+      診断を受けた事業者の多くが、初めて「どこが問題だったか」を言語化できたと言います。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">ページ設計の問題を先に診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>EC業界の現場では長年、商品ページの転換率を改善する手段として「デザイン会社への外注」が標準的な選択肢として語られてきました。「楽天実績豊富」を謳う制作会社も、EC運営のコンサルも、支援メディアも、「まずはページを綺麗にしましょう」という方向でデザイン外注を推奨し続けています。その前提のまま費用を投じることが、「きれいなページが仕上がっても転換率が変わらない」状態を繰り返します。</p>
+
+  <p>転換率の差は、デザインの美しさの差ではありません。「何を・誰に・どの順番で届けるか」という設計がデザインの前に存在しているかどうかの差です。その設計がある状態でデザインに入ったとき、ページは初めて読者の購買判断と接続します。デザイン会社を変える前に、その設計が何かを確認することが、投じた費用が回収される条件になります。</p>
+
+
+</div><!-- /article-body -->
+
+<!-- 記事FAQ -->
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+
+  <div class="faq-item">
+    <div class="faq-q">デザイン会社に「売れるようにしてほしい」と依頼しても難しいのですか？</div>
+    <div class="faq-a">デザイン会社は「渡された情報を視覚的に整える」専門家です。ページに来た読者が購買判断に至るかどうかを左右する情報の構造や順序を設計することは、デザインの技術とは別の専門領域です。「売れるようにしてほしい」という依頼を受けても、デザイン会社はその業務範囲外の問題を解決することはできません。数字が上がらなかった責任はデザイン会社にあるのではなく、発注の構造に問題があります。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">より実績のある別のデザイン会社に乗り換えれば改善しますか？</div>
+    <div class="faq-a">デザイン会社を乗り換えることで、より洗練されたビジュアルが仕上がることはあります。しかし「何を・誰に・どの順番で届けるか」という設計図が存在しないまま発注する構造が変わらなければ、仕上がりの見た目が変わっても転換率の問題は残ったままになります。デザイン会社を変える前に、何が問題の場所なのかを確認することが先です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">ヒートマップを入れて改善すれば変わりますか？</div>
+    <div class="faq-a">ヒートマップは「どこで離脱しているか」を可視化するツールです。しかし「なぜそこで離脱しているか」の答えはヒートマップからは出てきません。離脱している箇所の画像を差し替えることと、なぜその箇所で離脱が起きているかを理解することは別の問題です。箇所ごとの部分最適より先に、ページ全体の情報の流れを問う必要があります。</div>
+  </div>
+</div><!-- /記事FAQ -->
+
+<!-- FAQ：推進型 -->
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+
+  <div class="faq-item">
+    <div class="faq-q">デザイン外注で転換率に結びつけるために、何が先に必要ですか？</div>
+    <div class="faq-a">デザイン発注の前に「誰に・何を・どの順番で届けるか」が文書として存在している状態を作ることです。その設計図があれば、デザイン会社はそれを視覚的に補強する役割を担えます。設計図がない状態では、どのデザイン会社もExcelの箇条書きを整えることしかできません。ただしその設計は、商品・読者・競合の三者を理解したうえで行う専門的な作業であり、発注側が単独で用意するのは難しい領域です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">今のページに設計図があるかどうか、どうやって判断できますか？</div>
+    <div class="faq-a">一つの確認方法は「なぜこの情報がここにあるのか」を各セクションで説明できるかどうかです。「競合のページにもあったから」「デザイン会社に勧められたから」という理由で配置されている情報が大半を占めるなら、設計図は存在していません。診断では、現在のページが読者の購買判断に対してどう機能しているかを確認することで、設計の有無と問題の場所を特定します。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">診断では、デザインと設計のどちらを確認しますか？</div>
+    <div class="faq-a">主に設計を確認します。読者がページのどこで「この商品を選ぶ根拠」を受け取れるか、その根拠が読者に届く順序になっているか、デザインが設計を補強しているか妨げているかを確認します。「どこを変えれば転換率が動くか」が初めて言語化できる状態になります。</div>
+  </div>
+
+</div><!-- /faq -->
+
+<!-- bottom CTA -->
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、止まっている場所を特定する。</div>
+  <div class="cta-block-sub">
+    デザインをリニューアルしても転換率が動かない場所が分かれば、何を変えればいいかが分かる。<br>
+    何を変えればいいかが分かれば、次のデザイン外注で費用が回収される順序になる。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<!-- author profile -->
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<!-- related -->
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/rakuten-shohin-page-design-yori-sekkei-ga-saki.html">楽天の商品ページはデザインより構成が先である理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-gazou-sashikaete-mo-hannou-kawaranu-riyu.html">楽天で商品画像を差し替えても反応が変わらない理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率（CVR）が上がらない本当の理由</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+
+</body>
+</html>
