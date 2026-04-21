@@ -847,24 +847,34 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
       <span class="hint">楽天・Amazon・Makuakeなど、診断したいページのURLをそのまま貼り付けてください</span>
     </div>
     <div class="fld">
-      <label>月間アクセス数（訪問数）</label>
+      <label>月間アクセス数（訪問数）<span class="req">必須</span></label>
       <div class="select-wrap">
-        <select name="pv">
-          <option value="" disabled selected>選択してください（任意）</option>
+        <select name="pv" id="pvSelect" required>
+          <option value="" disabled selected>選択してください</option>
           <option>1,000未満</option>
           <option>1,000〜3,000</option>
           <option>3,000〜10,000</option>
           <option>10,000〜30,000</option>
           <option>30,000以上</option>
-          <option>分からない</option>
+          <option>把握していない</option>
         </select>
       </div>
-      <span class="hint">RMSやGoogle Analyticsなどで確認できるおおよその数字で構いません</span>
+      <span class="hint">RMSやGoogle Analyticsで確認できるおおよその数字で構いません</span>
     </div>
     <div class="fld">
-      <label>現在のCVR（転換率）</label>
-      <input type="text" name="cvr" placeholder="例：2.3% または 1.8%">
-      <span class="hint">購入数 ÷ 訪問数 × 100 で計算できます。分からない場合は空欄で大丈夫です</span>
+      <label>現在のCVR（転換率）<span class="req">必須</span></label>
+      <div class="select-wrap">
+        <select name="cvr" id="cvrSelect" required>
+          <option value="" disabled selected>選択してください</option>
+          <option>1%未満</option>
+          <option>1〜2%</option>
+          <option>2〜3%</option>
+          <option>3〜5%</option>
+          <option>5%以上</option>
+          <option>把握していない</option>
+        </select>
+      </div>
+      <span class="hint">購入数 ÷ 訪問数 × 100 で計算できます。把握していない場合はそのまま選択してください</span>
     </div>
   </div>
 
@@ -932,20 +942,23 @@ const urlField = document.getElementById('urlField');
 const urlInput = document.getElementById('urlInput');
 const channelSelect = document.getElementById('channelSelect');
 const messagePlaceholder = document.getElementById('messagePlaceholder');
+const pvSelect = document.getElementById('pvSelect');
+const cvrSelect = document.getElementById('cvrSelect');
 
 function applyConsultType(type) {
   if (type === '事業相談') {
-    // 診断専用フィールドを非表示・必須解除
     diagFields.style.display = 'none';
     urlInput.required = false;
     channelSelect.required = false;
-    // テキストエリアのplaceholderを変更
+    pvSelect.required = false;
+    cvrSelect.required = false;
     messagePlaceholder.placeholder = '例：\n・現在の事業状況（チャネル・月商・課題感など）\n・相談したいテーマ（戦略・施策・方向性など）\n・その他、気になっていること';
   } else {
-    // ページ診断：フィールドを表示・必須に戻す
     diagFields.style.display = 'block';
     urlInput.required = true;
     channelSelect.required = true;
+    pvSelect.required = true;
+    cvrSelect.required = true;
     messagePlaceholder.placeholder = '例：\n・現在の課題（利益率が低い、売上が伸びない 等）\n・検討している施策（広告強化、クラファンなど）\n・今回相談したいこと';
   }
 }
@@ -1010,12 +1023,18 @@ document.getElementById('diagForm').addEventListener('submit', function(e) {
     const channel = channelSelect.value;
     const url     = urlInput.value.trim();
     const pv      = this.querySelector('select[name="pv"]').value;
-    const cvr     = this.querySelector('input[name="cvr"]').value.trim();
+    const cvr     = this.querySelector('select[name="cvr"]').value;
 
     if (!channel || !url) {
       btn.textContent = '診断・相談する';
       btn.disabled = false;
       alert('販売チャネルと商品ページURLは必須です。');
+      return;
+    }
+    if (!pv || !cvr) {
+      btn.textContent = '診断・相談する';
+      btn.disabled = false;
+      alert('月間アクセス数とCVRを選択してください。');
       return;
     }
 
