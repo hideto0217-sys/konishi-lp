@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/rakuten-seo-taisaku-dake-de-wa-uriage-agaranu.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楽天SEO対策だけでは売上が上がらない本当の理由｜小西マーケティング</title>
+<meta name="description" content="検索1ページ目に表示されている。アクセスは来ている。でも売れない。SEO対策が不十分なのではありません。SEOは人を連れてくるだけであり、連れてきた人の購買判断はページの構造が決めます。その区別が、売上との接続を妨げています。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --red: #b71c1c;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+
+.article-body { padding: 2.5rem 2.5rem; }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-row:first-of-type { border-top: none; }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.belief { background: var(--white); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+
+table.misrec-block { width: 100%; border-collapse: collapse; margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+table.misrec-block th.misrec-header { text-align: left; display: table-cell; width: 100%; }
+table.misrec-block td.misrec-cell.label { width: 40%; }
+
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-q { font-size: 1.0rem; color: var(--navy) !important; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; border-radius: 0; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+.prob-list li { background-color: #ffffff; }
+.article-body { background-color: #ffffff; }
+
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "楽天SEOで検索1位になれば売上は上がりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "検索1位になることでアクセスは増えます。しかしそのアクセスが転換率として現れるかどうかは、ページの構造が決めます。検索経由で来た読者は複数のページを比較しながら来ているため、ページが「なぜ今この商品を選ぶのか」という根拠を届けられていなければ、アクセスが増えても転換率は変わりません。SEOと転換率は、働く場所が違う別の問題です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SEOコンサルに依頼したのに売上が変わらないのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SEOコンサルが担うのはアクセスを増やすことです。転換率——ページに来た読者が購買判断に至るかどうか——はSEOコンサルの業務範囲外です。SEOコンサルの成果指標は検索順位やアクセス数であり、転換率の責任を負う構造になっていません。SEOへの投資が売上に結びつくためには、アクセスを受け止めるページの構造が先に整っている必要があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "キーワードをタイトルに詰め込むと転換率が下がるのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "キーワードを詰め込んだタイトルは、検索エンジンには有利に働く場合があります。しかし読者にとっては「何が売りたいのか分からない羅列」として届くことがあります。タイトルは読者がクリックするかどうかの最初の判断材料でもあります。検索エンジンへの最適化と、読者への届き方の最適化は、方向が食い違うことがあります。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "楽天SEO対策だけでは売上が上がらない本当の理由",
+  "description": "検索1ページ目に表示されている。アクセスは来ている。でも売れない。SEO対策が不十分なのではありません。SEOは人を連れてくるだけであり、連れてきた人の購買判断はページの構造が決めます。その区別が、売上との接続を妨げています。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/rakuten-seo-taisaku-dake-de-wa-uriage-agaranu.html",
+  "datePublished": "2026-04-21",
+  "dateModified": "2026-04-21",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<div class="hero">
+  <span class="hero-category">楽天商品ページ改善</span>
+  <h1 class="hero-title">楽天SEO対策だけでは<br>売上が上がらない本当の理由</h1>
+  <p class="hero-lead">毎日RMSの検索順位を確認する。自社商品が1ページ目に表示されているのを見て安堵する。しかし月末の入金金額を見て首をかしげる。アクセスはある。でも売れない。SEO対策が不十分なのではありません。SEOとは「人を連れてくる仕組み」であり、連れてきた人が購買判断をするかどうかは、ページの構造が決めます。EC100店舗超の停滞を見てきた経験から、その構造を解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
+</div>
+
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">アクセスはある。でも入金額が増えない</h2>
+
+  <p>検索順位の改善に月数万円を投じた。タイトルにキーワードを詰め込み、タグを最適化した。RMSのアクセス数の欄は確かに増えている。しかし転換率の欄は以前と変わらない。売上件数も変わらない。「もっとキーワードを追加すれば」「SEO対策が完全ではないから」という方向に向かい続けます。</p>
+
+  <p>一方、検索結果の数位下に表示されている競合が、売上件数とレビューの増加スピードで自社を追い越してきている。「SEOを強化すれば逆転できる」と思い、さらに広告費をかけてランキングを維持しようとする——この状態が続いているとき、問題の場所はSEOではなく別の場所にあります。</p>
+
+  <div class="insight">
+    SEO対策を強化してもアクセスが売上に変換されない状態は、SEOが不十分な問題ではありません。<br>
+    <em>SEOは「読者をページに連れてくる仕組み」です。連れてきた読者が購買判断をするかどうかは、ページの構造が決めます。この二つは、働く場所が根本的に違います。</em>
+  </div>
+
+  <p>SEOとページの転換率は、解決の手段が別の領域に属しています。SEOへの投資がアクセスを増やしても、ページが読者に「なぜ今この商品を選ぶのか」という根拠を届けられていなければ、増えたアクセスは転換しないまま通過します。穴の空いたバケツに水を増やしても、バケツは満たされません。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「SEOをさらに強化すれば売上は上がる」——この診断がズレている</h2>
+
+  <p>アクセスがあるのに売れない状態で最初に向かう解釈が「SEO対策がまだ不十分だから」です。より多くのキーワードを追加する、コンペティターの上位ページを分析する、タイトルのキーワード密度を上げる——SEO施策は拡張し続けます。しかし転換率は変わりません。</p>
+
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">見当違いになっている場所</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が思っている問題</td><td class="misrec-cell belief">SEO対策がまだ不完全だからアクセスが売上に転換しない。さらに強化すれば売上は上がる</td></tr>
+  </tbody>
+</table>
+  <div class="misrec-row">
+    <div class="misrec-cell label">実際の問題</div>
+    <div class="misrec-cell truth">アクセスが来ているのに転換しないのはSEOの問題ではなく、ページが読者に「なぜ今この商品を選ぶのか」という根拠を届けられていないページ構造の問題</div>
+  </div>
+  </div>
+
+  <p>SEOが改善されてアクセスが増えても、そのアクセスを受け止めるページの転換率が変わらなければ、売上は比例して増えません。増えるのは転換しないアクセスと、そのアクセスのために支払った広告費だけです。SEOを強化する前に、現在のアクセスがどれだけ転換しているかを確認することが先の問いになります。</p>
+
+  <div class="callout">
+    この状況が続く背景には、SEO業界の構造的な問題があります。SEOコンサル・SEOツール・SEO支援会社が成果として報告するのは検索順位とアクセス数です。転換率と売上への影響は、多くの場合報告の対象外です。顧客が「順位が上がった」という報告を受け取ったとき、売上が上がっていなくても「SEOは機能している」という認識になります。この認識のズレが、SEOへの投資が売上に結びつかない状態を見えにくくしています。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">なぜ「キーワードをタイトルに詰め込む」が転換率を下げるのか</h2>
+
+  <p>「楽天 〇〇 送料無料 あす楽 国産 大容量 〇〇g 3個セット 〇〇対応」——このようなキーワードを詰め込んだタイトルは、検索エンジンには認識されやすくなります。しかし読者には「何が売りたいのか分からない文字の羅列」として届きます。</p>
+
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">原因の履き違え</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">事業者が信じている原因</td><td class="misrec-cell belief">キーワードをタイトルに詰め込むほど検索にヒットしやすくなり、アクセスも転換率も上がる</td></tr>
+  </tbody>
+</table>
+  <div class="misrec-row">
+    <div class="misrec-cell label">実際の原因</div>
+    <div class="misrec-cell truth">キーワードの羅列は検索エンジンへの最適化であり、読者への届き方とは方向が食い違うことがある。タイトルは読者がクリックするかどうかの最初の判断材料でもあり、羅列が読者の関心を引けない場合、クリック率が下がる</div>
+  </div>
+  </div>
+
+  <p>楽天のタイトルはSEOのために後半にキーワードを詰め込む構造が一般的です。これはSEO仕様として正しい判断ですが、前半の部分が読者のクリックを引き出せているかどうかは別の問題です。タイトルが検索エンジンに対して最適化されていても、クリックした読者がページで「選ぶ根拠」を受け取れなければ転換率は上がりません。SEO最適化とクリック率最適化、そして転換率は、それぞれ別の要素です。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「RPP広告を増やしてランキングを維持する」が利益を削る構造</h2>
+
+  <p>SEOだけでは順位が維持できないとき、RPP広告の予算を上げてランキングを補強する方向に向かいます。広告費が増える。アクセスは増える。しかし転換率は変わらない。広告費の増加分が利益を圧迫し、売れれば売れるほど手元に残る金額が減る——このドーピング状態に入ります。</p>
+
+  <table class="misrec-block">
+  <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え</th></tr></thead>
+  <tbody>
+      <tr><td class="misrec-cell label">市場が選んでいる解決策</td><td class="misrec-cell belief">SEOとRPP広告を組み合わせてアクセスを最大化し、強引にランキングを維持して売上を確保する</td></tr>
+  </tbody>
+</table>
+  <div class="misrec-row">
+    <div class="misrec-cell label">残る問題</div>
+    <div class="misrec-cell truth">転換率が低いまま広告費を増やすと、転換しないアクセスへの広告費が積み上がる。広告を止めた瞬間に売上が消滅するドーピング状態になり、ページ自体の転換率は改善されないまま</div>
+  </div>
+  </div>
+
+  <p>RPP広告はアクセスを増やします。しかしアクセスが転換率に変わるかどうかはページの問題です。転換率が低いページに広告費を投じることは、穴の空いたバケツに水をより速く注ぐことと同じです。バケツが満たされるためには、穴を塞ぐことが先です。広告を止めた瞬間に売上が消滅するなら、広告がページの転換率の問題を外から補っていたということです。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">SEO強化が売上に結びつかない店舗に共通する3つの状態</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">SEOへの投資が増え、ページは数年間更新されていない</h3>
+
+  <p>SEOコンサルへの月額費用、SEOツールの利用料、広告費——SEO関連への投資が積み上がる一方で、商品ページ自体は数年前から更新されていない、という状態がよく見られます。アクセスを連れてくる仕組みへの投資は続いているが、連れてきた読者を受け止めるページへの投資はゼロです。</p>
+
+  <p>この配分が続くとき、アクセスが増えても転換率が変わらない状態が固定されます。SEOへの投資とページの改善への投資は、売上への影響として別の問題です。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">検索順位の変動に一喜一憂し、アルゴリズムのせいにしている</h3>
+
+  <p>楽天のアルゴリズム変更で検索順位が落ちるたびに不安になり、次の変更で上がると安堵する——この状態は、売上の制御を外部の変動に委ねていることを意味しています。アルゴリズムは変わり続けます。その変動に一喜一憂している間、転換率の問題は手つかずのままになっています。</p>
+
+  <p>アルゴリズムの変動への耐性は、転換率が一定の水準にあるときに生まれます。転換率が高いページは、検索順位が多少変動しても、来たアクセスを転換させる力があります。転換率の低いページは、順位が上がっても下がっても、売上の絶対値への影響が小さくなります。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">ビッグキーワードを追いかけ、深い悩みを持つ読者を取りこぼしている</h3>
+
+  <p>検索ボリュームの大きいキーワードを優先するSEO施策は、多くのアクセスを集めることができます。しかし検索ボリュームが大きいキーワードで来る読者は、まだ「何を買うか決めていない段階」にいることが多く、複数のページを比較しながら来ています。その読者が価格で比較を始めたとき、ページが価格以外の根拠を届けられなければ転換は起きません。</p>
+
+  <p>一方、「〇〇が原因で〇〇に悩んでいる」という具体的な悩みに関連するキーワードで来る読者は、問題への関心が具体化しています。その読者に対してページが接続できているとき、転換率は高くなります。ビッグキーワードの追求が、悩みの深い読者を取りこぼす方向に働いていることがあります。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">SEOが売上に結びつくページと、アクセスが空回りするページの違い</h2>
+
+  <p>アクセスが空回りするページは、SEOの投資が増え続けています。しかしそのアクセスを受け止めるページの転換率は、SEOへの投資が増えることで改善されません。アクセスと転換率は、別の問題として存在しています。</p>
+
+  <p>SEOが売上に結びつくページは、転換率が一定の水準にある状態でアクセスが増えています。転換率が担保されている状態でアクセスを増やすと、売上はアクセスに比例して増えます。SEOへの投資が回収される構造になっています。転換率が低い状態でSEOに投資しても、増えたアクセスは転換しないまま通過します。</p>
+
+  <div class="insight">
+    SEOは「読者を連れてくる仕組み」です。<br>
+    <em>連れてきた読者が購買判断をするかどうかは、ページの構造が決めます。SEOへの投資が売上に変わるためには、転換率が先に問われます。</em>
+  </div>
+
+  <p>以下の状態が続いているなら、SEO強化の前に確認すべき問題が残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">アクセス数は増えているのに、転換率が変わらないか下がっている</li>
+    <li data-num="✓">SEOコンサルへの費用が売上として回収できていない</li>
+    <li data-num="✓">RPP広告を止めると売上が消滅する状態になっている</li>
+    <li data-num="✓">商品ページが数年間更新されていないままSEOへの投資が続いている</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">アクセスが転換率に変わらない場所を特定する。</div>
+    <div class="cta-block-sub">
+      SEO対策を強化してもアクセスが売上に変わらないなら、ページのどこかで読者が「選ぶ根拠」を受け取れていません。<br>
+      診断を受けた事業者の多くが、初めて「どこが問題だったか」を言語化できたと言います。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">アクセスが売上に変わらない原因を診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>楽天のEC運営の現場では長年、売上を伸ばす手段として「SEO対策の強化」「検索順位の改善」「アクセス数の最大化」が語られてきました。SEOコンサルも、SEOツールの提供会社も、楽天の運営ノウハウを発信するメディアも、「まずSEOを整えてアクセスを増やしましょう」という方向で提案し続けています。その前提のままSEOへの投資を積み上げることが、「アクセスはあるのに売上が変わらない」状態と「広告を止めると売上が消滅するドーピング状態」を固定します。</p>
+
+  <p>SEOが売上に結びつかない理由は、SEO対策の精度の差ではありません。アクセスを受け止めるページの転換率が先に整っているかどうかの差です。転換率が一定の水準にある状態でSEOへの投資を加えたとき、アクセスは売上として変換されます。その順序が逆になっているとき、SEOへの投資は穴の空いたバケツへの水として消えていきます。</p>
+
+
+</div><!-- /article-body -->
+
+<!-- 記事FAQ -->
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+
+  <div class="faq-item">
+    <div class="faq-q">楽天SEOで検索1位になれば売上は上がりますか？</div>
+    <div class="faq-a">検索1位になることでアクセスは増えます。しかしそのアクセスが転換率として現れるかどうかは、ページの構造が決めます。検索経由で来た読者は複数のページを比較しながら来ているため、ページが「なぜ今この商品を選ぶのか」という根拠を届けられていなければ、アクセスが増えても転換率は変わりません。SEOと転換率は、働く場所が違う別の問題です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">SEOコンサルに依頼したのに売上が変わらないのはなぜですか？</div>
+    <div class="faq-a">SEOコンサルが担うのはアクセスを増やすことです。転換率——ページに来た読者が購買判断に至るかどうか——はSEOコンサルの業務範囲外です。SEOコンサルの成果指標は検索順位やアクセス数であり、転換率の責任を負う構造になっていません。SEOへの投資が売上に結びつくためには、アクセスを受け止めるページの構造が先に整っている必要があります。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">キーワードをタイトルに詰め込むと転換率が下がるのはなぜですか？</div>
+    <div class="faq-a">キーワードを詰め込んだタイトルは、検索エンジンには有利に働く場合があります。しかし読者にとっては「何が売りたいのか分からない羅列」として届くことがあります。タイトルは読者がクリックするかどうかの最初の判断材料でもあります。検索エンジンへの最適化と、読者への届き方の最適化は、方向が食い違うことがあります。</div>
+  </div>
+</div><!-- /記事FAQ -->
+
+<!-- FAQ：推進型 -->
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+
+  <div class="faq-item">
+    <div class="faq-q">SEOへの投資が売上に変わるために、何が先に必要ですか？</div>
+    <div class="faq-a">SEOへの投資が売上に変わるためには、アクセスを受け止めるページの転換率が先に一定の水準にある必要があります。転換率が担保されている状態でアクセスを増やすと、売上はアクセスに比例して増えます。現在のアクセスの中で転換している割合を確認し、転換率の問題がどこにあるかを特定することが先です。ただしその特定は、ページの構造を理解した専門的な作業になります。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">SEOと転換率の改善、どちらを先に取り組むべきですか？</div>
+    <div class="faq-a">転換率が低い状態ではSEOへの投資の回収効率が低くなります。現在のアクセスでの転換率が改善されれば、既存のアクセスから得られる売上が増えます。転換率の改善を先に行い、その後SEOへの投資を加えることで、投資が売上として変換される構造になります。どちらを先にするかは、現在の転換率の水準によって判断が変わります。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">診断では、アクセスが転換しない原因のどこを確認しますか？</div>
+    <div class="faq-a">ページのどこで読者が「この商品を選ぶ根拠」を受け取れるか、検索経由で来た読者の状況にページが応答できているか、アクセスと転換率の差がどこから来ているかを確認します。「どこを変えればアクセスが売上として変換されるか」が初めて言語化できる状態になります。</div>
+  </div>
+
+</div><!-- /faq -->
+
+<!-- bottom CTA -->
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、止まっている場所を特定する。</div>
+  <div class="cta-block-sub">
+    アクセスが売上に変わらない場所が分かれば、SEOへの投資が回収される順序が分かる。<br>
+    何を先に変えればいいかが分かれば、広告費やSEOコンサル費の前にページで転換率が動き始める。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<!-- author profile -->
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<!-- related -->
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率（CVR）が上がらない本当の理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-access-aru-noni-urenai-kyotsuten.html">楽天でアクセスはあるのに売れない店舗に共通する課題</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-konsaru-ni-makasete-mo-kazu-kawaranu.html">楽天コンサルに任せても数字が変わらない構造的な理由</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+
+</body>
+</html>
