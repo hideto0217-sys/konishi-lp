@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/rakuten-shohin-page-joho-ryo-fuyasu-to-urenaku-naru.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楽天商品ページの情報量を増やすと売れなくなる理由｜小西マーケティング</title>
+<meta name="description" content="ECCに「情報が足りない」と言われて足した。苦労してデザイナーに整えてもらった。ヒートマップを見るとその箇所が真っ青になっていた。情報が足りないのではありません。足した情報が、読者の決断を遠ざけています。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+.article-body { padding: 2.5rem 2.5rem; background: var(--white); }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; background: #fff; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "楽天のECCに「情報量が足りない」と言われて足したのに、なぜ売れないのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "楽天ECCが「情報量が足りない」と指摘するとき、それはページの構成ではなく情報の網羅性の観点からの指導であることがほとんどです。しかし「情報の量」と「読者が購買判断に至る構造」は別の問題です。情報を追加することで、読者が処理すべき情報が増え、決断が先送りされることがあります。情報量の問題ではなく、その情報が読者の購買判断にどう機能しているかが問われます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "「どこを削ればいいかの判断基準」はどう考えればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "削除の判断基準は「情報の量」ではなく「読者の購買判断への貢献」です。読者が「この商品を選ぶ根拠」を形成する過程で必要な情報は残り、そうでない情報は読者の決断を遠ざけます。ただしその判断は、読者がどういう状態でページに来ているか・何を必要としているかを理解した状態で行う必要があります。削除の判断は専門的な作業を要します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "楽天の「情報量が多いページが売れる」という認識は間違いですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "情報量と転換率の関係は単純ではありません。情報量が多いページが売れていた時代は、読者が情報を持てない状況でスペックの比較がそのまま購買判断に繋がっていた時期です。現在は読者が他のページや口コミ・レビューで情報を補完できる環境になっており、ページの情報量より「自分ごととして受け取れるかどうか」が購買判断により大きく影響するようになっています。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "楽天商品ページの情報量を増やすと売れなくなる理由",
+  "description": "ECCに「情報が足りない」と言われて足した。苦労してデザイナーに整えてもらった。ヒートマップを見るとその箇所が真っ青になっていた。情報が足りないのではありません。足した情報が、読者の決断を遠ざけています。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/rakuten-shohin-page-joho-ryo-fuyasu-to-urenaku-naru.html",
+  "datePublished": "2026-04-21",
+  "dateModified": "2026-04-21",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<div class="hero">
+  <span class="hero-category">楽天商品ページ改善</span>
+  <h1 class="hero-title">楽天商品ページの情報量を増やすと<br>売れなくなる理由</h1>
+  <p class="hero-lead">楽天ECCに「情報が足りない」と言われて足した。デザイナーに整えてもらった。ヒートマップを確認すると、その箇所が真っ青になって離脱されているか、高速スクロールで読み飛ばされていた。情報が足りないのではありません。足された情報が、読者の決断を遠ざけています。EC100店舗超の停滞を見てきた経験から、その構造を解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
+</div>
+
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「増改築を繰り返した温泉旅館」になっているページから、決断は生まれない</h2>
+
+  <p>競合に負けじとスペックの説明を追加する。ECCに言われた素材へのこだわりページを作る。楽天スーパーSALEのたびにバナーを上に足す。終了したイベントのバナーも「削ると売上が落ちるかもしれない」と怖くて消せない。気づけばスマホで数十回スクロールしても終わらない長大なページになっていた。</p>
+
+  <p>ヒートマップを入れると現実が見える。追加した「こだわりの素材説明」の箇所は真っ青。「店長からのご挨拶」は誰も読んでいない。商品本来のファーストビューは、イベントバナーの下に埋もれている——この状態になっているページに共通した構造があります。</p>
+
+  <div class="insight">
+    情報量を増やすほど転換率が下がる状態は、情報の質の問題でも整理の問題でもありません。<br>
+    <em>情報が増えるほど、読者が処理すべき判断の材料が増えます。処理しきれない量の情報に直面した読者は「今すぐ決めなくていい」という先送りを選びます。</em>
+  </div>
+
+  <p>読者がページで行っているのは「情報を受け取ること」ではありません。「自分がこの商品を選ぶかどうか」という判断です。その判断のために必要な情報と、そうでない情報が混在しているとき、必要な情報が届く前に読者は処理限界を超えて離脱します。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「情報をもっと足せば伝わる」——この診断がズレている</h2>
+
+  <p>転換率が上がらないとき、「商品の良さがまだ十分に伝わっていない」という解釈が生まれます。素材の説明を増やす、受賞歴を追加する、FAQを充実させる、レビューの件数を増やす——対策は積み上がりますが、転換率は改善しません。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">見当違いになっている場所</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">事業者が思っている問題</div>
+      <div class="misrec-cell truth">商品の魅力がまだ十分に伝わりきっていないから転換率が低い。情報を追加すれば読者に伝わり購買されるはず</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">「この商品を選ぶ根拠」が読者に届いていない状態のまま、処理しきれない量の情報が追加されている。情報量が増えるほど決断の先送りが起きている</div>
+    </div>
+  </div>
+
+  <p>読者が「この商品を選ぶ根拠」を受け取っていない状態で10個の情報が届いても、処理すべき判断の材料が10個増えるだけです。「もっとよく調べてから決めよう」という先送りの動機が生まれます。情報の量を増やすことは、納得の材料を増やすことはできますが、「今の自分にこれが必要だ」という確信を生む文脈を作ることはできません。</p>
+
+  <div class="callout">
+    「情報量を増やしましょう」という指導が定着している背景には、楽天の指導慣行に構造的な問題があります。楽天ECC（コンサルタント）は「ページに情報が不足している」という指摘をするとき、読者の購買心理への影響ではなく、情報の網羅性という観点から指導します。その指導に従って情報を追加しても、転換率の問題が解決されないのは、問題の場所が異なるからです。ECCの指導が売上の責任を負う構造になっていないことも、この状態を固定する要因の一つです。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">なぜ「競合の長いページを真似て情報を詰め込む」と自社だけ売れないのか</h2>
+
+  <p>ランキング上位の競合ページを開くと、たしかに長くて情報量が多い。「同じくらい情報を増やせば同じくらい売れるはず」という論理で自社ページも増やしていきます。しかし競合と同じ量の情報を持っても、転換率は競合の半分以下に留まります。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の履き違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">事業者が信じている原因</div>
+      <div class="misrec-cell truth">競合の長いページが売れているのは情報量が多いから。同じ量の情報を揃えれば同じように売れるはず</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">競合ページが売れているのは情報の量のためではなく、前半で読者が「選ぶ根拠」を受け取れる構造になっているから。その構造がないまま情報量だけを真似ても、読者の決断を遠ざける情報が増えるだけ</div>
+    </div>
+  </div>
+
+  <p>売れているページの情報量が多いのは「多いから売れている」のではなく、「前半で読者が選ぶ文脈を受け取った後に、その文脈を補強する情報が続いているから」です。その文脈なしで同じ量の情報を配置すると、読者は前半から処理しきれない情報の壁に直面します。競合と同じ情報量でも、文脈の有無によって読者への届き方が根本的に異なります。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「箇条書きや図解でわかりやすく整理する」が根本を変えない理由</h2>
+
+  <p>情報量が多すぎると感じたとき、「見づらいから伝わらないのかもしれない」という解釈に向かいます。箇条書き・アイコン・図解・インフォグラフィック——デザイナーに依頼して整理します。見やすくなりました。しかし転換率は変わりません。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">市場が選んでいる解決策</div>
+      <div class="misrec-cell truth">箇条書きや図解・アイコンを使って情報を視覚的に整理し、読者が見やすい状態にする</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">情報の「見せ方」は改善されても、「読者がその情報を受け取る理由」は変わらない。「選ぶ根拠」を持っていない状態の読者には、綺麗に整理された情報もスルーされる</div>
+    </div>
+  </div>
+
+  <p>整理された情報は、「受け取る理由を持っている読者」に届く速度を上げます。しかし「受け取る理由を持っていない読者」に対しては、整理されていてもスルーされます。デザインは情報の届き方を改善しますが、情報を受け取る動機を作ることはできません。見やすくなっても転換率が変わらないとき、問題は情報の見せ方ではなく、情報を受け取る文脈の有無です。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">情報を追加するほど転換率が下がる店舗に共通する3つの状態</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「削ると売上が落ちる恐怖」から何も削除できない</h3>
+
+  <p>終了したイベントのバナーが残っている。数年前に作ったコンテンツが誰も触れないまま放置されている。「削ったせいで売上が落ちたらどうしよう」という恐怖から、誰もページの要素を減らせない状態があります。</p>
+
+  <p>この恐怖は理解できますが、「削ったから売上が落ちた」という因果関係が確認されたことがない場合がほとんどです。結果として、関連性のない情報が蓄積し続け、ページ全体として「何が最も重要な情報か」が読者に伝わらない状態になります。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">楽天イベントのたびにバナーが増え、商品の訴求が埋もれている</h3>
+
+  <p>楽天スーパーSALE・お買い物マラソン・ポイント変倍キャンペーン——イベントのたびに告知バナーが上部に追加されます。その結果、商品本来のファーストビューとコンセプトがバナーの下に埋もれていきます。</p>
+
+  <p>ページを開いた読者が最初に目にするのは「どのイベントが開催中か」という情報です。そのページが何の商品を売っているのかよりも、セールの告知が先に届きます。ページの最初に届く情報が、読者の購買判断の枠組みを決めます。セール告知が最初に届くとき、読者はセール価格とポイントで判断する枠組みに入ります。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">ページに書いてあることを顧客から聞かれ続けている</h3>
+
+  <p>「サイズ感はどうですか？」「いつ届きますか？」——ページに明記している内容が、顧客から絶え間なく問い合わせとして届きます。これは「ページに情報が書いてあるが、読者がページを読んでいない」ことのサインです。</p>
+
+  <p>読者がページを読まない理由は、情報量が多すぎて「自分が必要な情報がどこにあるか」を探す気力が失われているからです。情報量が増えるほど、目的の情報を見つけることが難しくなり、問い合わせという形で直接聞く行動が増えます。問い合わせが多いことは、ページが読者に届いていないことのサインです。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">情報量と転換率が連動するページと、逆行するページの違い</h2>
+
+  <p>情報量が増えるほど転換率が下がるページは、情報の配置に「読者の購買判断を前に進める順序」がありません。読者が前半で処理しきれない量の情報に直面し、「選ぶ根拠」を受け取る前に離脱します。後半に価値ある情報があっても、その前に処理限界を超えています。</p>
+
+  <p>情報量があっても転換率が維持されるページは、前半で読者が「この商品を選ぶ根拠」を受け取れる構造があります。その根拠が届いた後に続く情報は「選んでいいという確認」として機能します。同じ情報量でも、前半の構造によって読者への届き方が根本的に変わります。</p>
+
+  <div class="insight">
+    情報量を増やすほど転換率が下がる理由は、情報の質の問題ではありません。<br>
+    <em>「選ぶ根拠」を届ける文脈がページの前半に存在しているかどうかが、情報量と転換率の関係を決めます。</em>
+  </div>
+
+  <p>以下の状態が続いているなら、情報量を変える前に確認すべき問題が残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">情報を追加するたびに転換率が改善されない、あるいは下がっている</li>
+    <li data-num="✓">ヒートマップで追加したセクションが真っ青になって離脱・読み飛ばされている</li>
+    <li data-num="✓">楽天イベントのバナーが積み重なり、商品の訴求がファーストビューから消えている</li>
+    <li data-num="✓">ページに書いてある内容を顧客から問い合わせで聞かれ続けている</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">情報が決断を遠ざけている場所を特定する。</div>
+    <div class="cta-block-sub">
+      情報を足しても転換率が動かないなら、ページのどこかで読者が「選ぶ根拠」を受け取れていません。<br>
+      診断を受けた事業者の多くが、初めて「どこが問題だったか」を言語化できたと言います。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">情報量が転換率を下げている原因を診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>楽天の現場では長年、「ページの情報量が多いほど親切であり売れる」という方向で語られてきました。楽天ECCも、EC制作会社も、楽天運営のノウハウを発信するメディアも、「情報を充実させましょう」「スクロールが長いほど読者に伝わる」という方向で提案し続けています。その前提のまま情報を追加し続けることが、「足すほど転換率が下がる」状態と「何が一番のウリか分からない増改築状態のページ」を固定します。</p>
+
+  <p>情報量と転換率が逆行している理由は、情報の質の差ではありません。「選ぶ根拠」を届ける文脈がページの前半に存在しているかどうかの差です。その文脈があって初めて、後に続く情報は読者の購買判断を前に進める役割を担います。文脈がない状態での情報追加は、読者の決断をさらに遠ざけます。</p>
+
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">楽天のECCに「情報量が足りない」と言われて足したのに、なぜ売れないのですか？</div>
+    <div class="faq-a">楽天ECCが「情報量が足りない」と指摘するとき、それはページの構成ではなく情報の網羅性の観点からの指導であることがほとんどです。しかし「情報の量」と「読者が購買判断に至る構造」は別の問題です。情報を追加することで、読者が処理すべき情報が増え、決断が先送りされることがあります。情報量の問題ではなく、その情報が読者の購買判断にどう機能しているかが問われます。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">「どこを削ればいいかの判断基準」はどう考えればいいですか？</div>
+    <div class="faq-a">削除の判断基準は「情報の量」ではなく「読者の購買判断への貢献」です。読者が「この商品を選ぶ根拠」を形成する過程で必要な情報は残り、そうでない情報は読者の決断を遠ざけます。ただしその判断は、読者がどういう状態でページに来ているか・何を必要としているかを理解した状態で行う必要があります。削除の判断は専門的な作業を要します。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">楽天の「情報量が多いページが売れる」という認識は間違いですか？</div>
+    <div class="faq-a">情報量と転換率の関係は単純ではありません。情報量が多いページが売れていた時代は、読者が情報を持てない状況でスペックの比較がそのまま購買判断に繋がっていた時期です。現在は読者が他のページや口コミ・レビューで情報を補完できる環境になっており、ページの情報量より「自分ごととして受け取れるかどうか」が購買判断により大きく影響するようになっています。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">情報量を減らせば転換率は上がりますか？</div>
+    <div class="faq-a">情報を削ることが目的ではありません。「読者の購買判断に貢献している情報」と「そうでない情報」を区別することが問われています。前半に「選ぶ根拠」を届ける文脈があって、その後に続く情報が「確認として機能している」状態が目標です。単純に削ることではなく、何を残して何の位置に置くかが重要です。その判断は専門的な設計作業を要します。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">楽天イベントのバナーをファーストビューに置くことは問題ですか？</div>
+    <div class="faq-a">イベント告知がファーストビューを占めているとき、読者が最初に受け取る情報は「このページでセールが開催されている」という事実です。この状態では、読者はセール価格とポイントで判断する枠組みに入ります。商品本来の価値を先に届けたい場合、イベント告知の位置とファーストビューの構成は相互に影響します。どちらを優先するかは、そのページの目的によります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、情報量が転換率に影響している原因のどこを確認しますか？</div>
+    <div class="faq-a">ページの前半で読者が「選ぶ根拠」を受け取れているか、情報の量と配置が読者の決断を前に進めているか遠ざけているか、ヒートマップが示す離脱箇所の原因が情報の前後関係にどう影響しているかを確認します。「何を残して何を削れば転換率が動くか」が初めて言語化できる状態になります。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、止まっている場所を特定する。</div>
+  <div class="cta-block-sub">
+    情報量が転換率を下げている場所が分かれば、何を変えればいいかが分かる。<br>
+    何を変えればいいかが分かれば、情報を足すことなく転換率が動き始める。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/ec-shohin-page-joho-tareba-ureru-hassou-machigai.html">ECの商品ページで「情報を足せばより売れる」という発想が間違っている理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率（CVR）が上がらない本当の理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-shohin-page-design-yori-sekkei-ga-saki.html">楽天の商品ページはデザインより構成が先である理由</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
