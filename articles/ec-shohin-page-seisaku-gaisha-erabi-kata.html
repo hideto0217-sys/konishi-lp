@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/ec-shohin-page-seisaku-gaisha-erabi-kata.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECの商品ページ制作会社の選び方で失敗しないための基準｜小西マーケティング</title>
+<meta name="description" content="複数社のポートフォリオを見比べている。どこも「売上アップ実績多数」と書いてある。過去に失敗した経験もある。デザインが綺麗なだけでは売れないとは分かっている——では何を基準に選べばいいのか。その答えは、ポートフォリオの中にはありません。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+.article-body { padding: 2.5rem 2.5rem; background: var(--white); }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+.criteria-block { margin: 2rem 0; }
+.criteria-item { border: 1px solid var(--gray-200); margin-bottom: 1rem; overflow: hidden; }
+.criteria-head { background: var(--gray-100); padding: .75rem 1.25rem; display: flex; align-items: center; gap: .75rem; border-bottom: 1px solid var(--gray-200); }
+.criteria-num { min-width: 2rem; height: 2rem; background: var(--navy); color: var(--white); font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border-radius: 2px; }
+.criteria-title { font-size: 1rem; font-weight: 700; color: var(--navy); }
+.criteria-body { padding: 1rem 1.25rem; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.criteria-q { background: var(--off-white); border-left: 3px solid var(--gold); padding: .6rem 1rem; margin-top: .75rem; font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; background: #fff; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "「売上アップ実績多数」という会社を選べば安心ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「売上アップ実績多数」という実績は、どういう条件でどのように計測されたかによって意味が変わります。デザインを刷新した後にアクセスが増えたことを「売上アップ」と呼んでいる場合もあります。転換率の改善実績として明確に提示されているか、その改善がどのくらいの期間継続したかを確認することが先です。また、転換率の改善はページの構成によって決まる部分が大きく、デザインだけでは説明できない場合があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "「コピーライティングも対応します」という会社を選べば原稿の問題は解決しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "コピーライティングまで担当する会社を選ぶことで、自社で原稿を用意する手間は省けます。しかしそのコピーが「自社の読者の状況を深く理解した状態で書かれているか」は、担当者の専門性と調査の有無によって変わります。テンプレートに当てはめて効率的に書かれた原稿と、読者の購買判断に接続する根拠から書かれた原稿は、転換率への貢献が異なります。「コピーライティング対応」が転換率の改善を保証することはありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "制作会社に「転換率の改善保証」を求めることはできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "転換率の保証は、多くの制作会社が提供していません。制作会社のビジネスモデルは「デザインデータの納品」で売上が立つ構造であり、転換率の改善は納品後の読者の反応によって決まる部分があるため、保証の約束が難しい性質があります。ただし「転換率の改善を目的として設計するか」という姿勢は、依頼前の確認で見えてきます。転換率の問いに対して具体的な答えが出てくる会社と、出てこない会社の差が判断材料になります。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ECの商品ページ制作会社の選び方で失敗しないための基準",
+  "description": "複数社のポートフォリオを見比べている。どこも「売上アップ実績多数」と書いてある。過去に失敗した経験もある。デザインが綺麗なだけでは売れないとは分かっている——では何を基準に選べばいいのか。その答えは、ポートフォリオの中にはありません。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/ec-shohin-page-seisaku-gaisha-erabi-kata.html",
+  "datePublished": "2026-04-21",
+  "dateModified": "2026-04-21",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<div class="hero">
+  <span class="hero-category">EC 商品ページ改善</span>
+  <h1 class="hero-title">ECの商品ページ制作会社の<br>選び方で失敗しないための基準</h1>
+  <p class="hero-lead">複数社のポートフォリオを見比べている。どこのホームページにも「売上アップ実績多数」「売れるLP作ります」と書いてある。過去に一度、数十万円を払ってデザインをリニューアルしたのに転換率が変わらなかった経験がある。デザインが綺麗なだけでは売れないとは分かっている——ではどこを基準に選べばいいのか。その答えはポートフォリオの中にはありません。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
+</div>
+
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「どこも同じに見える」という感覚が正しい理由</h2>
+
+  <p>何社ものポートフォリオのタブを開いたままため息をつく——その「どこも同じに見える」という感覚は、ある意味では正しいものです。</p>
+
+  <p>EC向けのLP制作会社が提示できる「違い」の多くは、デザインのスタイル・制作件数・対応プラットフォーム・価格帯・サポート体制です。これらは確かに会社によって異なります。しかし転換率に影響する要素の差は、これらの比較項目の外側にあります。デザインの仕上がりと転換率の改善は、別の問いに答えています。ポートフォリオを見ても判断できない理由がここにあります。</p>
+
+  <div class="insight">
+    制作会社選びで失敗が繰り返される理由は、選ぶ側の判断基準の問題ではありません。<br>
+    <em>「制作会社に依頼すれば転換率が上がる」という前提そのものが、多くの場合成立しません。制作会社は「情報を美しく整理するプロ」であり、「読者が購買判断に至る構造を設計するプロ」とは別の専門性を持っています。</em>
+  </div>
+
+  <p>この区別を持たない状態で「より良い制作会社を探す」という方向に向かうとき、探している答えが存在しない場所を探し続けることになります。ポートフォリオでは判断できないものを、ポートフォリオを見比べることで判断しようとしているからです。</p>
+
+  <div class="callout">
+    「どこも同じに見える」と感じるとき、実際に多くの制作会社が提供する専門性は同じ種類のものです。デザインと制作作業の専門性です。その中で転換率の改善まで担える専門性を持つ存在を探すとき、比較すべき項目が変わります。ポートフォリオの「見た目」ではなく、「どの問いに答えられるか」が判断軸になります。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">ポートフォリオと実績数で選ぶことが繰り返し失敗する構造</h2>
+
+  <p>「業界実績豊富」「制作件数〇〇社以上」「楽天特化」——これらの情報から判断できることと、できないことがあります。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">ポートフォリオと実績数で判断できることとできないこと</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">判断できること</div>
+      <div class="misrec-cell truth">デザインの品質・プラットフォームへの対応力・制作の安定性・担当者のコミュニケーション力</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">判断できないこと</div>
+      <div class="misrec-cell truth">ページが読者に届く構造の設計力・転換率の改善に責任を持つ仕組みの有無・読者の購買判断に接続する原稿を書く専門性</div>
+    </div>
+  </div>
+
+  <p>「制作件数が多い＝売れるページを作れる」という等式は成立しません。多くのページを制作した実績は、「多くのページを納品した」という実績です。そのページが転換率を改善したかどうかは、別の情報です。「売上アップ実績多数」という記載も、その売上アップが転換率の改善によるものか、アクセスの増加によるものかを確認しないと意味が変わります。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「コピーライティング込みのお任せプラン」を選べば解決するか</h2>
+
+  <p>「自社に文章を書ける人材がいない」という課題への解決として「コピーライティング込み」のプランを選ぶことがあります。自社でExcelの箇条書きを渡す必要がなくなる点は改善されます。しかし転換率の問題が解決されるかどうかは、別の確認が必要です。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">「コピーライティング込み」で担われること・担われないこと</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">担われること</div>
+      <div class="misrec-cell truth">原稿を自社で用意する手間の省略・プロが書いた文章のページへの配置</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">担われないこと（確認が必要）</div>
+      <div class="misrec-cell truth">自社の読者の状況を深くリサーチした状態での原稿作成・読者の購買判断に接続する文脈の設計・転換率の改善を目的とした構成の設計</div>
+    </div>
+  </div>
+
+  <p>制作会社が効率的に納品するために書くコピーは、テンプレートに当てはめて作られることがあります。その原稿は「どこかで見たような薄い内容」として届くことがあります。一方、自社の読者の購買心理を深く理解した状態で書かれた原稿は、転換率に直接影響します。「コピーライティング込み」という言葉の中に、どちらの専門性が含まれているかを確認することが先です。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">転換率の改善につながる依頼先を見分けるための問い</h2>
+
+  <p>ポートフォリオではなく、以下の問いへの回答の質が、依頼先の専門性を判断する材料になります。</p>
+
+  <div class="criteria-block">
+    <div class="criteria-item">
+      <div class="criteria-head">
+        <div class="criteria-num">問1</div>
+        <div class="criteria-title">「ページの原稿（テキスト）は誰がどう作りますか？」</div>
+      </div>
+      <div class="criteria-body">
+        「店舗様でご用意ください」という回答は、構成の設計を発注側が担うことを意味します。「こちらで対応します」という回答の場合は、「どういう調査に基づいて書きますか？」と続けて確認します。テンプレートに当てはめる場合と、読者の状況を調査した上で書く場合では、転換率への影響が異なります。
+        <div class="criteria-q">→ 「どんな調査をして原稿を作りますか？」という問いに具体的な答えが来るかどうかが判断材料</div>
+      </div>
+    </div>
+    <div class="criteria-item">
+      <div class="criteria-head">
+        <div class="criteria-num">問2</div>
+        <div class="criteria-title">「デザインの前に何をしますか？」</div>
+      </div>
+      <div class="criteria-body">
+        「ヒアリング→デザイン→入稿」というフローだけが説明される場合、構成の設計工程が独立して存在していない可能性があります。デザインの前に「ページが読者に何をどの順番で届けるかの設計」が行われているかどうかを確認します。この工程が存在するかどうかが、転換率の改善を目的として設計されているかどうかの手がかりになります。
+        <div class="criteria-q">→ 「ページの構成（流れ）はどう決めますか？」という問いへの答えが具体的かどうかを確認</div>
+      </div>
+    </div>
+    <div class="criteria-item">
+      <div class="criteria-head">
+        <div class="criteria-num">問3</div>
+        <div class="criteria-title">「制作後の転換率の変化をどう追いますか？」</div>
+      </div>
+      <div class="criteria-body">
+        「納品後のフォローは○ヶ月の保守対応です」という回答は、転換率の改善を継続的に目的としていないことを示す場合があります。転換率の変化を追い、そこから改善提案を行う仕組みが存在するかどうかを確認します。転換率の問いに対して具体的な答えが出てくる会社と、出てこない会社の差が判断材料になります。
+        <div class="criteria-q">→ 「転換率が改善しなかった場合、どういう対応になりますか？」という問いへの回答の質を確認</div>
+      </div>
+    </div>
+  </div>
+
+  <p>これらの問いに対して具体的で誠実な回答が来る会社と、曖昧な回答や別の話題に逸れる会社の差が、依頼前の判断材料になります。この確認を行わずにデザインの印象と価格で選ぶとき、以前と同じ結果になるリスクが残ります。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「まずアクセスを集めましょう」という提案が出たときの判断</h2>
+
+  <p>制作会社や運営代行との打ち合わせで「まずは広告費を増やして露出を確保しましょう」「SEO対策を優先しましょう」という提案が出るとき、それが転換率の問題を解決する方向かどうかを確認する必要があります。</p>
+
+  <p>転換率が低いページへのアクセスを増やすことは、転換しないアクセスへのコストを積み上げることです。「アクセスを増やす」という提案がページの構成の改善より先に来るとき、転換率の問題に責任を持つ立場から提案されていない可能性があります。アクセスを増やす施策は、転換率が一定の水準にある状態で機能します。その順序が確認の対象になります。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">依頼先選びの前に整理すべきこと</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「転換率の改善」と「ページの見た目の改善」を目的として分離する</h3>
+
+  <p>「転換率を上げたい」という目的と「ページを綺麗にしたい」という目的は、必要な専門性が異なります。デザイン会社は後者に対応できます。前者は、デザインの前に構成の設計が必要です。依頼の目的が「転換率の改善」であるとき、その目的に対応できる専門性を持つ存在を探すことが先になります。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">現在のページの問題の場所を言語化する</h3>
+
+  <p>「なんとなく売れていない」という状態と、「アクセスはあるが転換率が〇%で、ヒートマップで〇〇のセクションから離脱が多い」という状態では、依頼後に受けられる提案の質が変わります。問題の場所が言語化されている状態で依頼が始まると、その問題に応答できる専門性を持つ存在かどうかが確認しやすくなります。問題の場所が分からない状態でも、診断から始めることが可能です。</p>
+
+  <p>以下の状態が続いているなら、依頼先を変える前に確認すべき問いが残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">ポートフォリオを見比べているが「どこも同じに見える」という感覚が続いている</li>
+    <li data-num="✓">過去の依頼でデザインは改善されたが転換率は変わらなかった</li>
+    <li data-num="✓">「売れるように作ってください」と伝えると「原稿は自社でご用意ください」と返ってきた</li>
+    <li data-num="✓">制作後に「広告費を増やして集客しましょう」という提案しか出なかった</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">依頼先を選ぶ前に、現在のページの問題の場所を特定する。</div>
+    <div class="cta-block-sub">
+      問題の場所が言語化されている状態で依頼が始まると、「何を変えれば転換率が動くか」という問いに答える提案が生まれやすくなります。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">依頼前に現在のページを診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>EC業界の現場では長年、商品ページの制作会社の選び方として「ポートフォリオを見て実績と制作件数を比較すること」「デザインの品質と価格で最終判断すること」が語られてきました。制作会社のホームページも、EC向けの制作を紹介するメディアも、この方向で情報を提示し続けています。その基準のまま依頼先を選ぶことが、「デザインは綺麗になったのに転換率は変わらなかった」状態と「また同じ失敗を繰り返すことへの恐怖から決断できない」状態を固定します。</p>
+
+  <p>制作会社選びで失敗しないための基準は、ポートフォリオの見た目ではありません。「誰がページの構成を作るのか」「転換率の改善を目的として設計するか」「デザインの前に何が行われるか」という問いへの回答の質です。これらの問いに具体的な答えが出てくる依頼先を選ぶことが、以前と違う結果になる条件です。その確認を行わずにデザインの印象と価格で選ぶとき、探している答えが存在しない場所を探し続けることになります。</p>
+
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">「売上アップ実績多数」という会社を選べば安心ですか？</div>
+    <div class="faq-a">「売上アップ実績多数」という実績は、どういう条件でどのように計測されたかによって意味が変わります。デザインを刷新した後にアクセスが増えたことを「売上アップ」と呼んでいる場合もあります。転換率の改善実績として明確に提示されているか、その改善がどのくらいの期間継続したかを確認することが先です。また、転換率の改善はページの構成によって決まる部分が大きく、デザインだけでは説明できない場合があります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">「コピーライティングも対応します」という会社を選べば原稿の問題は解決しますか？</div>
+    <div class="faq-a">コピーライティングまで担当する会社を選ぶことで、自社で原稿を用意する手間は省けます。しかしそのコピーが「自社の読者の状況を深く理解した状態で書かれているか」は、担当者の専門性と調査の有無によって変わります。テンプレートに当てはめて効率的に書かれた原稿と、読者の購買判断に接続する根拠から書かれた原稿は、転換率への貢献が異なります。「コピーライティング対応」が転換率の改善を保証することはありません。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">制作会社に「転換率の改善保証」を求めることはできますか？</div>
+    <div class="faq-a">転換率の保証は、多くの制作会社が提供していません。制作会社のビジネスモデルは「デザインデータの納品」で売上が立つ構造であり、転換率の改善は納品後の読者の反応によって決まる部分があるため、保証の約束が難しい性質があります。ただし「転換率の改善を目的として設計するか」という姿勢は、依頼前の確認で見えてきます。転換率の問いに対して具体的な答えが出てくる会社と、出てこない会社の差が判断材料になります。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">依頼先を選ぶ前に何を整えておけばいいですか？</div>
+    <div class="faq-a">現在の転換率・ヒートマップがある場合はどこで離脱しているか・アクセスが来ているのに転換していない箇所がどこかを把握していることが、依頼後の提案の質を上げます。問題の場所が言語化されている状態で依頼が始まると、その問題に応答できる専門性を持つ存在かどうかが確認しやすくなります。問題の場所が分からない状態でも、診断から始めることが可能です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">「転換率を改善できる専門性」を持つ依頼先をどう見分けますか？</div>
+    <div class="faq-a">「誰がページの構成を作るのか」「デザインの前に何をするか」「転換率が改善しなかった場合どういう対応になるか」という問いへの回答の質が判断材料になります。これらの問いに具体的で誠実な答えが来る会社と、曖昧な回答や別の話題に逸れる会社の差が、ポートフォリオを見ても分からない専門性の違いを示しています。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断を受けると何が変わりますか？</div>
+    <div class="faq-a">現在のページがどこで読者の購買判断を止めているか、デザインと構成のどちらが問題の場所にあるか、転換率を改善するために何を先に変えるべきかが言語化されます。「どういう専門性に何を依頼すべきか」という問いへの答えが出ることで、依頼先を選ぶ前の判断材料が具体的になります。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、問題の場所を特定する。</div>
+  <div class="cta-block-sub">
+    問題の場所が分かれば、どういう専門性に何を依頼すべきかが分かる。<br>
+    その答えが出ることで、依頼先選びがポートフォリオの比較から始まらなくなる。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/rakuten-shohin-page-kaizen-irai-mae-ni-kakunin.html">楽天で商品ページ改善を依頼する前に確認すべき3つのこと</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-design-gaisha-ni-irai-shite-mo-uriage-kawaranu.html">楽天でデザイン会社に依頼しても売上が変わらない理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率（CVR）が上がらない本当の理由</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
