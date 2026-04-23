@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/ec-hajimete-shohin-page-kaizen-tadashii-tejun.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECで初めて商品ページを改善するときの正しい手順｜小西マーケティング</title>
+<meta name="description" content="Canvaを開いた。競合のページをキャプチャして並べた。「で、結局どこからいじればいいんだ」とフリーズした。その状態は、手順の問題ではありません。ネットに溢れる改善ノウハウが、本来確認すべき問いを見えなくさせているからです。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+.article-body { padding: 2.5rem 2.5rem; background: var(--white); }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; background: #fff; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "初めての商品ページ改善は「まずファーストビューから」で合っていますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ファーストビューを整えることが転換率改善の入口に見えるのは、「一番最初に見られる場所だから」という理由からです。しかしファーストビューを綺麗にしても転換率が変わらないことが多いのは、ファーストビューの問題より先に「ページ全体として読者が購買判断に至る流れになっているか」という問いが手つかずのままだからです。見た目を整える前に確認すべき問いが先にあります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "競合のページを真似して構成の順番を参考にするのは有効ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "競合の「型（見た目の構成順）」を真似しても、その型になった理由——なぜその商品が読者にとって必要なのかという根幹——は真似られません。型だけを参考にすると、同じ判断軸で読者に比較されることになり、価格や特典の競争に巻き込まれます。競合を参考にする前に、自社商品の独自の訴求の根幹を明確にすることが先です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "プロの制作会社に頼めば、正しい手順でページを作ってくれますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "制作会社は「情報を整理して視覚化する手順」を持っています。しかし「読者がページで購買判断に至る流れを設計する手順」は、その専門領域の外側に置かれていることがほとんどです。制作会社に依頼する前に、ページで何を届けるかという設計の問いに答える必要があります。その問いが手つかずのまま依頼すると、見た目の整ったページが完成しますが転換率は変わりません。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ECで初めて商品ページを改善するときの正しい手順",
+  "description": "Canvaを開いた。競合のページをキャプチャして並べた。「で、結局どこからいじればいいんだ」とフリーズした。その状態は、手順の問題ではありません。ネットに溢れる改善ノウハウが、本来確認すべき問いを見えなくさせているからです。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/ec-hajimete-shohin-page-kaizen-tadashii-tejun.html",
+  "datePublished": "2026-04-23",
+  "dateModified": "2026-04-23",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<div class="hero">
+  <span class="hero-category">EC 商品ページ設計 / はじめての改善</span>
+  <h1 class="hero-title">ECで初めて商品ページを改善するときの<br>正しい手順</h1>
+  <p class="hero-lead">Canvaを開いた。競合のページをキャプチャして横に並べた。「レビューを集める」「写真をプロに頼む」「ベネフィットを書く」——ネットのノウハウを読んだ。「で、結局どこからいじればいいんだ」とフリーズした。その状態は、手順の問題ではありません。ネットに溢れる改善ノウハウが、本来最初に確認すべき問いを見えなくさせているからです。EC100店舗超の現場を見てきた経験から、その構造を解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
+</div>
+
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">Canvaを開いて、競合ページを並べて、フリーズした夜</h2>
+
+  <p>「そろそろページを本格的に改善しないといけない」——その決意でネットを開きます。「ファーストビューが重要」「レビューを集めろ」「ベネフィットを書け」「写真をプロに頼め」「競合分析をしろ」——情報はたくさんあります。しかし読めば読むほど「自社の状況に当てはめてどこから始めるのか」という問いへの答えが出てきません。</p>
+
+  <p>競合のページをキャプチャして並べます。「このページは商品説明の前に権威性が来ている」「こちらはファーストビューに価格を出している」——構成の順序を観察します。Canvaを開いて自社のトップ画像を作り始めます。「でも、どんなキャッチコピーを入れればいいのか」という問いでまた止まります。</p>
+
+  <div class="insight">
+    フリーズしている理由は、情報が足りないのでも手順が分からないのでもありません。<br>
+    <em>「どの作業から始めるか」という問いに答える前に確認すべき問いが、ネットのノウハウによって見えなくなっているからです。作業の順序より先に、別の問いが先にあります。</em>
+  </div>
+
+  <p>これはあなたの能力の問題ではありません。EC業界に出回る改善ノウハウの多くは「何をするか（作業）」を教えます。「なぜその商品を今のあなたのページは読者に届けられていないのか」という問いへの答えは、ほとんどのノウハウが扱っていません。作業を始める前に確認すべきその問いが、「まずファーストビューから」「まずレビューを集める」という情報の洪水の中で消えていきます。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">作業リストが増えるほど、始められなくなる</h2>
+
+  <p>「まず写真から」「次にコピー」「それからデザイン」——改善の作業リストを整理しようとします。しかしリストを作るたびに「どれが一番効果的か」という問いが残り、何一つ動けないままリストだけが積み上がります。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">見当違いになっている場所</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">事業者が思っている問題</div>
+      <div class="misrec-cell truth">「デザイン」「写真撮影」「コピーライティング」のどの作業から始めるべきかという作業の優先順位が間違っているからフリーズしている</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">作業を始める前に、「読者がこのページで何を受け取れれば購買判断に至るか」という問いへの答えが存在していない。この問いへの答えがない状態で作業を始めると、何をやっても転換率は変わらない</div>
+    </div>
+  </div>
+
+  <p>EC業界の現場では長年、「まずファーストビューを整えましょう」「写真をプロに撮ってもらいましょう」「レビューを増やしましょう」という方向で改善ノウハウが提供されてきました。デザインツールの会社も、制作会社の営業も、EC運営のメディアも、「目に見える作業から始める」という枠組みで情報を発信し続けています。その枠組みの中でノウハウを集めると、作業の候補は増えますが「どれが本当に転換率を動かすか」という問いへの答えは見つかりません。あなたがフリーズしているのは、その枠組みの中で正解を探し続けているからです。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">綺麗になった後に残るもの</h2>
+
+  <p>「まずはファーストビューから始めよう」という決断でCanvaを使って新しいトップ画像を作ります。競合より見栄えが良くなりました。公開しました。転換率は変わっていません。「次はレビューを集めよう」という方向に向かいます。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の履き違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">事業者が信じている原因</div>
+      <div class="misrec-cell truth">今のページはデザインが素人っぽくて見栄えが悪いから売れない。まずファーストビューを綺麗にすれば読者の印象が変わり転換率が上がる</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">見た目の問題ではなく、読者がページを読み進める中で「この商品は今の自分に必要だ」という購買判断に至る流れが設計されていないことが問題。ファーストビューが綺麗になっても、その後の流れが変わらなければ転換率は変わらない</div>
+    </div>
+  </div>
+
+  <p>ファーストビューが綺麗になることで「ページの印象が良くなる」「読者が次を読みたくなる可能性が高まる」という効果はあります。しかし転換率は「どれだけ読者がスクロールしたか」ではなく「どれだけ読者が購買判断に至ったか」で決まります。その購買判断に至る流れがページに設計されていなければ、綺麗なファーストビューで読者の目を引いた後、結局は離脱されます。綺麗になった後に残るのは「転換率が変わらないという現実」と「次に何をすべきかという問い」です。</p>
+
+  <div class="callout">
+    「まずはアクセスを集めてからページの良し悪しを判断しよう」という考え方があります。広告費を先に使って、転換率のデータを集めてから改善する——という順序です。しかしページが「読者の購買判断に至る流れ」として機能していない状態でアクセスを集めると、転換しない読者が増えてCPAが悪化します。データを集めるための投資が、改善されていないページへの広告費として消費されます。アクセスを先に増やす前に、ページの問いを確認することが先です。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">競合を真似た先で起きること</h2>
+
+  <p>「売れているページを参考にすれば正解が分かる」という判断で、競合のページをキャプチャして構成の順序を書き出します。「この順番で情報を並べれば自社も売れるはずだ」という期待で、同じ構成に沿ってページを作ります。しかし転換率は改善しません。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">市場が選んでいる解決策</div>
+      <div class="misrec-cell truth">売れている競合のページの構成の順番やデザインのトーンをそのまま参考にして、自社ページに当てはめる。または競合より優れたスペックや特典を追加して差別化する</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">競合の「型（外側の構成順）」を真似ても、その型になった理由——なぜその商品が読者に必要なのかという根幹——は移転されない。同じ土俵で並ぶことになり、スペックや価格の比較に巻き込まれる</div>
+    </div>
+  </div>
+
+  <p>競合のページが売れている理由が、その構成の順序にあるのか、訴求の内容にあるのか、レビューの数にあるのかは、外側から見るだけでは分かりません。型を真似ることで「見た目の構成」は近くなりますが、「読者がそのページを読んで購買判断に至った理由」は真似られません。また競合より優れたスペックや特典を追加することは、同じ判断軸の上で競合より高いスコアを取ろうとすることです。判断軸そのものが変わらない限り、より良いスペックと価格を持った競合が現れた瞬間に逆転されます。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">初めての改善で止まっている店舗に共通する3つの状態</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「フルリニューアルの見積もり」を受け取って、何も動かなくなっている</h3>
+
+  <p>制作会社に相談すると「全体的にフルリニューアルが必要です（数十万円〜）」という提案が返ってきます。その費用で本当に転換率が上がるのかという確証が持てないまま、発注に踏み切れません。部分的に自分で直そうとしてもどこから手をつけるか分からず、結局何も変わらないまま時間が過ぎます。</p>
+
+  <p>フルリニューアルの提案が出るとき、「ページ全体を新しく作れば転換率が改善する」という前提が置かれています。しかし新しく作ったページにも「読者が購買判断に至る流れ」の設計がなければ、費用をかけた別バージョンの転換率の低いページが完成します。確証が持てないのは、リニューアルで何を変えるかが明確でないまま発注しようとしているからです。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">断片的なノウハウを集めるほど、自社の状況に当てはまるものが分からなくなる</h3>
+
+  <p>「レビューを集める」「ベネフィットを前面に出す」「スマホ最適化する」「ファーストビューのキャッチコピーを変える」——ノウハウを集めるたびに試すべき候補が増えます。しかしそれぞれが「自社のページに当てはまるかどうか」の判断基準がなく、どれも中途半端に終わります。</p>
+
+  <p>ノウハウが増えるほど動けなくなる理由は、各ノウハウが「作業の候補」を増やすからです。「自社のページが読者に何を届けられていないのか」という問いへの答えがない状態では、増えた候補の中から正解を選べません。候補を増やす前に、その問いへの答えを先に持つ必要があります。ただしその問いへの答えは、ノウハウの検索では出てきません。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">競合を真似たことで、自社の商品の独自性が消えた</h3>
+
+  <p>競合のページの構成を参考にして自社ページを作り直しました。見た目が競合に近くなりました。しかし「自社商品のここが独自の強みだ」という訴求が消えてしまい、どこにでもある似たようなページになりました。転換率は改善せず、逆に「うちの商品の何が良いのか分からなくなった」という感覚が残ります。</p>
+
+  <p>競合の型を参考にすることで、競合と同じ土俵に立ちます。同じ土俵では価格やレビュー数で判断されます。自社の独自性が消えたとき、それは「自社商品がなぜその読者に必要なのか」という訴求の根幹が参考にした競合の型に上書きされた状態です。その根幹は、競合のページから学べるものではなく、自社商品と読者の関係から生まれます。</p>
+
+  <p>以下の状態が続いているなら、作業を始める前に確認すべき問題が残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">ネットの改善ノウハウを集めるほど、何から始めるべきかが分からなくなっている</li>
+    <li data-num="✓">ファーストビューや写真を変えたが転換率は変わらず、次に何をすればいいか分からない</li>
+    <li data-num="✓">競合のページを参考に構成を真似たが、自社商品の独自性が消えてしまった</li>
+    <li data-num="✓">制作会社の見積もりを受け取ったが確証が持てず、改善が止まったまま時間が過ぎている</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">作業を始める前に、まず確認すべき問いを特定する。</div>
+    <div class="cta-block-sub">
+      「どの作業から始めるか」より先に、ページが「読者の購買判断を完結させられる流れになっているか」を確認することが先です。<br>
+      診断を受けた事業者の多くが、初めて「どこが問題だったか」を言語化できたと言います。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">作業を始める前にページの問いを診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>EC業界の現場では長年、「まずファーストビューから」「写真をプロに撮ってもらう」「レビューを集める」「競合のページを参考に構成を整える」という方向で改善ノウハウが提供されてきました。デザインツールの会社も、制作会社の営業も、EC運営のメディアも、「目に見える作業から始めること」が改善の入口として発信し続けています。その枠組みの中で情報を集めると、作業の候補は増えますが「なぜ今のページで読者が購買判断に至らないのか」という問いへの答えは現れません。その問いが見えなくなったまま作業を積み重ねることが、「何度変えても転換率が動かない」状態と「次に何をすべきか分からないままフリーズが続く」構造を固定します。</p>
+
+  <p>作業を始める前に確認すべき問いは、「ページが読者の購買判断を完結させられる流れになっているか」です。その問いへの答えが先にあって、デザインも写真もコピーも、その答えを実現するための作業として意味を持ちます。作業の候補が増える前に、まずその問いを確認することが、最も無駄のない改善の入口です。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">初めての商品ページ改善は「まずファーストビューから」で合っていますか？</div>
+    <div class="faq-a">ファーストビューを整えることが転換率改善の入口に見えるのは、「一番最初に見られる場所だから」という理由からです。しかしファーストビューを綺麗にしても転換率が変わらないことが多いのは、ファーストビューの問題より先に「ページ全体として読者が購買判断に至る流れになっているか」という問いが手つかずのままだからです。見た目を整える前に確認すべき問いが先にあります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">競合のページを真似して構成の順番を参考にするのは有効ですか？</div>
+    <div class="faq-a">競合の「型（見た目の構成順）」を真似しても、その型になった理由——なぜその商品が読者にとって必要なのかという根幹——は真似られません。型だけを参考にすると、同じ判断軸で読者に比較されることになり、価格や特典の競争に巻き込まれます。競合を参考にする前に、自社商品の独自の訴求の根幹を明確にすることが先です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">プロの制作会社に頼めば、正しい手順でページを作ってくれますか？</div>
+    <div class="faq-a">制作会社は「情報を整理して視覚化する手順」を持っています。しかし「読者がページで購買判断に至る流れを設計する手順」は、その専門領域の外側に置かれていることがほとんどです。制作会社に依頼する前に、ページで何を届けるかという設計の問いに答える必要があります。その問いが手つかずのまま依頼すると、見た目の整ったページが完成しますが転換率は変わりません。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">作業を始める前に確認すべき問いとは、具体的に何ですか？</div>
+    <div class="faq-a">「ページに来た読者が、何を受け取れれば購買判断に至るか」という問いです。この問いへの答えは、読者がどういう状態でページに来ているか、競合と比べて何を選ぶ理由があるか、その商品がなぜその読者に必要かという情報から組み立てられます。この問いへの答えが先にあって、デザインも写真もコピーも、その答えを実現するための作業として意味を持ちます。ただしこの問いへの答えを作ることは、作業の外側にある専門的な工程です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">予算が限られていて制作会社に頼めない場合、自分でできることはありますか？</div>
+    <div class="faq-a">自社でできる作業（写真の差し替え、テキストの修正、レイアウトの調整）は存在します。しかしそれらの作業が転換率に貢献するかどうかは、「ページが読者の購買判断を完結させられる流れになっているか」という問いへの答えが先にあるかどうかで変わります。予算が限られているほど、その問いを最初に確認することが費用対効果の観点から重要です。まず診断を受けて、どこに問題があるかを特定することから始めることを推奨します。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、改善の何を確認しますか？</div>
+    <div class="faq-a">ページが「読者の購買判断を完結させられる流れになっているか」を確認します。作業の候補を増やす前に、何が問題でどこを変えれば転換率が動くかが明確になります。「最初に何をすべきか」が初めて言語化できる状態になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、確認すべき問いを特定する。</div>
+  <div class="cta-block-sub">
+    作業を始める前の問いが分かれば、何を変えればいいかが分かる。<br>
+    何を変えればいいかが分かれば、次の改善が初めて転換率につながる。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/ec-shohin-page-kaizen-yusen-juni-tsukekata.html">ECの商品ページ改善の優先順位のつけ方</a></li>
+    <li><a href="https://konishi-marketing.com/articles/ec-design-to-kosei-nani-ga-chigau.html">ECで「デザイン」と「構成」は何が違うのか</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-unei-daiko-to-shohin-page-konsaru-no-chigai.html">楽天運営代行と商品ページコンサルの役割の違い</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
