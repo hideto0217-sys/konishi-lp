@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/rakuten-sumaho-pc-shohin-page-wakeru-beki-ka.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楽天でスマホ商品ページとPC商品ページの設計を分けるべきかどうか｜小西マーケティング</title>
+<meta name="description" content="PCで作ったLPをスマホで見ると文字が潰れていた。慌てて情報を削ったら売上が落ちた。「PCとスマホを分けるべきか」という問いに答える前に、分けるべきものと分けてはいけないものを分離することが先です。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+.article-body { padding: 2.5rem 2.5rem; background: var(--white); }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; background: #fff; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "楽天でスマホ用とPC用のページは分けて作るべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「分けるべきかどうか」より先に、何を分けて何を分けないかという問いが先です。画像のサイズ・文字の大きさ・レイアウトは、スマホとPCの画面の制約に合わせて変える必要があります。しかし「なぜその商品が読者に必要か」という訴求の根幹は、デバイスが変わっても変える必要はありません。根幹を共通にしたまま表示の形式だけを分ける場合と、根幹ごと別々に作る場合では、費用も手間も転換率への影響も大きく変わります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "スマホユーザーはページを読まないので、情報を削って短くすべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "情報を削ることで転換率が下がった経験がある場合、削る作業が「読者が購買判断に至るために必要な情報」を省いた可能性があります。スマホで読まれないのは、デバイスの問題ではなく「ページの冒頭で読者が自分ごととして受け取れていない」ことが原因であることが多いです。長さを短くすることと、読者が購買判断に至る情報が届くことは、別の問いです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PCの転換率よりスマホの転換率が低い状態は、どう改善すればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "スマホとPCで転換率に差がある場合、まず確認すべきは「スマホで表示したとき、ページが読者に何を届けられているか」という問いです。文字が潰れて読めない、情報の順序が崩れている、画像が小さすぎて伝わらないという表示の問題は、デバイスに合わせた形式の調整で対応できます。しかし「なぜその商品が必要か」という訴求の根幹が設計されていなければ、スマホの表示を最適化しても転換率の改善には限界があります。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "楽天でスマホ商品ページとPC商品ページの設計を分けるべきかどうか",
+  "description": "PCで作ったLPをスマホで見ると文字が潰れていた。慌てて情報を削ったら売上が落ちた。「PCとスマホを分けるべきか」という問いに答える前に、分けるべきものと分けてはいけないものを分離することが先です。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/rakuten-sumaho-pc-shohin-page-wakeru-beki-ka.html",
+  "datePublished": "2026-04-23",
+  "dateModified": "2026-04-23",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<div class="hero">
+  <span class="hero-category">楽天 スマホ / PC 商品ページ設計</span>
+  <h1 class="hero-title">楽天でスマホ商品ページとPC商品ページの<br>設計を分けるべきかどうか</h1>
+  <p class="hero-lead">PCで綺麗に作ったLPをスマホで確認すると文字が潰れていた。慌てて情報を削って短くしたら、今度はスマホの転換率が落ちた。「スマホ最適化」という言葉に追われながら修正を繰り返す。「PCとスマホを分けるべきか、一つにまとめるべきか」という問いに答える前に、分けるべきものと分けてはいけないものを分離することが先です。EC100店舗超の現状を見てきた経験から、その構造を解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
+</div>
+
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">PCで作ったLPをスマホで見た瞬間、文字が潰れていた</h2>
+
+  <p>PCで確認するとバランス良く見えます。スマホでアクセスしてみると、文字が小さすぎて読めない。画像に入れたテキストが潰れて判読不能です。「これでは売れない」という判断でスマホ用に情報を削り、短くします。スマホの表示は改善されました。しかし翌月、転換率が下がっています。</p>
+
+  <p>「PCとスマホで全く別のページを作るべきか」という問いが生まれます。スマホ専用の制作会社に相談すると「スマホに特化した短くインパクトのあるページが必要だ」と言います。楽天コンサルは「アクセスの大半がスマホだからスマホ特化にしろ」と言います。しかし一方でPC経由の高単価・まとめ買い注文も無視できません。「どっちを優先すべきか」という問いが残ります。</p>
+
+  <div class="insight">
+    「PCとスマホを分けるべきか」という問いに答える前に、分けるべきものと分けてはいけないものがあります。<br>
+    <em>画像のサイズ・文字の大きさ・レイアウトは、デバイスの画面制約に合わせて変える必要があります。しかし「なぜその商品が読者に必要か」という訴求の根幹は、デバイスが変わっても変える必要はありません。</em>
+  </div>
+
+  <p>あなたが最適化に失敗したのではありません。EC業界では長年、「スマホとPCではユーザーの行動が全く違うから、デバイスごとに別々のページを作るべきだ」という方向で語られてきました。スマホ特化の制作会社も、楽天のデバイス別設計を推奨するコンサルも、「デバイスの違い」を過剰に強調することで別々のページ制作を勧め続けています。その枠組みのまま動くと、費用と手間が倍になる一方で、転換率の根本的な問いは手つかずのままです。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">分けるべき場所と、分けてはいけない場所</h2>
+
+  <p>「スマホとPCでは客層が違い、購買行動も違うから、それぞれ全く別の設計が必要だ」という前提で動くと、費用と手間が二倍になります。「同じページをレスポンシブで使い回せばいい」という前提で動くと、スマホで文字が潰れたまま放置されます。どちらも問いの立て方が正確ではありません。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">見当違いになっている場所</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">事業者が思っている問題</div>
+      <div class="misrec-cell truth">スマホとPCの「画面サイズや操作性」に合わせて、情報の量や見せ方（デザイン）を全て最適化することが問題。それぞれ別の専門会社に依頼して分けて作るべきか、まとめて作るべきか</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">「表示の形式（デバイスごとに変えるべき）」と「訴求の根幹（デバイスにかかわらず共通であるべき）」が混同されている。形式を分けることと根幹を分けることは別の問題</div>
+    </div>
+  </div>
+
+  <p>EC業界の現場では長年、「スマホとPCでは客層も購買行動も全く違うから、別々のページが必要だ」という方向で語られてきました。スマホ特化の制作会社も、デバイス別設計を勧めるコンサルも、この前提で提案し続けています。その前提のまま別々に作ると、訴求の根幹がデバイスごとにバラバラになり、どちらでも「よくある型通りのページ」に仕上がります。あなたの判断が間違っていたのではありません。デバイスの違いを過剰に強調する業界の構造が、その判断を引き出しています。</p>
+
+  <div class="callout">
+    楽天のシステムには、PCとスマホで別々のHTMLタグを入力できる仕様が存在します。「別々に設定できるから、別々に作るべきだ」という解釈が生まれますが、それはシステムの仕様であり、「どう作るべきか」の答えではありません。PC向けとスマホ向けで入力する内容が全く別のコンセプトになっているとき、デバイスをまたいで検討する読者にとってブランドの一貫性が崩壊します。システムが「分けられる」ことと、「根幹まで分けるべき」ことは別の話です。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">スマホで読まれない本当の理由</h2>
+
+  <p>「スマホユーザーは長い文章を読まない」という前提で情報を大幅に削ります。短くなったページで、転換率が下がります。「なぜ短くしたのに転換率が下がるのか」という問いが残ります。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の履き違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">事業者が信じている原因</div>
+      <div class="misrec-cell truth">スマホとPCでは「客層」や「購買行動」が異なるから、スマホ向けには情報を削って短く・インパクト重視にする必要がある。スマホでは読者が文章を読まない</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">スマホで読まれないのはデバイスの問題ではなく、ページの冒頭で読者が「この商品は自分に関係がある」と感じられていないから。画面が小さくても、自分ごととして受け取れる内容は読まれる。情報を削ることと、必要な情報が届くことは別の問い</div>
+    </div>
+  </div>
+
+  <p>スマホで長い文章が読まれないことがあります。しかしその原因が「スマホだから」ではなく「ページの冒頭で読者が自分ごととして受け取れていないから」である場合、情報を削ることは「転換に必要な情報をページから取り除くこと」になります。削った結果、スマホの表示は軽くなりますが、「なぜその商品が必要か」という根幹の情報も一緒に削れます。転換率が下がる理由はここにあります。同じ内容でも、スマホの画面制約に合わせた形式——文字の大きさ、画像の分割、スクロールの間隔——に変換することと、内容そのものを削ることは別の作業です。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">別々に作った後に残るもの</h2>
+
+  <p>「PC用とスマホ用を別々の制作会社に依頼しよう」という方向に向かいます。PC用はフルリニューアル。スマホ用はスマホ特化の制作会社に。費用が二倍になります。しかし両方が完成した後も、転換率は根本から改善しません。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">市場が選んでいる解決策</div>
+      <div class="misrec-cell truth">スマホ専用の制作会社に依頼してスマホ特化の短くインパクト重視のページを作る。または楽天のPC/スマホ別タグにそれぞれ別のコンセプトで設計する</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">スマホ向けに作った「短くインパクト重視」のページは、表面的なUIが整うだけで「なぜその商品が必要か」の根幹が省かれる。PC/スマホで別々のコンセプトにすると、訴求の一貫性が崩れ、どちらでも価格競争に巻き込まれる</div>
+    </div>
+  </div>
+
+  <p>スマホ専用に作られた「短く・インパクト重視」のページは、表示の問題は解決します。しかし「なぜその商品が読者に必要か」という深い訴求は、短さの中に収まりません。表示が軽快になることで離脱率は下がるかもしれませんが、転換率を決める根幹の情報が届かなければ購買判断には至りません。PC/スマホで別々のコンセプトにすると、PCで検討してスマホで購入しようとする読者に、全く別のブランドが見えます。運用コストが倍になり、一貫性が崩れ、どちらでも転換率の根本が変わらないという状態が残ります。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">スマホの転換率が上がらない店舗に共通する3つの状態</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「スマホ最適化」という言葉で表示の問題だけを追い続けている</h3>
+
+  <p>スマホの転換率が低いとき、「スマホ最適化ができていない」という診断で、ファーストビューの画像を派手にしたり購入ボタンを固定させたりという表示の改善を繰り返します。表示は改善されますが転換率は変わりません。</p>
+
+  <p>「スマホ最適化」という言葉は、表示の問題と転換率の問題を一緒くたにします。表示の問題（文字が小さすぎて読めない、画像のアスペクト比が崩れているなど）は、デバイスの制約に合わせた形式の調整で対応できます。しかし転換率の問題（読者が購買判断に至る流れが設計されていない）は、表示の最適化では解決しません。「スマホ最適化」という言葉が表示の問題のみを指しているとき、転換率の問いは手つかずのまま残ります。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">PC用とスマホ用の更新がバラバラになり、片方が放置されている</h3>
+
+  <p>PCとスマホで別々のページを管理しています。イベントのたびにバナーを更新するとき、PC用は変えたがスマホ用を変え忘れた——という二度手間が発生します。スマホ用が古い状態のまま放置される月が続きます。</p>
+
+  <p>管理が二系統になることで、運用コストが倍になります。更新漏れが発生すると、スマホ経由のアクセスに古い情報が届きます。この運用コストの問題は、PCとスマホの根幹が共通化されている状態であれば、形式の調整だけをデバイスごとに行うことで大幅に軽減されます。根幹ごと別々に管理している限り、更新のたびに二度手間が発生する構造は変わりません。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">PCとスマホで別々のキャッチコピーになり、どちらにも刺さっていない</h3>
+
+  <p>PC用は丁寧で情報量の多いキャッチコピー。スマホ用は短くインパクトのあるキャッチコピー。デバイスごとに最適化した結果、PC経由で商品を見てスマホで購入しようとする読者には、全く別のブランドが届きます。</p>
+
+  <p>同じ商品を検討している読者が、デバイスを変えてページにアクセスしたとき、一貫した訴求が届いていることが購買判断への連続性を作ります。デバイスによってキャッチコピーや訴求のトーンが変わると、「あれ、さっきとメッセージが違う」という感覚が読者の中に残ります。根幹が共通であれば、文字の大きさや画像の見せ方がデバイスで変わっても、受け取るメッセージは一貫します。</p>
+
+  <p>以下の状態が続いているなら、PCとスマホの分離方法を決める前に確認すべき問題が残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">スマホの転換率がPCより低いが、スマホ用に情報を削ったら転換率がさらに下がった</li>
+    <li data-num="✓">PC用とスマホ用で別々に更新しているが、片方が古い状態のまま放置されている月がある</li>
+    <li data-num="✓">PCとスマホで異なるキャッチコピーや見せ方にした結果、どちらにも「これだ」という訴求が刺さっていない</li>
+    <li data-num="✓">「スマホ特化にしろ」「両方対応が必要」という意見が混在して、どの方向に投資すべきか決められない</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">デバイスの分離方法より先に、根幹が設計されているかを確認する。</div>
+    <div class="cta-block-sub">
+      スマホの転換率が改善しないなら、表示の問題より先に「ページが読者の購買判断を完結させられる流れになっているか」を確認することが先です。<br>
+      診断を受けた事業者の多くが、初めて「どこが問題だったか」を言語化できたと言います。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">デバイス設計を決める前にページの根幹を診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>楽天のEC改善業界では長年、「スマホとPCではユーザーの行動が違うから、それぞれ別々に最適化したページが必要だ」という方向で語られてきました。スマホ特化の制作会社も、楽天のデバイス別設計を推奨するコンサルも、「デバイスごとに別々に作ることが正解」という枠組みで提案し続けています。その枠組みのまま別々に作り続けることが、「費用と手間が倍になるがどちらのデバイスでも転換率が根本から改善しない」状態と「更新のたびに片方が放置される運用の停滞」を固定します。</p>
+
+  <p>PCとスマホで変えるべきものは「デバイスの画面制約に合わせた表示の形式（文字の大きさ、画像の分割、レイアウト）」です。変えてはいけないものは「なぜその商品が読者に必要かという訴求の根幹」です。この二つを分離して考えることで、根幹は共通化しながら表示の形式だけをデバイスごとに調整するという、費用対効果の高いアプローチが生まれます。その分離を実現するためには、表示の専門家ではなく根幹の問いに答えられる専門性が先に必要です。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">楽天でスマホ用とPC用のページは分けて作るべきですか？</div>
+    <div class="faq-a">「分けるべきかどうか」より先に、何を分けて何を分けないかという問いが先です。画像のサイズ・文字の大きさ・レイアウトは、スマホとPCの画面の制約に合わせて変える必要があります。しかし「なぜその商品が読者に必要か」という訴求の根幹は、デバイスが変わっても変える必要はありません。根幹を共通にしたまま表示の形式だけを分ける場合と、根幹ごと別々に作る場合では、費用も手間も転換率への影響も大きく変わります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">スマホユーザーはページを読まないので、情報を削って短くすべきですか？</div>
+    <div class="faq-a">情報を削ることで転換率が下がった経験がある場合、削る作業が「読者が購買判断に至るために必要な情報」を省いた可能性があります。スマホで読まれないのは、デバイスの問題ではなく「ページの冒頭で読者が自分ごととして受け取れていない」ことが原因であることが多いです。長さを短くすることと、読者が購買判断に至る情報が届くことは、別の問いです。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">PCの転換率よりスマホの転換率が低い状態は、どう改善すればいいですか？</div>
+    <div class="faq-a">スマホとPCで転換率に差がある場合、まず確認すべきは「スマホで表示したとき、ページが読者に何を届けられているか」という問いです。文字が潰れて読めない、情報の順序が崩れている、画像が小さすぎて伝わらないという表示の問題は、デバイスに合わせた形式の調整で対応できます。しかし「なぜその商品が必要か」という訴求の根幹が設計されていなければ、スマホの表示を最適化しても転換率の改善には限界があります。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">「根幹を共通化する」とはどういう状態ですか？</div>
+    <div class="faq-a">「なぜその商品が読者に必要か」という訴求が、PC経由でページを見ても、スマホ経由でページを見ても、同じ内容として届く状態です。文字の大きさや画像の配置はデバイスに合わせて変わりますが、読者が受け取るメッセージの根幹は変わりません。この状態が実現していれば、更新のたびに根幹から作り直す必要がなく、表示の形式を調整するだけで済みます。その状態を作るには、根幹の問いに答える設計が先に必要です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">スマホの転換率を改善するために、何から確認すればいいですか？</div>
+    <div class="faq-a">まず「現在のページがスマホで表示されたとき、読者に何を届けているか」を確認することが先です。表示の問題（文字の潰れ、画像の崩れ）は確認しやすい問題です。しかしその前に「ページが購買判断に至る流れとして設計されているか」という問いを確認することが、より根本的な改善につながります。診断から始めることを推奨します。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、スマホとPCの設計の問題のどこを確認しますか？</div>
+    <div class="faq-a">ページが「読者の購買判断を完結させられる流れになっているか」を確認します。その上で、スマホ表示での読みやすさの問題が転換率に影響しているかを判断します。「デバイスの表示の問題か、根幹の設計の問題か」が明確になれば、何に投資すべきかが初めて見えてきます。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、分けるべき場所と分けてはいけない場所を特定する。</div>
+  <div class="cta-block-sub">
+    根幹と形式の境界が分かれば、何をデバイスごとに変えるべきかが分かる。<br>
+    境界が明確になれば、PC/スマホの両方の転換率が同時に動き始める。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率（CVR）が上がらない本当の理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-shohin-page-joho-ryo-fuyasu-to-urenaku-naru.html">楽天商品ページの情報量を増やすと売れなくなる理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/ec-shohin-page-kaizen-yusen-juni-tsukekata.html">ECの商品ページ改善の優先順位のつけ方</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
