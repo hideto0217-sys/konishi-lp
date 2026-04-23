@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/rakuten-amazon-shohin-page-sekkei-kaeru-beki-riyu.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楽天とAmazonで同じ商品のページ設計を変えるべき理由｜小西マーケティング</title>
+<meta name="description" content="楽天でバカ売れしたLPの画像をAmazonに入れた。スマホで確認すると文字が潰れて読めない。Amazonの転換率は地を這ったまま。「全部作り直すしかないのか」——そう思ったとき、問いの立て方が変わると、コストも手間も根本的に変わります。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+.article-body { padding: 2.5rem 2.5rem; background: var(--white); }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; background: #fff; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "楽天とAmazonは客層が違うので、全く別のLPを作るべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「全く別のLP」という解釈も、「そのまま使い回し」という解釈も、どちらも正確ではありません。読者が購買判断に至る理由の根幹は、楽天でもAmazonでも共通しています。違うのは、各プラットフォームでの情報の表示方法と、読者がページを訪れたときの状態です。変えてはいけないもの（訴求の根幹）と、変えなければいけないもの（各プラットフォームに合わせた見せ方）を分けることが先です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "楽天で作ったLP画像をAmazonにそのまま入れると、なぜ機能しないのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "楽天向けに作られた画像は、縦長で文字が密に詰め込まれていることが多いです。AmazonのA+コンテンツに入れると、スマホで表示したとき文字が潰れて読めなくなります。またAmazonの検索アルゴリズムはテキスト情報を重視しますが、画像に埋め込まれた文字はテキストとして認識されません。形式の問題として、楽天向けの見せ方をそのままAmazonに持ち込むことは機能しません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "楽天コンサルとAmazonコンサルで言うことが正反対なのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "各モールのコンサルは、そのプラットフォームのシステムとUIに最適化された「見せ方（形式）」の専門家です。楽天では「賑わい感のある縦長画像」が有効とされ、Amazonでは「白抜き画像と明快な箇条書き」が推奨される。どちらも形式の話をしているため、正反対に聞こえます。しかし「なぜその商品を選ぶべきか」という訴求の根幹については、どちらの専門家も同じ答えに向かえるはずです。食い違うのは形式の議論であり、根幹の話ではありません。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "楽天とAmazonで同じ商品のページ設計を変えるべき理由",
+  "description": "楽天でバカ売れしたLPの画像をAmazonに入れた。スマホで確認すると文字が潰れて読めない。Amazonの転換率は地を這ったまま。「全部作り直すしかないのか」——そう思ったとき、問いの立て方が変わると、コストも手間も根本的に変わります。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/rakuten-amazon-shohin-page-sekkei-kaeru-beki-riyu.html",
+  "datePublished": "2026-04-23",
+  "dateModified": "2026-04-23",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<div class="hero">
+  <span class="hero-category">楽天 / Amazon LP設計 比較</span>
+  <h1 class="hero-title">楽天とAmazonで同じ商品の<br>ページ設計を変えるべき理由</h1>
+  <p class="hero-lead">楽天でバカ売れしている渾身のLP画像を、そのままAmazonのA+コンテンツに入れた。スマホで確認すると文字が潰れて読めない。AmazonのCVRは地を這ったまま動かない。「全部ゼロから作り直さないといけないのか」——そう感じたとき、問いの立て方が変わると、コストも手間も根本的に変わります。EC100店舗超の現状を見てきた経験から、その構造を解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
+</div>
+
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">楽天でバカ売れしたLPをAmazonに入れた翌朝</h2>
+
+  <p>楽天では転換率が取れている。Amazonにも出品しているが、同じ商品が全く動かない。「作り直す手間を省こう」という判断で、楽天用の画像をそのままAmazonのA+コンテンツに流用します。スマホで確認すると、文字が潰れて読めない。情報の密度が崩れている。Amazonの転換率はリスティング広告を出しても低いまま変わりません。</p>
+
+  <p>「やはり全部作り直さないといけないのか」という結論に向かいます。楽天コンサルに相談すると「楽天は賑わい感のある縦長画像が重要」と言います。Amazonコンサルに相談すると「Amazonはシンプルな白抜き画像と箇条書きが正解」と言います。言うことが正反対です。「結局どちらの方向でページを作ればいいのか」という問いが残ります。</p>
+
+  <div class="insight">
+    「全部使い回す」も「全部作り直す」も、どちらも問いの立て方として正確ではありません。<br>
+    <em>変えてはいけないものと、変えなければいけないものがあります。この二つを混同したまま「楽天とAmazonは全然違う」という結論に向かうと、費用も手間も必要以上に膨らみます。</em>
+  </div>
+
+  <p>楽天とAmazonの違いが語られるとき、ほとんどの場合は「見せ方（形式）」の話です。縦長か横並びか、文字が多いか少ないか、賑わい感があるかシンプルか。これらは確かに異なります。しかし「なぜその商品を選ぶべきか」という訴求の根幹は、楽天でもAmazonでも同じ読者に向けて伝えるものです。形式を変えることと根幹を変えることは、別の話です。この二つが混同されているとき、「全部作り直す」か「そのまま使い回す」かという二択しか見えなくなります。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">変えるべき場所と、変えてはいけない場所</h2>
+
+  <p>「楽天とAmazonの客層が違うから、全く別のLPを作らなければならない」という前提で動くと、費用と手間が二倍になります。しかし「同じだからそのまま使い回せる」という前提で動くと、どちらでも転換率が取れない状態が続きます。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">見当違いになっている場所</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">事業者が思っている問題</div>
+      <div class="misrec-cell truth">楽天とAmazonの客層が根本的に違うから、それぞれ全く別のコンセプトとデザインで専門会社に依頼して作り直さなければならない（またはそのまま使い回して問題ない）</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">「なぜその商品を選ぶべきか」という訴求の根幹は両モールで共通させるべきだが、「各プラットフォームの仕様と読者の閲覧行動に合わせた見せ方（形式）」は変えなければならない。共通化と個別化の境界線が間違っている</div>
+    </div>
+  </div>
+
+  <p>EC業界の現場では長年、「楽天とAmazonはまったく違うプラットフォームだから、それぞれを専門家に任せろ」という方向で語られてきました。各モールの専門コンサルも、モール特化の制作会社も、「自分たちのプラットフォームに最適化したページが必要だ」という前提で提案し続けています。その前提のまま別々の専門家に依頼すると、訴求の根幹がモールごとにバラバラになり、どのチャネルでも「よくある無個性なページ」に仕上がります。あなたが判断ミスをしたのではありません。モールの違いを過剰に強調する業界の構造が、その判断を引き出しています。</p>
+
+  <div class="callout">
+    楽天とAmazonで読者がページを訪れる状態は異なります。楽天の読者はモールを回遊しながら複数商品を比較する状態でページに来ることが多い。Amazonの読者はより目的が明確な状態で来ることが多い。この違いは「どの段階から情報を届けるか」に影響します。しかしどちらの読者も「この商品を選ぶ根拠」を求めているという点は変わりません。届け方（形式）が変わるのであって、届けるもの（根幹）が変わるわけではありません。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">専門家の答えが食い違う構造</h2>
+
+  <p>楽天コンサルとAmazonコンサルに同じ商品のLP設計について相談すると、推奨する方向が正反対になります。「どちらを信じれば正解なのか」という混乱が生まれます。しかしこの食い違いには、構造的な理由があります。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の履き違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">事業者が信じている原因</div>
+      <div class="misrec-cell truth">楽天コンサルとAmazonコンサルで正しいページの作り方が正反対なのは、両モールで売れる方法が根本から違うから。どちらかが正解でどちらかが間違いだ</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">各モールのコンサルはそのプラットフォームのシステムとUIに最適化された「見せ方（形式）」を語っている。形式の話をしているため正反対に聞こえるが、「なぜその商品を選ぶべきか」という根幹については、どちらも答えを持っていないことが多い</div>
+    </div>
+  </div>
+
+  <p>楽天コンサルが「縦長の賑わい感ある画像が重要」と言い、AmazonコンサルがA+コンテンツの白抜き画像と箇条書きを推奨する。どちらも各プラットフォームの「見せ方」として正確です。しかしその見せ方の前に「何を届けるか」という問いへの答えは、各モール専門家から出てくることがほとんどありません。食い違う理由は全員が「どう見せるか」の形式を語っているからです。「何を届けるか」という根幹の問いが先にあれば、形式の違いは「翻訳」の問題として処理できます。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">切り貼りが通じない場所</h2>
+
+  <p>コストを抑えるために、楽天用のLP画像をAmazonのA+コンテンツ仕様に合わせて分割・流用します。しかし転換率は改善しません。逆方向の流用も同様です。AmazonのシンプルなページをそのままFakuten（楽天）のファーストビューに使うと、競合の賑わい感の中で埋もれます。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">市場が選んでいる解決策</div>
+      <div class="misrec-cell truth">コストを省くために楽天の画像を細かく切り刻んでAmazonに流用する。あるいはモールごとに全く別のコンセプトで専門制作会社にゼロから依頼する</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">切り貼り流用はAmazonのスマホ表示で文字が潰れ、テキスト検索にも届かない。ゼロから別々に作ると訴求の根幹がバラバラになり、どちらも無個性なプラットフォーム風ページになって価格競争に巻き込まれる</div>
+    </div>
+  </div>
+
+  <p>楽天向けに作った縦長画像に埋め込まれた文字テキストは、AmazonのA+コンテンツでは文字として認識されません。AmazonはSEO（A10アルゴリズム）でテキスト情報を重視しますが、画像内の文字はクロールされません。形式を無視した流用は、見た目の問題だけでなく検索順位の問題にも影響します。一方でゼロから全部作り直すアプローチでは、各モールの「型」に合わせてコンセプトを別々に設計することが多く、結果として訴求の根幹がモールごとに断絶し、どちらでも「よくある型通りのページ」になります。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">楽天・Amazon両展開で転換率が上がらない店舗に共通する3つの状態</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「Amazonはレビューと価格だけ」でページ改善を諦めている</h3>
+
+  <p>「Amazonは価格とレビューで売れ行きが決まるから、ページを作り込んでも意味がない」という判断でAmazonのページを放置します。同時に楽天のポイント変倍やクーポンバナーの更新に注力します。どちらのチャネルも「読者が購買判断に至る根拠の届け方」という問いが手つかずのまま続きます。</p>
+
+  <p>Amazonで価格とレビューが購買判断に大きく影響することは事実です。しかし価格とレビューが同程度の競合が複数ある状態では、A+コンテンツで何をどう届けるかが差になります。「価格だけ」という前提でページを放置しているとき、改善できる変数を諦めている状態です。楽天でのポイント施策は集客に貢献しますが、どちらのチャネルでも「価格以外の根拠で読者を動かす問い」は手つかずのまま残っています。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">ブランドの一貫性が崩壊している</h3>
+
+  <p>楽天コンサルと話して「楽天らしいページ」を作り、Amazonコンサルと話して「Amazonらしいページ」を作ります。それぞれのプラットフォームの型に合わせると、同じ商品を売っているのに楽天とAmazonで全く別のブランドが並んでいる状態になります。</p>
+
+  <p>形式は各プラットフォームに合わせるべきですが、「この商品はなぜあなたに必要か」という根幹の訴求は両チャネルで一致している必要があります。根幹が一致していれば、形式の違いは「翻訳」で処理できます。根幹が別々になっているとき、どちらのチャネルでも「よくある型通りのページ」が完成し、価格競争の土俵に乗り続けます。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">モールごとの仕様対応に追われ、何を届けるかが後回しになっている</h3>
+
+  <p>楽天の画像枚数制限、Amazonの各カテゴリごとの主画像規定、テキストの文字数制約——各プラットフォームの仕様に対応する作業が積み重なります。仕様対応の作業が主語になっているとき、「読者がこのページで何を受け取るか」という問いへのアプローチが後回しになります。</p>
+
+  <p>仕様対応は必要な作業です。しかしその前に「各チャネルで読者に何を届けるか」という根幹が整っていれば、仕様対応は「その根幹を各プラットフォームの形式に合わせる」という翻訳作業になります。根幹が整っていない状態での仕様対応は、「どの仕様にも従っているが、何も届いていないページ」を量産します。</p>
+
+  <p>以下の状態が続いているなら、各チャネルの仕様対応より先に確認すべき問題が残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">楽天では転換率が取れているのに、同じ商品をAmazonに出すと全く動かない（またはその逆）</li>
+    <li data-num="✓">楽天コンサルとAmazonコンサルで言うことが正反対で、誰の意見を信じてページを作るか決められない</li>
+    <li data-num="✓">楽天とAmazonで別々にページを作った結果、同じ商品なのに両モールで全く別のブランドが並んでいる</li>
+    <li data-num="✓">「Amazonは価格とレビューだけ」という前提でAmazonのページ改善を諦めて放置している</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">モールごとの仕様対応より先に、止まっている場所を特定する。</div>
+    <div class="cta-block-sub">
+      楽天でもAmazonでも転換率が動かないなら、各チャネルで読者に「選ぶ根拠」が届いていない可能性があります。<br>
+      診断を受けた事業者の多くが、初めて「どこが問題だったか」を言語化できたと言います。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">仕様対応の前にページの原因を診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>EC多チャネル展開の現場では長年、「楽天とAmazonはまったく違うプラットフォームだから、それぞれ専門家に別々に最適化させなければならない」という方向で語られてきました。各モールのコンサルも、モール特化の制作会社も、「自分たちのプラットフォームには独自の正解がある」という前提で提案し続けています。その前提のままモールごとに別々の方向でページを作り続けることが、「費用と手間は二倍になるがどちらのチャネルでも転換率が根本から改善しない」状態と「同じ商品なのに両モールでブランドの一貫性が崩壊する」構造を固定します。</p>
+
+  <p>楽天とAmazonで変えるべきものは「各プラットフォームの仕様と閲覧行動に合わせた見せ方（形式）」です。変えてはいけないものは「なぜその商品を選ぶべきかという訴求の根幹」です。この二つを分離して考えることで、根幹は共通化しながら形式だけを各モールに合わせるという、費用対効果の高いアプローチが生まれます。その分離を実現するためには、形式の専門家ではなく根幹の問いに答えられる専門性が先に必要です。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">楽天とAmazonは客層が違うので、全く別のLPを作るべきですか？</div>
+    <div class="faq-a">「全く別のLP」という解釈も、「そのまま使い回し」という解釈も、どちらも正確ではありません。読者が購買判断に至る理由の根幹は、楽天でもAmazonでも共通しています。違うのは、各プラットフォームでの情報の表示方法と、読者がページを訪れたときの状態です。変えてはいけないもの（訴求の根幹）と、変えなければいけないもの（各プラットフォームに合わせた見せ方）を分けることが先です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">楽天で作ったLP画像をAmazonにそのまま入れると、なぜ機能しないのですか？</div>
+    <div class="faq-a">楽天向けに作られた画像は、縦長で文字が密に詰め込まれていることが多いです。AmazonのA+コンテンツに入れると、スマホで表示したとき文字が潰れて読めなくなります。またAmazonの検索アルゴリズムはテキスト情報を重視しますが、画像に埋め込まれた文字はテキストとして認識されません。形式の問題として、楽天向けの見せ方をそのままAmazonに持ち込むことは機能しません。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">楽天コンサルとAmazonコンサルで言うことが正反対なのはなぜですか？</div>
+    <div class="faq-a">各モールのコンサルは、そのプラットフォームのシステムとUIに最適化された「見せ方（形式）」の専門家です。楽天では「賑わい感のある縦長画像」が有効とされ、Amazonでは「白抜き画像と明快な箇条書き」が推奨される。どちらも形式の話をしているため、正反対に聞こえます。しかし「なぜその商品を選ぶべきか」という訴求の根幹については、どちらの専門家も同じ答えに向かえるはずです。食い違うのは形式の議論であり、根幹の話ではありません。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">楽天とAmazonの両方で転換率を上げるには、何から始めればいいですか？</div>
+    <div class="faq-a">各チャネルの仕様対応より先に、「この商品はなぜその読者に必要か」という訴求の根幹を明確にすることが先です。その根幹が明確になれば、楽天向けの「見せ方」とAmazon向けの「見せ方」は形式の翻訳作業になります。根幹が整っていない状態での仕様対応は、どのモールでも「仕様には従っているが何も届いていないページ」を作るだけです。まず転換率が最も低いチャネルのページを診断することから始めることを推奨します。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Amazonのページ改善に、どれくらい投資する価値がありますか？</div>
+    <div class="faq-a">価格とレビューが同水準の競合が複数いる状態では、A+コンテンツと商品説明ページの整備が転換率に影響します。「Amazonは価格だけ」という前提でページを放置しているとき、改善できる変数を諦めている状態です。ただし投資対効果を判断するには、現在のページが読者に何を届けているかを確認することが先です。診断なしでのリニューアル投資は確証のない支出になります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、楽天とAmazonのどちらから先に確認しますか？</div>
+    <div class="faq-a">転換率が最も低い、または改善余地が大きいと感じているチャネルのURLから始めることが多いです。楽天でも転換率が低いのか、楽天では取れているがAmazonが動かないのかによって、根幹の問いと形式の問いのどちらが先に確認すべきかが変わります。URLを送っていただければ、現在のページのどこで読者が止まっているかをレポートします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、止まっている場所を特定する。</div>
+  <div class="cta-block-sub">
+    変えるべき場所と変えてはいけない場所が分かれば、何を変えればいいかが分かる。<br>
+    何を変えればいいかが分かれば、楽天でもAmazonでも転換率が動き始める。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/amazon-yahoo-makuake-lp-sekkei-dou-chigau.html">AmazonとYahoo・楽天とMakuakeでLP設計の考え方はどう違うか</a></li>
+    <li><a href="https://konishi-marketing.com/articles/ec-yoi-shohin-ga-ureru-wa-hanbun-shika-tadashikunai.html">ECで「良い商品が売れる」は半分しか正しくない</a></li>
+    <li><a href="https://konishi-marketing.com/articles/ec-kakaku-kyoso-makikomareru-hontono-genin.html">ECで「価格競争に巻き込まれる」本当の原因</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
