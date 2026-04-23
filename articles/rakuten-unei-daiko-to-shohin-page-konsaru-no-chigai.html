@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/rakuten-unei-daiko-to-shohin-page-konsaru-no-chigai.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楽天運営代行と商品ページコンサルの役割の違い｜小西マーケティング</title>
+<meta name="description" content="毎月の定例で作業完了報告を受け取る。しかし転換率の欄は動いていない。「ページをどう改善するか」という問いに、代行会社もコンサルも答えを返さなかった。その理由は、業者の質ではなく、業界の構造にあります。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+.article-body { padding: 2.5rem 2.5rem; background: var(--white); }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; background: #fff; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "運営代行に「売れるページを作ってほしい」と依頼するのは間違いですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "間違いというより、役割の範囲外の依頼になります。運営代行会社のサービスメニューは、商品登録・バナー更新・受注処理・問い合わせ対応といった定型業務を効率よく処理することを前提に設計されています。「読者の購買判断に至る心理導線を設計する」という作業は、その構造の外側にあります。依頼した側は「やってもらえる」と期待し、依頼された側は「それは対象外だが断りにくい」という状態になり、結果として見た目だけ整ったカタログ型ページが納品されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "コンサルタントに依頼すれば、商品ページの転換率は改善できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "コンサルタントの専門領域によります。楽天市場に特化したコンサルタントの多くは、集客・広告運用・イベント活用・数値管理を専門としています。これらは転換率を支える周辺要素ですが、転換率そのものを決める「ページの構成と読者への訴求設計」は別の専門領域です。「ページをもっと充実させましょう」という正論が返ってくるのは、その充実化を設計する専門性が自社のサービスに含まれていないからです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "運営代行とコンサル、どちらを先に契約すべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いずれを先にするかより、何を先に作るかが問われます。商品ページの転換率を決める構成——読者が「この商品を選ぶ根拠」を受け取れる設計——が存在しない状態で運営代行に任せても、作業は回りますが転換率は動きません。コンサルに任せても、集客は改善されますが転換率は動きません。「何を、誰のために、どう訴求するか」という設計が先にあって、その設計を実行・維持するために運営代行やコンサルが機能します。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "楽天運営代行と商品ページコンサルの役割の違い",
+  "description": "毎月の定例で作業完了報告を受け取る。しかし転換率の欄は動いていない。「ページをどう改善するか」という問いに、代行会社もコンサルも答えを返さなかった。その理由は、業者の質ではなく、業界の構造にあります。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/rakuten-unei-daiko-to-shohin-page-konsaru-no-chigai.html",
+  "datePublished": "2026-04-23",
+  "dateModified": "2026-04-23",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<div class="hero">
+  <span class="hero-category">楽天 運営代行 / コンサル 比較・選定</span>
+  <h1 class="hero-title">楽天運営代行と商品ページコンサルの<br>役割の違い</h1>
+  <p class="hero-lead">毎月の定例で、きれいに整理された作業完了報告を受け取る。バナーは更新されている。商品登録も滞りない。しかし転換率の欄だけ、先月と同じ数字が並んでいる。「ページをどう改善するか」という問いを持ち帰った担当者が、翌週の定例で返してきた答えは「イベントにあわせてクーポンを出しましょう」だった。代行会社もコンサルも、役割の外側にある問いを受け取った瞬間に止まります。その構造を解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
+</div>
+
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">作業が回り始めた日に、別の停滞が始まっていた</h2>
+
+  <p>運営代行を契約した直後、店舗の動きは確実に変わります。問い合わせへの返信が速くなる。商品登録のペースが上がる。楽天イベントのたびにバナーが差し替わる。「丸投げOK」という言葉通りに、日々の作業が回り始めます。</p>
+
+  <p>その一方で、転換率の数字は動きません。先月も今月も、主力商品のCVRは同じ帯に留まっています。定例ミーティングで「ページを改善したい」と伝えると、担当者は頷きます。翌週の提案は「次のイベントにあわせてポイント変倍を検討しましょう」です。</p>
+
+  <div class="insight">
+    作業が止まらないことと、転換率が動くことは、<br>
+    <em>まったく別の問題です。「丸投げOK」が解決するのは、前者だけです。</em>
+  </div>
+
+  <p>これは担当者の能力の問題ではありません。運営代行会社のサービスメニューは、定型業務を効率よく処理するために設計されています。「読者の購買判断に至る心理導線を設計する」という作業は、そのメニューの外側に置かれています。依頼した側が期待し、依頼された側が対応できない——この構造が、作業が回り始めた日から静かに固定されていきます。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「売れるページを作ってほしい」——その依頼が届く場所がない</h2>
+
+  <p>転換率が改善しないとき、「もっと良い業者に変えれば解決する」という方向に向かいます。複数の代行会社を比較する。コンサルタントに相談する。より上位のプランへ変更する。しかし問題の場所が変わらない限り、結果は変わりません。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">見当違いになっている場所</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">店舗側が思っている問題</div>
+      <div class="misrec-cell truth">自社に合う優秀な代行会社やコンサルをまだ見つけられていない。より良い業者に変えれば、売れるページを作ってもらえる</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">「日々の店舗運営（作業）」と「読者の購買判断を動かすページ設計」という、まったく異なる2つの役割を混同し、一社にすべてを任せようとしている</div>
+    </div>
+  </div>
+
+  <p>EC業界では長年、「運営代行に任せれば店舗が育つ」「楽天特化コンサルに入ってもらえばページも改善される」という方向で語られてきました。代行会社も、コンサルタントも、プラットフォームも、この枠組みで提案し続けています。その枠組みのまま発注し続けることが、「作業は動いているのに転換率が横ばい」という状態を固定します。</p>
+
+  <div class="callout">
+    運営代行会社のビジネスモデルは、標準化と効率化によって利益を出す<strong>労働集約・分業の構造</strong>で成立しています。担当ディレクターが変わっても業務が止まらないよう、マニュアル化できる作業が中心に置かれています。「読者の内面をリサーチし、購買判断の順序を設計する」という高度に属人的なプロセスは、このモデルでは構造上コストとして省かれます。より高額なプランに変更しても、担当者が変わるだけでこの構造は変わりません。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">コンサルが「もっと充実させましょう」と言い続ける理由</h2>
+
+  <p>楽天市場に特化したコンサルタントに相談すると、提案が返ってきます。イベント時のポイント変倍設定。クーポンの発行タイミング。広告予算の配分。売上の数字は管理されます。しかし転換率の話になると、「ページをもっと充実させましょう」という正論で止まります。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の履き違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">店舗側が信じている原因</div>
+      <div class="misrec-cell truth">楽天特化のコンサルに依頼すれば、集客だけでなく「売れるページの構成」まで考えてもらえるはず</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">楽天コンサルは「集客と数値管理のプロ」であり、「読者の購買心理を設計するプロ」ではない。後者はそもそも彼らのサービスメニューに存在しない。費用感の問題ではなく、専門性の問題</div>
+    </div>
+  </div>
+
+  <p>「ページをもっと充実させましょう」は間違っていません。問題は、その「充実したページ」を誰がどう設計するかが、そのままになることです。コンサルタントは集客の最適化を担います。その集客が到達するページが転換率を決めますが、そのページ自体を設計する専門性は、集客コンサルの役割の外側にあります。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">先に作るべきものが、発注前に存在していない</h2>
+
+  <p>EC業界では「まずコンペで代行会社を選ぶ」「実績のあるコンサルを探す」という順序で動くことが多いです。しかしその前に、発注できる状態にあるかどうかが確認されることはほとんどありません。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">市場が選んでいる解決策</div>
+      <div class="misrec-cell truth">複数の代行会社をコンペさせ、実績・デザイン・価格で最も優れた会社を選ぶ。あるいは上位プランのコンサルに一括で任せる</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">過去の「売上実績」という結果だけを見ており、その裏にある「なぜそのページで読者が動いたか」という設計の論理が自社に移転されない。デザインの美しさと、読者を確信させる構成力は別物</div>
+    </div>
+  </div>
+
+  <p>代行会社に渡す「ページの設計図」が存在しない状態で外注しても、作業者は目の前にある既存ページを整えることしかできません。コンサルタントに集客を任せても、受け皿となるページが転換率を取れない状態のままなら、集客費用がそのまま流れていきます。発注の前に、ページが「読者の購買判断を完結させられる構成になっているか」という確認が先に来ます。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">転換率が横ばいのまま発注を繰り返している店舗に共通する3つの状態</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「依頼しているのに提案がない」という疑問が解消されないまま契約が続く</h3>
+
+  <p>定例ミーティングで転換率の話をすると、担当者はメモを取ります。しかし翌週の議題はイベントの準備に戻ります。「転換率を上げるためにページをどう変えるか」という問いが、定例から消えていきます。</p>
+
+  <p>これは担当者の怠慢ではありません。その問いに答えることが自社の役割だという認識が、代行会社側にないからです。「作業はするが、売れるページを設計するのは自分たちではない」という暗黙の前提が、契約開始時から存在しています。「提案がない」と感じるとき、提案の元になる専門性がそのサービスに含まれていないことがほとんどです。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">ページを外注することへの迷いが、発注を先送りにし続ける</h3>
+
+  <p>「作業は外注してもいいが、成約の核心であるページを外注していいのか」という迷いがあります。外注した結果、自社の商品を理解しないまま作られたページが納品された経験が、この迷いを強化します。</p>
+
+  <p>この迷いは正確です。ページ設計を外注する際に問われるのは「誰に頼むか」より「何を渡すか」です。自社の商品が誰の何を解決するのか、その読者がどういう状態でページに来るのか——この情報を持たずに外注しても、受け取った側はテンプレートに当てはめるしかありません。迷いの解消は「信頼できる業者を探すこと」ではなく、「渡せるものを作ること」から始まります。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「丸投げOK」が転換率の停滞を見えにくくする</h3>
+
+  <p>運営代行を使い始めると、日々の作業負荷は確実に減ります。その軽減が、転換率という数字の停滞を覆い隠します。「作業は任せられている」という安心感があると、「転換率が動いていない」という問題が後回しになります。</p>
+
+  <p>月次レポートが「作業完了件数」で埋められているとき、転換率の変化は数字の一項目として流れていきます。作業が止まらないことの充実感と、転換率が動かないことの停滞感が、同じ定例の中に混在します。「問題がある」と認識されるのは、その停滞が数カ月積み重なってからです。</p>
+
+  <p>以下の状態が続いているなら、業者の変更より先に確認すべき問題が残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">代行会社に「転換率を上げたい」と伝えたが、返ってきた提案がイベント活用・クーポン・広告予算の話だった</li>
+    <li data-num="✓">コンサルタントに依頼したが「ページをもっと充実させましょう」という正論の先が見えなかった</li>
+    <li data-num="✓">過去にLP制作を外注したが、自社の商品の強みが反映されていないカタログのようなページが納品された</li>
+    <li data-num="✓">複数の代行会社・コンサルを比較しているが「どうやって転換率を上げるか」の具体的なアプローチの違いが判断できない</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">転換率が動かない場所を特定する。</div>
+    <div class="cta-block-sub">
+      代行会社に任せても、コンサルに依頼しても転換率が動かないなら、<br>
+      ページのどこかで読者が「選ぶ根拠」を受け取れていません。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">転換率が動かない原因を診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>EC業界では長年、「楽天特化の代行会社やコンサルに任せれば、売れるページの構成まで考えてもらえる」という前提で語られてきました。代行会社も、コンサルタントも、楽天のノウハウを発信するメディアも、「まず信頼できる業者を選ぶことが先決だ」という方向で情報を提供し続けています。その前提のまま発注先を探し続けることが、「作業は回っているのに転換率が横ばい」「コンサルに入ってもらったがページは変わっていない」という状態を固定します。</p>
+
+  <p>運営代行会社は定型業務を止めないためのインフラです。楽天コンサルタントは集客と数値管理のための計器です。そのどちらも、「読者の購買判断を完結させるページ設計」を専門とする役割ではありません。転換率を動かすために先に必要なのは、そのページが読者の購買判断を完結させられる構成になっているかどうかの確認です。その確認が先にあって、代行やコンサルが本来の機能を発揮します。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">運営代行に「売れるページを作ってほしい」と依頼するのは間違いですか？</div>
+    <div class="faq-a">間違いというより、役割の範囲外の依頼になります。運営代行会社のサービスメニューは、商品登録・バナー更新・受注処理・問い合わせ対応といった定型業務を効率よく処理することを前提に設計されています。「読者の購買判断に至る心理導線を設計する」という作業は、その構造の外側にあります。依頼した側は「やってもらえる」と期待し、依頼された側は「それは対象外だが断りにくい」という状態になり、結果として見た目だけ整ったカタログ型ページが納品されます。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">コンサルタントに依頼すれば、商品ページの転換率は改善できますか？</div>
+    <div class="faq-a">コンサルタントの専門領域によります。楽天市場に特化したコンサルタントの多くは、集客・広告運用・イベント活用・数値管理を専門としています。これらは転換率を支える周辺要素ですが、転換率そのものを決める「ページの構成と読者への訴求設計」は別の専門領域です。「ページをもっと充実させましょう」という正論が返ってくるのは、その充実化を設計する専門性が自社のサービスに含まれていないからです。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">運営代行とコンサル、どちらを先に契約すべきですか？</div>
+    <div class="faq-a">いずれを先にするかより、何を先に作るかが問われます。商品ページの転換率を決める構成——読者が「この商品を選ぶ根拠」を受け取れる設計——が存在しない状態で運営代行に任せても、作業は回りますが転換率は動きません。コンサルに任せても、集客は改善されますが転換率は動きません。「何を、誰のために、どう訴求するか」という設計が先にあって、その設計を実行・維持するために運営代行やコンサルが機能します。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">転換率を上げるために、まず何から手をつければいいですか？</div>
+    <div class="faq-a">現在のページが「読者の購買判断を完結させられる構成になっているか」を確認することが先です。作業の外注先を探すより、渡せるものを作ることが先に来ます。そのページで読者が何を受け取っているか、どこで離脱しているか、何が届いていないかを把握した状態で初めて、代行もコンサルも正しい役割を果たします。現状のページへの診断から始めることを推奨します。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">現在の代行会社との契約を続けながら、転換率を改善することはできますか？</div>
+    <div class="faq-a">できます。運営代行会社が担う定型業務（商品登録・バナー更新・受注処理）はそのまま続けながら、「ページの転換率を決める構成設計」を別途依頼する形が現実的です。代行会社に求める役割と、ページ設計に求める役割を分離することで、既存の体制を壊さずに転換率の改善に着手できます。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、ページのどこを確認しますか？</div>
+    <div class="faq-a">ページを開いた読者が最初に受け取る情報が何か、読者が「この商品を選ぶ根拠」を受け取れる構成になっているか、転換率が取れない状態の原因がどの位置に存在しているかを確認します。代行会社やコンサルに改善を依頼する前に「何を変えるべきか」が言語化できる状態になります。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、止まっている場所を特定する。</div>
+  <div class="cta-block-sub">
+    転換率が動かない場所が分かれば、何を変えればいいかが分かる。<br>
+    何を変えればいいかが分かれば、代行やコンサルが本来の機能を発揮する。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率（CVR）が上がらない本当の理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-shohin-page-design-yori-sekkei-ga-saki.html">楽天の商品ページはデザインより構成が先である理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-shohin-page-joho-ryo-fuyasu-to-urenaku-naru.html">楽天商品ページの情報量を増やすと売れなくなる理由</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
