@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/amazon-aplus-tsukutte-mo-uriage-kawaranu-riyu.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AmazonのA+コンテンツを作っても売上が変わらない理由｜小西マーケティング</title>
+<meta name="description" content="デザイナーに依頼した。モジュールも全部使った。それでもユニットセッション率は動かない。「AmazonのA+はカタログを補完する場所だ」という前提が、問題の場所を隠しています。EC100店舗超の停滞を見てきた経験から解説します。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --red: #b71c1c;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--off-white);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+.article-body { padding: 2.5rem 2.5rem; }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-row:first-of-type { border-top: none; }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.belief { background: var(--white); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+table.misrec-block { width: 100%; border-collapse: collapse; margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+table.misrec-block th.misrec-header { text-align: left; display: table-cell; width: 100%; }
+table.misrec-block td.misrec-cell.label { width: 40%; }
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-q { font-size: 1.0rem; color: var(--navy) !important; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; border-radius: 0; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+.prob-list li { background-color: #ffffff; }
+.article-body { background-color: #ffffff; }
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "A+コンテンツのデザインを整えれば、ユニットセッション率は改善しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "デザインの完成度とユニットセッション率は直接連動しません。デザイナーはA+を視覚的に整える専門家ですが、「どの情報をどの順序で読者に届けるか」という問いは、デザインの専門領域の外側に置かれています。綺麗に仕上げたA+が、「自分にとってなぜ必要か」を読者に届けていない場合、デザインの完成度に関わらずユニットセッション率は動きません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A+コンテンツの全モジュールを使えば、情報量が増えてユニットセッション率が上がりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "情報量の増加とユニットセッション率の改善は比例しません。読者がページを訪れてから購買判断に至るまでの時間は限られています。どのモジュールを使うかより、何をどの順序で届けるかが問題です。全モジュールを埋めても、「この商品が自分に必要な理由」が読者の中で形成されなければ、情報を増やしたことが離脱を加速させる可能性があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "競合よりA+が少ない（あるいはない）のに競合の方が売れているのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A+の量や質が直接の差になっているわけではないからです。読者がページを通じて「この商品が自分に必要か」という判断に至れるかどうかが問題です。A+がないページでも、タイトル・バレットポイントが一本の流れとして機能しているとき、読者は判断に向かいます。A+があっても、その流れが設計されていないページは、読者の判断を止めます。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AmazonのA+コンテンツを作っても売上が変わらない理由",
+  "description": "デザイナーに依頼した。モジュールも全部使った。それでもユニットセッション率は動かない。「AmazonのA+はカタログを補完する場所だ」という前提が、問題の場所を隠しています。EC100店舗超の停滞を見てきた経験から解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/amazon-aplus-tsukutte-mo-uriage-kawaranu-riyu.html",
+  "datePublished": "2026-04-24",
+  "dateModified": "2026-04-24",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<div class="hero">
+  <span class="hero-category">Amazon 商品ページ / A+コンテンツ / ユニットセッション率</span>
+  <h1 class="hero-title">AmazonのA+コンテンツを作っても<br>売上が変わらない理由</h1>
+  <p class="hero-lead">デザイナーに依頼した。モジュールも全部使いきった。ヒートマップで確認したら、読者は画像をほとんど見ずに下部の関連商品広告へ流れていた。「A+は商品の情報を整理して見せる場所だ」という前提が、何を変えるべきかという問いを封じています。EC100店舗超の停滞を見てきた経験から、A+が機能しない構造を解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<div class="author-box">
+  この記事は、<strong>Amazon・楽天総合ランキング1位通算1,000回以上・Yahoo!ショッピング総合ランキング1位・Makuake総合ランキング1位3回を達成したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">公開後も変わらなかった数字と、ヒートマップに映った読者の背中</h2>
+
+  <p>セラーセントラルを開きます。A+コンテンツを公開してから一定期間が経ちました。ユニットセッション率の欄を見ます。公開前とほとんど変わっていません。サードパーティのヒートマップツールで確認すると、読者はA+内の画像をほぼスクロールせず、ページ下部に表示される「類似商品」の広告枠へ流れていきます。</p>
+
+  <p>一方、競合に目を向けると、A+がない、あるいはシンプルな画像を数枚並べただけの商品ページが、自社より上位に表示されています。「デザインの差ではないのか」「モジュールの使い方が悪いのか」という問いが続きます。答えが見つからないまま、別のモジュール構成を試し、画像を差し替え、キャッチコピーを変えます。しかしユニットセッション率は動きません。</p>
+
+  <div class="insight">
+    「A+コンテンツで商品の情報を整理すれば読者に伝わる」という前提が、問題の場所を見えなくしています。<br>
+    <em>ユニットセッション率が動かないとき、最初に確認すべきはA+のデザインでもモジュール構成でもありません。A+を含むページ全体が、読者の「この商品が自分に必要か」という問いに答える流れになっているかどうかです。</em>
+  </div>
+
+  <p>手を動かし続けてきたこと自体は、判断として間違っていません。Amazonのセラー向けメディアも、コンサルも、運用代行会社も、長年にわたって「A+を充実させることでページの完成度が上がる」という方向で情報を提供し続けてきました。「情報の整理」という枠組みで動いていると、その枠組みの外側にある問いには気づけないまま、モジュールの選択と画像の差し替えだけが続きます。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">スペックを並べた瞬間に、比較は他社の土俵で始まる</h2>
+
+  <p>AmazonのA+コンテンツで最も多く見られるのは、スペックと特徴を視覚的に整理した構成です。素材・サイズ・機能・認証——これらを図解やアイコンとともに並べます。読者に情報が届いているように見えます。しかしこの構成が機能している前提は、「その商品カテゴリにおいて読者がどの指標で比較すべきかを正しく理解している」ことです。</p>
+
+  <p>スペックを並べると、読者は並べられた指標で比較を始めます。その指標が価格・重量・機能数だった場合、読者はページを離れて同じ指標を他社商品で確認します。低価格・大量レビューの競合が同じ指標で上回っていれば、そちらへ流れます。スペックの土俵に乗った瞬間に、比較は他社が設定した基準の中で行われます。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">A+コンテンツ：よくある認識と実際に起きていること</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">よくある認識</div>
+      <div class="misrec-cell belief">A+でスペックと特徴を分かりやすく整理すれば、読者に商品の価値が伝わる</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際に起きていること</div>
+      <div class="misrec-cell truth">スペックを並べた瞬間に読者は「この指標で他社と比較しよう」という行動に入る。比較の基準を渡した側が、比較の勝者を決められるわけではない</div>
+    </div>
+  </div>
+
+  <p>Amazonの商品ページ下部には、「この商品を見た人はこんな商品も見ています」という広告枠が自動で表示されます。スペック比較の土俵に乗った読者は、その枠に表示される競合へ自然に流れます。A+が「スペックの整理」として機能しているとき、その後に続くのはページ下部の競合広告へのナビゲーションです。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「読者は即決する」という前提が、疑念を放置させる</h2>
+
+  <p>「Amazonのユーザーは購買意欲が高い状態で訪れるから、A+はさらっと見せるだけでいい」という考え方があります。事実、Amazon流入の読者は検索やPPCを経由しており、ある程度の購買意思を持っています。しかしその購買意思は「このカテゴリで何かを買おう」という方向性であり、「この商品を選ぶ確信」ではありません。</p>
+
+  <p>確信に至れない読者には、「本当にこれでいいのか」という疑念が残ります。その疑念が残った状態でページのスクロールが終わると、読者はカートに入れません。ページを閉じるか、「類似商品」の枠から別の商品へ移動します。A+が「さらっと見せる情報の補足」として設計されているとき、その疑念は払拭されないまま残ります。</p>
+
+  <div class="callout">
+    <strong>「読者は即決する」という前提が正しい場合と、そうでない場合があります。</strong><br>
+    低単価・用途が明確なカテゴリでは即決に近い購買が起きます。しかし単価が上がり、用途の適合確認が必要なカテゴリでは、「本当にこれが自分に合っているか」という問いが読者の中に残ります。その問いに答えていないA+は、読者の判断を止めます。
+  </div>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">スマホ画面で起きていることと、デスクトップで設計されたA+の乖離</h3>
+
+  <p>AmazonのA+コンテンツはデスクトップ画面を前提に設計されることが多いです。横幅いっぱいに展開されるバナー画像、左右に並ぶ比較モジュール——デスクトップでは意図通りに表示されます。しかしスマートフォンアプリでは、これらのモジュールが縦に積み替えられ、バナー画像内のテキストは縮小されて読めなくなります。</p>
+
+  <p>Amazonのアプリからの流入が多いカテゴリでは、A+に込めた情報の大半がスマートフォン上で機能していない状態です。バナー画像の文字が読めない。比較表が縦並びになって意味をなさない。設計したつもりのA+が、実際に読者が見ている画面では全く異なる状態で表示されています。デスクトップで確認したA+の「仕上がり」と、スマートフォンで読者が受け取っている情報は別物です。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「実績バナーを冒頭に置く」が機能しない構造的な理由</h3>
+
+  <p>A+の冒頭にランキング受賞バナーや星評価を強調したビジュアルを配置するケースがあります。「信頼性を先に示す」という意図です。しかし競合の多くも同様の実績バナーを持っています。同じ場所に同じ形式で実績を並べているとき、読者はそれを「このカテゴリではどこも出している情報」として処理します。差にはなりません。</p>
+
+  <p>実績を示す情報は、読者が「この商品が自分に必要か」という判断の途中にある文脈で登場するとき機能します。A+の冒頭で「ランキング1位」と示しても、読者がまだ「この商品が何をしてくれるのか」を把握していない状態では、その実績は判断の根拠になりません。情報の順序が問題です。</p>
+
+  <p>以下の状態が続いているなら、A+のデザインより先に確認すべき問題が残っています。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">A+を公開したがユニットセッション率が公開前後でほぼ変わらない</li>
+    <li data-num="✓">A+のないシンプルな競合ページの方が順位もユニットセッション率も高い</li>
+    <li data-num="✓">スマートフォンでA+を確認したら、バナー内の文字が読めない状態で放置されている</li>
+    <li data-num="✓">全モジュールを使いきったA+が、ページ下部の関連商品広告への入口になっている</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">A+のデザインより先に、ページの流れを確認する。</div>
+    <div class="cta-block-sub">
+      ユニットセッション率が低い状態でA+を作り直しても、問題の場所が変わらなければ数字は動きません。<br>
+      診断を受けたセラーの多くが、初めて「どこが問題だったか」を言語化できたと言います。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">A+を作り直す前にページの流れを診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>Amazon業界の現場では長年、「A+コンテンツを充実させること、モジュールを使いきること、デザインの完成度を上げること」がページ改善の正道として語られてきました。Amazonのセラーサポートも、コンサルも、ECメディアも、「A+は商品情報を補完するツールだ」という枠組みで情報を提供し続けています。その枠組みのまま動くことが、「A+を作り込んでもユニットセッション率が変わらない」という状態と、「スペック比較の土俵から抜け出せない」構造を固定します。</p>
+
+  <p>AmazonのA+コンテンツが機能しないのは、デザインの問題でもモジュール選択の問題でもありません。タイトル・バレットポイント・A+という流れが、「この商品が読者に必要な理由」を一本の文脈として届けていないことです。その文脈の設計は、デザインとも広告運用とも異なる専門性を必要とします。ユニットセッション率が動かないとき、A+の作り直しより先に、ページ全体の流れという問いを確認することが先です。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+
+  <div class="faq-item">
+    <div class="faq-q">A+コンテンツのデザインを整えれば、ユニットセッション率は改善しますか？</div>
+    <div class="faq-a">デザインの完成度とユニットセッション率は直接連動しません。デザイナーはA+を視覚的に整える専門家ですが、「どの情報をどの順序で読者に届けるか」という問いは、デザインの専門領域の外側に置かれています。綺麗に仕上げたA+が、「自分にとってなぜ必要か」を読者に届けていない場合、デザインの完成度に関わらずユニットセッション率は動きません。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">A+コンテンツの全モジュールを使えば、情報量が増えてユニットセッション率が上がりますか？</div>
+    <div class="faq-a">情報量の増加とユニットセッション率の改善は比例しません。読者がページを訪れてから購買判断に至るまでの時間は限られています。どのモジュールを使うかより、何をどの順序で届けるかが問題です。全モジュールを埋めても、「この商品が自分に必要な理由」が読者の中で形成されなければ、情報を増やしたことが離脱を加速させる可能性があります。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">競合よりA+が少ない（あるいはない）のに競合の方が売れているのはなぜですか？</div>
+    <div class="faq-a">A+の量や質が直接の差になっているわけではないからです。読者がページを通じて「この商品が自分に必要か」という判断に至れるかどうかが問題です。A+がないページでも、タイトル・バレットポイントが一本の流れとして機能しているとき、読者は判断に向かいます。A+があっても、その流れが設計されていないページは、読者の判断を止めます。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+
+  <div class="faq-item">
+    <div class="faq-q">A+コンテンツの問題を確認するために、まず何を見ればいいですか？</div>
+    <div class="faq-a">スマートフォン表示でA+を確認することが最初の確認です。デスクトップで設計されたA+が、スマートフォンでどう表示されているかを確認します。次に、タイトル・バレットポイント・A+の流れが「この商品が読者に必要な理由」を一本の文脈として届けているかを確認します。その確認には、ページを読者の視点で読む専門的な分析が必要です。まずURLを送ることで診断が始まります。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">AmazonはA+に規約制限があります。その中でも設計による差は出せますか？</div>
+    <div class="faq-a">出せます。Amazonの規約はA+のモジュール種類や使用禁止要素を定めていますが、その制限の中で「何をどの順序で読者に届けるか」という設計の余地は残っています。規約があるからこそ、限られた枠の中で読者の判断に届く流れを設計することが差になります。規約への対応という問いと、設計という問いは別の問いです。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">診断では、Amazon商品ページのどこを確認しますか？</div>
+    <div class="faq-a">タイトル・バレットポイント・A+コンテンツの流れが「この商品が読者に必要な理由」を届けているかを確認します。スペック比較の土俵に乗っているか、読者が購買判断に至る文脈が設計されているかを特定します。「ユニットセッション率が上がらない原因がA+のデザインにあるのかページの流れにあるのか」が明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、ページの流れを確認する。</div>
+  <div class="cta-block-sub">
+    ページに流れが設計されれば、A+の役割が変わる。<br>
+    A+の役割が変われば、ユニットセッション率が動き始める。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/amazon-urenai-shohin-page-mondai.html">Amazonで売れない商品ページに共通する3つの問題</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-main-image-kaete-mo-unit-session-rate-kawaranu.html">Amazonのメイン画像だけ変えても売れ数が変わらない理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-aplus-tsukutte-mo-unit-session-rate-agaranai.html">AmazonのA+コンテンツを作っても転換しない理由</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
