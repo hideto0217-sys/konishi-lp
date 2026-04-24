@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/amazon-main-image-kaete-mo-unit-session-rate-kawaranu.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazonのメイン画像だけ変えても売れ数が変わらない理由｜小西マーケティング</title>
+<meta name="description" content="クリック数は増えた。広告費も消化できている。しかし注文管理画面の静けさは変わらない。「メイン画像のCTRを上げれば売れる」という前提が、問題の場所を隠しています。Amazon100商品超の停滞を見てきた経験から解説します。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+.article-body { padding: 2.5rem 2.5rem; background: var(--white); }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; background: #fff; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "メイン画像を変えてCTRが上がったのに、なぜユニットセッション率が改善しないのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CTRとユニットセッション率は別の問いに答える指標です。CTRは「検索結果画面で読者が商品をクリックしたか」を示します。ユニットセッション率は「ページを訪れた読者が購買判断に至ったか」を示します。メイン画像の改善はCTRに影響しますが、ページ内で読者が購買判断に至る流れとは別の問いです。クリックした読者がページで何を受け取り、どう判断するかは、画像の外側にある問いです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "競合のメイン画像を参考に真似ることは有効ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "競合のメイン画像を参考にすること自体は問題ありません。ただし、競合の画像が機能している理由は画像の外観だけに存在するわけではありません。その競合のページ全体として、読者が購買判断に向かう流れが設計されているとき、メイン画像が「その流れの入口」として機能しています。外観だけを模倣しても、その流れが自店のページに設計されていない場合、クリックした読者が比較に向かうだけになることがあります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "メイン画像のA/Bテストを繰り返していますが、ユニットセッション率に変化がありません。何が問題ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A/Bテストが測定しているのは「どちらの画像が多くクリックされるか」です。ユニットセッション率が変わらない場合、問いの場所が画像の外側——ページ内で読者が購買判断に至る流れ——にある可能性があります。クリックして来た読者が何を受け取り、どう判断するかは、2枚目以降の画像・バレットポイント・A+の設計という問いです。その問いが手つかずのまま1枚目のテストを繰り返しても、ユニットセッション率は変わりません。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Amazonのメイン画像だけ変えても売れ数が変わらない理由",
+  "description": "クリック数は増えた。広告費も消化できている。しかし注文管理画面の静けさは変わらない。「メイン画像のCTRを上げれば売れる」という前提が、問題の場所を隠しています。Amazon100商品超の停滞を見てきた経験から解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/amazon-main-image-kaete-mo-unit-session-rate-kawaranu.html",
+  "datePublished": "2026-04-25",
+  "dateModified": "2026-04-25",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<div class="hero">
+  <span class="hero-category">Amazon 商品ページ / メイン画像 / ユニットセッション率</span>
+  <h1 class="hero-title">Amazonのメイン画像だけ変えても<br>売れ数が変わらない理由</h1>
+  <p class="hero-lead">昨日よりクリック数は増えた。広告費も消化できている。しかしセラーセントラルの注文管理画面は、1枚目の画像を変える前と同じ静けさのままだ。「メイン画像のCTRを上げれば売れる」という前提が、問題の場所を隠しています。Amazon100商品超の停滞を見てきた経験から、メイン画像だけ変えてもユニットセッション率が変わらない構造を解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">CTRが上がった翌日も、注文通知は鳴らなかった</h2>
+
+  <p>SP広告の管理画面を開く。昨日変更したメイン画像の効果が出た。クリック数が前日比で増えている。インプレッションに対してクリック数が伸びている。「今度こそ動いた」という感覚がある。しかしセラーセントラルの注文管理を確認する。注文数は変わっていない。ユニットセッション率のグラフは、メイン画像を変える前と同じ水準だ。</p>
+
+  <p>「デザインが悪かったのか」「角度が問題だったのか」。また別の画像パターンを試す。白抜き規約の限界ギリギリまで商品を大きく見せたバージョン、小道具を足したバージョン——A/Bテストを重ねる。CTRは少し変動する。しかしユニットセッション率は変わらない。クリックして来た読者がページ内で何かを受け取り、購買判断に向かっているのかどうかは、広告管理画面には表示されない。</p>
+
+  <div class="insight">
+    CTRとユニットセッション率は、別の問いに答える指標だ。<br>
+    <em>メイン画像の改善はCTRに影響する。しかしクリックして来た読者がページで何を受け取り、購買判断に至るかという問いは、メイン画像の外側にある。</em>
+  </div>
+
+  <p>「CTRを上げれば売れる」という方向でノウハウが提供されてきたのは、Amazon運用業界の長年の慣習だ。運用代行会社も、AmazonコンサルもCTR最適化を「改善の入口」として提案し続けている。その枠組みの中で動いていると、ユニットセッション率が変わらない原因は「まだ1枚目が最適化されていないのか」「もっと目立つ画像が必要なのか」という方向へ向かい続ける。しかし問いの場所は、その診断の外側にある。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「クリックさせる力」と「成約させる力」は別の問いだ</h2>
+
+  <p>メイン画像を変えてCTRが上がるとき、何が起きているかを確認する。検索結果画面でより多くの読者が1枚目をクリックした。それだけだ。クリックした読者がページに来て、「この商品が自分に必要だ」という判断に向かったかどうかは、CTRという指標には含まれていない。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">問題の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが思っている問題</div>
+      <div class="misrec-cell truth">メイン画像のインパクトやCTRが不十分なことが問題だ。アクセスさえ増えれば一定の割合で成約が生まれる。だからまず1枚目を最適化することが最優先だ</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">「クリックさせる力」と「成約させる力」は別の問いに答える。メイン画像の最適化はクリック数を変えるが、ページ内で読者が購買判断に至る流れを変えない。その流れが設計されていなければ、アクセスが増えても成約数は比率のまま変わらない</div>
+    </div>
+  </div>
+
+  <p>「インパクトのある画像で読者を引き寄せれば、あとは一定の割合で売れる」という考え方には前提がある。ページ内で読者が購買判断に向かう流れが設計されていることだ。その前提が整っていない状態でCTRを上げると、興味の薄い読者まで呼び込む結果になる。ページ内で「自分向けではない」と判断した読者は即座に離脱する。ユニットセッション率は変わらず、ACOSだけが悪化する。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">読者は2枚目以降で何を処理しているか</h2>
+
+  <p>1枚目の画像をクリックして商品ページに来た読者は、スクロールを始める。2枚目・3枚目の画像、バレットポイント、A+コンテンツ——これらを通じて「この商品が自分の状況に必要かどうか」を処理している。1枚目が読者を呼び込んだとしても、その処理の中で「自分向けではない」「この商品を選ぶ理由が見当たらない」という判断に至れば、カートには入らない。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが信じている原因</div>
+      <div class="misrec-cell truth">Amazonは検索結果の画面で勝負が決まる「画像バトル」の場所だ。1枚目でクリックを取れれば、あとは自然に成約につながる</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">1枚目は「扉」に過ぎない。扉を開けた後の空間——2枚目以降の画像・バレットポイント・A+の流れ——に「この商品が自分に必要な理由」が届いていなければ、読者は扉を開けてすぐに引き返す。ページ下部の関連商品広告へ流れていく</div>
+    </div>
+  </div>
+
+  <p>Amazon広告（SP広告）の流入先としてページを整備するとき、最も大きく影響するのはページ内の構成だ。1枚目がどれだけ目立っても、2枚目以降で「この商品でないと解決しない理由」が読者に届いていないとき、読者はより安い競合・より多くのレビューを持つ競合へ流れる。スマートフォン画面で素早くスクロールする読者にとって、2枚目以降の情報が一本の流れとして機能しているかどうかが判断の分岐点になる。</p>
+
+  <div class="callout">
+    <strong>「Amazonユーザーは即決する」という前提について。</strong><br>
+    購買意思を持ってAmazonを訪れた読者でも、「このカテゴリで何かを買おう」という方向性と「この商品を選ぶ確信」は別だ。スマートフォン画面で複数の商品を比べながら判断している読者に対して、2枚目以降が「スペックの羅列」として並んでいるとき、読者はより安価な競合に流れる。1枚目で引き寄せた読者を成約に向かわせる流れは、2枚目以降の設計という問いにある。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">規約ギリギリの加工が招く「期待値とのずれ」</h2>
+
+  <p>Amazonの白抜き規約の限界ギリギリまで文字要素に近い加工を施したメイン画像を使う。検索結果画面では目立つ。クリック数は増える。しかしページに来た読者が、メイン画像が示唆した内容とページ内の情報との間にずれを感じると、即座に離脱する。</p>
+
+  <p>メイン画像で「凄そうな雰囲気」を演出して読者の期待値を上げるとき、その期待に応えるだけの情報がページ内に設計されている必要がある。そうでなければ、メイン画像が引き寄せた読者が「思っていたのと違う」という判断を下す速度が速くなるだけだ。引き寄せる力が強いほど、ページ内の流れとのずれが成約の足を引っ張る。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">市場が選んでいる解決策</div>
+      <div class="misrec-cell truth">メイン画像のA/Bテストを高速で回し、最もクリックされる1枚を特定する。または競合の画像の角度・ライティングを徹底的に模倣する</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">「クリックされる力」と「成約させる力」は別物だ。入口だけを最適化しても、ページ内で読者が購買判断に向かう流れが設計されていなければ、ACOSが悪化するだけで利益は改善しない。競合画像の模倣は、クリックされた後に「競合と何が違うのか」という比較を加速させる</div>
+    </div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">メイン画像の役割は「扉」だが、扉は部屋があって初めて機能する</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「1枚目の修正」がループしている状態</h3>
+
+  <p>1枚目の画像を変える。CTRが少し変動する。しかしユニットセッション率は変わらない。「もっと目立つ画像が必要だ」という結論に至り、また1枚目を変える。デザイナーへの依頼費が積み重なる。しかし成約数が変わらないため、投資を回収できない。この繰り返しの中に、「ページ内で読者が購買判断に至る流れ」という問いは登場しない。</p>
+
+  <p>メイン画像を変えることは「検索結果画面でのシェア」を変える作業だ。その作業に費やす時間とコストが増えるほど、2枚目以降の設計という問いが後回しになる。1枚目の最適化が先だという判断は、Amazon運用業界の長年のノウハウが根拠になっている。しかしその判断が「ユニットセッション率が変わらないのに1枚目の修正だけが続く」状態を作っている。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「広告費を積めばなんとかなる」の限界</h3>
+
+  <p>SP広告の予算を増やすとインプレッションとクリックが増える。しかしユニットセッション率が変わらない状態では、クリックが増えるだけ広告費が消える。ACOSが高騰し、利益が圧迫される。「もっと広告を最適化すれば改善するはず」という判断でターゲティングを絞り、入札単価を調整する。CTRは少し変動するが、ユニットセッション率という変数は変わらない。</p>
+
+  <p>広告の最適化が影響できるのは「どの読者に・いつ・いくらで露出するか」という問いだ。露出した読者がページで何を受け取り、購買判断に至るかという問いは、広告設定の外側にある。ユニットセッション率が低いまま広告費を増やすのは、「ページ内で99人が帰る構造」を加速させているだけだ。</p>
+
+  <p>以下の状態が続いているなら、メイン画像の修正より先に確認すべき問題が残っている。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">メイン画像を変えてCTRは改善したが、ユニットセッション率は変わらず広告のACOSが悪化している</li>
+    <li data-num="✓">1枚目のA/Bテストを繰り返しているが、成約数に変化がなくデザイナーへの費用だけが積み重なっている</li>
+    <li data-num="✓">競合の画像を参考に模倣したが、クリック後の離脱が増えてユニットセッション率が下がった</li>
+    <li data-num="✓">SP広告の予算を増やしてもACOSが改善せず、広告費が利益を食い潰している状態が続いている</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">1枚目を修正する前に、ページ内の流れを確認する。</div>
+    <div class="cta-block-sub">
+      CTRが改善してもユニットセッション率が変わらないなら、問いの場所はメイン画像の外側にあります。<br>
+      2枚目以降の流れとページ設計を特定することが、ユニットセッション率改善の入口です。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">画像を変える前にページの流れを診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>Amazon運用業界の現場では長年、「CTRを上げることが売上改善の最優先事項だ」「1枚目の画像最適化が攻略の入口だ」という方向で語られてきた。運用代行会社も、Amazonコンサルも、セラー向けのメディアも、「メイン画像のA/Bテストを回し続けることが正しい改善だ」という枠組みで情報を提供し続けている。その枠組みのまま動くことが、「CTRは改善したがユニットセッション率が変わらない」状態と「ACOSが高騰して利益が残らない」構造を固定する。</p>
+
+  <p>メイン画像は「扉」だ。扉の形を変えることは、どれだけ多くの読者が扉を開けるかに影響する。しかし扉を開けた先の部屋——2枚目以降・バレットポイント・A+の流れとして読者が「この商品が自分に必要な理由」を受け取れるかどうか——が設計されていなければ、読者は扉を開けてすぐに隣の部屋へ移動する。1枚目の修正に費やす時間とコストより先に、その部屋という問いが手つかずになっていないかを確認することが先だ。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">メイン画像を変えてCTRが上がったのに、なぜユニットセッション率が改善しないのですか？</div>
+    <div class="faq-a">CTRとユニットセッション率は別の問いに答える指標です。CTRは「検索結果画面で読者が商品をクリックしたか」を示します。ユニットセッション率は「ページを訪れた読者が購買判断に至ったか」を示します。メイン画像の改善はCTRに影響しますが、ページ内で読者が購買判断に至る流れとは別の問いです。クリックした読者がページで何を受け取り、どう判断するかは、画像の外側にある問いです。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">競合のメイン画像を参考に真似ることは有効ですか？</div>
+    <div class="faq-a">競合のメイン画像を参考にすること自体は問題ありません。ただし、競合の画像が機能している理由は画像の外観だけに存在するわけではありません。その競合のページ全体として、読者が購買判断に向かう流れが設計されているとき、メイン画像が「その流れの入口」として機能しています。外観だけを模倣しても、その流れが自店のページに設計されていない場合、クリックした読者が比較に向かうだけになることがあります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">メイン画像のA/Bテストを繰り返していますが、ユニットセッション率に変化がありません。何が問題ですか？</div>
+    <div class="faq-a">A/Bテストが測定しているのは「どちらの画像が多くクリックされるか」です。ユニットセッション率が変わらない場合、問いの場所が画像の外側——ページ内で読者が購買判断に至る流れ——にある可能性があります。クリックして来た読者が何を受け取り、どう判断するかは、2枚目以降の画像・バレットポイント・A+の設計という問いです。その問いが手つかずのまま1枚目のテストを繰り返しても、ユニットセッション率は変わりません。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">ユニットセッション率を改善するために、まず何を確認すればいいですか？</div>
+    <div class="faq-a">2枚目以降の画像・バレットポイント・A+の流れが「この商品が読者に必要な理由」を届けているかを確認することが先です。タイトル→バレット→A+の流れが一本の文脈として機能しているか、それとも各セクションが独立したスペック情報として並んでいるかを特定します。その確認は、ページを読者の視点で読む専門的な分析を必要とします。まずURLを送ることで診断が始まります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">メイン画像の改善は全く意味がありませんか？</div>
+    <div class="faq-a">メイン画像の改善が意味を持つ場面はあります。ただし、ページ内で読者が購買判断に向かう流れが設計されていることが前提です。その前提が整っているとき、メイン画像は「その流れの入口」として機能します。前提が整っていない状態で1枚目だけを最適化しても、引き寄せた読者が流れのないページで離脱するだけです。診断では「その前提がどの程度整っているか」を特定します。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、ユニットセッション率が低いページのどこを確認しますか？</div>
+    <div class="faq-a">タイトル・バレットポイント・A+の流れが「この商品が読者に必要な理由」を届けているかを確認します。「ユニットセッション率が低い原因がメイン画像のCTRにあるのか、ページ内の流れの設計にあるのか」が明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、ページ内の流れという問いが手つかずになっていないかを特定する。</div>
+  <div class="cta-block-sub">
+    流れが特定できれば、1枚目の修正に費やす時間とコストの方向が変わる。<br>
+    方向が変われば、ユニットセッション率という変数が動き始める。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/amazon-urenai-shohin-page-mondai.html">Amazonで売れない商品ページに共通する問題</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-aplus-tsukutte-mo-uriage-kawaranu-riyu.html">AmazonのA+コンテンツを作っても売上が変わらない理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-aplus-tsukutte-mo-unit-session-rate-agaranai.html">AmazonのA+コンテンツを作ってもユニットセッション率が上がらない理由</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
