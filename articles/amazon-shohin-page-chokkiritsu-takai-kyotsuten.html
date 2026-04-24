@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/amazon-shohin-page-chokkiritsu-takai-kyotsuten.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazon商品ページの直帰率が高い店舗の共通点｜小西マーケティング</title>
+<meta name="description" content="広告費を払って連れてきた読者が、ページを開いて数秒で消えていく。デザインでも情報量でもない。ページ冒頭で読者が「これは自分向けではない」と処理する構造が問題です。Amazon100商品超の停滞を見てきた経験から解説します。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+.article-body { padding: 2.5rem 2.5rem; background: var(--white); }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; background: #fff; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "広告のターゲティングを絞れば直帰率は改善しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ターゲティングを絞ることで「関心度の低い読者」を減らす効果は期待できます。しかし直帰率の根本的な原因がページ冒頭の設計にある場合、ターゲティングを絞っても改善は限定的です。ページに来た読者が「これは自分向けの情報だ」と感じる文脈が冒頭に設計されていないとき、ターゲットに近い読者であっても数秒で離脱します。広告設定の最適化と、ページ冒頭の設計は別の問いです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A+コンテンツを作り込めば直帰率は下がりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A+コンテンツの完成度と直帰率は直接連動しません。直帰率は読者がページを開いてから短時間で離脱する割合です。多くの読者がA+コンテンツを読む前に離脱しているとき、A+を作り込んでも直帰率への影響は限定的です。タイトル・バレットポイント・2〜3枚目の画像という「ファーストビューの文脈」で読者が「自分向けの情報だ」と感じないとき、A+まで読まれません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "クーポンやセット割引をページ上部に表示すれば直帰率は下がりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "価格訴求で一時的に読者を引き止める効果はあります。しかし「この商品が自分の状況に必要だ」という確信が届いていない状態では、価格の安さで引き止めた読者がより安い競合商品に流れます。直帰率を根本的に改善するためには、価格訴求より先に「なぜこの商品が読者の状況に必要か」という文脈がページ冒頭で届いているかを確認することが先です。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Amazon商品ページの直帰率が高い店舗の共通点",
+  "description": "広告費を払って連れてきた読者が、ページを開いて数秒で消えていく。デザインでも情報量でもない。ページ冒頭で読者が「これは自分向けではない」と処理する構造が問題です。Amazon100商品超の停滞を見てきた経験から解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/amazon-shohin-page-chokkiritsu-takai-kyotsuten.html",
+  "datePublished": "2026-04-25",
+  "dateModified": "2026-04-25",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<div class="hero">
+  <span class="hero-category">Amazon 商品ページ / 直帰率 / ユニットセッション率</span>
+  <h1 class="hero-title">Amazon商品ページの直帰率が高い<br>店舗の共通点</h1>
+  <p class="hero-lead">広告費を払って連れてきた読者が、ページを開いて数秒で消えていく。ページ下部の「500円安い他社品」のバナーへ向かう読者の背中を見送るだけだ。デザインでも情報量でも広告のターゲティングでもない。ページ冒頭で読者が「これは自分向けではない」と処理する構造が直帰率を固定しています。EC100商品超の停滞を見てきた経験から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">広告費は消えたが、読者は競合ページに着いた</h2>
+
+  <p>セラーセントラルを開く。SP広告のレポートを見ると、インプレッションとクリックは増えている。しかしユニットセッション率は変わらない。ページのスクロール深度を確認できるサードパーティツールで見ると、多くの読者がページを開いてからほとんどスクロールせずに離脱している。</p>
+
+  <p>ページ下部には「この商品に関連する商品」の広告枠が並んでいる。自社より安い競合商品、自社より多くのレビューを持つ競合商品——読者が離脱した先は、多くの場合この枠だ。広告費を払って連れてきた読者が、自社ページを踏み台に競合へ向かっている。広告費だけが消え、成約は競合が取る。</p>
+
+  <div class="insight">
+    直帰率が高い店舗に共通しているのは、デザインや情報量の問題ではない。<br>
+    <em>ページを開いた読者が冒頭の数秒で「これは自分向けではない」と処理する構造が残っている。その処理を止めるための文脈が、冒頭に設計されていないことが共通点だ。</em>
+  </div>
+
+  <p>「直帰されるのは商品力のせいだ」「レビュー数が足りないから仕方ない」——こうした諦めが生まれるのは、Amazon運用業界が長年「集客（SEO・広告）の最適化」を改善の中心として教えてきた構造がある。ページ冒頭の文脈設計という問いは、その枠組みの外側に置かれたままになっている。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">バレットポイントのキーワード詰め込みが読者の「読む気」を止める</h2>
+
+  <p>Amazon商品ページのバレットポイント（箇条書き）は、SEOの観点からキーワードを詰め込む場所として設計されている場合が多い。「○○対応」「◎◎素材使用」「長さ△△cm」——スペック情報がキーワードとともに詰め込まれる。デスクトップで見ると整って見えるが、スマートフォンで見るとテキストが塊として表示される。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">問題の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが思っている問題</div>
+      <div class="misrec-cell truth">直帰されるのはデザインの質が低いか情報量が足りないからだ。バレットポイントのキーワードを増やし、A+を充実させれば読者は留まるはずだ</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">読者がページを開いた瞬間に冒頭で処理するのは「これは自分向けの情報か」という問いだ。キーワードが詰め込まれた箇条書きは「スペックのリスト」として処理される。「自分の状況に関係する」という文脈が届かないとき、読者は読む前に離脱する</div>
+    </div>
+  </div>
+
+  <p>スマートフォン画面で素早くスクロールする読者にとって、バレットポイントの最初の一文が「読むかどうか」の判断基準になる。その一文が「○○対応・△△素材」というスペック情報から始まるとき、読者は「このカテゴリのスペック表だ」と処理してスキップする。スキップした後に「読む理由」が見当たらなければ、ページを閉じてページ下部の競合広告枠へ向かう。情報量の問題ではなく、文脈の問題だ。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「ブランドの歴史」と「読者の今の悩み」はなぜ接続されないのか</h2>
+
+  <p>A+コンテンツに「創業者のこだわり」「素材の産地」「製造工程の写真」を美しく配置している。デザインの完成度は高い。しかしユニットセッション率が変わらない。ヒートマップを確認すると、多くの読者がA+コンテンツが始まる前にページを離脱している。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが信じている原因</div>
+      <div class="misrec-cell truth">広告のキーワード設定が甘く、ターゲット外の客を集めているから直帰される。またはA+の滞在時間が短いのはデザインの完成度が足りないからだ</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">A+コンテンツを読む前に読者は離脱している。ブランドの歴史や素材のこだわりは「企業の自己紹介」として処理される。読者の「今抱えている悩み」や「今使っている解決策への不満」と接続されていない情報は、読者に関係のない情報として処理されてスクロールされる</div>
+    </div>
+  </div>
+
+  <p>読者がA+コンテンツを読むのは、タイトル・バレットポイント・2〜3枚目の画像を通じて「この商品が自分の状況に関係する」という文脈を受け取ったあとだ。その文脈が冒頭で届いていないとき、A+コンテンツがどれだけ丁寧に作られていても、読まれる前に離脱が起きる。A+の完成度より先に、冒頭の文脈設計という問いが手つかずになっていないかを確認することが先だ。</p>
+
+  <div class="callout">
+    <strong>「Amazonはプラットフォームの制約が多いから、ページ設計による改善に限界がある」という診断について。</strong><br>
+    確かにAmazonはページ構成に制約がある。しかしタイトル・バレットポイント・画像の順序・A+の文脈という要素の中で「ページ冒頭で読者が自分の状況に関係する文脈を受け取れるかどうか」という設計の余地は残っている。制約があるからこそ、限られた要素の中で読者への文脈接続を設計できるかどうかが差になる。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「読まないのはスマホユーザーの習性だ」という諦めが固定する構造</h2>
+
+  <p>「スマホユーザーは文章を読まない。だからページを整えても直帰は防げない」という判断がある。競合ページの直帰率を確認できるわけではないが、同じカテゴリの競合が自社より高いユニットセッション率で売れている現実はある。「スマホユーザーは読まない」という前提が正しければ、競合も同じ直帰率を抱えているはずだ。しかし実際には差がある。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">市場が選んでいる解決策</div>
+      <div class="misrec-cell truth">2枚目以降の画像順序をA/Bテストで入れ替え、スマホで見やすい大きな文字のバナーに作り変える。または直帰を防ぐためにクーポンやセット割引をページ上部に目立たせる</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">UIが整っても「なぜ他ではなくこれなのか」という文脈が届いていなければ離脱は止まらない。価格訴求で引き止めた読者はより安い競合に流れる。画像の順序と価格の操作は、冒頭の文脈設計という問いに答えない</div>
+    </div>
+  </div>
+
+  <p>読者が「読まない」のは、読まない習性があるのではなく「読む理由」が提示されていないからだ。ページ冒頭で「この情報は自分の状況に関係する」という接続が起きたとき、読者はスマートフォン画面でもスクロールを続ける。その接続が起きるかどうかは、バレットポイントの最初の数行と2〜3枚目の画像の文脈設計による。デザインの問題でも画像サイズの問題でもない。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">直帰率が高い店舗が手つかずにしている問い</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">メイン画像と2〜3枚目の間に「期待値のずれ」が生まれている</h3>
+
+  <p>1枚目の画像でインパクトを出すために、実際の商品よりも「凄そうな雰囲気」を演出する。クリック数は増える。しかし2枚目以降でその演出と商品の実態のずれを感じた読者が即座に離脱する。メイン画像が引き寄せた読者の期待値が高いほど、2枚目以降のずれが直帰率を押し上げる。</p>
+
+  <p>1枚目と2枚目以降は一本の流れとして機能する必要がある。1枚目が示唆した内容を、2枚目以降が「なぜこの商品が読者の状況に必要か」という文脈で受け継ぐとき、読者はスクロールを続ける。その連続性が途切れているとき、メイン画像を変えるたびに直帰率が悪化する可能性が生まれる。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「自社ページが競合への踏み台になっている」構造を確認していない</h3>
+
+  <p>ページ下部の「この商品に関連する商品」の広告枠は、Amazonが自動で配置する。直帰した読者が次に向かう先として競合商品が並ぶ。自社ページが高い直帰率を持つとき、広告費を払って集めた読者が自社ページを通じて競合へ案内される構造になっている。</p>
+
+  <p>この構造を変えるためには、ページ内で読者が「この商品が自分に必要だ」という判断に向かう流れを設計することが先だ。直帰を防ぐことは、競合広告枠への誘導を止めることでもある。しかしその設計という問いは、広告費の最適化とも画像のA/Bテストとも異なる専門性を必要とする。</p>
+
+  <p>以下の状態が続いているなら、広告設定やデザイン変更より先に確認すべき問いが残っている。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">SP広告のクリック数は増えているのにユニットセッション率が変わらず、ACOSが悪化している</li>
+    <li data-num="✓">A+コンテンツを作り込んでいるが、ヒートマップで確認するとA+まで読まれる前に離脱が多発している</li>
+    <li data-num="✓">バレットポイントにキーワードを詰め込んでいるが、スマートフォン表示で読まれている手応えがない</li>
+    <li data-num="✓">価格やクーポンを調整して一時的に改善するが、より安い競合が出るたびに読者が流れていく状況が続いている</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">直帰率の原因が広告設定にあるのかページ冒頭の設計にあるのかを特定する。</div>
+    <div class="cta-block-sub">
+      広告費を積んでも直帰率が変わらないなら、問いの場所はページの内側にある可能性があります。<br>
+      ページ冒頭で読者に何が届いていないかを特定することが、直帰率改善の入口です。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">広告費を増やす前にページの冒頭を診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>Amazon運用業界の現場では長年、「SEOのキーワード最適化」「広告のターゲティング精度の向上」「A+コンテンツの充実」が直帰率改善・ユニットセッション率向上の正道として語られてきた。運用代行会社も、Amazonコンサルも、セラー向けのメディアも、「集客の質と量を上げること」「コンテンツをデザイン的に整えること」という枠組みで情報を提供し続けている。その枠組みの中で動くことが、「広告費を積んでも直帰率が変わらない」状態と「ACOSが高騰して利益が残らない」構造を固定する。</p>
+
+  <p>直帰率が高い店舗に共通しているのは、ページ冒頭で読者が「これは自分向けの情報だ」と感じる文脈が設計されていないことだ。その文脈は、キーワードの最適化とも、デザインの完成度とも、広告費の増減とも異なる問いに答える。ページ冒頭の文脈設計という問いへのアプローチは、広告運用の専門性とも制作の専門性とも異なる。直帰率が変わらないとき、次の広告予算の前に、この問いが手つかずになっていないかを確認することが先だ。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">広告のターゲティングを絞れば直帰率は改善しますか？</div>
+    <div class="faq-a">ターゲティングを絞ることで「関心度の低い読者」を減らす効果は期待できます。しかし直帰率の根本的な原因がページ冒頭の設計にある場合、ターゲティングを絞っても改善は限定的です。ページに来た読者が「これは自分向けの情報だ」と感じる文脈が冒頭に設計されていないとき、ターゲットに近い読者であっても数秒で離脱します。広告設定の最適化と、ページ冒頭の設計は別の問いです。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">A+コンテンツを作り込めば直帰率は下がりますか？</div>
+    <div class="faq-a">A+コンテンツの完成度と直帰率は直接連動しません。直帰率は読者がページを開いてから短時間で離脱する割合です。多くの読者がA+コンテンツを読む前に離脱しているとき、A+を作り込んでも直帰率への影響は限定的です。タイトル・バレットポイント・2〜3枚目の画像という「ファーストビューの文脈」で読者が「自分向けの情報だ」と感じないとき、A+まで読まれません。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">クーポンやセット割引をページ上部に表示すれば直帰率は下がりますか？</div>
+    <div class="faq-a">価格訴求で一時的に読者を引き止める効果はあります。しかし「この商品が自分の状況に必要だ」という確信が届いていない状態では、価格の安さで引き止めた読者がより安い競合商品に流れます。直帰率を根本的に改善するためには、価格訴求より先に「なぜこの商品が読者の状況に必要か」という文脈がページ冒頭で届いているかを確認することが先です。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">直帰率改善のために、まず何を確認すればいいですか？</div>
+    <div class="faq-a">タイトル・バレットポイントの最初の数行・2〜3枚目の画像を読者の視点で確認することが先です。これらが「スペックのリスト」として並んでいるのか、「読者の状況に関係する文脈」として届いているのかを確認します。スマートフォン表示で確認することが重要です。その確認は、ページを読者の視点で読む専門的な分析を必要とします。まずURLを送ることで診断が始まります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">「Amazonはプラットフォームの制約が多くて改善が難しい」と感じています。</div>
+    <div class="faq-a">確かにAmazonはページ構成に制約があります。しかしタイトル・バレットポイント・画像・A+という要素の中で「読者が自分の状況に関係する文脈を受け取れるかどうか」という設計の余地は存在します。制約の中でどう設計するかという問いへのアプローチは、その余地を特定することから始まります。「制約があるから改善に限界がある」という診断の前に、その余地が手つかずになっていないかを確認することが先です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、直帰率が高いページのどこを確認しますか？</div>
+    <div class="faq-a">バレットポイント・2〜3枚目の画像・A+の冒頭が「読者の状況に関係する文脈」として届いているかを確認します。「直帰率が高い原因が広告のターゲティングにあるのか、ページ冒頭の設計にあるのか」が明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、ページ冒頭の文脈設計という問いが手つかずになっていないかを特定する。</div>
+  <div class="cta-block-sub">
+    冒頭の文脈が特定できれば、直帰率が動き始める条件が見えてくる。<br>
+    条件が見えれば、広告費の方向が変わる。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/amazon-urenai-shohin-page-mondai.html">Amazonで売れない商品ページに共通する問題</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-main-image-kaete-mo-unit-session-rate-kawaranu.html">Amazonのメイン画像だけ変えても売れ数が変わらない理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-aplus-tsukutte-mo-uriage-kawaranu-riyu.html">AmazonのA+コンテンツを作っても売上が変わらない理由</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
