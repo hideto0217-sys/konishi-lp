@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/amazon-shohin-page-kaizen-tejun.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazon商品ページ改善の正しい手順と優先順位｜小西マーケティング</title>
+<meta name="description" content="メイン画像を直し、A+をリニューアルし、A/Bテストも回した。しかしユニットセッション率は微動だにしない。パーツを直す順番に答えがないとき、問いの場所が変わります。Amazon100商品超の現場から解説します。">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+</head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<div class="hero">
+  <span class="hero-category">Amazon 商品ページ改善 / 手順 / 優先順位</span>
+  <h1 class="hero-title">Amazon商品ページ改善の<br>正しい手順と優先順位</h1>
+  <p class="hero-lead">メイン画像を直し、A+をリニューアルし、A/Bテストも回した。しかしセラーセントラルのユニットセッション率は微動だにしない。終わりの見えないモグラ叩きの改善に時間と外注費を溶かしている。「どのパーツから手をつけるべきか」という問いに答えが出ないとき、問いの場所が違う可能性があります。EC100店舗超の現状を見てきた経験から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「まずメイン画像から」という手順が機能しない構造</h2>
+
+  <p>メイン画像のA/Bテストを実施する。CTRが上がった。「改善が進んでいる」という感覚がある。次にA+コンテンツのデザインをリニューアルする。見た目の完成度は上がった。しかしセラーセントラルを確認する。ユニットセッション率は前月と同じ水準だ。</p>
+
+  <p>「次はバレットポイントを直そう」「動画を入れよう」——パーツを順番に直し続ける。改善している感覚はある。しかし数字が連動しない。「どのパーツから手をつけるのが最も効果的か」という問いを立て直す。しかしその問いへの答えも、次のパーツを直しても変わらない。</p>
+
+  <div class="insight">
+    パーツを直す順番に正解を探している間、問いの場所が違っている可能性がある。<br>
+    <em>メイン画像もA+もバレットポイントも、それぞれが「ページ全体を貫く一本の流れ」の一部として機能するとき、初めてユニットセッション率に影響する。その流れが設計されていない状態でパーツを直し続けることは、地図なしに部屋の家具を動かし続けることと同じ構造だ。</em>
+  </div>
+
+  <p>「まずCTRに直結するメイン画像から改善し、次にA+を直す」という手順でノウハウが流通してきたのは、Amazonコンサルや運用代行会社が「手軽に手をつけられるパーツ単位の作業」を提供しやすいからだ。部分的な改善は作業として納品しやすい。しかしパーツの最適化がユニットセッション率を動かすためには、前提となる条件がある。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">パーツの最適化は「マイナスをゼロに近づける」作業だ</h2>
+
+  <p>メイン画像を白抜きからライフスタイル画像に変える。視覚的なインパクトが上がる。CTRが少し改善する。しかしページに来た読者が「この商品が自分の状況に必要だ」という判断に向かう流れが設計されていない状態では、来た読者がすぐに離脱する。ACOSが悪化する。メイン画像の改善が、広告費の消耗を加速させる結果になる。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">問題の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが思っている問題</div>
+      <div class="misrec-cell truth">「どのパーツ（画像・A+・箇条書き）から順番に直していくのが最も費用対効果が高いか」が問題だ。影響度の高いパーツから優先的に最適化すれば数字が動く</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">パーツをいじる前に、ページ全体を貫く「読者が購買判断に向かう一本の流れ（全体設計）」が定まっていないことが問題だ。その流れがない状態でパーツを直しても、最良の場合「マイナスをゼロに近づける」作業にしかならない</div>
+    </div>
+  </div>
+
+  <p>ページのパーツは「全体設計の翻訳結果」として機能する。メイン画像は「読者がページに来たとき最初に届く文脈」を視覚化したものだ。A+は「読者の購買判断に向かう流れを補強する証拠品」だ。全体設計が存在するとき、パーツの最適化は「その設計をより的確に表現する微調整」として機能する。しかし全体設計がない状態のパーツ改善は、全体が向かっている方向を持たない微調整だ。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「思いつき改善」が積み重なるほど、一番言いたいことが消える</h2>
+
+  <p>「今日は画像を直す」「明日は動画を入れる」——全体設計がないままパーツを順番に修正していく。半年後のページを確認すると、各パーツが異なる方向を向いている。メイン画像は「高品質」を訴求している。A+は「コスパ」を訴求している。バレットポイントは「機能の網羅性」を訴求している。ページ全体として「何を読者に届けたいのか」が分からないページが完成している。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが信じている原因</div>
+      <div class="misrec-cell truth">Amazonは各モジュール（画像・A+等）が独立しているから、部分ごとの改善で問題ない。手軽に直せるところからやるのがスピード感のあるEC運営だ</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">読者はページを「連続した文脈（ストーリー）」として処理する。全体を貫くロジックがないまま部分を直しても、読者の確信形成には到達しない。全体設計を確定させずにパーツをテストし続けることは、方向を持たない最適化だ</div>
+    </div>
+  </div>
+
+  <p>外注への部分発注も同じ問題を持つ。「A+コンテンツの画像作成のみ」「メイン画像の作成のみ」と発注する。それぞれの制作物の完成度は上がる。しかし全体設計がない状態での部分発注は、設計図のない建物の各部屋を別々のインテリアデザイナーに依頼するようなものだ。各部屋の完成度が上がっても、建物全体として機能しない。</p>
+
+  <div class="callout">
+    <strong>「外部ツールで競合ページの足りない要素を洗い出して自社に足す」アプローチについて。</strong><br>
+    このアプローチで改善できるのは「情報の網羅性」だ。しかし網羅性が上がることと、読者が「この商品が自分の状況に必要だ」という判断に向かうことは別の問いだ。情報が増えるほど比較の材料が増え、読者が他社との比較モードに入りやすくなることがある。競合の要素を足す作業は「そのページが何を読者に届けようとしているか」という全体設計が先にあって初めて機能する。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「パーツをいじり尽くした感」が来たとき残っている問い</h2>
+
+  <p>「部分的な改善をやり尽くした感がある。これ以上どこをどう直せば数字が跳ねるのか次の一手が見えない」という状態に入る。メイン画像・A+・バレットポイント・動画——手をつけたパーツの数が増えるほど、「残っている改善余地がどこにあるか」が分からなくなる。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">市場が選んでいる解決策</div>
+      <div class="misrec-cell truth">まずCTRに直結するメイン画像から改善し、次にA+を直す。または外部ツールで競合ページに足りない要素を洗い出して自社ページに足していく</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">入口（メイン画像）だけを広げても、受け皿（A+等）に読者が購買判断に向かう流れがなければ、来た読者が直帰してACOSが悪化する。競合要素の網羅は情報量を増やすが、読者の購買判断に向かう流れには答えない</div>
+    </div>
+  </div>
+
+  <p>「どのパーツから手をつけるか」という問いに答えが出ないとき、その問い自体が問題の場所をずらしている可能性がある。正しい問いは「ページ全体として読者に何を届けようとしているか」だ。その問いへの答えが定まっていないとき、どのパーツから手をつけても同じ結果になる。パーツの優先順位より先に、全体設計という問いが手つかずになっていないかを確認することが先だ。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">全体設計が定まると、パーツの優先順位は自然に決まる</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「何を直すべきか」ではなく「何を届けようとしているか」が先</h3>
+
+  <p>全体設計が定まっているとき、パーツの優先順位は「その設計を最も重要な場所で最初に読者に届けるには何が先か」という問いから自然に決まる。メイン画像が先になる場合もある。バレットポイントの冒頭が先になる場合もある。設計によって変わる。</p>
+
+  <p>しかし「全体として何を読者に届けようとしているか」が定まっていないとき、「どのパーツが優先度が高いか」という問いへの普遍的な答えは存在しない。一般論としての「メイン画像が優先」という答えは、全体設計が定まった後の「多くの場合の傾向」に過ぎない。自社商品・自社の読者・自社の現在のページ状態によって答えは変わる。その答えは全体設計という問いに答えた後に初めて見えてくる。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「今のページをベースに修正」と「全体設計から始める」の違い</h3>
+
+  <p>「今のページの悪いところを修正していく」アプローチは「現在のページが向かっている方向を前提に、より良く表現する」作業だ。しかし現在のページが「カタログ的なスペック紹介」として設計されているとき、その方向を前提に修正しても、ユニットセッション率を大きく動かすことは難しい。</p>
+
+  <p>全体設計から始めることは、現在のページが向かっている方向から一度離れて「読者が購買判断に向かう流れを設計すること」だ。この設計が完成した後に、各パーツが「その設計を表現する素材」として作り直される。この順序は、「悪いところを修正していく」とは異なる専門性を必要とする。そしてその専門性は、パーツの制作力とも広告の最適化力とも異なる。</p>
+
+  <p>以下の状態が続いているなら、次のパーツ修正より先に確認すべき問いが残っている。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">メイン画像・A+・バレットポイントを順番に直してきたが、ユニットセッション率が連動して改善しない</li>
+    <li data-num="✓">A/Bテストを繰り返しているが「どちらが勝ったか」の先に「なぜ勝ったか」が言語化できず、次の手が出ない</li>
+    <li data-num="✓">「思いつき改善」が積み重なり、ページ全体として「何を一番伝えたいのか」が自分でも分からなくなっている</li>
+    <li data-num="✓">部分発注を繰り返してきたが、ページ全体として一貫した文脈が崩れていると感じる</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">次のパーツ修正の前に、全体設計が手つかずになっていないかを確認する。</div>
+    <div class="cta-block-sub">
+      パーツを直してもユニットセッション率が変わらないなら、問いの場所は全体設計にある可能性があります。<br>
+      「ページ全体として読者に何を届けようとしているか」が定まっているかを特定することが先です。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">パーツを直す前に全体設計を診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>Amazon改善業界の現場では長年、「影響度の高いパーツ（メイン画像やA+の冒頭）から順番に最適化していくことが改善の王道だ」という方向で語られてきた。Amazonコンサルも、LPOツールを提供する会社も、運用代行会社も、「部分最適の繰り返しが数字を積み上げる」という枠組みで情報を提供し続けている。その枠組みの中で動き続けることが、「パーツを直しても数字が変わらないモグラ叩き」状態と「外注費が積み上がっても投資が回収されない」構造を固定する。</p>
+
+  <p>ページのパーツは「全体設計の翻訳結果」として機能する。全体設計が定まっていないとき、どのパーツから手をつけても「マイナスをゼロに近づける作業」の域を出ない。「どこから直すか」という問いより先に「ページ全体として読者に何を届けようとしているか」という問いが手つかずになっていないかを確認することが先だ。その問いへのアプローチは、パーツの制作力とも広告の最適化力とも異なる専門性を必要とする。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">Amazonページ改善でメイン画像から手をつけるのは正しいですか？</div>
+    <div class="faq-a">メイン画像がCTRに影響することは事実です。しかし「ページで読者が購買判断に向かう流れ（全体設計）」が定まっていない状態でメイン画像を先に改善すると、クリックした読者が流れのないページに来て直帰することがあります。パーツの優先順位は「全体設計が何を最初に読者に届けようとしているか」によって変わります。全体設計なしにメイン画像から手をつけることが「最も効果的な手順」かどうかは、現在のページ状態と全体設計の有無によって変わります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">A/Bテストを繰り返していますが、何をテストすれば数字が動きますか？</div>
+    <div class="faq-a">A/Bテストが測定しているのは「A案とB案のどちらが相対的に良いか」です。両案とも「読者が購買判断に向かう流れ」を持っていない場合、どちらが勝ってもユニットセッション率は同じ水準に留まります。テストで数字が動かない場合、テストしている対象が「ユニットセッション率を動かす変数」でない可能性があります。「何をテストすべきか」という問いより先に、全体設計が定まっているかを確認することが先です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">部分発注を繰り返してきましたが、全体設計を依頼できる専門家はどこに頼めばいいですか？</div>
+    <div class="faq-a">全体設計の専門家とデザインの制作者は異なる専門性を持ちます。「A+コンテンツの画像制作」を請け負う会社が全体設計の専門性を持つとは限りません。外注先を選ぶ際に確認すべきは「過去の案件でユニットセッション率がどう変わったか」という実績の記録と、ヒアリングが「商品の強み」で終わるのか「読者の状況と既存の解決策への不満」まで掘り下げるのかです。まず現在のページの全体設計が手つかずになっているかを診断することで、何を依頼すべきかが特定されます。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">全体設計が手つかずになっているかを確認するために、まず何を見ればいいですか？</div>
+    <div class="faq-a">バレットポイントの最初の一文とA+の冒頭を確認することが先です。「スペックと機能の情報」として始まっているか、「読者の状況に関係する文脈」として始まっているかを確認します。次に、メイン画像・バレット・A+が同じ一本の流れとして読者に届いているかを確認します。これらが「各パーツで異なることを言っている」状態であれば、全体設計が定まっていないことを示している可能性があります。その確認は専門的な診断を必要とします。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">「今のページをベースに修正」と「全体設計から始める」のどちらが正しいですか？</div>
+    <div class="faq-a">現在のページが「読者が購買判断に向かう流れ」を持っているかどうかによって変わります。その流れが設計されているページでは、パーツの修正がその流れを強化する作業として機能します。その流れが設計されていないページでは、パーツを修正しても流れのない状態での最適化に留まります。どちらが適切かは、診断で現在のページに何が届いているかを特定することで判断できます。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、パーツ改善を繰り返してきたページのどこを確認しますか？</div>
+    <div class="faq-a">「ページ全体として読者が購買判断に向かう流れが設計されているか」を確認します。各パーツが同じ方向を向いているか、全体として一本の文脈を形成しているかを特定します。「ユニットセッション率が変わらない原因がパーツの完成度にあるのか、全体設計の有無にあるのか」が明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、全体設計が手つかずになっていないかを特定する。</div>
+  <div class="cta-block-sub">
+    全体設計が特定できれば、どのパーツを先に動かすべきかが変わる。<br>
+    順番が変われば、パーツへの時間と外注費が投資回収される方向に入れる。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/amazon-shohin-page-gaichuu-kakunin.html">Amazon商品ページ改善を外注する前に確認すべきこと</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-urenai-shohin-page-mondai.html">Amazonで売れない商品ページに共通する問題</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-ab-test-kazu-ugokanu-genin.html">AmazonのA/Bテストで数字が動かない根本原因</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
