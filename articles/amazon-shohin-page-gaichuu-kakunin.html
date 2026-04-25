@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/amazon-shohin-page-gaichuu-kakunin.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazon商品ページ改善を外注する前に確認すべきこと｜小西マーケティング</title>
+<meta name="description" content="クラウドソーシングで安く作った綺麗な画像。しかしユニットセッション率はピクリとも動かない。外注先の選び方で「デザインの代行者」と「成約のロジックを設計できる専門家」を混同していることが、失敗を繰り返す構造です。Amazon100商品超の現場から解説します。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+.article-body { padding: 2.5rem 2.5rem; background: var(--white); }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; background: #fff; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Amazon商品ページの外注先をポートフォリオのデザインで選ぶのは正しいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ポートフォリオのデザインの美しさは「視覚的な完成度」を評価する指標です。しかしユニットセッション率を動かすのは「読者がページを通じて購買判断に向かう流れが設計されているか」という問いです。美しいデザインと、読者が購買判断に向かう流れは別の問いが答えます。ポートフォリオで確認すべきは「作ったページでユニットセッション率がどう変わったか」という成果の記録です。その記録がない外注先は、設計の専門家ではなくデザインの代行者として判断することが先です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "広告運用代行会社にページ改善も依頼できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "広告運用代行会社はキーワード設定・入札調整・ターゲティングという「システムの最適化」を専門とします。ページを訪れた読者が購買判断に至る流れを設計することは、この専門性の外側にあります。「A+コンテンツの制作」を請け負う運用代行会社も存在しますが、そこで行われるのが「デザインの制作」なのか「読者が購買判断に向かう流れの設計」なのかを確認することが先です。両者は異なる専門性です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "クラウドソーシングで安く外注することと高額な制作会社に依頼することの違いは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "費用の差は「作業の品質」の差として現れることが多いです。しかしユニットセッション率を改善するために必要な専門性は「作業の品質」とは異なる問いに答えます。安い外注でも高額な外注でも、「読者が購買判断に向かう流れを設計できるか」という問いへの答えを持っていない場合、ユニットセッション率への影響は限定的です。費用の多少より先に、「その外注先が設計の専門家かデザインの代行者か」を確認することが判断基準です。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Amazon商品ページ改善を外注する前に確認すべきこと",
+  "description": "クラウドソーシングで安く作った綺麗な画像。しかしユニットセッション率はピクリとも動かない。外注先の選び方で「デザインの代行者」と「成約のロジックを設計できる専門家」を混同していることが、失敗を繰り返す構造です。Amazon100商品超の現場から解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/amazon-shohin-page-gaichuu-kakunin.html",
+  "datePublished": "2026-04-25",
+  "dateModified": "2026-04-25",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<div class="hero">
+  <span class="hero-category">Amazon 商品ページ / 外注 / ユニットセッション率</span>
+  <h1 class="hero-title">Amazon商品ページ改善を外注する前に<br>確認すべきこと</h1>
+  <p class="hero-lead">クラウドソーシングで発注した。綺麗な画像が納品された。しかしユニットセッション率はピクリとも動かない。「また無駄なお金を使ってしまったのか」——外注失敗の経験が積み重なる。外注先の選び方で「デザインの代行者」と「成約のロジックを設計できる専門家」を混同していることが、失敗を繰り返す構造です。EC100商品超の現状を見てきた経験から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">綺麗なページが完成した。ユニットセッション率は動かなかった</h2>
+
+  <p>相見積もりを取る。ポートフォリオを見比べる。制作実績の豊富な会社を選ぶ。数万円〜数十万円の費用が発生する。数週間後、メイン画像とA+コンテンツが完成する。視覚的な完成度は確かに上がった。しかしセラーセントラルを確認する。ユニットセッション率は外注前と同じ水準だ。広告費も変わっていない。売上も変わっていない。</p>
+
+  <p>「どのくらい綺麗な画像を作れるか」「何枚納品してくれるか」——相見積もりの比較は作業量の比較になっていた。本来の目的である「ユニットセッション率を上げること」と、比較していた指標の間に、埋められないずれがあった。次の外注先選びに慎重になる。しかし選び方の基準が変わっていない限り、同じ結果が繰り返される。</p>
+
+  <div class="insight">
+    外注失敗の繰り返しは、外注先の質の問題ではない。<br>
+    <em>「デザインの代行者」と「読者が購買判断に向かう流れを設計できる専門家」を同じ問いで比較していることが問題だ。この二つは異なる専門性を持つ。費用の多少で選ぼうとしている段階で、すでに比較の軸がずれている。</em>
+  </div>
+
+  <p>「Amazonのページ改善は規約に詳しい制作会社に依頼することが正解だ」という方向で情報が流通してきたのは、Amazon特化の制作会社とクラウドソーシングが「納品物（画像データ）」を商品として提供しやすいからだ。納品物は目に見える。完成度を評価しやすい。しかし「納品された画像がユニットセッション率を動かしたか」という問いは、納品物の評価の外側にある。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">外注先のヒアリングが「商品の強み」で終わる理由</h2>
+
+  <p>外注先からのヒアリングが始まる。「商品の強みを教えてください」「ターゲットの年齢層はどのくらいですか」「競合商品はどれですか」——これらの質問に答える。数週間後、画像が上がってくる。内容を確認すると「商品のスペックを視覚的に整理したカタログ」になっている。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">問題の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">依頼者が思っている問題</div>
+      <div class="misrec-cell truth">Amazonの規約に詳しく見栄えの良い画像を作れる会社をいかに安く見つけるかが問題だ。デザイン力の高い外注先が選べれば、ユニットセッション率は改善するはずだ</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">「成約のロジックを設計できる専門家」と「デザインの作業を代行する者」を同じ基準で比較していることが問題だ。前者は読者が購買判断に向かう流れを設計する。後者は情報を視覚的に整理する。両者は異なる問いに答える専門性だ</div>
+    </div>
+  </div>
+
+  <p>「商品の強み」を聞いて画像を作る作業者は、受け取った情報を「見やすく整理する」専門家だ。その整理が的確なほど、完成度の高いカタログが出来上がる。しかし読者がページを訪れたとき処理するのは「このページは自分の状況に関係するか」という問いだ。カタログの完成度とこの問いは別の軸で動く。ヒアリングが「商品の強み」で終わる外注先は、この問いに答える設計を持っていない。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「広告も任せているから、ページも頼める」という期待について</h2>
+
+  <p>月数十万円を払って運用代行に任せている。「広告の最適化だけでなく、ページ改善も一緒にやってほしい」と依頼する。A+コンテンツの制作が行われる。しかし完成したページを見ると、キーワードが散りばめられたスペック情報の羅列になっている。ユニットセッション率は変わらない。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">依頼者が信じている原因</div>
+      <div class="misrec-cell truth">Amazon専門の運用代行会社ならページ改善も得意なはずだ。広告の最適化とページ改善は同じ専門性の延長線上にある</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">広告運用代行会社はキーワード設定と入札調整という「システムの最適化」のプロだ。読者が購買判断に向かう流れを設計することはこの専門性の外側にある。彼らがページを作ると、SEOのためのキーワード配置とスペック整理になりやすい。これはシステムに最適化された作業であり、読者への設計とは別の問いだ</div>
+    
+      <div class="misrec-cell truth">デザインの綺麗さで選んだ外注先は作業の完成度を上げるが、読者が購買判断に向かう流れを設計しない。完全成果報酬型は確実に売れる商品にしか本気を出さない。どちらも「成約のロジックを設計できるか」という問いへの答えを確認せずに選んでいる</div>
+    </div>
+  </div>
+
+  <p>外注先の選び方で確認すべきは「作ったページでユニットセッション率がどう変わったか」という記録だ。この記録がある外注先は、成果という問いに向き合っている。この記録がない外注先は、「納品物を作る」という問いにしか答えていない。デザインの美しさとポートフォリオの豊富さは「作業の質」を評価する指標だ。「ユニットセッション率を動かした実績」は、別の問いへの答えだ。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">外注する前に確認すべき、ページの現状という問い</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「どのページ要素がユニットセッション率を下げているか」が特定されているか</h3>
+
+  <p>外注を依頼する前に、現在のページの何が問題かを特定していない場合、外注先に「良くしてください」という依頼になる。「良くする」という依頼は、外注先が「自分の得意な作業で応える」ことになる。デザイン会社はデザインで、SEO会社はキーワードで応える。問いが特定されていない外注は、得意な作業の納品になる。</p>
+
+  <p>外注の効果を確認するためには「外注前のユニットセッション率」「外注後のユニットセッション率」という比較が必要だ。しかし多くの外注依頼では、この比較を確認するための起点——外注前の現状診断——が行われていない。現状が分からない状態で改善を外注すると、何が変わったかも分からない。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">外注費の投資を回収するための条件が整っているか</h3>
+
+  <p>数十万円の外注費を投じる。ユニットセッション率が1%から2%に改善されれば、同じ広告費で成約数が2倍になる計算だ。外注費の投資を回収するためには、ユニットセッション率がどの水準まで改善されれば回収できるかという計算が先に必要だ。しかしこの計算を行わずに外注を依頼すると、「綺麗なページができた」という感覚で投資が評価される。</p>
+
+  <p>外注費の投資回収という問いは、「どの外注先を選ぶか」より先に「現在のページのどこに問題があり、改善でユニットセッション率がどの程度変わるか」という診断を必要とする。その診断なしに外注先を選ぶことは、問いの場所を確認せずに作業を発注することだ。</p>
+
+  <p>以下の状態が続いているなら、次の外注先を探す前に確認すべき問いが残っている。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">外注してページが綺麗になったがユニットセッション率が変わらず、外注費を回収できていない経験が一度以上ある</li>
+    <li data-num="✓">相見積もりを取るとき「作業量（何枚作るか）」「デザインの完成度」「費用の安さ」で比較しており、ユニットセッション率への影響を確認できていない</li>
+    <li data-num="✓">運用代行会社にページ改善も依頼しているが、出来上がるのがキーワード詰め込みのカタログになりユニットセッション率が変わらない</li>
+    <li data-num="✓">現在のページのどの要素がユニットセッション率を下げているかが特定されていない状態で次の外注を検討している</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">外注先を探す前に、現在のページのどこに問題があるかを特定する。</div>
+    <div class="cta-block-sub">
+      外注に投資する前に、「何を外注すべきか」が特定されていることが先です。<br>
+      現在のページでユニットセッション率を下げている変数を特定することが、外注費の投資回収の入口です。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">外注先を探す前にページの問いを診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>Amazon制作業界の現場では長年、「Amazonのページ改善には規約に詳しい専門の制作会社に依頼することが正解だ」「ポートフォリオのデザインが綺麗な会社が良い制作会社だ」という方向で語られてきた。Amazon特化の制作会社も、クラウドソーシングも、広告運用代行会社も、「納品物の質（画像データの完成度）」という指標で自社を評価させ続けている。その枠組みの中で外注先を選ぶことが、「ページが綺麗になったがユニットセッション率が変わらない」状態と「外注費が投資回収されない」構造を繰り返させる。</p>
+
+  <p>外注で確認すべきは「デザインの完成度」ではなく「読者が購買判断に向かう流れを設計できるか」という問いだ。この問いに答えられる専門家とそうでない作業者は、まったく異なる専門性を持つ。外注先を探す前に、現在のページのどこにユニットセッション率を下げている変数があるかを特定することが先だ。その特定なしに外注を依頼することは、問いの場所を確認せずに作業を発注することになる。</p>
+
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">Amazon商品ページの外注先をポートフォリオのデザインで選ぶのは正しいですか？</div>
+    <div class="faq-a">ポートフォリオのデザインの美しさは「視覚的な完成度」を評価する指標です。しかしユニットセッション率を動かすのは「読者がページを通じて購買判断に向かう流れが設計されているか」という問いです。美しいデザインと、読者が購買判断に向かう流れは別の問いが答えます。ポートフォリオで確認すべきは「作ったページでユニットセッション率がどう変わったか」という成果の記録です。その記録がない外注先は、設計の専門家ではなくデザインの代行者として判断することが先です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">広告運用代行会社にページ改善も依頼できますか？</div>
+    <div class="faq-a">広告運用代行会社はキーワード設定・入札調整・ターゲティングという「システムの最適化」を専門とします。ページを訪れた読者が購買判断に至る流れを設計することは、この専門性の外側にあります。「A+コンテンツの制作」を請け負う運用代行会社も存在しますが、そこで行われるのが「デザインの制作」なのか「読者が購買判断に向かう流れの設計」なのかを確認することが先です。両者は異なる専門性です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">クラウドソーシングで安く外注することと高額な制作会社に依頼することの違いは何ですか？</div>
+    <div class="faq-a">費用の差は「作業の品質」の差として現れることが多いです。しかしユニットセッション率を改善するために必要な専門性は「作業の品質」とは異なる問いに答えます。安い外注でも高額な外注でも、「読者が購買判断に向かう流れを設計できるか」という問いへの答えを持っていない場合、ユニットセッション率への影響は限定的です。費用の多少より先に、「その外注先が設計の専門家かデザインの代行者か」を確認することが判断基準です。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">設計の専門家を見分けるためのヒアリングで何を確認すればいいですか？</div>
+    <div class="faq-a">「過去に制作したページでユニットセッション率がどう変わったか」という実績の記録があるかを確認することが先です。次に、ヒアリングの内容を確認します。「商品の強み」「ターゲット年齢層」で終わるヒアリングは作業者のヒアリングです。「読者がこの商品ページを訪れる前にどういう状態にあるか」「読者が今使っている解決策への不満はどこにあるか」という問いを立てるヒアリングが、設計者のヒアリングです。まず診断を受けることで、現在のページで手つかずになっている問いが特定されます。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">外注前に現在のページを診断する必要があるのはなぜですか？</div>
+    <div class="faq-a">外注の目的はユニットセッション率を改善することです。その目的に対して「何を外注すべきか」が特定されていないとき、外注先は「得意な作業で応える」ことになります。診断では現在のページのどの変数がユニットセッション率を下げているかを特定します。その特定があって初めて「何を外注すればユニットセッション率が改善するか」という問いに答えられます。外注費の投資回収は、この特定から始まります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、外注を検討しているページのどこを確認しますか？</div>
+    <div class="faq-a">ページで「読者が購買判断に向かう流れが設計されているか」を確認します。「ユニットセッション率が低い原因がデザインの問題なのか、設計の問題なのか」が明確になります。「何を外注すべきか、外注しなくてよいか」という判断の根拠が特定されます。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、何を外注すべきかを特定する。</div>
+  <div class="cta-block-sub">
+    外注すべき問いが特定できれば、外注先の選び方が変わる。<br>
+    選び方が変われば、外注費が投資回収される構造に入れる。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/amazon-urenai-shohin-page-mondai.html">Amazonで売れない商品ページに共通する問題</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-sponsor-kokoku-fuyashite-mo-rieki-nokoranai.html">Amazonのスポンサー広告を増やしても利益が残らない理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-ab-test-kazu-ugokanu-genin.html">AmazonのA/Bテストで数字が動かない根本原因</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
