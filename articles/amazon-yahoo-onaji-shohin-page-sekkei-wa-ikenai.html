@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/amazon-yahoo-onaji-shohin-page-sekkei-wa-ikenai.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AmazonとYahooで同じ商品ページ設計を使ってはいけない理由｜小西マーケティング</title>
+<meta name="description" content="Amazonではベストセラー。意気揚々と同じページをYahooに展開したら、売上グラフは動かなかった。デザインの違いではありません。読者がそれぞれのモールに来たときの心理状態が異なることが問題です。EC100店舗超の現場から解説します。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+.article-body { padding: 2.5rem 2.5rem; background: var(--white); }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; background: #fff; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "AmazonとYahooで同じ商品ページを使ってはいけない理由は何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AmazonとYahooでは、読者がモールに訪れたときの心理状態が異なります。Amazonは「何かを買おう」という明確な目的を持ったカタログ型の比較行動が前提になりやすく、シンプルで即決を促す設計が機能しやすい。Yahoo!ショッピングはイベントやポイント還元を起点にした回遊行動が多く、読者を納得させる情報量と文脈が必要になります。同じ商品でも、訪れた読者の心理状態が異なるとき、同じ設計では片方のモールで機能しません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "一括出品ツールでAmazonのページをYahooに複製すれば効率的ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一括出品ツールは「商品データの移植」を効率化します。しかし移植されるのはスペック・価格・画像データです。「読者がそのモールで何を期待して訪れているか」という心理状態への設計は、データとして移植できません。Amazonで機能した白抜き画像とシンプルな説明をYahooにそのままコピーしても、Yahoo!ショッピングの検索結果画面では埋もれ、ページに来た読者も離脱しやすくなります。効率の追求と成約率の維持は別の問いです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "YahooのページにポイントバナーやRED枠を加えれば転換率は上がりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ポイントバナーやRED枠の追加は「クリック率（集客）」に影響することがあります。しかしページに来た読者が「この商品が自分に必要だ」という判断に向かう流れは、バナーや枠線の変更とは別の問いが答えます。表面的なデザインの変更でクリック数が増えても、ページ内の設計が「AmazonのカタログUI向け」のままであれば、転換率への影響は限定的です。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AmazonとYahooで同じ商品ページ設計を使ってはいけない理由",
+  "description": "Amazonではベストセラー。意気揚々と同じページをYahooに展開したら、売上グラフは動かなかった。デザインの違いではありません。読者がそれぞれのモールに来たときの心理状態が異なることが問題です。EC100店舗超の現場から解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/amazon-yahoo-onaji-shohin-page-sekkei-wa-ikenai.html",
+  "datePublished": "2026-04-25",
+  "dateModified": "2026-04-25",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="site-wrap">
+
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+
+<div class="hero">
+  <span class="hero-category">EC モール展開 / Amazon / Yahoo!ショッピング</span>
+  <h1 class="hero-title">AmazonとYahooで同じ商品ページ設計を<br>使ってはいけない理由</h1>
+  <p class="hero-lead">Amazonではベストセラー表示が続いた。意気揚々と同じページをYahoo!ショッピングに展開した。しかし売上グラフは動かない。広告費（アイテムマッチ）だけが消える。商品は同じなのになぜ——という問いが残る。デザインの違いではありません。読者がそれぞれのモールに来たときの心理状態が異なることが問題です。EC100店舗超の現状を見てきた経験から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">Amazonで売れた商品が、同じページでYahooに惨敗した</h2>
+
+  <p>Amazonのベストセラーバッジが付いた商品ページがある。一括出品ツールを使う。商品データをYahoo!ショッピングに複製する。数週間後、Yahoo!のページを確認する。アイテムマッチ広告を回しているのにクリック数が少ない。クリックしてもページを見た読者がすぐに離脱している。転換率がAmazonの3分の1以下だ。</p>
+
+  <p>「商品が同じなのになぜ」という問いが生まれる。Amazonでは売れているのだからページの内容は正しいはず——という判断が、この問いへの答えを後回しにする。しかしAmazonで機能したページがYahooで機能しない原因は、商品の問題でもページの完成度の問題でもない。読者がそれぞれのモールに訪れるときの前提条件が異なることが原因だ。</p>
+
+  <div class="insight">
+    AmazonとYahoo!ショッピングでは、同じ商品を探している読者でも、モールに訪れるときの心理状態が異なる。<br>
+    <em>Amazonは「何かを明確に買おうと検索してきた読者」が多い。Yahoo!ショッピングは「イベントやポイント還元を起点に、回遊しながら比較検討している読者」が多い。同じ心理導線の設計が、両方のモールで同じように機能するわけではない。</em>
+  </div>
+
+  <p>「多店舗展開は一括出品ツールで効率化できる」という方向でノウハウが流通してきたのは、一括出品ツールを提供する会社が「データ移植の効率化」を売りやすいからだ。データは移植できる。しかし「読者がそのモールで何を期待して訪れているか」という心理状態は、データとして移植できない。ツールが運ぶのは商品情報だ。読者への設計は運ばれない。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">Amazonの白抜き画像がYahooの検索結果で埋もれる構造</h2>
+
+  <p>Amazonは白抜き・シンプルな1枚目の画像が規約とUI設計の両方から求められる。その画像をYahoo!ショッピングの商品サムネイルとして使うと、検索結果画面で何が起きるかを確認する。他の店舗のサムネイルはテキスト入りのバナーで「○○円OFF」「ポイント10倍」「ランキング1位」という情報を直接書き込んでいる。白抜きのシンプルな1枚目は、その中に並ぶとクリックされにくくなる。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">問題の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが思っている問題</div>
+      <div class="misrec-cell truth">AmazonとYahooの画面のUIや客層が違うから、見せ方（デザイン）を最適化することが問題だ。Yahoo向けに画像に文字を入れたりポイント還元をアピールすれば解決する</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">表面的なデザインの差より先に、読者がYahoo!ショッピングに来たときの心理状態——イベント・ポイント還元を期待した回遊比較——に対応した設計がページに存在していないことが問題だ。画像に文字を入れることはクリック率（集客）には影響するが、ページ内で読者が購買判断に向かう流れの設計は別の問いだ</div>
+    </div>
+  </div>
+
+  <p>Yahoo!ショッピングの検索結果で読者が目にするのは、テキストを含むサムネイル・価格・ポイント還元率だ。Amazonのシンプルな白抜き画像を使うと、この比較の土俵で目立たない。クリックされなければページを見てもらえない。しかし仮にクリックされてもページに来た問題が残る。Yahoo!ショッピングの読者はイベントやポイントを意識した回遊比較の途中にいる。その心理状態に対して、AmazonのカタログUI向けに作られたシンプルな設計が「自分への情報」として届くかどうかは、別の問いだ。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「Amazonで勝ったロジック＝最強のページ」という前提が崩れるとき</h2>
+
+  <p>AmazonのUI設計はカタログ的だ。シンプルで即決を促す。バレットポイントと画像で商品スペックを素早く伝える。読者はその設計の中で「このスペックで自分に合うか」を短時間で判断する。このUI向けに最適化された設計は、即決的な比較行動をしている読者に機能する。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが信じている原因</div>
+      <div class="misrec-cell truth">モールによって「売れるページのデザイン」が異なるから売れないのだ。AmazonとYahooでデザインを変えれば問題は解決する</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">デザインの違いではなく、読者がそのモールに来たときの前提条件が異なる。AmazonのカタログUI向けに最適化されたロジックを、Yahoo!ショッピングの「読み物（LP）文化」にそのまま持ち込んでも、回遊・比較検討中の読者の心理状態に接続されない</div>
+    </div>
+  </div>
+
+  <p>Yahoo!ショッピングは楽天に近い縦長LPの文化を持つ。読者はイベントや超PayPay祭などを起点に複数のページを回遊しながら比較検討している。この行動パターンの読者には、シンプルなカタログより「確信を形成するまで読み進められる情報の流れ」が機能しやすい。AmazonとYahooの読者の違いはデザインの好みではなく、ページに来たときに何を期待しているかという前提条件の違いだ。</p>
+
+  <div class="callout">
+    <strong>「Yahoo向けにポイントバナーと赤枠を足せばいい」というアプローチについて。</strong><br>
+    ポイント還元バナーや枠線の色変更は「検索結果でのクリック率（集客）」に影響することがある。しかしページに来た読者が「この商品が自分に必要だ」という判断に向かう流れは、バナーの追加では変わらない。集客の問いとページ内の設計の問いは別だ。クリック率が上がっても、ページ内の設計がAmazonのカタログUI向けのままであれば、転換率は変わらない。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「使い回し」と「翻訳」は何が違うのか</h2>
+
+  <p>多店舗展開においてリソースに限界があることは事実だ。「一つのページを複数のモールで使い回したい」という判断は合理的に見える。しかし「データの使い回し」と「読者への設計の共通化」は別の問いだ。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">市場が選んでいる解決策</div>
+      <div class="misrec-cell truth">一括出品ツールを使ってAmazonの商品情報をYahooや楽天にボタン一つで自動複製する。またはYahoo向けに画像枠線を赤くしたりポイント倍率のバナーを足したりする表面的な変更を加える</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">ツールはデータを移植するが、読者への設計は移植しない。表面的なデザイン変更は集客に影響するが、ページで読者が購買判断に向かう流れを変えない。どちらも「そのモールの読者がどういう心理状態でページに来ているか」という問いに答えない</div>
+    </div>
+  </div>
+
+  <p>読者への設計の共通部分——「この商品が特定の状況にいる読者に必要な理由」——は、モールが変わっても変わらない。しかしその設計を「どういう文脈でページの冒頭から届けるか」はモールごとの読者の心理状態によって変わる。Amazonの読者向けには即決を促す短い文脈が機能しやすい。Yahoo!ショッピングの読者向けには、回遊比較の途中にいる読者を引き込む長い文脈が機能しやすい。同じ設計を「翻訳」するとは、この冒頭の文脈をモールごとに変えることだ。しかしその翻訳は、モールごとの読者心理への専門的な理解を必要とする。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">Yahooでの広告費が消え続ける前に確認すべき問い</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">アイテムマッチ広告のCTRは上がっても転換率が変わらない</h3>
+
+  <p>Yahoo!ショッピングのアイテムマッチ広告でクリック数が増える。しかしページに来た読者が転換しない。転換率がAmazonの水準まで上がらない。「Yahoo用にもっと目立つ画像が必要なのか」「ポイント還元率を上げれば変わるのか」という問いが続く。</p>
+
+  <p>アイテムマッチ広告のクリック率向上と、ページ内での転換率向上は別の問いに答える。クリック率の改善はサムネイルの問いだ。転換率の改善はページ全体として読者が「この商品が自分に必要だ」という判断に向かう流れの問いだ。後者がAmazonのカタログUI向けに設計されたままであれば、クリック率を改善してもYahooでの転換率は変わらない。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「モールごとの勝ちパターンを教えてほしい」という問いの前に</h3>
+
+  <p>「Yahoo用の勝ちパターンを誰かに教えてほしい」「どこに外注すればYahoo向けに最適化してもらえるか」という問いが生まれる。しかしその問いより先に確認すべきことがある。現在のYahooのページで「読者がどこで離脱しているか」「クリック後にどの段階で転換しないか」という現状が特定されていない状態で外注を依頼すると、「Yahoo向けのデザインを作る作業」が行われる。デザインの最適化とページ設計の問いは別だ。</p>
+
+  <p>以下の状態が続いているなら、次の外注先を探す前に確認すべき問いが残っている。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">Amazonで売れている商品を同じページのままYahooに展開したが、転換率がAmazonの水準の3分の1以下で改善しない</li>
+    <li data-num="✓">Yahoo向けにポイントバナーと赤枠を追加したがクリック率は改善しても転換率が変わらない</li>
+    <li data-num="✓">一括出品ツールで多店舗展開しているが、Amazon以外のモールで転換率が低いままアイテムマッチ広告費だけが消えている</li>
+    <li data-num="✓">「Yahoo向けの設計に変えるべき」とは分かっているが、何をどう変えればいいかが特定されていない状態で外注先を探している</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">Yahoo向け設計を外注する前に、現在のページのどこが問題かを特定する。</div>
+    <div class="cta-block-sub">
+      AmazonとYahooで転換率に差があるとき、問いの場所はページの設計にあります。<br>
+      何をどう変えれば転換率が改善するかを特定することが、外注費を回収する入口です。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">外注先を探す前にページの問いを診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>多店舗展開業界の現場では長年、「一括出品ツールで複数モールに展開することが効率的な多店舗運営の正道だ」という方向で語られてきた。ツールを提供する会社も、ECコンサルも、多店舗運営を支援する代行会社も、「データの効率的な移植」という枠組みで情報を提供し続けている。その枠組みの中で動くことが、「Amazon以外のモールで転換率が上がらない」状態と「広告費だけが消え続ける」構造を固定する。</p>
+
+  <p>AmazonとYahoo!ショッピングの設計の違いは、デザインの好みの差ではない。読者がそれぞれのモールに来たときの心理状態——購買目的と行動パターン——の違いだ。同じ商品についての設計は共通していても、その設計をどう届けるかという「冒頭の文脈」は、モールごとの読者心理に合わせて変える必要がある。その変更はデザインの微調整とは異なる専門性を必要とする。次の外注依頼より先に、現在のYahooのページで「読者がどこで判断を止めているか」という問いが手つかずになっていないかを確認することが先だ。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">AmazonとYahooで同じ商品ページを使ってはいけない理由は何ですか？</div>
+    <div class="faq-a">AmazonとYahooでは、読者がモールに訪れたときの心理状態が異なります。Amazonは「何かを買おう」という明確な目的を持ったカタログ型の比較行動が前提になりやすく、シンプルで即決を促す設計が機能しやすい。Yahoo!ショッピングはイベントやポイント還元を起点にした回遊行動が多く、読者を納得させる情報量と文脈が必要になります。同じ商品でも、訪れた読者の心理状態が異なるとき、同じ設計では片方のモールで機能しません。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">一括出品ツールでAmazonのページをYahooに複製すれば効率的ですか？</div>
+    <div class="faq-a">一括出品ツールは「商品データの移植」を効率化します。しかし移植されるのはスペック・価格・画像データです。「読者がそのモールで何を期待して訪れているか」という心理状態への設計は、データとして移植できません。Amazonで機能した白抜き画像とシンプルな説明をYahooにそのままコピーしても、Yahoo!ショッピングの検索結果画面では埋もれ、ページに来た読者も離脱しやすくなります。効率の追求と成約率の維持は別の問いです。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">YahooのページにポイントバナーやRED枠を加えれば転換率は上がりますか？</div>
+    <div class="faq-a">ポイントバナーやRED枠の追加は「クリック率（集客）」に影響することがあります。しかしページに来た読者が「この商品が自分に必要だ」という判断に向かう流れは、バナーや枠線の変更とは別の問いが答えます。表面的なデザインの変更でクリック数が増えても、ページ内の設計が「AmazonのカタログUI向け」のままであれば、転換率への影響は限定的です。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">Yahoo向け設計に変えるために、まず何を確認すればいいですか？</div>
+    <div class="faq-a">現在のYahooページで「読者がどこで離脱しているか」を確認することが先です。クリック後に即座に離脱しているなら、ページ冒頭の文脈が Yahoo!ショッピングの読者の心理状態に届いていない可能性があります。サムネイルでクリックされていないなら、集客の問いが先になります。現状の診断なしに「Yahoo向けのデザイン変更」を外注すると、問いの場所を確認せずに作業が行われます。まずURLを送ることで診断が始まります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">AmazonとYahooで設計を変えることと、AmazonとYahooで全く別のページを作ることは違いますか？</div>
+    <div class="faq-a">この二つは別の問いです。「全く別のページをゼロから作る」ことと、「同じ設計を読者の心理状態に合わせて届け方を変える」ことは異なります。商品が読者に必要な理由という設計は共通して使えます。しかしその設計をどういう文脈で冒頭から届けるかは、モールごとの読者心理によって変わります。この「翻訳」という作業は、デザインの全作り直しではなく、ページの冒頭部分の文脈設計という問いです。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、AmazonとYahooで転換率に差があるページのどこを確認しますか？</div>
+    <div class="faq-a">Yahooのページで読者がどの段階で転換を止めているかを確認します。サムネイルでのクリック率、ページ冒頭での離脱率、転換率——これらの数字から「問いの場所がサムネイルにあるのか、ページの設計にあるのか」を特定します。「AmazonとYahooで転換率差が生まれている原因がデザインにあるのか、読者の心理状態への設計にあるのか」が明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、Yahooで転換率が上がらない問いの場所を特定する。</div>
+  <div class="cta-block-sub">
+    問いの場所が特定できれば、何を変えるべきかが変わる。<br>
+    変えるべきことが特定できれば、外注費が投資回収される方向に入れる。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/amazon-urenai-shohin-page-mondai.html">Amazonで売れない商品ページに共通する問題</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-shohin-page-gaichuu-kakunin.html">Amazon商品ページ改善を外注する前に確認すべきこと</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-shohin-page-chokkiritsu-takai-kyotsuten.html">Amazon商品ページの直帰率が高い店舗の共通点</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
