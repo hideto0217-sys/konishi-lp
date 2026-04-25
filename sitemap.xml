@@ -190,7 +190,7 @@
     <lastmod>2026-04-21</lastmod>
     <priority>0.7</priority>
   </url>
-  <!-- 以下 No.43〜61 新規追加（2026-04-24） -->
+  <!-- No.43〜61（2026-04-24追加） -->
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-unei-daiko-to-shohin-page-konsaru-no-chigai.html</loc>
     <lastmod>2026-04-24</lastmod>
@@ -315,6 +315,62 @@
   <url>
     <loc>https://konishi-marketing.com/articles/ec-shohin-page-seisaku-gaisha-erabi-kata.html</loc>
     <lastmod>2026-04-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <!-- No.62〜72（2026-04-25追加） -->
+  <url>
+    <loc>https://konishi-marketing.com/articles/amazon-aplus-tsukutte-mo-uriage-kawaranu-riyu.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://konishi-marketing.com/articles/amazon-main-image-kaete-mo-unit-session-rate-kawaranu.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://konishi-marketing.com/articles/amazon-shohin-page-chokkiritsu-takai-kyotsuten.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://konishi-marketing.com/articles/amazon-kakaku-sagete-mo-uriage-nobinai-riyu.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://konishi-marketing.com/articles/amazon-ab-test-kazu-ugokanu-genin.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://konishi-marketing.com/articles/amazon-setsumeibun-kaizen-unit-session-rate-agaranai.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://konishi-marketing.com/articles/amazon-review-fuyashite-mo-urekazu-fuenai-kadai.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://konishi-marketing.com/articles/amazon-sponsor-kokoku-fuyashite-mo-rieki-nokoranai.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://konishi-marketing.com/articles/amazon-shohin-page-gaichuu-kakunin.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://konishi-marketing.com/articles/amazon-yahoo-onaji-shohin-page-sekkei-wa-ikenai.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://konishi-marketing.com/articles/amazon-brand-store-unit-session-rate-kawaranu.html</loc>
+    <lastmod>2026-04-25</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
