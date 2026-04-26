@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/yahoo-shohin-page-sekkei-rakuten-to-chigai.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yahoo!ショッピングの商品ページ設計で楽天と変えるべき点｜小西マーケティング</title>
+<meta name="description" content="楽天の縦長LPをYahoo向けに短くカットし、バナーを足した。しかし購買率は上がらなかった。変えるべきはデザインやLPの長さではありません。ページ冒頭の文脈という問いに答えることが先です。EC100店舗超の現場から解説します。">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+</head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<div class="hero">
+  <span class="hero-category">Yahoo!ショッピング / ページ設計 / 楽天比較</span>
+  <h1 class="hero-title">Yahoo!ショッピングの商品ページ設計で<br>楽天と変えるべき点</h1>
+  <p class="hero-lead">楽天の縦長LPをYahoo向けに短くカットし、バナーを足して出品した。しかし購買率は上がらなかった。「短くして分かりやすくしたはずなのに」という徒労感が残る。変えるべきはデザインやLPの長さではない。変えるべき場所がずれているとき、どう調整しても購買率は動かない——その構造をEC100店舗超の現状を見てきた経験から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「短く、赤く、お得感を増やした」のに購買率が上がらない</h2>
+
+  <p>楽天で成果を出している縦長のLPがある。そのままYahooに出しても売れないことが分かり、Yahoo向けに最適化を試みる。LPを半分の長さにカットする。サムネイルにポイント倍率を大きく入れる。赤い枠線を追加する。外部の制作会社に依頼して「Yahoo風」のデザインに変える。しかし購買率は変わらない。</p>
+
+  <p>「まだ短くする余地があるのか」「もっと大きくポイントを表示すべきか」——同じ方向での改善を繰り返す。しかし購買率が変わらない。変えている部分と、購買率を決める変数の間にずれがある可能性がある。</p>
+
+  <div class="insight">
+    楽天とYahooで変えるべき部分は、デザインやLPの長さではない。<br>
+    <em>楽天の読者とYahooの読者では、ページを訪れる前の文脈が異なる。変えるべきはページ冒頭——読者が「このページは自分に関係する」という感覚を持つかどうかを決める入り口の設計だ。デザインを変えることと、入り口の設計を変えることは別の作業だ。</em>
+  </div>
+
+  <p>「Yahoo向けのページ最適化とは、デザインをYahoo風にし、LPを短くし、ポイント訴求を強めることだ」という方向でノウハウが流通してきたのは、Yahoo専門の制作会社とコンサルが「デザイン変更」という作業を提供しやすいからだ。しかしデザインを変えることは「皮膚を変える」作業だ。「なぜこのページが読者の文脈に届くか」という設計の問いは、デザインの外側にある。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">LPを「短く」することが確信を削る構造</h2>
+
+  <p>「Yahooユーザーは長いページを読まない」という通説に基づいて、楽天の縦長LPから画像や説明を削る。情報量が減る。しかし購買率が上がるどころか、下がる場合がある。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">問題の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが思っている問題</div>
+      <div class="misrec-cell truth">楽天とYahooのページ設計の違いはデザインのテイスト（赤枠やバナー）やLPの長さの問題だ。Yahoo向けにデザインを調整してLPを短くすれば購買率が改善する</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">LPを短くすることは「情報量の削減」だ。削られた情報の中に「この商品が自分の状況に必要な理由」を読者に届けていた部分があるとき、購買率は下がる。Yahooの読者が読まないのはページが長いからではなく、冒頭で「このページは自分に関係する」という感覚が届いていないからだ</div>
+    </div>
+  </div>
+
+  <p>「Yahooユーザーはせっかちだから結論を急いで伝えなければならない」という前提がある。しかし読者がページから離脱するのは「ページが長いから」ではなく「このページが自分に関係する理由が届いていないから」だ。この区別がなされないまま「短くする」という改善を続けても、購買率を動かす変数には触れていない。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">楽天とYahooで本当に変えるべき場所はどこか</h2>
+
+  <p>楽天の読者は「このカテゴリで良い商品を探そう」という方向性を持ってページを訪れることが多い。縦長LPをスクロールしながら「この商品が自分の状況に必要かどうか」を処理する構えがある。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが信じている原因</div>
+      <div class="misrec-cell truth">Yahooユーザーはせっかちだから、結論（価格やスペック）を急いで伝えないと離脱される。モールごとに最適化するには全く違うLPをゼロから2つ作るしかない</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">離脱されるのは、楽天向けの「じっくり検討する前提」の冒頭設計をそのままYahooの読者にぶつけているためだ。Yahooの読者は比較回遊の途中にいる文脈でページを訪れることが多く、その文脈に届く冒頭の設計が別途必要だ。しかしLPの本体——「この商品が自分に必要な理由」——は共通で使える</div>
+    </div>
+  </div>
+
+  <p>変えるべき場所は「ページの長さ」でも「デザインのテイスト」でもなく、ページ冒頭——読者がページに来た最初の数秒で「このページは自分の状況に関係する」という感覚を持てるかどうかを決める部分だ。この部分がYahooの読者の文脈に届くとき、その後のLPの本体は楽天と大きく変える必要がない場合がある。全く別のLPを2つ作る必要はない。しかしその冒頭部分の設計は、デザインの変更とも長さの調整とも異なる専門性を必要とする。</p>
+
+  <div class="callout">
+    <strong>「お得感（ポイントや割引）をどう目立たせるかがYahoo最適化だ」というアプローチについて。</strong><br>
+    ポイントの訴求を強めることは「ポイントを期待している読者のクリック率」に影響することがある。しかしページを訪れた読者が「この商品が自分の状況に必要だ」という判断に向かう流れは、ポイントの大きさとは別の問いが答える。ポイントを大きく表示するほど「ポイントで選ぶ読者」が増え、より高いポイント還元の競合へ流れやすくなる。ポイントの訴求と購買率の設計は別の問いだ。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">Yahoo専門の制作会社に依頼しても購買率が変わらない構造</h2>
+
+  <p>「Yahoo専門の制作会社に依頼すれば、Yahoo向けの正しい設計で作り直してくれるはずだ」という期待がある。制作会社から成果物が届く。確かにYahoo!ショッピングの画面に馴染むデザインになっている。赤い枠線、ポイントバナー、イベント対応の画像——見た目の完成度は上がった。しかし購買率が変わらない。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">市場が選んでいる解決策</div>
+      <div class="misrec-cell truth">Yahoo専用のLPとして全体を短くカットし、価格やお得な情報をファーストビューに詰め込む。またはYahoo特化の制作会社に依頼し、UIをYahooの画面に馴染むように作り直してもらう</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">お得さは伝わっても「なぜこの商品でなければならないのか」という確信が生まれない。見た目が整うだけで「この商品が自分の状況に必要な理由」を届ける冒頭の設計は変わらない。デザインを変える専門性と、冒頭の設計を変える専門性は異なる</div>
+    </div>
+  </div>
+
+  <p>Yahoo専門の制作会社が得意とするのは「Yahoo!ショッピングのUIに合わせたデザインの制作」だ。しかし購買率を動かすために変えるべき「ページ冒頭の設計」は、デザインの制作とは異なる専門性を必要とする。「ヒアリングが商品の強みやターゲット年齢で終わった」「提案がデザイン案だけだった」という外注先は、デザインの代行者だ。購買率を動かすために必要な変更は、デザインの外側にある。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">ブランドイメージを安売りチラシに変えてしまった後の損失</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「Yahoo向けに安っぽくする」という方向の問題</h3>
+
+  <p>Yahoo!ショッピングの読者に合わせて、ページ全体を「お得感」で統一しようとする。チラシのような安売り感のあるデザインに変える。確かにそういうデザインの商品は検索結果で目立つことがある。しかしブランドのイメージが崩れる。適正価格で売れなくなる。楽天で確立しているブランド価値がYahooで毀損される。</p>
+
+  <p>「Yahooの客層に合わせてブランドを下げる」という判断は、「Yahooの読者はお得感にしか反応しない」という前提から来ている。しかしその前提は「冒頭の設計がYahooの読者の文脈に届いていない状態での観察」から出ている。冒頭が届いていない状態では、読者はポイントという変数しか使えない。それは読者の問題ではなく、ページ設計の問いが手つかずになっている状態の結果だ。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「モールごとに別々のLPをゼロから作る」のは必要か</h3>
+
+  <p>「楽天とYahooで完全に別のLPを2パターン作るべきだ」という判断で制作を進めると、コストと時間が倍になる。そのコストに見合う結果が出るかどうかの根拠もない。多くの場合、途中で頓挫して楽天のページの微修正に戻る。</p>
+
+  <p>しかし全く別のLPを2つ作る必要はない場合がある。変えるべき場所は「ページ全体のデザイン・長さ・情報量」ではなく「ページ冒頭の設計」だ。その冒頭部分が楽天の文脈に届くように設計されているとき、Yahooの読者の文脈に届くように変える——この変更だけで購買率に影響する場合がある。しかしその変更がどこをどう変えるかは、現在のページを読者の視点で診断した上で特定する必要がある。</p>
+
+  <p>以下の状態が続いているなら、デザイン変更より先に確認すべき問いが残っている。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">楽天のLPを短くカットしてYahooに出品したが、購買率が改善しないか悪化した</li>
+    <li data-num="✓">サムネイルにポイント倍率を大きく入れたがクリック後の直帰率が高く購買に繋がらない</li>
+    <li data-num="✓">Yahoo専門の制作会社に依頼してデザインを変えたが、購買率が変わらず投資回収できていない</li>
+    <li data-num="✓">「Yahoo向けに全く別のLPをゼロから作るべきか」という問いが立っているが、どこを変えるべきかが特定できていない</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">デザインを変える前に、ページ冒頭の設計がYahooの読者の文脈に届いているかを確認する。</div>
+    <div class="cta-block-sub">
+      LPの長さやデザインを変えても購買率が変わらないなら、問いの場所はページ冒頭の設計にあります。<br>
+      「現在のページ冒頭がYahooの読者の文脈に届いているか」を特定することが先です。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">デザインを変える前にページの問いを診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>モール最適化業界の現場では長年、「楽天とYahooのページを変えるとは、デザインをYahoo風にし、LPを短くし、ポイント訴求を強めることだ」という方向で語られてきた。Yahoo専門の制作会社も、EC系のメディアも、「Yahoo向けの最適化＝デザイン変更と情報量の調整」という枠組みで情報を提供し続けている。その枠組みの中で動くことが、「デザインを変えても購買率が変わらない」状態と「ブランドイメージを安売りチラシに変えた結果、適正価格で売れなくなる」構造を固定する。</p>
+
+  <p>楽天とYahooで変えるべきはデザインでも情報量でもなく、ページ冒頭——Yahoo!ショッピングの読者がページに来た最初の数秒で「このページは自分の状況に関係する」という感覚を持てるかどうかを決める設計だ。その変更は全く別のLPを2つ作る必要を意味しない。変えるべき部分は絞られている。しかしどの部分をどう変えるかは、現在のページを読者の視点で診断した上で特定される。その診断は、デザイン制作の専門性とも広告運用の専門性とも異なる専門性を必要とする。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">楽天のLPをYahoo向けに短くしても購買率が改善しないのはなぜですか？</div>
+    <div class="faq-a">LPを短くすることは「情報量の削減」です。その削られた情報の中に「この商品が自分の状況に必要な理由」を届けていた部分があるとき、購買率は下がります。Yahooの読者が離脱する原因がページの長さにあるのか、ページ冒頭の設計にあるのかを特定せずに「短くする」という改善を続けても、購買率を動かす変数には触れていません。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Yahoo専門の制作会社に依頼すれば購買率は改善しますか？</div>
+    <div class="faq-a">Yahoo専門の制作会社は「Yahoo!ショッピングのUIに合わせたデザイン制作」を得意とします。しかし購買率を動かすために変えるべき「ページ冒頭の設計」は、デザイン制作とは異なる専門性を必要とします。ヒアリングが商品の強みやターゲット年齢で終わる外注先はデザインの代行者です。購買率を動かすための変更は、デザインの外側にある問いへの答えを必要とします。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">楽天とYahooで全く別のLPをゼロから2つ作る必要がありますか？</div>
+    <div class="faq-a">必ずしも全く別のLPを2つ作る必要はない場合があります。変えるべき部分は「ページ全体のデザイン・長さ」ではなく「ページ冒頭の設計」に絞られることがあります。しかしどの部分をどう変えるかは、現在のページを読者の視点で診断した上で特定されます。診断なしに「全部変える」または「変えない」を判断することは、変えるべき部分の特定ができていない状態での判断です。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">Yahoo向けのページ設計で変えるべき部分を特定するには、まず何を確認すればいいですか？</div>
+    <div class="faq-a">現在のページ冒頭——サムネイル・テキストの最初の数行——がYahoo!ショッピングの読者の文脈（比較回遊の途中）に届いているかを確認することが先です。「ポイントとスペックの情報」として設計されているか、「この商品が自分の状況に関係する」という感覚を届ける設計になっているかを確認します。その確認は専門的な診断を必要とします。まずURLを送ることで診断が始まります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">「ページ冒頭の設計を変える」とは、具体的に何を変えることですか？</div>
+    <div class="faq-a">ページ冒頭で読者が「このページは自分の状況に関係する」という感覚を持てるかどうかを決める設計です。具体的にどの要素をどう変えるかは、現在のページと読者の文脈を診断した上で特定されます。一般論として「サムネイルをこうする」「テキストをこう変える」という答えは、診断前には存在しません。その特定が診断の目的です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、Yahoo向けのページ設計が手つかずのページのどこを確認しますか？</div>
+    <div class="faq-a">「現在のページ冒頭がYahooの読者の文脈に届く設計になっているか」を確認します。「購買率が改善しない原因がデザインにあるのか、ページ冒頭の設計にあるのか」が明確になります。変えるべき場所と変える必要がない場所が特定されます。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、変えるべき場所がページ冒頭の設計にあるかを特定する。</div>
+  <div class="cta-block-sub">
+    変えるべき場所が特定できれば、全部作り直す必要がなくなる。<br>
+    必要な変更が絞られれば、投資対効果が見えてくる。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/yahoo-urenai-shohin-page-kyotsuten.html">Yahoo!ショッピングで売れない商品ページの共通点</a></li>
+    <li><a href="https://konishi-marketing.com/articles/yahoo-koubairitsu-rakuten-yori-hikui-hontono-riyu.html">Yahoo!ショッピングの購買率が楽天より低い本当の理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-yahoo-onaji-shohin-page-sekkei-wa-ikenai.html">AmazonとYahooで同じ商品ページ設計を使ってはいけない理由</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
