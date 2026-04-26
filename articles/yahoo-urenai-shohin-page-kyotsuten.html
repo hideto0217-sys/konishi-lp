@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/yahoo-urenai-shohin-page-kyotsuten.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yahoo!ショッピングで売れない商品ページの共通点｜小西マーケティング</title>
+<meta name="description" content="「5のつく日」が終わった翌日、ピタリと止まる注文通知。楽天では毎日売れるのにYahooではイベントの日だけ。ポイントとクーポンに依存する構造は、ページ設計の問題です。EC100店舗超の現場から解説します。">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+</head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<div class="hero">
+  <span class="hero-category">Yahoo!ショッピング / 購買率 / ページ設計</span>
+  <h1 class="hero-title">Yahoo!ショッピングで売れない<br>商品ページの共通点</h1>
+  <p class="hero-lead">「5のつく日」が終わった翌日、ピタリと止まる注文通知。楽天では毎日売れるのに、Yahoo!ショッピングではイベントの日に利益を削ってポイントを出した時だけ売れる。このままYahoo店が「割引目当ての客の処理場」になっていく——その静かな恐怖がある。しかしこれはYahooの客層の問題ではありません。ページ設計の問題です。EC100店舗超の停滞を見てきた経験から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「5のつく日」翌日の静寂が繰り返される</h2>
+
+  <p>「5のつく日」や「超PayPay祭」に合わせてポイント倍率を設定する。クーポンを発行する。その日は注文が来る。アイテムマッチ広告も回しているのでアクセスは取れている。しかしイベントが終わった翌日、注文通知が止まる。月の売上を確認すると、80%以上が数日間のイベントに集中している。</p>
+
+  <p>楽天では同じ商品が毎日コンスタントに売れている。なぜYahooではイベントの日だけなのか。「Yahooユーザーはポイント目当てだから仕方ない」という結論に向かう。しかしその結論が正しければ、Yahooで毎日売れている競合店も同じ問題を抱えているはずだ。競合は毎日売れている。自社はイベント依存。この差は何か。</p>
+
+  <div class="insight">
+    ポイントは「迷いの後押し」であり「購買の確信」ではない。<br>
+    <em>ポイントやクーポンで売れたとき、読者は「この商品が自分の状況に必要だ」という確信を持って購入したわけではない。「お得だから試してみよう」という動機で購入している。その動機は、次のより高いポイント還元が現れた瞬間に消える。イベント依存の売上は、ページ設計の問いが手つかずになっていることの結果だ。</em>
+  </div>
+
+  <p>「Yahoo＝ポイント競争」という方向でノウハウが流通してきたのは、Yahoo!ショッピングのコンサルやシステムベンダーが「イベント対策とポイント戦略」を改善の中心として提供しやすいからだ。ポイント設定はシステムとして操作しやすい。しかしポイント戦略がYahooで毎日売れる状態を作るかどうかは、別の問いが答える。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">他モールのページをそのまま貼り付けると、Yahooで何が起きるか</h2>
+
+  <p>一括出品ツールで楽天やAmazonのページをYahoo!ショッピングに複製する。アイテムマッチ広告を設定してアクセスを集める。しかしクリックした後の直帰率が高い。購買率が1%未満から改善しない。「デザインが悪いのか」「画像が違うのか」という問いが続く。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">問題の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが思っている問題</div>
+      <div class="misrec-cell truth">楽天やAmazonのページをそのまま流用しているから（デザインの不一致）が問題だ。Yahoo用に画像に赤い枠線をつけたり目立つバナーを配置すれば改善する</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">デザインの違いではなく、Yahoo!ショッピングに来た読者の心理状態（イベント・ポイントを期待した比較検討）に対して、ページ冒頭で「この商品が自分の状況に必要な理由」を届ける流れが設計されていないことが問題だ。一括出品ツールで複製できるのはデータだ。読者への文脈は複製されない</div>
+    </div>
+  </div>
+
+  <p>Yahoo!ショッピングに来た読者は、楽天やAmazonとは異なる文脈で検索している場合がある。イベントやポイント還元を意識した比較検討の途中にいる読者も多い。その読者に対して、楽天の「縦長LP型」でも、Amazonの「カタログ型」でもなく、Yahoo!ショッピングの文脈に届く冒頭の設計が機能するかどうかが問いだ。表面的なデザインの変更では、この問いに答えられない。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">サムネイルに「ポイント10倍」を詰め込むほど、商品が見えなくなる</h2>
+
+  <p>サムネイル（商品画像1枚目）に「送料無料」「ポイント10倍」「期間限定」——文字を詰め込む。Yahoo!ショッピングの検索結果画面で目立つかもしれない。しかしクリックした後のページで「この商品が自分の状況に必要な理由」が届いていないとき、ポイント情報を期待して来た読者はポイント条件を確認した後、より高いポイント還元の競合へ向かう。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが信じている原因</div>
+      <div class="misrec-cell truth">Yahoo!ショッピングはソフトバンク・PayPayユーザーの「お得市場」だから、安売りしないと絶対に勝てない。アイテムマッチの入札単価をさらに上げてイベント時にポイント倍率を最大化するしかない</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">読者がお得さで選ぶのは、ページ内に「高くてもこれを買うべき明確な理由」が提示されていないため、消去法で一番お得なものを選ばざるを得ないからだ。ポイント競争で疲弊しているとき、ページで読者が「この商品が自分の状況に必要だ」という判断に向かう流れが手つかずのままになっている可能性がある</div>
+    </div>
+  </div>
+
+  <p>サムネイルに「ポイント10倍」を書くことは「ポイントを期待している読者を呼ぶ」作業だ。その読者が来てページを見たとき「この商品が自分の状況に必要な理由」が届いていないと、「もっと高いポイントを出している店はないか」という比較を続ける。ポイント情報が目立つほど、ポイントで比較する読者が増える。結果として価格・ポイントの消耗戦が続く。</p>
+
+  <div class="callout">
+    <strong>「競合店がポイント還元率を上げてくるため追随せざるを得ない」という状況について。</strong><br>
+    ポイント還元率の競争に参加している間、その競争の終わりはない。より資本力のある競合が常に上を行く。しかし「ポイントという軸での競合力を上げること」と「ポイントという軸での比較から読者が降りる設計をすること」は別の問いに答える。ポイント競争を続けながら積み上がる資産はない。毎回のイベントで同じ構造が繰り返される。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">アイテムマッチでアクセスが来ているのに購買率が上がらない問い</h2>
+
+  <p>アイテムマッチの入札単価を上げる。インプレッションとクリックが増える。しかし購買率は変わらない。「もっと入札単価を上げれば改善するか」という方向に向かう。広告費が増えるが購買率は変わらない。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">市場が選んでいる解決策</div>
+      <div class="misrec-cell truth">アイテムマッチの入札単価をさらに上げたり、イベント時にポイント倍率を最大化して無理やり転換させる。またはYahoo用に画像へ赤い枠線をつけたり目立つバナーを配置する表面的な変更を加える</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">広告費でアクセスを増やしても、ページで読者が購買判断に向かう流れが設計されていなければ購買率は変わらない。表面的なデザイン変更はクリック率に影響するが、ページ内の設計の問いに答えない。イベントが終われば即座に売上がゼロに戻り、ブランドとしての資産が蓄積されない</div>
+    </div>
+  </div>
+
+  <p>アイテムマッチ広告が影響するのはクリック数という変数だ。ページに来た読者が「この商品が自分の状況に必要だ」という判断に向かう割合（購買率）は、広告設定の外側にある問いが答える。広告費を増やすほど購買率の低いページへのアクセスが増え、費用対効果が悪化する。購買率という変数が手つかずのまま広告費を増やすことは、穴の空いたバケツへの注水だ。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">Yahoo!ショッピングで毎日売れている店と、イベント依存の店の違い</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「Yahooユーザーの客層のせいだ」という診断が固定されていないか</h3>
+
+  <p>「Yahooユーザーはポイント目当てだから仕方ない」という診断が固定されていると、「ポイント以外の理由で選ばれる設計ができるか」という問いが立てられなくなる。しかし同じYahoo!ショッピングで、イベント日以外も毎日安定して購買率を維持している店が存在する。その差は客層ではなく、ページで読者に何が届いているかだ。</p>
+
+  <p>「Yahooの客層はポイント目当てだ」という観察と「Yahooのページで読者がポイント以外の理由で判断できる設計がある」という観察は、別の問いに答えている。後者の問いが手つかずのまま前者の結論に至ることは、問いの場所を確認せずに出した諦めになっている可能性がある。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">システムへの対応に手一杯で、ページの中身が後回しになっている</h3>
+
+  <p>ストアクリエイターProへの登録・更新作業に追われる。商品情報の入力、在庫管理、価格変更——システムへの対応だけで時間が消える。「売れる見せ方を考える余裕がない」という状態になる。</p>
+
+  <p>この状態でページ設計という問いが後回しになる。しかしシステム対応の完璧さとページ設計の質は別の問いに答える。システムが整っていても、ページで読者が「この商品が自分の状況に必要だ」という判断に向かう流れが設計されていなければ、購買率は変わらない。その流れの設計という問いが手つかずのまま、毎月同じイベント対策を繰り返している状態が続く。</p>
+
+  <p>以下の状態が続いているなら、次のイベント対策より先に確認すべき問いが残っている。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">月の売上の80%以上が「5のつく日」や超PayPay祭などのイベント数日間に集中している</li>
+    <li data-num="✓">アイテムマッチでクリックは増えているが購買率が1%未満から改善しない</li>
+    <li data-num="✓">楽天やAmazonのページをそのまま流用しており、Yahoo向けの文脈設計を一切していない</li>
+    <li data-num="✓">競合のポイント還元率を毎日確認して追随しており、利益が薄くなり続けている</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">次のイベント対策の前に、ページで読者が購買判断に向かう流れが設計されているかを確認する。</div>
+    <div class="cta-block-sub">
+      イベント以外の日に購買率が動かないなら、問いの場所はページ設計にあります。<br>
+      Yahoo!ショッピングの読者に「この商品が自分に必要な理由」が届いているかを特定することが先です。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">イベントを待つ前にページの問いを診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>Yahoo!ショッピング業界の現場では長年、「イベントに合わせたポイント戦略とクーポン設定がYahooの基本だ」「アイテムマッチの入札を最適化してアクセスを最大化することが改善の中心だ」という方向で語られてきた。Yahoo!ショッピングのコンサルも、システムベンダーも、EC系のメディアも、「ポイントとイベント対策こそがYahooでの売上の源泉だ」という枠組みで情報を提供し続けている。その枠組みの中で動くことが、「イベントの日だけ売れてブランドの資産が積み上がらない」状態と「ポイント競争で利益が削れ続ける」構造を固定する。</p>
+
+  <p>ポイントは「迷いの後押し」だ。「購買の確信」は別の問いが答える。Yahoo!ショッピングで毎日売れている店と、イベント依存の店の差は客層ではなく、ページで読者が「この商品が自分の状況に必要だ」という判断に向かう流れが設計されているかどうかだ。その流れは、ポイント設定でも広告入札でも設計できない。その問いへのアプローチは、システム対応とも広告最適化とも異なる専門性を必要とする。次のイベント対策より先に、この問いが手つかずになっていないかを確認することが先だ。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">Yahoo!ショッピングでイベントの日だけ売れて他の日は売れない原因は何ですか？</div>
+    <div class="faq-a">ポイントやクーポンは「迷いの後押し」として機能します。しかし「購買の確信」——「この商品が自分の状況に必要だ」という判断——は別の問いが答えます。イベントの日だけ売れる状態は、ページで読者が購買確信に向かう流れが設計されていないことの結果です。ポイントがなくても売れている競合店との差は、客層ではなくページ設計にある可能性が高いです。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">楽天で売れているページをYahooにそのまま流用してはいけないのですか？</div>
+    <div class="faq-a">一括出品ツールで複製できるのはデータ（スペック・価格・画像）です。「Yahoo!ショッピングに来た読者がどういう文脈で訪れているか」という心理状態への設計は、データとして複製できません。楽天の「縦長LP型」もAmazonの「カタログ型」も、Yahoo!ショッピングの読者の文脈に届くかどうかは別の問いです。デザインを同じにすることと、読者への文脈設計を同じにすることは異なります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">アイテムマッチの入札単価を上げれば購買率は改善しますか？</div>
+    <div class="faq-a">アイテムマッチは「クリック数」に影響します。しかしクリックした読者がページで購買判断に向かう割合（購買率）は、広告入札の外側にある問いが答えます。購買率が低いページで入札単価を上げると、来た読者が購買しないまま広告費だけが増えます。購買率という変数が手つかずのまま入札を強化することは、費用対効果の改善につながりません。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">Yahoo!ショッピングで毎日安定して購買率を改善するために、まず何を確認すればいいですか？</div>
+    <div class="faq-a">現在のページで「Yahoo!ショッピングの読者がページを訪れたときに、この商品が自分の状況に必要な理由が届いているか」を確認することが先です。ページ冒頭の画像・テキストが「ポイントとスペックの情報」として設計されているか、「読者の状況に関係する文脈」として設計されているかを確認します。その確認は、ページを読者の視点で読む専門的な分析を必要とします。まずURLを送ることで診断が始まります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">「Yahooユーザーはポイント目当てだから、ページ設計で差をつけることはできない」という前提は正しいですか？</div>
+    <div class="faq-a">同じYahoo!ショッピングで、イベント日以外も毎日安定した購買率を持つ店が存在します。その差が客層ではなくページ設計にある可能性は、診断で確認できます。「Yahooはポイントでしか勝負できない」という前提が正しいかどうかを、「ページで読者がポイント以外の理由で判断できる設計が存在するか」を確認せずに結論付けることは、手つかずの問いを残した診断です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、Yahoo!ショッピングで購買率が低いページのどこを確認しますか？</div>
+    <div class="faq-a">ページ冒頭で読者が「この商品が自分の状況に関係する」という感覚を受け取れているかを確認します。「購買率が低い原因がポイント還元率にあるのか、ページの設計にあるのか」が明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、ページでYahooの読者に何が届いているかを特定する。</div>
+  <div class="cta-block-sub">
+    届いているものが特定できれば、イベント以外の日に購買率を動かす変数が見えてくる。<br>
+    変数が見えれば、ポイント競争ではない方向が開ける。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/amazon-yahoo-onaji-shohin-page-sekkei-wa-ikenai.html">AmazonとYahooで同じ商品ページ設計を使ってはいけない理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天の転換率が上がらない本当の理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/ec-kakaku-kyoso-makikomareru-hontono-genin.html">ECで「価格競争に巻き込まれる」本当の原因</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
