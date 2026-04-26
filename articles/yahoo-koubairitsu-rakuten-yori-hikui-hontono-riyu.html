@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/yahoo-koubairitsu-rakuten-yori-hikui-hontono-riyu.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yahoo!ショッピングの購買率が楽天より低い本当の理由｜小西マーケティング</title>
+<meta name="description" content="同じ商品・同じページなのに、楽天では転換率3%、Yahooでは0.8%。この差はプラットフォームの問題ではありません。楽天で機能した設計がYahooの読者の文脈に届いていない構造があります。EC100店舗超の現場から解説します。">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+</head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<div class="hero">
+  <span class="hero-category">Yahoo!ショッピング / 購買率 / 楽天比較</span>
+  <h1 class="hero-title">Yahoo!ショッピングの購買率が<br>楽天より低い本当の理由</h1>
+  <p class="hero-lead">同じ商品・同じ価格帯なのに、楽天では転換率3%前後、Yahoo!ショッピングでは0.8%前後——この差に直面しているとき、「Yahooはそういうプラットフォームだから仕方ない」という結論に向かいやすい。しかしその結論が正しければ、Yahooで楽天に近い購買率を維持している競合も同じ問題を抱えているはずだ。差はプラットフォームではなく、ページ設計にある。EC100店舗超の現状を見てきた経験から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">楽天で機能したページが、Yahooで機能しない構造</h2>
+
+  <p>楽天市場で月商が安定してきた。同じ商品をYahoo!ショッピングにも展開する。一括出品ツールを使い、楽天で機能しているページデータをYahooに複製する。アイテムマッチ広告も設定する。しかし購買率が楽天の4分の1以下だ。楽天で機能したページがYahooで機能しない。</p>
+
+  <p>楽天で機能した設計が存在する。それは事実だ。しかしその設計が機能した理由は、楽天という場所に来た読者の文脈に届いたからだ。楽天の読者と、Yahoo!ショッピングの読者が「同じ文脈でページに来ている」という前提が成立するとき、同じ設計で同じ結果が得られる。しかしその前提が成立しないとき、同じ設計は同じ結果を生まない。</p>
+
+  <div class="insight">
+    楽天とYahoo!ショッピングの購買率の差は、プラットフォームの問題ではない。<br>
+    <em>楽天に来た読者と、Yahoo!ショッピングに来た読者は、ページを訪れる前の文脈が異なる。楽天で機能した設計が届いた読者の文脈と、Yahoo!ショッピングの読者の文脈が異なるとき、同じ設計は同じ購買率を生まない。</em>
+  </div>
+
+  <p>「Yahoo!ショッピングはポイントとお得感が全てだから、楽天のような購買率は出ない」という方向でノウハウが流通してきたのは、Yahoo!ショッピングのコンサルとシステムベンダーが「イベント対策とポイント戦略」という枠組みで情報を提供し続けてきたからだ。しかしYahooで楽天に近い購買率を出している店舗が存在する以上、「プラットフォームの問題」という診断は完全には正しくない。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">楽天の読者とYahooの読者が置かれている文脈の違い</h2>
+
+  <p>楽天市場を検索で訪れた読者は、「このカテゴリで何かを買おう」という方向性を持っていることが多い。楽天の縦長LP設計は、その読者に対して「なぜこの商品が自分に必要か」という文脈を届けることに機能する。読者は縦長のページをスクロールしながら「この商品が自分の状況に必要かどうか」を処理する。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">文脈の違いが購買率の差を生んでいる構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">楽天の読者が置かれている文脈</div>
+      <div class="misrec-cell truth">「このカテゴリで良い商品を探したい」という目的を持ち、縦長のLPを読み込む準備がある。ページ内の情報で「この商品が自分に必要かどうか」を判断する構えがある</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">Yahoo!ショッピングの読者が置かれている文脈</div>
+      <div class="misrec-cell truth">「PayPayポイントを活用してお得に買いたい」「イベント中にいい商品を探したい」という文脈で複数の店舗を回遊・比較している。「お得さで選びたい」という前提で複数選択肢を見ている状態でページに来る</div>
+    </div>
+  </div>
+
+  <p>Yahoo!ショッピングの読者は、ページに来た時点で「他の店舗とも比較している途中」の状態にいることが多い。その状態の読者に対して、楽天向けに設計された「商品の価値を縦長で詳しく説明する」設計が届くかどうかは、別の問いだ。比較検討の途中にいる読者が「このページで立ち止まって読む理由」を持てるかどうかが先にくる。その問いに答えない設計のまま楽天ページをコピーしても、購買率は楽天の水準には近づかない。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「Yahooはポイント勝負」という診断が自社ページの問いを後回しにする</h2>
+
+  <p>「Yahoo!ショッピングの購買率が低いのはポイント還元率が競合より低いからだ」という診断を持つと、ポイント率を上げることが改善の中心になる。ポイント率を上げると一時的に購買率が動く場合がある。しかしポイント率を下げると購買率が戻る。この循環から「やはりYahooはポイントでしか勝負できない」という結論に向かう。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが信じている原因</div>
+      <div class="misrec-cell truth">Yahoo!ショッピングはポイント経済圏の市場だから、ポイント還元率と価格の安さでしか購買率を動かせない。楽天との購買率の差はプラットフォームの構造的な問題だ</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">ポイントで購買率が動くのは「ポイントがない状態でもこの商品が自分に必要だ」という判断が読者に届いていないからだ。ページで読者が購買判断に向かう流れが設計されていないとき、ポイントは「選ぶかどうか迷っている状態を後押しする」機能しか持てない。その流れがないまま、ポイントで購買率を動かし続けることが「Yahooはポイントでしか動かない」という印象を作っている</div>
+    </div>
+  </div>
+
+  <p>「ポイント経済圏の読者だから、ページ設計で差をつけることはできない」という結論は、ページで読者が購買判断に向かう流れを設計する前に出している結論だ。Yahooの文脈に届く設計を試みずに「Yahooはポイント勝負」という結論に至ることは、問いの場所を確認せずに出した診断になっている可能性がある。</p>
+
+  <div class="callout">
+    <strong>「楽天のページをそのまま流用しているのだから、購買率が低くても仕方ない」という診断について。</strong><br>
+    楽天のページをYahooに複製することは「楽天の読者に届けるために設計されたページをYahooの読者に見せる」ことだ。楽天の縦長LP設計は、楽天の読者の文脈（じっくり読む構え）に対して機能するように作られている。しかしYahooの読者の文脈（比較回遊の途中）に届くかどうかは、同じ設計では保証されない。デザインの問題ではなく、届ける文脈の設計の問いだ。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">楽天とYahooで購買率の差が縮まらない間に手つかずになっている問い</h2>
+
+  <p>アイテムマッチの入札を調整する。ポイント率を変える。サムネイルに文字を加える——それぞれの施策が購買率に与える影響を確認し続ける。しかし楽天との購買率の差は縮まらない。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">市場が選んでいる解決策</div>
+      <div class="misrec-cell truth">ポイント還元率をさらに上げる。アイテムマッチの入札単価を最適化する。楽天と同じページデザインをYahooにも適用する。サムネイルに「お得感」を示す文字を加える</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">ポイントは迷いを後押しするが購買の確信を作らない。入札はクリック数に影響するが購買率には影響しない。楽天のページ設計はYahooの読者の文脈に届くとは限らない。どれも「Yahooの読者の文脈に届く設計」という問いに答えていない</div>
+    </div>
+  </div>
+
+  <p>この問いへのアプローチは、ポイント設定の調整とも入札の最適化とも、楽天ページのコピーとも異なる専門性を必要とする。Yahoo!ショッピングの読者がどういう文脈でページに来ているかを把握した上で、その文脈の中で「この商品が自分の状況に必要だ」という判断に向かう流れを設計することだ。しかしその設計は「楽天で機能したページを持っていること」とは別の作業だ。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">差が縮まらない現状の確認</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">楽天での購買率がYahooに移植されない理由</h3>
+
+  <p>楽天で購買率が高い商品ページには、楽天の読者の文脈に届く設計がある。その設計が機能しているとき、読者はページをスクロールしながら「この商品が自分の状況に必要かどうか」を処理し、購買判断に向かう。その流れが購買率を作っている。</p>
+
+  <p>しかしYahooの読者は楽天の読者と異なる文脈でページを訪れている。その文脈の違いを無視して、楽天で機能した設計をそのまま複製しても、同じ流れがYahooの読者に届くとは限らない。「楽天で高い購買率を持つページ」と「Yahooの読者の文脈に届くページ」は別の設計の問いに答えている。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「Yahooにリソースをかける価値があるか」という問いの前に</h3>
+
+  <p>楽天での成果が安定しているとき、Yahoo!ショッピングへの投資対効果を疑う。「Yahooに別の設計を作るコストをかけても、楽天ほどの購買率が出るかどうか分からない」という判断が生まれる。しかしその判断は「現在のYahooページが楽天の設計のコピーである状態」で出した判断だ。Yahooの読者の文脈に届く設計を試みた上での判断ではない。</p>
+
+  <p>以下の状態が続いているなら、ポイント調整や入札最適化より先に確認すべき問いが残っている。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">楽天での購買率が3%前後なのに、Yahooでは0.8%前後から改善しない状態が3ヶ月以上続いている</li>
+    <li data-num="✓">楽天のページをそのままYahooに流用しており、Yahoo向けの文脈設計を一切行っていない</li>
+    <li data-num="✓">ポイント率を上げると一時的に購買率が上がるが、下げると戻るサイクルが続いている</li>
+    <li data-num="✓">「Yahooはポイントでしか動かない」という結論に至っているが、Yahooで安定した購買率を持つ競合が存在する</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">ポイントを調整する前に、Yahooの読者の文脈にページが届いているかを確認する。</div>
+    <div class="cta-block-sub">
+      楽天とYahooの購買率に大きな差があるとき、問いの場所はページ設計にある可能性があります。<br>
+      Yahoo!ショッピングの読者が「この商品が自分に必要だ」という判断に向かう流れが設計されているかを特定することが先です。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">ポイントを変える前にページの問いを診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>Yahoo!ショッピング業界の現場では長年、「Yahoo=PayPayポイント経済圏の市場であり、ポイント還元率とイベント対策が購買率を決める」という方向で語られてきた。Yahoo!ショッピングのコンサルも、システムベンダーも、EC系のメディアも、「ポイントとイベントこそがYahooでの購買率の源泉だ」という枠組みで情報を提供し続けている。その枠組みの中で動くことが、「楽天との購買率の差が縮まらない」状態と「ポイント率を上げないと購買率が動かない」構造を固定する。</p>
+
+  <p>楽天とYahooの購買率の差は、プラットフォームの問題ではない。楽天に来た読者の文脈と、Yahoo!ショッピングに来た読者の文脈が異なること、そしてその文脈の違いに対応した設計がYahooのページに存在しないことが差を作っている。その設計は、ポイント率の調整とも入札の最適化とも、楽天ページのコピーとも異なる専門性を必要とする。次のポイント調整より先に、この問いが手つかずになっていないかを確認することが先だ。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">楽天とYahooで購買率に大きな差が出るのはなぜですか？</div>
+    <div class="faq-a">楽天に来た読者とYahoo!ショッピングに来た読者が置かれている文脈が異なることが主な原因です。楽天の縦長LP設計は楽天の読者の文脈（じっくり選ぶ構え）に届くように作られています。Yahoo!ショッピングの読者はPayPayポイントを意識した比較回遊の途中にいることが多く、その文脈に届く設計が別途必要です。同じページをコピーしても、届ける文脈が異なるため同じ購買率にはなりません。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Yahoo!ショッピングのポイント還元率を上げれば購買率は改善しますか？</div>
+    <div class="faq-a">ポイント還元率を上げると一時的に購買率が動くことがあります。しかしポイントは「迷いの後押し」として機能します。「この商品が自分の状況に必要だ」という確信はポイントでは作れません。ポイントを下げると購買率が戻るとき、ページで読者が購買判断に向かう流れが設計されていないことが原因です。その流れの設計なしにポイントで購買率を維持し続けることは、コストが利益を圧迫する構造になります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">楽天のページをそのままYahooに使ってはいけないのですか？</div>
+    <div class="faq-a">楽天のページをYahooで使うこと自体に問題があるわけではありません。ただし、楽天向けに設計されたページがYahooの読者の文脈に届くかどうかは別の問いです。楽天での購買率が高い商品ページは、楽天の読者の文脈に届く設計を持っています。その設計がYahooの読者の文脈（比較回遊の途中）にも届くかどうかを確認せずに「同じ設計で同じ購買率が出るはず」という前提を持つことが、購買率の差が縮まらない原因になっている可能性があります。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">Yahoo!ショッピングで楽天に近い購買率を出すために、まず何を確認すればいいですか？</div>
+    <div class="faq-a">現在のYahooページが「Yahooに来た読者の文脈（比較回遊の途中）に届いているか」を確認することが先です。ページの冒頭——サムネイル・テキストの最初の数行——がポイントとスペックの情報として設計されているか、「この商品が自分の状況に関係する」という感覚を届ける設計になっているかを確認します。その確認は専門的な分析を必要とします。まずURLを送ることで診断が始まります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">「Yahoo!ショッピングにはリソースをかける価値があるか」を判断するためには？</div>
+    <div class="faq-a">その判断は「Yahoo向けの設計を試みた後」に行う必要があります。現在のページが楽天のコピーである状態での「Yahooは購買率が出ない」という観察は、Yahooの読者の文脈に届く設計を試みていない状態での観察です。Yahooの読者の文脈に届く設計が存在するとき、購買率がどの水準になるかを確認してから、投資価値を判断することが先です。診断では「現在のページにYahoo向けの設計余地がどの程度あるか」を特定します。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、Yahoo!ショッピングで購買率が低いページのどこを確認しますか？</div>
+    <div class="faq-a">「ページ冒頭でYahooの読者の文脈（比較回遊の途中）に届く設計が存在するか」を確認します。「購買率が低い原因がポイント還元率にあるのか、ページ設計にあるのか」が明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、Yahooの読者の文脈にページが届いているかを特定する。</div>
+  <div class="cta-block-sub">
+    届いていない問いが特定できれば、楽天との購買率の差を縮める方向が見えてくる。<br>
+    方向が変われば、ポイント競争ではない改善が始まる。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/yahoo-urenai-shohin-page-kyotsuten.html">Yahoo!ショッピングで売れない商品ページの共通点</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-yahoo-onaji-shohin-page-sekkei-wa-ikenai.html">AmazonとYahooで同じ商品ページ設計を使ってはいけない理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天の転換率が上がらない本当の理由</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
