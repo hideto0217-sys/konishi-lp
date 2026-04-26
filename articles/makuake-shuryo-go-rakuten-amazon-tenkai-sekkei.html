@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/makuake-shuryo-go-rakuten-amazon-tenkai-sekkei.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Makuake終了後に楽天・Amazon・自社ECに展開するときの商品ページ設計｜小西マーケティング</title>
+<meta name="description" content="Makuakeで数千万を集めた最強のページを引っ提げて楽天・Amazonで一般販売を開始。しかし初日から売上はゼロ。Makuakeで飛ぶように売れたのに、なぜ——変えるべきはデザインではなく、ページ冒頭の文脈です。EC100店舗超・Makuake100プロジェクト超の現場から解説します。">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Makuakeで成功したページをそのまま楽天・Amazonに使ってはいけませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Makuakeのページをそのまま使うことには問題があります。Makuakeの読者は「新しいものを先行体験したい」という文脈でページに来ます。楽天・Amazonの読者は「悩みを解決する商品を今すぐ探したい」という文脈でページに来ます。この文脈の違いに対応した設計がページ冒頭に存在しないとき、Makuakeで機能したページが一般モールの読者に届かない可能性があります。ただしページ全体を作り直す必要はない場合があります。変えるべきは冒頭の設計です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "「Makuakeで〇〇万円達成」という実績バナーを一般モールのサムネイルに入れると効果がありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「Makuakeで達成」という実績は、Makuakeを知っている・関心がある読者には文脈が伝わります。しかし楽天・Amazonの一般客にとっては「自分の悩みが解決するかどうか」が購買判断の核心です。実績は「後押しの証拠」として機能しますが、それより先に「この商品が自分の状況に必要な理由」が届いていないとき、実績バナーは「自分に関係ない情報」として処理されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Makuakeのページから楽天・Amazon向けに変えるとき、全部作り直す必要がありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "必ずしも全部作り直す必要はない場合があります。商品の根幹——「なぜこの商品で悩みが解決するのか」——は共通で使える場合があります。変えるべきはページ冒頭の設計です。Makuakeの読者（新しいものを体験したい）と楽天・Amazonの読者（悩みを解決したい・比較検討中）では、ページに来た時点の文脈が異なります。その文脈の違いに対応した冒頭の設計に変えることが先です。どの部分をどう変えるかは、現在のページを診断した上で特定されます。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Makuake終了後に楽天・Amazon・自社ECに展開するときの商品ページ設計",
+  "description": "Makuakeで数千万を集めた最強のページを引っ提げて楽天・Amazonで一般販売を開始。しかし初日から売上はゼロ。Makuakeで飛ぶように売れたのに、なぜ——変えるべきはデザインではなく、ページ冒頭の文脈です。EC100店舗超・Makuake100プロジェクト超の現場から解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/makuake-shuryo-go-rakuten-amazon-tenkai-sekkei.html",
+  "datePublished": "2026-04-27",
+  "dateModified": "2026-04-27",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+</head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<div class="hero">
+  <span class="hero-category">Makuake / 楽天・Amazon・自社EC / 一般展開設計</span>
+  <h1 class="hero-title">Makuake終了後に楽天・Amazon・自社ECに<br>展開するときの商品ページ設計</h1>
+  <p class="hero-lead">Makuakeで数千万を集めた最強のページを引っ提げて、意気揚々と楽天・Amazonで一般販売を開始した。しかし初日から売上はゼロ。「あの熱狂と最強のページがあるのになぜ」——変えるべきはデザインではなくページ冒頭の文脈です。EC100店舗超・Makuake60プロジェクト超を見てきた経験から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得し、MakuakeでROAS2,000%超を複数回達成したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">Makuakeで「最強のページ」が、楽天では初日に沈んだ</h2>
+
+  <p>Makuakeでの数千万円の達成。「最強のページ」という確信がある。楽天・Amazonへの一般展開を開始する。「このページがあれば一般でも売れるはずだ」という期待がある。しかし初日から購買率が動かない。Makuakeとは別次元の静寂だ。</p>
+
+  <p>「Makuakeの実績バナーを目立たせれば変わるか」「開発秘話のセクションが長すぎるのか」という方向で調整を続ける。しかし購買率は変わらない。「客層が違うから仕方ない」という結論に向かいやすい。しかしその結論は、問いの場所が違う可能性がある。</p>
+
+  <div class="insight">
+    Makuakeで機能したページが一般モールで機能しないのは、デザインの問題でも客層の問題でもない。<br>
+    <em>Makuakeの読者と楽天・Amazonの読者では、ページを訪れる前の文脈が根本的に異なる。Makuakeで機能した設計は、Makuakeの読者の文脈に届くように設計されていた。その設計が楽天・Amazonの読者の文脈に届くかどうかは、実績バナーを足したりストーリーを削ったりすることとは別の問いが答える。</em>
+  </div>
+
+  <p>「Makuakeの実績があれば一般でも売れる」という前提でノウハウが流通してきたのは、Makuake成功後の一般展開を支援するコンサルや制作会社が「実績バナーの追加とデザイン修正」という作業として提供しやすいからだ。しかし実績バナーを足すことは「Makuake知名度への依存」という変数への投資だ。一般モールの読者が購買判断に向かうかどうかは、別の変数が答える。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「Makuakeで〇〇万円達成」が一般客にスルーされる構造</h2>
+
+  <p>サムネイルに「Makuakeで〇〇万円達成！」という実績バナーを大きく入れる。「この商品の人気ぶりが伝われば、一般客も安心して買うはずだ」という前提がある。しかしMakuakeを知らない・関心がない一般客にとって、このバナーが示す情報は「自分の悩みが解決するかどうか」とは別の問いだ。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">問題の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">出品者が思っている問題</div>
+      <div class="misrec-cell truth">Makuakeの「応援要素（ストーリー）」を削り、「一般受けするデザイン（短く分かりやすく）」に修正することが問題だ。「Makuakeで達成」という実績をどう目立たせるかが重要だ</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">Makuakeの読者（新しいものを先行体験したい）と楽天・Amazonの読者（悩みを解決する商品を今すぐ探したい・比較検討中）では、ページに来た時点の文脈が根本的に異なる。その文脈の違いに対応した冒頭の設計がないとき、Makuakeで機能した設計は一般モールの読者に届かない</div>
+    </div>
+  </div>
+
+  <p>楽天・Amazonの読者は複数の商品を比較検討しながら購買判断に向かうことが多い。その読者に「Makuakeで達成した実績」を先に伝えることは「他の読者も買った」という社会的証明として機能する場合がある。しかし「この商品が自分の状況に必要な理由」が届いていない状態での実績情報は、「人気があるらしいが自分には関係あるか分からない」という処理になりやすい。実績は補強材だ。補強する対象がない状態では機能しない。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「開発秘話を削ってスペックだけにする」と何が失われるか</h2>
+
+  <p>Makuakeのページから応援要素を削る。開発秘話・苦労話・職人のこだわりを外す。スペックと機能だけの短いカタログに変える。「一般客は長いページを読まないから」という判断だ。しかし削ったページで購買率が上がらない。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">出品者が信じている原因</div>
+      <div class="misrec-cell truth">Makuakeと一般モールでは「客層」や「売れるデザインの型」が違うから、丸ごと作り直さないと売れない。Makuakeの実績は絶対的な権威であり、それを押し出せば一般客も飛びつく</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">商品の根幹——「なぜこの商品で悩みが解決するのか」——は一般モールでも共通で使える場合がある。しかしMakuakeの「新しいものを体験したい」という文脈と、楽天・Amazonの「悩みを解決したい・比較検討中」という文脈では、ページ冒頭で何を先に届けるかが異なる。この違いに対応した冒頭の設計がないまま、スペックを削ったり実績を足したりしても、購買率を動かす変数には触れていない</div>
+    </div>
+  </div>
+
+  <p>「Makuakeで売れた独自性（尖り）」は商品の核心だ。それをカタログ化することは「独自性を削って競合と同じ土俵に下りる」作業だ。削った結果として、Makuakeで競合との差を作っていた部分が消える。一般モールでより安い既存品と同じ土俵で比較される状態になる。問題は「長すぎること」ではなく「一般モールの読者の文脈に届く冒頭の設計がないこと」だ。</p>
+
+  <div class="callout">
+    <strong>「外部ツールでMakuakeの画像を各モールに一括登録し、サムネイルに『Makuakeで大ヒット！』の文字を入れる」アプローチについて。</strong><br>
+    一括登録はデータの効率的な管理として機能する。しかしデータとして複製できるのは画像と情報だ。「一般モールの読者の文脈（悩みを解決したい・比較検討中）に届く冒頭の設計」はデータとして複製できない。一括登録を効率化するほど、Makuake向けに設計されたページが一般モールに量産される。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">Makuakeの資産を全部作り直さずに一般展開する方法の問い</h2>
+
+  <p>「楽天・Amazon・自社ECとモールごとにページをゼロから作り直すコストはかけられない。Makuakeの資産を効率よく横展開する手法を探している」という問いがある。しかしこの問いの前提に確認すべきことがある。「全部作り直す必要があるかどうか」だ。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">市場が選んでいる解決策</div>
+      <div class="misrec-cell truth">Makuakeのページからストーリー部分を全削除し、商品のスペックや機能だけを端的にまとめた「カタログ型LP」に作り変える。または外部ツールを使ってMakuakeの画像を各モールにそのまま一括登録し、サムネイルに「Makuakeで大ヒット！」と文字を入れる</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">削るだけでは「この商品が自分の状況に必要な理由」を届ける流れが失われる。一括登録では一般モールの読者の文脈に届く設計がされないまま量産される。どちらも「Makuakeと一般モールの読者の文脈の違いに対応した冒頭の設計」という問いに答えていない</div>
+    </div>
+  </div>
+
+  <p>全部作り直す必要はない場合がある。商品の根幹——「なぜこの商品で悩みが解決するのか」——は共通で使える場合がある。変えるべきはページ冒頭——Makuakeの読者（新しいものを体験したい）の文脈に届くように設計されている部分を、楽天・Amazonの読者（悩みを解決したい・比較検討中）の文脈に届く設計に変えることだ。しかしどの部分をどう変えるかは、現在のMakuakeページと各モールの読者の文脈を照合した上で特定される。この特定は、Makuakeの設計と一般モールの設計の両方を把握した専門性を必要とする。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">Makuakeの制作会社に一般展開の修正を頼むべきかという問い</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「Makuakeに詳しい制作会社」と「一般モールに詳しいコンサル」の専門性の違い</h3>
+
+  <p>Makuakeでページを作った制作会社に一般展開の修正を依頼する。しかし出来上がるのは「Makuakeページのデザイン修正版」だ。Makuakeの文脈設計はできても、楽天・Amazonの比較検討中の読者の文脈への設計は別の専門性だ。</p>
+
+  <p>逆に楽天・Amazon特化のコンサルに依頼すると、楽天・Amazonの最適化はできても、Makuakeで構築した独自性の核心を一般モールの文脈に翻訳する作業は、その専門性の外側になる場合がある。Makuake後の一般展開を担える専門家は「Makuakeの設計論と一般モールの設計論の両方を把握した上で、冒頭の翻訳だけを最小限の変更で特定できる」専門性を持つ。これは両者の中間ではなく、両者の理解が前提となる第三の専門性だ。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">Makuakeの資産を一般販売での継続的な利益に変えるために</h3>
+
+  <p>Makuakeでの成功は「この商品の独自性が証明された」という事実だ。その独自性を一般モールでも機能させるためには、一般モールの読者の文脈に届く形で届けることが必要だ。その届け方の変換——Makuakeの文脈から一般モールの文脈への翻訳——がなされているとき、Makuakeで構築した独自性は一般販売での継続的な購買率という資産になる。</p>
+
+  <p>以下の状態が続いているなら、次の実績バナーの調整より先に確認すべき問いが残っている。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">Makuakeで数千万円を集めたページをそのまま楽天・Amazonに展開したが、一般客への購買率が全く出ていない</li>
+    <li data-num="✓">「Makuakeで〇〇万円達成」というバナーをサムネイルに入れたが、一般客にスルーされて購買率が変わらない</li>
+    <li data-num="✓">Makuakeのページからストーリーを削ってスペックだけにしたが、Makuakeで際立っていた独自性が消えて競合と同じ土俵になった</li>
+    <li data-num="✓">「Makuakeの設計」と「一般モールの設計」の両方を把握した専門家が見つからない</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">実績バナーを調整する前に、Makuakeのページで一般モールの読者の文脈に届く冒頭の設計が存在するかを確認する。</div>
+    <div class="cta-block-sub">
+      Makuakeで売れたのに一般では売れないなら、問いの場所はページ冒頭の文脈にあります。<br>
+      「Makuakeのページのどの部分を一般モール向けに変えるべきか」を特定することが先です。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">実績バナーより先にページの問いを診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>Makuake後の一般展開業界の現場では長年、「Makuakeの成功実績を前面に出し、ページからストーリーを削ってデザインを一般向けに修正することが横展開の正解だ」という方向で語られてきた。Makuake特化の制作会社も、一般展開の支援を謳うコンサルも、「実績バナーの追加とデザイン修正で一般展開できる」という枠組みで情報を提供し続けている。その枠組みの中で動くことが、「Makuakeで売れたのに一般では全く売れない」状態と「独自性を削ってカタログ化した結果、競合と同じ土俵になる」構造を固定する。</p>
+
+  <p>変えるべきはデザインでも実績バナーの大きさでもなく、ページ冒頭——Makuakeの読者の文脈に届くように設計されている部分を、楽天・Amazonの読者の文脈に届く設計に変えることだ。商品の根幹は共通で使える場合がある。全部作り直す必要はない場合がある。しかしどの部分をどう変えるかは、Makuakeと一般モールの設計論の両方を把握した専門性から生まれる答えだ。次の実績バナー調整より先に、この問いが手つかずになっていないかを確認することが先だ。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">Makuakeで成功したページをそのまま楽天・Amazonに使ってはいけませんか？</div>
+    <div class="faq-a">Makuakeのページをそのまま使うことには問題があります。Makuakeの読者は「新しいものを先行体験したい」という文脈でページに来ます。楽天・Amazonの読者は「悩みを解決する商品を今すぐ探したい」という文脈でページに来ます。この文脈の違いに対応した設計がページ冒頭に存在しないとき、Makuakeで機能したページが一般モールの読者に届かない可能性があります。ただしページ全体を作り直す必要はない場合があります。変えるべきは冒頭の設計です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">「Makuakeで〇〇万円達成」という実績バナーを一般モールのサムネイルに入れると効果がありますか？</div>
+    <div class="faq-a">「Makuakeで達成」という実績は、Makuakeを知っている・関心がある読者には文脈が伝わります。しかし楽天・Amazonの一般客にとっては「自分の悩みが解決するかどうか」が購買判断の核心です。実績は「後押しの証拠」として機能しますが、それより先に「この商品が自分の状況に必要な理由」が届いていないとき、実績バナーは「自分に関係ない情報」として処理されます。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Makuakeのページから楽天・Amazon向けに変えるとき、全部作り直す必要がありますか？</div>
+    <div class="faq-a">必ずしも全部作り直す必要はない場合があります。商品の根幹——「なぜこの商品で悩みが解決するのか」——は共通で使える場合があります。変えるべきはページ冒頭の設計です。Makuakeの読者と楽天・Amazonの読者では、ページに来た時点の文脈が異なります。その文脈の違いに対応した冒頭の設計に変えることが先です。どの部分をどう変えるかは、現在のページを診断した上で特定されます。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">Makuakeから楽天・Amazon・自社ECに展開するとき、まず何を確認すればいいですか？</div>
+    <div class="faq-a">現在のMakuakeページの冒頭——最初の数枚の画像とテキスト——が「Makuakeの読者の文脈（新しいものを体験したい）」に向けて設計されているか、「一般モールの読者の文脈（悩みを解決したい・比較検討中）」にも届く設計になっているかを確認することが先です。その確認は専門的な診断を必要とします。URLを送ることで診断が始まります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Makuakeと楽天・Amazonの設計論の両方を把握した専門家をどう選べばいいですか？</div>
+    <div class="faq-a">ヒアリングの内容で判断することが先です。「Makuakeページのどの部分が一般モールの読者の文脈と合っていないか」を特定するヒアリングをする専門家は、両方の設計論を把握している可能性があります。「ストーリーを削ってスペックにまとめましょう」「実績バナーを目立たせましょう」だけの提案は、文脈の翻訳ではなくデザイン修正の代行です。診断でその判断基準が特定されます。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、Makuakeページを一般モールに展開して売れないページのどこを確認しますか？</div>
+    <div class="faq-a">「Makuakeページの冒頭で、一般モールの読者の文脈（悩みを解決したい・比較検討中）に届く設計が存在するか」を確認します。「変えるべき部分と変える必要がない部分」が明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、Makuakeのページで一般モールの読者の文脈に届く冒頭の設計が存在するかを特定する。</div>
+  <div class="cta-block-sub">
+    変えるべき部分が特定できれば、全部作り直す必要がなくなる。<br>
+    必要な変更が絞られれば、Makuakeの資産が一般販売での利益に変わる方向が開ける。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/amazon-yahoo-makuake-lp-sekkei-dou-chigau.html">楽天・Amazon・Yahoo!・MakuakeのLP設計はどう違うのか</a></li>
+    <li><a href="https://konishi-marketing.com/articles/makuake-project-page-kakikata-shien-atsumaru-kosei.html">Makuakeのプロジェクトページの書き方——支援が集まる構成とは</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-amazon-shohin-page-sekkei-kaeru-beki-riyu.html">楽天・Amazonで商品ページ設計を変えるべき理由</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
