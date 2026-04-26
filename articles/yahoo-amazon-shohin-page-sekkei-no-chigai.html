@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/yahoo-amazon-shohin-page-sekkei-no-chigai.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yahoo!ショッピングとAmazonの商品ページ設計の違い｜小西マーケティング</title>
+<meta name="description" content="Amazonでベストセラーを獲得したページをYahooに出品したら惨敗した。商品もページも同じなのになぜ——この問いへの答えはUIの違いではなく、読者がページに来る前の文脈の違いにあります。EC100店舗超の現場から解説します。">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+</head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<div class="hero">
+  <span class="hero-category">Yahoo!ショッピング / Amazon / ページ設計比較</span>
+  <h1 class="hero-title">Yahoo!ショッピングとAmazonの<br>商品ページ設計の違い</h1>
+  <p class="hero-lead">Amazonでベストセラーバッジを獲得した。その実績あるページをYahooに出品したのに、結果は惨敗。売上グラフは微動だにしない。「商品もページも同じなのになぜ」——この問いへの答えはUIの違いではなく、読者がページに来る前の文脈の違いにあります。EC100店舗超の現状を見てきた経験から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">Amazonのベストセラーページが、Yahooでは機能しない</h2>
+
+  <p>Amazonでベストセラーバッジを取った。ユニットセッション率も高い。このページを一括出品ツールでYahooに展開する。「同じ商品で同じページなのだから、Yahooでも売れるはずだ」という期待がある。しかしYahooの売上グラフは平坦なままだ。</p>
+
+  <p>「Amazonの規約に合わせた白抜き画像がYahooでは地味すぎるのか」「Yahooの検索結果のUIに合わせてデザインを変えるべきか」という問いが続く。バナーを足す。赤い枠線を加える。ポイント訴求の文字を入れる。しかし購買率は変わらない。問いの場所がずれている可能性がある。</p>
+
+  <div class="insight">
+    AmazonとYahooのページ設計の違いは、UIやデザインのレギュレーションの問題ではない。<br>
+    <em>Amazonに来た読者とYahoo!ショッピングに来た読者では、ページを訪れる前の文脈が異なる。Amazonのページが機能したのは、Amazon特有の文脈に届く設計だったからだ。その設計がYahooの読者の文脈に届くかどうかは、画像の枠線やUIの調整とは別の問いが答える。</em>
+  </div>
+
+  <p>「多店舗展開は一括出品ツールで効率化するのが正道だ」という方向でノウハウが流通してきたのは、ツールベンダーがデータの一括管理という便利な機能を提供しやすいからだ。データを複製することは効率的だ。しかし「読者がページに来た文脈」はデータとして複製できない。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">Amazonの読者とYahooの読者が抱えている文脈の違い</h2>
+
+  <p>Amazonに来た読者の多くは「この商品カテゴリで何かを探そう」という目的を持ちながら検索する。バレットポイントとA+コンテンツを確認して「これで合っているか」を処理する。スペック確認と購買判断がセットで動く。Amazonのページ設計は、この「即決・カタログ確認」の流れに最適化されているとき機能する。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">文脈の違いがページ設計の問いを変える</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">Amazonに来た読者の文脈</div>
+      <div class="misrec-cell truth">「このカテゴリで必要なものを探したい」という目的でスペックを確認しながら即決する構えがある。バレットポイントとA+でスペックと機能を処理する流れに乗りやすい</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">Yahoo!ショッピングに来た読者の文脈</div>
+      <div class="misrec-cell truth">PayPayポイントを意識しながら複数の店舗を比較回遊している途中でページに来ることが多い。「お得に買いたい」という起点から複数の選択肢を横断している状態。その状態に届く設計は、スペックの確認とは別の問いが答える</div>
+    </div>
+  </div>
+
+  <p>AmazonのA+コンテンツで機能する「スペックと機能を詳しく伝える設計」は、Amazon特有の文脈——目的を持ってスペックを確認する読者——に届く。しかしYahoo!ショッピングでポイントを意識した比較回遊の途中にいる読者に、同じスペック中心の設計が届くかどうかは別の問いだ。届かないとき、読者は「スペックが分かった。では一番お得な店はどこか」という比較を続ける。Amazonの設計を流用することが、Yahoo!ショッピングでの比較競争を加速させる場合がある。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「Yahoo向けに画像を派手にするだけ」が購買率を動かさない理由</h2>
+
+  <p>Amazonの白抜き画像に赤い枠線を加える。ポイント倍率のバナーを合成する。「Yahoo風」に加工する。アイテムマッチ広告でクリックが来る。しかし購買率は変わらない。「もっと派手にすればいいのか」という方向で改善を続ける。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">問題の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが思っている問題</div>
+      <div class="misrec-cell truth">AmazonとYahooの「画面のUI」や「画像のレギュレーション」の違いを最適化することが問題だ。またはYahoo向けにお得感（ポイントやクーポン）をどう目立たせるかが問題だ</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">画像の枠線やUI調整は「見た目の話」だ。購買率を決めるのは「Yahoo!ショッピングの読者の文脈（ポイント・比較回遊の途中）に届く設計が存在するか」という問いだ。Amazonのカタログ的な構成のままバナーを足しても、読者の文脈への設計は変わらない</div>
+    </div>
+  </div>
+
+  <p>ポイント訴求のバナーを加えることは「ポイントを期待している読者を呼ぶ」作業だ。その読者が来てページを見たとき、「この商品が自分の状況に必要な理由」が届いていなければ、読者はより高いポイントの競合へ向かう。AmazonのA+コンテンツがそのまま残っている状態では、来た読者はスペックを確認して価格・ポイントで比較する流れに入る。バナーを足すことが比較を加速させる。</p>
+
+  <div class="callout">
+    <strong>「Yahooはポイントとお得感の勝負だから、Amazonのシンプルなページは通用しない」という諦めについて。</strong><br>
+    この診断が正しければ、Yahoo!ショッピングでポイントに依存せずに安定した購買率を維持している商品ページは存在しないはずだ。しかし存在する。その差は客層の違いではなく、ページ設計の違いだ。「Yahooではシンプルなページは通用しない」という結論は、Yahoo向けの文脈設計を試みていない状態での観察から出ている可能性がある。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">ゼロから全部作り直す必要があるかという問い</h2>
+
+  <p>「AmazonとYahooで全く別のページをゼロから作り直すべきか」という問いが立つ。しかし制作コストと時間がかかりすぎる。途中で頓挫して、結局Amazonのページの微修正に戻る。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが信じている原因</div>
+      <div class="misrec-cell truth">モールごとに売れるデザインの「型」が違うから、それぞれに合わせてデザインを作り直さないと売れない。Amazonで成功したページは他モールでも最強のはずだ</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">Amazonで成功したページの根幹——「この商品が読者の状況に必要な理由」——は全モール共通で使える場合がある。変えるべきはYahoo!ショッピングの読者の文脈に届くページ冒頭の設計だ。ページ全体をゼロから作り直す必要はない場合がある。しかしどの部分をどう変えるかは、現在のページと読者の文脈を診断した上で特定される</div>
+    </div>
+  </div>
+
+  <p>「全部作り直す」と「何も変えない」の間に、より有効な選択肢がある可能性がある。AmazonのページがYahooの読者の文脈に届いていない部分を特定して、その部分を変える——この選択肢だ。しかしその「部分」がどこかは、現在のページを読者の文脈で診断しなければ特定できない。「全部作り直すべきか」という問いより先に、「変えるべき部分はどこか」という問いが手つかずになっていないかを確認することが先だ。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">AmazonとYahooで共通して使える設計と、変えるべき設計</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">一括出品ツールの「効率化」が機会損失になる構造</h3>
+
+  <p>一括出品ツールはAmazonの商品情報をYahooに複製する。SKU・価格・商品説明・画像——データとして複製できるものは効率よく管理できる。しかし「Yahoo!ショッピングの読者に届く文脈」はデータとして存在しない。ツールが複製できるのはデータだ。設計は複製されない。</p>
+
+  <p>その結果、Amazonで作られた「スペックと機能を確認する読者向けの設計」がYahooに展開される。ツールが効率的に動くほど、Yahooに「Amazon向けの設計のみで構成されたページ」が量産される。効率化のツールが機会損失を量産する構造だ。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「Yahoo向けに安っぽくしたくない」というジレンマの出口</h3>
+
+  <p>「Yahooの客層に合わせてページをチラシのように安っぽくしたくない。しかしAmazonのままでは売れない」というジレンマがある。このジレンマは「Yahoo向けの設計＝安っぽいデザイン」という前提から来ている。しかしその前提は正しくない可能性がある。</p>
+
+  <p>Yahoo!ショッピングの読者の文脈に届く設計は、デザインを安っぽくすることではない。読者がページに来た時点で「この商品が自分の状況に関係するかもしれない」という感覚を持てる冒頭の設計だ。その設計はブランドイメージと両立できる場合がある。しかしその設計がどこをどう変えることで実現するかは、診断によって特定される。</p>
+
+  <p>以下の状態が続いているなら、次の画像加工より先に確認すべき問いが残っている。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">AmazonのページをそのままYahooに一括出品しており、Yahoo向けの文脈設計を一切していない</li>
+    <li data-num="✓">バナーや赤い枠線を追加したがYahooの購買率が変わらず、Amazonとの購買率の差が縮まらない</li>
+    <li data-num="✓">Yahooではイベント時だけ売れるが平日のベース購買率が育っておらず、AmazonのようなベースのCVRが出ていない</li>
+    <li data-num="✓">「全部作り直す必要があるか」という問いが立っているが、変えるべき部分が特定できていない</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">全部作り直す前に、AmazonのページのどこがYahooの読者の文脈に届いていないかを特定する。</div>
+    <div class="cta-block-sub">
+      AmazonとYahooの購買率に差があるとき、問いの場所はページ設計にあります。<br>
+      「変えるべき部分はどこか」を特定することが先で、全部作り直すかどうかはその後の判断です。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">全部作り直す前にページの問いを診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>多店舗展開のEC業界の現場では長年、「AmazonとYahooのページ設計を変えるとは、画像をYahooの仕様に合わせてデザインを調整し、イベントバナーを追加することだ」という方向で語られてきた。一括出品ツールのベンダーも、EC系のメディアも、「効率的にAmazonのページをYahooに展開することが多店舗展開の正解だ」という枠組みで情報を提供し続けている。その枠組みの中で動くことが、「AmazonとYahooの購買率の差が縮まらない」状態と「ツールが効率的にYahoo向けの機会損失を量産する」構造を固定する。</p>
+
+  <p>AmazonとYahooのページ設計の違いは、UIのレギュレーションでも画像の枠線でもなく、読者がページを訪れる前の文脈の違いだ。Amazonの読者の文脈に最適化された設計は、Yahoo!ショッピングの読者の文脈に届くとは限らない。変えるべき部分はページ全体ではなく、Yahoo!ショッピングの読者の文脈に届く冒頭の設計だ。しかしその部分がどこかは、現在のページと読者の文脈を診断した上で特定される。次の画像加工より先に、この問いが手つかずになっていないかを確認することが先だ。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">AmazonとYahoo!ショッピングでページ設計を変えるべき理由は何ですか？</div>
+    <div class="faq-a">AmazonとYahoo!ショッピングに来た読者では、ページを訪れる前の文脈が異なる可能性があります。Amazonの読者は目的を持ってスペックを確認しながら即決する構えがある場合が多い。Yahoo!ショッピングの読者はPayPayポイントを意識した比較回遊の途中でページに来ることが多い。その文脈の違いに対応した設計がYahooのページに存在しないとき、Amazonで機能した設計がYahooの読者に届かない可能性があります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">一括出品ツールでAmazonのページをYahooに展開してはいけないのですか？</div>
+    <div class="faq-a">データの管理効率という意味では一括出品ツールは有効です。しかしツールが複製できるのはデータです。「Yahoo!ショッピングの読者の文脈に届く設計」はデータとして複製できません。ツールで効率よく展開するほど、Amazon向けに設計されたページがYahooに量産されます。その状態でYahooの購買率が低いとき、ツールの問題ではなく設計の問いが手つかずになっています。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">AmazonとYahooで全く別のページをゼロから作り直す必要がありますか？</div>
+    <div class="faq-a">必ずしも全部作り直す必要はない場合があります。AmazonのページがYahoo!ショッピングの読者の文脈に届いていない部分を特定して、その部分を変えることが先です。変えるべき部分がどこかは、現在のページを読者の文脈で診断した上で特定されます。「全部作り直すべきか」という問いより先に、「変えるべき部分はどこか」という問いへの答えを出すことが先です。診断でその部分が特定されます。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">AmazonとYahooの購買率の差を縮めるために、まず何を確認すればいいですか？</div>
+    <div class="faq-a">現在のYahooページで「Yahoo!ショッピングの読者の文脈（ポイント・比較回遊の途中）に届く設計が冒頭に存在するか」を確認することが先です。ページ冒頭がAmazon向けのスペック確認設計のままになっているか、Yahoo向けの文脈に届く設計に変わっているかを確認します。その確認は専門的な診断を必要とします。まずURLを送ることで診断が始まります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">「Yahoo向けの設計」とは具体的にどこを変えることですか？</div>
+    <div class="faq-a">一般論として「ここを変えれば良い」という答えは、診断前には存在しません。現在のAmazonページの設計とYahoo!ショッピングの読者の文脈を照合した上で、「届いていない部分」が特定されます。その特定が診断の目的です。「全部変える」でも「何も変えない」でもなく、「変えるべき部分を絞り込んで変える」ことが最も効率的で、診断でその絞り込みが行われます。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、AmazonページをYahooに流用しているページのどこを確認しますか？</div>
+    <div class="faq-a">「ページ冒頭でYahoo!ショッピングの読者の文脈に届く設計が存在するか」を確認します。「AmazonとYahooの購買率の差が縮まらない原因がデザインにあるのか、文脈への設計にあるのか」が明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、AmazonのページのどこがYahooの読者の文脈に届いていないかを特定する。</div>
+  <div class="cta-block-sub">
+    届いていない部分が特定できれば、全部作り直す必要がなくなる。<br>
+    必要な変更が絞られれば、AmazonとYahooの購買率の差が縮まる方向が見えてくる。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/amazon-yahoo-onaji-shohin-page-sekkei-wa-ikenai.html">AmazonとYahooで同じ商品ページ設計を使ってはいけない理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/yahoo-shohin-page-sekkei-rakuten-to-chigai.html">Yahoo!ショッピングの商品ページ設計で楽天と変えるべき点</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-amazon-shohin-page-sekkei-kaeru-beki-riyu.html">楽天・Amazonで商品ページ設計を変えるべき理由</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
