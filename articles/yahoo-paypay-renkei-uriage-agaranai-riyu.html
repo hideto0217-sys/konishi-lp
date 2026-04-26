@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/yahoo-paypay-renkei-uriage-agaranai-riyu.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yahoo!ショッピングとPayPayの連携で売上が上がらない理由｜小西マーケティング</title>
+<meta name="description" content="超PayPay祭りに参加し、利益を削ってポイント最大還元を設定した。売上のグラフは跳ねた。しかし翌月の入金明細を見ると手元に現金が残っていない。「PayPay依存の底なし沼」から出るための問いがあります。EC100店舗超の現場から解説します。">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+</head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<div class="hero">
+  <span class="hero-category">Yahoo!ショッピング / PayPay / 購買率</span>
+  <h1 class="hero-title">Yahoo!ショッピングとPayPayの連携で<br>売上が上がらない理由</h1>
+  <p class="hero-lead">超PayPay祭りに参加し、利益を削ってポイント最大還元を設定した。売上のグラフは跳ねた。しかし翌月の入金明細を見ると手元に現金が残っていない。そしてイベントが終わればまた注文の鳴らない日々に戻る。「PayPay依存の底なし沼」はページ設計の問いが手つかずになっていることの結果です。EC100店舗超の現状を見てきた経験から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">イベント翌月の入金明細に現金が残っていなかった</h2>
+
+  <p>超PayPay祭りが始まる前に準備する。ポイント還元率を最大化する。高額クーポンを設定する。PayPayキャンペーンのバナーをサムネイルに貼る。イベント中、売上のグラフが跳ねる。「成果が出た」という感覚がある。しかし翌月の入金明細を確認する。PayPayポイントの還元原価・Yahoo!ショッピングの手数料・広告費を差し引くと、手元に残る利益がほぼゼロだ。</p>
+
+  <p>そしてイベントが終わった翌日から注文が止まる。「また次のイベントまで待つしかない」という状態になる。競合がさらに高い還元率を設定してくる。自社も追随する。利益がさらに薄くなる。「このポイント競争のチキンレースからどう降りればいいか分からない」という問いが残る。</p>
+
+  <div class="insight">
+    PayPayの還元は「集客の入口（動機）」であり「購買の確信」ではない。<br>
+    <em>PayPayポイントにつられてやってきた読者が「この商品が自分の状況に必要だ」という判断に向かう流れがページに設計されていないとき、読者はポイントが終わった後も残らない。イベントに乗っかって利益を削っても、ブランドとしての資産が積み上がらない構造だ。</em>
+  </div>
+
+  <p>「Yahoo!ショッピングではイベントに参加してPayPayポイントを最大化することが売上改善の基本だ」という方向でノウハウが流通してきたのは、プラットフォームとコンサルがイベント参加とポイント設定を成功の条件として推奨し続けてきたからだ。しかしPayPay還元は集客という変数に影響する。ページに来た読者が購買判断に向かうかどうかとは別の問いが答える。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「PayPayで支払うとお得」という訴求が商品の価値を消す</h2>
+
+  <p>ページのLP全体で「PayPayで支払うと〇〇%還元」「PayPayキャンペーン対象」という決済メリットを前面に押し出す。しかし確認すると、商品本来の独自性やベネフィットがほとんど伝わっていない。決済の話しかしていないページになっている。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">問題の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが思っている問題</div>
+      <div class="misrec-cell truth">PayPayの還元率が競合より低いことが買われない問題だ。ポイント倍率をさらに最大化すれば購買率が改善する</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の問題</div>
+      <div class="misrec-cell truth">決済メリットを前面に訴求するほど、読者は「決済のお得さで選ぶ」という判断軸で商品を評価する。その軸での比較では、常により高いポイントを出している競合が勝つ。「この商品が自分の状況に必要な理由」を届ける流れがページに設計されていないとき、PayPayの訴求はポイント競争をさらに加速させる</div>
+    </div>
+  </div>
+
+  <p>「PayPayで支払うとお得」という情報は「決済の選択肢についての情報」だ。読者が「この商品が自分の状況に必要かどうか」を処理している段階で、決済の話が届いても購買判断に影響しない。決済のお得さと「この商品が必要だ」という確信は別の問いに答える。決済メリットを先に伝えることは、読者を「どの決済方法がお得か」という別の問いへ誘導することがある。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">PayPay還元で獲得した客がリピートしない構造</h2>
+
+  <p>PayPay還元に惹かれて購入した読者は、次回どういう行動を取るか。「またポイントが高い時に買おう」という待機状態に入ることが多い。ブランドとしての資産が積み上がらない。次のイベントまで売上がゼロに戻る。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">原因の場所を誤認している構造</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">セラーが信じている原因</div>
+      <div class="misrec-cell truth">Yahoo!ショッピングはPayPay経済圏だからポイントのばらまきでしか勝負できない。キャンペーンの集客力に乗っかれば売れる</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">実際の原因</div>
+      <div class="misrec-cell truth">ポイントは「迷いの後押し（動機）」だ。「購買の確信」はページで読者が「この商品が自分の状況に必要だ」という判断に向かう流れが設計されているときに生まれる。その流れがない状態でポイントで購入した読者は、ポイントを理由にその商品を選んだだけだ。次のより高いポイントが現れた瞬間に乗り換える</div>
+    </div>
+  </div>
+
+  <p>ポイントで集まった読者が残したレビューは「ポイント還元率が高くてお得でした」という薄い感想になりやすい。ブランドへの熱狂的な支持が生まれない。その状態でのリピート率は、ポイント条件に依存する。「次のイベントでまた買おう」は「ポイントがなければ買わない」と同義だ。ブランドとしての資産を積み上げるためには、ポイントという動機の外側で読者が判断できる状態が必要だ。しかしその状態の設計は、ポイント設定とは異なる専門性を必要とする。</p>
+
+  <div class="callout">
+    <strong>「楽天のページをそのままYahooに持ってきて、PayPayのバナーを足すだけでいい」というアプローチについて。</strong><br>
+    楽天のページを流用することは「楽天の読者の文脈向けに設計されたページをYahooの読者に見せる」ことだ。楽天の読者はじっくり検討する構えでページを訪れることが多い。Yahoo!ショッピングの読者はポイントやお得感を意識した比較回遊の途中でページに来ることが多い。その文脈の違いに対応した設計がないまま、PayPayのバナーを足すことは「決済の話を加えただけ」だ。購買率を動かす問いには答えていない。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「ポイント競争のチキンレースをどうやって降りるか」という問い</h2>
+
+  <p>競合がさらに高い還元率をぶつけてくる。自社も追随する。利益率が下がる。「これ以上還元率を上げたら原価割れする」という限界点が来る。その限界点で「降り方が分からない」という状態に入る。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">解決策の取り違え</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">市場が選んでいる解決策</div>
+      <div class="misrec-cell truth">利益を極限まで削ってPayPayポイントの倍率を最大化し、高額クーポンと併用して圧倒的な「見かけの安さ」を作る。またはサムネイルやページ上部に「PayPayで○○%還元！」という文字を限界まで大きく目立たせる</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残る問題</div>
+      <div class="misrec-cell truth">読者の「この商品で悩みが解決する」という確信は得られない。さらに還元率が高い競合が現れれば一瞬で乗り換えられる。PayPayロゴを大きくしてもブランドの独自価値は届かず、「安い代替品」としての印象が強まる</div>
+    </div>
+  </div>
+
+  <p>「ポイント競争のチキンレース」から降りるとは、ポイントを設定しないことではない。ポイントという軸で読者が選んでいる状態を、ポイント以外の理由で選べる状態に変えることだ。しかしその変化は、ポイント設定の変更とも広告入札の調整とも異なる専門性を必要とする。ポイント設定より先に、「ページでポイント以外の理由で読者が判断できる状態が整っているか」を確認することが先だ。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">平日のベース売上が育たないまま次のイベントを待っている</h2>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">イベントの集客力に乗っかることと、平日の購買率を作ることの違い</h3>
+
+  <p>超PayPay祭りの集客力は実在する。イベント中は多くの読者が検索数・クリック数が増える。その集客力に乗ることは合理的に見える。しかしイベントの集客力は「ページを訪れる読者数」を増やす。「来た読者が購買判断に向かうかどうか」は、ページの設計という変数が答える。</p>
+
+  <p>イベントの集客力がある状態でページ設計という変数が機能するとき、イベント中に購買判断に向かった読者がリピーターになる可能性がある。しかしその設計がない状態では、イベントの集客力で来た読者がポイントだけを理由に購入し、次のイベントまで待機する。その差がイベント後の平日購買率の差として現れる。</p>
+
+  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">「PayPayユーザーはお得さしか見ていない」という結論の前に</h3>
+
+  <p>「PayPayユーザーはお得さしか見ていない質の低い客層だから、こだわり商品は売れない」という結論に向かいやすい。しかしその結論は「ページでポイント以外の理由で判断できる設計を試みていない状態での観察」から出ている。</p>
+
+  <p>以下の状態が続いているなら、次のポイント設定の調整より先に確認すべき問いが残っている。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">PayPayイベント中は売上が跳ねるが、イベントが終わった翌日から注文が止まり、平日のベース購買率が全く育っていない</li>
+    <li data-num="✓">PayPay還元原価・広告費・手数料を差し引くと翌月の入金明細に利益がほぼ残らない</li>
+    <li data-num="✓">ページのLPでPayPayの決済メリットを訴求しており、商品本来の独自性やベネフィットがほとんど伝わっていない</li>
+    <li data-num="✓">競合がさらに高い還元率をぶつけてくるたびに追随しており、ポイント競争から降りる方法が分からない</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">次のイベント参加の前に、ページでポイント以外の理由で読者が判断できる状態が整っているかを確認する。</div>
+    <div class="cta-block-sub">
+      PayPayイベントに依存した売上構造から出るためには、ページ設計という変数が先です。<br>
+      「ページに来た読者がポイント以外の理由で判断できる流れが設計されているか」を特定することが入口です。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">イベントを待つ前にページの問いを診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>Yahoo!ショッピング業界の現場では長年、「イベントに参加してPayPayポイントを最大化することがYahooでの売上の源泉だ」「PayPay経済圏の集客力に乗ることが多店舗展開の正道だ」という方向で語られてきた。プラットフォームも、コンサルも、EC系のメディアも、「PayPay連携とイベント参加こそがYahooでの成功の絶対条件だ」という枠組みで情報を提供し続けている。その枠組みの中で動くことが、「イベント後に利益が残らない」状態と「ポイント競争のチキンレースから抜け出せない」構造を固定する。</p>
+
+  <p>PayPayの還元は集客の動機として機能する。しかし「購買の確信」は別の問いが答える。Yahoo!ショッピングでPayPayイベントに依存した売上を脱却するためには、ページでポイント以外の理由で読者が購買判断に向かう流れを設計することが先だ。その設計は、ポイント設定とも広告入札とも異なる専門性を必要とする。次のイベント参加より先に、この問いが手つかずになっていないかを確認することが先だ。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">Yahoo!ショッピングでPayPayイベントに参加しても利益が残らないのはなぜですか？</div>
+    <div class="faq-a">PayPayポイントの還元原価・Yahoo!ショッピングの手数料・広告費が同時に発生する構造があります。この三重コストの中でページの購買率が低い状態でイベントに参加すると、集客はできても利益が薄い読者しか購買判断に向かいません。PayPayの還元は「集客の動機」として機能しますが、「購買の確信」はページ設計という変数が答えます。その変数が手つかずのままイベントに参加しても、コストが先行して利益が残りにくい構造が続きます。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">PayPay還元で獲得した客がリピートしないのはなぜですか？</div>
+    <div class="faq-a">PayPayポイントを理由に購入した読者は「ポイントがお得だったから買った」という動機を持っています。その読者が次回取る行動は「またポイントが高い時に買おう」という待機です。ポイントという動機の外側で「この商品が自分の状況に必要だ」という確信を持って購入した読者は、ポイントがない時でも購入する可能性があります。その確信はページ設計という問いが答えます。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">PayPayのポイント競争から降りるためには何をすればいいですか？</div>
+    <div class="faq-a">ポイントを設定しないことが「競争から降りること」ではありません。ポイントという軸で読者が選んでいる状態を、ポイント以外の理由で選べる状態に変えることが「降りること」です。その変化はポイント設定の変更では達成できません。ページで読者がポイント以外の理由で判断できる流れを設計することが先です。その設計は、ポイント設定とも広告入札とも異なる専門性を必要とします。まずURLを送ることで現在のページの状態を診断します。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">PayPayイベント依存から脱却するために、まず何を確認すればいいですか？</div>
+    <div class="faq-a">現在のページで「読者がポイント以外の理由で購買判断に向かう流れが設計されているか」を確認することが先です。ページのLPがPayPayの決済メリットと商品スペックの情報として設計されているか、「この商品が自分の状況に必要な理由」を届ける設計になっているかを確認します。その確認は専門的な診断を必要とします。まずURLを送ることで診断が始まります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">「PayPayユーザーはお得さしか見ていない」という前提は正しいですか？</div>
+    <div class="faq-a">その前提は「ページでポイント以外の理由で判断できる設計を試みていない状態での観察」から出ている可能性があります。Yahoo!ショッピングで、PayPayイベント後も毎日安定した購買率を維持している店舗が存在します。その差がページ設計にある場合、「PayPayユーザーはお得さしか見ていない」という前提は完全には正しくありません。その確認が手つかずの状態での諦めは、問いの場所を確認せずに出した結論です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、PayPay依存の売上構造を持つページのどこを確認しますか？</div>
+    <div class="faq-a">ページ冒頭でYahoo!ショッピングの読者の文脈（ポイント・比較回遊の途中）に届く設計が存在するかを確認します。「イベント後に購買率が下がる原因がポイント設定にあるのか、ページ設計にあるのか」が明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、ページでポイント以外の理由で読者が判断できる状態が整っているかを特定する。</div>
+  <div class="cta-block-sub">
+    状態が特定できれば、PayPayイベントの使い方が変わる。<br>
+    使い方が変われば、イベントが「ブランド資産を積み上げる機会」に変わる。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/yahoo-urenai-shohin-page-kyotsuten.html">Yahoo!ショッピングで売れない商品ページの共通点</a></li>
+    <li><a href="https://konishi-marketing.com/articles/yahoo-kokoku-fuyashite-mo-rieki-nokoranai-riyu.html">Yahoo!ショッピングで広告を増やしても利益が残らない理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/yahoo-koubairitsu-rakuten-yori-hikui-hontono-riyu.html">Yahoo!ショッピングの購買率が楽天より低い本当の理由</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
