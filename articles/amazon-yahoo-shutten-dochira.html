@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/amazon-yahoo-shutten-dochira.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AmazonとYahooのどちらに先に出店すべきか——商品ページ設計の観点から｜小西マーケティング</title>
+<meta name="description" content="Amazon専門コンサルは「Amazonがいい」、Yahoo専門は「Yahooがいい」と言う。デザイン会社は「モールごとに別々の制作が必要」と言う。問いはモールの選択にあるのではない。EC100店舗超の現場から解説します。">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "AmazonとYahooショッピング、どちらに先に出店すべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「どちらが先か」という問いより先に、「どちらのモールに出しても、そのモールの読者の文脈に合わせた商品ページの設計が存在するか」という問いが来ます。どちらに先に出店しても、転換率を決める変数はページの設計です。モールの選択より先に、自社商品の「なぜこれを選ぶべきか」という論理が、各モールの読者の文脈に届く設計になっているかを確認する必要があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "AmazonとYahooでは、ページ設計を全く別々に作る必要がありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「なぜこの商品でなければならないか」という根幹の論理は、モールが変わっても共通です。変える必要があるのは、その論理をどう読者に届けるかという「入り口の届け方」の部分です。Amazonの読者は複数の選択肢を即座に比較している文脈で来ます。Yahooの読者はポイントやイベントという別の文脈で来ます。ページの骨格は共通で、この文脈の違いに合わせた入り口の設計が変わります。ゼロから2パターンを制作する必要があるかどうかは、根幹の論理が先に設計されているかどうかによります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "AmazonとYahooをそれぞれ専門のコンサルに頼むべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "各モールのシステム・広告・規約の最適化という専門性は、モール専門のコンサルが持っています。しかし「自社商品がどちらのモールでも転換率を上げるための商品ページの設計」という問いは、その専門性の外側にあります。モール専門のコンサルはそれぞれのモールの「仕様」の専門家です。「自社商品の論理を各モールの読者の文脈に翻訳する設計」の専門家は別の問いに答えます。"
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AmazonとYahooのどちらに先に出店すべきか——商品ページ設計の観点から",
+  "description": "Amazon専門コンサルは「Amazonがいい」、Yahoo専門は「Yahooがいい」と言う。デザイン会社は「モールごとに別々の制作が必要」と言う。問いはモールの選択にあるのではない。EC100店舗超の現場から解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/amazon-yahoo-shutten-dochira.html",
+  "datePublished": "2026-04-29",
+  "dateModified": "2026-04-29",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+</head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<div class="hero">
+  <span class="hero-category">Amazon / Yahoo!ショッピング / モール選択</span>
+  <h1 class="hero-title">AmazonとYahooのどちらに先に出店すべきか<br>——商品ページ設計の観点から</h1>
+  <p class="hero-lead">Amazon専門コンサルは「Amazonがいい」と言い、Yahoo専門は「Yahooがいい」と言う。デザイン会社は「モールごとに別々の制作で費用は2倍」と言う。問いはモールの選択にあるのではない。EC100店舗超の現状を見てきた経験から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「どちらが自社に合っているか」——この問いに、なぜ誰も答えられないのか</h2>
+
+  <p>Amazon専門のコンサルタントに話を聞くと「Amazonは購買意欲が高い顕在層が多いのでおすすめです」と言う。Yahoo専門に話を聞くと「PayPayとの連動でリピーターを作りやすいのでYahooがいいです」と言う。どちらも自社が得意なモールを軸に語っている。客観的な判断基準は出てこない。</p>
+
+  <p>デザイン会社に相談すると「AmazonとYahooはレギュレーションが違うので、ページは別々に制作する必要があります。費用は2倍になります」と言われる。決断できないまま時間だけが過ぎる。</p>
+
+  <div class="insight">
+    「AmazonかYahooか」という問いは、転換率を決める変数に答えていない。<br>
+    <em>どちらのモールに先に出店しても、転換率を決めるのはページの設計だ。モールの選択は「箱」を選んでいる。箱がどちらであれ、その中に「このモールの読者が購買判断に向かう設計」が存在しなければ、転換率は上がらない。</em>
+  </div>
+
+  <p>EC・モール展開の業界では長年、「どのモールに出すか」という問いがビジネスの成否を分けるように語られてきた。モール専門のコンサルも、運用代行会社も、それぞれのモールの「強み」を軸に提案する。その枠組みの中でモール選択を議論し続けることが、「どちらに決めても転換率が上がらない」という状態を固定する可能性がある。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">とりあえずAmazonのページをYahooにコピペした。転換率はゼロに近いまま放置されている</h2>
+
+  <p>「試しに出品だけしてみよう」とAmazonのページをそのままYahooにコピーした。あるいはその逆をした。どちらも転換率が上がらない。「やはり向いていないモールなのか」という結論に向かいやすい。</p>
+
+  <p>しかしこの状態が示しているのは「向き不向き」ではない。AmazonとYahooでは、ページを開いた読者の文脈が根本的に異なる。その文脈を無視してページを移植したとき、設計と文脈の断絶が起きている。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">AmazonとYahooで読者が持つ文脈の違い</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">Amazonで商品ページを開いた読者の文脈</div>
+      <div class="misrec-cell truth">「このカテゴリの商品を今すぐ比較して選ぼう」という即決・比較の文脈。複数の選択肢をスペックと価格で素早く比較している。「これを選ぶ明確な理由」を求めている状態でページを開く</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">Yahoo!ショッピングで商品ページを開いた読者の文脈</div>
+      <div class="misrec-cell truth">「ポイントがお得なタイミングで欲しいものを買おう」というイベント・ポイント活用の文脈。PayPayとの連動やセール期間という条件が購買判断に影響する。比較の軸がAmazonとは異なる</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">コピペが機能しない理由</div>
+      <div class="misrec-cell truth">Amazonで機能していたページがYahooの文脈に向いていないとき、移植しても設計と読者の文脈が噛み合わない。転換率が低いのは「向き不向き」ではなく「文脈への設計の対応の有無」だ</div>
+    </div>
+  </div>
+
+  <p>この文脈の違いを踏まえて問いを立て直すと、「AmazonかYahooか」という問いは解けない問いだと気づく。どちらに出店するかではなく、「出店するモールの読者の文脈に対応した設計が存在するか」という問いが先に来る。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「モールごとに全く別のページを作れ」という提案が、なぜ費用の無駄になるのか</h2>
+
+  <p>デザイン会社が「AmazonとYahooでは仕様が違うので別々に制作が必要」と言うとき、何を根拠にしているか。Amazonは白抜き背景画像のレギュレーション、Yahooはバナーのサイズや仕様の違い——これらは確かに異なる。しかし「仕様の違い」と「設計の違い」は別の問いだ。</p>
+
+  <p>自社商品が「なぜ選ばれるべきか」という論理の骨格は、モールが変わっても変わらない。変える必要があるのは、その論理をどのモールの読者に、どういう文脈で届けるかという「入り口の届け方」だ。骨格が共通であれば、入り口の設計を調整することでモール対応ができる。ゼロから2パターンを作る必要はない場合が多い。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">「モールごとに変えるべきもの」と「変えなくていいもの」</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">モールが変わっても変わらないもの</div>
+      <div class="misrec-cell truth">「なぜこの商品でなければならないか」という論理の骨格。自社商品の強みと、競合では解決できない理由。これはモールの読者が誰であっても、購買判断の根拠になる</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">モールの文脈に合わせて変えるもの</div>
+      <div class="misrec-cell truth">その論理をどう届けるかの「入り口の設計」。Amazonなら比較検討している読者に即座に届く提示の仕方。Yahooならイベント・ポイントの文脈に乗りながら論理を届ける設計。骨格は共通、入り口の翻訳が変わる</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>「一括出品ツールで両モールに効率よく出品する」という選択肢について。</strong><br>
+    一括出品ツールで制作コストを下げることはできる。しかし各モールの読者の文脈に合わせた設計がないまま、同じページを両方に出すことは、「どちらのモールでも設計と文脈が噛み合わない状態」を効率よく量産することになる。コストの問題より先に、各モールに届く設計が存在するかの問いが来る。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「モール専門コンサル」と「設計の専門家」は、答える問いが違う</h2>
+
+  <p>Amazon専門のコンサルタントはAmazonの広告・SEO・レビュー管理という専門性を持つ。Yahoo専門のコンサルタントはYahoo!ショッピングのキャンペーン設計・PayPay連動・ストアデザインという専門性を持つ。どちらも「そのモールのシステムの専門家」だ。</p>
+
+  <p>しかし「自社商品の論理をAmazonの読者の文脈に翻訳し、転換率を上げる商品ページの設計」という問いは、モールのシステム専門性とは別の問いだ。この問いは、モールをまたいで「商品の論理と読者の文脈をどう接続するか」という設計の専門性が答える。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">Amazon専門とYahoo専門のコンサルにそれぞれ話を聞いたが、どちらも自社モールを推奨するだけで客観的な判断基準が得られなかった</li>
+    <li data-num="✓">AmazonのページをそのままYahooにコピーして出品したが転換率が上がらず、放置状態になっている</li>
+    <li data-num="✓">デザイン会社から「モールごとに別々の制作が必要で費用は2倍」と言われ、出店の決断ができないでいる</li>
+    <li data-num="✓">どちらのモールに出しても、まず転換率を上げる設計を作ってからにしたいが、それができる専門家の選び方が分からない</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">モールを選ぶ前に、自社商品の「なぜこれを選ぶべきか」という論理が各モールの読者の文脈に届く設計になっているかを確認する。</div>
+    <div class="cta-block-sub">
+      AmazonかYahooかという選択より先に、どちらに出しても転換率が上がる設計の有無を特定することが先です。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">モール選択より先にページ設計を診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>AmazonとYahooのどちらに出店すべきかという業界では長年、「客層の違い」「ポイント文化の有無」「広告費の効率」という観点で比較情報が提供されてきた。Amazon専門のコンサルも、Yahoo専門の運用代行も、制作会社も、それぞれの「モール（箱）」を起点に語り続けている。その枠組みの中でモール選択を議論し続けることが、「どちらに出店しても転換率が上がらない」という状態と「コスト増への懸念で決断できない」という状態を固定する。</p>
+
+  <p>転換率を決めるのは箱ではなく、その中の設計だ。「なぜこの商品でなければならないか」という論理の骨格はモールをまたいで共通に機能する。各モールの読者が持つ文脈に合わせて、その論理をどう届けるかという「入り口の設計」が変わる。モールを選ぶ前に、この設計が手つかずになっていないかを確認することが、「どちらに出しても転換率が上がらない」という状態から抜ける最初の問いだ。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">AmazonとYahooショッピング、どちらに先に出店すべきですか？</div>
+    <div class="faq-a">「どちらが先か」という問いより先に、「どちらのモールに出しても、そのモールの読者の文脈に合わせた商品ページの設計が存在するか」という問いが来ます。どちらに先に出店しても、転換率を決める変数はページの設計です。モールの選択より先に、自社商品の「なぜこれを選ぶべきか」という論理が、各モールの読者の文脈に届く設計になっているかを確認する必要があります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">AmazonとYahooでは、ページ設計を全く別々に作る必要がありますか？</div>
+    <div class="faq-a">「なぜこの商品でなければならないか」という根幹の論理は、モールが変わっても共通です。変える必要があるのは、その論理をどう読者に届けるかという「入り口の届け方」の部分です。Amazonの読者は複数の選択肢を即座に比較している文脈で来ます。Yahooの読者はポイントやイベントという別の文脈で来ます。ページの骨格は共通で、この文脈の違いに合わせた入り口の設計が変わります。ゼロから2パターンを制作する必要があるかどうかは、根幹の論理が先に設計されているかどうかによります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">AmazonとYahooをそれぞれ専門のコンサルに頼むべきですか？</div>
+    <div class="faq-a">各モールのシステム・広告・規約の最適化という専門性は、モール専門のコンサルが持っています。しかし「自社商品がどちらのモールでも転換率を上げるための商品ページの設計」という問いは、その専門性の外側にあります。モール専門のコンサルはそれぞれのモールの「仕様」の専門家です。「自社商品の論理を各モールの読者の文脈に翻訳する設計」の専門家は別の問いに答えます。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">AmazonとYahooのどちらに先に集中すべきか、判断する基準はありますか？</div>
+    <div class="faq-a">まず現在の商品ページに「なぜこの商品でなければならないか」という論理の骨格が存在するかを確認することが先です。骨格が存在する場合、その骨格をどちらのモールの文脈に先に対応させるかは、競合状況・既存のアクセス・在庫状況などの実務条件で判断できます。骨格が手つかずの場合、どちらに先に出しても同じ結果になる可能性があります。診断ではこの順序で確認します。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">既存のAmazonページをYahooに展開するとき、何を変えればいいですか？</div>
+    <div class="faq-a">現在のAmazonページに「なぜこの商品でなければならないか」という骨格が存在するかを診断することが先です。骨格が存在する場合、Yahooの読者が持つ文脈——ポイント・イベント・比較の軸——に合わせて入り口の設計を調整することが変えるべき箇所になります。骨格が存在しない場合は、AmazonページもYahooページも同時に設計を見直す必要があります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、AmazonとYahooへの展開についてどのような視点で確認しますか？</div>
+    <div class="faq-a">「現在のページに、読者が購買判断に向かう設計が存在するか」「その設計が各モールの読者の文脈に届くものになっているか」を確認します。どちらのモールに先に注力すべきかの判断基準も明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、自社商品の「なぜこれを選ぶべきか」という論理が各モールの読者の文脈に届く設計になっているかを特定する。</div>
+  <div class="cta-block-sub">
+    設計が特定できれば、AmazonとYahooのどちらに先に注力するかの判断が意味を持つ。<br>
+    モール選択の議論より先に、この問いが手つかずになっていないかを確認する。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/amazon-yahoo-onaji-shohin-page-sekkei-wa-ikenai.html">AmazonとYahooで同じ商品ページ設計を使ってはいけない理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/yahoo-amazon-shohin-page-sekkei-no-chigai.html">Yahoo!ショッピングとAmazonの商品ページ設計の違い</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-yahoo-makuake-lp-sekkei-dou-chigau.html">AmazonとYahooとMakuakeでLP設計の考え方はどう違うか</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
