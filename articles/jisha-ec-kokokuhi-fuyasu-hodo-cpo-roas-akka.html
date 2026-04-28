@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/jisha-ec-kokokuhi-fuyasu-hodo-cpo-roas-akka.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自社ECで広告費を増やすほどCPO・ROASが悪化する構造的な原因｜小西マーケティング</title>
+<meta name="description" content="Meta広告の予算を2倍にした。アクセスは増えた。しかしShopifyの売上は増えず、CPOだけが跳ね上がった。原因は運用でも代理店でもない。広告費を増やすほど悪化する理由には構造がある。EC100店舗超の現場から解説します。">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "自社ECでMeta広告の予算を増やすほどCPOが悪化するのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "広告予算を増やすということは、より購買意欲の低い潜在層にリーチするということです。予算が少ないうちは「たまたま欲しかった層」が成約していますが、スケールさせるにつれて「まだ本気で悩んでいない層」の割合が増えます。その層に対して、カタログ型のLPをぶつけても成約しません。広告管理画面の最適化だけでは解決しない理由がここにあります。LP側に、その潜在層が「なぜこの商品でなければならないか」を受け取れる設計が存在するかどうかが問われます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "代理店に「ターゲット層が枯渇した」と言われています。これは正しい診断ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「ターゲット層の枯渇」という説明は、広告管理画面の中での現象としては起きています。しかし、枯渇の本当の意味は「顕在層を刈り取り尽くした」ということです。枯渇後に広告を回し続けるには、LP側に潜在層を成約に向かわせる設計が必要です。その設計が存在しない状態で「ターゲット層が枯渇した」という診断を受け入れ、代理店を変えたり予算配分を変えたりしても、LPの成約率というベースは変わりません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "楽天・Amazonでは利益が出ているのに、自社ECでは定価で転換しません。なぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "楽天・AmazonとMeta広告では来る読者の文脈が根本的に異なります。楽天・Amazonの読者は「この商品カテゴリで解決策を探して検索してきた顕在層」です。すでに「買う」という構えで来ており、スペックと価格を確認して判断します。Meta広告から来た読者は「SNSをスクロールしていて広告が目に入った潜在層」です。その状態の読者に、顕在層向けのカタログ型LPをぶつけても、「定価で今すぐ買う理由」が届きません。クーポンで転換しているのは、価格という別の変数で補完しているだけです。"
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "自社ECで広告費を増やすほどCPO・ROASが悪化する構造的な原因",
+  "description": "Meta広告の予算を2倍にした。アクセスは増えた。しかしShopifyの売上は増えず、CPOだけが跳ね上がった。原因は運用でも代理店でもない。広告費を増やすほど悪化する理由には構造がある。EC100店舗超の現場から解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/jisha-ec-kokokuhi-fuyasu-hodo-cpo-roas-akka.html",
+  "datePublished": "2026-04-28",
+  "dateModified": "2026-04-28",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+</head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<div class="hero">
+  <span class="hero-category">自社EC / Meta広告 / CPO改善</span>
+  <h1 class="hero-title">自社ECで広告費を増やすほど<br>CPO・ROASが悪化する構造的な原因</h1>
+  <p class="hero-lead">強気で予算を2倍に引き上げた。アクセスは増えた。しかしShopifyの売上通知は鳴らず、CPOだけが急上昇した。「代理店のせいか」「ターゲットが枯渇したのか」——問いの場所が違う。広告費を増やすほど悪化する理由には構造がある。EC100店舗超の停滞を見てきた経験から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">予算を2倍にした翌週、管理画面に「ROAS 0.8」が表示された</h2>
+
+  <p>「この調子でスケールさせよう」と、Meta広告の日予算を強気で2倍に引き上げた。インプレッションが増える。クリックが来る。しかしShopifyの売上ダッシュボードは動かない。</p>
+
+  <p>数日後、管理画面を開くとROASが1.0を割り込んでいた。慌てて予算を元に戻す。CPOが下がった気がしない。「また同じことが起きた」という感覚だけが残る。</p>
+
+  <div class="insight">
+    広告予算を増やすということは、より購買意欲の低い潜在層にリーチするということだ。<br>
+    <em>予算が少ないうちは「たまたま欲しかった層」が成約していた。スケールさせるにつれて「まだ本気で悩んでいない層」の割合が増える。その層に対して、カタログ型のLPをぶつけても成約しない。これは広告運用の問題ではなく、LP側の受け皿の問題だ。</em>
+  </div>
+
+  <p>「広告のAI最適化が優秀だから、予算を突っ込めば自動で最適な客を見つけて売ってくれる」という方向で情報が流通してきた。広告代理店は「AIの学習期間」「ターゲティングの最適化」という言葉で管理画面の中の問いに答え続ける。しかしその専門性は、LPが潜在層に届いているかどうかという問いの外側にある。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「ターゲット層の枯渇」は代理店が管理画面の外を見ていない証拠だ</h2>
+
+  <p>「CPAが高騰しているのはターゲット層が枯渇したからです。より広いオーディエンスに拡大しましょう」——代理店からのレポートに、この説明が繰り返されている。</p>
+
+  <p>枯渇という現象は、広告管理画面の中では起きている。顕在層——今すぐ買う気があった人たち——を一通りリーチし終えた状態だ。そこから先は、購買意欲が低い潜在層になる。オーディエンスを広げることは、この潜在層にさらにリーチするということを意味する。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">「ターゲット層の枯渇」という診断の限界</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">代理店が見ている問い</div>
+      <div class="misrec-cell truth">顕在層を刈り取り尽くしたため、より広いオーディエンスに拡大し、新しいターゲット層を探す必要がある。クリエイティブを刷新してCTRを回復させることが解決策だ</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">管理画面の外に存在する問い</div>
+      <div class="misrec-cell truth">オーディエンスを拡大して潜在層にリーチするとき、LP側にその潜在層が「なぜこの商品を今すぐ定価で買うのか」を受け取れる設計が存在するか。クリエイティブのCTRを維持しても、LPの成約率というベースが変わらなければCPOは変わらない</div>
+    </div>
+  </div>
+
+  <p>代理店の専門性はターゲティング・入札・クリエイティブという広告管理画面の中の変数を動かすことだ。「潜在層がLPに来て、この商品でなければならないという確信に向かう流れ」という変数は、その専門性が答える問いの外側にある。この変数を誰も担わない状態で、代理店が管理画面の中の最適化を繰り返すとき、CPOは改善しない。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">楽天では定価で売れているのに、なぜMeta広告では割引クーポンでしか転換しないか</h2>
+
+  <p>楽天・Amazonでは主力商品として毎日売れている。同じ商品・同じ画像・同じ説明文をShopifyに移植してMeta広告を流した。しかし定価では全く転換しない。「初回限定50%オフ」のクーポンを配ったときだけ動く。</p>
+
+  <p>この状態を「自社ECはモールに比べて集客力が弱いから、価格で勝負しなければならないビジネスモデルだ」という結論に向かわせる力が働く。しかしその結論は、問いの場所が違う可能性がある。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">モールと自社EC（Meta広告）で来る読者の文脈の違い</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">楽天・Amazonから来た読者</div>
+      <div class="misrec-cell truth">「この商品カテゴリで解決策を探している」という目的を持って能動的に検索してきた顕在層。すでに「買う」という構えがある。スペックと価格を確認して判断する。カタログ型LPはこの文脈に機能する</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">Meta広告から来た読者</div>
+      <div class="misrec-cell truth">SNSをスクロールしていて広告が目に入った受動的な潜在層。「今すぐこの商品を探していた」という意識はない。スペックと価格の一覧をぶつけても「定価で今すぐ買う理由」が届かない。クーポンで転換しているのは、価格という別の変数で補完しているだけだ</div>
+    </div>
+  </div>
+
+  <p>割引クーポンで転換しているとき、何が起きているか。「この商品でなければならない理由」ではなく「この価格なら損はしない」という判断で動いている。その客のLTVは、定価で「この商品でなければならない」という確信を持って買った客とは異なる水準になる。高騰した広告費をLTVで回収するためには、価格という変数より先に、別の変数が問われる。</p>
+
+  <div class="callout">
+    <strong>「クリエイティブを週に何本も投入してCTRを維持しているが、CPOが悪化し続けている」状態について。</strong><br>
+    CTRはクリエイティブの性能を示す。しかしCTRが維持されてもLPの成約率が変わらないとき、CPOは改善しない。クリエイティブの刷新はLPに来た読者が購買判断に向かう流れという変数に答えない。クリエイティブへの投資は、この変数が手つかずの状態では「穴の空いたバケツ」に注ぐ水と同じ構造になる。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「優秀な代理店に乗り換えれば解決するか」という問いへの答え</h2>
+
+  <p>「今の代理店の運用スキルが低いからCPAが高騰するのだ」という診断に向かう。より実績のある代理店に乗り換える。しかし乗り換え後もLPの成約率というベースは変わらない。代理店が管理画面の中で動かせる変数と、LPの設計という変数は、別の問いが答える。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">「代理店の乗り換え」が解決しない理由</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">代理店が変えられる変数</div>
+      <div class="misrec-cell truth">ターゲティング・入札戦略・クリエイティブの選定・予算配分・配信スケジュール。これらの最適化によってCTRやCPC、配信効率を改善できる</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">代理店が変えられない変数</div>
+      <div class="misrec-cell truth">Meta広告から来た潜在層がLPで「この商品を定価で今すぐ買わなければならない」という確信に向かう流れ。この設計はLPの構成の問いが答える。どれだけ優秀な代理店でも、LPの設計という変数は管理画面の外にある</div>
+    </div>
+  </div>
+
+  <p>より優秀な代理店への乗り換えは、管理画面の中の最適化精度を上げる。その最適化は、LPの成約率というベースが存在するとき機能する。ベースが低い状態で、より精度高く潜在層を集めても、CPOの改善は限定的だ。</p>
+
+  <p>以下の状態が続いているなら、次の代理店への問い合わせより先に確認すべき問いがある。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">Meta広告の予算を増やすたびにCPOが急上昇し、予算を元に戻すことを繰り返している</li>
+    <li data-num="✓">クリエイティブを週に複数本投入してCTRを維持しているが、LPの転換率のベースが変わらない</li>
+    <li data-num="✓">代理店から「AIの学習期間」「ターゲット層の枯渇」と説明されるが、LPの設計への言及がない</li>
+    <li data-num="✓">楽天・Amazonでは定価で転換しているのに、Meta広告経由では割引クーポンを使ったときにしか売れない</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">代理店を変える前に、Meta広告から来た潜在層がLPで購買判断に向かう設計が存在するかを確認する。</div>
+    <div class="cta-block-sub">
+      CPOが改善しない原因が広告運用にあるのか、LPの設計にあるのかを特定することが先です。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">代理店より先にLPの設計を診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>自社EC×Meta広告の業界では長年、「CPOを改善するためにはターゲティング精度を高め、クリエイティブをテストし、予算配分を最適化することが正解だ」という方向で語られてきた。広告代理店も、運用ツールベンダーも、EC系のメディアも、「広告管理画面の最適化がCPOを決める」という枠組みで情報を提供し続けている。その枠組みの中で調整を繰り返すことが、「広告費を増やすほどCPOが悪化する」状態と「自社ECは利益が出ないビジネスモデルだ」という結論を固定する。</p>
+
+  <p>広告費を増やすことは、より購買意欲の低い潜在層にリーチすることだ。その潜在層に対して、顕在層向けのカタログ型LPをぶつけても成約しない。クーポンで無理やり転換しても、LTVで広告費を回収できない。代理店が管理画面の中でどれだけ精度高く最適化しても、LPの設計という変数が手つかずのままでは、改善は限定的にとどまる。次の代理店探しや広告設定の調整より先に、この問いが手つかずになっていないかを確認することが先だ。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">自社ECでMeta広告の予算を増やすほどCPOが悪化するのはなぜですか？</div>
+    <div class="faq-a">広告予算を増やすということは、より購買意欲の低い潜在層にリーチするということです。予算が少ないうちは「たまたま欲しかった層」が成約していますが、スケールさせるにつれて「まだ本気で悩んでいない層」の割合が増えます。その層に対して、カタログ型のLPをぶつけても成約しません。広告管理画面の最適化だけでは解決しない理由がここにあります。LP側に、その潜在層が「なぜこの商品でなければならないか」を受け取れる設計が存在するかどうかが問われます。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">代理店に「ターゲット層が枯渇した」と言われています。これは正しい診断ですか？</div>
+    <div class="faq-a">「ターゲット層の枯渇」という説明は、広告管理画面の中での現象としては起きています。しかし、枯渇の本当の意味は「顕在層を刈り取り尽くした」ということです。枯渇後に広告を回し続けるには、LP側に潜在層を成約に向かわせる設計が必要です。その設計が存在しない状態で「ターゲット層が枯渇した」という診断を受け入れ、代理店を変えたり予算配分を変えたりしても、LPの成約率というベースは変わりません。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">楽天・Amazonでは利益が出ているのに、自社ECでは定価で転換しません。なぜですか？</div>
+    <div class="faq-a">楽天・AmazonとMeta広告では来る読者の文脈が根本的に異なります。楽天・Amazonの読者は「この商品カテゴリで解決策を探して検索してきた顕在層」です。すでに「買う」という構えで来ており、スペックと価格を確認して判断します。Meta広告から来た読者は「SNSをスクロールしていて広告が目に入った潜在層」です。その状態の読者に、顕在層向けのカタログ型LPをぶつけても、「定価で今すぐ買う理由」が届きません。クーポンで転換しているのは、価格という別の変数で補完しているだけです。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">Meta広告のCPOが改善しない原因が広告にあるのかLPにあるのか、どう判断すればいいですか？</div>
+    <div class="faq-a">広告のCTRが悪くないにもかかわらずLPの転換率が低い場合、問いの場所はLP側にあります。また、クーポンを使ったときにだけ転換する状態は、LPが「定価で買う理由」を届けられていないサインです。現在のLPが「Meta広告から来た潜在層の文脈に届く設計になっているか」を診断することが先です。LPのURLを送ることで、2営業日以内に診断レポートをお送りします。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">楽天のLPを自社ECに移植してMeta広告を流す際、どこを変えればいいですか？</div>
+    <div class="faq-a">変えるべき箇所は、現在のLPと「Meta広告から来た潜在層の文脈」を診断した上で特定されます。全部作り直す必要がある場合もあれば、冒頭の設計だけを変えれば機能する場合もあります。どの部分をどう変えるかは、現在のLPを診断しなければ特定できません。LPのURLを送ることが診断の起点になります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、自社ECのLPのどのような視点を確認しますか？</div>
+    <div class="faq-a">「Meta広告から来た潜在層が、LPで購買判断に向かう流れが設計されているか」を確認します。「CPOが悪化している原因が広告設定にあるのか、LP側の設計にあるのか」が明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、Meta広告から来た潜在層がLPで購買判断に向かう設計が存在するかを特定する。</div>
+  <div class="cta-block-sub">
+    設計が特定できれば、CPOが改善する方向が開ける。<br>
+    代理店への問い合わせより先に、この問いが手つかずになっていないかを確認する。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/meta-kokoku-cpo-roas-kaizenshinai-kyotsuten.html">Meta広告でCPOやROASが改善しない自社ECに共通する問題</a></li>
+    <li><a href="https://konishi-marketing.com/articles/jisha-ec-meta-kokoku-nagashite-mo-seiyaku-shinai.html">自社ECの商品ページにMeta広告からアクセスを流しても成約しない理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-kokokuhi-fuyashite-mo-rieki-nokoranai.html">楽天で広告費を増やしても利益が残らない構造</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
