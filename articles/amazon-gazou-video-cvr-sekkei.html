@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/amazon-gazou-video-cvr-sekkei.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazonのビデオ・画像設計でユニットセッション率を上げる考え方｜小西マーケティング</title>
+<meta name="description" content="プロに撮り直してもらった美しい写真。必死に編集した紹介動画。しかしユニットセッション率はピクリとも動かない——画像・動画が機能しない理由は「見せ方」ではなく「何のために見せるか」にある。EC100店舗超の現場から解説します。">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Amazonの商品画像を改善してもユニットセッション率が上がらないのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "画像のクオリティ（解像度・美しさ）とユニットセッション率は別の変数に答えます。画像が「綺麗に見える状態」と「読者が購買判断に向かう状態」は異なります。画像や動画がユニットセッション率に影響するのは、その視覚情報が「なぜこの商品でなければならないか」という論理の骨格を届ける構成設計として機能しているときです。ビジュアルのクオリティは信頼の閾値を超えることには機能しますが、確信の構成設計の代わりにはなりません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Amazon商品ページの画像順番（ストーリー）はどう設計すればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「何を見せるか」より先に「読者はどういう状態でスワイプするか」という問いが来ます。Amazonで複数の選択肢を比較している状態の読者が、1枚目から2枚目へスワイプするとき何を受け取れるか。この問いへの答えが画像の順番の設計の起点になります。機能やスペックの説明を並べる順番より先に、「なぜこの商品固有の論理で選ぶべきか」という問いを届ける流れが存在するかどうかが問いの本体です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Amazon商品紹介動画で視聴維持率を上げるためには何をすべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「冒頭5秒で何を見せるか」より先に「なぜその動画を最後まで見るべきか」という理由が冒頭で届くかどうかが問いです。商品が回転する映像や機能が文字で流れるイメージ動画は視覚的に整っていても、「この動画を見続けると自分の状況がどう変わるか」という問いへの答えを持っていない場合、視聴者は早期に離脱します。動画の構成設計は「演出」ではなく「論理の証明」として機能する必要があります。"
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Amazonのビデオ・画像設計でユニットセッション率を上げる考え方",
+  "description": "プロに撮り直してもらった美しい写真。必死に編集した紹介動画。しかしユニットセッション率はピクリとも動かない——画像・動画が機能しない理由は「見せ方」ではなく「何のために見せるか」にある。EC100店舗超の現場から解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/amazon-gazou-video-cvr-sekkei.html",
+  "datePublished": "2026-04-29",
+  "dateModified": "2026-04-29",
+  "author": {"@type": "Person","name": "小西 秀人","url": "https://konishi-marketing.com"},
+  "publisher": {"@type": "Organization","name": "小西マーケティング","url": "https://konishi-marketing.com"}
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+</head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<div class="hero">
+  <span class="hero-category">Amazon / 画像・動画 / 構成設計</span>
+  <h1 class="hero-title">Amazonのビデオ・画像設計で<br>ユニットセッション率を上げる考え方</h1>
+  <p class="hero-lead">プロのカメラマンに撮り直してもらった美しい写真。必死に編集した紹介動画。しかしユニットセッション率はピクリとも動かない——画像・動画が機能しない理由は「見せ方のクオリティ」ではなく「何のために見せるかの構成設計」にあります。EC100店舗超の現状を知る経験から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「綺麗な画像」と「ユニットセッション率が上がる画像」は別の状態だ</h2>
+
+  <p>Amazon商品ページの画像改善を依頼するとき、「解像度を上げる」「光と陰影を整える」「素材の質感を伝える」という方向に思考が向かいやすい。プロのカメラマンへの依頼は「より綺麗な状態」を手に入れるための投資だ。納品された画像は確かに綺麗になる。しかしユニットセッション率のベースは変わらない。</p>
+
+  <p>「綺麗な画像」と「ユニットセッション率が上がる画像」は別の状態だ。前者は「視覚的なクオリティが高い状態」であり、後者は「読者が購買判断に向かう状態を生む視覚情報」だ。この二つを同じものとして扱うことが、画像改善への投資が成果に繋がらない状態を生む。</p>
+
+  <div class="insight">
+    画像・動画は「伝達の手段」だ。何を伝えるかの構成設計が先にある。<br>
+    <em>Amazonの商品画像がユニットセッション率に影響するのは、その視覚情報が「なぜこの商品でなければならないか」という論理の骨格を届ける構成設計として機能しているときだ。ビジュアルのクオリティは信頼の閾値を超えることには貢献する。しかし確信の構成設計の代わりにはならない。</em>
+  </div>
+
+  <p>Amazon画像制作の業界では長年、「高解像度・綺麗なライティング・豊富な枚数」が成約率を上げる正解だという方向で情報が提供されてきた。制作会社も、フォトスタジオも、動画制作会社も、「視覚的なクオリティの向上」を成果の根拠として提案する。しかし視覚的なクオリティと構成設計は別の問いに答える。この区別が見えないまま画像・動画への投資を続けることが、「綺麗になったがユニットセッション率は変わらない」という状態を固定する。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">スマホのスワイプは「比較の続き」として行われている</h2>
+
+  <p>Amazonのスマホ画面で、読者は商品画像をスワイプする。1枚目から2枚目へ。2枚目から3枚目へ。このスワイプは「この商品をもっと知りたい」という積極的な行動ではない場合が多い。「比較検討の情報収集の続き」として行われている。</p>
+
+  <p>「では何を1枚目に入れるべきか」という問いが生まれる。この問いへの答えを「最も魅力的な写真を1枚目に」という方向で考えると、「見た目が良い画像の選別」という作業になる。しかし「1枚目で読者の比較モードに問いかける」という方向で考えると、「何を届けることで読者の状態が変わるか」という構成設計の問いになる。同じ1枚目でも、答えるべき問いが異なる。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">「視覚クオリティ優先の画像設計」と「構成設計に基づく画像設計」の違い</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">視覚クオリティを優先した場合</div>
+      <div class="misrec-cell truth">「最も綺麗に商品が見える写真を1枚目に」「機能を分かりやすくアイコンで整理した画像を2枚目以降に」という設計になる。読者は「なるほど、この商品はこういう機能がある」と理解したあとで他の選択肢と比較する</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">構成設計に基づいた場合</div>
+      <div class="misrec-cell truth">「読者がスワイプするとき、どういう状態にあるか」という問いから画像の内容が決まる。1枚目から2枚目へのスワイプで「なぜこの商品でなければならないか」という問いへの答えが届くように情報の流れが設計される</div>
+    </div>
+  </div>
+
+  <p>競合が画像に詰め込んでいる「〇〇1位」「機能アイコン」を追加した。情報のノイズが増えた。読者は情報を受け取り、比較の材料が増えた。しかし「比較を終わらせる理由」は届いていない。情報を追加するほど比較すべき項目が増える構造が続く。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">制作会社の多くは「作業者」であり「構成設計者」ではない</h2>
+
+  <p>「プロの制作会社に頼めば、Amazonで売れる見せ方も熟知しているはずだ」という前提がある。しかし制作会社のビジネスモデルは「指示された内容を高品質に制作すること」で成り立っている。</p>
+
+  <p>「どんな画像を作るか」という指示があれば仕事が始まる。その画像が読者の購買判断に向かわせるかどうかは、制作会社の業務範囲の外側にある。発注者が「どんな画像を作るか」を決める段階での判断——つまり構成設計——が制作の質を決める。制作会社のクオリティが高くても、発注の構成設計が手つかずなら、「綺麗だが機能しない画像」が高品質に納品される。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">「制作会社が担う役割」と「構成設計が担う役割」の違い</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">制作会社が担う役割</div>
+      <div class="misrec-cell truth">指示された内容を高品質なビジュアルに変換する「作業の専門性」。解像度・ライティング・色調整・動画の編集クオリティ。「どう美しく見せるか」の専門家</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">構成設計が担う役割</div>
+      <div class="misrec-cell truth">「読者がこの画像・動画を通じてどういう状態になるか」という問いへの答えを設計する。「何を見せるか・何の順番で見せるか・なぜその情報が必要か」の構成。制作の前に存在する骨格
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>「売れている競合の画像順番（メリット→機能→実績）をトレースすれば同じ成果が出る」という考え方について。</strong><br>
+    競合の画像の「形の順番」は真似できる。しかしその順番が機能している理由——「なぜその商品でなければならないか」という論理の骨格——は外側から見えない。形を真似しても、自社商品固有の「比較を終わらせる論理」は生まれない。結果として「似たような画像構成を持つが、比較で落選する商品」になる可能性がある。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">動画が「最後まで見られない」原因は演出ではなく構成設計にある</h2>
+
+  <p>商品紹介動画を作った。商品が回転する映像。機能が文字で流れる映像。BGMが入っている。視覚的には整っている。しかし視聴維持率が低い。冒頭数秒で離脱されている。「もっと演出にこだわれば変わるのか」という問いが生まれる。</p>
+
+  <p>視聴維持率が低い原因は演出のクオリティではない場合が多い。「この動画を最後まで見ると、自分の状況がどう変わるか」という問いへの答えが冒頭で届いていないことだ。読者が「この動画を見続ける理由」を受け取れない場合、どれだけ演出が整っていても離脱する。動画の構成設計は「演出」ではなく「見続ける理由の論理」として機能する必要がある。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">プロのカメラマンに撮り直してもらったが、ユニットセッション率が改善していない</li>
+    <li data-num="✓">競合の画像順番を参考に構成を変えたが、自社商品の強みが伝わらず落選し続けている</li>
+    <li data-num="✓">商品紹介動画を追加したが、視聴維持率が低く成約への影響が感じられない</li>
+    <li data-num="✓">「機能アイコン」「ランキング1位」の画像を追加したが情報のノイズが増えただけでユニットセッション率は変わらない</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">画像・動画の制作依頼より先に、現在のAmazonページに「読者が購買判断に向かう構成設計」が存在するかを確認する。</div>
+    <div class="cta-block-sub">
+      ユニットセッション率が改善しない原因が画像・動画のクオリティにあるのか、構成設計の不在にあるのかを特定することが先です。<br>
+      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">制作依頼より先にページの構成設計を診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>Amazon画像・動画制作の業界では長年、「高解像度・綺麗なライティング・豊富な画像枚数・リッチな動画演出」が成約率を上げる正解だという方向で情報が提供されてきた。フォトスタジオも、動画制作会社も、画像制作の代行会社も、「視覚的なクオリティの向上」を成果の根拠として提案し続けている。その枠組みの中で画像・動画のクオリティ向上に投資し続けることが、「綺麗になったがユニットセッション率は変わらない」という状態を固定する。</p>
+
+  <p>画像・動画がユニットセッション率に影響するのは、その視覚情報が「なぜこの商品でなければならないか」という論理の骨格を届ける構成設計として機能しているときだ。「何を見せるか」より先に「読者はどういう状態でその画像を受け取るか」という問いへの答えが構成設計の起点になる。制作に依頼する前に、この構成設計が手つかずになっていないかを確認することが、画像・動画への投資が成果に繋がるかどうかを決める最初の問いだ。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">Amazonの商品画像を改善してもユニットセッション率が上がらないのはなぜですか？</div>
+    <div class="faq-a">画像のクオリティ（解像度・美しさ）とユニットセッション率は別の変数に答えます。画像が「綺麗に見える状態」と「読者が購買判断に向かう状態」は異なります。画像や動画がユニットセッション率に影響するのは、その視覚情報が「なぜこの商品でなければならないか」という論理の骨格を届ける構成設計として機能しているときです。ビジュアルのクオリティは信頼の閾値を超えることには機能しますが、確信の構成設計の代わりにはなりません。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Amazon商品ページの画像順番（ストーリー）はどう設計すればいいですか？</div>
+    <div class="faq-a">「何を見せるか」より先に「読者はどういう状態でスワイプするか」という問いが来ます。Amazonで複数の選択肢を比較している状態の読者が、1枚目から2枚目へスワイプするとき何を受け取れるか。この問いへの答えが画像の順番の設計の起点になります。機能やスペックの説明を並べる順番より先に、「なぜこの商品固有の論理で選ぶべきか」という問いを届ける流れが存在するかどうかが問いの本体です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Amazon商品紹介動画で視聴維持率を上げるためには何をすべきですか？</div>
+    <div class="faq-a">「冒頭5秒で何を見せるか」より先に「なぜその動画を最後まで見るべきか」という理由が冒頭で届くかどうかが問いです。商品が回転する映像や機能が文字で流れるイメージ動画は視覚的に整っていても、「この動画を見続けると自分の状況がどう変わるか」という問いへの答えを持っていない場合、視聴者は早期に離脱します。動画の構成設計は「演出」ではなく「論理の証明」として機能する必要があります。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">画像制作会社を選ぶとき、「作業者」と「構成設計を持つ会社」をどう見分ければいいですか？</div>
+    <div class="faq-a">「どんな画像を作りますか」という問いから提案が始まる会社は作業者です。「読者がこの画像を受け取ったとき、どういう状態になるかという問いから設計します」という答えが来る会社は構成設計の専門性を持っている可能性があります。ただし外注先を選ぶ前に、現在のページの構成設計を診断することが先です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">現在の画像・動画が「構成設計として機能しているか」どう判断すればいいですか？</div>
+    <div class="faq-a">画像・動画を通じて読者が「なぜこの商品でなければならないか」という問いへの答えを受け取れているかを確認することが一つの方法です。ただし自社でその判断を正確に行うことは難しい場合があります。URLを送ることで、2営業日以内に診断レポートをお送りします。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、Amazonページの画像・動画のどのような視点を確認しますか？</div>
+    <div class="faq-a">「画像・動画を通じて読者が購買判断に向かう構成設計が存在するか」を確認します。ユニットセッション率が改善しない原因がビジュアルのクオリティにあるのか、構成設計の不在にあるのかが明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、現在のAmazonページの画像・動画に「読者が購買判断に向かう構成設計」が存在するかを特定する。</div>
+  <div class="cta-block-sub">
+    構成設計が特定できれば、画像・動画への投資が成果に繋がる方向が開ける。<br>
+    制作会社への発注より先に、この問いが手つかずになっていないかを確認する。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/amazon-main-image-kaete-mo-unit-session-rate-kawaranu.html">Amazonのメイン画像だけ変えても売れ数が変わらない理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/amazon-brand-store-unit-session-rate-kawaranu.html">Amazonのブランドストアを作ってもユニットセッション率が変わらない理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-shohin-page-design-yori-sekkei-ga-saki.html">楽天の商品ページはデザインより構成が先である理由</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
