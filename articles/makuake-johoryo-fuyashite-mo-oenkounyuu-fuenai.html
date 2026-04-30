@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/makuake-johoryo-fuyashite-mo-oenkounyuu-fuenai.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Makuakeで情報量を増やしても応援購入が増えないページの問題｜小西マーケティング</title>
+<meta name="description" content="機能も開発秘話もQ&Aも全部詰め込んだ。GIF動画で整理もした。それでも申し込み率は1%以下のまま——情報量を増やしても応援購入が増えない理由は「情報の量」ではない。Makuake総合ランキング1位3回、最高申込率4.7%を達成した経験から解説します。">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Makuakeで情報を増やしても応援購入が増えない根本的な理由は何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "情報の量の問題ではありません。情報を届ける前に「サポーターがなぜこの続きを読まなければならないか」という必然性がページ冒頭に存在しないことが多い原因です。Makuakeのサポーターが複数のプロジェクトを見比べる状態でページを開いたとき、「自分には関係ない」という前提が変わらないまま情報を受け取ると、どれだけ丁寧な説明でも「ふーん」で終わります。情報の前に、この前提に問いかける全体の構成設計が必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "情報を削って「シンプルなページ」にすれば申し込み率は上がりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "情報を削るだけでは「特徴の薄い普通のプロジェクト」になるだけです。サポーターが持っている「自分には関係ない」「他のプロジェクトと同じでしょ」という前提は、情報を減らしても変わりません。問いの場所は情報の量ではなく、「ページ冒頭でサポーターの前提に問いかける全体の構成設計が存在するか」という変数にあります。この変数が手つかずのまま情報を整理しても、申し込み率のベースは変わりません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Makuakeのプロジェクトページで「残すべき情報」と「削るべき情報」の判断基準は何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「この情報は、読者が読み続ける理由を強化するか」という問いで判断します。ページ冒頭に「なぜこれに支援すべきか」という問いかけが存在する状態では、後半の機能説明・開発秘話・Q&Aは「その確信を補強する証拠」として機能します。この状態では情報量が多くても読まれる可能性があります。逆にこの問いかけがない状態では、どの情報も「比較の材料の一つ」として消費されます。"
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Makuakeで情報量を増やしても応援購入が増えないページの問題",
+  "description": "機能も開発秘話もQ&Aも全部詰め込んだ。GIF動画で整理もした。それでも申し込み率は1%以下のまま——情報量を増やしても応援購入が増えない理由は「情報の量」ではない。Makuake総合ランキング1位3回、最高申込率4.7%を達成した経験から解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/makuake-johoryo-fuyashite-mo-oenkounyuu-fuenai.html",
+  "datePublished": "2026-04-30",
+  "dateModified": "2026-04-30",
+  "author": {"@type": "Person","name": "小西 秀人","url": "https://konishi-marketing.com"},
+  "publisher": {"@type": "Organization","name": "小西マーケティング","url": "https://konishi-marketing.com"}
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+</head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<div class="hero">
+  <span class="hero-category">Makuake / 情報量 / 構成設計</span>
+  <h1 class="hero-title">Makuakeで情報量を増やしても<br>応援購入が増えないページの問題</h1>
+  <p class="hero-lead">機能も開発秘話もQ&Aも全部詰め込んだ。GIF動画やインフォグラフィックで整理もした。活動レポートでも補足し続けた。それでも申し込み率は1%以下のまま——情報量を増やしても応援購入が増えない理由は「情報の量」ではない。Makuake総合ランキング1位3回、最高申込率4.7%を達成した経験から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得し、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「こんなに情報があるのになぜ買わないのか」——この問いが出るとき、問いの場所が違う</h2>
+
+  <p>想いを伝えたい一心で詰め込んだ。機能説明・開発秘話・職人のこだわり・Q&A——ページを開くとスクロールが長い。GIF動画もインフォグラフィックも入れて視覚的にも整理した。しかし申し込み率は変わらない。「こんなに情報があるのになぜ買わないのか」という問いが生まれる。</p>
+
+  <p>次に「長すぎるから読まれないのか。では削るべきか」という方向に向かいやすい。「どの情報を削るべきか」「どの情報を残すべきか」で社内の意見が割れる。削る方向でも、増やす方向でも、申し込み率のベースは変わらない。問いの場所が情報の量ではないからだ。</p>
+
+  <div class="insight">
+    「長いから読まない」のではなく「読み続ける理由が届いていないから止まる」。<br>
+    <em>Makuakeで複数のプロジェクトを見比べている読者が、ページを開く。「どうせ他と同じでしょ」という前提でスクロールを始める。この前提が変わらないまま機能説明や開発秘話を受け取ると、「なるほど、こういう商品か」という理解が生まれる。しかし「なぜ今、他でもなくこれに支援すべきか」という確信は届かない。読み続ける理由がないとき、どれだけ情報が整理されていても読者は止まる。</em>
+  </div>
+
+  <p>Makuakeのページ制作の業界では長年、「サポーターに全てを丁寧に伝えること・情報を分かりやすく整理すること」が申し込み率を上げる方向だという情報が提供されてきた。そして売れないときは「情報を整理・削減してシンプルにすること」という逆方向の処方箋が提案される。しかしどちらも「情報の量の問題」への対応だ。申し込み率が低い根本的な理由は情報の量にはない。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">GIF動画で整理しても「ふーん」で終わる構造</h2>
+
+  <p>「情報を分かりやすくすれば読まれる」という前提がある。インフォグラフィックを追加した。GIF動画で機能を視覚化した。「これで伝わるはずだ」という期待があった。しかし結果は「ふーん」で終わっている感覚がある。申し込み通知は来ない。</p>
+
+  <p>GIF動画やインフォグラフィックは「情報をより速く・より分かりやすく届ける手段」だ。しかし「なぜ今これに支援すべきか」という確信を届けるのはこれらの手段ではなく、全体の構成設計だ。読者が「読み続ける理由」を受け取っている状態では、GIF動画は「その確信を補強する証拠」として機能する。「読み続ける理由」が届いていない状態では、GIF動画は「より速く比較材料を消費する手段」として機能する可能性がある。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">「GIF動画・インフォグラフィック」が機能する状態と機能しない状態の違い</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">全体の構成設計がある状態</div>
+      <div class="misrec-cell truth">「なぜ今これに支援すべきか」という確信を受け取った読者に、GIF動画やインフォグラフィックが届く。「やはりこれで正しい選択だ」という確信を深める証拠として機能する。情報量が多くても読まれる可能性がある</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">全体の構成設計がない状態</div>
+      <div class="misrec-cell truth">「自分には関係ない」という前提のままGIF動画やインフォグラフィックが届く。「なるほど、こういう機能があるのか」という理解が生まれ、「ふーん」で終わる。視覚的にどれだけ整っていても申し込みには向かいにくい</div>
+    </div>
+  </div>
+
+  <p>「活動レポートで補足すれば読んでもらえるのでは」という判断がある。活動レポートを更新し続けた。しかしメインのプロジェクトページが最後まで読まれていない状態では、活動レポートへの到達率はさらに低い。根本の問いは活動レポートの頻度ではなく、メインページ冒頭の構成設計にある。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">情報を削ったとき申し込み率が上がらない理由</h2>
+
+  <p>「情報を減らしてシンプルにすれば読まれるようになる」という処方箋を実行した。長いストーリーを短くした。機能の説明を絞った。ページが軽くなった。しかし申し込み率は変わらない。</p>
+
+  <p>情報を削っても「サポーターが読み続ける理由」が生まれるわけではないからだ。削ることで「直帰しにくい状態」は作れるかもしれない。しかし「なぜ今これに支援すべきか」という確信を届ける全体の構成設計が手つかずのまま情報を削ると、「特徴の薄い普通のプロジェクト」になる可能性がある。他のプロジェクトとの比較で落選する方向に向かいやすい。</p>
+
+  <div class="callout">
+    <strong>「残すべき情報と削るべき情報の基準は、サポーターが共感するかどうかだ」という考え方について。</strong><br>
+    共感は「いいね」を生む。しかし支援は確信が届いたときに生まれる。「サポーターが共感するか」という基準で情報を選別しても、共感を生む情報を残し確信に繋がらない情報を削るという作業になりやすい。「この情報は読み続ける理由を強化するか」「この情報は確信の補強として機能するか」という問いが、残すべき情報と削るべき情報を分ける判断軸に近い。しかしこの判断軸が機能するためには、全体の構成設計が先に存在している必要がある。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「削るか増やすか」で社内の意見が割れるとき、問いの場所はどこか</h2>
+
+  <p>「情報を増やしても変わらない。でも削ると魅力が伝わらなくなる」——社内でこの議論が起きる。どちらの方向でも申し込み率が変わらない状態が続くとき、この議論が繰り返される。議論が解決しない理由は、「情報の量」という問いが申し込み率を決める変数に答えていないからだ。</p>
+
+  <p>「削るか増やすか」という問いより先に来る問いがある。「現在のプロジェクトページ冒頭に、Makuakeで複数のプロジェクトを比較している読者が、なぜ今これに支援すべきかという確信を受け取れる全体の構成設計が存在するか」という問いだ。この問いへの答えが先にあって、情報の量の議論が意味を持つ。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">機能・開発秘話・Q&AをGIF動画で整理して詰め込んだが申し込み率が1%を下回っている</li>
+    <li data-num="✓">活動レポートで補足し続けているが「メインページが読まれていない」感覚がある</li>
+    <li data-num="✓">「削るべきか増やすべきか」で社内の意見が割れ、どちらに動いても申し込み率が変わらない</li>
+    <li data-num="✓">情報を削ってシンプルにしたら「普通のプロジェクト」になって特徴が伝わらなくなった</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">情報の削減・整理より先に、現在のプロジェクトページ冒頭に「読者が読み続ける理由を受け取れる全体の構成設計」が存在するかを確認する。</div>
+    <div class="cta-block-sub">
+      申し込み率が改善しない原因が情報の量にあるのか、全体の構成設計の不在にあるのかを特定することが先です。<br>
+      プロジェクトページのURLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">情報の削減より先にページの構成設計を診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>Makuakeのプロジェクトページ改善の業界では長年、「サポーターに丁寧に全てを伝えること・GIF動画やインフォグラフィックで分かりやすく整理すること」が申し込み率を上げる方向だという情報が提供されてきた。そして売れないときは「情報を整理・削減してシンプルにすること」という処方箋が提案される。クラウドファンディング支援会社も、制作代行会社も、この「情報の量の問題」という枠組みで改善を提案し続けている。その枠組みの中で情報の増減を繰り返すことが、「情報を増やしても削っても申し込み率が変わらない」という状態を固定する。</p>
+
+  <p>Makuakeで情報量を増やしても応援購入が増えないページの問題は情報の量にない。「プロジェクトページ冒頭で読者が読み続ける理由を受け取れているか」という変数が手つかずになっていることだ。この変数が機能している状態では、情報量が多くても読まれる可能性がある。逆にこの変数が機能していない状態では、情報を削っても「特徴の薄い普通のプロジェクト」になるだけだ。この変数を確認することが、情報の削減・整理より先に来る問いだ。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">Makuakeで情報を増やしても応援購入が増えない根本的な理由は何ですか？</div>
+    <div class="faq-a">情報の量の問題ではありません。情報を届ける前に「サポーターがなぜこの続きを読まなければならないか」という必然性がページ冒頭に存在しないことが多い原因です。Makuakeのサポーターが複数のプロジェクトを見比べる状態でページを開いたとき、「自分には関係ない」という前提が変わらないまま情報を受け取ると、どれだけ丁寧な説明でも「ふーん」で終わります。情報の前に、この前提に問いかける全体の構成設計が必要です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">情報を削って「シンプルなページ」にすれば申し込み率は上がりますか？</div>
+    <div class="faq-a">情報を削るだけでは「特徴の薄い普通のプロジェクト」になるだけです。サポーターが持っている「自分には関係ない」「他のプロジェクトと同じでしょ」という前提は、情報を減らしても変わりません。問いの場所は情報の量ではなく、「ページ冒頭でサポーターの前提に問いかける全体の構成設計が存在するか」という変数にあります。この変数が手つかずのまま情報を整理しても、申し込み率のベースは変わりません。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Makuakeのプロジェクトページで「残すべき情報」と「削るべき情報」の判断基準は何ですか？</div>
+    <div class="faq-a">「この情報は、読者が読み続ける理由を強化するか」という問いで判断します。ページ冒頭に「なぜこれに支援すべきか」という問いかけが存在する状態では、後半の機能説明・開発秘話・Q&Aは「その確信を補強する証拠」として機能します。この状態では情報量が多くても読まれる可能性があります。逆にこの問いかけがない状態では、どの情報も「比較の材料の一つ」として消費されます。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">現在のページ冒頭に「読者が読み続ける理由を受け取れる構成設計」が存在するかどう判断すればいいですか？</div>
+    <div class="faq-a">ページを開いた読者が冒頭で「なぜ自分がこの続きを読まなければならないか」という必然性を受け取れているかを確認することが一つの方法です。情報を増やしても削っても申し込み率が変わらない状態は、全体の構成設計が手つかずになっている可能性があります。URLを送ることで、2営業日以内に診断レポートをお送りします。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">活動レポートでの情報補足を続けながら、メインページの構成設計を改善することはできますか？</div>
+    <div class="faq-a">可能です。ただしメインページが最後まで読まれていない状態では、活動レポートへの到達率も低い可能性があります。まずメインページの構成設計を診断することで、活動レポートで何を補足すべきかが明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、プロジェクトページのどのような視点を確認しますか？</div>
+    <div class="faq-a">「ページを開いた読者が、なぜ今、他でもなくこれに支援すべきかという確信を受け取れる全体の構成設計が存在するか」を確認します。申し込み率が改善しない原因が情報の量にあるのか、全体の構成設計の不在にあるのかが明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、現在のプロジェクトページ冒頭に「読者が読み続ける理由を受け取れる全体の構成設計」が存在するかを特定する。</div>
+  <div class="cta-block-sub">
+    構成設計が特定できれば、情報の削減・整理の判断軸が明確になる。<br>
+    社内議論より先に、この問いが手つかずになっていないかを確認する。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/makuake-access-aru-noni-oenkounyuu-atsumara-nai.html">Makuakeでアクセスはあるのに応援購入が集まらないページの問題</a></li>
+    <li><a href="https://konishi-marketing.com/articles/makuake-project-page-kakikata-shien-atsumaru-kosei.html">Makuakeのプロジェクトページの書き方——支援が集まる構成とは</a></li>
+    <li><a href="https://konishi-marketing.com/articles/ec-shohin-page-joho-tareba-ureru-hassou-machigai.html">ECの商品ページで「情報を足せばより売れる」という発想が間違っている理由</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
