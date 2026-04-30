@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/makuake-roas-hikui-page-sekkei-kekkan.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MakuakeのROASが低いプロジェクトに共通するページ設計の欠陥｜小西マーケティング</title>
+<meta name="description" content="広告でクリックは来ている。しかしROASは1.0を割り込んだまま——MakuakeのROASが低いプロジェクトのページには、共通する構成設計の問題がある。Makuake総合ランキング1位3回の現場から解説します。">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "MakuakeのROASが低いプロジェクトのページには何が欠けていますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「広告から来た潜在層がページ冒頭でなぜこれに支援すべきかという確信を受け取れる構成設計」が存在しないことが共通しています。広告から受動的に流入した読者は、まだ商品への必要性が顕在化していない状態でページを開きます。この状態の読者に「開発ストーリー」や「職人のこだわり」を届けても、「自分には関係ない」として数秒で離脱します。ページ冒頭にこの層に向けた構成設計が存在することが、広告ROASを改善する根本の変数です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Makuakeで広告を打ってもROASが改善しない場合、広告代理店を変えるべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ページの構成設計が手つかずのまま代理店を変えても、ROASが改善しにくい状態は続きます。代理店の専門性は「より効率よくページに人を届けること」にあります。「ページに来た読者が支援を決断する確信を届ける全体の構成設計」は代理店の業務範囲の外側にあります。代理店を変える前に、現在のページの構成設計を診断することが先です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Makuakeの広告でお得感（超早割・割引率）を強調してCTRを上げても支援に繋がらないのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "お得感でクリックした読者は「価格が安いから来た」という状態でページを開きます。この層がページで「なぜ今、他でもなくこれに支援すべきか」という確信を受け取れない場合、「今は買わなくていいや」と離脱します。CTRが上がってROASが改善しない状態は、クリエイティブではなくページの構成設計が変数になっています。"
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "MakuakeのROASが低いプロジェクトに共通するページ設計の欠陥",
+  "description": "広告でクリックは来ている。しかしROASは1.0を割り込んだまま——MakuakeのROASが低いプロジェクトのページには、共通する構成設計の問題がある。Makuake総合ランキング1位3回の現場から解説します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/makuake-roas-hikui-page-sekkei-kekkan.html",
+  "datePublished": "2026-04-30",
+  "dateModified": "2026-04-30",
+  "author": {"@type": "Person","name": "小西 秀人","url": "https://konishi-marketing.com"},
+  "publisher": {"@type": "Organization","name": "小西マーケティング","url": "https://konishi-marketing.com"}
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+</head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<div class="hero">
+  <span class="hero-category">Makuake / 広告 / ROAS / 構成設計</span>
+  <h1 class="hero-title">MakuakeのROASが低いプロジェクトに<br>共通するページ設計の欠陥</h1>
+  <p class="hero-lead">広告でクリックは来ている。管理画面ではPVが積み上がっている。しかしROASは1.0を割り込んだまま——MakuakeのROASが低いプロジェクトのページには、構成設計に共通する問題がある。Makuake総合ランキング1位3回、ROAS2000%以上を複数実現してきた経験から解説します。</p>
+  <p class="hero-meta">小西マーケティング｜2026.04</p>
+</div>
+<div class="author-box">
+  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得し、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
+</div>
+<div class="article-body">
+
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「開発ストーリー」から始まるページが、広告流入者をことごとく離脱させる</h2>
+
+  <p>Makuakeのプロジェクトページを開く。冒頭に「私たちがこの商品を作ったきっかけ」「開発に費やした〇年間」「職人のこだわり」が続く。Makuakeの中から能動的にプロジェクトを探してきたサポーターには、この文脈が届く場合がある。</p>
+
+  <p>しかしFacebook広告から受動的に流入した読者の状態は異なる。SNSのフィードを流し見していて広告バナーに目が止まった。クリックした。ページが開いた。この状態の読者は「開発のきっかけ」を読む前に「自分にとって関係があるのか」という問いを持っている。この問いに答えが届かなければ、数秒で離脱する。</p>
+
+  <div class="insight">
+    広告から来た読者と、Makuake内から来た読者は、ページを開く状態が根本的に異なる。<br>
+    <em>Makuake内からの流入者は「新しいプロジェクトを探している」という能動的な状態でページを開く。広告流入者は「これが自分に関係あるかどうかを数秒で判断しようとしている」という状態でページを開く。同じページが両者に機能するとは限らない。ROASが低いプロジェクトの共通点の一つは、広告流入者の状態に合わせた冒頭の構成設計が存在しないことだ。</em>
+  </div>
+
+  <p>Makuakeのページ制作の業界では長年、「開発ストーリーや作り手の想いを丁寧に伝えること」がページの基本だという方向で情報が提供されてきた。Makuakeのセミナーも、クラウドファンディング支援会社も、この方向でページ制作のアドバイスをする。しかしMakuake内流入者向けの構成設計と、SNS広告流入者向けの構成設計は、出発点が異なる。この区別が見えないまま広告を打ち続けることが、ROASが改善しない状態を固定する。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">広告は「倍率」だ。ページの構成設計が「底数」だ——ROASを決める変数の構造</h2>
+
+  <p>広告の役割は「より多くの読者をより効率よくページに届けること」だ。これは倍率の最適化だ。ROASを決める変数には、この倍率の他に「底数」が存在する。「ページに来た読者が支援を決断する確信を受け取れる確率（申し込み率）」が底数だ。</p>
+
+  <p>底数が低い状態で倍率を上げても、ROASは改善しない。広告費を増やすほど「支援に向かわない訪問者」の数だけが増える。ROASが1.0を割り込んだ状態でさらに広告費を追加することは、底数が変わらない限り赤字の規模を拡大する方向に働く。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">「広告最適化」と「ページの構成設計」が答える変数の違い</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">広告最適化が改善する変数（倍率）</div>
+      <div class="misrec-cell truth">CTR・CPC・ターゲティングの精度。「より少ない費用でより多くの読者をページに届ける」効率の最適化。ページに来た後の申し込み率には直接答えない</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">申し込み率を決める変数（底数）</div>
+      <div class="misrec-cell truth">「広告から来た読者がページ冒頭でなぜ今これに支援すべきかという確信を受け取れる全体の構成設計が存在するか」。この変数がROASの底数を決める。広告最適化はこの変数に直接答えない</div>
+    </div>
+  </div>
+
+  <p>代理店から「クリエイティブのA/Bテストをしましょう」「AIの学習期間です」という提案が来るとき、その提案は倍率の最適化に向かっている。底数が手つかずのまま倍率を最適化し続けることは、ROASが改善しない状態を精緻化することになりやすい。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「超早割〇%OFF」でCTRを上げても、離脱率は変わらない理由</h2>
+
+  <p>CTRを上げるために広告バナーで「超早割 最大〇%OFF」という訴求を強めた。クリック率が上がった。しかしページの直帰率は変わらない。ROASはむしろ悪化している。</p>
+
+  <p>お得感の訴求でクリックした読者は「価格が安いから来た」という状態でページを開く。この層がページ冒頭で「なぜ今、他でもなくこれに支援すべきか」という確信を受け取れない場合、「割引があっても今は買わなくていい」と離脱する。お得感でCTRを上げるほど「お得感以外では動かない読者」が集まりやすくなる構造がある。</p>
+
+  <div class="callout">
+    <strong>「Makuakeは応援購入だから、SNS広告から来た一般ユーザーとの相性がそもそも悪い」という考え方について。</strong><br>
+    相性の問題ではない。SNS広告から来た読者も、自分の悩みが解決するという確信が届けば支援に向かう。問いの場所は媒体の相性ではなく、「広告から来た読者の状態に合わせた冒頭の構成設計がページに存在するか」という変数にある。この変数が機能している状態では、SNS広告からの流入もROASが合う方向に向かう可能性がある。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">広告を止めるべきか追加すべきか——判断できない状態の正体</h2>
+
+  <p>毎日数千〜数万円の広告費が消費されている。ROASは1.0を割り込んでいる。「広告を止めると支援が来なくなるかもしれない。しかし続けると赤字が膨らむ」——この判断ができない状態が続く。管理画面とページの数字を往復して疲弊する。</p>
+
+  <p>この判断がつかない状態は、「底数（申し込み率）」が把握できていないことから生まれる。底数が機能している状態では「広告を増やせばROASは合う」という判断ができる。底数が機能していない状態では「広告を増やしても赤字が増えるだけ」という判断が先に来る。どちらの状態にあるかを把握することが、「止めるか追加するか」という判断より先に必要な問いだ。</p>
+
+  <ul class="prob-list">
+    <li data-num="✓">Facebook広告でクリックは来ているがROASが1.0を割り込んでいる</li>
+    <li data-num="✓">代理店から「クリエイティブ改善」「AI学習待ち」という提案が続き、申し込み率が変わらない</li>
+    <li data-num="✓">「超早割」のお得感訴求でCTRを上げたが直帰率が変わらずROASが悪化した</li>
+    <li data-num="✓">広告を止めるべきか追加すべきか判断できず、管理画面と売上数字の往復に疲弊している</li>
+  </ul>
+
+  <div class="cta-block">
+    <div class="cta-block-label">無料診断</div>
+    <div class="cta-block-title">広告の最適化より先に、現在のプロジェクトページに「広告から来た読者が確信を受け取れる構成設計」が存在するかを確認する。</div>
+    <div class="cta-block-sub">
+      ROASが改善しない原因が広告設定にあるのかページの構成設計にあるのかを特定することが先です。<br>
+      プロジェクトページのURLを送るだけで、2営業日以内に診断レポートをお送りします。
+    </div>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">広告の追加より先にページの構成設計を診断する</a>
+    <div class="cta-note">※営業電話は一切いたしません。</div>
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+
+  <p>Makuakeと広告を組み合わせる業界では長年、「よりターゲティング精度の高い広告運用」「より引きの強いクリエイティブ」「より高いCTRを実現するバナー制作」がROASを改善する正解だという方向で情報が提供されてきた。広告代理店も、クラウドファンディング支援会社も、「広告最適化がROASの鍵だ」という枠組みで提案し続けている。その枠組みの中で倍率の最適化を続けることが、「クリックは来るがROASが合わない」という状態と「広告費の赤字だけが膨らむ」という状態を固定する。</p>
+
+  <p>MakuakeのROASが低いプロジェクトに共通するページ設計の欠陥は一点だ。「広告から受動的に流入した読者の状態に合わせた冒頭の構成設計が存在しない」こと。この変数が底数として機能していない状態で広告最適化という倍率を追い続けることは、ROASの改善には繋がりにくい。底数を確認することが、広告への次の投資判断より先に来る問いだ。</p>
+
+</div><!-- /article-body -->
+
+<div class="faq-section" id="article-faq">
+  <div class="faq-label">よくある質問</div>
+  <div class="faq-item">
+    <div class="faq-q">MakuakeのROASが低いプロジェクトのページには何が欠けていますか？</div>
+    <div class="faq-a">「広告から来た潜在層がページ冒頭でなぜこれに支援すべきかという確信を受け取れる構成設計」が存在しないことが共通しています。広告から受動的に流入した読者は、まだ商品への必要性が顕在化していない状態でページを開きます。この状態の読者に「開発ストーリー」や「職人のこだわり」を届けても、「自分には関係ない」として数秒で離脱します。ページ冒頭にこの層に向けた構成設計が存在することが、広告ROASを改善する根本の変数です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Makuakeで広告を打ってもROASが改善しない場合、広告代理店を変えるべきですか？</div>
+    <div class="faq-a">ページの構成設計が手つかずのまま代理店を変えても、ROASが改善しにくい状態は続きます。代理店の専門性は「より効率よくページに人を届けること」にあります。「ページに来た読者が支援を決断する確信を届ける全体の構成設計」は代理店の業務範囲の外側にあります。代理店を変える前に、現在のページの構成設計を診断することが先です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Makuakeの広告でお得感（超早割・割引率）を強調してCTRを上げても支援に繋がらないのはなぜですか？</div>
+    <div class="faq-a">お得感でクリックした読者は「価格が安いから来た」という状態でページを開きます。この層がページで「なぜ今、他でもなくこれに支援すべきか」という確信を受け取れない場合、「今は買わなくていいや」と離脱します。CTRが上がってROASが改善しない状態は、クリエイティブではなくページの構成設計が変数になっています。</div>
+  </div>
+</div>
+
+<div class="faq-section nextstep-faq">
+  <div class="faq-label">Next Step</div>
+  <div class="faq-item">
+    <div class="faq-q">広告を打ちながら並行してページの構成設計を改善することはできますか？</div>
+    <div class="faq-a">可能です。ただしページの構成設計が機能していない状態で広告予算を増やし続けることは、ROASの悪化を加速させる可能性があります。まず現在のページに「広告から来た読者が確信を受け取れる構成設計」が存在するかを診断することで、広告側とページ側のどちらを先に改善すべきかが明確になります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Makuake内からの流入向けページと、SNS広告流入向けページは別に作る必要がありますか？</div>
+    <div class="faq-a">別々に作る必要はありませんが、「広告から来た読者の状態に合わせた冒頭の構成設計」が存在するページは、Makuake内からの流入者にも機能します。問いは「現在のページ冒頭が、来た読者の状態に問いかけているか」という一点です。診断でこの変数の有無を特定することができます。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">診断では、プロジェクトページのどのような視点を確認しますか？</div>
+    <div class="faq-a">「広告から来た読者がページ冒頭で確信を受け取れる構成設計が存在するか」を確認します。ROASが改善しない原因が広告設定にあるのかページの構成設計にあるのかが明確になります。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
+  </div>
+</div>
+
+<div class="cta-block" style="margin:0;">
+  <div class="cta-block-label">診断を申し込む</div>
+  <div class="cta-block-title">まず、現在のプロジェクトページに「広告から来た読者が確信を受け取れる構成設計」が存在するかを特定する。</div>
+  <div class="cta-block-sub">
+    構成設計が特定できれば、広告予算の継続・追加・削減の判断軸が明確になる。<br>
+    クリエイティブの変更より先に、この問いが手つかずになっていないかを確認する。<br>
+    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
+  </div>
+  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
+  <div class="cta-note">※営業電話はいたしません。</div>
+</div>
+
+<div class="author-profile">
+  <div class="author-profile-label">この記事を書いた人</div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+  </div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+
+<div class="related-section">
+  <div class="related-label">関連記事</div>
+  <ul class="related-list">
+    <li><a href="https://konishi-marketing.com/articles/makuake-roas-agaranai-hontono-riyu.html">MakuakeのプロジェクトページでROASが上がらない本当の理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/makuake-facebook-kokoku-kumiawaeru-shishin.html">MakuakeプロジェクトにFacebook広告を組み合わせるときの指針</a></li>
+    <li><a href="https://konishi-marketing.com/articles/makuake-supporter-shien-kimeru-shunkan-shinri.html">Makuakeのサポーターが支援を決める瞬間の心理</a></li>
+  </ul>
+</div>
+
+<footer class="site-footer">
+  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+
+</div><!-- /site-wrap -->
+</body>
+</html>
