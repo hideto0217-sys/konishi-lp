@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="only light">
+<link rel="canonical" href="https://konishi-marketing.com/articles/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>記事一覧｜EC・物販の売れない原因を販売チャネルごとに整理する｜小西マーケティング</title>
+<meta name="description" content="楽天市場、Yahoo!ショッピング、Amazon、自社EC（Meta広告）、Makuake。販売チャネルごとに異なる心理段階と購買行動を整理し、LP・商品ページ・広告ファネルの改善点を解説する小西マーケティングの記事一覧です。">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#1a2744;
+  --navy-light:#243461;
+  --gold:#c9a84c;
+  --gold-lt:#e8d5a3;
+  --white:#ffffff;
+  --paper:#f8f7f4;
+  --g100:#f1f0ed;
+  --g200:#e4e2dc;
+  --g400:#a09e97;
+  --g600:#6b6860;
+  --g800:#3a3834;
+  --text:#1e1d1a;
+  --serif:'Noto Serif JP',serif;
+  --sans:'Noto Sans JP',sans-serif;
+}
+html{font-size:16px;scroll-behavior:smooth;background:var(--paper);}
+body{font-family:var(--sans);color:var(--text);background:var(--paper);line-height:1.85;-webkit-font-smoothing:antialiased;}
+a{color:inherit;}
+.page{max-width:1080px;margin:0 auto;background:var(--white);box-shadow:0 0 0 1px rgba(26,39,68,.04);}
+.hd{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);border-bottom:1px solid var(--g200);padding:.9rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.hd-logo{font-family:var(--serif);font-size:.85rem;font-weight:700;letter-spacing:.08em;color:var(--navy);text-decoration:none;}
+.hd-nav{display:flex;align-items:center;gap:1.25rem;}
+.hd-nav a{font-size:.75rem;font-weight:700;color:var(--g600);text-decoration:none;letter-spacing:.04em;}
+.hd-cta{display:inline-block;background:var(--navy);color:var(--white)!important;font-size:.78rem;font-weight:700;letter-spacing:.06em;padding:.5rem 1.4rem;text-decoration:none;border-bottom:2px solid var(--gold);transition:opacity .2s;}
+.hd-cta:hover{opacity:.85;}
+.hero{background:var(--navy);padding:5.5rem 2.5rem 4.75rem;border-bottom:4px solid var(--gold);position:relative;overflow:hidden;}
+.hero::after{content:'';position:absolute;right:2.5rem;top:2.5rem;width:180px;height:180px;border:1px solid rgba(201,168,76,.25);transform:rotate(45deg);}
+.hero-inner{max-width:780px;position:relative;z-index:1;}
+.hero-label{display:inline-flex;align-items:center;gap:.6rem;font-size:.62rem;font-weight:700;letter-spacing:.25em;color:var(--gold-lt);text-transform:uppercase;margin-bottom:1.5rem;}
+.hero-label::before{content:'';width:28px;height:2px;background:var(--gold);display:block;}
+.hero-h1{font-family:var(--serif);font-size:clamp(2rem,5vw,3.9rem);font-weight:700;color:var(--white);line-height:1.24;letter-spacing:.01em;margin-bottom:1.35rem;}
+.hero-h1 em{font-style:normal;display:block;font-size:.43em;line-height:1.75;margin-top:.7rem;color:var(--gold-lt);}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2.05;max-width:680px;margin-bottom:2rem;}
+.hero-actions{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);font-size:.95rem;font-weight:700;letter-spacing:.05em;padding:.86rem 2rem;text-decoration:none;border-bottom:3px solid #a8893a;transition:opacity .2s;}
+.btn:hover{opacity:.88;}
+.btn-sub{display:inline-block;color:rgba(255,255,255,.72);font-size:.83rem;text-decoration:underline;text-underline-offset:4px;}
+.statement{background:var(--paper);padding:2.6rem 2rem;text-align:center;border-bottom:1px solid var(--g200);}
+.statement-main{font-family:var(--serif);font-size:clamp(1.15rem,3vw,1.8rem);font-weight:700;color:var(--navy);line-height:1.65;margin-bottom:.55rem;}
+.statement-sub{font-size:.92rem;color:var(--g600);line-height:1.95;}
+.sec{padding:4.5rem 2rem;}
+.sec--paper{background:var(--paper);}
+.sec--white{background:var(--white);}
+.sec--navy{background:var(--navy);}
+.inner{max-width:920px;margin:0 auto;}
+.inner-n{max-width:720px;margin:0 auto;}
+.sec-label{font-size:.62rem;font-weight:700;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:.9rem;}
+.sec-h2{font-family:var(--serif);font-size:clamp(1.65rem,4vw,2.75rem);font-weight:700;color:var(--navy);line-height:1.32;letter-spacing:.01em;margin-bottom:1.25rem;}
+.sec-p{font-size:.98rem;color:var(--g600);line-height:2.1;max-width:760px;}
+.channel-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--g200);margin-top:2.25rem;border:1px solid var(--g200);}
+.channel-card{background:var(--white);padding:1.7rem 1.25rem 1.45rem;text-decoration:none;min-height:230px;display:flex;flex-direction:column;transition:background .18s,transform .18s;}
+.channel-card:hover{background:var(--paper);}
+.channel-en{font-size:.58rem;font-weight:700;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin-bottom:.55rem;}
+.channel-name{font-family:var(--serif);font-size:1.08rem;font-weight:700;color:var(--navy);line-height:1.45;margin-bottom:.75rem;}
+.channel-desc{font-size:.8rem;color:var(--g600);line-height:1.85;flex:1;}
+.channel-link{font-size:.72rem;font-weight:700;color:var(--navy);letter-spacing:.06em;margin-top:1rem;}
+.featured-wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:2rem;margin-top:2.25rem;align-items:stretch;}
+.featured-main{background:var(--navy);color:var(--white);padding:2.25rem;text-decoration:none;display:flex;flex-direction:column;min-height:330px;border-bottom:4px solid var(--gold);}
+.article-tag{font-size:.62rem;font-weight:700;letter-spacing:.18em;color:var(--gold-lt);text-transform:uppercase;margin-bottom:1rem;}
+.featured-title{font-family:var(--serif);font-size:clamp(1.55rem,3vw,2.25rem);font-weight:700;line-height:1.45;margin-bottom:1rem;color:var(--white);}
+.featured-desc{font-size:.92rem;color:rgba(255,255,255,.72);line-height:2;flex:1;}
+.article-arrow{font-size:.8rem;font-weight:700;color:var(--gold-lt);margin-top:1.5rem;letter-spacing:.05em;}
+.featured-side{display:grid;grid-template-columns:1fr;gap:1px;background:var(--g200);border:1px solid var(--g200);}
+.mini-card{background:var(--white);padding:1.35rem;text-decoration:none;display:flex;flex-direction:column;transition:background .18s;}
+.mini-card:hover{background:var(--paper);}
+.mini-card .article-tag{color:var(--gold);margin-bottom:.65rem;}
+.mini-title{font-size:.92rem;font-weight:700;color:var(--navy);line-height:1.65;}
+.guide-box{margin-top:2.25rem;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--g200);border:1px solid var(--g200);}
+.guide-cell{background:var(--white);padding:1.5rem;}
+.guide-cell:nth-child(even){background:var(--paper);}
+.guide-label{font-size:.6rem;font-weight:700;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin-bottom:.6rem;display:block;}
+.guide-title{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.55;margin-bottom:.5rem;}
+.guide-text{font-size:.86rem;color:var(--g600);line-height:1.9;}
+.guide-cell{text-decoration:none;display:block;transition:background .18s;}
+.guide-cell:hover{background:var(--paper);}
+.guide-link{display:inline-block;margin-top:.8rem;font-size:.72rem;font-weight:700;color:var(--navy);letter-spacing:.06em;}
+.article-section{margin-top:3.5rem;}
+.article-section:first-of-type{margin-top:2.25rem;}
+.cat-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;border-bottom:2px solid var(--gold);padding-bottom:.75rem;margin-bottom:1px;}
+.cat-title{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--navy);line-height:1.4;}
+.cat-note{font-size:.75rem;color:var(--g400);line-height:1.6;}
+.article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--g200);border:1px solid var(--g200);border-top:none;}
+.article-card{background:var(--white);padding:1.35rem;text-decoration:none;min-height:180px;display:flex;flex-direction:column;transition:background .18s;}
+.article-card:hover{background:var(--paper);}
+.article-card .article-tag{color:var(--gold);margin-bottom:.55rem;}
+.article-title{font-size:.92rem;font-weight:700;color:var(--navy);line-height:1.65;margin-bottom:.7rem;}
+.article-desc{font-size:.78rem;color:var(--g600);line-height:1.8;flex:1;}
+.article-meta{font-size:.68rem;color:var(--g400);margin-top:1rem;letter-spacing:.04em;}
+.cta-band{background:var(--navy);padding:3.25rem 2rem;text-align:center;border-top:1px solid rgba(255,255,255,.08);border-bottom:4px solid var(--gold);}
+.cta-band-label{font-size:.62rem;font-weight:700;letter-spacing:.25em;color:var(--gold-lt);text-transform:uppercase;margin-bottom:.85rem;}
+.cta-band-title{font-family:var(--serif);font-size:clamp(1.5rem,4vw,2.5rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:.85rem;}
+.cta-band-text{font-size:.92rem;color:rgba(255,255,255,.72);line-height:2;max-width:720px;margin:0 auto 1.5rem;}
+.form-sec{padding:4.5rem 2rem;background:var(--paper);}
+.form-wrap{max-width:640px;margin:0 auto;}
+.form-h{font-family:var(--serif);font-size:clamp(1.65rem,4vw,2.75rem);font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.75rem;}
+.form-h em{font-style:normal;color:var(--gold);}
+.form-lead{font-size:.9rem;color:var(--g600);line-height:1.9;margin-bottom:2rem;}
+.form-note-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1.75rem;}
+.form-badge{font-size:.72rem;color:var(--g600);padding:.4rem .85rem;border:1px solid var(--g200);background:var(--white);line-height:1.6;}
+.fld{margin-bottom:1.3rem;}
+.fld>label,.fld-ttl{display:block;font-size:.8rem;font-weight:700;color:var(--navy);margin-bottom:.45rem;letter-spacing:.04em;}
+.req{font-size:.65rem;font-weight:700;color:var(--gold);margin-left:.4rem;letter-spacing:.08em;}
+.fld input,.fld select,.fld textarea{width:100%;padding:.85rem 1rem;border:1px solid var(--g200);background:var(--white);font-family:var(--sans);font-size:.93rem;color:var(--text);line-height:1.6;outline:none;transition:border-color .2s;appearance:none;}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--navy);}
+.hint{display:block;font-size:.72rem;color:var(--g400);margin-top:.4rem;line-height:1.65;}
+.select-wrap{position:relative;}
+.select-wrap::after{content:'▾';position:absolute;right:1rem;top:50%;transform:translateY(-50%);font-size:.75rem;color:var(--g400);pointer-events:none;}
+.fld select{padding-right:2.5rem;cursor:pointer;}
+.radio-group{display:flex;flex-direction:column;gap:.75rem;}
+.radio-card{display:flex;align-items:flex-start;gap:.75rem;padding:.9rem 1rem;border:1px solid var(--g200);background:var(--white);cursor:pointer;transition:.15s;}
+.radio-card:hover{border-color:var(--navy);}
+.radio-card input{display:none;}
+.radio-ui{width:16px;height:16px;border:2px solid var(--g400);border-radius:50%;margin-top:.25rem;position:relative;flex-shrink:0;}
+.radio-card input:checked+.radio-ui{border-color:var(--navy);}
+.radio-card input:checked+.radio-ui::after{content:'';position:absolute;top:50%;left:50%;width:8px;height:8px;background:var(--navy);border-radius:50%;transform:translate(-50%,-50%);}
+.radio-text strong{display:block;font-size:.9rem;color:var(--navy);}
+.radio-text small{display:block;font-size:.75rem;color:var(--g600);line-height:1.6;}
+.radio-card{width:100%;font-family:var(--sans);text-align:left;color:inherit;border-radius:0;appearance:none;-webkit-appearance:none;}
+.radio-card.is-active{border-color:var(--navy);background:var(--paper);}
+.radio-card.is-active .radio-ui{border-color:var(--navy);}
+.radio-card.is-active .radio-ui::after{content:'';position:absolute;top:50%;left:50%;width:8px;height:8px;background:var(--navy);border-radius:50%;transform:translate(-50%,-50%);}
+
+.form-submit{width:100%;padding:1.1rem;margin-top:.5rem;background:var(--navy);color:var(--white);font-family:var(--sans);font-size:1rem;font-weight:700;letter-spacing:.06em;border:none;border-bottom:3px solid var(--gold);cursor:pointer;transition:opacity .2s;}
+.form-submit:hover{opacity:.88;}
+.form-disc{margin-top:1.25rem;font-size:.72rem;color:var(--g400);line-height:1.8;text-align:center;}
+.form-success{display:none;text-align:center;padding:3rem 2rem;background:var(--white);border:1px solid var(--g200);}
+.form-success.show{display:block;}
+.success-icon{font-size:2rem;margin-bottom:1rem;color:var(--gold);}
+.success-ttl{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;}
+.success-p{font-size:.9rem;color:var(--g600);line-height:1.9;}
+.author-strip{background:var(--white);padding:2.5rem 2rem;border-top:1px solid var(--g200);}
+.author-box{max-width:820px;margin:0 auto;display:flex;gap:1.25rem;align-items:center;}
+.author-img{width:76px;height:76px;min-width:76px;overflow:hidden;border-radius:4px;border:2px solid var(--gold);}
+.author-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
+.author-name{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.3rem;}
+.author-text{font-size:.8rem;color:var(--g600);line-height:1.8;}
+.foot{padding:1.75rem 2rem;background:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;}
+.foot-name{font-size:.78rem;font-weight:700;color:rgba(255,255,255,.65);}
+.foot-achieve{font-size:.68rem;color:var(--gold-lt);font-weight:700;margin-top:3px;}
+.foot-link{font-size:.72rem;color:rgba(255,255,255,.3);text-decoration:none;}
+@media(max-width:900px){.channel-grid{grid-template-columns:repeat(2,1fr);}.featured-wrap{grid-template-columns:1fr;}.article-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:680px){.page{max-width:none;}.hd{padding:.75rem 1.25rem;}.hd-nav a:not(.hd-cta){display:none;}.hero{padding:4rem 1.25rem 3.5rem;}.hero::after{display:none;}.statement,.sec,.form-sec,.cta-band,.author-strip{padding-left:1.25rem;padding-right:1.25rem;}.channel-grid,.article-grid,.guide-box{grid-template-columns:1fr;}.featured-main{padding:1.75rem;min-height:auto;}.cat-head{align-items:flex-start;flex-direction:column;}.author-box{align-items:flex-start;}.foot{flex-direction:column;align-items:flex-start;}}
+
+/* robust consult type radios */
+.radio-card input[type="radio"]{display:block!important;width:auto!important;height:auto!important;margin:.25rem .25rem 0 0!important;accent-color:var(--navy);flex-shrink:0;position:static!important;opacity:1!important;}
+.radio-card .radio-ui{display:none!important;}
+.radio-card{position:relative;user-select:none;}
+
+
+/* robust consult switch: CSS-only fallback */
+.consult-toggle{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;}
+.consult-select .radio-card{display:flex;align-items:flex-start;gap:.75rem;padding:.9rem 1rem;border:1px solid var(--g200);background:var(--white);cursor:pointer;transition:.15s;}
+.consult-select .radio-ui{display:block!important;width:16px;height:16px;border:2px solid var(--g400);border-radius:50%;margin-top:.25rem;position:relative;flex-shrink:0;}
+#consultDiag:checked ~ .consult-select label[for="consultDiag"],
+#consultConsult:checked ~ .consult-select label[for="consultConsult"]{border-color:var(--navy);background:var(--paper);}
+#consultDiag:checked ~ .consult-select label[for="consultDiag"] .radio-ui,
+#consultConsult:checked ~ .consult-select label[for="consultConsult"] .radio-ui{border-color:var(--navy);}
+#consultDiag:checked ~ .consult-select label[for="consultDiag"] .radio-ui::after,
+#consultConsult:checked ~ .consult-select label[for="consultConsult"] .radio-ui::after{content:'';position:absolute;top:50%;left:50%;width:8px;height:8px;background:var(--navy);border-radius:50%;transform:translate(-50%,-50%);}
+#consultConsult:checked ~ #diagFields{display:none!important;}
+
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CollectionPage",
+  "name":"記事一覧｜小西マーケティング",
+  "description":"楽天市場、Yahoo!ショッピング、Amazon、自社EC（Meta広告）、Makuakeの販売チャネル別に、LP・商品ページ・広告ファネルの改善点を整理する記事一覧です。",
+  "url":"https://konishi-marketing.com/articles/",
+  "publisher":{"@type":"Organization","name":"小西マーケティング","url":"https://konishi-marketing.com"},
+  "mainEntity":{
+    "@type":"ItemList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"url":"https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html","name":"楽天商品ページのCVRが上がらない本当の理由"},
+      {"@type":"ListItem","position":2,"url":"https://konishi-marketing.com/articles/rakuten-access-aru-noni-urenai-kyotsuten.html","name":"楽天でアクセスはあるのに売れない店舗に共通する課題"},
+      {"@type":"ListItem","position":3,"url":"https://konishi-marketing.com/articles/yahoo-urenai-shohin-page-kyotsuten.html","name":"Yahoo!ショッピングで売れない商品ページの共通点"},
+      {"@type":"ListItem","position":4,"url":"https://konishi-marketing.com/articles/amazon-urenai-shohin-page-mondai.html","name":"Amazonで売れない商品ページに共通する3つの問題"},
+      {"@type":"ListItem","position":5,"url":"https://konishi-marketing.com/articles/meta-funnel-konsaru-erabikata.html","name":"Meta広告ファネル改善コンサルを選ぶ基準"},
+      {"@type":"ListItem","position":6,"url":"https://konishi-marketing.com/articles/makuake-shien-atsumara-nai-kyotsuten.html","name":"Makuakeで支援が集まらないプロジェクトの共通点"},
+      {"@type":"ListItem","position":7,"url":"https://konishi-marketing.com/articles/ec-shohin-page-design-kaete-mo-ugokanu.html","name":"ECで商品ページのデザインを変えても数字が動かない理由"}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"小西マーケティング","item":"https://konishi-marketing.com/"},
+    {"@type":"ListItem","position":2,"name":"記事一覧","item":"https://konishi-marketing.com/articles/"}
+  ]
+}
+</script>
+</head>
+<body>
+<div class="page">
+<header class="hd">
+  <a href="https://konishi-marketing.com/" class="hd-logo">小西マーケティング</a>
+  <nav class="hd-nav" aria-label="ページ内ナビゲーション">
+    <a href="#channels">チャネル別</a>
+    <a href="#articles">記事一覧</a>
+    <a href="#channels" class="hd-cta">記事を選ぶ</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-label">Owned Media</div>
+    <h1 class="hero-h1">EC・物販の売れない原因を、<br>販売チャネルごとに整理する。<em>楽天、Yahoo!ショッピング、Amazon、自社EC、Makuake。<br>同じLP改善でも、流入時点の心理段階と購買行動は変わります。</em></h1>
+    <p class="hero-lead">広告費を増やした。デザインを変えた。商品説明も足した。それでも数字が動かない。原因は、売り場ごとに違う「購入前の心理段階」を同じものとして扱っていることにあります。</p>
+    <div class="hero-actions">
+      <a href="#channels" class="btn">販売チャネルから記事を選ぶ</a>
+      <a href="#guide" class="btn-sub">起きている現象から記事を選ぶ</a>
+    </div>
+  </div>
+</section>
+
+<div class="statement">
+  <div class="statement-main">記事を探す場所ではなく、<br>次に見るべき問いを決める場所。</div>
+  <div class="statement-sub">商品ページ、広告、記事LP、プロジェクトページ。<br>売れない原因は、チャネルごとの心理段階を見れば切り分けられます。</div>
+</div>
+
+<section class="sec sec--white" id="channels">
+  <div class="inner">
+    <span class="sec-label">Channel</span>
+    <h2 class="sec-h2">まず、売り場を選ぶ。</h2>
+    <p class="sec-p">楽天で起きる離脱と、Meta広告から自社ECで起きる離脱は同じではありません。検索して比較している人と、SNSから偶然入ってきた人では、渡すべき情報の順番が変わります。</p>
+    <div class="channel-grid">
+      <a class="channel-card" href="#rakuten">
+        <span class="channel-en">Rakuten</span>
+        <div class="channel-name">楽天市場</div>
+        <p class="channel-desc">検索一覧、サムネイル、商品ページ、レビュー。比較される前提の中で、どう選ばれるかを整理します。</p>
+        <span class="channel-link">記事を見る →</span>
+      </a>
+      <a class="channel-card" href="#yahoo">
+        <span class="channel-en">Yahoo</span>
+        <div class="channel-name">Yahoo!ショッピング</div>
+        <p class="channel-desc">価格、ポイント、モール内導線。PayPay経済圏の中で、購入判断が止まる箇所を整理します。</p>
+        <span class="channel-link">記事を見る →</span>
+      </a>
+      <a class="channel-card" href="#amazon">
+        <span class="channel-en">Amazon</span>
+        <div class="channel-name">Amazon</div>
+        <p class="channel-desc">検索順位、レビュー、商品カタログ、A+コンテンツ。カタログ型ECで、選ばれる判断材料を整理します。</p>
+        <span class="channel-link">記事を見る →</span>
+      </a>
+      <a class="channel-card" href="#meta">
+        <span class="channel-en">Meta Funnel</span>
+        <div class="channel-name">自社EC<br>Meta広告</div>
+        <p class="channel-desc">Meta広告、記事LP、本LP、購入後導線。広告流入から購入までの心理段階を整理します。</p>
+        <span class="channel-link">記事を見る →</span>
+      </a>
+      <a class="channel-card" href="#makuake">
+        <span class="channel-en">Crowdfunding</span>
+        <div class="channel-name">Makuake<br>クラファン</div>
+        <p class="channel-desc">プロジェクトページ、初速、応援購入、申し込み率。まだ知られていない商品の判断段階を整理します。</p>
+        <span class="channel-link">記事を見る →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--paper">
+  <div class="inner">
+    <span class="sec-label">Start Here</span>
+    <h2 class="sec-h2">最初に読む記事。</h2>
+    <p class="sec-p">売り場ごとの違いを見る前に、まず「なぜページを変えても数字が動かないのか」を確認してください。ここが見えると、各チャネルの記事が読みやすくなります。</p>
+    <div class="featured-wrap">
+      <a class="featured-main" href="https://konishi-marketing.com/articles/ec-shohin-page-design-kaete-mo-ugokanu.html">
+        <span class="article-tag">EC総合 / 商品ページ改善</span>
+        <div class="featured-title">ECで商品ページのデザインを変えても数字が動かない理由</div>
+        <p class="featured-desc">デザインを変えた。写真も整えた。説明も増やした。それでも数字が動かない時、読者の心理段階とページの順番がズレている可能性があります。まず全チャネル共通の前提を整理します。</p>
+        <span class="article-arrow">読む →</span>
+      </a>
+      <div class="featured-side">
+        <a class="mini-card" href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">
+          <span class="article-tag">楽天市場 / CVR改善</span>
+          <div class="mini-title">楽天商品ページのCVRが上がらない本当の理由</div>
+        </a>
+        <a class="mini-card" href="https://konishi-marketing.com/articles/meta-funnel-konsaru-erabikata.html">
+          <span class="article-tag">自社EC / Meta広告</span>
+          <div class="mini-title">Meta広告ファネル改善コンサルを選ぶ基準</div>
+        </a>
+        <a class="mini-card" href="https://konishi-marketing.com/articles/makuake-shien-atsumara-nai-kyotsuten.html">
+          <span class="article-tag">Makuake</span>
+          <div class="mini-title">Makuakeで支援が集まらないプロジェクトの共通点</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--white" id="guide">
+  <div class="inner">
+    <span class="sec-label">Reading Guide</span>
+    <h2 class="sec-h2">どこで止まっているかで読む。</h2>
+    <p class="sec-p">販売チャネルだけでは、原因を絞りきれないことがあります。いま起きている現象からも、必要な記事へ進めるようにしました。</p>
+    <div class="guide-box">
+      <a class="guide-cell" href="#rakuten">
+        <span class="guide-label">Problem 01</span>
+        <div class="guide-title">アクセスはあるのに売れない</div>
+        <p class="guide-text">集客ではなく、商品ページ内の判断材料が不足している可能性があります。楽天、Yahoo、Amazonの記事から確認してください。</p>
+        <span class="guide-link">該当記事を見る →</span>
+      </a>
+      <a class="guide-cell" href="#meta">
+        <span class="guide-label">Problem 02</span>
+        <div class="guide-title">広告費を増やしても利益が残らない</div>
+        <p class="guide-text">広告流入とLPの心理段階がズレている可能性があります。自社EC（Meta）の記事から確認してください。</p>
+        <span class="guide-link">該当記事を見る →</span>
+      </a>
+      <a class="guide-cell" href="#articles">
+        <span class="guide-label">Problem 03</span>
+        <div class="guide-title">LPを直してもCVRが動かない</div>
+        <p class="guide-text">見た目の修正で終わり、構成の順番が変わっていない可能性があります。EC総合と楽天の記事から確認してください。</p>
+        <span class="guide-link">該当記事を見る →</span>
+      </a>
+      <a class="guide-cell" href="#makuake">
+        <span class="guide-label">Problem 04</span>
+        <div class="guide-title">新商品なのに初速が出ない</div>
+        <p class="guide-text">まだ知られていない商品の価値を、支援・購入の理由まで運べていない可能性があります。Makuakeの記事から確認してください。</p>
+        <span class="guide-link">該当記事を見る →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--paper" id="articles">
+  <div class="inner">
+    <span class="sec-label">Articles</span>
+    <h2 class="sec-h2">記事一覧。</h2>
+    <p class="sec-p">公開済みの記事を、販売チャネル別に整理しています。楽天、Yahoo!ショッピング、Amazon、自社EC、Makuake。それぞれの売り場で、購入判断が止まりやすい箇所を確認できます。</p>
+
+    <div class="article-section" id="rakuten">
+      <div class="cat-head"><div class="cat-title">楽天市場</div><div class="cat-note">検索一覧、サムネイル、商品ページCVR</div></div>
+      <div class="article-grid">
+        <a class="article-card" href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">
+          <span class="article-tag">楽天市場 / CVR改善</span>
+          <div class="article-title">楽天で商品ページの転換率（CVR）が上がらない本当の理由</div>
+          <p class="article-desc">広告費、デザイン、レビューを変えても数字が動かない店舗で起きている問題を整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+        <a class="article-card" href="https://konishi-marketing.com/articles/rakuten-access-aru-noni-urenai-kyotsuten.html">
+          <span class="article-tag">楽天市場 / 商品ページ</span>
+          <div class="article-title">楽天でアクセスはあるのに売れない店舗に共通する課題</div>
+          <p class="article-desc">検索流入はあるのに購入まで進まない店舗に共通する、商品ページ上の止まりどころを整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+        <a class="article-card" href="https://konishi-marketing.com/articles/rakuten-mazu-samune-kara-tetsukeru-tadashii-riyu.html">
+          <span class="article-tag">楽天市場 / サムネイル</span>
+          <div class="article-title">楽天商品ページ改善で「まずサムネから手をつける」が正しい理由</div>
+          <p class="article-desc">楽天の商品ページで、なぜ下部LPより先にサムネイル設計を整えるべきかを整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+        <a class="article-card" href="https://konishi-marketing.com/articles/rakuten-shohin-page-kaizen-irai-mae-ni-kakunin.html">
+          <span class="article-tag">楽天市場 / 改善依頼</span>
+          <div class="article-title">楽天で商品ページ改善を依頼する前に確認すべき3つのこと</div>
+          <p class="article-desc">外注前に確認すべきデータ、改善対象、依頼先の見極め方を整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="article-section" id="yahoo">
+      <div class="cat-head"><div class="cat-title">Yahoo!ショッピング</div><div class="cat-note">価格、ポイント、モール内比較</div></div>
+      <div class="article-grid">
+        <a class="article-card" href="https://konishi-marketing.com/articles/yahoo-urenai-shohin-page-kyotsuten.html">
+          <span class="article-tag">Yahoo! / 商品ページ</span>
+          <div class="article-title">Yahoo!ショッピングで売れない商品ページの共通点</div>
+          <p class="article-desc">価格とポイントで比較されやすい売り場で、商品ページが担うべき判断材料を整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+        <a class="article-card" href="https://konishi-marketing.com/articles/yahoo-koubairitsu-rakuten-yori-hikui-hontono-riyu.html">
+          <span class="article-tag">Yahoo! / 購買率</span>
+          <div class="article-title">Yahoo!ショッピングの購買率が楽天より低い本当の理由</div>
+          <p class="article-desc">楽天と同じ考え方では動きにくい、Yahoo!ショッピング固有の購買判断を整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+        <a class="article-card" href="https://konishi-marketing.com/articles/yahoo-kakaku-kyoso-makikomarenai-shohin-page-sekkei.html">
+          <span class="article-tag">Yahoo! / 価格競争</span>
+          <div class="article-title">Yahoo!ショッピングで価格競争に巻き込まれない商品ページの設計</div>
+          <p class="article-desc">ポイントや価格で比べられる前提の中で、別の判断軸を渡す方法を整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="article-section" id="amazon">
+      <div class="cat-head"><div class="cat-title">Amazon</div><div class="cat-note">検索順位、レビュー、A+コンテンツ</div></div>
+      <div class="article-grid">
+        <a class="article-card" href="https://konishi-marketing.com/articles/amazon-urenai-shohin-page-mondai.html">
+          <span class="article-tag">Amazon / 商品ページ</span>
+          <div class="article-title">Amazonで売れない商品ページに共通する3つの問題</div>
+          <p class="article-desc">カタログ型ECで選ばれるために、画像・説明・レビューがどう連動するべきかを整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+        <a class="article-card" href="https://konishi-marketing.com/articles/amazon-aplus-tsukutte-mo-uriage-kawaranu-riyu.html">
+          <span class="article-tag">Amazon / A+コンテンツ</span>
+          <div class="article-title">AmazonのA+コンテンツを作っても売上が変わらない理由</div>
+          <p class="article-desc">A+を追加しても購買判断が進まないとき、ページ内で何が不足しているかを整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+        <a class="article-card" href="https://konishi-marketing.com/articles/amazon-shohin-page-gaichuu-kakunin.html">
+          <span class="article-tag">Amazon / 外注判断</span>
+          <div class="article-title">Amazon商品ページ改善を外注する前に確認すべきこと</div>
+          <p class="article-desc">画像制作やA+制作を依頼する前に、改善対象をどう切り分けるべきかを整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="article-section" id="meta">
+      <div class="cat-head"><div class="cat-title">自社EC（Meta）</div><div class="cat-note">Meta広告、記事LP、本LP、CPO/ROAS</div></div>
+      <div class="article-grid">
+        <a class="article-card" href="https://konishi-marketing.com/articles/meta-kokoku-cpo-roas-kaizenshinai-kyotsuten.html">
+          <span class="article-tag">自社EC / Meta広告</span>
+          <div class="article-title">Meta広告でCPOやROASが改善しない自社ECに共通する問題</div>
+          <p class="article-desc">広告運用を変えてもCPOが下がらない時、LP側で何が止まっているかを整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+        <a class="article-card" href="https://konishi-marketing.com/articles/jisha-ec-meta-kokoku-nagashite-mo-seiyaku-shinai.html">
+          <span class="article-tag">自社EC / LP導線</span>
+          <div class="article-title">自社ECの商品ページにMeta広告からアクセスを流しても成約しない理由</div>
+          <p class="article-desc">クリックはあるのに購入が起きない時、広告ではなく受け皿側で起きている問題を整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+        <a class="article-card" href="https://konishi-marketing.com/articles/meta-kokoku-kiji-lp-to-lp-dochira-koka.html">
+          <span class="article-tag">自社EC / 記事LP</span>
+          <div class="article-title">Meta広告には記事LPとLPどちらが効果的か</div>
+          <p class="article-desc">Meta広告流入の心理段階に合わせて、記事LPと直LPの使い分けを整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+        <a class="article-card" href="https://konishi-marketing.com/articles/jisha-ec-shohin-page-meta-kokoku-tadashii-junjo.html">
+          <span class="article-tag">自社EC / 改善順序</span>
+          <div class="article-title">自社ECでLP改善とMeta広告を組み合わせる正しい順序</div>
+          <p class="article-desc">広告改善とLP改善をどう並べるべきか。投資順序を間違えないための基準を整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="article-section" id="makuake">
+      <div class="cat-head"><div class="cat-title">Makuake（クラファン）</div><div class="cat-note">プロジェクトページ、初速、申し込み率</div></div>
+      <div class="article-grid">
+        <a class="article-card" href="https://konishi-marketing.com/articles/makuake-shien-atsumara-nai-kyotsuten.html">
+          <span class="article-tag">Makuake / 申し込み率</span>
+          <div class="article-title">Makuakeで支援が集まらないプロジェクトの共通点</div>
+          <p class="article-desc">商品が新しいのに伝わらない。初速が出ないプロジェクトで起きている判断材料の不足を整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+        <a class="article-card" href="https://konishi-marketing.com/articles/makuake-project-page-kakikata-shien-atsumaru-kosei.html">
+          <span class="article-tag">Makuake / ページ構成</span>
+          <div class="article-title">Makuakeのプロジェクトページの書き方——支援が集まる構成とは</div>
+          <p class="article-desc">まだ知られていない商品の価値を、支援の理由まで運ぶページ構成を整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+        <a class="article-card" href="https://konishi-marketing.com/articles/makuake-supporter-shien-kimeru-shunkan-shinri.html">
+          <span class="article-tag">Makuake / 支援心理</span>
+          <div class="article-title">Makuakeのサポーターが支援を決める瞬間の心理</div>
+          <p class="article-desc">応援購入でサポーターが何を見て支援に進むのか、購入とは違う判断の動きを整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+        <a class="article-card" href="https://konishi-marketing.com/articles/makuake-roas-agaranai-hontono-riyu.html">
+          <span class="article-tag">Makuake / 広告導線</span>
+          <div class="article-title">MakuakeのプロジェクトページでROASが上がらない本当の理由</div>
+          <p class="article-desc">広告を回しても申し込み率が上がらない時、プロジェクトページ側で起きている問題を整理します。</p>
+          <span class="article-meta">読む →</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band-label">After Reading</div>
+  <div class="cta-band-title">記事で切り分けた後、個別に確認する。</div>
+  <p class="cta-band-text">まずは該当するチャネルの記事で、売れない原因の見方を整理してください。そのうえで自社ページのどこから直すべきかを確認したい場合は、URLを送るだけで診断レポートを受け取れます。</p>
+  <a href="#form" class="btn">必要なら無料診断へ進む</a>
+</section>
+
+<section class="form-sec" id="form">
+  <div class="form-wrap">
+    <span class="sec-label">無料診断</span>
+    <h2 class="form-h">記事で見えた違和感を、<br><em>自社ページで確認する。</em></h2>
+    <p class="form-lead">該当記事を読んだうえで、自社ページのどこから直すべきかを確認したい方へ。フォームへの入力は30秒。レポートはお申込みから2営業日以内にお送りします。</p>
+    <div class="form-note-row">
+      <span class="form-badge">✓ 営業電話は一切なし</span>
+      <span class="form-badge">✓ 診断後の有料提案はご希望の場合のみ</span>
+      <span class="form-badge">✓ 2営業日以内に返送</span>
+    </div>
+
+    <form id="diagForm">
+      <div class="fld">
+        <label>お名前<span class="req">必須</span></label>
+        <input type="text" name="name" placeholder="例：小西 秀人" required>
+      </div>
+      <div class="fld">
+        <label>メールアドレス<span class="req">必須</span></label>
+        <input type="email" name="email" placeholder="例：info@example.com" required>
+      </div>
+
+      <input class="consult-toggle" type="radio" name="consult_type" id="consultDiag" value="ページ診断" checked>
+      <input class="consult-toggle" type="radio" name="consult_type" id="consultConsult" value="事業相談">
+
+      <div class="fld consult-select">
+        <div class="fld-ttl">ご相談内容<span class="req">必須</span></div>
+        <div class="radio-group">
+          <label class="radio-card" for="consultDiag">
+            <span class="radio-ui"></span>
+            <span class="radio-text">
+              <strong>ページ診断を受けたい</strong>
+              <small>商品ページの改善点を具体的に知りたい方</small>
+            </span>
+          </label>
+          <label class="radio-card" for="consultConsult">
+            <span class="radio-ui"></span>
+            <span class="radio-text">
+              <strong>事業について相談したい</strong>
+              <small>売上・戦略・方向性を含めて相談したい方</small>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div id="diagFields">
+        <div class="fld">
+          <label>販売チャネル<span class="req">必須</span></label>
+          <div class="select-wrap">
+            <select name="channel" id="channelSelect">
+              <option value="" disabled selected>選択してください</option>
+              <option value="楽天市場">楽天市場</option>
+              <option value="Yahoo!ショッピング">Yahoo!ショッピング</option>
+              <option value="Amazon">Amazon</option>
+              <option value="自社EC（Meta広告）">自社EC（Meta広告）</option>
+              <option value="Makuake・クラウドファンディング">Makuake・クラウドファンディング</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+        </div>
+        <div class="fld" id="urlField">
+          <label>商品ページまたはプロジェクトページURL<span class="req">必須</span></label>
+          <input type="url" name="url" id="urlInput" placeholder="https://item.rakuten.co.jp/...">
+          <span class="hint">楽天・Amazon・Makuakeなど、診断したいページのURLをそのまま貼り付けてください</span>
+        </div>
+        <div class="fld">
+          <label>月間アクセス数（訪問数）<span class="req">必須</span></label>
+          <div class="select-wrap">
+            <select name="pv" id="pvSelect">
+              <option value="" disabled selected>選択してください</option>
+              <option>1,000未満</option>
+              <option>1,000〜3,000</option>
+              <option>3,000〜10,000</option>
+              <option>10,000〜30,000</option>
+              <option>30,000以上</option>
+              <option>把握していない</option>
+            </select>
+          </div>
+          <span class="hint">RMSやGoogle Analyticsで確認できるおおよその数字で構いません</span>
+        </div>
+        <div class="fld">
+          <label>現在のCVR（転換率）<span class="req">必須</span></label>
+          <div class="select-wrap">
+            <select name="cvr" id="cvrSelect">
+              <option value="" disabled selected>選択してください</option>
+              <option>1%未満</option>
+              <option>1〜2%</option>
+              <option>2〜3%</option>
+              <option>3〜5%</option>
+              <option>5%以上</option>
+              <option>把握していない</option>
+            </select>
+          </div>
+          <span class="hint">購入数 ÷ 訪問数 × 100 で計算できます。把握していない場合はそのまま選択してください</span>
+        </div>
+      </div>
+      <div class="fld">
+        <label>ご相談内容（任意）</label>
+        <textarea name="message" rows="5" id="messagePlaceholder" placeholder="例：&#10;・現在の課題（利益率が低い、売上が伸びない 等）&#10;・検討している施策（広告強化、クラファンなど）&#10;・今回相談したいこと"></textarea>
+        <span class="hint">分かる範囲で構いません。簡単で大丈夫です。</span>
+      </div>
+      <button type="submit" class="form-submit">診断・相談する</button>
+      <div class="form-disc">※本診断は分析に基づくものであり成果保証ではありません。<br>※診断結果は個別のLP・商品・市場状況により異なります。</div>
+    </form>
+
+    <div class="form-success" id="formSuccessDiag">
+      <div class="success-icon">✓</div>
+      <div class="success-ttl">お申し込みありがとうございます。</div>
+      <p class="success-p">2営業日以内に、診断レポートをお送りします。<br><br>レポートには以下の3点が記載されます。<br>① 今、売上を止めているポイント<br>② 最初に改善すべき1点<br>③ それにより失っている本来得られる利益の試算</p>
+    </div>
+    <div class="form-success" id="formSuccessConsult">
+      <div class="success-icon">✓</div>
+      <div class="success-ttl">お問い合わせありがとうございます。</div>
+      <p class="success-p">内容を確認のうえ、2営業日以内にご連絡いたします。<br><br>ご相談の方向性や課題感を事前にお聞きしたうえで、最適な対応をご提案します。</p>
+    </div>
+  </div>
+</section>
+
+<div class="author-strip">
+  <div class="author-box">
+    <div class="author-img"><img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="76" height="76"></div>
+    <div>
+      <div class="author-name">小西 秀人｜小西マーケティング</div>
+      <div class="author-text">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。</div>
+    </div>
+  </div>
+</div>
+
+<footer class="foot">
+  <div>
+    <div class="foot-name">小西 秀人｜小西マーケティング</div>
+    <div class="foot-achieve">楽天年間ランキング11回・総合1位2回 ／ Makuake ROAS2,000%以上を複数回達成</div>
+  </div>
+  <a href="https://konishi-marketing.com" class="foot-link">konishi-marketing.com</a>
+</footer>
+</div>
+
+<script>
+var GAS_URL = 'https://script.google.com/macros/s/AKfycbz_MtzGlFo9HkWpEQkdECfGoTgjL_KRU2zUfeiJGRTaU9dRcjY3KJyBP5SBIPl6KrSUxw/exec';
+var NOTIFY_EMAIL = 'konishi@konishi-marketing.com';
+function getConsultType(){var checked=document.querySelector('input[name="consult_type"]:checked');return checked?checked.value:'ページ診断';}
+function syncConsultForm(){var type=getConsultType();var message=document.getElementById('messagePlaceholder');if(!message)return;if(type==='事業相談'){message.placeholder='例：\n・現在の事業状況（チャネル・月商・課題感など）\n・相談したいテーマ（戦略・施策・方向性など）\n・その他、気になっていること';}else{message.placeholder='例：\n・現在の課題（利益率が低い、売上が伸びない 等）\n・検討している施策（広告強化、クラファンなど）\n・今回相談したいこと';}}
+document.addEventListener('DOMContentLoaded',function(){var diag=document.getElementById('consultDiag');var consult=document.getElementById('consultConsult');if(diag)diag.addEventListener('change',syncConsultForm);if(consult)consult.addEventListener('change',syncConsultForm);syncConsultForm();var form=document.getElementById('diagForm');if(!form)return;form.addEventListener('submit',function(e){e.preventDefault();var name=(form.querySelector('input[name="name"]')||{}).value||'';var email=(form.querySelector('input[name="email"]')||{}).value||'';var message=(form.querySelector('textarea[name="message"]')||{}).value||'';name=name.trim();email=email.trim();message=message.trim();var consultType=getConsultType();var isConsult=consultType==='事業相談';if(!name||!email){alert('お名前・メールアドレスは必須です。');return;}var btn=form.querySelector('.form-submit');btn.textContent='送信中...';btn.disabled=true;if(isConsult){var consultParams=new URLSearchParams({mode:'notify',name:name,email:email,message:message,consult_type:consultType,to:NOTIFY_EMAIL});var img1=new Image();img1.src=GAS_URL+'?'+consultParams.toString();setTimeout(function(){if(typeof gtag==='function')gtag('event','form_submit',{'event_category':'lead','event_label':'事業相談'});form.style.display='none';document.getElementById('formSuccessConsult').classList.add('show');},1000);return;}var channel=(document.getElementById('channelSelect')||{}).value||'';var url=(document.getElementById('urlInput')||{}).value||'';var pv=(document.getElementById('pvSelect')||{}).value||'';var cvr=(document.getElementById('cvrSelect')||{}).value||'';url=url.trim();if(!channel||!url){btn.textContent='診断・相談する';btn.disabled=false;alert('販売チャネルと商品ページURLは必須です。');return;}if(!pv||!cvr){btn.textContent='診断・相談する';btn.disabled=false;alert('月間アクセス数とCVRを選択してください。');return;}var diagParams=new URLSearchParams({name:name,email:email,channel:channel,url:url,pv:pv,cvr:cvr,consult_type:consultType});var img2=new Image();img2.src=GAS_URL+'?'+diagParams.toString();setTimeout(function(){if(typeof gtag==='function')gtag('event','form_submit',{'event_category':'lead','event_label':'無料診断申し込み','channel':channel});form.style.display='none';document.getElementById('formSuccessDiag').classList.add('show');},1000);});});
+</script>
+
+
+</body>
+</html>
