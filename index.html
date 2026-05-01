@@ -56,6 +56,25 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   border-bottom:2px solid var(--gold);transition:opacity .2s;
 }
 .hd-cta:hover{opacity:.85;}
+.hd-nav{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+}
+.hd-link{
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.06em;
+  color:var(--navy);
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:.2s;
+}
+.hd-link:hover{
+  border-bottom-color:var(--gold);
+  color:var(--gold);
+}
+
 
 /* ── hero ── */
 .hero{
@@ -260,6 +279,51 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 }
 .btn-sm:hover{opacity:.85;}
 
+/* ── article hub ── */
+.article-hub-box{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:2rem;
+  padding:1.75rem 2rem;
+  background:var(--white);
+  border:1px solid var(--g200);
+  border-left:4px solid var(--navy);
+  margin:2rem 0 2.5rem;
+}
+.article-hub-label{
+  font-size:.62rem;
+  font-weight:700;
+  letter-spacing:.18em;
+  color:var(--gold);
+  text-transform:uppercase;
+  margin-bottom:.5rem;
+}
+.article-hub-box h3{
+  font-family:var(--serif);
+  font-size:1.15rem;
+  color:var(--navy);
+  line-height:1.55;
+  margin-bottom:.5rem;
+}
+.article-hub-box p{
+  font-size:.88rem;
+  color:var(--g600);
+  line-height:1.9;
+}
+.article-hub-btn{
+  flex-shrink:0;
+  display:inline-block;
+  background:var(--navy);
+  color:var(--white);
+  font-size:.82rem;
+  font-weight:700;
+  letter-spacing:.05em;
+  padding:.8rem 1.5rem;
+  text-decoration:none;
+  border-bottom:2px solid var(--gold);
+}
+
 /* ── articles ── */
 .articles{
   display:grid;grid-template-columns:repeat(3,1fr);
@@ -448,9 +512,24 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 .foot-achieve{font-size:.68rem;color:var(--gold-lt);font-weight:700;margin-top:3px;}
 .foot-link{font-size:.72rem;color:rgba(255,255,255,.3);text-decoration:none;}
 
+/* robust consult switch: CSS-only fallback */
+.consult-toggle{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;}
+.consult-select .radio-card{display:flex;align-items:flex-start;gap:.75rem;padding:.9rem 1rem;border:1px solid var(--g200);background:var(--white);cursor:pointer;transition:.15s;}
+.consult-select .radio-ui{display:block!important;width:16px;height:16px;border:2px solid var(--g400);border-radius:50%;margin-top:.25rem;position:relative;flex-shrink:0;}
+#consultDiag:checked ~ .consult-select label[for="consultDiag"],
+#consultConsult:checked ~ .consult-select label[for="consultConsult"]{border-color:var(--navy);background:var(--paper);}
+#consultDiag:checked ~ .consult-select label[for="consultDiag"] .radio-ui,
+#consultConsult:checked ~ .consult-select label[for="consultConsult"] .radio-ui{border-color:var(--navy);}
+#consultDiag:checked ~ .consult-select label[for="consultDiag"] .radio-ui::after,
+#consultConsult:checked ~ .consult-select label[for="consultConsult"] .radio-ui::after{content:'';position:absolute;top:50%;left:50%;width:8px;height:8px;background:var(--navy);border-radius:50%;transform:translate(-50%,-50%);}
+#consultConsult:checked ~ #diagFields{display:none!important;}
+
 /* ── responsive ── */
 @media(max-width:680px){
   .hd{padding:.75rem 1.25rem;}
+  .hd-nav{gap:.8rem;}
+  .hd-link{font-size:.72rem;}
+  .hd-cta{padding:.45rem .9rem;}
   .hero{padding:4rem 1.25rem 3.5rem;}
   .hero::after{display:none;}
   .sec,.track-sec,.form-sec{padding:3.5rem 1.25rem;}
@@ -461,6 +540,15 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   .track-card:nth-child(odd){border-right:1px solid var(--g200);}
   .award-row{grid-template-columns:1fr;}
   .articles{grid-template-columns:1fr;}
+  .article-hub-box{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:1.5rem;
+  }
+  .article-hub-btn{
+    width:100%;
+    text-align:center;
+  }
   .nextstep{padding:1.75rem;}
   .cause-item{grid-template-columns:2rem 1fr;gap:1rem;}
   .foot{flex-direction:column;align-items:flex-start;}
@@ -474,7 +562,11 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 
 <header class="hd">
   <a href="https://konishi-marketing.com/" class="hd-logo">小西マーケティング</a>
-  <a href="#form" class="hd-cta">無料診断を受ける</a>
+
+  <nav class="hd-nav">
+    <a href="https://konishi-marketing.com/articles/" class="hd-link">記事を読む</a>
+    <a href="#form" class="hd-cta">無料診断を受ける</a>
+  </nav>
 </header>
 
 <!-- hero -->
@@ -648,7 +740,6 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
     <h2 class="sec-h2">物販の主要チャネルに<br>対応しています。</h2>
     <p class="sec-p" style="margin-bottom:2.5rem;">小西式CVR設計は、モール・クラウドファンディング・自社ECの主要プラットフォームに対応しています。各チャネルの購買行動と判断段階に合わせた設計を行います。</p>
 
-```
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;">
   <div style="padding:1.75rem;border:1px solid var(--g200);">
     <div style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;">楽天市場</div>
@@ -671,7 +762,6 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
     <p style="font-size:.9rem;color:var(--g600);line-height:1.9;">記事LPまたは一体型LPの設計。Meta経由のコールドトラフィックを購買判断まで引き上げる導線を設計します。</p>
   </div>
 </div>
-```
 
   </div>
 </section>
@@ -697,8 +787,24 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <section class="sec sec--paper">
   <div class="inner">
     <span class="sec-label">Articles</span>
-    <h2 class="sec-h2" style="margin-bottom:0.5rem;">まずは業界構造を理解する。</h2>
-    <p style="font-size:1.05rem; color:var(--g600); margin-bottom:2.5rem; line-height:1.7;">プラットフォーム別に読む。</p>
+    <h2 class="sec-h2" style="margin-bottom:0.5rem;">売れない原因は、チャネルで変わる。</h2>
+    <p style="font-size:1.05rem; color:var(--g600); margin-bottom:2.5rem; line-height:1.7;">
+      楽天、Amazon、自社EC、Makuake。まずは自社に近い売り場から整理してください。
+    </p>
+    <div class="article-hub-box">
+      <div>
+        <div class="article-hub-label">記事トップ</div>
+        <h3>売れない原因を、販売チャネルごとに整理する。</h3>
+        <p>
+          楽天、Amazon、Yahoo!ショッピング、自社EC、Makuakeでは、
+          読者が止まる場所が変わります。
+          自社に近い販売チャネルから、次に読む記事を整理できます。
+        </p>
+      </div>
+      <a href="https://konishi-marketing.com/articles/" class="article-hub-btn">
+        記事トップを見る
+      </a>
+    </div>
     <div style="margin-top:2.5rem;">
       <div style="margin-bottom:2.5rem;">
         <div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">楽天市場</div>
@@ -792,7 +898,6 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
       <span class="form-badge">✓ 2営業日以内に返送</span>
     </div>
 
-```
 <form id="diagForm">
   <div class="fld">
     <label>お名前<span class="req">必須</span></label>
@@ -803,19 +908,20 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
     <input type="email" name="email" placeholder="例：info@example.com" required>
   </div>
 
-  <div class="fld">
-    <label>ご相談内容<span class="req">必須</span></label>
+  <input class="consult-toggle" type="radio" name="consult_type" id="consultDiag" value="ページ診断" checked>
+  <input class="consult-toggle" type="radio" name="consult_type" id="consultConsult" value="事業相談">
+
+  <div class="fld consult-select">
+    <div class="fld-ttl">ご相談内容<span class="req">必須</span></div>
     <div class="radio-group">
-      <label class="radio-card">
-        <input type="radio" name="consult_type" value="ページ診断" required checked>
+      <label class="radio-card" for="consultDiag">
         <span class="radio-ui"></span>
         <span class="radio-text">
           <strong>ページ診断を受けたい</strong>
           <small>商品ページの改善点を具体的に知りたい方</small>
         </span>
       </label>
-      <label class="radio-card">
-        <input type="radio" name="consult_type" value="事業相談">
+      <label class="radio-card" for="consultConsult">
         <span class="radio-ui"></span>
         <span class="radio-text">
           <strong>事業について相談したい</strong>
@@ -916,7 +1022,6 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
     しばらくお待ちください。
   </p>
 </div>
-```
 
   </div>
 </section>
@@ -963,8 +1068,25 @@ function applyConsultType(type) {
   }
 }
 
+function setConsultTypeFromRadio(radio) {
+  if (!radio) return;
+  radio.checked = true;
+  applyConsultType(radio.value);
+}
+
 radios.forEach(radio => {
-  radio.addEventListener('change', () => applyConsultType(radio.value));
+  radio.addEventListener('change', () => setConsultTypeFromRadio(radio));
+});
+
+// iOS Safari / 一部ブラウザで display:none の radio + label クリック時に
+// change イベントが拾われないケースへの保険
+document.querySelectorAll('.radio-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const innerRadio = card.querySelector('input[name="consult_type"]');
+    const forId = card.getAttribute('for');
+    const linkedRadio = forId ? document.getElementById(forId) : null;
+    setConsultTypeFromRadio(innerRadio || linkedRadio);
+  });
 });
 
 // 初期状態を確定させる
