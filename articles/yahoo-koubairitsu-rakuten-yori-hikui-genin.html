@@ -5,8 +5,8 @@
 <meta name="color-scheme" content="only light">
 <link rel="canonical" href="https://konishi-marketing.com/articles/yahoo-koubairitsu-rakuten-yori-hikui-genin.html">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yahoo!ショッピングで購買率（CVR）が楽天より低い店舗の原因｜小西マーケティング</title>
-<meta name="description" content="楽天と全く同じページをYahoo!ショッピングに展開しているのに、購買率が常に1〜2%以上低い。イベント日だけ跳ねて、あとはお通夜のような数字が続く。これはYahooの客層の問題ではなく、ページ設計の問題です。EC100店舗超の現場から、その流れを解説します。">
+<title>楽天と同じページなのにYahoo!ショッピングで購買率が低い理由｜小西マーケティング</title>
+<meta name="description" content="楽天と同じ商品ページをYahoo!ショッピングに展開した。けれど購買率は低く、イベント日だけ動く。PRオプションやポイント施策を増やす前に、Yahooの読者がページ冒頭でどこで止まっているかを見る必要があります。">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
@@ -423,23 +423,6 @@ body {
   font-size: 0.8rem;
 }
 
-/* misrec-block table override */
-table.misrec-block {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-  border: 1px solid var(--gray-200);
-  overflow: hidden;
-}
-table.misrec-block th.misrec-header {
-  text-align: left;
-  display: table-cell;
-  width: 100%;
-}
-table.misrec-block td.misrec-cell.label {
-  width: 40%;
-}
-
 /* ── 記事FAQ（よくある質問）専用スタイル ── */
 #article-faq {
   background-color: var(--gray-100);
@@ -532,26 +515,26 @@ html, body {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Yahoo!ショッピングはポイントと価格でしか売れない市場ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ポイントと価格が購買の大きな動機になっているのは事実です。しかし、だからといってポイント競争と値引きだけが唯一の手段というわけではありません。Yahoo!ショッピングの読者は損得を素早く判断しようとする傾向が強い分、「なぜこの商品が今の自分に必要か」という論拠を早い段階で受け取れると、ポイント以外の根拠で選ぶことができます。その根拠がページに存在しているかどうかが問題です。"
-      }
-    },
-    {
-      "@type": "Question",
       "name": "楽天と同じページをYahoo!ショッピングに展開しているのに購買率が低いのはなぜですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "楽天とYahoo!ショッピングでは、ページに来る読者が商品を判断するときの文脈が異なります。楽天で通用するページの流れが、Yahoo!の読者に同じように機能するとは限りません。同じ情報を届けていても、読者の状況とページの接続の仕方が変わると、購買率は変わります。「同じページだから同じ結果になるはず」という前提そのものが、問題の起点になっています。"
+        "text": "楽天とYahoo!ショッピングでは、ページに来る前の読者の見方が違うことがあります。Yahoo!ショッピングの読者は、ポイント、価格、送料、キャンペーンを見比べながら回遊していることがあります。その状態に対して、ページ冒頭でポイント以外の選ぶ理由が届いていなければ、同じページでも購買率は動きにくくなります。"
       }
     },
     {
       "@type": "Question",
-      "name": "PRオプションの料率を上げても購買率が改善しないのはなぜですか？",
+      "name": "Yahoo!ショッピングはポイントと価格でしか売れない市場ですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "PRオプションはアクセスを増やしますが、ページの流れは変えません。購買率はページに来た読者が「この商品を選ぶ根拠」を得られるかどうかで決まります。ポイント目当ての読者が増えても、ページがその読者に対して価格・ポイント以外の根拠を届けられていなければ、購買率は変わらないまま広告費だけが積み上がります。"
+        "text": "ポイントと価格が購入の大きなきっかけになる場面はあります。ただ、それだけが唯一の手段ではありません。ページに来た読者が、ポイント以外で「この商品でよさそうだ」と思える理由を受け取れていれば、イベント日以外でも購買率は動きやすくなります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PRオプションやポイント施策を増やしても購買率が上がらないのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PRオプションやポイント施策は、ページに人を連れてくるきっかけになります。ただ、ページに来た読者が購入に進む理由を受け取れていなければ、アクセスやクリックが増えても購買率は動きにくくなります。施策を増やす前に、現在ページで読者がどこで止まっているかを見る必要があります。"
       }
     }
   ]
@@ -561,12 +544,12 @@ html, body {
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Yahoo!ショッピングで購買率（CVR）が楽天より低い店舗の原因",
-  "description": "楽天と全く同じページをYahoo!ショッピングに展開しているのに、購買率が常に1〜2%以上低い。イベント日だけ跳ねて、あとはお通夜のような数字が続く。これはYahooの客層の問題ではなく、ページ設計の問題です。EC100店舗超の現場から、その流れを解説します。",
+  "headline": "楽天と同じページなのにYahoo!ショッピングで購買率が低い理由",
+  "description": "楽天と同じ商品ページをYahoo!ショッピングに展開した。けれど購買率は低く、イベント日だけ動く。PRオプションやポイント施策を増やす前に、Yahooの読者がページ冒頭でどこで止まっているかを見る必要があります。",
   "image": "https://konishi-marketing.com/images/konishi.JPG",
   "url": "https://konishi-marketing.com/articles/yahoo-koubairitsu-rakuten-yori-hikui-genin.html",
   "datePublished": "2026-04-20",
-  "dateModified": "2026-04-20",
+  "dateModified": "2026-05-06",
   "author": {
     "@type": "Person",
     "name": "小西 秀人",
@@ -591,9 +574,9 @@ html, body {
 
 <!-- hero -->
 <div class="hero">
-  <span class="hero-category">Yahoo!ショッピング 購買率改善</span>
-  <h1 class="hero-title">Yahoo!ショッピングで購買率が<br>楽天より低い店舗の原因</h1>
-  <p class="hero-lead">楽天と全く同じページをYahoo!ショッピングに展開した。しかし購買率は常に1〜2%以上低く、「5のつく日」や大型イベントの日だけ跳ねて、それ以外はストアクリエイターProの画面がお通夜のような数字を刻み続ける。「Yahooはポイントと安さでしか売れない市場だ」という結論に落ち着いていく——しかしその結論は、業界が長年刷り込んできた誤った診断の上に立っています。EC100店舗超の停滞を見てきた経験から、その流れを解説します。</p>
+  <span class="hero-category">Yahoo!ショッピング / 購買率 / 楽天流用</span>
+  <h1 class="hero-title">楽天と同じページなのに<br>Yahoo!ショッピングで購買率が低い理由</h1>
+  <p class="hero-lead">楽天と同じ商品ページをYahoo!ショッピングに展開した。けれど購買率は低く、イベント日だけ動く——次に見るべきなのは、Yahooの客層ではなく、ページに来た読者がどこで止まっているかです。EC100店舗超の現状を見てきた経験から解説します。</p>
   <p class="hero-meta">小西マーケティング｜2026.04</p>
 </div>
 
@@ -605,139 +588,207 @@ html, body {
 <!-- article body -->
 <div class="article-body">
 
-  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「楽天と同じページ」なのに、なぜYahooだけ数字が違うのか</h2>
+  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">同じページで出した</h2>
 
-  <p>楽天で実績を積んだページをそのままYahoo!ショッピングに横展開する。これはEC事業者が複数モールに出店するときの、ごく自然な判断です。制作コストを抑えながらチャネルを広げるための合理的な選択に見えます。しかし多くの店舗で、この横展開は「購買率の慢性的な低空飛行」という結果を生みます。</p>
+  <p>楽天で売れている商品ページを、Yahoo!ショッピングにも展開する。</p>
 
-  <p>「Yahooのお客さんはポイントと安さしか見ていない」「楽天と客層が違うから仕方ない」という解釈が生まれ、以降はポイント倍付けやPRオプションの料率引き上げという施策に資金が流れていく。しかし売れれば売れるほど利益が圧迫され、イベントが終わると同時に購買率がもとに戻る——この繰り返しが続きます。</p>
+  <p>商品は同じ。画像も同じ。説明文も同じ。</p>
 
-  <div class="insight">
-    Yahoo!ショッピングの購買率が楽天より低い状態は、客層の質の問題でも、モールの特性の問題でもありません。<br>
-    <em>楽天向けにCVR設計されたページが、Yahoo!の読者が商品を判断するときの文脈に接続できていない状態</em>を示しています。
-  </div>
+  <p>楽天で動いているページなら、Yahoo!ショッピングでもある程度は動くはずだ。</p>
 
-  <p>楽天とYahoo!ショッピングでは、ページに来る読者が商品を選ぶときの状況が異なります。その違いに対してページが何も応答していないとき、同じ情報を届けていても、購買率は異なる数字を示します。</p>
+  <p>そう考えるのは自然です。</p>
 
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「Yahooの客層が価格・ポイント重視だから売れない」——この診断がズレている</h2>
+  <p>しかし、ストアクリエイターProを見ると、購買率は楽天より低い。</p>
 
-  <p>Yahoo!ショッピングで購買率が低い状態が続くと、「Yahooのユーザーはポイントと価格でしか判断しない」という客層論に落ち着く傾向があります。この解釈は感覚的には正しく見えます。実際にイベント日だけ購買率が上がり、ポイント還元が少ない平日は極端に冷える——数字の動きがその解釈を強化します。</p>
+  <p>イベント日だけ動く。</p>
 
-  <table class="misrec-block">
-  <thead><tr><th colspan="2" class="misrec-header">見当違いになっている場所</th></tr></thead>
-  <tbody>
-      <tr><td class="misrec-cell label">事業者が思っている問題</td><td class="misrec-cell belief">Yahoo!の客層がポイントと価格重視で、商品の価値を正当に評価しない</td></tr>
-  </tbody>
-</table>
-    <div class="misrec-row">
-      <div class="misrec-cell label">実際の問題</div>
-      <div class="misrec-cell truth">損得を素早く判断しようとする読者に対し、楽天向けのページがポイント・価格以外の根拠を届けられていない。読者は合理的に比較しているが、ページがその比較に応答できていない</div>
-    </div>
-  </div>
-
-  <p>Yahoo!ショッピングの読者は、損得の判断が速いという特徴があります。これは「客層の質が低い」ということではなく、「価格・ポイントという既存の物差しで素早く結論を出そうとしている」という状態です。その読者に対して、ページが価格・ポイント以外の根拠を早い段階で届けられていれば、購買の根拠は変わります。問題は読者ではなく、ページがその読者の判断に何を返しているかです。</p>
-
-  <div class="callout">
-    この解釈が固定化する背景には、業界の診断の枠組みに仕組み上の問題があります。Yahoo!ショッピングの公式コンサルも、EC支援の代理店も、「まずはPRオプションとクーポンで露出と還元を上げましょう」という施策しか提案しません。ポイントと価格の土俵の中でPDCAを回し続けることが、「その土俵からの脱出手段」を検討する機会を奪っています。
-  </div>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">なぜ「ポイント倍付けとPRオプション強化」が根本を動かさないのか</h2>
-
-  <p>購買率の低さに対して最初に動く施策が、ポイント倍付けとPRオプションの料率引き上げです。これはYahoo!の公式コンサルが推奨し、運用代行が実行する標準的な手順です。アイテムマッチ広告を増やし、ストアボーナスを設定して露出を確保する。短期的にイベント日の数字が動くことはあります。しかし仕組み上の購買率の改善としては機能しません。</p>
-
-  <table class="misrec-block">
-  <thead><tr><th colspan="2" class="misrec-header">原因の履き違え</th></tr></thead>
-  <tbody>
-      <tr><td class="misrec-cell label">事業者が信じている原因</td><td class="misrec-cell belief">自社のポイント還元率やクーポン額が競合より劣っているから購買率が低い</td></tr>
-  </tbody>
-</table>
-    <div class="misrec-row">
-      <div class="misrec-cell label">実際の原因</div>
-      <div class="misrec-cell truth">楽天向けのページ仕組みのまま横展開しており、Yahoo!の読者が求める「今この商品を選ぶ論拠」をページの入口で届けられていない</div>
-    </div>
-  </div>
-
-  <p>ポイント倍付けで購買が増えたとしても、それは「ポイントという既存の物差し」で選ばれた結果です。イベントが終わりポイントが戻れば、購買率はもとに戻ります。利益はポイント原資として消え、次のイベントまで平日は冷え込む——この流れは、ポイントの量を変えても変わりません。</p>
-
-  <div class="callout">
-    この状況の根底には、「Yahoo!ショッピングは楽天の横展開チャネルで十分」という業界の無意識の軽視があります。制作会社にとってYahoo!はサブチャネルであり、独立したCVR設計の対象として扱われないことがほとんどです。楽天のコピーを流用することで初期コストを抑えた結果、Yahoo!特有の読者の状況に対応したページが存在しないまま運用が続いています。
-  </div>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「商品名にポイント訴求を入れる」が解決しない理由</h2>
-
-  <p>ポイント施策の強化と並行してよく行われるのが、商品名やキャッチコピーへの「PayPayポイント〇倍」「お得な今すぐ購入」といった文言の追加です。検索結果でのクリック率が少し上がることもあります。しかし購買率の仕組み上の改善には至りません。</p>
-
-  <table class="misrec-block">
-  <thead><tr><th colspan="2" class="misrec-header">解決策の取り違え</th></tr></thead>
-  <tbody>
-      <tr><td class="misrec-cell label">市場が選んでいる解決策</td><td class="misrec-cell belief">商品名・キャッチコピーにポイント訴求や「お得感」の文言を入れてクリックを増やす</td></tr>
-  </tbody>
-</table>
-    <div class="misrec-row">
-      <div class="misrec-cell label">残る問題</div>
-      <div class="misrec-cell truth">ポイント訴求でクリックした読者は「ポイント」という物差しでページを評価する。その読者に対してページが価格・ポイント以外の根拠を渡せなければ、イベントが終わると同時に購買は止まる</div>
-    </div>
-  </div>
-
-  <p>ポイント訴求でページに来た読者は、ポイントという軸で商品を選ぼうとします。その読者に対してページが「この商品はポイント以外の理由でも選ぶ価値がある」という根拠を届けられないまま終わると、イベント期間中だけ購買が起き、平日は沈黙する波が繰り返されます。商品名の文言を変えることと、ページが読者に届ける根拠の内容を変えることは、別の問題です。</p>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">Yahoo!ショッピングで購買率が低い店舗に共通する3つの状態</h2>
-
-  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">楽天で構成されたページがそのまま動いている</h3>
-
-  <p>最も多いのが、楽天向けに構成されたページを変更なしにYahoo!ショッピングへ展開しているケースです。楽天のサムネイル構成・商品説明の順序・訴求のトーン——これらは楽天の読者の行動に合わせて最適化されています。Yahoo!の読者が同じ情報を同じ順序で受け取っても、購買の判断に至る文脈は楽天とは異なります。</p>
-
-  <p>同一のページが二つのモールで同じ結果を出すことを前提にした構成は、そもそも成立しません。しかし「作り直すコストをかけたくない」という判断が、この状態を固定し続けます。</p>
-
-  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">ページがポイントと価格の比較軸の上に立っている</h3>
-
-  <p>Yahoo!ショッピングで購買率が低い店舗のページに共通しているのが、ページ全体がポイント・価格・送料の訴求を前面に出す構成になっていることです。その構成は読者に「この商品をポイントと価格で比較しなさい」というメッセージを送っています。</p>
-
-  <p>その比較が始まった瞬間、読者はモール内の他の競合商品との比較を始めます。ポイント還元率が高い競合、価格が0.1%安い競合——その比較に勝ち続けることは、利益の消耗を意味します。ページがポイント・価格以外の根拠を渡せていないとき、読者には他の比較軸が存在しません。</p>
-
-  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">「カゴ落ち」を読者の問題として処理している</h3>
-
-  <p>Yahoo!ショッピングでよく起きるのが、カゴに入れたまま「もっとポイントがつく日」まで放置されるカゴ落ちです。この現象を「ユーザーの習性だから仕方ない」と処理している店舗では、「今この商品を今すぐ選ぶことに意味がある」という根拠がページのどこにも存在していません。</p>
-
-  <p>カゴ落ちが多い状態は、読者が「商品には関心があるが、今買う理由がない」と判断していることを示しています。その判断を変えられるのは、ポイントイベントではなく、ページが読者に対して届ける根拠の質です。</p>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">Yahoo!で購買率が安定するページと、イベント依存で終わるページの違い</h2>
-
-  <p>イベント依存で終わるページに共通しているのは、ポイントと価格という既存の比較軸の上にCVR設計が乗り続けていることです。その軸の上に立っている限り、イベントが終わるたびに購買は止まります。利益はポイント原資として消え、施策のたびに体力が削られていきます。</p>
-
-  <p>平日の購買率が安定しているページは、読者が「ポイントの有無に関わらず、今この商品を選ぶ根拠」をページの前半で受け取れる仕組みになっています。その根拠は、競合と同じポイント・価格の比較軸の上にはありません。読者が別の根拠で選べる状態が作られているとき、購買率はイベントの波に左右されない動きをし始めます。</p>
+  <p>平日はまた戻る。</p>
 
   <div class="insight">
-    Yahoo!ショッピングの購買率を安定させるのは、ポイント倍付けでも価格調整でもありません。<br>
-    <em>「ポイントの有無に関わらず、なぜ今この商品を選ぶのか」という根拠を、ページが読者に届けられている状態</em>を作ることです。
+    Yahoo!ショッピングの客層が悪い、という話ではありません。<br>
+    <em>楽天と同じページのまま、Yahoo!ショッピングの読者がページ冒頭で選ぶ理由を受け取れていない可能性があります。</em>
   </div>
 
-  <p>以下の状態が続いているなら、CVR設計の問題が残っています。</p>
+  <p>楽天とYahoo!ショッピングでは、ページに来る前の読者の見方が違うことがあります。</p>
+
+  <p>Yahoo!ショッピングの読者は、ポイント、価格、送料、キャンペーンを見比べながら回遊していることがあります。</p>
+
+  <p>その読者に、楽天向けのページをそのまま見せると、情報は伝わっても購入に進む理由が届かないことがあります。</p>
+
+  <p>見るべきなのは、Yahooの客層だけではありません。</p>
+
+  <p>現在ページで、読者がどこで止まっているかです。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">客層の前に見る</h2>
+
+  <p>Yahoo!ショッピングで購買率が低い状態が続くと、「Yahooの読者はポイントと価格でしか判断しない」と考えたくなります。</p>
+
+  <p>イベント日だけ購買率が動く。</p>
+
+  <p>ポイント還元が少ない平日は冷える。</p>
+
+  <p>数字の動きが、その見方を強めます。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">客層の前に見ること</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">よくある見方</div>
+      <div class="misrec-cell truth">Yahoo!ショッピングの読者は、ポイントと価格でしか判断しない。だから購買率が低いのは客層の違いで仕方がない</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残っていること</div>
+      <div class="misrec-cell truth">ポイントや価格を見比べる読者に対して、ページ冒頭でポイント以外の選ぶ理由が届いていない。読者が悪いのではなく、ページがその見方に応答できていない</div>
+    </div>
+  </div>
+
+  <p>Yahoo!ショッピングの読者は、損得を素早く判断しようとすることがあります。</p>
+
+  <p>これは読者の質が低いということではありません。</p>
+
+  <p>ポイント、価格、送料、キャンペーンという見える情報で、早く比較している状態です。</p>
+
+  <p>その読者に対して、ページ冒頭で「この商品でよさそうだ」と思える理由が届いていれば、比較の見方は変わります。</p>
+
+  <div class="callout">
+    <strong>ポイント施策について。</strong><br>
+    Yahoo!ショッピング改善では、PRオプション、ポイント還元、クーポン施策が提案される場面があります。これは必要な場合があります。ただ、ページに来た読者がポイント以外で選ぶ理由を受け取れていなければ、イベント日だけ動いて平日は戻りやすくなります。
+  </div>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">ポイントでは戻る</h2>
+
+  <p>購買率の低さに対して、ポイント倍率を上げる。</p>
+
+  <p>PRオプションの料率を上げる。</p>
+
+  <p>アイテムマッチを増やす。</p>
+
+  <p>短期的にイベント日の数字が動くことはあります。</p>
+
+  <p>ただ、イベントが終わると購買率は戻る。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">ポイントの前に見ること</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">よくある見方</div>
+      <div class="misrec-cell truth">ポイント還元率やクーポン額が競合より弱いから購買率が低い。もっと還元を強めれば購入に進みやすくなる</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残っていること</div>
+      <div class="misrec-cell truth">ポイントで動いた購入は、ポイントが下がると止まりやすい。通常時にも選ばれるには、ページ冒頭でポイント以外の選ぶ理由が届いている必要がある</div>
+    </div>
+  </div>
+
+  <p>ポイント倍付けで注文が増えても、それはポイントで選ばれた結果です。</p>
+
+  <p>イベントが終わり、ポイントが戻れば、購買率も戻りやすくなります。</p>
+
+  <p>利益はポイント原資として削られ、平日はまた冷える。</p>
+
+  <p>この流れは、ポイントの量だけを変えても抜けにくくなります。</p>
+
+  <p>ポイント施策を増やす前に見るべきなのは、通常時でも選ばれる理由が届いているかです。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">お得訴求でも残る</h2>
+
+  <p>商品名に「PayPayポイント〇倍」と入れる。</p>
+
+  <p>キャッチコピーに「お得な今すぐ購入」と入れる。</p>
+
+  <p>検索結果でのクリックは増えることがあります。</p>
+
+  <p>ただ、購買率が安定するとは限りません。</p>
+
+  <div class="misrec-block">
+    <div class="misrec-header">お得訴求の前に見ること</div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">よくある施策</div>
+      <div class="misrec-cell truth">商品名やキャッチコピーにポイント訴求やお得感の文言を入れて、クリックを増やす</div>
+    </div>
+    <div class="misrec-row">
+      <div class="misrec-cell label">残っていること</div>
+      <div class="misrec-cell truth">ポイント訴求で来た読者は、ポイントという見方でページを読む。ページでポイント以外の選ぶ理由が届いていなければ、イベントが終わると購入は止まりやすい</div>
+    </div>
+  </div>
+
+  <p>お得訴求は、クリックのきっかけになります。</p>
+
+  <p>ただ、その読者に対してページが「この商品でよさそうだ」と思える理由を届けられなければ、比較は続きます。</p>
+
+  <p>商品名の文言を変えることと、ページ冒頭で選ぶ理由を届けることは別です。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">止まる3つの型</h2>
+
+  <h3>楽天のページがそのまま動いている</h3>
+
+  <p>楽天向けに作ったページを、変更なしにYahoo!ショッピングへ展開している。</p>
+
+  <p>画像の順番、商品説明、訴求のトーンが同じ。</p>
+
+  <p>楽天で読まれた順番でも、Yahoo!ショッピングの読者に同じように届くとは限りません。</p>
+
+  <p>Yahooの読者が見ているものに合わせて、ページ冒頭で何を受け取ってもらうかを見る必要があります。</p>
+
+  <h3>ポイントと価格の比較に戻る</h3>
+
+  <p>ページ全体で、ポイント、価格、送料を前に出している。</p>
+
+  <p>そのページは、読者に「ポイントと価格で比べてください」と伝えている状態になります。</p>
+
+  <p>その比較が始まると、読者は他店も見ます。</p>
+
+  <p>ポイント還元率が高い店舗、価格が少し安い店舗、送料が有利な店舗。</p>
+
+  <p>そこで勝ち続けるほど、利益は削られやすくなります。</p>
+
+  <h3>カゴ落ちを読者のせいにする</h3>
+
+  <p>Yahoo!ショッピングでは、カゴに入れたまま「もっとポイントがつく日」まで待たれることがあります。</p>
+
+  <p>この状態を、ユーザーの習性だから仕方ないと処理してしまう。</p>
+
+  <p>ただ、カゴ落ちが多い状態は、読者が「商品には関心があるが、今買う理由が弱い」と判断している可能性があります。</p>
+
+  <p>見るべきなのは、イベント日まで待つ読者の行動だけではありません。</p>
+
+  <p>現在ページで、今購入に進む理由が届いているかです。</p>
+
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">まず、今を見る</h2>
+
+  <p>イベント依存で終わるページは、ポイントと価格の比較の中に入り続けています。</p>
+
+  <p>その状態では、イベントが終わるたびに購買率は戻りやすくなります。</p>
+
+  <p>平日の購買率が安定しているページは、読者が「ポイントがなくても、この商品でよさそうだ」と受け取れる理由をページ前半で届けています。</p>
+
+  <p>以下の状態が続いているなら、PRオプションやポイント施策を増やす前に確認すべき場所があります。</p>
 
   <ul class="prob-list">
-    <li data-num="✓">楽天と同じページをYahoo!に展開しているが、購買率が常に1〜2%以上低い</li>
-    <li data-num="✓">イベント日だけ購買率が跳ね、平日はほぼゼロに近い水準が続いている</li>
+    <li data-num="✓">楽天と同じページをYahoo!に展開しているが、購買率が常に低い</li>
+    <li data-num="✓">イベント日だけ購買率が跳ね、平日は元の水準に戻る</li>
     <li data-num="✓">PRオプションの料率を上げるほど広告費が増えるが、利益が残らない</li>
-    <li data-num="✓">「Yahooはポイントでしか売れない」という結論に落ち着き、改善の方向が見えていない</li>
+    <li data-num="✓">Yahoo!ショッピングはポイントでしか売れないと感じ、改善の方向が見えなくなっている</li>
   </ul>
 
   <div class="cta-block">
     <div class="cta-block-label">無料診断</div>
-    <div class="cta-block-title">Yahoo!ショッピングの購買率が低い場所を特定する。</div>
+    <div class="cta-block-title">ポイント施策を増やす前に、現在ページで止まっている場所を見る。</div>
     <div class="cta-block-sub">
-      楽天と同じページで購買率が上がらないなら、ページのどこかでYahoo!の読者が「ポイント以外で選ぶ根拠」を受け取れていません。<br>
-      診断を受けた事業者の多くが、初めて「どこが問題だったか」を言語化できたと言います。<br>
-      URLを送るだけで、2営業日以内に診断レポートをお送りします。
+      楽天と同じページで購買率が上がらないなら、ページ冒頭でYahoo!の読者がポイント以外の選ぶ理由を受け取れていない可能性があります。<br>
+      URLを送るだけで、どこで購入に進む理由が弱くなっているかを2営業日以内に診断レポートで整理します。
     </div>
-    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">Yahoo!ショッピング、購買率が低い場所を診断する</a>
+    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">Yahooページの止まる場所を診断する</a>
     <div class="cta-note">※営業電話は一切いたしません。</div>
   </div>
 
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
+  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">まず、止まる場所を見る</h2>
 
-  <p>Yahoo!ショッピングの現場では長年、購買率の低さの原因として「ポイント還元率の不足」「PRオプションの料率の低さ」「客層のポイント依存傾向」が語られてきました。Yahoo!の公式コンサルも、EC運用代行も、この方向で購買率改善の施策を提案し続けています。その診断のまま施策を打ち続けることが、「イベント日だけ跳ねて平日は冷える」仕組みと「利益が残らないポイント競争」を固定します。</p>
+  <p>PRオプションを見直すこと、ポイント還元を調整すること、商品名のお得訴求を変えること。どれも必要な場面があります。</p>
 
-  <p>購買率の差は、ポイント還元率の差でも、楽天との客層の差でもありません。ページがYahoo!の読者に対して「なぜ今この商品を選ぶのか」という根拠を届けられているかどうかの差です。その根拠がページの上に存在したとき、購買率はポイントイベントとは切り離された動きをし始めます。</p>
+  <p>ただ、それでも購買率が動かないなら、次に見るべき場所があります。</p>
 
+  <p>現在ページで、読者がどこで止まっているか。</p>
+
+  <p>そこが見えれば、ポイント施策を増やすべきか、楽天ページの流用を見直すべきか、ページ冒頭で選ぶ理由を届けるべきかを判断しやすくなります。</p>
 
 </div><!-- /article-body -->
 
@@ -747,17 +798,17 @@ html, body {
 
   <div class="faq-item">
     <div class="faq-q">Yahoo!ショッピングはポイントと価格でしか売れない市場ですか？</div>
-    <div class="faq-a">ポイントと価格が購買の大きな動機になっているのは事実です。しかし、だからといってポイント競争と値引きだけが唯一の手段というわけではありません。Yahoo!ショッピングの読者は損得を素早く判断しようとする傾向が強い分、「なぜこの商品が今の自分に必要か」という論拠を早い段階で受け取れると、ポイント以外の根拠で選ぶことができます。その根拠がページに存在しているかどうかが問題です。</div>
+    <div class="faq-a">ポイントと価格が購買の大きな動機になっているのは事実です。しかし、だからといってポイント競争と値引きだけが唯一の手段というわけではありません。Yahoo!ショッピングの読者は損得を素早く判断しようとする傾向が強い分、「なぜこの商品が今の自分に必要か」という選ぶ理由を早い段階で受け取れると、ポイント以外の選ぶ理由で選ぶことができます。その選ぶ理由がページに存在しているかどうかが止まっている場所です。</div>
   </div>
 
   <div class="faq-item">
     <div class="faq-q">楽天と同じページをYahoo!ショッピングに展開しているのに購買率が低いのはなぜですか？</div>
-    <div class="faq-a">楽天とYahoo!ショッピングでは、ページに来る読者が商品を判断するときの文脈が異なります。楽天で通用するページの流れが、Yahoo!の読者に同じように機能するとは限りません。同じ情報を届けていても、読者の状況とページの接続の仕方が変わると、購買率は変わります。「同じページだから同じ結果になるはず」という前提そのものが、問題の起点になっています。</div>
+    <div class="faq-a">楽天とYahoo!ショッピングでは、ページに来る読者が商品を判断するときのページに来る前の見方が異なります。楽天で通用するページの流れが、Yahoo!の読者に同じように働きするとは限りません。同じ情報を届けていても、読者の状況とページの接続の仕方が変わると、購買率は変わります。「同じページだから同じ結果になるはず」という見方そのものが、止まっている場所の起点になっています。</div>
   </div>
 
   <div class="faq-item">
     <div class="faq-q">PRオプションの料率を上げても購買率が改善しないのはなぜですか？</div>
-    <div class="faq-a">PRオプションはアクセスを増やしますが、ページの流れは変えません。購買率はページに来た読者が「この商品を選ぶ根拠」を得られるかどうかで決まります。ポイント目当ての読者が増えても、ページがその読者に対して価格・ポイント以外の根拠を届けられていなければ、購買率は変わらないまま広告費だけが積み上がります。</div>
+    <div class="faq-a">PRオプションはアクセスを増やしますが、ページの流れは変えません。購買率はページに来た読者が「この商品を選ぶ選ぶ理由」を得られるかどうかで決まります。ポイント目当ての読者が増えても、ページがその読者に対して価格・ポイント以外の選ぶ理由を届けられていなければ、購買率は変わらないまま広告費だけが積み上がります。</div>
   </div>
 </div><!-- /記事FAQ -->
 
@@ -767,17 +818,17 @@ html, body {
 
   <div class="faq-item">
     <div class="faq-q">Yahoo!ショッピングの購買率を改善するために、まず何から手をつければいいですか？</div>
-    <div class="faq-a">最初に確認すべきは、現在のページがYahoo!の読者に対して「ポイントの有無に関わらず、なぜ今この商品を選ぶのか」という根拠をどこで渡しているかです。楽天のコピーのままであれば、その根拠がYahoo!の読者の状況に接続できていない可能性があります。ポイント施策より先に、ページが何を届けているかを確認することが先です。</div>
+    <div class="faq-a">最初に確認すべきは、現在のページがYahoo!の読者に対して「ポイントの有無に関わらず、なぜ今この商品を選ぶのか」という選ぶ理由をどこで渡しているかです。楽天のコピーのままであれば、その選ぶ理由がYahoo!の読者の状況に接続できていない可能性があります。ポイント施策より先に、ページが何を届けているかを確認することが先です。</div>
   </div>
 
   <div class="faq-item">
     <div class="faq-q">イベント以外の平日でも購買率が安定しているページは、何が違いますか？</div>
-    <div class="faq-a">平日でも購買率が安定しているページは、読者がポイント・価格以外の根拠で商品を選べる状態を作っています。ポイントと価格の比較軸に乗らず、読者が「なぜこれなのか」を別の根拠で理解できる流れがページの前半に存在しています。その有無が、イベント依存の有無に直結しています。</div>
+    <div class="faq-a">平日でも購買率が安定しているページは、読者がポイント・価格以外の選ぶ理由で商品を選べる状態を作っています。ポイントと価格の比較軸に乗らず、読者が「なぜこれなのか」を別の選ぶ理由で理解できる流れがページの前半に存在しています。その有無が、イベント依存の有無に直結しています。</div>
   </div>
 
   <div class="faq-item">
     <div class="faq-q">診断では、Yahoo!ショッピングのページのどこを確認しますか？</div>
-    <div class="faq-a">ページのどこで「Yahoo!の読者が今この商品を選ぶ根拠」が渡されているか、その根拠がポイント・価格という既存の比較軸に乗っているだけになっていないか、楽天向けの構成がYahoo!の読者の状況に接続できているかを確認します。「どこを変えれば購買率が動くか」が初めて言語化できる状態になります。</div>
+    <div class="faq-a">ページのどこで「Yahoo!の読者が今この商品を選ぶ選ぶ理由」が渡されているか、その選ぶ理由がポイント・価格という既存の比較軸に乗っているだけになっていないか、楽天向けのページ冒頭の流れがYahoo!の読者の状況に接続できているかを確認します。「どこを変えれば購買率が動くか」が初めて整理できる状態になります。</div>
   </div>
 
 </div><!-- /faq -->
@@ -785,7 +836,7 @@ html, body {
 <!-- bottom CTA -->
 <div class="cta-block" style="margin:0;">
   <div class="cta-block-label">診断を申し込む</div>
-  <div class="cta-block-title">まず、止まっている場所を特定する。</div>
+  <div class="cta-block-title">まず、止まっている場所を確認する。</div>
   <div class="cta-block-sub">
     Yahoo!ショッピングの購買率がどこで止まっているかが分かれば、何を変えればいいかが分かる。<br>
     何を変えればいいかが分かれば、ポイント倍付けや広告費に頼らず購買率が動き始める。<br>
@@ -804,15 +855,15 @@ html, body {
     </div>
     <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
   </div>
-  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの改善から購買率を改善する「<<<KONISHI_購買率_PROTECTED>>>」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
 </div>
 
 <!-- related -->
 <div class="related-section">
   <div class="related-label">関連記事</div>
   <ul class="related-list">
-    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率（CVR）が上がらない本当の理由</a></li>
-    <li><a href="https://konishi-marketing.com/articles/ec-kakaku-sagete-mo-uriage-nobinai-hontono-riyu.html">ECで価格を下げても売上が伸びない本当の理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天商品ページを整えても転換率が上がらない理由</a></li>
+    <li><a href="https://konishi-marketing.com/articles/ec-kakaku-sagete-mo-uriage-nobinai-hontono-riyu.html">ECで価格を下げても売上が伸びない理由</a></li>
     <li><a href="https://konishi-marketing.com/articles/rakuten-gazou-sashikaete-mo-hannou-kawaranu-riyu.html">楽天で商品画像を差し替えても反応が変わらない理由</a></li>
   </ul>
 </div>
