@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>小西マーケティング｜ECの数字が動かない理由を診断</title>
-<meta name="description" content="広告費を増やすほど、利益が消えていく。その原因が、商品でも価格でもなかったとしたら。100店舗超の停滞を見てきた現場から、買う理由が届かないページの問題を解説します。">
+<meta name="description" content="広告費を増やすほど、利益が消えていく。その原因が、商品でも価格でもなかったとしたら。100店舗超の停滞を見てきた経験から、買う理由が届かないページの問題を解説します。">
 
 <!-- Google tag (gtag.js) - GA4 -->
 
@@ -179,6 +179,20 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 .why-box p{font-size:.93rem;color:var(--g800);line-height:2.05;}
 .why-box strong{color:var(--navy);}
 
+.box-heading{
+  font-family:var(--sans);
+  font-size:1.05rem;
+  font-weight:700;
+  line-height:1.7;
+  color:var(--navy);
+  letter-spacing:.02em;
+  margin-bottom:.9rem;
+}
+.box-heading--dark,
+.sec--navy .box-heading{
+  color:var(--gold-lt);
+}
+
 /* ── mismatch ── */
 .mm-wrap{
   display:grid;grid-template-columns:1fr 1fr;
@@ -187,11 +201,17 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 .mm-cell{background:var(--white);padding:1.75rem;}
 .mm-cell--r{background:var(--paper);}
 .mm-tag{
-  font-size:.6rem;font-weight:700;letter-spacing:.18em;
-  text-transform:uppercase;display:block;margin-bottom:.75rem;
+  font-family:var(--sans);
+  font-size:.98rem;
+  font-weight:700;
+  letter-spacing:.03em;
+  text-transform:none;
+  display:block;
+  margin-bottom:.8rem;
+  line-height:1.65;
 }
-.mm-cell .mm-tag{color:var(--g400);}
-.mm-cell--r .mm-tag{color:var(--gold);}
+.mm-cell .mm-tag{color:var(--navy);}
+.mm-cell--r .mm-tag{color:var(--navy);}
 .mm-text{font-size:.95rem;color:var(--g800);line-height:1.95;font-weight:500;}
 .mm-note{
   margin-top:1.75rem;padding:1.25rem 1.5rem;
@@ -576,12 +596,9 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
     <div class="hero-label" style="color: var(--gold);">原因の所在</div>
     <h1 class="hero-h1" style="color: var(--white);">
       CVRが上がらない時、<br>ほとんどの事業者は<br>何を変えればいいかを考えます。
-      <em style="color: var(--gold-lt);">でも、最初に見る場所を間違えると、<br>何を変えても数字は動きません。</em>
+      <em style="color: var(--gold-lt);">ですが、最初に見る場所を間違えれば、<br>何を変えても数字は動きません。</em>
     </h1>
-    <p class="hero-lead" style="color: rgba(255,255,255,0.85);">
-      広告費を増やした。デザインを変えた。商品も見直した。それでも数字は動かなかった。<br>
-      問題は、何を変えるかではありません。どこで買う理由が止まっているか。そこが見えていないことです。<br>
-      100を超える店舗の停滞を見てきた経験から解説します。
+    <p class="hero-lead" style="color: rgba(255,255,255,0.85);">広告費を増やした。デザインを変えた。商品も見直した。それでも数字は動かなかった。<br>問題は、何を変えるかではありません。どこで「買う理由」が止まっているか。そこが見えていないことです。<br>100を超える店舗の停滞を見てきた経験から解説します。
     </p>
   </div>
 </section>
@@ -599,7 +616,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   <div class="inner">
     <span class="sec-label">Root Cause</span>
     <h2 class="sec-h2">見ている場所が、<br>最初から違う。</h2>
-    <p class="sec-p">100を超える店舗の停滞を見てきた結論。停滞している店舗に共通していたのは、ひとつだけでした。買う理由が、正しい順番で届いていなかった。商品が悪いわけでも、価格が高いわけでも、広告が足りないわけでもありませんでした。</p>
+    <p class="sec-p">100を超える店舗の停滞を見てきた結論。停滞している店舗に共通していたのは、ひとつだけでした。「買う理由」が、正しい順番で届いていなかった。商品が悪いわけでも、価格が高いわけでも、広告が足りないわけでもありませんでした。</p>
     <ul class="cause-list">
       <li class="cause-item">
         <div class="cause-no">01</div>
@@ -619,12 +636,12 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
         <div class="cause-no">03</div>
         <div class="cause-body">
           <strong>「商品を変えれば解決する」と思っていた</strong>
-          <p>商品力とページ設計は別の問題です。良い商品が、設計の問題で消費者に届いていない。それがこの仕事を続けている理由です。</p>
+          <p>商品力とページ設計は別の問題です。良い商品が、構成設計の問題で消費者に届いていない。それがこの仕事を続けている理由です。</p>
         </div>
       </li>
     </ul>
     <div class="why-box">
-      <span class="why-box-label">なぜ、この思い込みが生まれるのか</span>
+      <h3 class="box-heading">なぜ、この思い込みが生まれるのか</h3>
       <p>制作会社は「綺麗なデザイン」を売っています。楽天コンサルは「アクセス数の増加」をKPIにしています。<strong>読者がどこで迷い、どこで買う理由を失っているか。そこからページを見ている人が少ない。</strong>だから、最初に見る場所がズレたままになります。これは事業者の責任ではなく、業界全体の流れが作ってきた問題です。</p>
     </div>
   </div>
@@ -638,16 +655,16 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
     <h2 class="sec-h2">何を変えても動かなかった理由は、ひとつです。</h2>
     <p class="sec-p">デザインを変えた。広告を増やした。商品も見直した。それでも数字が動かなかった店舗には、共通点があります。「どこで買う理由が止まっているか」を見る前に、「何を変えるか」から考えていた。ここでズレます。</p>
     <div class="why-box" style="margin-top:2rem;">
-      <span class="why-box-label">なぜ、何を変えても同じ結果になるのか</span>
+      <h3 class="box-heading">なぜ、何を変えても同じ結果になるのか</h3>
       <p>デザインも広告も商品も、すべて「ページに来た後の読者に届けるもの」です。しかし問題は、その前にあります。<strong>ページに来た読者は、すでに何かを迷っています。その迷いに合わない順番で情報を並べても、買う理由にはなりません。</strong>美しいデザインも、豊富な情報も、読者の迷いとズレていれば判断材料にならない。だから離脱します。ここが数字を止めている場所です。</p>
     </div>
     <div class="mm-wrap" style="margin-top:2rem;">
       <div class="mm-cell">
-        <span class="mm-tag">ほとんどの改善が向かう場所</span>
+        <h3 class="mm-tag">ほとんどの改善が向かう場所</h3>
         <div class="mm-text">何を伝えるか（情報・スペック・デザイン・広告量）</div>
       </div>
       <div class="mm-cell mm-cell--r">
-        <span class="mm-tag">本来、最初に問うべきこと</span>
+        <h3 class="mm-tag">本来、最初に問うべきこと</h3>
         <div class="mm-text">誰に、どの順番で、何の根拠を渡せば「判断できる状態」になるか</div>
       </div>
     </div>
@@ -665,7 +682,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
       <p class="phil-p">この順番は、好みではありません。買い手がページを見て、判断する流れに合わせたものです。</p>
       <p class="phil-p">買い手がページに来た瞬間、その人はすでに何かを比べています。楽天で検索してクリックした人は、複数の商品を並べて見ている状態です。ただしその比較軸は——価格、レビュー数、送料——小売ロジックの軸です。この軸で比較されている限り、どれだけ良い商品でも「より安い競合」に負け続けます。</p>
       <div class="mechanism">
-        <span class="mech-label">なぜ小西式は、他の改善が届かなかった問題を解決できるのか</span>
+        <h3 class="box-heading box-heading--dark">なぜ小西式は、他の改善が届かなかった問題を解決できるのか</h3>
         <p style="margin-bottom:1.25rem;">答えはひとつです。他のコンサルや制作会社が見ているのは「何を伝えるか」——情報量、デザイン、訴求軸です。小西式が先に見るのは、読者がどこで迷っているかです。</p>
         <p style="margin-bottom:1.25rem;">読者がどこで迷っているかが分かると、解くべき問題が変わります。「情報が足りないから離脱している」のではなく、「違う見方のまま情報を読んでいるから、買う理由を持てない」。ここが見えると、変えるべきは情報量でも見た目でもありません。<strong style="color:var(--gold-lt);">どの順番で、何の根拠を渡すか</strong>です。</p>
         <p>楽天コンサルはSEOと広告のプロです。制作会社はデザインのプロです。ただ、どちらも「どこで迷っているかを見つけ、買う理由が伝わる順番に直す」仕事ではありません。だから同じ問題が、ページの中に残り続けます。</p>
