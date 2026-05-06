@@ -1,914 +1,615 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://konishi-marketing.com/</loc>
     <lastmod>2026-04-21</lastmod>
-    <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/lp.html</loc>
     <lastmod>2026-04-21</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html</loc>
     <lastmod>2026-04-09</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-access-aru-noni-urenai-kyotsuten.html</loc>
     <lastmod>2026-04-09</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-kokokuhi-fuyashite-mo-rieki-nokoranai.html</loc>
     <lastmod>2026-04-12</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-shohin-page-design-kaete-mo-ugokanu.html</loc>
     <lastmod>2026-04-12</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-ranking-haitte-mo-uriage-tsudukanu-tokcho.html</loc>
     <lastmod>2026-04-13</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-shien-atsumara-nai-kyotsuten.html</loc>
     <lastmod>2026-04-13</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-review-fuyashite-mo-tenkanritsu-kaizenshinai.html</loc>
     <lastmod>2026-04-13</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-roas-kaizen-shinai-genin.html</loc>
     <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-supersale-urete-mo-fudan-urenai-mondai.html</loc>
     <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-aplus-tsukutte-mo-unit-session-rate-agaranai.html</loc>
     <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-title-saitekika-shite-mo-urenai-genin.html</loc>
     <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-shohin-page-chokkiritsu-takai.html</loc>
     <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-sumaho-tenkanritsu-dake-hikui-riyu.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-mokuhyo-kingaku-tasseideki-nai.html</loc>
     <lastmod>2026-04-20</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shinshohin-urenai-tachiagehiki-mondai.html</loc>
     <lastmod>2026-04-20</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-kisetsu-shohin-igai-urenai.html</loc>
     <lastmod>2026-04-20</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-gazou-sashikaete-mo-hannou-kawaranu-riyu.html</loc>
     <lastmod>2026-04-20</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-koubairitsu-rakuten-yori-hikui-genin.html</loc>
     <lastmod>2026-04-20</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-kakaku-sagete-mo-uriage-nobinai-hontono-riyu.html</loc>
     <lastmod>2026-04-20</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-merumaga-haishin-shite-mo-hannou-nai-mondai.html</loc>
     <lastmod>2026-04-20</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shohin-page-design-yori-sekkei-ga-saki.html</loc>
     <lastmod>2026-04-20</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-yoi-shohin-ga-ureru-wa-hanbun-shika-tadashikunai.html</loc>
     <lastmod>2026-04-21</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-konsaru-ni-makasete-mo-kazu-kawaranu.html</loc>
     <lastmod>2026-04-21</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-shohin-page-joho-tareba-ureru-hassou-machigai.html</loc>
     <lastmod>2026-04-21</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-design-gaisha-ni-irai-shite-mo-uriage-kawaranu.html</loc>
     <lastmod>2026-04-21</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-target-shibo-ru-dake-de-wa-urenai.html</loc>
     <lastmod>2026-04-21</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-heatmap-bunseki-kaizen-ni-tsunagaranu.html</loc>
     <lastmod>2026-04-21</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-shohin-page-ab-test-kino-shinai-genin.html</loc>
     <lastmod>2026-04-21</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-review-ooi-noni-urenai-shohin.html</loc>
     <lastmod>2026-04-21</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-kakaku-kyoso-makikomareru-hontono-genin.html</loc>
     <lastmod>2026-04-21</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-seo-taisaku-dake-de-wa-uriage-agaranu.html</loc>
     <lastmod>2026-04-21</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-shohin-page-kau-riyu-tasu-hassou-no-genkai.html</loc>
     <lastmod>2026-04-21</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-unei-daiko-ni-makasete-wa-ikenai-shigoto.html</loc>
     <lastmod>2026-04-21</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-kokoku-tomeru-to-uriage-zero-kozo-mondai.html</loc>
     <lastmod>2026-04-22</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-roas-mokuhyo-settei-machigatte-iru.html</loc>
     <lastmod>2026-04-22</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-shohin-page-kyogai-hikaku-zenmen-wa-ikenai-riyu.html</loc>
     <lastmod>2026-04-22</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-urezuji-bunseki-kaizen-tsunagaranu-riyu.html</loc>
     <lastmod>2026-04-22</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-mazu-ninchi-toru-senryaku-kino-shinai-baai.html</loc>
     <lastmod>2026-04-22</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shohin-page-joho-ryo-fuyasu-to-urenaku-naru.html</loc>
     <lastmod>2026-04-22</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-okyakusama-no-koe-koubai-tsunagaranu-kaiketsu.html</loc>
     <lastmod>2026-04-22</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shohin-page-kaizen-irai-mae-ni-kakunin.html</loc>
     <lastmod>2026-04-22</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-shohin-page-seisaku-gaisha-erabi-kata.html</loc>
     <lastmod>2026-04-22</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-unei-daiko-to-shohin-page-konsaru-no-chigai.html</loc>
     <lastmod>2026-04-23</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-design-to-kosei-nani-ga-chigau.html</loc>
     <lastmod>2026-04-23</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shohin-page-kaizen-hiyo-soba.html</loc>
     <lastmod>2026-04-23</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-project-page-dare-ni-irai.html</loc>
     <lastmod>2026-04-23</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-shohin-page-naisei-gaichuu-handan.html</loc>
     <lastmod>2026-04-23</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shohin-page-kaizen-seika-deru-kaisha-denai-kaisha.html</loc>
     <lastmod>2026-04-23</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-kokoku-dairiten-ni-makasete-wa-ikenai.html</loc>
     <lastmod>2026-04-23</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shohin-page-shindan-mae-junbi.html</loc>
     <lastmod>2026-04-23</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-yahoo-makuake-lp-sekkei-dou-chigau.html</loc>
     <lastmod>2026-04-24</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-shohin-page-kaizen-yusen-juni-tsukekata.html</loc>
     <lastmod>2026-04-24</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-amazon-shohin-page-sekkei-kaeru-beki-riyu.html</loc>
     <lastmod>2026-04-24</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-hajimete-shohin-page-kaizen-tadashii-tejun.html</loc>
     <lastmod>2026-04-24</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-mazu-samune-kara-tetsukeru-tadashii-riyu.html</loc>
     <lastmod>2026-04-24</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-shohin-page-kaizen-kouka-sokutei.html</loc>
     <lastmod>2026-04-24</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-sumaho-pc-shohin-page-wakeru-beki-ka.html</loc>
     <lastmod>2026-04-24</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-shohin-page-kaizen-hiyo-tai-kouka.html</loc>
     <lastmod>2026-04-24</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shohin-page-jisha-kaizen-shippai-pattern.html</loc>
     <lastmod>2026-04-24</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/ec-shohin-page-kaizen-dake-genkai-toshita-taishoho.html</loc>
     <lastmod>2026-04-24</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-urenai-shohin-page-mondai.html</loc>
     <lastmod>2026-04-24</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-aplus-tsukutte-mo-uriage-kawaranu-riyu.html</loc>
     <lastmod>2026-04-25</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-main-image-kaete-mo-unit-session-rate-kawaranu.html</loc>
     <lastmod>2026-04-25</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-shohin-page-chokkiritsu-takai-kyotsuten.html</loc>
     <lastmod>2026-04-25</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-kakaku-sagete-mo-uriage-nobinai-riyu.html</loc>
     <lastmod>2026-04-25</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-ab-test-kazu-ugokanu-genin.html</loc>
     <lastmod>2026-04-25</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-setsumeibun-kaizen-unit-session-rate-agaranai.html</loc>
     <lastmod>2026-04-25</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-review-fuyashite-mo-urekazu-fuenai-kadai.html</loc>
     <lastmod>2026-04-25</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-sponsor-kokoku-fuyashite-mo-rieki-nokoranai.html</loc>
     <lastmod>2026-04-25</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-shohin-page-gaichuu-kakunin.html</loc>
     <lastmod>2026-04-25</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-yahoo-onaji-shohin-page-sekkei-wa-ikenai.html</loc>
     <lastmod>2026-04-25</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-brand-store-unit-session-rate-kawaranu.html</loc>
     <lastmod>2026-04-25</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-kino-setsumei-zenmen-wa-ikenai-riyu.html</loc>
     <lastmod>2026-04-25</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-kyogai-yori-yasuku-shite-mo-erabarenai-kyotsuten.html</loc>
     <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-shohin-page-kaizen-tejun.html</loc>
     <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-urenai-shohin-page-kyotsuten.html</loc>
     <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-koubairitsu-rakuten-yori-hikui-hontono-riyu.html</loc>
     <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-kokoku-fuyashite-mo-rieki-nokoranai-riyu.html</loc>
     <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-shohin-page-sekkei-rakuten-to-chigai.html</loc>
     <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-review-fuyashite-mo-koubairitsu-agaranai-riyu.html</loc>
     <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-shohin-gazou-sekkei.html</loc>
     <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-paypay-renkei-uriage-agaranai-riyu.html</loc>
     <lastmod>2026-04-27</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-kakaku-kyoso-makikomarenai-shohin-page-sekkei.html</loc>
     <lastmod>2026-04-27</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-shohin-page-gaichuu-kakunin.html</loc>
     <lastmod>2026-04-27</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-amazon-shohin-page-sekkei-no-chigai.html</loc>
     <lastmod>2026-04-27</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-project-page-kakikata-shien-atsumaru-kosei.html</loc>
     <lastmod>2026-04-27</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-mokuhyo-3bai-project-page-sekkei-gensoku.html</loc>
     <lastmod>2026-04-27</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-all-or-nothing-handan.html</loc>
     <lastmod>2026-04-27</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-shinsa-tsuka-sekkei.html</loc>
     <lastmod>2026-04-27</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-supporter-shien-kimeru-shunkan-shinri.html</loc>
     <lastmod>2026-04-27</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-shuryo-go-rakuten-amazon-tenkai-sekkei.html</loc>
     <lastmod>2026-04-27</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-facebook-kokoku-kumiawaeru-shishin.html</loc>
     <lastmod>2026-04-27</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/meta-kokoku-cpo-roas-kaizenshinai-kyotsuten.html</loc>
     <lastmod>2026-04-27</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/jisha-ec-meta-kokoku-nagashite-mo-seiyaku-shinai.html</loc>
     <lastmod>2026-04-28</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/meta-kokoku-kiji-lp-to-lp-dochira-koka.html</loc>
     <lastmod>2026-04-28</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/jisha-ec-kokokuhi-fuyasu-hodo-cpo-roas-akka.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/meta-creative-kaete-mo-cpo-roas-kaizenshinai-riyu.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/jisha-ec-ltv-ageru-mae-shohin-page-minaoshi.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/meta-funnel-sekkei-gensoku.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/jisha-ec-shohin-page-meta-kokoku-tadashii-junjo.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-shohin-page-kaizen-hiyo-soba.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-shohin-page-jisha-kaizen-shippai.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-yahoo-shutten-dochira.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-kaizen-kaisha-erabi-kata.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-shohin-page-kaizen-hiyo-soba.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-kaizen-kaisha-erabi-kata.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-shohin-page-jisha-kaizen-shippai.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/meta-funnel-gaichuu-kakunin.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/meta-funnel-kaizen-hiyo-soba.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/jisha-ec-meta-seika-deru-kaisha-denai.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-shien-atsumara-nai-page-kyotsuten-kadai.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-shochousen-mokuhyo-mitatsu-kosei-kekkan.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-roas-agaranai-hontono-riyu.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-shohin-page-kino-yori-saki.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-a-plus-sekkei-kangaekata.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-shohin-page-sabetsuka-sekkei.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-shohin-page-shakaitekishomei.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/amazon-gazou-video-cvr-sekkei.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-access-aru-noni-urenai-kyotsuten.html</loc>
     <lastmod>2026-04-29</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-roas-kaizenshinai-konpon-genin.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-nani-kaete-mo-kazu-ugokanu-handan-jiku.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-design-kirei-nishite-mo-urenai-riyu.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-shohin-page-ko-koubairitsu-sekkei-houhou.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-johoryo-fuyashite-mo-urenai-page-mondai.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/yahoo-shakaitekishomei-tadashiku-tsukau-houhou.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-access-aru-noni-oenkounyuu-atsumara-nai.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-shiensha-page-mite-mo-oenkounyuu-shinai-riyu.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-roas-hikui-page-sekkei-kekkan.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-project-page-takai-moushikomirtsu-sekkei.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/makuake-johoryo-fuyashite-mo-oenkounyuu-fuenai.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/jisha-ec-meta-kaizen-shite-mo-cpo-roas-kawaranu.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/jisha-ec-meta-click-aru-noni-urenai-kozo-mondai.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/shopify-meta-kokoku-nagashite-mo-urenai-riyu.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shohin-page-takai-tenkanritsu-sekkei-tejun.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shakaitekishomei-sekkei.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shohin-page-kino-benefit-henkan-hiketsu.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shohin-page-kaizen-irai-nohinn-made.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shohin-page-kaizen-toshi-taiko-ka-kaishu.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-konsaru-irai-mae-junbi-subeki-data.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-thumbnail-sosyu-kangaekata.html</loc>
     <lastmod>2026-04-30</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-thumbnail-1-5-mai-handan-jiku-watasu.html</loc>
     <lastmod>2026-05-01</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shohin-page-ureru-usp-sekkei.html</loc>
     <lastmod>2026-05-01</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shohin-page-kino-benefit-henkan-tejun.html</loc>
     <lastmod>2026-05-01</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-after-after-hibiku-benefit-sekkei.html</loc>
     <lastmod>2026-05-01</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-hanronshori-kawanai-riyu-kesu-sekkei.html</loc>
     <lastmod>2026-05-01</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-kabu-lp-samune-asshuku-saiten-kai.html</loc>
     <lastmod>2026-05-01</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://konishi-marketing.com/articles/rakuten-shakaitekishomei-tadashii-junban-haichi.html</loc>
     <lastmod>2026-05-01</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://konishi-marketing.com/articles/makuake-shienngaku-saidaika-irai-saki-erabi.html</loc>
+    <loc>https://konishi-marketing.com/articles/makuake-daikougyousha-shien-tomaranu-kozo.html</loc>
     <lastmod>2026-05-01</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://konishi-marketing.com/articles/makuake-hiyo-taiko-ka-seisaku-hi-shienngaku.html</loc>
+    <loc>https://konishi-marketing.com/articles/makuake-seisaku-hi-taikou-ka-toushi-handan.html</loc>
     <lastmod>2026-05-01</lastmod>
-    <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://konishi-marketing.com/articles/makuake-go-keizoku-hanbai-dare-ni-irai.html</loc>
+    <loc>https://konishi-marketing.com/articles/makuake-ippan-hanbai-urenai-kozo.html</loc>
     <lastmod>2026-05-01</lastmod>
-    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://konishi-marketing.com/articles/meta-funnel-konsaru-erabikata.html</loc>
+    <lastmod>2026-05-06</lastmod>
   </url>
 </urlset>
