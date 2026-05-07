@@ -4,8 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>小西マーケティング｜ECの数字が動かない理由を診断</title>
-<meta name="description" content="広告費を増やすほど、利益が消えていく。その原因が、商品でも価格でもなかったとしたら。100店舗超の停滞を見てきた経験から、買う理由が届かないページの問題を解説します。">
+<title>小西マーケティング｜ECの買う理由が止まる場所を診断</title>
+<meta name="description" content="広告、デザイン、商品を見直してもECの数字が動かない。その原因は、読者が買う理由を失った場所にあるかもしれません。小西マーケティングが、ページ内の停滞箇所を診断します。">
 
 <!-- Google tag (gtag.js) - GA4 -->
 
@@ -38,7 +38,7 @@
 }
 html{font-size:16px;scroll-behavior:smooth;}
 body{font-family:var(--sans);color:var(--text);background:var(--white);
-     line-height:1.85;-webkit-font-smoothing:antialiased;}
+     line-height:1.85;-webkit-font-smoothing:antialiased;letter-spacing:.01em;}
 
 /* ── header ── */
 .hd{
@@ -85,7 +85,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   content:'';position:absolute;right:0;top:0;bottom:0;
   width:4px;background:var(--gold);
 }
-.hero-inner{max-width:780px;}
+.hero-inner{max-width:860px;margin:0 auto;}
 .hero-label{
   display:inline-flex;align-items:center;gap:.6rem;
   font-size:.62rem;font-weight:700;letter-spacing:.25em;
@@ -104,7 +104,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 }
 .hero-lead{
   font-size:1.05rem;color:var(--g600);line-height:2.1;
-  max-width:560px;margin-bottom:2.5rem;
+  max-width:620px;margin-bottom:2.5rem;
 }
 .cta-row{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
 .btn{
@@ -115,6 +115,37 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 }
 .btn:hover{opacity:.88;}
 .btn-note{font-size:.73rem;color:var(--g400);line-height:1.85;}
+.hero-cta-row{
+  margin-top:2.75rem;
+  gap:1.25rem;
+  align-items:stretch;
+}
+.hero-btn{
+  position:relative;
+  min-width:238px;
+  padding:.78rem 1.9rem;
+  background:var(--white);
+  color:var(--navy);
+  border:1px solid rgba(201,168,76,.75);
+  border-bottom:3px solid var(--gold);
+  box-shadow:0 10px 22px rgba(0,0,0,.2);
+  text-align:center;
+  line-height:1.45;
+}
+.hero-btn:hover{
+  opacity:1;
+  transform:translateY(-1px);
+  box-shadow:0 14px 28px rgba(0,0,0,.25);
+}
+.hero-btn-note{
+  display:flex;
+  align-items:center;
+  padding:.55rem 0;
+  color:rgba(255,255,255,.68)!important;
+  font-size:.78rem;
+  line-height:1.8;
+}
+
 
 /* ── statement bar ── */
 .stmt{
@@ -145,9 +176,23 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   font-size:clamp(1.9rem,4.5vw,3rem);font-weight:700;
   color:var(--navy);line-height:1.3;letter-spacing:.01em;margin-bottom:2rem;
 }
-.sec-p{font-size:1rem;color:var(--g800);line-height:2.15;}
-.inner{max-width:860px;margin:0 auto;}
-.inner-n{max-width:720px;margin:0 auto;}
+.sec-p{font-size:1rem;color:var(--g800);line-height:2.1;max-width:700px;}
+.sec-p + .sec-p{margin-top:1.1rem;}
+.inner{max-width:900px;margin:0 auto;}
+.inner-n{max-width:740px;margin:0 auto;}
+.lead-lines{margin-top:2rem;border-top:1px solid var(--g200);border-bottom:1px solid var(--g200);}
+.lead-line{display:grid;grid-template-columns:7rem 1fr;gap:1.25rem;padding:1.25rem 0;border-bottom:1px solid var(--g200);}
+.lead-line:last-child{border-bottom:none;}
+.lead-line small{font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;padding-top:.15rem;}
+.lead-line p{font-size:.95rem;color:var(--g800);line-height:1.95;}
+.moment-list{list-style:none;margin-top:2rem;border:1px solid var(--g200);background:var(--white);}
+.moment-list li{padding:1.15rem 1.4rem;border-bottom:1px solid var(--g200);font-size:.95rem;color:var(--g800);line-height:1.8;}
+.moment-list li:last-child{border-bottom:none;}
+.moment-list strong{font-family:var(--serif);color:var(--navy);font-size:1.05rem;}
+.channel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--g200);margin-top:2.2rem;}
+.channel-card{background:var(--white);padding:1.65rem;}
+.channel-card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.45rem;line-height:1.55;}
+.channel-card p{font-size:.88rem;color:var(--g600);line-height:1.9;}
 
 /* ── cause list ── */
 .cause-list{list-style:none;margin-top:2rem;}
@@ -243,12 +288,13 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   border-top:1px solid var(--g200);border-bottom:1px solid var(--g200);
 }
 .track-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:0;margin-top:2.5rem;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;margin-top:2.5rem;
+  background:var(--g200);
 }
 .track-card{
-  padding:2.5rem 1.5rem;text-align:center;
-  border-right:1px solid var(--g200);
+  padding:2.15rem 1.2rem;text-align:center;
+  background:var(--white);
 }
 .track-card:last-child{border-right:none;}
 .track-num{
@@ -365,6 +411,27 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   border-top:1px solid var(--g200);
 }
 .form-wrap{max-width:640px;margin:0 auto;}
+.form-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:.65rem;
+  font-size:1.05rem;
+  font-weight:900;
+  letter-spacing:.06em;
+  color:var(--navy);
+  background:var(--white);
+  border:1px solid var(--g200);
+  border-left:5px solid var(--gold);
+  padding:.7rem 1.05rem;
+  margin-bottom:1.2rem;
+  line-height:1.35;
+}
+.form-kicker small{
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  color:var(--gold);
+}
 .form-h{
   font-family:var(--serif);
   font-size:clamp(1.75rem,4.5vw,3rem);font-weight:700;
@@ -550,14 +617,16 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   .hd-nav{gap:.8rem;}
   .hd-link{font-size:.72rem;}
   .hd-cta{padding:.45rem .9rem;}
+  .hero-btn{width:100%;min-width:0;}
+  .hero-btn-note{width:100%;padding:.2rem 0 0;}
   .hero{padding:4rem 1.25rem 3.5rem;}
   .hero::after{display:none;}
   .sec,.track-sec,.form-sec{padding:3.5rem 1.25rem;}
   .stmt{padding:2.5rem 1.25rem;}
   .mm-wrap{grid-template-columns:1fr;}
-  .track-grid{grid-template-columns:repeat(2,1fr);}
-  .track-card{border-right:none;border-bottom:1px solid var(--g200);}
-  .track-card:nth-child(odd){border-right:1px solid var(--g200);}
+  .track-grid{grid-template-columns:repeat(2,1fr);gap:1px;}
+  .track-card{border-right:none;border-bottom:none;}
+  .track-card:nth-child(odd){border-right:none;}
   .award-row{grid-template-columns:1fr;}
   .articles{grid-template-columns:1fr;}
   .article-hub-box{
@@ -571,6 +640,8 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   }
   .nextstep{padding:1.75rem;}
   .cause-item{grid-template-columns:2rem 1fr;gap:1rem;}
+  .lead-line{grid-template-columns:1fr;gap:.3rem;padding:1.1rem 0;}
+  .moment-list li{padding:1rem 1.1rem;}
   .foot{flex-direction:column;align-items:flex-start;}
 }
 </style>
@@ -585,7 +656,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 
   <nav class="hd-nav">
     <a href="https://konishi-marketing.com/articles/" class="hd-link">記事を読む</a>
-    <a href="#form" class="hd-cta">無料診断を受ける</a>
+    <a href="#form" class="hd-cta">無料LP診断を受ける</a>
   </nav>
 </header>
 
@@ -598,8 +669,11 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
       CVRが上がらない時、<br>ほとんどの事業者は<br>何を変えればいいかを考えます。
       <em style="color: var(--gold-lt);">ですが、最初に見る場所を間違えれば、<br>何を変えても数字は動きません。</em>
     </h1>
-    <p class="hero-lead" style="color: rgba(255,255,255,0.85);">広告費を増やした。デザインを変えた。商品も見直した。それでも数字は動かなかった。<br>問題は、何を変えるかではありません。どこで「買う理由」が止まっているか。そこが見えていないことです。<br>100を超える店舗の停滞を見てきた経験から解説します。
-    </p>
+    <p class="hero-lead" style="color: rgba(255,255,255,0.85);">広告費を増やした。デザインを変えた。商品も見直した。それでも数字は動かなかった。<br>問題は、何を変えるかではありません。どこで「買う理由」が止まっているか。そこが見えていないことです。<br>100を超える店舗の停滞を見てきた経験から解説します。</p>
+    <div class="cta-row hero-cta-row">
+      <a href="#form" class="btn hero-btn">無料LP診断を受ける</a>
+      <div class="btn-note hero-btn-note">LP・商品ページURLを送るだけ。<br>2営業日以内に診断レポートを返送します。</div>
+    </div>
   </div>
 </section>
 
@@ -615,35 +689,25 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <section class="sec sec--white">
   <div class="inner">
     <span class="sec-label">Root Cause</span>
-    <h2 class="sec-h2">見ている場所が、<br>最初から違う。</h2>
-    <p class="sec-p">100を超える店舗の停滞を見てきた結論。停滞している店舗に共通していたのは、ひとつだけでした。「買う理由」が、正しい順番で届いていなかった。商品が悪いわけでも、価格が高いわけでも、広告が足りないわけでもありませんでした。</p>
-    <ul class="cause-list">
-      <li class="cause-item">
-        <div class="cause-no">01</div>
-        <div class="cause-body">
-          <strong>「広告を増やせば解決する」と思っていた</strong>
-          <p>アクセスは増えた。しかし利益は残らなかった。選べないページに人を集めても、離脱率は変わらない。広告は「選ばれるページ」があって初めて機能する仕組みです。</p>
-        </div>
-      </li>
-      <li class="cause-item">
-        <div class="cause-no">02</div>
-        <div class="cause-body">
-          <strong>「デザインを綺麗にすれば解決する」と思っていた</strong>
-          <p>リニューアル後も数字は動かなかった。買い手は美しいページを求めていない。「自分に合っているか」を判断できる根拠を求めています。</p>
-        </div>
-      </li>
-      <li class="cause-item">
-        <div class="cause-no">03</div>
-        <div class="cause-body">
-          <strong>「商品を変えれば解決する」と思っていた</strong>
-          <p>商品力とページ設計は別の問題です。良い商品が、構成設計の問題で消費者に届いていない。それがこの仕事を続けている理由です。</p>
-        </div>
-      </li>
-    </ul>
-    <div class="why-box">
-      <h3 class="box-heading">なぜ、この思い込みが生まれるのか</h3>
-      <p>制作会社は「綺麗なデザイン」を売っています。楽天コンサルは「アクセス数の増加」をKPIにしています。<strong>読者がどこで迷い、どこで買う理由を失っているか。そこからページを見ている人が少ない。</strong>だから、最初に見る場所がズレたままになります。これは事業者の責任ではなく、業界全体の流れが作ってきた問題です。</p>
+    <h2 class="sec-h2">まだ、改善は<br>始まっていない。</h2>
+    <p class="sec-p">広告を増やす。デザインを変える。画像を差し替える。商品ページを作り直す。どれも、現場では「改善」と呼ばれます。</p>
+    <p class="sec-p" style="margin-top:1rem;">ただ、本来の改善は、変えることから始まりません。読者がどこで迷い、どの順番で買う理由を失い、なぜ購入判断まで進めなかったのか。そこを見つけてから、初めて変える場所が決まります。</p>
+
+    <div class="lead-lines">
+      <div class="lead-line">
+        <small>AD</small>
+        <p>止まった場所を見ないまま増やすと、選べないページに人が流れ込みます。</p>
+      </div>
+      <div class="lead-line">
+        <small>DESIGN</small>
+        <p>止まった場所を見ないまま整えると、判断材料のズレは残ります。</p>
+      </div>
+      <div class="lead-line">
+        <small>PRODUCT</small>
+        <p>止まった場所を見ないまま見直すと、買う理由が届く前に比較へ戻られます。</p>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -651,24 +715,17 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 
 <section class="sec sec--paper">
   <div class="inner">
-    <span class="sec-label">The Real Problem</span>
-    <h2 class="sec-h2">何を変えても動かなかった理由は、ひとつです。</h2>
-    <p class="sec-p">デザインを変えた。広告を増やした。商品も見直した。それでも数字が動かなかった店舗には、共通点があります。「どこで買う理由が止まっているか」を見る前に、「何を変えるか」から考えていた。ここでズレます。</p>
-    <div class="why-box" style="margin-top:2rem;">
-      <h3 class="box-heading">なぜ、何を変えても同じ結果になるのか</h3>
-      <p>デザインも広告も商品も、すべて「ページに来た後の読者に届けるもの」です。しかし問題は、その前にあります。<strong>ページに来た読者は、すでに何かを迷っています。その迷いに合わない順番で情報を並べても、買う理由にはなりません。</strong>美しいデザインも、豊富な情報も、読者の迷いとズレていれば判断材料にならない。だから離脱します。ここが数字を止めている場所です。</p>
-    </div>
-    <div class="mm-wrap" style="margin-top:2rem;">
-      <div class="mm-cell">
-        <h3 class="mm-tag">ほとんどの改善が向かう場所</h3>
-        <div class="mm-text">何を伝えるか（情報・スペック・デザイン・広告量）</div>
-      </div>
-      <div class="mm-cell mm-cell--r">
-        <h3 class="mm-tag">本来、最初に問うべきこと</h3>
-        <div class="mm-text">誰に、どの順番で、何の根拠を渡せば「判断できる状態」になるか</div>
-      </div>
-    </div>
-    <div class="mm-note" style="margin-top:1.75rem;">楽天の商品ページは、1本のLPとして読まれるわけではありません。検索一覧、サムネ、下部LP。読者はこの3つを別々に見ています。それぞれの場所で、読者が迷うポイントも変わります。ここを分けずに作ると、どれだけ内容を足しても、買う理由が届かないままになります。</div>
+    <span class="sec-label">Stop Point</span>
+    <h2 class="sec-h2">離脱の前に、<br>迷いがある。</h2>
+    <p class="sec-p">商品画像を見た。説明を読んだ。価格を見た。レビューを確認した。他の商品を開いた。戻ってこなかった。この流れのどこかで、読者は買わない理由を見つけています。</p>
+    <p class="sec-p">見るべきなのは、ページ全体の印象ではありません。読者が判断を止めた場所です。</p>
+
+    <ul class="moment-list">
+      <li><strong>説明で止まった。</strong><br>情報はあるのに、何を判断材料にすればいいか分からなかった。</li>
+      <li><strong>価格で止まった。</strong><br>価値が腹落ちする前に、金額だけが残った。</li>
+      <li><strong>レビューで止まった。</strong><br>最後の不安を自分で消せず、他人の評価に判断を預けた。</li>
+    </ul>
+
   </div>
 </section>
 
@@ -679,13 +736,13 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
     <span class="sec-label sec-label--lt">独自メカニズム</span>
     <div class="phil-inner">
       <div class="phil-h">設計が先、<br>デザインが後。</div>
-      <p class="phil-p">この順番は、好みではありません。買い手がページを見て、判断する流れに合わせたものです。</p>
-      <p class="phil-p">買い手がページに来た瞬間、その人はすでに何かを比べています。楽天で検索してクリックした人は、複数の商品を並べて見ている状態です。ただしその比較軸は——価格、レビュー数、送料——小売ロジックの軸です。この軸で比較されている限り、どれだけ良い商品でも「より安い競合」に負け続けます。</p>
+      <p class="phil-p">先に決めるのは、何を見せるかではありません。誰に、どの順番で、何の根拠を渡せば判断が終わるかです。</p>
+      <p class="phil-p">ここが決まってから、デザインもコピーも意味を持ちます。楽天なら検索一覧、サムネイル、下部LP。Amazonならメイン画像、サブ画像、説明文。自社ECなら広告、記事LP、購入ページ。それぞれで読者が止まる場所は変わります。</p>
       <div class="mechanism">
-        <h3 class="box-heading box-heading--dark">なぜ小西式は、他の改善が届かなかった問題を解決できるのか</h3>
-        <p style="margin-bottom:1.25rem;">答えはひとつです。他のコンサルや制作会社が見ているのは「何を伝えるか」——情報量、デザイン、訴求軸です。小西式が先に見るのは、読者がどこで迷っているかです。</p>
-        <p style="margin-bottom:1.25rem;">読者がどこで迷っているかが分かると、解くべき問題が変わります。「情報が足りないから離脱している」のではなく、「違う見方のまま情報を読んでいるから、買う理由を持てない」。ここが見えると、変えるべきは情報量でも見た目でもありません。<strong style="color:var(--gold-lt);">どの順番で、何の根拠を渡すか</strong>です。</p>
-        <p>楽天コンサルはSEOと広告のプロです。制作会社はデザインのプロです。ただ、どちらも「どこで迷っているかを見つけ、買う理由が伝わる順番に直す」仕事ではありません。だから同じ問題が、ページの中に残り続けます。</p>
+        <h3 class="box-heading box-heading--dark">小西式で見るのは、ページではなく離脱の直前です。</h3>
+        <p style="margin-bottom:1.25rem;">読者がどこで迷っているかが分かると、変えるべき場所が絞られます。情報を足すのか。順番を入れ替えるのか。判断軸を先に渡すのか。安心材料を後ろに置くのか。</p>
+        <p style="margin-bottom:1.25rem;">ページを「良い・悪い」で見ません。読者が買う理由を持てなくなった地点を見ます。</p>
+        <p>止まっている場所が1点に絞れれば、広告費を変えずに数字が動き始めることがあります。</p>
       </div>
     </div>
   </div>
@@ -707,7 +764,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
         <div style="font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;">小西 秀人（こにし・ひでと）</div>
         <div style="font-size:.78rem;color:var(--gold);font-weight:700;letter-spacing:.1em;margin-bottom:1rem;">ECコンサルタント／小西マーケティング</div>
         <p style="font-size:.88rem;color:var(--g600);line-height:2.1;">
-          横浜国立大学教育人間科学部マルチメディア文化課程中退。楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの改善から数字が動かない理由を見つける「小西式CVR設計」を展開。楽天ショップオブザイヤー受賞店舗の店長として、そしてショップオブジエリア受賞店舗のCVR改善責任者として、「表彰される側」の現場でページ設計を担ってきた。
+          横浜国立大学教育人間科学部マルチメディア文化課程中退。楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの改善から数字が動かない理由を見つける「小西式CVR改善設計」を展開。楽天ショップオブザイヤー受賞店舗の店長として、そしてショップオブジエリア受賞店舗のCVR改善責任者として、「表彰される側」の現場でページ設計を担ってきた。
         </p>
       </div>
     </div>
@@ -715,6 +772,10 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
       <div class="track-card">
         <span class="track-num">2<span class="track-unit">回</span></span>
         <div class="track-desc">楽天市場<br>総合ランキング1位</div>
+      </div>
+      <div class="track-card">
+        <span class="track-num">1<span class="track-unit">回</span></span>
+        <div class="track-desc">Yahoo!ショッピング<br>総合ランキング1位</div>
       </div>
       <div class="track-card">
         <span class="track-num">11<span class="track-unit">回</span></span>
@@ -725,8 +786,16 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
         <div class="track-desc">楽天ランキング1位<br>通算獲得数</div>
       </div>
       <div class="track-card">
+        <span class="track-num">3<span class="track-unit">回</span></span>
+        <div class="track-desc">Makuake<br>総合ランキング1位</div>
+      </div>
+      <div class="track-card">
         <span class="track-num">2,000<span class="track-unit">%+</span></span>
         <div class="track-desc">Makuake<br>ROAS達成（複数回）</div>
+      </div>
+      <div class="track-card">
+        <span class="track-num">3,000<span class="track-unit">円以下</span></span>
+        <div class="track-desc">Meta広告<br>CPO達成</div>
       </div>
     </div>
     <div class="award-row">
@@ -745,7 +814,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
         </div>
       </div>
     </div>
-    <div class="track-note">※上記はすべて異なる商品・店舗で達成した実績です。食品・家具・家電・スマホグッズ・美容・健康・雑貨など、カテゴリをまたいで再現しています。特定の商品力に依存しない、設計力による再現性が特徴です。</div>
+    <div class="track-note">※上記はすべて異なる商品・店舗で達成した実績です。食品・家具・家電・スマホグッズ・美容・健康・雑貨など、カテゴリをまたいで再現しています。特定の商品力に依存しない、ページ改善による再現性を重視しています。</div>
   </div>
 </section>
 
@@ -754,31 +823,31 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <section class="sec sec--white">
   <div class="inner">
     <span class="sec-label">対応チャネル</span>
-    <h2 class="sec-h2">物販の主要チャネルに<br>対応しています。</h2>
-    <p class="sec-p" style="margin-bottom:2.5rem;">小西式CVR設計は、モール・クラウドファンディング・自社ECの主要プラットフォームに対応しています。各チャネルで、読者がどこから来て、何を見て、どこで迷うかに合わせてページを組み替えます。</p>
+    <h2 class="sec-h2">売り場ごとに、<br>止まる場所は変わる。</h2>
+    <p class="sec-p" style="margin-bottom:2.2rem;">同じ商品ページでも、楽天、Amazon、Makuake、自社ECでは読者の見方が変わります。小西式では、売り場ごとの比較環境に合わせて、判断が止まる場所を切り分けます。</p>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;">
-  <div style="padding:1.75rem;border:1px solid var(--g200);">
-    <div style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;">楽天市場</div>
-    <p style="font-size:.9rem;color:var(--g600);line-height:1.9;">商品ページのサムネイル設計から下部LP構成まで。楽天固有の購買行動に合わせた設計を行います。</p>
-  </div>
-  <div style="padding:1.75rem;border:1px solid var(--g200);">
-    <div style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;">Amazon</div>
-    <p style="font-size:.9rem;color:var(--g600);line-height:1.9;">メイン画像・サブ画像設計から商品説明文の構成まで。検索流入から購買判断までの導線を整えます。</p>
-  </div>
-  <div style="padding:1.75rem;border:1px solid var(--g200);">
-    <div style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;">Makuake・クラウドファンディング</div>
-    <p style="font-size:.9rem;color:var(--g600);line-height:1.9;">プロジェクトページの設計。支援者が「応援したい」と感じる順序と感情導線を設計します。</p>
-  </div>
-  <div style="padding:1.75rem;border:1px solid var(--g200);">
-    <div style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;">Yahoo!ショッピング</div>
-    <p style="font-size:.9rem;color:var(--g600);line-height:1.9;">楽天と近い購買行動に合わせた設計。モール特有の比較環境での差別化を図ります。</p>
-  </div>
-  <div style="padding:1.75rem;border:1px solid var(--g200);">
-    <div style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;">自社EC / Meta広告</div>
-    <p style="font-size:.9rem;color:var(--g600);line-height:1.9;">記事LPまたは一体型LPの設計。Meta経由のコールドトラフィックを購買判断まで引き上げる導線を設計します。</p>
-  </div>
-</div>
+    <div class="channel-grid">
+      <div class="channel-card">
+        <h3>楽天市場</h3>
+        <p>検索一覧、サムネイル、下部LPを分けて確認。比較される前に、判断軸が渡せているかを見ます。</p>
+      </div>
+      <div class="channel-card">
+        <h3>Amazon</h3>
+        <p>メイン画像、サブ画像、商品説明文を確認。検索流入後、どこで購買判断が止まるかを見ます。</p>
+      </div>
+      <div class="channel-card">
+        <h3>Makuake・クラウドファンディング</h3>
+        <p>プロジェクトページの冒頭から支援導線までを確認。応援する理由が立ち上がる順番を見ます。</p>
+      </div>
+      <div class="channel-card">
+        <h3>Yahoo!ショッピング</h3>
+        <p>イベント依存、価格比較、商品ページ内の説明順を確認。平常時に止まる場所を見ます。</p>
+      </div>
+      <div class="channel-card">
+        <h3>自社EC / Meta広告</h3>
+        <p>広告、記事LP、購入ページの接続を確認。冷たい流入がどこで購買判断から外れるかを見ます。</p>
+      </div>
+    </div>
 
   </div>
 </section>
@@ -788,13 +857,13 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <section class="sec sec--white">
   <div class="inner-n">
     <span class="sec-label">Next Step</span>
-    <h2 class="sec-h2">良い商品が、<br>伝わらないまま終わっている。</h2>
-    <p class="sec-p">商品に自信がある。素材にこだわった。使ってもらえれば、きっと分かる。でも、ページを見た人はそれを知らないまま離脱しています。商品の価値が、ページの順番ひとつで届かないことがあります。</p>
-    <p class="sec-p" style="margin-top:1rem;">診断で見るのは、どこで買う理由が止まっているかです。そこが1点に絞れれば、広告費を変えずに数字が動き始めることがあります。</p>
+    <h2 class="sec-h2">良い商品が、<br>比較の中で消えている。</h2>
+    <p class="sec-p">商品に自信がある。素材にこだわった。使ってもらえれば、分かる。けれどページを見た読者は、その価値を判断する前に別の商品へ移動していることがあります。</p>
+    <p class="sec-p">無料診断レポートでは、買う理由が消えた地点を見ます。そこが分かると、次に直す場所が見えてきます。</p>
     <div class="nextstep">
-      <div class="nextstep-ttl">このページを読んで、自分の店舗のことが頭に浮かんだ方へ。</div>
-      <p class="nextstep-p">URLを送るだけで、2営業日以内に診断レポートをお送りします。どこで買う理由が止まっているかが分かれば、次に変える場所が見えてきます。</p>
-      <a href="#form" class="btn-sm">無料診断を申し込む ── 2営業日以内に返送</a>
+      <div class="nextstep-ttl">自分の店舗のことが頭に浮かんだ方へ。</div>
+      <p class="nextstep-p">URLを送るだけで、2営業日以内に診断レポートをお送りします。広告、デザイン、商品説明のどこから手を入れるべきかを整理します。</p>
+      <a href="#form" class="btn-sm">無料LP診断を申し込む ── 2営業日以内に返送</a>
     </div>
   </div>
 </section>
@@ -804,17 +873,18 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <section class="sec sec--paper">
   <div class="inner">
     <span class="sec-label">Articles</span>
-    <h2 class="sec-h2" style="margin-bottom:0.5rem;">売れない原因は、チャネルで変わる。</h2>
-    <p style="font-size:1.05rem; color:var(--g600); margin-bottom:2.5rem; line-height:1.7;">
-      楽天、Amazon、自社EC、Makuake。まずは自社に近い売り場から整理してください。
+    <h2 class="sec-h2" style="margin-bottom:0.5rem;">売り場別に、
+      止まる場所を整理する。</h2>
+    <p style="font-size:1.02rem; color:var(--g600); margin-bottom:2.5rem; line-height:1.8; max-width:680px;">
+      楽天、Amazon、自社EC、Makuake。まずは自社に近い売り場から確認してください。
     </p>
     <div class="article-hub-box">
       <div>
         <div class="article-hub-label">記事トップ</div>
-        <h3>売れない原因を、販売チャネルごとに整理する。</h3>
+        <h3>販売チャネルごとに、買う理由が止まる場所を整理する。</h3>
         <p>
           楽天、Amazon、Yahoo!ショッピング、自社EC、Makuakeでは、
-          読者が止まる場所が変わります。
+          読者が迷う場所が変わります。
           自社に近い販売チャネルから、次に読む記事を整理できます。
         </p>
       </div>
@@ -889,12 +959,12 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <div style="background:var(--navy);padding:2.5rem 2rem;border-top:1px solid rgba(255,255,255,.08);">
   <div style="max-width:640px;margin:0 auto;">
     <p style="font-family:var(--serif);font-size:clamp(1.1rem,3vw,1.6rem);font-weight:700;color:var(--white);line-height:1.55;letter-spacing:.01em;margin-bottom:.85rem;">
-      現状のまま広告を回し続けるのは、<br>
-      <span style="color:var(--gold-lt);">準備ができていないまま走っている状態</span>です。
+      止まっている場所が見えないまま、<br>
+      <span style="color:var(--gold-lt);">広告を増やしても購入判断は進まない。</span>
     </p>
     <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.9;">
-      どこで買う理由が止まっているかが分かれば、次に変える場所が見えてくる。<br>
-      変える場所が見えれば、広告費を変えずに数字が動き始めることがあります。
+      まず見るのは、広告を増やすかどうかではありません。<br>
+      読者がどこで買う理由を失ったかです。
     </p>
   </div>
 </div>
@@ -903,15 +973,13 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 
 <section class="form-sec" id="form">
   <div class="form-wrap">
-    <span class="sec-label">無料診断</span>
-    <h2 class="form-h">止まっている場所が分かれば、<br><em>次に変える場所が見える。</em></h2>
+    <h2 class="form-h">無料LP診断で、<br><em>次に直す場所が分かる。</em></h2>
     <p class="form-lead">
-      フォームへの入力は30秒。レポートはお申込みから2営業日以内にお送りします。<br>
-      このページを読んで、自分の店舗のことが頭に浮かんだ方は、まず診断を受けてみてください。
+      LP・商品ページURLを送るだけ。読者がどこで買う理由を失っているかを確認し、2営業日以内にレポートで返送します。
     </p>
     <div class="form-note-row">
       <span class="form-badge">✓ 営業電話は一切なし</span>
-      <span class="form-badge">✓ 診断後の有料提案はご希望の場合のみ</span>
+      <span class="form-badge">✓ 有料提案はご希望の場合のみ</span>
       <span class="form-badge">✓ 2営業日以内に返送</span>
     </div>
 
@@ -1185,7 +1253,7 @@ document.getElementById('diagForm').addEventListener('submit', function(e) {
       if (typeof gtag === 'function') {
         gtag('event', 'form_submit', {
           'event_category': 'lead',
-          'event_label': '無料診断申し込み',
+          'event_label': '無料LP診断申し込み',
           'channel': channel
         });
       }
