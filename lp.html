@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-<title>楽天LP無料診断｜小西式CVR改善</title>
+<title>楽天LP無料診断｜小西式 転換率改善</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700;800&family=Syne:wght@400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -600,6 +600,61 @@ section.slim { padding: 72px 0; }
   letter-spacing: .04em;
 }
 
+
+/* ── AWARD ROW ── */
+.award-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin: -24px 0 44px;
+  background: rgba(247,244,238,.16);
+  border: 1px solid rgba(247,244,238,.16);
+}
+.award-card {
+  background: rgba(247,244,238,.06);
+  padding: 22px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  border-top: 2px solid rgba(200,52,26,.75);
+}
+.award-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border: 1px solid rgba(200,52,26,.7);
+  color: var(--vermilion);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  margin-top: 2px;
+}
+.award-ttl {
+  font-family: var(--font-display);
+  font-size: clamp(15px, 3.2vw, 18px);
+  font-weight: 700;
+  line-height: 1.55;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.award-desc {
+  font-size: clamp(12px, 2.8vw, 14px);
+  line-height: 1.8;
+  color: rgba(247,244,238,.84);
+}
+.award-note {
+  margin-top: -22px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: rgba(247,244,238,.62);
+}
+
+
 /* ── BENEFIT CARDS ── */
 .benefit-cards {
   display: flex;
@@ -1028,8 +1083,35 @@ footer {
   .belief-card { grid-template-columns: 1fr; }
   .belief-card-num-col { display: none; }
   .stats-row { grid-template-columns: repeat(2,1fr); }
+  .award-row { grid-template-columns: 1fr; margin-top: -20px; }
+  .award-card { padding: 20px 18px; }
   .form-wrap { padding: 28px 20px; }
   section { padding: 72px 0; }
+}
+
+
+/* ── READABILITY OVERRIDE ── */
+.rv { opacity: 1; transform: none; }
+.on-ink .body-text,
+.on-ink .belief-card-body,
+.on-ink .faq-a,
+.on-ink .testi-quote { color: rgba(247,244,238,.93); }
+.on-ink .h2,
+.on-ink .h3,
+.on-ink .faq-q,
+.on-ink .testi-title { color: #fff; }
+.hero-body { color: rgba(247,244,238,.94); font-size: clamp(15px, 3.5vw, 17px); }
+.body-text { font-size: clamp(15px, 3.4vw, 17px); line-height: 2.05; }
+.belief-card-body, .bc-body, .faq-a, .testi-quote { font-size: clamp(14px, 3.2vw, 16px); }
+.btn-note, .form-note, .form-hint { font-size: 13px; }
+.sec-label-text, .hero-overline-text, .bc-num, .mech-label { letter-spacing: .16em; }
+.belief-card-title { color: rgba(247,244,238,.86); }
+.ls-body { color: rgba(13,13,13,.78); }
+@media (max-width: 520px) {
+  .hero-headline { font-size: clamp(33px, 9vw, 48px); }
+  .h2 { font-size: clamp(27px, 7vw, 38px); }
+  .body-text { font-size: 15.5px; }
+  .btn-primary { width: 100%; text-align: center; padding-left: 18px; padding-right: 18px; }
 }
 
 </style>
@@ -1045,39 +1127,41 @@ footer {
       <span class="hero-overline-text">Rakuten LP Diagnosis</span>
     </div>
     <h1 class="hero-headline rv rv-d1">
-      <span class="prehead">同じ商品、同じデザイナー。</span>
-      なのに売上に、<em>3倍の差</em>が生まれた。
+      <span class="prehead">広告を増やす前に、見てほしいページがあります。</span>
+      いちばん見られているページほど、<em>静かに売上を逃している。</em>
     </h1>
     <p class="hero-body rv rv-d2">
-      違いはページの見た目ではありませんでした。
+      それは、新しく作るページではありません。<br>
+      今、いちばん多くのお客様が見ている商品ページです。
     </p>
     <p class="hero-body rv rv-d3">
-      広告を増やすと、確かに売上は上がる。でも利益が残らない。その原因が、実はページにあるとしたら——<br>あなたのページは、これから話す基準をクリアしているでしょうか。
+      そのページで判断が止まっているなら、広告を増やすほど、離脱も一緒に増えていきます。<br>
+      まず見るべきなのは、すでに人が集まっているページの中で、どこで決断が止まっているかです。
     </p>
     <div class="hero-cta-area rv rv-d4">
-      <a href="#cta" class="btn-primary">診断を申し込む（無料・30秒）</a>
-      <span class="btn-note">※ 営業電話一切なし　※ 診断後の有料提案はご希望の場合のみ</span>
+      <a href="#cta" class="btn-primary">一番見られているページを診断する</a>
+      <span class="btn-note">※ 無料・30秒　※ 営業電話なし　※ 有料提案はご希望の場合のみ</span>
     </div>
   </div>
 </section>
 
-<section class="on-ink slim" aria-label="共感">
+<section class="on-ink slim" aria-label="現在地">
   <div class="wrap">
     <div class="sec-label rv">
       <div class="sec-label-bar"></div>
       <span class="sec-label-text">Current State</span>
     </div>
-    <h2 class="h2 rv">心当たりは<br>ありませんか？</h2>
+    <h2 class="h2 rv">広告を増やすほど、<br>利益が薄くなる日がある。</h2>
     <div class="v-rule rv"></div>
     <ul class="pain-list rv">
-      <li>広告を増やすと売上は上がるが、利益が残らない</li>
-      <li>商品には自信があるのに、なぜか競合に負ける</li>
-      <li>ページはデザイナーに作ってもらったから、十分なはずだ</li>
-      <li>楽天コンサルに任せているが、広告費だけが増えていく</li>
-      <li>何を変えれば利益が増えるのか、正直わからない</li>
+      <li>広告を増やすと売上は上がる。でも利益が残りにくい</li>
+      <li>一番売れている商品ページなのに、まだ伸び切っていない感覚がある</li>
+      <li>商品画像も説明も入れているのに、競合に流れている気がする</li>
+      <li>楽天コンサルには広告を増やす話をされるが、先に見る場所が違う気がする</li>
+      <li>どこを直せば売上に一番早く返るのか、判断がつかない</li>
     </ul>
     <div class="emph-box rv">
-      <p>「ページは十分なはず」——その確信が、利益を止め続けている原因かもしれません。</p>
+      <p>広告が悪いとは限りません。<br>広告が連れてきた人を、ページの中で止めている箇所があるだけかもしれません。</p>
     </div>
   </div>
 </section>
@@ -1095,25 +1179,53 @@ footer {
       <span class="sec-label-text">Root Cause</span>
     </div>
     <h2 class="h2 rv">
-      では、その2つのページ。<br>
-      何が違ったのか。
+      売上は、<br>
+      見られている場所から漏れる。
     </h2>
     <div class="v-rule rv"></div>
     <p class="body-text rv">
-      写真も、価格も、商品説明も同じ。デザイン会社も同じ。それでも売上に3倍の差が生まれた。
+      月に300人しか見られていないページなら、多少の取りこぼしがあっても、売上への影響は限られます。
     </p>
     <p class="body-text rv">
-      違いはひとつでした。ページを見たお客様が「買わなかった」のではない。
+      でも、月に1万人が訪れている商品ページなら話は別です。そのページでお客様の判断が止まっているなら、毎日、本来売上に変わるはずだったアクセスが離脱へ変わっています。
     </p>
     <div class="emph-box rv">
-      <p>一方は「<em>選べた</em>」。もう一方は「<em>選べなかった</em>」——ただ、それだけです。</p>
+      <p>だから最初に見るべきなのは、まだアクセスがないページではありません。<br><em>すでにお客様が集まっているページ</em>です。</p>
     </div>
     <p class="body-text rv">
-      楽天で商品を探すお客様の大半は、すでに複数の選択肢を比べている状態でページに来ます。その瞬間に求めているのは「なぜこれを選ぶべきか」という判断の根拠です。その根拠を渡せたページが売れ、渡せなかったページが負けた。
+      広告を増やす判断は自然です。アクセスが増えれば、売上も増えるように見えるからです。
     </p>
     <p class="body-text rv body-text--lead">
-      デザインの良し悪しではなく——<br>
-      「お客様が<em>判断できる状態になっているか</em>」。<br>それだけが、売上の差を生んでいます。
+      ただし、決断が止まっているページへ広告を流すと、売上だけでなく離脱も増えます。<br>
+      先に変えるべきなのは、広告費ではなく、いちばん見られている商品ページの中にある「決断の停止点」です。
+    </p>
+  </div>
+</section>
+
+
+<section class="on-paper-d" aria-label="伸ばす順番">
+  <div class="wrap">
+    <div class="sec-label rv">
+      <div class="sec-label-bar"></div>
+      <span class="sec-label-text">The Order</span>
+    </div>
+    <h2 class="h2 rv">
+      伸びる店舗は、<br>
+      広告の前に見ている。
+    </h2>
+    <div class="v-rule rv"></div>
+    <p class="body-text rv">
+      売上を伸ばす順番は、複雑ではありません。まず、一番アクセスが多い商品ページを見る。そこでお客様がどこまで進み、どこで決断を止めているかを確認する。
+    </p>
+    <ol class="step-list rv">
+      <li><strong>一番見られている商品ページ</strong>を確認する</li>
+      <li>そのページの中で、決断が止まっている箇所を見る</li>
+      <li>転換率が上がる状態を先につくる</li>
+      <li>その後に広告でアクセスを増やす</li>
+      <li>勝ち筋が見えたら、次の商品ページへ横展開する</li>
+    </ol>
+    <p class="body-text rv">
+      この順番であれば、広告費は「離脱を増やす費用」ではなく、「利益を増やす燃料」に変わります。
     </p>
   </div>
 </section>
@@ -1124,7 +1236,7 @@ footer {
       <div class="sec-label-bar"></div>
       <span class="sec-label-text">Three Misbeliefs</span>
     </div>
-    <h2 class="h2 rv"><span class="prehead">広告するほど利益が消える店舗に共通する、</span>3つの思い込み。</h2>
+    <h2 class="h2 rv"><span class="prehead">利益が残りにくい店舗に共通する、</span>3つの思い込み。</h2>
     <div class="v-rule rv"></div>
 
     <div class="belief-cards rv">
@@ -1135,13 +1247,13 @@ footer {
         <div class="belief-card-main">
           <p class="belief-card-title">「売れないのは、商品か価格の問題だ」</p>
           <p class="belief-card-body">
-            ある食品店舗のオーナーは、2年間にわたって商品のリニューアルと価格調整を繰り返しました。売上は微増したものの、利益は増えなかった。原因は商品でも価格でもなく、ページを見たお客様が「選べないまま離脱していた」ことでした。
+            商品が弱い。価格が高い。レビューが少ない。そう見えるのは自然です。楽天では、比較される材料が最初から並んでいるからです。
           </p>
           <p class="belief-card-body">
-            商品が良くても、ページがその価値を伝える順序になっていなければ、お客様は判断できません。<strong>商品力とページ設計は、別の問題です。</strong>
+            ただ、商品も価格も変えずに転換率が動くページがあります。違いは、お客様が「なぜこれを選ぶのか」まで進めているかどうかです。商品力とページ内の決断設計は、別の問題です。
           </p>
           <div class="belief-card-result">
-            事例：商品は変えず、サムネ5枚目までのページ設計だけを変えた結果、翌月CVRが1.9倍に改善。
+            見るべき箇所：一番アクセスが多い商品ページの中で、価値判断が止まっている場所。
           </div>
         </div>
       </div>
@@ -1153,10 +1265,13 @@ footer {
         <div class="belief-card-main">
           <p class="belief-card-title">「広告費を増やせば、売上は解決する」</p>
           <p class="belief-card-body">
-            「選べないページ」に広告でアクセスを集めても、離脱率は変わりません。1件あたりの獲得コストが上がるだけで、利益は減っていきます。広告は「選ばれるページ」があって初めて機能する仕組みです。
+            広告は、お客様をページまで連れてくる役割です。ページの中で決断が止まっていれば、広告費を増やすほど、売上候補と一緒に離脱も増えていきます。
+          </p>
+          <p class="belief-card-body">
+            先に見るべきなのは、広告の出し方ではなく、いちばん見られている商品ページでお客様がどこまで進んでいるかです。
           </p>
           <div class="belief-card-result">
-            事例：広告費を止め、ページ設計に集中。3ヶ月後、広告費を半分に抑えた状態で以前と同じ売上を達成。
+            見るべき順番：転換率を上げる。その後に広告を増やす。
           </div>
         </div>
       </div>
@@ -1168,18 +1283,17 @@ footer {
         <div class="belief-card-main">
           <p class="belief-card-title">「ページは作ったから、もう十分だ」</p>
           <p class="belief-card-body">
-            新商品を登録したとき作ったページを、そのまま使い続けている店舗は少なくありません。しかし、「作ること」と「選ばれる状態に設計すること」は別です。丁寧に作られたページでも、お客様の判断を導く設計になっていなければ、アクセスは離脱に変わり続けます。
+            ページがあることと、選ばれる順番で読まれることは違います。丁寧に作られたページでも、比較中のお客様に判断の根拠を渡せていなければ、アクセスは静かに離脱へ変わります。
           </p>
           <div class="belief-card-result">
-            事例：開店から2年放置していたページを設計し直した結果、月商が3ヶ月で1,800万→3,200万円に。
+            診断で見ること：ページ全体の良し悪しではなく、決断が止まっている一点。
           </div>
         </div>
       </div>
     </div>
 
     <div class="emph-box rv">
-      <p>3つの誤解の根っこは、ひとつです。<br>
-      「どこで負けているかを特定せずに、見えている部分だけを変えている」——この構造が解消されない限り、何を変えても同じ結果になります。</p>
+      <p>問題は、努力不足ではありません。<br>売上に返りやすい順番を知らないまま、見えている場所から変えざるを得なかっただけです。</p>
     </div>
   </div>
 </section>
@@ -1191,32 +1305,32 @@ footer {
       <span class="sec-label-text">The Mechanism</span>
     </div>
     <h2 class="h2 rv">
-      <span class="prehead">CVRを決める本当の変数は、</span>「意識レベル」と<br>「購買判断の設計」です。
+      <span class="prehead">診断で見るのは、</span>ページの良し悪しではありません。
     </h2>
     <div class="v-rule rv"></div>
 
     <p class="body-text rv">
-      楽天ランキング1位を複数獲得した店舗に共通するのは、デザインのクオリティではありません。<strong>「お客様がそのページを見た瞬間の意識レベル」に合わせた購買心理の設計</strong>でした。
+      見るのは、いちばんアクセスが多い商品ページで、お客様がどこまで進み、どこで決断を止めているかです。
     </p>
 
     <ul class="level-steps rv">
-      <li class="level-step"><span class="ls-tag">無関心</span><span class="ls-body">そもそも問題を認識していない</span></li>
-      <li class="level-step"><span class="ls-tag">気づき</span><span class="ls-body">悩みは自覚しているが、解決策がわからない</span></li>
-      <li class="level-step highlighted"><span class="ls-tag">探索中</span><span class="ls-body">方向性はわかっているが、何を選べばいいかわからない</span></li>
-      <li class="level-step highlighted"><span class="ls-tag">比較中</span><span class="ls-body">複数の商品を比較している ← <strong>楽天検索流入の大半がここ</strong></span></li>
-      <li class="level-step"><span class="ls-tag">決定済</span><span class="ls-body">あとは買うだけ</span></li>
+      <li class="level-step"><span class="ls-tag">入口</span><span class="ls-body">検索一覧でクリックする</span></li>
+      <li class="level-step highlighted"><span class="ls-tag">比較</span><span class="ls-body">複数の商品を見比べる</span></li>
+      <li class="level-step highlighted"><span class="ls-tag">判断</span><span class="ls-body">なぜこれを選ぶのかを探す</span></li>
+      <li class="level-step"><span class="ls-tag">安心</span><span class="ls-body">買って大丈夫かを確認する</span></li>
+      <li class="level-step"><span class="ls-tag">購入</span><span class="ls-body">最後に決断を完了する</span></li>
     </ul>
 
     <p class="body-text rv">
-      「比較中」の読者に「うちの商品はこんなに良い」とベネフィットを並べても、選ばれません。「良い商品はいくつかある」という前提のまま見ているため、ベネフィットの追加ではなく<strong>「判断できる根拠の提示」</strong>が必要だからです。
+      楽天では、多くのお客様が比較中の状態でページに入ってきます。この状態の読者に、ただ「良い商品です」と伝えても止まります。必要なのは、商品説明ではなく、選ぶための根拠です。
     </p>
 
     <p class="body-text rv">
-      楽天では、読者はサムネイル1枚目から5〜6枚目を見る数秒の間に、買うかどうかの判断をほぼ終えています。この数枚の中で「自分に合っている」「これを選ぶべき理由がわかった」という状態を作れなければ、どれだけ下部のページを作り込んでも、読まれないまま離脱されます。
+      サムネイルの数枚、冒頭の説明、レビューへの流れ、価格を見る前の納得。どこか一箇所で判断が止まると、その先は読まれません。
     </p>
 
     <div class="emph-box rv">
-      <p>ただし、「どの段階で読者が離脱しているか」は店舗によって異なります。ページの設計が問題なのか、意識レベルの設定がズレているのか、それとも別の箇所か——原因を特定せずに手を動かしても、また同じ結果になります。</p>
+      <p>無料診断では、一番見られている商品ページの中で、売上に変わるはずだったアクセスが止まっている箇所を見ます。</p>
     </div>
   </div>
 </section>
@@ -1227,17 +1341,20 @@ footer {
       <div class="sec-label-bar"></div>
       <span class="sec-label-text">About</span>
     </div>
-    <h2 class="h2 rv"><span class="prehead">なぜ、この診断に</span>意味があるのか。</h2>
+    <h2 class="h2 rv"><span class="prehead">表彰される店舗は、</span>広告の前に見ていた。</h2>
     <div class="v-rule rv"></div>
 
     <p class="body-text rv">
-      楽天ショップオブザイヤー受賞店舗の店長として、そしてショップオブジエリア受賞店舗のCVR改善責任者として——私は「表彰される側」の現場で、ページの購買心理設計を直接担い、その結果を数字で見てきました。
+      楽天ショップオブザイヤー受賞企業の現場で、一番大きな学びになったのはここでした。
     </p>
     <p class="body-text rv">
-      関わってきた店舗で繰り返し目にしたのは、同じ商品・同じ価格帯でも、ページの設計次第で転換率に2倍以上の差が生まれるという事実です。デザインの差ではありません。お客様がページを通じて「判断できる状態になっているか」——その一点だけが、結果を分けていました。
+      売上を伸ばす店舗は、いきなり広告を増やしません。まず、すでにお客様が集まっている商品ページを見る。そこで判断が止まっていれば、広告を増やすほど離脱も増える。そこで判断が進めば、同じ広告費でも売上の残り方が変わる。
+    </p>
+    <p class="body-text rv">
+      この順番を、表彰される店舗の現場で見てきました。
     </p>
     <p class="body-text rv body-text--strong">
-      この確信をもとに、1,000を超えるページ改善に関わり、26店舗で平均CVRを1.8倍に改善してきました。
+      この考え方をもとに、1,000を超えるページ改善に関わり、26店舗で平均転換率を1.8倍に改善してきました。
     </p>
 
     <div class="stats-row rv">
@@ -1255,9 +1372,27 @@ footer {
       </div>
       <div class="stat-cell">
         <span class="stat-num">1.8<sub>倍</sub></span>
-        <span class="stat-label">26店舗<br>平均CVR改善率</span>
+        <span class="stat-label">26店舗<br>平均転換率改善</span>
       </div>
     </div>
+
+    <div class="award-row rv" aria-label="受賞店舗での実務経験">
+      <div class="award-card">
+        <span class="award-icon">01</span>
+        <div>
+          <div class="award-ttl">楽天ショップオブザイヤー受賞企業</div>
+          <div class="award-desc">店長として、表彰される側の現場で商品ページと売上導線を見てきました。</div>
+        </div>
+      </div>
+      <div class="award-card">
+        <span class="award-icon">02</span>
+        <div>
+          <div class="award-ttl">楽天ショップオブジエリア受賞店舗</div>
+          <div class="award-desc">転換率改善責任者として、継続改善による受賞店舗のページ設計に携わりました。</div>
+        </div>
+      </div>
+    </div>
+    <p class="award-note rv">※受賞企業・受賞店舗での実務経験をもとに、広告の前に見るべきページと、決断が止まる箇所を診断しています。</p>
   </div>
 </section>
 
@@ -1267,29 +1402,29 @@ footer {
       <div class="sec-label-bar"></div>
       <span class="sec-label-text">What Changes</span>
     </div>
-    <h2 class="h2 rv">診断を受けた後、<br>何が変わるのか。</h2>
+    <h2 class="h2 rv">診断後、<br>最初の一手が見える。</h2>
     <div class="v-rule rv"></div>
 
     <div class="benefit-cards rv">
       <div class="benefit-card">
         <span class="bc-num">Functional Benefit 01</span>
-        <h3 class="bc-title">「どこで負けているか」が<br>初めて見える</h3>
+        <h3 class="bc-title">一番見られているページの、<br>停止点が見える</h3>
         <p class="bc-body">
-          診断レポートには3点が記載されます。①今、売上を止めているポイント（どの段階で離脱が起きているか）、②最初に改善すべき1点、③それにより失っている本来得られる利益。レポートを読んだ後、「次に何をすべきか」が初めて1点に絞られます。
+          診断レポートでは、一番アクセスが多い商品ページで、お客様の決断がどこで止まっているかを見ます。サムネイル、冒頭の判断軸、商品説明、安心材料、購入直前の不安。どこを先に直すべきかが一点に絞られます。
         </p>
       </div>
       <div class="benefit-card">
         <span class="bc-num">Emotional Benefit 02</span>
-        <h3 class="bc-title">「わからない」の霧が晴れる</h3>
+        <h3 class="bc-title">広告を増やす前の、<br>迷いが消える</h3>
         <p class="bc-body">
-          「次は何をすればいいのかわからない」という状態は、情報が少ないのではなく、情報が多すぎるからです。診断後のオーナーが口にするのは、「ようやく手をつける場所がわかった」という感覚です。
+          広告を増やすべきか。画像を変えるべきか。価格を下げるべきか。その迷いは、見る順番が決まっていない時に起きます。まず、一番見られているページの停止点を見る。そこから始めれば、次の判断が軽くなります。
         </p>
       </div>
       <div class="benefit-card">
         <span class="bc-num">Self-Actualization 03</span>
-        <h3 class="bc-title">LPの質に、<br>もう悩まなくていい</h3>
+        <h3 class="bc-title">勝ち筋を、<br>次のページへ広げられる</h3>
         <p class="bc-body">
-          CVRが改善された後、オーナーが口にするのは「ようやく商品開発に集中できる」という言葉です。ページのことを考えなくていい。広告の数字に振り回されなくていい。売上が伸びる仕組みをプロに任せ、自分は次の事業判断だけに集中できる——それが、この診断を起点にして手に入る状態です。
+          一番アクセスが多いページで転換率が動けば、次に見るべきページも見えてきます。売上に返りやすい順番で改善し、勝ち筋が見えたら横展開する。オーナーはページの迷いから離れ、商品開発と事業判断に集中できます。
         </p>
       </div>
     </div>
@@ -1302,27 +1437,27 @@ footer {
       <div class="sec-label-bar"></div>
       <span class="sec-label-text">Results</span>
     </div>
-    <h2 class="h2 rv">診断を受けた<br>店舗様の声。</h2>
+    <h2 class="h2 rv">先にページを見た<br>店舗様の声。</h2>
     <div class="v-rule rv"></div>
 
     <div class="testimonials rv">
       <div class="testi">
-        <p class="testi-title">デザインは一切変えず、CVRが2倍を超えた。</p>
-        <p class="testi-quote">「半年間で4回リニューアルしても売上が変わらず、診断に申し込みました。レポートで指摘されたのはサムネ5枚目までのページ設計でした。そこだけを変えた翌月、CVRが2倍を超えました。デザインは一切変えていません。」</p>
+        <p class="testi-title">一番見られていたページだけで、転換率が動いた。</p>
+        <p class="testi-quote">「広告を増やす前に、まず一番アクセスが多い商品ページを見ましょうと言われました。指摘されたのはサムネ5枚目までの流れ。そこを変えた翌月、転換率が2倍を超えました。デザインは大きく変えていません。」</p>
         <p class="testi-meta">健康食品店舗様・月商 1,800万 → 3,200万円</p>
-        <span class="testi-cvr">CVR 2.1% → 4.3%（改善率 205%）</span>
+        <span class="testi-cvr">転換率 2.1% → 4.3%（改善率 205%）</span>
       </div>
       <div class="testi">
-        <p class="testi-title">広告費を減らしながら、ランキング初受賞。</p>
-        <p class="testi-quote">「楽天コンサルからは『広告を増やしてください』と言われ続けていました。小西さんは逆で、『今は広告を増やすべきではない。まずページを整えましょう』と。その通りに進めたら、3ヶ月後に楽天ランキング初受賞。広告費は以前より減っています。」</p>
+        <p class="testi-title">広告費を増やす前に整えたら、ランキング初受賞。</p>
+        <p class="testi-quote">「楽天コンサルからは広告を増やしてくださいと言われ続けていました。小西さんは逆で、今は広告を増やす前にページを整えましょうと。その通りに進めたら、3ヶ月後に楽天ランキング初受賞。広告費は以前より減っています。」</p>
         <p class="testi-meta">食品・健康雑貨店舗様・月商 2,400万 → 3,900万円</p>
-        <span class="testi-cvr">CVR 7.3% → 14.8%（改善率 203%）</span>
+        <span class="testi-cvr">転換率 7.3% → 14.8%（改善率 203%）</span>
       </div>
       <div class="testi">
-        <p class="testi-title">任せたら、翌月に売上1.5倍。今は商品開発だけに集中できている。</p>
-        <p class="testi-quote">「診断レポートを読んで、自分が見当違いの場所に時間と予算を使っていたと初めてわかりました。改修をすべて任せたら、翌月に売上が1.5倍。今は商品開発だけに集中できています。」</p>
+        <p class="testi-title">最初に見る場所が決まり、翌月に売上1.5倍。</p>
+        <p class="testi-quote">「診断レポートを読んで、自分が見当違いの場所に時間と予算を使っていたと初めてわかりました。改修を任せたら、翌月に売上が1.5倍。今は商品開発だけに集中できています。」</p>
         <p class="testi-meta">日用品・生活雑貨店舗様・月商 3,100万 → 4,700万円</p>
-        <span class="testi-cvr">CVR 1.8% → 3.2%（改善率 178%）</span>
+        <span class="testi-cvr">転換率 1.8% → 3.2%（改善率 178%）</span>
       </div>
     </div>
   </div>
@@ -1339,20 +1474,24 @@ footer {
 
     <ul class="faq-list rv">
       <li class="faq-item">
+        <p class="faq-q">どの商品ページを送ればいいですか？</p>
+        <p class="faq-a">まずは、一番アクセスが多い商品ページを送ってください。すでにお客様が集まっているページほど、転換率改善が売上に返りやすいためです。</p>
+      </li>
+      <li class="faq-item">
         <p class="faq-q">診断後、営業電話がかかってきますか？</p>
         <p class="faq-a">一切ありません。診断レポートをお送りした後、有料提案を希望される場合のみご連絡ください。申し込み時点では、何の義務も発生しません。</p>
       </li>
       <li class="faq-item">
         <p class="faq-q">本当に無料ですか？</p>
-        <p class="faq-a">はい、診断は完全無料です。「まず診断だけ受けて、内容を見てから判断したい」というオーナー様が大半です。診断後、有料支援を希望される場合のみ別途ご提案いたします。</p>
+        <p class="faq-a">はい、診断は完全無料です。まず診断だけ受けて、内容を見てから判断する形で問題ありません。</p>
       </li>
       <li class="faq-item">
         <p class="faq-q">診断にはどのくらい時間がかかりますか？</p>
-        <p class="faq-a">申込後、2営業日以内にレポートをお送りします。あなたがすることは、フォームに30秒入力するだけです。</p>
+        <p class="faq-a">申込後、2営業日以内にレポートをお送りします。入力は30秒ほどで完了します。</p>
       </li>
       <li class="faq-item">
         <p class="faq-q">うちの商品は特殊なカテゴリですが、診断できますか？</p>
-        <p class="faq-a">はい。お客様の購買心理を読んで判断できる状態を設計する原理は、カテゴリを問わず同じ構造で機能します。健康食品・美容・食品・日用品・家電など、様々なカテゴリで改善実績があります。</p>
+        <p class="faq-a">はい。カテゴリごとの違いはありますが、ページ内でお客様の決断がどこで止まっているかを見る考え方は共通しています。</p>
       </li>
     </ul>
   </div>
@@ -1362,21 +1501,20 @@ footer {
   <div class="aa-bg-text" aria-hidden="true">AFTER</div>
   <div class="after-after-inner">
     <p class="aa-text rv">
-      同じ広告費で、<br><em>利益だけが増えていく</em>状態をつくる。
+      広告費が、<br><em>離脱ではなく利益に変わる</em>状態へ。
     </p>
     <p class="aa-body rv rv-d1">
-      ページに流れてきた人が、自分に合っていると判断し、今これを選ぶべきだと気づき、そして買う。
+      一番見られている商品ページで、決断が止まっている箇所を整える。
     </p>
     <p class="aa-body rv rv-d2">
-      この流れが構成で設計されたとき、広告費は「利益を生む装置」に変わります。
+      そのページの転換率が上がってから、広告でアクセスを増やす。
     </p>
     <p class="aa-body rv rv-d3">
-      LP改善をプロに任せ、オーナーは次の商品と事業判断だけに集中する。<br>
-      その状態をつくることが、この診断の本当のゴールです。
+      すると広告費は、ただ人を集める費用ではなく、利益を増やす燃料に変わります。
     </p>
-    <p class="aa-body rv rv-d4 aa-proof">
-      <span class="aa-proof-title">なぜ、この診断が機能するのか。</span>
-      <span class="aa-proof-body">この診断を設計したのは、楽天ショップオブザイヤー受賞店舗で店長を務め、その後ショップオブジエリア受賞店舗ではCVR改善の責任者として設計に携わってきた人間です。表彰される側の現場で、結果に責任を持つ立場でCVRを見てきました。</span>
+    <p class="aa-body rv rv-d4">
+      まずは、一番見られている商品ページを送ってください。<br>
+      そこに、広告を増やす前に見るべき停止点が残っている可能性があります。
     </p>
   </div>
 </div>
@@ -1387,10 +1525,13 @@ footer {
       <div class="sec-label-bar"></div>
       <span class="sec-label-text">Free Diagnosis</span>
     </div>
-    <h2 class="h2 rv cta-h2">無料LP診断は、<br>わずか30秒で。</h2>
+    <h2 class="h2 rv cta-h2">一番見られている<br>商品ページを送ってください。</h2>
     <div class="v-rule rv"></div>
     <p class="body-text rv cta-intro">
-      読んでいて、自分のページのことが頭に浮かんだ方は、まず診断を受けてみてください。フォームへの入力は30秒、レポートはお申込みから2営業日以内にお送りします。
+      診断で見るのは、ページ全体の良し悪しではありません。お客様がどこまで進み、どこで決断を止めているか。そして、その停止がどれだけ売上を逃しているか。そこを確認します。
+    </p>
+    <p class="body-text rv cta-intro">
+      まずは、RMSで一番アクセスが多い商品ページのURLを送ってください。入力は30秒ほどで完了します。
     </p>
     <div class="form-notes rv form-notes--top">
       <span class="form-note form-note--mute">※ 営業電話は一切いたしません</span>
@@ -1413,9 +1554,9 @@ footer {
           <input class="form-input" type="email" id="email" name="email" placeholder="例：yamada@example.com" required>
         </div>
         <div class="form-group">
-          <label class="form-label" for="url">診断したい商品ページURL<span class="req">必須</span></label>
+          <label class="form-label" for="url">一番アクセスが多い商品ページURL<span class="req">必須</span></label>
           <input class="form-input" type="url" id="url" name="url" placeholder="https://item.rakuten.co.jp/..." required>
-          <p class="form-hint">楽天の商品ページURLをそのまま貼り付けてください</p>
+          <p class="form-hint">RMSで一番アクセスが多い楽天の商品ページURLを貼り付けてください</p>
         </div>
         <div class="form-group">
           <label class="form-label" for="access">月間アクセス数（訪問数）<span class="req">必須</span></label>
@@ -1436,7 +1577,7 @@ footer {
           <p class="form-hint">購入数 ÷ 訪問数 × 100 で計算できます。感覚値で構いません</p>
         </div>
         <div class="submit-wrap">
-          <button type="submit" class="submit-btn">診断を申し込む ── 無料・30秒</button>
+          <button type="submit" class="submit-btn">一番見られているページを診断する ── 無料・30秒</button>
         </div>
       </form>
       <div class="success-msg" id="successMsg">
@@ -1452,7 +1593,7 @@ footer {
     <p class="footer-name">小西 秀人（ECコンサルタント）</p>
     <p class="footer-creds">
       楽天総合ランキング1位 2回 / 年間ランキング1位 11回受賞<br>
-      楽天ランキング1位 1,000回以上獲得 / CVR改善実績：26店舗・平均改善率180%
+      楽天ランキング1位 1,000回以上獲得 / 転換率改善実績：26店舗・平均改善率180%
     </p>
     <div class="footer-legal">
       ※本診断は分析に基づくものであり成果保証ではありません。<br>
@@ -1526,7 +1667,7 @@ document.getElementById('diagForm').addEventListener('submit', function(e) {
     // ★ 修正箇所：エラー時はちゃんとエラーを出すように修正（偽装成功の防止）
     console.error('送信エラー:', error);
     alert('通信エラーが発生しました。時間をおいて再度お試しください。');
-    btn.textContent = '診断を申し込む ── 無料・30秒';
+    btn.textContent = '一番見られているページを診断する ── 無料・30秒';
     btn.disabled = false;
   });
 });
