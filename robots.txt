@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /lp.html
 
 # サイトマップの場所
 Sitemap: https://konishi-marketing.com/sitemap.xml
