@@ -4,8 +4,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>小西マーケティング｜ECのCVRは構成で決まる</title>
-<meta name="description" content="広告、デザイン、商品を見直してもECの数字が動かない。その原因は、読者が買う理由を失った場所にあるかもしれません。小西マーケティングが、ページ内の停滞箇所を診断します。">
+<title>EC・商品ページのCVR改善｜構成・コピー・デザインまで一体制作｜小西マーケティング</title>
+<meta name="description" content="楽天・Amazon・Makuake・自社ECの商品ページを、診断から構成・コピー・デザインまで一体で改善。読者が買う理由を失った地点を特定し、購入判断が進むページへ再設計します。">
+<link rel="canonical" href="https://konishi-marketing.com/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://konishi-marketing.com/">
+<meta property="og:title" content="EC・商品ページのCVR改善｜構成・コピー・デザインまで一体制作｜小西マーケティング">
+<meta property="og:description" content="楽天・Amazon・Makuake・自社ECの商品ページを、診断から構成・コピー・デザインまで一体で改善します。">
+<meta property="og:image" content="https://konishi-marketing.com/images/konishi.JPG">
+<meta name="twitter:card" content="summary_large_image">
 
 <!-- Google tag (gtag.js) - GA4 -->
 
@@ -325,6 +333,27 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   line-height:1.8;padding-top:1.25rem;border-top:1px solid var(--g200);
 }
 
+/* ── service scope ── */
+.service-def{
+  margin-top:2rem;padding:1.35rem 1.5rem;
+  border:1px solid rgba(201,168,76,.35);
+  background:rgba(255,255,255,.06);
+}
+.service-def strong{
+  display:block;color:var(--gold-lt);font-size:.95rem;
+  line-height:1.8;margin-bottom:.35rem;
+}
+.service-def p{font-size:.86rem;color:rgba(255,255,255,.72);line-height:1.95;}
+.delivery-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:var(--g200);margin-top:2rem;
+}
+.delivery-card{background:var(--white);padding:1.4rem;}
+.delivery-no{display:block;font-size:.62rem;font-weight:700;letter-spacing:.14em;color:var(--gold);margin-bottom:.5rem;}
+.delivery-card h3{font-size:.95rem;color:var(--navy);line-height:1.55;margin-bottom:.4rem;}
+.delivery-card p{font-size:.82rem;color:var(--g600);line-height:1.8;}
+.scope-note{margin-top:1.5rem;padding:1.1rem 1.25rem;background:var(--paper);border-left:3px solid var(--navy);font-size:.86rem;color:var(--g600);line-height:1.9;}
+
 /* ── next step ── */
 .nextstep{
   margin-top:2.5rem;padding:2.5rem;
@@ -629,6 +658,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   .track-card:nth-child(odd){border-right:none;}
   .award-row{grid-template-columns:1fr;}
   .articles{grid-template-columns:1fr;}
+  .delivery-grid{grid-template-columns:1fr 1fr;}
   .article-hub-box{
     flex-direction:column;
     align-items:flex-start;
@@ -645,6 +675,36 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   .foot{flex-direction:column;align-items:flex-start;}
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://konishi-marketing.com/#organization",
+      "name": "小西マーケティング",
+      "url": "https://konishi-marketing.com/",
+      "founder": {
+        "@type": "Person",
+        "name": "小西 秀人"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://konishi-marketing.com/#service",
+      "name": "EC・商品ページのCVR改善制作",
+      "serviceType": "EC商品ページの診断・構成・コピー・デザイン制作",
+      "provider": {
+        "@id": "https://konishi-marketing.com/#organization"
+      },
+      "areaServed": "JP",
+      "url": "https://konishi-marketing.com/",
+      "description": "楽天・Amazon・Makuake・自社ECの商品ページを、診断から構成・コピー・デザインまで一体で改善するサービス。"
+    }
+  ]
+}
+</script>
 
 </head>
 <body>
@@ -670,6 +730,10 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
       <em style="color: var(--gold-lt);">ですが、最初に見る場所を間違えれば、<br>何を変えても数字は動きません。</em>
     </h1>
     <p class="hero-lead" style="color: rgba(255,255,255,0.85);">広告費を増やした。デザインを変えた。商品も見直した。それでも数字は動かなかった。<br>問題は、何を変えるかではありません。どこで「買う理由」が止まっているか。そこが見えていないことです。<br>100を超える店舗の停滞を見てきた経験から解説します。</p>
+    <div class="service-def">
+      <strong>楽天・Amazon・Makuake・自社ECの商品ページを、構成・コピー・デザインまで一体で改善します。</strong>
+      <p>無料診断で停止地点を特定し、必要な場合は、その診断を起点に完成ページまで再設計します。</p>
+    </div>
     <div class="cta-row hero-cta-row">
       <a href="#form" class="btn hero-btn">無料LP診断を受ける</a>
       <div class="btn-note hero-btn-note">LP・商品ページURLを送るだけ。<br>2営業日以内に診断レポートを返送します。</div>
@@ -738,6 +802,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
       <div class="phil-h">設計が先、<br>デザインが後。</div>
       <p class="phil-p">先に決めるのは、何を見せるかではありません。誰に、どの順番で、何の根拠を渡せば判断が終わるかです。</p>
       <p class="phil-p">ここが決まってから、デザインもコピーも意味を持ちます。楽天なら検索一覧、サムネイル、下部LP。Amazonならメイン画像、サブ画像、説明文。自社ECなら広告、記事LP、購入ページ。それぞれで読者が止まる場所は変わります。</p>
+      <p class="phil-p">診断だけで終わらせません。停止地点が見えた後は、構成、コピー、ワイヤー、デザインを分断せず、購入判断が最後まで進む完成ページへ落とし込みます。</p>
       <div class="mechanism">
         <h3 class="box-heading box-heading--dark">小西式で見るのは、ページではなく離脱の直前です。</h3>
         <p style="margin-bottom:1.25rem;">読者がどこで迷っているかが分かると、変えるべき場所が絞られます。情報を足すのか。順番を入れ替えるのか。判断軸を先に渡すのか。安心材料を後ろに置くのか。</p>
@@ -852,6 +917,42 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   </div>
 </section>
 
+<!-- 制作範囲 -->
+<section class="sec sec--paper">
+  <div class="inner">
+    <span class="sec-label">Service Scope</span>
+    <h2 class="sec-h2">診断で終わらず、<br>完成ページまで閉じる。</h2>
+    <p class="sec-p">無料診断で、買う理由が止まっている地点を特定します。制作をご希望の場合は、その診断を起点に、上流の判断からデザインまで一体で組み直します。</p>
+
+    <div class="delivery-grid">
+      <div class="delivery-card">
+        <span class="delivery-no">01</span>
+        <h3>リサーチと判断設計</h3>
+        <p>最良客、購入を止める誤認、比較軸、買う理由の順番を特定します。</p>
+      </div>
+      <div class="delivery-card">
+        <span class="delivery-no">02</span>
+        <h3>構成とコピー</h3>
+        <p>読者が迷う順番に合わせ、見出し、本文、証拠、行動導線を設計します。</p>
+      </div>
+      <div class="delivery-card">
+        <span class="delivery-no">03</span>
+        <h3>ワイヤーとデザイン</h3>
+        <p>構成を視線順序と情報量へ変換し、販売チャネルに合わせてデザインします。</p>
+      </div>
+      <div class="delivery-card">
+        <span class="delivery-no">04</span>
+        <h3>完成データ納品</h3>
+        <p>楽天、Amazon、Makuake、自社ECの仕様に合わせた完成データまで納品します。</p>
+      </div>
+    </div>
+
+    <div class="scope-note">
+      部分的な見た目の修正ではなく、診断で見つけた停止地点を、構成・コピー・デザインの同じ原因線上で直します。
+    </div>
+  </div>
+</section>
+
 <!-- next step -->
 
 <section class="sec sec--white">
@@ -862,7 +963,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
     <p class="sec-p">無料診断レポートでは、買う理由が消えた地点を見ます。そこが分かると、次に直す場所が見えてきます。</p>
     <div class="nextstep">
       <div class="nextstep-ttl">自分の店舗のことが頭に浮かんだ方へ。</div>
-      <p class="nextstep-p">URLを送るだけで、2営業日以内に診断レポートをお送りします。広告、デザイン、商品説明のどこから手を入れるべきかを整理します。</p>
+      <p class="nextstep-p">URLを送るだけで、2営業日以内に診断レポートをお送りします。広告、構成、コピー、デザインのどこから手を入れるべきかを整理します。制作をご希望の場合は、診断結果を起点に完成ページまで一体で設計します。</p>
       <a href="#form" class="btn-sm">無料LP診断を申し込む ── 2営業日以内に返送</a>
     </div>
   </div>
@@ -975,7 +1076,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   <div class="form-wrap">
     <h2 class="form-h">無料LP診断で、<br><em>次に直す場所が分かる。</em></h2>
     <p class="form-lead">
-      LP・商品ページURLを送るだけ。読者がどこで買う理由を失っているかを確認し、2営業日以内にレポートで返送します。
+      LP・商品ページURLを送るだけ。読者がどこで買う理由を失っているかを確認し、2営業日以内にレポートで返送します。必要な場合は、その診断を起点に構成・コピー・デザインまで一体で制作します。
     </p>
     <div class="form-note-row">
       <span class="form-badge">✓ 営業電話は一切なし</span>
