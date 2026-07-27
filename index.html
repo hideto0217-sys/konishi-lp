@@ -2,32 +2,27 @@
 
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>EC・商品ページのCVR改善｜構成・コピー・デザインまで一体制作｜小西マーケティング</title>
-<meta name="description" content="楽天・Amazon・Makuake・自社ECの商品ページを、診断から構成・コピー・デザインまで一体で改善。読者が買う理由を失った地点を特定し、購入判断が進むページへ再設計します。">
-<link rel="canonical" href="https://konishi-marketing.com/">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://konishi-marketing.com/">
-<meta property="og:title" content="EC・商品ページのCVR改善｜構成・コピー・デザインまで一体制作｜小西マーケティング">
-<meta property="og:description" content="楽天・Amazon・Makuake・自社ECの商品ページを、診断から構成・コピー・デザインまで一体で改善します。">
-<meta property="og:image" content="https://konishi-marketing.com/images/konishi.JPG">
-<meta name="twitter:card" content="summary_large_image">
-
+<meta content="楽天・Amazon・Makuake・自社ECの商品ページを、診断から構成・コピー・デザインまで一体で改善。読者が買う理由を失った地点を特定し、購入判断が進むページへ再設計します。" name="description"/>
+<link href="https://konishi-marketing.com/" rel="canonical"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="https://konishi-marketing.com/" property="og:url"/>
+<meta content="EC・商品ページのCVR改善｜構成・コピー・デザインまで一体制作｜小西マーケティング" property="og:title"/>
+<meta content="楽天・Amazon・Makuake・自社ECの商品ページを、診断から構成・コピー・デザインまで一体で改善します。" property="og:description"/>
+<meta content="https://konishi-marketing.com/images/konishi.JPG" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <!-- Google tag (gtag.js) - GA4 -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
-
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-SWS3R3K4W5');
 </script>
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&amp;family=Noto+Serif+JP:wght@400;700&amp;display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -674,554 +669,519 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   .moment-list li{padding:1rem 1.1rem;}
   .foot{flex-direction:column;align-items:flex-start;}
 }
-</style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://konishi-marketing.com/#organization",
-      "name": "小西マーケティング",
-      "url": "https://konishi-marketing.com/",
-      "founder": {
-        "@type": "Person",
-        "name": "小西 秀人"
-      }
-    },
-    {
-      "@type": "Service",
-      "@id": "https://konishi-marketing.com/#service",
-      "name": "EC・商品ページのCVR改善制作",
-      "serviceType": "EC商品ページの診断・構成・コピー・デザイン制作",
-      "provider": {
-        "@id": "https://konishi-marketing.com/#organization"
-      },
-      "areaServed": "JP",
-      "url": "https://konishi-marketing.com/",
-      "description": "楽天・Amazon・Makuake・自社ECの商品ページを、診断から構成・コピー・デザインまで一体で改善するサービス。"
-    }
-  ]
+/* Semantic H1 and sales-headline separation */
+.hero-service-title{
+  margin:0 0 1.25rem;
+  color:var(--gold);
+  font-family:var(--sans);
+  font-size:clamp(1rem,2vw,1.35rem);
+  font-weight:900;
+  line-height:1.45;
+  letter-spacing:.08em;
 }
-</script>
-
+.hero-headline{
+  margin:0 0 .9rem;
+  color:var(--white);
+  font-family:var(--serif);
+  font-size:clamp(2.4rem,6.5vw,4.25rem);
+  font-weight:700;
+  line-height:1.2;
+  letter-spacing:.01em;
+}
+.hero-subheadline{
+  margin:0 0 1.5rem;
+  color:var(--gold-lt);
+  font-family:var(--serif);
+  font-size:clamp(1.15rem,3vw,2rem);
+  font-weight:700;
+  line-height:1.65;
+  letter-spacing:.01em;
+}
+@media(max-width:680px){
+  .hero-service-title{
+    margin-bottom:1rem;
+    font-size:.95rem;
+  }
+  .hero-headline{
+    font-size:clamp(2.15rem,11vw,3.2rem);
+    line-height:1.22;
+  }
+  .hero-subheadline{
+    font-size:clamp(1rem,5.2vw,1.4rem);
+    line-height:1.7;
+  }
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://konishi-marketing.com/#organization","name":"小西マーケティング","url":"https://konishi-marketing.com/","founder":{"@type":"Person","name":"小西 秀人"},"description":"EC・商品ページのCVR改善を、診断・構成・コピー・デザインまで一体で支援する事業者です。"},{"@type":"Service","@id":"https://konishi-marketing.com/#service","name":"EC・商品ページのCVR改善","serviceType":["EC商品ページのCVR改善","EC商品ページ制作","楽天商品ページ改善","Amazon商品ページ改善","Makuakeプロジェクトページ改善","自社EC LP改善"],"provider":{"@id":"https://konishi-marketing.com/#organization"},"areaServed":"JP","url":"https://konishi-marketing.com/","description":"楽天・Amazon・Makuake・自社ECの商品ページを、診断から構成・コピー・デザインまで一体で改善するサービス。"}]}</script>
 </head>
 <body>
-
 <!-- header -->
-
 <header class="hd">
-  <a href="https://konishi-marketing.com/" class="hd-logo">小西マーケティング</a>
-
-  <nav class="hd-nav">
-    <a href="https://konishi-marketing.com/articles/" class="hd-link">記事を読む</a>
-    <a href="#form" class="hd-cta">無料LP診断を受ける</a>
-  </nav>
+<a class="hd-logo" href="https://konishi-marketing.com/">小西マーケティング</a>
+<nav class="hd-nav">
+<a class="hd-link" href="https://konishi-marketing.com/articles/">記事を読む</a>
+<a class="hd-cta" href="#form">無料LP診断を受ける</a>
+</nav>
 </header>
-
 <!-- hero -->
-
 <section class="hero" style="background: var(--navy); color: var(--white);">
-  <div class="hero-inner">
-    <div class="hero-label" style="color: var(--gold);">原因の所在</div>
-    <h1 class="hero-h1" style="color: var(--white);">
-      CVRが上がらない時、<br>ほとんどの事業者は<br>何を変えればいいかを考えます。
-      <em style="color: var(--gold-lt);">ですが、最初に見る場所を間違えれば、<br>何を変えても数字は動きません。</em>
-    </h1>
-    <p class="hero-lead" style="color: rgba(255,255,255,0.85);">広告費を増やした。デザインを変えた。商品も見直した。それでも数字は動かなかった。<br>問題は、何を変えるかではありません。どこで「買う理由」が止まっているか。そこが見えていないことです。<br>100を超える店舗の停滞を見てきた経験から解説します。</p>
-    <div class="service-def">
-      <strong>楽天・Amazon・Makuake・自社ECの商品ページを、構成・コピー・デザインまで一体で改善します。</strong>
-      <p>無料診断で停止地点を特定し、必要な場合は、その診断を起点に完成ページまで再設計します。</p>
-    </div>
-    <div class="cta-row hero-cta-row">
-      <a href="#form" class="btn hero-btn">無料LP診断を受ける</a>
-      <div class="btn-note hero-btn-note">LP・商品ページURLを送るだけ。<br>2営業日以内に診断レポートを返送します。</div>
-    </div>
-  </div>
-</section>
+<div class="hero-inner">
 
-<!-- statement -->
-
-<div class="stmt">
-  <div class="stmt-q">情報が足りないから買わないのではない。<br>判断できないから、買わないのです。</div>
-  <div class="stmt-a">ページの役割は、<strong>買う理由を判断できる状態まで連れていくこと</strong>です。</div>
+<h1 class="hero-service-title">EC・商品ページのCVR改善</h1><p class="hero-headline">CVRが上がらない時、<br/>ほとんどの事業者は<br/>何を変えればいいかを考えます。</p><p class="hero-subheadline">ですが、最初に見る場所を間違えれば、<br/>何を変えても数字は動きません。</p>
+<p class="hero-lead" style="color: rgba(255,255,255,0.85);">広告費を増やした。デザインを変えた。商品も見直した。それでも数字は動かなかった。<br/>問題は、何を変えるかではありません。どこで「買う理由」が止まっているか。そこが見えていないことです。<br/>100を超える店舗の停滞を見てきた経験から解説します。</p>
+<div class="service-def">
+<strong>楽天・Amazon・Makuake・自社ECの商品ページを、構成・コピー・デザインまで一体で改善します。</strong>
+<p>無料診断で停止地点を特定し、必要な場合は、その診断を起点に完成ページまで再設計します。</p>
 </div>
-
+<div class="cta-row hero-cta-row">
+<a class="btn hero-btn" href="#form">無料LP診断を受ける</a>
+<div class="btn-note hero-btn-note">LP・商品ページURLを送るだけ。<br/>2営業日以内に診断レポートを返送します。</div>
+</div>
+</div>
+</section>
+<!-- statement -->
+<div class="stmt">
+<div class="stmt-q">情報が足りないから買わないのではない。<br/>判断できないから、買わないのです。</div>
+<div class="stmt-a">ページの役割は、<strong>買う理由を判断できる状態まで連れていくこと</strong>です。</div>
+</div>
 <!-- root cause -->
-
 <section class="sec sec--white">
-  <div class="inner">
-    <span class="sec-label">Root Cause</span>
-    <h2 class="sec-h2">まだ、改善は<br>始まっていない。</h2>
-    <p class="sec-p">広告を増やす。デザインを変える。画像を差し替える。商品ページを作り直す。どれも、現場では「改善」と呼ばれます。</p>
-    <p class="sec-p" style="margin-top:1rem;">ただ、本来の改善は、変えることから始まりません。読者がどこで迷い、どの順番で買う理由を失い、なぜ購入判断まで進めなかったのか。そこを見つけてから、初めて変える場所が決まります。</p>
-
-    <div class="lead-lines">
-      <div class="lead-line">
-        <small>AD</small>
-        <p>止まった場所を見ないまま増やすと、選べないページに人が流れ込みます。</p>
-      </div>
-      <div class="lead-line">
-        <small>DESIGN</small>
-        <p>止まった場所を見ないまま整えると、判断材料のズレは残ります。</p>
-      </div>
-      <div class="lead-line">
-        <small>PRODUCT</small>
-        <p>止まった場所を見ないまま見直すと、買う理由が届く前に比較へ戻られます。</p>
-      </div>
-    </div>
-
-  </div>
+<div class="inner">
+<span class="sec-label">Root Cause</span>
+<h2 class="sec-h2">まだ、改善は<br/>始まっていない。</h2>
+<p class="sec-p">広告を増やす。デザインを変える。画像を差し替える。商品ページを作り直す。どれも、現場では「改善」と呼ばれます。</p>
+<p class="sec-p" style="margin-top:1rem;">ただ、本来の改善は、変えることから始まりません。読者がどこで迷い、どの順番で買う理由を失い、なぜ購入判断まで進めなかったのか。そこを見つけてから、初めて変える場所が決まります。</p>
+<div class="lead-lines">
+<div class="lead-line">
+<small>AD</small>
+<p>止まった場所を見ないまま増やすと、選べないページに人が流れ込みます。</p>
+</div>
+<div class="lead-line">
+<small>DESIGN</small>
+<p>止まった場所を見ないまま整えると、判断材料のズレは残ります。</p>
+</div>
+<div class="lead-line">
+<small>PRODUCT</small>
+<p>止まった場所を見ないまま見直すと、買う理由が届く前に比較へ戻られます。</p>
+</div>
+</div>
+</div>
 </section>
-
 <!-- mismatch -->
-
 <section class="sec sec--paper">
-  <div class="inner">
-    <span class="sec-label">Stop Point</span>
-    <h2 class="sec-h2">離脱の前に、<br>迷いがある。</h2>
-    <p class="sec-p">商品画像を見た。説明を読んだ。価格を見た。レビューを確認した。他の商品を開いた。戻ってこなかった。この流れのどこかで、読者は買わない理由を見つけています。</p>
-    <p class="sec-p">見るべきなのは、ページ全体の印象ではありません。読者が判断を止めた場所です。</p>
-
-    <ul class="moment-list">
-      <li><strong>説明で止まった。</strong><br>情報はあるのに、何を判断材料にすればいいか分からなかった。</li>
-      <li><strong>価格で止まった。</strong><br>価値が腹落ちする前に、金額だけが残った。</li>
-      <li><strong>レビューで止まった。</strong><br>最後の不安を自分で消せず、他人の評価に判断を預けた。</li>
-    </ul>
-
-  </div>
+<div class="inner">
+<span class="sec-label">Stop Point</span>
+<h2 class="sec-h2">離脱の前に、<br/>迷いがある。</h2>
+<p class="sec-p">商品画像を見た。説明を読んだ。価格を見た。レビューを確認した。他の商品を開いた。戻ってこなかった。この流れのどこかで、読者は買わない理由を見つけています。</p>
+<p class="sec-p">見るべきなのは、ページ全体の印象ではありません。読者が判断を止めた場所です。</p>
+<ul class="moment-list">
+<li><strong>説明で止まった。</strong><br/>情報はあるのに、何を判断材料にすればいいか分からなかった。</li>
+<li><strong>価格で止まった。</strong><br/>価値が腹落ちする前に、金額だけが残った。</li>
+<li><strong>レビューで止まった。</strong><br/>最後の不安を自分で消せず、他人の評価に判断を預けた。</li>
+</ul>
+</div>
 </section>
-
 <!-- philosophy / mechanism -->
-
 <section class="sec sec--navy">
-  <div class="inner">
-    <span class="sec-label sec-label--lt">独自メカニズム</span>
-    <div class="phil-inner">
-      <div class="phil-h">設計が先、<br>デザインが後。</div>
-      <p class="phil-p">先に決めるのは、何を見せるかではありません。誰に、どの順番で、何の根拠を渡せば判断が終わるかです。</p>
-      <p class="phil-p">ここが決まってから、デザインもコピーも意味を持ちます。楽天なら検索一覧、サムネイル、下部LP。Amazonならメイン画像、サブ画像、説明文。自社ECなら広告、記事LP、購入ページ。それぞれで読者が止まる場所は変わります。</p>
-      <p class="phil-p">診断だけで終わらせません。停止地点が見えた後は、構成、コピー、ワイヤー、デザインを分断せず、購入判断が最後まで進む完成ページへ落とし込みます。</p>
-      <div class="mechanism">
-        <h3 class="box-heading box-heading--dark">小西式で見るのは、ページではなく離脱の直前です。</h3>
-        <p style="margin-bottom:1.25rem;">読者がどこで迷っているかが分かると、変えるべき場所が絞られます。情報を足すのか。順番を入れ替えるのか。判断軸を先に渡すのか。安心材料を後ろに置くのか。</p>
-        <p style="margin-bottom:1.25rem;">ページを「良い・悪い」で見ません。読者が買う理由を持てなくなった地点を見ます。</p>
-        <p>止まっている場所が1点に絞れれば、広告費を変えずに数字が動き始めることがあります。</p>
-      </div>
-    </div>
-  </div>
+<div class="inner">
+<span class="sec-label sec-label--lt">独自メカニズム</span>
+<div class="phil-inner">
+<div class="phil-h">設計が先、<br/>デザインが後。</div>
+<p class="phil-p">先に決めるのは、何を見せるかではありません。誰に、どの順番で、何の根拠を渡せば判断が終わるかです。</p>
+<p class="phil-p">ここが決まってから、デザインもコピーも意味を持ちます。楽天なら検索一覧、サムネイル、下部LP。Amazonならメイン画像、サブ画像、説明文。自社ECなら広告、記事LP、購入ページ。それぞれで読者が止まる場所は変わります。</p>
+<p class="phil-p">診断だけで終わらせません。停止地点が見えた後は、構成、コピー、ワイヤー、デザインを分断せず、購入判断が最後まで進む完成ページへ落とし込みます。</p>
+<div class="mechanism">
+<h3 class="box-heading box-heading--dark">小西式で見るのは、ページではなく離脱の直前です。</h3>
+<p style="margin-bottom:1.25rem;">読者がどこで迷っているかが分かると、変えるべき場所が絞られます。情報を足すのか。順番を入れ替えるのか。判断軸を先に渡すのか。安心材料を後ろに置くのか。</p>
+<p style="margin-bottom:1.25rem;">ページを「良い・悪い」で見ません。読者が買う理由を持てなくなった地点を見ます。</p>
+<p>止まっている場所が1点に絞れれば、広告費を変えずに数字が動き始めることがあります。</p>
+</div>
+</div>
+</div>
 </section>
-
 <!-- track record -->
-
 <section class="track-sec">
-  <div class="inner">
-    <span class="sec-label">About</span>
-    <h2 class="sec-h2">小西 秀人について。</h2>
-    <div style="display:flex;gap:2.5rem;align-items:flex-start;margin-bottom:3rem;flex-wrap:wrap;">
-      <div style="flex-shrink:0;width:100%;max-width:180px;margin:0 auto;">
-        <img src="https://raw.githubusercontent.com/hideto0217-sys/konishi-lp/refs/heads/main/images/konishi.JPG"
-             alt="小西秀人"
-             style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center;display:block;border:1px solid var(--g200);border-radius:12px;box-shadow:0 10px 25px rgba(26,39,68,0.08);">
-      </div>
-      <div style="flex:1;min-width:240px;">
-        <div style="font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;">小西 秀人（こにし・ひでと）</div>
-        <div style="font-size:.78rem;color:var(--gold);font-weight:700;letter-spacing:.1em;margin-bottom:1rem;">ECコンサルタント／小西マーケティング</div>
-        <p style="font-size:.88rem;color:var(--g600);line-height:2.1;">
+<div class="inner">
+<span class="sec-label">About</span>
+<h2 class="sec-h2">小西 秀人について。</h2>
+<div style="display:flex;gap:2.5rem;align-items:flex-start;margin-bottom:3rem;flex-wrap:wrap;">
+<div style="flex-shrink:0;width:100%;max-width:180px;margin:0 auto;">
+<img alt="小西秀人" src="https://raw.githubusercontent.com/hideto0217-sys/konishi-lp/refs/heads/main/images/konishi.JPG" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center;display:block;border:1px solid var(--g200);border-radius:12px;box-shadow:0 10px 25px rgba(26,39,68,0.08);"/>
+</div>
+<div style="flex:1;min-width:240px;">
+<div style="font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;">小西 秀人（こにし・ひでと）</div>
+<div style="font-size:.78rem;color:var(--gold);font-weight:700;letter-spacing:.1em;margin-bottom:1rem;">ECコンサルタント／小西マーケティング</div>
+<p style="font-size:.88rem;color:var(--g600);line-height:2.1;">
           横浜国立大学教育人間科学部マルチメディア文化課程中退。楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの改善から数字が動かない理由を見つける「小西式CVR改善設計」を展開。楽天ショップオブザイヤー受賞店舗の店長として、そしてショップオブジエリア受賞店舗のCVR改善責任者として、「表彰される側」の現場でページ設計を担ってきた。
         </p>
-      </div>
-    </div>
-    <div class="track-grid">
-      <div class="track-card">
-        <span class="track-num">2<span class="track-unit">回</span></span>
-        <div class="track-desc">楽天市場<br>総合ランキング1位</div>
-      </div>
-      <div class="track-card">
-        <span class="track-num">1<span class="track-unit">回</span></span>
-        <div class="track-desc">Yahoo!ショッピング<br>総合ランキング1位</div>
-      </div>
-      <div class="track-card">
-        <span class="track-num">11<span class="track-unit">回</span></span>
-        <div class="track-desc">楽天<br>年間ランキング入賞</div>
-      </div>
-      <div class="track-card">
-        <span class="track-num">1,000<span class="track-unit">+</span></span>
-        <div class="track-desc">楽天ランキング1位<br>通算獲得数</div>
-      </div>
-      <div class="track-card">
-        <span class="track-num">3<span class="track-unit">回</span></span>
-        <div class="track-desc">Makuake<br>総合ランキング1位</div>
-      </div>
-      <div class="track-card">
-        <span class="track-num">2,000<span class="track-unit">%+</span></span>
-        <div class="track-desc">Makuake<br>ROAS達成（複数回）</div>
-      </div>
-      <div class="track-card">
-        <span class="track-num">3,000<span class="track-unit">円以下</span></span>
-        <div class="track-desc">Meta広告<br>CPO達成</div>
-      </div>
-    </div>
-    <div class="award-row">
-      <div class="award-card">
-        <span class="award-icon">🏆</span>
-        <div>
-          <div class="award-ttl">楽天ショップオブザイヤー受賞</div>
-          <div class="award-desc">家具EC支援　月商+4,000万達成</div>
-        </div>
-      </div>
-      <div class="award-card">
-        <span class="award-icon">🏆</span>
-        <div>
-          <div class="award-ttl">楽天ショップオブジエリア受賞</div>
-          <div class="award-desc">家電雑貨EC　継続改善による受賞</div>
-        </div>
-      </div>
-    </div>
-    <div class="track-note">※上記はすべて異なる商品・店舗で達成した実績です。食品・家具・家電・スマホグッズ・美容・健康・雑貨など、カテゴリをまたいで再現しています。特定の商品力に依存しない、ページ改善による再現性を重視しています。</div>
-  </div>
+</div>
+</div>
+<div class="track-grid">
+<div class="track-card">
+<span class="track-num">2<span class="track-unit">回</span></span>
+<div class="track-desc">楽天市場<br/>総合ランキング1位</div>
+</div>
+<div class="track-card">
+<span class="track-num">1<span class="track-unit">回</span></span>
+<div class="track-desc">Yahoo!ショッピング<br/>総合ランキング1位</div>
+</div>
+<div class="track-card">
+<span class="track-num">11<span class="track-unit">回</span></span>
+<div class="track-desc">楽天<br/>年間ランキング入賞</div>
+</div>
+<div class="track-card">
+<span class="track-num">1,000<span class="track-unit">+</span></span>
+<div class="track-desc">楽天ランキング1位<br/>通算獲得数</div>
+</div>
+<div class="track-card">
+<span class="track-num">3<span class="track-unit">回</span></span>
+<div class="track-desc">Makuake<br/>総合ランキング1位</div>
+</div>
+<div class="track-card">
+<span class="track-num">2,000<span class="track-unit">%+</span></span>
+<div class="track-desc">Makuake<br/>ROAS達成（複数回）</div>
+</div>
+<div class="track-card">
+<span class="track-num">3,000<span class="track-unit">円以下</span></span>
+<div class="track-desc">Meta広告<br/>CPO達成</div>
+</div>
+</div>
+<div class="award-row">
+<div class="award-card">
+<span class="award-icon">🏆</span>
+<div>
+<div class="award-ttl">楽天ショップオブザイヤー受賞</div>
+<div class="award-desc">家具EC支援　月商+4,000万達成</div>
+</div>
+</div>
+<div class="award-card">
+<span class="award-icon">🏆</span>
+<div>
+<div class="award-ttl">楽天ショップオブジエリア受賞</div>
+<div class="award-desc">家電雑貨EC　継続改善による受賞</div>
+</div>
+</div>
+</div>
+<div class="track-note">※上記はすべて異なる商品・店舗で達成した実績です。食品・家具・家電・スマホグッズ・美容・健康・雑貨など、カテゴリをまたいで再現しています。特定の商品力に依存しない、ページ改善による再現性を重視しています。</div>
+</div>
 </section>
-
 <!-- 対応チャネル -->
-
 <section class="sec sec--white">
-  <div class="inner">
-    <span class="sec-label">対応チャネル</span>
-    <h2 class="sec-h2">売り場ごとに、<br>止まる場所は変わる。</h2>
-    <p class="sec-p" style="margin-bottom:2.2rem;">同じ商品ページでも、楽天、Amazon、Makuake、自社ECでは読者の見方が変わります。小西式では、売り場ごとの比較環境に合わせて、判断が止まる場所を切り分けます。</p>
-
-    <div class="channel-grid">
-      <div class="channel-card">
-        <h3>楽天市場</h3>
-        <p>検索一覧、サムネイル、下部LPを分けて確認。比較される前に、判断軸が渡せているかを見ます。</p>
-      </div>
-      <div class="channel-card">
-        <h3>Amazon</h3>
-        <p>メイン画像、サブ画像、商品説明文を確認。検索流入後、どこで購買判断が止まるかを見ます。</p>
-      </div>
-      <div class="channel-card">
-        <h3>Makuake・クラウドファンディング</h3>
-        <p>プロジェクトページの冒頭から支援導線までを確認。応援する理由が立ち上がる順番を見ます。</p>
-      </div>
-      <div class="channel-card">
-        <h3>Yahoo!ショッピング</h3>
-        <p>イベント依存、価格比較、商品ページ内の説明順を確認。平常時に止まる場所を見ます。</p>
-      </div>
-      <div class="channel-card">
-        <h3>自社EC / Meta広告</h3>
-        <p>広告、記事LP、購入ページの接続を確認。冷たい流入がどこで購買判断から外れるかを見ます。</p>
-      </div>
-    </div>
-
-  </div>
+<div class="inner">
+<span class="sec-label">対応チャネル</span>
+<h2 class="sec-h2">売り場ごとに、<br/>止まる場所は変わる。</h2>
+<p class="sec-p" style="margin-bottom:2.2rem;">同じ商品ページでも、楽天、Amazon、Makuake、自社ECでは読者の見方が変わります。小西式では、売り場ごとの比較環境に合わせて、判断が止まる場所を切り分けます。</p>
+<div class="channel-grid">
+<div class="channel-card">
+<h3>楽天市場</h3>
+<p>検索一覧、サムネイル、下部LPを分けて確認。比較される前に、判断軸が渡せているかを見ます。</p>
+</div>
+<div class="channel-card">
+<h3>Amazon</h3>
+<p>メイン画像、サブ画像、商品説明文を確認。検索流入後、どこで購買判断が止まるかを見ます。</p>
+</div>
+<div class="channel-card">
+<h3>Makuake・クラウドファンディング</h3>
+<p>プロジェクトページの冒頭から支援導線までを確認。応援する理由が立ち上がる順番を見ます。</p>
+</div>
+<div class="channel-card">
+<h3>Yahoo!ショッピング</h3>
+<p>イベント依存、価格比較、商品ページ内の説明順を確認。平常時に止まる場所を見ます。</p>
+</div>
+<div class="channel-card">
+<h3>自社EC / Meta広告</h3>
+<p>広告、記事LP、購入ページの接続を確認。冷たい流入がどこで購買判断から外れるかを見ます。</p>
+</div>
+</div>
+</div>
 </section>
-
 <!-- 制作範囲 -->
 <section class="sec sec--paper">
-  <div class="inner">
-    <span class="sec-label">Service Scope</span>
-    <h2 class="sec-h2">診断で終わらず、<br>完成ページまで閉じる。</h2>
-    <p class="sec-p">無料診断で、買う理由が止まっている地点を特定します。制作をご希望の場合は、その診断を起点に、上流の判断からデザインまで一体で組み直します。</p>
-
-    <div class="delivery-grid">
-      <div class="delivery-card">
-        <span class="delivery-no">01</span>
-        <h3>リサーチと判断設計</h3>
-        <p>最良客、購入を止める誤認、比較軸、買う理由の順番を特定します。</p>
-      </div>
-      <div class="delivery-card">
-        <span class="delivery-no">02</span>
-        <h3>構成とコピー</h3>
-        <p>読者が迷う順番に合わせ、見出し、本文、証拠、行動導線を設計します。</p>
-      </div>
-      <div class="delivery-card">
-        <span class="delivery-no">03</span>
-        <h3>ワイヤーとデザイン</h3>
-        <p>構成を視線順序と情報量へ変換し、販売チャネルに合わせてデザインします。</p>
-      </div>
-      <div class="delivery-card">
-        <span class="delivery-no">04</span>
-        <h3>完成データ納品</h3>
-        <p>楽天、Amazon、Makuake、自社ECの仕様に合わせた完成データまで納品します。</p>
-      </div>
-    </div>
-
-    <div class="scope-note">
+<div class="inner">
+<span class="sec-label">Service Scope</span>
+<h2 class="sec-h2">診断で終わらず、<br/>完成ページまで閉じる。</h2>
+<p class="sec-p">無料診断で、買う理由が止まっている地点を特定します。制作をご希望の場合は、その診断を起点に、上流の判断からデザインまで一体で組み直します。</p>
+<div class="delivery-grid">
+<div class="delivery-card">
+<span class="delivery-no">01</span>
+<h3>リサーチと判断設計</h3>
+<p>最良客、購入を止める誤認、比較軸、買う理由の順番を特定します。</p>
+</div>
+<div class="delivery-card">
+<span class="delivery-no">02</span>
+<h3>構成とコピー</h3>
+<p>読者が迷う順番に合わせ、見出し、本文、証拠、行動導線を設計します。</p>
+</div>
+<div class="delivery-card">
+<span class="delivery-no">03</span>
+<h3>ワイヤーとデザイン</h3>
+<p>構成を視線順序と情報量へ変換し、販売チャネルに合わせてデザインします。</p>
+</div>
+<div class="delivery-card">
+<span class="delivery-no">04</span>
+<h3>完成データ納品</h3>
+<p>楽天、Amazon、Makuake、自社ECの仕様に合わせた完成データまで納品します。</p>
+</div>
+</div>
+<div class="scope-note">
       部分的な見た目の修正ではなく、診断で見つけた停止地点を、構成・コピー・デザインの同じ原因線上で直します。
     </div>
-  </div>
+</div>
 </section>
-
 <!-- next step -->
-
 <section class="sec sec--white">
-  <div class="inner-n">
-    <span class="sec-label">Next Step</span>
-    <h2 class="sec-h2">良い商品が、<br>比較の中で消えている。</h2>
-    <p class="sec-p">商品に自信がある。素材にこだわった。使ってもらえれば、分かる。けれどページを見た読者は、その価値を判断する前に別の商品へ移動していることがあります。</p>
-    <p class="sec-p">無料診断レポートでは、買う理由が消えた地点を見ます。そこが分かると、次に直す場所が見えてきます。</p>
-    <div class="nextstep">
-      <div class="nextstep-ttl">自分の店舗のことが頭に浮かんだ方へ。</div>
-      <p class="nextstep-p">URLを送るだけで、2営業日以内に診断レポートをお送りします。広告、構成、コピー、デザインのどこから手を入れるべきかを整理します。制作をご希望の場合は、診断結果を起点に完成ページまで一体で設計します。</p>
-      <a href="#form" class="btn-sm">無料LP診断を申し込む ── 2営業日以内に返送</a>
-    </div>
-  </div>
+<div class="inner-n">
+<span class="sec-label">Next Step</span>
+<h2 class="sec-h2">良い商品が、<br/>比較の中で消えている。</h2>
+<p class="sec-p">商品に自信がある。素材にこだわった。使ってもらえれば、分かる。けれどページを見た読者は、その価値を判断する前に別の商品へ移動していることがあります。</p>
+<p class="sec-p">無料診断レポートでは、買う理由が消えた地点を見ます。そこが分かると、次に直す場所が見えてきます。</p>
+<div class="nextstep">
+<div class="nextstep-ttl">自分の店舗のことが頭に浮かんだ方へ。</div>
+<p class="nextstep-p">URLを送るだけで、2営業日以内に診断レポートをお送りします。広告、構成、コピー、デザインのどこから手を入れるべきかを整理します。制作をご希望の場合は、診断結果を起点に完成ページまで一体で設計します。</p>
+<a class="btn-sm" href="#form">無料LP診断を申し込む ── 2営業日以内に返送</a>
+</div>
+</div>
 </section>
-
 <!-- articles -->
-
 <section class="sec sec--paper">
-  <div class="inner">
-    <span class="sec-label">Articles</span>
-    <h2 class="sec-h2" style="margin-bottom:0.5rem;">売り場別に、
+<div class="inner">
+<span class="sec-label">Articles</span>
+<h2 class="sec-h2" style="margin-bottom:0.5rem;">売り場別に、
       止まる場所を整理する。</h2>
-    <p style="font-size:1.02rem; color:var(--g600); margin-bottom:2.5rem; line-height:1.8; max-width:680px;">
+<p style="font-size:1.02rem; color:var(--g600); margin-bottom:2.5rem; line-height:1.8; max-width:680px;">
       楽天、Amazon、自社EC、Makuake。まずは自社に近い売り場から確認してください。
     </p>
-    <div class="article-hub-box">
-      <div>
-        <div class="article-hub-label">記事トップ</div>
-        <h3>販売チャネルごとに、買う理由が止まる場所を整理する。</h3>
-        <p>
+<div class="article-hub-box">
+<div>
+<div class="article-hub-label">記事トップ</div>
+<h3>販売チャネルごとに、買う理由が止まる場所を整理する。</h3>
+<p>
           楽天、Amazon、Yahoo!ショッピング、自社EC、Makuakeでは、
           読者が迷う場所が変わります。
           自社に近い販売チャネルから、次に読む記事を整理できます。
         </p>
-      </div>
-      <a href="https://konishi-marketing.com/articles/" class="article-hub-btn">
+</div>
+<a class="article-hub-btn" href="https://konishi-marketing.com/articles/">
         記事トップを見る
       </a>
-    </div>
-    <div style="margin-top:2.5rem;">
-      <div style="margin-bottom:2.5rem;">
-        <div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">楽天市場</div>
-        <div class="articles" style="grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));">
-          <a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html" class="art">
-            <span class="art-tag">楽天市場</span>
-            <div class="art-ttl">楽天商品ページを整えても転換率が上がらない理由</div>
-            <div class="art-arr">読む →</div>
-          </a>
-          <a href="https://konishi-marketing.com/articles/rakuten-access-aru-noni-urenai-kyotsuten.html" class="art">
-            <span class="art-tag">楽天市場</span>
-            <div class="art-ttl">楽天でアクセスはあるのに転換率が上がらない理由</div>
-            <div class="art-arr">読む →</div>
-          </a>
-        </div>
-      </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:2rem;">
-        <div>
-          <div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">Amazon</div>
-          <a href="https://konishi-marketing.com/articles/amazon-urenai-shohin-page-mondai.html" class="art">
-            <span class="art-tag">Amazon</span>
-            <div class="art-ttl">Amazonで売れない商品ページに共通する3つの問題</div>
-            <div class="art-arr">読む →</div>
-          </a>
-        </div>
-        <div>
-          <div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">Yahoo!ショッピング</div>
-          <a href="https://konishi-marketing.com/articles/yahoo-urenai-shohin-page-kyotsuten.html" class="art">
-            <span class="art-tag">Yahoo!ショッピング</span>
-            <div class="art-ttl">Yahoo!ショッピングでイベント日だけ売れて平常時に売れない理由</div>
-            <div class="art-arr">読む →</div>
-          </a>
-        </div>
-        <div>
-          <div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">Makuake</div>
-          <a href="https://konishi-marketing.com/articles/makuake-shien-atsumara-nai-kyotsuten.html" class="art">
-            <span class="art-tag">Makuake</span>
-            <div class="art-ttl">Makuakeでアクセスはあるのに支援が集まらないページが見る場所</div>
-            <div class="art-arr">読む →</div>
-          </a>
-        </div>
-        <div>
-          <div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">自社EC / Meta広告</div>
-          <a href="https://konishi-marketing.com/articles/meta-kokoku-cpo-roas-kaizenshinai-kyotsuten.html" class="art">
-            <span class="art-tag">自社EC / Meta広告</span>
-            <div class="art-ttl">Meta広告でクリックはあるのにCPO・ROASが改善しない理由</div>
-            <div class="art-arr">読む →</div>
-          </a>
-        </div>
-        <div>
-          <div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">EC総合</div>
-          <a href="https://konishi-marketing.com/articles/ec-shohin-page-design-kaete-mo-ugokanu.html" class="art">
-            <span class="art-tag">EC総合</span>
-            <div class="art-ttl">ECで商品ページのデザインを変えても数字が動かない理由</div>
-            <div class="art-arr">読む →</div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+<div style="margin-top:2.5rem;">
+<div style="margin-bottom:2.5rem;">
+<div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">楽天市場</div>
+<div class="articles" style="grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));">
+<a class="art" href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">
+<span class="art-tag">楽天市場</span>
+<div class="art-ttl">楽天商品ページを整えても転換率が上がらない理由</div>
+<div class="art-arr">読む →</div>
+</a>
+<a class="art" href="https://konishi-marketing.com/articles/rakuten-access-aru-noni-urenai-kyotsuten.html">
+<span class="art-tag">楽天市場</span>
+<div class="art-ttl">楽天でアクセスはあるのに転換率が上がらない理由</div>
+<div class="art-arr">読む →</div>
+</a>
+</div>
+</div>
+<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:2rem;">
+<div>
+<div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">Amazon</div>
+<a class="art" href="https://konishi-marketing.com/articles/amazon-urenai-shohin-page-mondai.html">
+<span class="art-tag">Amazon</span>
+<div class="art-ttl">Amazonで売れない商品ページに共通する3つの問題</div>
+<div class="art-arr">読む →</div>
+</a>
+</div>
+<div>
+<div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">Yahoo!ショッピング</div>
+<a class="art" href="https://konishi-marketing.com/articles/yahoo-urenai-shohin-page-kyotsuten.html">
+<span class="art-tag">Yahoo!ショッピング</span>
+<div class="art-ttl">Yahoo!ショッピングでイベント日だけ売れて平常時に売れない理由</div>
+<div class="art-arr">読む →</div>
+</a>
+</div>
+<div>
+<div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">Makuake</div>
+<a class="art" href="https://konishi-marketing.com/articles/makuake-shien-atsumara-nai-kyotsuten.html">
+<span class="art-tag">Makuake</span>
+<div class="art-ttl">Makuakeでアクセスはあるのに支援が集まらないページが見る場所</div>
+<div class="art-arr">読む →</div>
+</a>
+</div>
+<div>
+<div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">自社EC / Meta広告</div>
+<a class="art" href="https://konishi-marketing.com/articles/meta-kokoku-cpo-roas-kaizenshinai-kyotsuten.html">
+<span class="art-tag">自社EC / Meta広告</span>
+<div class="art-ttl">Meta広告でクリックはあるのにCPO・ROASが改善しない理由</div>
+<div class="art-arr">読む →</div>
+</a>
+</div>
+<div>
+<div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">EC総合</div>
+<a class="art" href="https://konishi-marketing.com/articles/ec-shohin-page-design-kaete-mo-ugokanu.html">
+<span class="art-tag">EC総合</span>
+<div class="art-ttl">ECで商品ページのデザインを変えても数字が動かない理由</div>
+<div class="art-arr">読む →</div>
+</a>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- form損失リマインド -->
-
 <div style="background:var(--navy);padding:2.5rem 2rem;border-top:1px solid rgba(255,255,255,.08);">
-  <div style="max-width:640px;margin:0 auto;">
-    <p style="font-family:var(--serif);font-size:clamp(1.1rem,3vw,1.6rem);font-weight:700;color:var(--white);line-height:1.55;letter-spacing:.01em;margin-bottom:.85rem;">
-      止まっている場所が見えないまま、<br>
-      <span style="color:var(--gold-lt);">広告を増やしても購入判断は進まない。</span>
-    </p>
-    <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.9;">
-      まず見るのは、広告を増やすかどうかではありません。<br>
+<div style="max-width:640px;margin:0 auto;">
+<p style="font-family:var(--serif);font-size:clamp(1.1rem,3vw,1.6rem);font-weight:700;color:var(--white);line-height:1.55;letter-spacing:.01em;margin-bottom:.85rem;">
+      止まっている場所が見えないまま、<br/>
+<span style="color:var(--gold-lt);">広告を増やしても購入判断は進まない。</span>
+</p>
+<p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.9;">
+      まず見るのは、広告を増やすかどうかではありません。<br/>
       読者がどこで買う理由を失ったかです。
     </p>
-  </div>
 </div>
-
+</div>
 <!-- form -->
-
 <section class="form-sec" id="form">
-  <div class="form-wrap">
-    <h2 class="form-h">無料LP診断で、<br><em>次に直す場所が分かる。</em></h2>
-    <p class="form-lead">
+<div class="form-wrap">
+<h2 class="form-h">無料LP診断で、<br/><em>次に直す場所が分かる。</em></h2>
+<p class="form-lead">
       LP・商品ページURLを送るだけ。読者がどこで買う理由を失っているかを確認し、2営業日以内にレポートで返送します。必要な場合は、その診断を起点に構成・コピー・デザインまで一体で制作します。
     </p>
-    <div class="form-note-row">
-      <span class="form-badge">✓ 営業電話は一切なし</span>
-      <span class="form-badge">✓ 有料提案はご希望の場合のみ</span>
-      <span class="form-badge">✓ 2営業日以内に返送</span>
-    </div>
-
+<div class="form-note-row">
+<span class="form-badge">✓ 営業電話は一切なし</span>
+<span class="form-badge">✓ 有料提案はご希望の場合のみ</span>
+<span class="form-badge">✓ 2営業日以内に返送</span>
+</div>
 <form id="diagForm">
-  <div class="fld">
-    <label>お名前<span class="req">必須</span></label>
-    <input type="text" name="name" placeholder="例：小西 秀人" required>
-  </div>
-  <div class="fld">
-    <label>メールアドレス<span class="req">必須</span></label>
-    <input type="email" name="email" placeholder="例：info@example.com" required>
-  </div>
-
-  <input class="consult-toggle" type="radio" name="consult_type" id="consultDiag" value="ページ診断" checked>
-  <input class="consult-toggle" type="radio" name="consult_type" id="consultConsult" value="事業相談">
-
-  <div class="fld consult-select">
-    <div class="fld-ttl">ご相談内容<span class="req">必須</span></div>
-    <div class="radio-group">
-      <label class="radio-card" for="consultDiag">
-        <span class="radio-ui"></span>
-        <span class="radio-text">
-          <strong>ページ診断を受けたい</strong>
-          <small>商品ページの改善点を具体的に知りたい方</small>
-        </span>
-      </label>
-      <label class="radio-card" for="consultConsult">
-        <span class="radio-ui"></span>
-        <span class="radio-text">
-          <strong>事業について相談したい</strong>
-          <small>売上・戦略・方向性を含めて相談したい方</small>
-        </span>
-      </label>
-    </div>
-  </div>
-
-  <!-- 診断タイプのみ表示するフィールド群 -->
-  <div id="diagFields">
-    <div class="fld">
-      <label>販売チャネル<span class="req">必須</span></label>
-      <div class="select-wrap">
-        <select name="channel" id="channelSelect">
-          <option value="" disabled selected>選択してください</option>
-          <option value="楽天市場">楽天市場</option>
-          <option value="Amazon">Amazon</option>
-          <option value="Makuake・クラウドファンディング">Makuake・クラウドファンディング</option>
-          <option value="Yahoo!ショッピング">Yahoo!ショッピング</option>
-          <option value="自社EC（Meta広告）">自社EC（Meta広告）</option>
-          <option value="その他">その他</option>
-        </select>
-      </div>
-    </div>
-    <div class="fld" id="urlField">
-      <label>商品ページまたはプロジェクトページURL<span class="req">必須</span></label>
-      <input type="url" name="url" id="urlInput" placeholder="https://item.rakuten.co.jp/...">
-      <span class="hint">楽天・Amazon・Makuakeなど、診断したいページのURLをそのまま貼り付けてください</span>
-    </div>
-    <div class="fld">
-      <label>月間アクセス数（訪問数）<span class="req">必須</span></label>
-      <div class="select-wrap">
-        <select name="pv" id="pvSelect" required>
-          <option value="" disabled selected>選択してください</option>
-          <option>1,000未満</option>
-          <option>1,000〜3,000</option>
-          <option>3,000〜10,000</option>
-          <option>10,000〜30,000</option>
-          <option>30,000以上</option>
-          <option>把握していない</option>
-        </select>
-      </div>
-      <span class="hint">RMSやGoogle Analyticsで確認できるおおよその数字で構いません</span>
-    </div>
-    <div class="fld">
-      <label>現在のCVR（転換率）<span class="req">必須</span></label>
-      <div class="select-wrap">
-        <select name="cvr" id="cvrSelect" required>
-          <option value="" disabled selected>選択してください</option>
-          <option>1%未満</option>
-          <option>1〜2%</option>
-          <option>2〜3%</option>
-          <option>3〜5%</option>
-          <option>5%以上</option>
-          <option>把握していない</option>
-        </select>
-      </div>
-      <span class="hint">購入数 ÷ 訪問数 × 100 で計算できます。把握していない場合はそのまま選択してください</span>
-    </div>
-  </div>
-
-  <div class="fld">
-    <label>ご相談内容（任意）</label>
-    <textarea name="message" rows="5" id="messagePlaceholder" placeholder="例：&#10;・現在の課題（利益率が低い、売上が伸びない 等）&#10;・検討している施策（広告強化、クラファンなど）&#10;・今回相談したいこと"></textarea>
-    <span class="hint">分かる範囲で構いません。簡単で大丈夫です。</span>
-  </div>
-
-  <button type="submit" class="form-submit">内容を送信する</button>
-  <div class="form-disc">
-    ※本診断は分析に基づくものであり成果保証ではありません。<br>
+<div class="fld">
+<label>お名前<span class="req">必須</span></label>
+<input name="name" placeholder="例：小西 秀人" required="" type="text"/>
+</div>
+<div class="fld">
+<label>メールアドレス<span class="req">必須</span></label>
+<input name="email" placeholder="例：info@example.com" required="" type="email"/>
+</div>
+<input checked="" class="consult-toggle" id="consultDiag" name="consult_type" type="radio" value="ページ診断"/>
+<input class="consult-toggle" id="consultConsult" name="consult_type" type="radio" value="事業相談"/>
+<div class="fld consult-select">
+<div class="fld-ttl">ご相談内容<span class="req">必須</span></div>
+<div class="radio-group">
+<label class="radio-card" for="consultDiag">
+<span class="radio-ui"></span>
+<span class="radio-text">
+<strong>ページ診断を受けたい</strong>
+<small>商品ページの改善点を具体的に知りたい方</small>
+</span>
+</label>
+<label class="radio-card" for="consultConsult">
+<span class="radio-ui"></span>
+<span class="radio-text">
+<strong>事業について相談したい</strong>
+<small>売上・戦略・方向性を含めて相談したい方</small>
+</span>
+</label>
+</div>
+</div>
+<!-- 診断タイプのみ表示するフィールド群 -->
+<div id="diagFields">
+<div class="fld">
+<label>販売チャネル<span class="req">必須</span></label>
+<div class="select-wrap">
+<select id="channelSelect" name="channel">
+<option disabled="" selected="" value="">選択してください</option>
+<option value="楽天市場">楽天市場</option>
+<option value="Amazon">Amazon</option>
+<option value="Makuake・クラウドファンディング">Makuake・クラウドファンディング</option>
+<option value="Yahoo!ショッピング">Yahoo!ショッピング</option>
+<option value="自社EC（Meta広告）">自社EC（Meta広告）</option>
+<option value="その他">その他</option>
+</select>
+</div>
+</div>
+<div class="fld" id="urlField">
+<label>商品ページまたはプロジェクトページURL<span class="req">必須</span></label>
+<input id="urlInput" name="url" placeholder="https://item.rakuten.co.jp/..." type="url"/>
+<span class="hint">楽天・Amazon・Makuakeなど、診断したいページのURLをそのまま貼り付けてください</span>
+</div>
+<div class="fld">
+<label>月間アクセス数（訪問数）<span class="req">必須</span></label>
+<div class="select-wrap">
+<select id="pvSelect" name="pv" required="">
+<option disabled="" selected="" value="">選択してください</option>
+<option>1,000未満</option>
+<option>1,000〜3,000</option>
+<option>3,000〜10,000</option>
+<option>10,000〜30,000</option>
+<option>30,000以上</option>
+<option>把握していない</option>
+</select>
+</div>
+<span class="hint">RMSやGoogle Analyticsで確認できるおおよその数字で構いません</span>
+</div>
+<div class="fld">
+<label>現在のCVR（転換率）<span class="req">必須</span></label>
+<div class="select-wrap">
+<select id="cvrSelect" name="cvr" required="">
+<option disabled="" selected="" value="">選択してください</option>
+<option>1%未満</option>
+<option>1〜2%</option>
+<option>2〜3%</option>
+<option>3〜5%</option>
+<option>5%以上</option>
+<option>把握していない</option>
+</select>
+</div>
+<span class="hint">購入数 ÷ 訪問数 × 100 で計算できます。把握していない場合はそのまま選択してください</span>
+</div>
+</div>
+<div class="fld">
+<label>ご相談内容（任意）</label>
+<textarea id="messagePlaceholder" name="message" placeholder="例：
+・現在の課題（利益率が低い、売上が伸びない 等）
+・検討している施策（広告強化、クラファンなど）
+・今回相談したいこと" rows="5"></textarea>
+<span class="hint">分かる範囲で構いません。簡単で大丈夫です。</span>
+</div>
+<button class="form-submit" type="submit">内容を送信する</button>
+<div class="form-disc">
+    ※本診断は分析に基づくものであり成果保証ではありません。<br/>
     ※診断結果は個別のLP・商品・市場状況により異なります。
   </div>
 </form>
-
 <!-- 診断申し込み 成功メッセージ -->
 <div class="form-success" id="formSuccessDiag">
-  <div class="success-icon">✓</div>
-  <div class="success-ttl">お申し込みありがとうございます。</div>
-  <p class="success-p">
-    2営業日以内に、診断レポートをお送りします。<br><br>
-    レポートには以下の3点が記載されます。<br>
-    ① 今、売上を止めているポイント（どの段階で離脱が起きているか）<br>
-    ② 最初に改善すべき1点<br>
-    ③ それにより失っている本来得られる利益の試算<br><br>
+<div class="success-icon">✓</div>
+<div class="success-ttl">お申し込みありがとうございます。</div>
+<p class="success-p">
+    2営業日以内に、診断レポートをお送りします。<br/><br/>
+    レポートには以下の3点が記載されます。<br/>
+    ① 今、売上を止めているポイント（どの段階で離脱が起きているか）<br/>
+    ② 最初に改善すべき1点<br/>
+    ③ それにより失っている本来得られる利益の試算<br/><br/>
     レポートを読んだ後、次に変える場所が1点に絞られます。
   </p>
 </div>
-
 <!-- 事業相談 成功メッセージ -->
 <div class="form-success" id="formSuccessConsult">
-  <div class="success-icon">✓</div>
-  <div class="success-ttl">お問い合わせありがとうございます。</div>
-  <p class="success-p">
-    内容を確認のうえ、2営業日以内にご連絡いたします。<br><br>
-    ご相談の方向性や課題感を事前にお聞きしたうえで、<br>
-    必要な対応をご提案します。<br><br>
+<div class="success-icon">✓</div>
+<div class="success-ttl">お問い合わせありがとうございます。</div>
+<p class="success-p">
+    内容を確認のうえ、2営業日以内にご連絡いたします。<br/><br/>
+    ご相談の方向性や課題感を事前にお聞きしたうえで、<br/>
+    必要な対応をご提案します。<br/><br/>
     しばらくお待ちください。
   </p>
 </div>
-
-  </div>
+</div>
 </section>
-
 <!-- footer -->
-
 <footer class="foot">
-  <div>
-    <div class="foot-name">小西 秀人｜小西マーケティング</div>
-    <div class="foot-achieve">楽天年間ランキング11回・総合1位2回 ／ 月商+4,000万達成支援</div>
-  </div>
-  <a href="https://konishi-marketing.com" class="foot-link">konishi-marketing.com</a>
+<div>
+<div class="foot-name">小西 秀人｜小西マーケティング</div>
+<div class="foot-achieve">楽天年間ランキング11回・総合1位2回 ／ 月商+4,000万達成支援</div>
+</div>
+<a class="foot-link" href="https://konishi-marketing.com">konishi-marketing.com</a>
 </footer>
-
 <script>
 const GAS_URL = 'https://script.google.com/macros/s/AKfycbz_MtzGlFo9HkWpEQkdECfGoTgjL_KRU2zUfeiJGRTaU9dRcjY3KJyBP5SBIPl6KrSUxw/exec';
 const NOTIFY_EMAIL = 'konishi@konishi-marketing.com';
@@ -1364,6 +1324,5 @@ document.getElementById('diagForm').addEventListener('submit', function(e) {
   }
 });
 </script>
-
 </body>
 </html>
