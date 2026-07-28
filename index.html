@@ -196,6 +196,16 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 .channel-card{background:var(--white);padding:1.65rem;}
 .channel-card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.45rem;line-height:1.55;}
 .channel-card p{font-size:.88rem;color:var(--g600);line-height:1.9;}
+.channel-service-link{
+  display:inline-flex;align-items:center;gap:.45rem;
+  margin-top:1rem;padding-bottom:.18rem;
+  color:var(--navy);font-size:.82rem;font-weight:700;
+  line-height:1.6;text-decoration:none;
+  border-bottom:1px solid var(--gold);
+  transition:color .2s,border-color .2s;
+}
+.channel-service-link::after{content:'→';color:var(--gold);}
+.channel-service-link:hover{color:var(--gold);border-bottom-color:var(--navy);}
 
 /* ── cause list ── */
 .cause-list{list-style:none;margin-top:2rem;}
@@ -966,6 +976,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <div class="channel-card">
 <h3>Makuake・クラウドファンディング</h3>
 <p>プロジェクト冒頭から応援購入導線までを確認。応援購入する理由が立ち上がる順番を見ます。</p>
+<a class="channel-service-link" href="https://konishi-marketing.com/makuake/" aria-label="Makuakeプロジェクトページ制作サービスを見る">Makuake制作サービスを見る</a>
 </div>
 <div class="channel-card">
 <h3>Yahoo!ショッピング</h3>
