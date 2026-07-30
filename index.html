@@ -5,13 +5,13 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>EC・商品ページのCVR改善｜構成・コピー・デザインまで一体制作｜小西マーケティング</title>
-<meta content="楽天・Amazon・Makuake・自社ECの商品ページで、購入判断が止まった地点を特定。構成・コピー・デザインを同じ原因線上で組み直し、次に直す場所を明確にします。" name="description"/>
+<meta content="楽天・Amazon・Makuake・自社ECの商品ページで、商品説明・価格・レビューのどこに改善余地があるかを確認。構成・コピー・デザインまで一体で作り直し、最初に直す場所を明確にします。" name="description"/>
 <link href="https://konishi-marketing.com/" rel="canonical"/>
 <meta content="index,follow,max-image-preview:large" name="robots"/>
 <meta content="website" property="og:type"/>
 <meta content="https://konishi-marketing.com/" property="og:url"/>
 <meta content="EC・商品ページのCVR改善｜構成・コピー・デザインまで一体制作｜小西マーケティング" property="og:title"/>
-<meta content="楽天・Amazon・Makuake・自社ECの商品ページで、購入判断が止まった地点を特定し、構成・コピー・デザインまで一体で改善します。" property="og:description"/>
+<meta content="楽天・Amazon・Makuake・自社ECの商品ページで、商品説明・価格・レビューのどこに改善余地があるかを確認し、構成・コピー・デザインまで一体で改善します。" property="og:description"/>
 <meta content="https://konishi-marketing.com/images/konishi.JPG" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <!-- Google tag (gtag.js) - GA4 -->
@@ -623,6 +623,45 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 #urlField{transition:opacity .2s;}
 #urlField.hidden{display:none;}
 
+
+/* ── privacy consent ── */
+.privacy-consent{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:.7rem;
+  align-items:start;
+  margin:1.35rem 0 1rem;
+  padding:1rem 1.1rem;
+  border:1px solid var(--g200);
+  background:var(--white);
+}
+.privacy-consent input{
+  width:18px;
+  height:18px;
+  margin-top:.25rem;
+  accent-color:var(--navy);
+  cursor:pointer;
+}
+.privacy-consent label{
+  font-size:.84rem;
+  color:var(--g600);
+  line-height:1.8;
+  cursor:pointer;
+}
+.privacy-consent a{
+  color:var(--navy);
+  font-weight:700;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.privacy-consent .req{
+  margin-left:.35rem;
+  color:var(--gold);
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:.06em;
+}
+
 /* ── footer ── */
 .foot{
   padding:1.75rem 2rem;background:var(--navy);
@@ -809,6 +848,19 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   .track-num{font-size:2.7rem;}
 }
 
+
+/* v3.22 top-page review */
+.front-proof{background:var(--white);border-bottom:1px solid var(--g200);}
+.front-proof-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--g200);}
+.front-proof-inner div{background:var(--white);padding:1.25rem 1.5rem;text-align:center;}
+.front-proof-inner strong{display:block;color:var(--navy);font-family:var(--serif);font-size:1.08rem;line-height:1.45;}
+.front-proof-inner span{display:block;margin-top:.2rem;color:var(--g600);font-size:.78rem;}
+.form-status{min-height:1.7rem;margin-top:1rem;color:var(--g600);font-size:.88rem;font-weight:700;line-height:1.7;text-align:center;}
+.form-status.is-error{color:#a4001d;}
+.form-status.is-success{color:#176b38;}
+.mode-consultation[hidden],.mode-diagnosis[hidden]{display:none!important;}
+@media(max-width:680px){.front-proof-inner{grid-template-columns:1fr;}.front-proof-inner div{padding:1rem 1.25rem;}}
+@media(max-width:560px){.hd-link{display:none}.hd-nav{gap:0}.hd-cta{font-size:.74rem;padding:.45rem .8rem}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://konishi-marketing.com/#organization","name":"小西マーケティング","url":"https://konishi-marketing.com/","founder":{"@type":"Person","name":"小西 秀人"},"description":"EC・商品ページのCVR改善を、診断・構成・コピー・デザインまで一体で支援する事業者です。"},{"@type":"Service","@id":"https://konishi-marketing.com/#service","name":"EC・商品ページのCVR改善","serviceType":["EC商品ページのCVR改善","EC商品ページ制作","楽天商品ページ改善","Amazon商品ページ改善","Makuakeプロジェクトページ改善","自社EC LP改善"],"provider":{"@id":"https://konishi-marketing.com/#organization"},"areaServed":"JP","url":"https://konishi-marketing.com/","description":"楽天・Amazon・Makuake・自社ECの商品ページを、診断から構成・コピー・デザインまで一体で改善するサービス。"}]}</script>
 </head>
@@ -817,7 +869,8 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <header class="hd">
 <a class="hd-logo" href="https://konishi-marketing.com/">小西マーケティング</a>
 <nav class="hd-nav">
-<a class="hd-link" href="https://konishi-marketing.com/articles/">記事を読む</a>
+<a class="hd-link hd-link--rakuten" href="https://konishi-marketing.com/rakuten/">楽天商品ページ制作</a>
+<a class="hd-link hd-link--articles" href="https://konishi-marketing.com/articles/">記事を読む</a>
 <a class="hd-cta" href="#form">無料LP診断を受ける</a>
 </nav>
 </header>
@@ -826,14 +879,11 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <div class="hero-inner">
 <h1 class="hero-service-title">EC・商品ページのCVR改善</h1>
 <p class="hero-headline">CVRが動かないとき、<br/>最初に決めるのは、<br/>何を変えるかではありません。</p>
-<p class="hero-subheadline">読者が、どこで「買う理由」を失ったか。<br/>先に特定するのは、その地点です。</p>
-<p class="hero-lead" style="color: rgba(255,255,255,0.85);">
-広告費やデザイン、商品を見直すのは自然です。管理画面には、読者が迷った理由までは表示されないからです。<br/>
-小西式では、購入判断が止まった地点を特定し、その原因に合わせて構成・コピー・デザインを一体で組み直します。
-</p>
+<p class="hero-subheadline">商品説明、価格、レビューのどこで、<br/>「買う理由」が途切れたか。先に確認するのは、その場所です。</p>
+<p class="hero-lead" style="color: rgba(255,255,255,0.85);">広告費やデザイン、商品を見直すのは自然です。管理画面には、読者が迷った理由までは表示されないからです。<br/>小西式では、商品説明・価格・レビューのどこで購入が止まったかを確認し、その原因に合わせて構成・コピー・デザインを一体で作り直します。</p>
 <div class="service-def">
 <strong>楽天・Amazon・Makuake・自社ECの商品ページを、無料診断から完成ページまで一体で改善します。</strong>
-<p>無料診断では、最初に直すべき1点を特定します。制作は、診断後にご希望いただいた場合のみ進めます。</p>
+<p>無料診断では、最初に直すべき1点を絞ります。制作は、診断後にご希望いただいた場合のみ進めます。</p>
 </div>
 <div class="cta-row hero-cta-row">
 <a class="btn hero-btn" href="#form">無料LP診断を受ける</a>
@@ -841,10 +891,17 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 </div>
 </div>
 </section>
+<section class="front-proof" aria-label="担当者実績">
+<div class="front-proof-inner">
+<div><strong>楽天SOY企業</strong><span>元店長</span></div>
+<div><strong>SOA企業</strong><span>元CVR責任者</span></div>
+<div><strong>20年</strong><span>EC実務経験</span></div>
+</div>
+</section>
 <!-- core desire -->
 <section class="sec sec--white">
 <div class="inner">
-<span class="sec-label">Why Good Products Disappear</span>
+<span class="sec-label">価値が伝わらない理由</span>
 <h2 class="sec-h2">良い商品が、<br/>比較の中で消えている。</h2>
 <p class="sec-p">商品に自信がある。素材にこだわった。使ってもらえれば違いが分かる。それでも、読者は価値を判断する前に別の商品へ移ることがあります。</p>
 <div class="core-note">
@@ -856,9 +913,9 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <!-- stop patterns -->
 <section class="sec sec--paper">
 <div class="inner">
-<span class="sec-label">Where Judgment Stops</span>
+<span class="sec-label">先に分けること</span>
 <h2 class="sec-h2">直す前に、<br/>止まった理由を分ける。</h2>
-<p class="sec-p">ページ全体を「良い・悪い」で見ません。説明、価格、レビューのどこで購入判断が止まったかを分けます。</p>
+<p class="sec-p">ページ全体を「良い・悪い」で見ません。商品説明、価格、レビューのどこで買う理由が途切れたかを分けます。</p>
 <ul class="moment-list">
 <li><strong>説明で止まる。</strong><br/>情報はあるのに、何を判断材料にすればよいか分からない。</li>
 <li><strong>価格で止まる。</strong><br/>価値が腹落ちする前に、金額だけが判断材料として残っている。</li>
@@ -870,40 +927,40 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <!-- mechanism -->
 <section class="sec sec--navy">
 <div class="inner">
-<span class="sec-label sec-label--lt">How The Diagnosis Works</span>
+<span class="sec-label sec-label--lt">無料診断で確認すること</span>
 <div class="phil-inner" style="max-width:900px;">
 <div class="phil-h">直す場所は、<br/>四つの確認で決まる。</div>
-<p class="phil-p">見た目の印象から修正案を出すのではなく、読者の判断が止まった原因から、変更する変数を決めます。</p>
+<p class="phil-p">見た目の印象から修正案を出すのではなく、商品ページと販売状況を確認し、どこを変えるかを決めます。</p>
 <div class="mechanism-grid">
 <div class="mech-step">
 <span class="mech-step-no">01</span>
-<h3>どこから来た読者か</h3>
-<p>検索、広告、記事など、流入時点で読者が何を知っているかを確認します。</p>
+<h3>どこから来た人か</h3>
+<p>検索、広告、記事など、商品ページへ来る前に何を見ていたかを確認します。</p>
 </div>
 <div class="mech-step">
 <span class="mech-step-no">02</span>
-<h3>何を基準に比べているか</h3>
-<p>価格、レビュー、機能など、現在使われている比較軸を特定します。</p>
+<h3>何を比べているか</h3>
+<p>価格、レビュー、機能のうち、候補を絞る際に使われている項目を確認します。</p>
 </div>
 <div class="mech-step">
 <span class="mech-step-no">03</span>
-<h3>どこで理由が途切れたか</h3>
-<p>説明、価格、証拠、安心材料のどこで購入判断が止まったかを分けます。</p>
+<h3>どこで買う理由が途切れたか</h3>
+<p>商品説明、価格、写真、数値、レビューのどこで迷いが残ったかを分けます。</p>
 </div>
 <div class="mech-step">
 <span class="mech-step-no">04</span>
 <h3>何をどう直すか</h3>
-<p>情報量、順番、見出し、証拠の配置から、必要な修正だけを選びます。</p>
+<p>見出し、説明順、写真、数値、レビュー、ボタンから、必要な修正だけを選びます。</p>
 </div>
 </div>
-<div class="mech-close">診断後は、構成・コピー・ワイヤー・デザインを分断しません。見つけた原因と同じ線上で、完成ページまで実装します。</div>
+<div class="mech-close">調査担当、コピー担当、デザイン担当が分かれると、調査で見つけた売れない理由が、一般的な見出しや見栄えの調整へ戻りやすくなります。診断した本人が、説明順、コピー、写真の使い方、完成デザインまで担当します。</div>
 </div>
 </div>
 </section>
 <!-- fit -->
 <section class="sec sec--white">
 <div class="inner">
-<span class="sec-label">Best Fit</span>
+<span class="sec-label">対象となるページ</span>
 <h2 class="sec-h2">この改善が向くのは、<br/>すでに人が来ているページです。</h2>
 <p class="sec-p">CVR改善は、流入があり、商品が検討されている状態で最も判断しやすくなります。</p>
 <div class="fit-grid">
@@ -930,61 +987,62 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <!-- service scope -->
 <section class="sec sec--paper">
 <div class="inner">
-<span class="sec-label">Service Scope</span>
-<h2 class="sec-h2">診断で終わらず、<br/>完成ページまで閉じる。</h2>
-<p class="sec-p">無料診断で、購入判断が止まっている地点を特定します。制作をご希望の場合は、その診断を起点に、上流の判断からデザインまで一体で組み直します。</p>
+<span class="sec-label">制作範囲</span>
+<h2 class="sec-h2">診断で見つけた原因を、<br/>完成ページまで直す。</h2>
+<p class="sec-p">無料診断で、商品説明、価格、レビューのどこに改善余地があるかを確認します。制作をご希望の場合は、その結果をもとに、伝える内容と順番から完成デザインまで作り直します。</p>
 <div class="delivery-grid">
 <div class="delivery-card">
 <span class="delivery-no">01</span>
-<h3>リサーチと判断設計</h3>
-<p>最良客、購入を止める誤認、比較軸、買う理由の順番を特定します。</p>
+<h3>購入者・競合調査</h3>
+<p>購入者レビューと競合ページを調べ、誰に、商品のどの違いを、どの順番で伝えるかを決めます。</p>
 </div>
 <div class="delivery-card">
 <span class="delivery-no">02</span>
 <h3>構成とコピー</h3>
-<p>読者が迷う順番に合わせ、見出し、本文、証拠、行動導線を設計します。</p>
+<p>見出し、本文、写真、数値、レビュー、ボタンの順番と文章を作ります。</p>
 </div>
 <div class="delivery-card">
 <span class="delivery-no">03</span>
 <h3>ワイヤーとデザイン</h3>
-<p>構成を視線順序と情報量へ変換し、販売チャネルに合わせてデザインします。</p>
+<p>スマートフォンで読む順番に合わせて、見出し、写真、説明、ボタンの位置を決め、完成デザインを制作します。</p>
 </div>
 <div class="delivery-card">
 <span class="delivery-no">04</span>
-<h3>完成データ納品</h3>
+<h3>販売チャネル別の完成データ</h3>
 <p>楽天、Amazon、Makuake、自社ECの仕様に合わせた完成データまで納品します。</p>
 </div>
 </div>
-<div class="scope-note">部分的な見た目の修正ではなく、診断で見つけた原因を、構成・コピー・デザインの同じ線上で直します。</div>
+<div class="scope-note">見た目だけを変えるのではなく、調査で見つけた原因が解消されるところまで作ります。</div>
 </div>
 </section>
 <!-- channels -->
 <section class="sec sec--white">
 <div class="inner">
 <span class="sec-label">対応チャネル</span>
-<h2 class="sec-h2">売り場ごとに、<br/>判断が止まる位置を変えて見る。</h2>
-<p class="sec-p" style="margin-bottom:2.2rem;">同じ商品でも、楽天、Amazon、Makuake、自社ECでは、読者が比較する場所と判断材料が変わります。</p>
+<h2 class="sec-h2">売り場ごとに、<br/>確認する場所を変える。</h2>
+<p class="sec-p" style="margin-bottom:2.2rem;">同じ商品でも、楽天、Amazon、Makuake、自社ECでは、購入前に見られる情報と迷う場所が変わります。</p>
 <div class="channel-grid">
 <div class="channel-card">
 <h3>楽天市場</h3>
-<p>検索一覧、サムネイル、下部LPを分けて確認。比較される前に、判断軸が渡せているかを見ます。</p>
+<p>検索一覧で開かれていないのか、商品画像を見た後に価格比較へ戻られているのか、下部LPで不安が残っているのかを確認します。</p>
+<a class="channel-service-link" href="https://konishi-marketing.com/rakuten/" aria-label="楽天商品ページ改善・制作サービスを見る">楽天商品ページ改善・制作を見る</a>
 </div>
 <div class="channel-card">
 <h3>Amazon</h3>
-<p>メイン画像、サブ画像、商品説明文を確認。検索流入後、どこで購買判断が止まるかを見ます。</p>
+<p>メイン画像で候補に残れているか、サブ画像を見ても商品の違いが分からない状態になっていないかを確認します。</p>
 </div>
 <div class="channel-card">
 <h3>Makuake・クラウドファンディング</h3>
-<p>プロジェクト冒頭から応援購入導線までを確認。応援購入する理由が立ち上がる順番を見ます。</p>
+<p>冒頭で今応援購入する理由が伝わるか、公開後の一般販売との違いが分かるか、最後の不安が残っていないかを確認します。</p>
 <a class="channel-service-link" href="https://konishi-marketing.com/makuake/" aria-label="Makuakeプロジェクトページ制作サービスを見る">Makuake制作サービスを見る</a>
 </div>
 <div class="channel-card">
 <h3>Yahoo!ショッピング</h3>
-<p>イベント依存、価格比較、商品ページ内の説明順を確認。平常時に止まる場所を見ます。</p>
+<p>イベント日以外でも、価格やポイント以外の違いが伝わっているかを確認します。</p>
 </div>
 <div class="channel-card">
 <h3>自社EC / Meta広告</h3>
-<p>広告、記事LP、購入ページの接続を確認。冷たい流入がどこで購買判断から外れるかを見ます。</p>
+<p>広告で期待した内容が商品ページでも続いているか、購入前の不安をページ内で解消できているかを確認します。</p>
 </div>
 </div>
 </div>
@@ -992,7 +1050,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <!-- track record -->
 <section class="track-sec">
 <div class="inner">
-<span class="sec-label">About</span>
+<span class="sec-label">実績</span>
 <h2 class="sec-h2">ページを作る側だけでなく、<br/>売上責任を持つ側にいた。</h2>
 <div style="display:flex;gap:2.5rem;align-items:flex-start;margin-bottom:3rem;flex-wrap:wrap;">
 <div style="flex-shrink:0;width:100%;max-width:180px;margin:0 auto;">
@@ -1002,7 +1060,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <div style="font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;">小西 秀人（こにし・ひでと）</div>
 <div style="font-size:.78rem;color:var(--gold);font-weight:700;letter-spacing:.1em;margin-bottom:1rem;">ECコンサルタント／小西マーケティング</div>
 <p style="font-size:.9rem;color:var(--g600);line-height:2.1;">
-横浜国立大学教育人間科学部マルチメディア文化課程中退。楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの改善から数字が動かない理由を見つける「小西式CVR改善設計」を展開。楽天ショップオブザイヤー受賞店舗の店長、ショップオブジエリア受賞店舗のCVR改善責任者として、売上責任を持つ現場でページ設計を担ってきた。
+楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの改善から数字が動かない理由を見つける「小西式CVR改善設計」を展開。楽天ショップオブザイヤー受賞店舗の店長、ショップオブジエリア受賞店舗のCVR改善責任者として、売上責任を持つ現場でページ設計を担ってきた。
 </p>
 </div>
 </div>
@@ -1023,153 +1081,25 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 </div>
 
 <div class="award-row">
-<div class="award-card"><span class="award-icon">🏆</span><div><div class="award-ttl">楽天ショップオブザイヤー受賞</div><div class="award-desc">家具EC支援　月商+4,000万達成</div></div></div>
+<div class="award-card"><span class="award-icon">🏆</span><div><div class="award-ttl">楽天ショップオブザイヤー受賞</div><div class="award-desc">家具EC支援　月商5,000万円→9,500万円</div></div></div>
 <div class="award-card"><span class="award-icon">🏆</span><div><div class="award-ttl">楽天ショップオブジエリア受賞</div><div class="award-desc">家電雑貨EC　継続改善による受賞</div></div></div>
 </div>
 <div class="track-note">※実績は異なる商品・店舗で達成したものを含みます。成果は商品、市場、運用条件によって異なります。</div>
 </div>
 </section>
-<!-- faq -->
-<section class="sec sec--paper">
-<div class="inner-n">
-<span class="sec-label">FAQ</span>
-<h2 class="sec-h2">申し込む前に、<br/>確認しておきたいこと。</h2>
-<div class="faq-list">
-<div class="faq-item">
-<div class="faq-q">無料診断だけでも利用できますか。</div>
-<div class="faq-a">利用できます。制作のご提案は、ご希望いただいた場合のみ行います。</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">診断には何が必要ですか。</div>
-<div class="faq-a">対象ページのURLと、おおよその月間アクセス数、現在のCVRをご入力ください。把握していない数字は、そのまま選択できます。</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">診断で成果は保証されますか。</div>
-<div class="faq-a">成果保証ではありません。ページ、商品、市場状況をもとに、購入判断が止まっている可能性と、最初に直す場所を整理します。</div>
-</div>
-</div>
-</div>
-</section>
-<!-- form -->
-<section class="form-sec" id="form">
-<div class="form-wrap">
-<h2 class="form-h">無料診断で、<br/><em>最初に直す1点を<br/>特定する。</em></h2>
-<p class="form-lead">商品ページURLと分かる範囲の数字を送ってください。購入判断が止まっている可能性を確認し、診断レポートを2営業日以内に返送します。</p>
-<div class="form-note-row">
-<span class="form-badge">✓ 営業電話なし</span>
-<span class="form-badge">✓ 有料提案は希望時のみ</span>
-<span class="form-badge">✓ 診断レポートを返送</span>
-</div>
-<form id="diagForm">
-<input checked="" class="consult-toggle" id="consultDiag" name="consult_type" type="radio" value="ページ診断"/>
-<input class="consult-toggle" id="consultConsult" name="consult_type" type="radio" value="事業相談"/>
-
-<div class="fld consult-select">
-<div class="fld-ttl">ご相談内容<span class="req">必須</span></div>
-<div class="radio-group">
-<label class="radio-card" for="consultDiag">
-<span class="radio-ui"></span>
-<span class="radio-text"><strong>ページ診断を受けたい</strong><small>商品ページの改善点を具体的に知りたい方</small></span>
-</label>
-<label class="radio-card" for="consultConsult">
-<span class="radio-ui"></span>
-<span class="radio-text"><strong>事業について相談したい</strong><small>売上・戦略・方向性を含めて相談したい方</small></span>
-</label>
-</div>
-</div>
-
-<div id="diagFields">
-<div class="fld">
-<label for="channelSelect">販売チャネル<span class="req">必須</span></label>
-<div class="select-wrap">
-<select id="channelSelect" name="channel">
-<option disabled="" selected="" value="">選択してください</option>
-<option value="楽天市場">楽天市場</option>
-<option value="Amazon">Amazon</option>
-<option value="Makuake・クラウドファンディング">Makuake・クラウドファンディング</option>
-<option value="Yahoo!ショッピング">Yahoo!ショッピング</option>
-<option value="自社EC（Meta広告）">自社EC（Meta広告）</option>
-<option value="その他">その他</option>
-</select>
-</div>
-</div>
-<div class="fld" id="urlField">
-<label for="urlInput">商品ページまたはプロジェクトページURL<span class="req">必須</span></label>
-<input id="urlInput" name="url" placeholder="https://item.rakuten.co.jp/..." type="url" autocomplete="url"/>
-<span class="hint">診断したいページのURLを、そのまま貼り付けてください。</span>
-</div>
-<div class="fld">
-<label for="pvSelect">月間アクセス数（訪問数）<span class="req">必須</span></label>
-<div class="select-wrap">
-<select id="pvSelect" name="pv" required="">
-<option disabled="" selected="" value="">選択してください</option>
-<option>1,000未満</option><option>1,000〜3,000</option><option>3,000〜10,000</option><option>10,000〜30,000</option><option>30,000以上</option><option>把握していない</option>
-</select>
-</div>
-<span class="hint">おおよその数字で構いません。</span>
-</div>
-<div class="fld">
-<label for="cvrSelect">現在のCVR（転換率）<span class="req">必須</span></label>
-<div class="select-wrap">
-<select id="cvrSelect" name="cvr" required="">
-<option disabled="" selected="" value="">選択してください</option>
-<option>1%未満</option><option>1〜2%</option><option>2〜3%</option><option>3〜5%</option><option>5%以上</option><option>把握していない</option>
-</select>
-</div>
-<span class="hint">把握していない場合は、そのまま選択してください。</span>
-</div>
-</div>
-
-<div class="form-final">
-<div class="form-final-title">診断レポートの送付先</div>
-<div class="fld">
-<label for="nameInput">お名前<span class="req">必須</span></label>
-<input id="nameInput" name="name" placeholder="例：小西 秀人" required="" type="text" autocomplete="name"/>
-</div>
-<div class="fld">
-<label for="emailInput">メールアドレス<span class="req">必須</span></label>
-<input id="emailInput" name="email" placeholder="例：info@example.com" required="" type="email" autocomplete="email"/>
-</div>
-<div class="fld">
-<label for="messagePlaceholder">ご相談内容（任意）</label>
-<textarea id="messagePlaceholder" name="message" placeholder="例：
-・現在の課題
-・検討している施策
-・今回相談したいこと" rows="5"></textarea>
-<span class="hint">分かる範囲で構いません。</span>
-</div>
-</div>
-
-<button class="form-submit" type="submit">無料診断を申し込む</button>
-<div class="form-disc">※本診断は分析に基づくものであり、成果保証ではありません。<br/>※診断結果は、商品・市場・運用状況によって異なります。</div>
-</form>
-
-<div class="form-success" id="formSuccessDiag">
-<div class="success-icon">✓</div>
-<div class="success-ttl">お申し込みありがとうございます。</div>
-<p class="success-p">2営業日以内に、診断レポートをお送りします。<br/><br/>
-レポートでは、①購入判断が止まる地点、②最初に直す1点、③改善余地の試算を整理します。</p>
-</div>
-<div class="form-success" id="formSuccessConsult">
-<div class="success-icon">✓</div>
-<div class="success-ttl">お問い合わせありがとうございます。</div>
-<p class="success-p">内容を確認のうえ、2営業日以内にご連絡します。</p>
-</div>
-</div>
-</section>
 <!-- articles -->
 <section class="sec sec--paper">
 <div class="inner">
-<span class="sec-label">Articles</span>
+<span class="sec-label">関連記事</span>
 <h2 class="sec-h2" style="margin-bottom:0.5rem;">売り場別に、
-      判断が止まる場所を整理する。</h2>
+      売れない理由を整理する。</h2>
 <p style="font-size:1.02rem; color:var(--g600); margin-bottom:2.5rem; line-height:1.8; max-width:680px;">
       楽天、Amazon、自社EC、Makuake。まずは自社に近い売り場から確認してください。
     </p>
 <div class="article-hub-box">
 <div>
 <div class="article-hub-label">記事トップ</div>
-<h3>販売チャネルごとに、買う理由が止まる場所を整理する。</h3>
+<h3>販売チャネルごとに、売れない理由と直す順番を整理する。</h3>
 <p>
           楽天、Amazon、Yahoo!ショッピング、自社EC、Makuakeでは、
           読者が迷う場所が変わります。
@@ -1241,154 +1171,159 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 </div>
 </div>
 </section>
+<!-- faq -->
+<section class="sec sec--paper">
+<div class="inner-n">
+<span class="sec-label">よくある質問</span>
+<h2 class="sec-h2">申し込む前に、<br/>確認しておきたいこと。</h2>
+<div class="faq-list">
+<div class="faq-item">
+<div class="faq-q">無料診断だけでも利用できますか。</div>
+<div class="faq-a">利用できます。制作のご提案は、ご希望いただいた場合のみ行います。</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">診断には何が必要ですか。</div>
+<div class="faq-a">対象ページのURL、主な流入元、おおよその月間アクセス数、現在のCVRをご入力ください。把握していない数字は、そのまま選択できます。</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">診断で成果は保証されますか。</div>
+<div class="faq-a">成果保証ではありません。ページ、商品、市場状況をもとに、売上を妨げている可能性が高い箇所と、最初に直す場所を整理します。</div>
+</div>
+</div>
+</div>
+</section>
+<!-- form -->
+<section class="form-sec" id="form">
+<div class="form-wrap">
+<h2 class="form-h mode-diagnosis">無料診断で、<br/><em>最初に直す1点を<br/>絞る。</em></h2>
+<h2 class="form-h mode-consultation" hidden>事業の状況から、<br/><em>次に進める施策を<br/>整理する。</em></h2>
+<p class="form-lead mode-diagnosis">商品ページURLと分かる範囲の数字を送ってください。売上を妨げている可能性が高い箇所を確認し、診断レポートを2営業日以内に返送します。</p>
+<p class="form-lead mode-consultation" hidden>現在の販売チャネル、売上状況、課題をお送りください。内容を確認し、2営業日以内にメールでご連絡します。</p>
+<div class="form-note-row mode-diagnosis">
+<span class="form-badge">✓ 営業電話なし</span><span class="form-badge">✓ 有料提案は希望時のみ</span><span class="form-badge">✓ 診断レポートを返送</span>
+</div>
+<div class="form-note-row mode-consultation" hidden>
+<span class="form-badge">✓ 営業電話なし</span><span class="form-badge">✓ 2営業日以内に返信</span><span class="form-badge">✓ 有料提案は希望時のみ</span>
+</div>
+<form id="diagForm" novalidate>
+<input checked class="consult-toggle" id="consultDiag" name="consult_type" type="radio" value="ページ診断"/>
+<input class="consult-toggle" id="consultConsult" name="consult_type" type="radio" value="事業相談"/>
+<div class="fld consult-select">
+<div class="fld-ttl">ご相談内容<span class="req">必須</span></div>
+<div class="radio-group">
+<label class="radio-card" for="consultDiag"><span class="radio-ui"></span><span class="radio-text"><strong>ページ診断を受けたい</strong><small>商品ページの改善点を具体的に知りたい方</small></span></label>
+<label class="radio-card" for="consultConsult"><span class="radio-ui"></span><span class="radio-text"><strong>事業について相談したい</strong><small>売上・戦略・方向性を含めて相談したい方</small></span></label>
+</div></div>
+<div id="diagFields">
+<div class="fld"><label for="channelSelect">販売チャネル<span class="req">必須</span></label><div class="select-wrap"><select id="channelSelect" name="channel"><option disabled selected value="">選択してください</option><option value="楽天市場">楽天市場</option><option value="Amazon">Amazon</option><option value="Makuake・クラウドファンディング">Makuake・クラウドファンディング</option><option value="Yahoo!ショッピング">Yahoo!ショッピング</option><option value="自社EC（Meta広告）">自社EC（Meta広告）</option><option value="その他">その他</option></select></div></div>
+<div class="fld" id="urlField"><label for="urlInput">商品ページまたはプロジェクトページURL<span class="req">必須</span></label><input autocomplete="url" id="urlInput" name="url" placeholder="https://item.rakuten.co.jp/..." type="url"/><span class="hint">診断したいページのURLを、そのまま貼り付けてください。</span></div>
+<div class="fld"><label for="trafficSelect">主な流入元<span class="req">必須</span></label><div class="select-wrap"><select id="trafficSelect" name="traffic"><option disabled selected value="">選択してください</option><option>モール内検索</option><option>モール内広告</option><option>Google・Yahoo!検索</option><option>Meta広告・SNS広告</option><option>SNS・メルマガ・LINE</option><option>複数あり</option><option>把握していない</option><option>その他</option></select></div></div>
+<div class="fld"><label for="pvSelect">月間アクセス数（訪問数）<span class="req">必須</span></label><div class="select-wrap"><select id="pvSelect" name="pv"><option disabled selected value="">選択してください</option><option>1,000未満</option><option>1,000〜3,000</option><option>3,000〜10,000</option><option>10,000〜30,000</option><option>30,000以上</option><option>把握していない</option></select></div><span class="hint">おおよその数字で構いません。</span></div>
+<div class="fld"><label for="cvrSelect">現在のCVR（転換率）<span class="req">必須</span></label><div class="select-wrap"><select id="cvrSelect" name="cvr"><option disabled selected value="">選択してください</option><option>1%未満</option><option>1〜2%</option><option>2〜3%</option><option>3〜5%</option><option>5%以上</option><option>把握していない</option></select></div><span class="hint">把握していない場合は、そのまま選択してください。</span></div>
+</div>
+<div class="form-final"><div class="form-final-title">ご連絡先</div>
+<div class="fld"><label for="nameInput">お名前<span class="req">必須</span></label><input autocomplete="name" id="nameInput" name="name" placeholder="例：小西 秀人" type="text"/></div>
+<div class="fld"><label for="emailInput">メールアドレス<span class="req">必須</span></label><input autocomplete="email" id="emailInput" name="email" placeholder="例：info@example.com" type="email"/></div>
+<div class="fld"><label for="messagePlaceholder"><span class="mode-diagnosis">補足したい内容（任意）</span><span class="mode-consultation" hidden>現在の状況・相談したいこと<span class="req">必須</span></span></label><textarea id="messagePlaceholder" name="message" rows="5"></textarea><span class="hint mode-diagnosis">分かる範囲で構いません。</span><span class="hint mode-consultation" hidden>現在の販売チャネル、売上状況、課題、相談したい内容をご記入ください。</span></div>
+</div>
+<div class="privacy-consent"><input id="privacyConsent" name="privacy_agreement" type="checkbox" value="同意する"/><label for="privacyConsent"><a href="https://konishi-marketing.com/privacy/" rel="noopener" target="_blank">プライバシーポリシー</a>を確認し、個人情報の取り扱いに同意します。<span class="req">必須</span></label></div>
+<button class="form-submit" type="submit"><span class="mode-diagnosis">無料診断を申し込む</span><span class="mode-consultation" hidden>事業相談を送信する</span></button>
+<div class="form-disc mode-diagnosis">※本診断は分析に基づくものであり、成果保証ではありません。<br/>※診断結果は、商品・市場・運用状況によって異なります。</div>
+<div class="form-disc mode-consultation" hidden>※内容を確認後、2営業日以内にメールでご連絡します。<br/>※営業電話は行いません。</div>
+<div class="form-status" id="formStatus" role="status" aria-live="polite" tabindex="-1"></div>
+</form>
+<div class="form-success" id="formSuccessDiag"><div class="success-icon">✓</div><div class="success-ttl">無料診断を受け付けました。</div><p class="success-p">2営業日以内に診断レポートをお送りします。<br/><br/>レポートでは、①売上を妨げている可能性が高い箇所、②最初に直す1点、③改善余地の試算を整理します。</p></div>
+<div class="form-success" id="formSuccessConsult"><div class="success-icon">✓</div><div class="success-ttl">事業相談を受け付けました。</div><p class="success-p">内容を確認のうえ、2営業日以内にメールでご連絡します。</p></div>
+</div></section>
 <!-- footer -->
 <footer class="foot">
 <div>
 <div class="foot-name">小西 秀人｜小西マーケティング</div>
-<div class="foot-achieve">楽天年間ランキング11回・総合1位2回 ／ 月商+4,000万達成支援</div>
+<div class="foot-achieve">楽天年間ランキング11回・総合1位2回 ／ 月商5,000万円→9,500万円</div>
 </div>
 <a class="foot-link" href="https://konishi-marketing.com">konishi-marketing.com</a>
 </footer>
 <script>
 const GAS_URL = 'https://script.google.com/macros/s/AKfycbz_MtzGlFo9HkWpEQkdECfGoTgjL_KRU2zUfeiJGRTaU9dRcjY3KJyBP5SBIPl6KrSUxw/exec';
-const NOTIFY_EMAIL = 'konishi@konishi-marketing.com';
-
-// ─── 相談タイプ切り替え ───
-const radios = document.querySelectorAll('input[name="consult_type"]');
+const form = document.getElementById('diagForm');
+const radios = [...document.querySelectorAll('input[name="consult_type"]')];
 const diagFields = document.getElementById('diagFields');
-const urlField = document.getElementById('urlField');
 const urlInput = document.getElementById('urlInput');
 const channelSelect = document.getElementById('channelSelect');
-const messagePlaceholder = document.getElementById('messagePlaceholder');
+const trafficSelect = document.getElementById('trafficSelect');
 const pvSelect = document.getElementById('pvSelect');
 const cvrSelect = document.getElementById('cvrSelect');
+const nameInput = document.getElementById('nameInput');
+const emailInput = document.getElementById('emailInput');
+const messageInput = document.getElementById('messagePlaceholder');
+const privacyConsent = document.getElementById('privacyConsent');
+const submitButton = form.querySelector('.form-submit');
+const statusNode = document.getElementById('formStatus');
 
-function applyConsultType(type) {
-  if (type === '事業相談') {
-    diagFields.style.display = 'none';
-    urlInput.required = false;
-    channelSelect.required = false;
-    pvSelect.required = false;
-    cvrSelect.required = false;
-    messagePlaceholder.placeholder = '例：\n・現在の事業状況（チャネル・月商・課題感など）\n・相談したいテーマ（戦略・施策・方向性など）\n・その他、気になっていること';
-  } else {
-    diagFields.style.display = 'block';
-    urlInput.required = true;
-    channelSelect.required = true;
-    pvSelect.required = true;
-    cvrSelect.required = true;
-    messagePlaceholder.placeholder = '例：\n・現在の課題（利益率が低い、売上が伸びない 等）\n・検討している施策（広告強化、クラファンなど）\n・今回相談したいこと';
-  }
+function currentType(){ return document.querySelector('input[name="consult_type"]:checked')?.value || 'ページ診断'; }
+function setModeVisibility(type){
+  const isConsult = type === '事業相談';
+  document.querySelectorAll('.mode-diagnosis').forEach(el => el.hidden = isConsult);
+  document.querySelectorAll('.mode-consultation').forEach(el => el.hidden = !isConsult);
+  diagFields.hidden = isConsult;
+  [urlInput,channelSelect,trafficSelect,pvSelect,cvrSelect].forEach(el => el.required = !isConsult);
+  messageInput.required = isConsult;
+  messageInput.placeholder = isConsult
+    ? `例：
+・現在の販売チャネルと売上状況
+・困っていること
+・今回相談したいこと`
+    : `例：
+・現在の課題
+・試した施策
+・診断時に見てほしいこと`;
+  statusNode.textContent=''; statusNode.className='form-status';
+}
+radios.forEach(r => r.addEventListener('change',()=>setModeVisibility(r.value)));
+document.querySelectorAll('.radio-card').forEach(card=>card.addEventListener('click',()=>{const r=document.getElementById(card.htmlFor);if(r){r.checked=true;setModeVisibility(r.value);}}));
+setModeVisibility(currentType());
+
+function setStatus(message,type=''){
+  statusNode.textContent=message;
+  statusNode.className='form-status'+(type?' is-'+type:'');
+  statusNode.focus();
+}
+function validateForm(){
+  const isConsult=currentType()==='事業相談';
+  const checks=[[nameInput,'お名前をご入力ください。'],[emailInput,'メールアドレスをご入力ください。']];
+  if(!isConsult) checks.push([channelSelect,'販売チャネルを選択してください。'],[urlInput,'商品ページURLをご入力ください。'],[trafficSelect,'主な流入元を選択してください。'],[pvSelect,'月間アクセス数を選択してください。'],[cvrSelect,'現在のCVRを選択してください。']);
+  else checks.push([messageInput,'現在の状況と相談したい内容をご入力ください。']);
+  for(const [el,msg] of checks){ if(!String(el.value||'').trim()){setStatus(msg,'error');el.focus();return false;} }
+  if(!emailInput.validity.valid){setStatus('メールアドレスの形式をご確認ください。','error');emailInput.focus();return false;}
+  if(!isConsult && !urlInput.validity.valid){setStatus('商品ページURLの形式をご確認ください。','error');urlInput.focus();return false;}
+  if(!privacyConsent.checked){setStatus('プライバシーポリシーへの同意をご確認ください。','error');privacyConsent.focus();return false;}
+  return true;
 }
 
-function setConsultTypeFromRadio(radio) {
-  if (!radio) return;
-  radio.checked = true;
-  applyConsultType(radio.value);
-}
-
-radios.forEach(radio => {
-  radio.addEventListener('change', () => setConsultTypeFromRadio(radio));
-});
-
-// iOS Safari / 一部ブラウザで display:none の radio + label クリック時に
-// change イベントが拾われないケースへの保険
-document.querySelectorAll('.radio-card').forEach(card => {
-  card.addEventListener('click', () => {
-    const innerRadio = card.querySelector('input[name="consult_type"]');
-    const forId = card.getAttribute('for');
-    const linkedRadio = forId ? document.getElementById(forId) : null;
-    setConsultTypeFromRadio(innerRadio || linkedRadio);
-  });
-});
-
-// 初期状態を確定させる
-const checkedRadio = document.querySelector('input[name="consult_type"]:checked');
-applyConsultType(checkedRadio ? checkedRadio.value : 'ページ診断');
-
-// ─── フォーム送信 ───
-document.getElementById('diagForm').addEventListener('submit', function(e) {
+form.addEventListener('submit',async e=>{
   e.preventDefault();
-
-  const name    = this.querySelector('input[name="name"]').value.trim();
-  const email   = this.querySelector('input[name="email"]').value.trim();
-  const message = this.querySelector('textarea[name="message"]').value.trim();
-  const consultTypeEl = this.querySelector('input[name="consult_type"]:checked');
-
-  if (!name || !email || !consultTypeEl) {
-    alert('お名前・メールアドレス・ご相談内容は必須です。');
-    return;
-  }
-
-  const consultType = consultTypeEl.value;
-  const isConsult = (consultType === '事業相談');
-
-  const btn = this.querySelector('.form-submit');
-  btn.textContent = '送信中...';
-  btn.disabled = true;
-
-  if (isConsult) {
-    // ── 事業相談：GAS経由せずメール通知のみ ──
-    // Web Fetch API でサーバーレス通知（EmailJS等が不要な簡易実装）
-    // ここではGASの別エンドポイントとして notify パラメータで分岐させる
-    const params = new URLSearchParams({
-      mode: 'notify',
-      name,
-      email,
-      message,
-      consult_type: consultType,
-      to: NOTIFY_EMAIL
-    });
-    const img = new Image();
-    img.src = GAS_URL + '?' + params.toString();
-
-    setTimeout(() => {
-      if (typeof gtag === 'function') {
-        gtag('event', 'form_submit', {
-          'event_category': 'lead',
-          'event_label': '事業相談',
-        });
-      }
-      this.style.display = 'none';
-      document.getElementById('formSuccessConsult').classList.add('show');
-    }, 1500);
-
-  } else {
-    // ── ページ診断：既存GASフロー ──
-    const channel = channelSelect.value;
-    const url     = urlInput.value.trim();
-    const pv      = this.querySelector('select[name="pv"]').value;
-    const cvr     = this.querySelector('select[name="cvr"]').value;
-
-    if (!channel || !url) {
-      btn.textContent = '内容を送信する';
-      btn.disabled = false;
-      alert('販売チャネルと商品ページURLは必須です。');
-      return;
-    }
-    if (!pv || !cvr) {
-      btn.textContent = '内容を送信する';
-      btn.disabled = false;
-      alert('月間アクセス数とCVRを選択してください。');
-      return;
-    }
-
-    const params = new URLSearchParams({ name, email, channel, url, pv, cvr, consult_type: consultType });
-    const img = new Image();
-    img.src = GAS_URL + '?' + params.toString();
-
-    setTimeout(() => {
-      if (typeof gtag === 'function') {
-        gtag('event', 'form_submit', {
-          'event_category': 'lead',
-          'event_label': '無料LP診断申し込み',
-          'channel': channel
-        });
-      }
-      this.style.display = 'none';
-      document.getElementById('formSuccessDiag').classList.add('show');
-    }, 1500);
-  }
+  if(!validateForm()) return;
+  const type=currentType();
+  const original=submitButton.innerHTML;
+  submitButton.disabled=true; submitButton.textContent='送信中…'; setStatus('送信しています。');
+  const payload=new URLSearchParams({
+    name:nameInput.value.trim(), email:emailInput.value.trim(), consult_type:type,
+    channel:type==='ページ診断'?channelSelect.value:'', url:type==='ページ診断'?urlInput.value.trim():'',
+    traffic:type==='ページ診断'?trafficSelect.value:'', pv:type==='ページ診断'?pvSelect.value:'', cvr:type==='ページ診断'?cvrSelect.value:'',
+    message:messageInput.value.trim(), privacy_agreement:'同意する', source_page:location.href
+  });
+  try{
+    const response=await fetch(GAS_URL,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:payload.toString(),redirect:'follow'});
+    if(!response.ok) throw new Error('送信先から正常な応答がありませんでした。');
+    const text=await response.text();
+    let result=null; try{result=JSON.parse(text);}catch(_e){}
+    if(result && result.ok===false) throw new Error(result.message||'送信できませんでした。');
+    if(!result || result.ok!==true) throw new Error('受付結果を確認できませんでした。時間を置いて再度お試しください。');
+    if(typeof gtag==='function') gtag('event','form_submit_success',{form_name:'top_page',inquiry_type:type});
+    form.style.display='none';
+    document.getElementById(type==='事業相談'?'formSuccessConsult':'formSuccessDiag').classList.add('show');
+  }catch(err){console.error(err);setStatus(err.message||'送信できませんでした。時間を置いて再度お試しください。','error');}
+  finally{submitButton.disabled=false;submitButton.innerHTML=original;}
 });
 </script>
 </body>
