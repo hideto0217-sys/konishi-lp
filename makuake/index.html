@@ -13,7 +13,6 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());
 gtag('config','G-SWS3R3K4W5');
 </script>
-
 <style>
 :root{
   --paper:#f4f0e8;
@@ -1032,6 +1031,151 @@ footer a{
   }
 }
 
+/* v14: pain-to-mechanism transition */
+.mechanism-turn{
+  position:relative;
+  overflow:hidden;
+  padding:104px 0 98px;
+  background:linear-gradient(135deg,var(--red-dark),#4f0715);
+  color:#fff;
+}
+.mechanism-turn:before{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  top:-240px;
+  right:-120px;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:50%;
+}
+.mechanism-turn:after{
+  content:"";
+  position:absolute;
+  width:240px;
+  height:240px;
+  right:170px;
+  bottom:-170px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+.mechanism-turn-inner{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:minmax(0,780px) minmax(350px,1fr);
+  column-gap:30px;
+  row-gap:0;
+  align-items:center;
+}
+.mechanism-turn h2{
+  grid-column:1;
+  margin:0;
+  max-width:780px;
+  font-size:clamp(46px,4.2vw,58px);
+  line-height:1.1;
+  letter-spacing:-.05em;
+  color:#fff;
+}
+.mechanism-turn-copy-desktop,
+.mechanism-turn-copy-mobile{
+  display:block;
+}
+.mechanism-turn-copy-mobile{
+  display:none;
+}
+.mechanism-turn-copy{
+  grid-column:2;
+  align-self:center;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.42);
+}
+.mechanism-turn-method{
+  margin:0;
+  font-size:clamp(19px,1.7vw,22px);
+  line-height:1.85;
+  font-weight:750;
+  color:#fff;
+}
+.mechanism-turn-keep{
+  white-space:nowrap;
+}
+.mechanism-turn-method-line{
+  display:block;
+}
+.mechanism-mobile-break{
+  display:none;
+}
+.mechanism-turn-proof{
+  margin:30px 0 0;
+  padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.22);
+  font-size:16px;
+  line-height:1.7;
+  font-weight:850;
+  letter-spacing:.035em;
+  color:#fff;
+}
+@media(max-width:1100px){
+  .mechanism-turn-inner{
+    grid-template-columns:1fr;
+    gap:44px;
+    align-items:start;
+  }
+  .mechanism-turn h2,
+  .mechanism-turn-copy{
+    grid-column:1;
+  }
+  .mechanism-turn h2{
+    max-width:780px;
+  }
+  .mechanism-turn-copy{
+    max-width:760px;
+    align-self:start;
+    padding-top:20px;
+  }
+}
+@media(max-width:700px){
+  .mechanism-turn{
+    padding:76px 0 70px;
+  }
+  .mechanism-turn:before{
+    width:320px;
+    height:320px;
+    top:-190px;
+    right:-120px;
+  }
+  .mechanism-turn-inner{
+    gap:34px;
+  }
+  .mechanism-turn h2{
+    font-size:32px;
+    line-height:1.14;
+    letter-spacing:-.06em;
+  }
+  .mechanism-turn-copy-desktop{
+    display:none;
+  }
+  .mechanism-turn-copy-mobile{
+    display:block;
+  }
+  .mechanism-mobile-break{
+    display:block;
+  }
+  .mechanism-turn-copy{
+    padding-top:20px;
+  }
+  .mechanism-turn-method{
+    font-size:18px;
+    line-height:1.9;
+  }
+  .mechanism-turn-proof{
+    margin-top:24px;
+    padding-top:18px;
+    font-size:15px;
+  }
+}
+
 /* Hero: remove explanatory kicker above headline */
 .hero-copy .service-title{
   margin-top:0;
@@ -1271,7 +1415,7 @@ footer a{
 .service .num{
   font-size:12px;
 }
-</style><meta content="Makuakeプロジェクトページ制作を、構成・コピー・デザイン・管理画面への入稿まで一体で対応。固定費15万円（税別）＋ページ上の応援購入総額15％。全60プロジェクト平均710万円、約9割は事前集客なし。" name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="googlebot"/><meta content="小西秀人" name="author"/><meta content="#f4f0e8" name="theme-color"/><meta content="strict-origin-when-cross-origin" name="referrer"/><meta content="telephone=no" name="format-detection"/><link href="https://konishi-marketing.com/makuake/" rel="canonical"/><link href="https://konishi-marketing.com/makuake/" hreflang="ja-JP" rel="alternate"/><link href="https://konishi-marketing.com/makuake/" hreflang="x-default" rel="alternate"/><meta content="website" property="og:type"/><meta content="ja_JP" property="og:locale"/><meta content="小西マーケティング" property="og:site_name"/><meta content="Makuakeプロジェクトページ制作｜構成・コピー・デザイン・入稿まで｜小西マーケティング" property="og:title"/><meta content="Makuakeプロジェクトページ制作を、構成・コピー・デザイン・管理画面への入稿まで一体で対応。固定費15万円（税別）＋ページ上の応援購入総額15％。全60プロジェクト平均710万円、約9割は事前集客なし。" property="og:description"/><meta content="https://konishi-marketing.com/makuake/" property="og:url"/><meta content="summary" name="twitter:card"/><meta content="Makuakeプロジェクトページ制作｜構成・コピー・デザイン・入稿まで｜小西マーケティング" name="twitter:title"/><meta content="Makuakeプロジェクトページ制作を、構成・コピー・デザイン・管理画面への入稿まで一体で対応。固定費15万円（税別）＋ページ上の応援購入総額15％。全60プロジェクト平均710万円、約9割は事前集客なし。" name="twitter:description"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://konishi-marketing.com/#organization","name":"小西マーケティング","url":"https://konishi-marketing.com/","founder":{"@id":"https://konishi-marketing.com/#person"}},{"@type":"Person","@id":"https://konishi-marketing.com/#person","name":"小西秀人","jobTitle":"代表","worksFor":{"@id":"https://konishi-marketing.com/#organization"},"url":"https://konishi-marketing.com/"},{"@type":"Service","@id":"https://konishi-marketing.com/makuake/#service","name":"Makuakeプロジェクトページ制作","serviceType":["Makuakeプロジェクトページ制作","Makuakeページ制作","Makuake LP制作"],"description":"商品ごとの応援購入理由を設計し、構成・コピー・デザイン・Makuake管理画面への入稿まで担当する制作サービス。固定費15万円（税別）と、ページ上へ表示された応援購入総額の15％（税別）で提供。必要な案件には事前集客サポートを追加できる。","url":"https://konishi-marketing.com/makuake/","provider":{"@id":"https://konishi-marketing.com/#organization"},"areaServed":{"@type":"Country","name":"日本"},"audience":{"@type":"BusinessAudience","audienceType":"Makuakeで新商品を公開する企業・EC事業者"}},{"@type":"WebPage","@id":"https://konishi-marketing.com/makuake/#webpage","url":"https://konishi-marketing.com/makuake/","name":"Makuakeプロジェクトページ制作｜構成・コピー・デザイン・入稿まで｜小西マーケティング","description":"Makuakeプロジェクトページ制作を、構成・コピー・デザイン・管理画面への入稿まで一体で対応。固定費15万円（税別）＋ページ上の応援購入総額15％。全60プロジェクト平均710万円、約9割は事前集客なし。","inLanguage":"ja-JP","isPartOf":{"@type":"WebSite","@id":"https://konishi-marketing.com/#website","url":"https://konishi-marketing.com/","name":"小西マーケティング","publisher":{"@id":"https://konishi-marketing.com/#organization"}},"about":{"@id":"https://konishi-marketing.com/makuake/#service"},"dateModified":"2026-07-28","mainEntity":[{"@id":"https://konishi-marketing.com/makuake/#service"},{"@id":"https://konishi-marketing.com/makuake/#faq-schema"}],"headline":"Makuakeプロジェクトページ制作"},{"@type":"FAQPage","@id":"https://konishi-marketing.com/makuake/#faq-schema","url":"https://konishi-marketing.com/makuake/#faq","mainEntity":[{"@type":"Question","name":"写真がなくても依頼できますか。","acceptedAnswer":{"@type":"Answer","text":"はい。構成とコピーをもとに必要な写真を整理します。撮影が必要な場合は、こちらで手配する方法と、撮影会社へ指示を共有する方法があります。"}},{"@type":"Question","name":"デザインだけ依頼できますか。","acceptedAnswer":{"@type":"Answer","text":"デザインだけの依頼には対応していません。商品資料の確認から、構成・コピー、デザイン、入稿までを一体で担当します。"}},{"@type":"Question","name":"料金はいくらですか。","acceptedAnswer":{"@type":"Answer","text":"固定費15万円（税別）と、プロジェクト終了時にMakuakeページ上へ表示された応援購入総額の15％（税別）です。固定費は契約時に全額、成果報酬はMakuakeからクライアントへの入金後3日以内にお支払いいただきます。成果報酬に最低額と上限はありません。"}},{"@type":"Question","name":"制作途中で商品仕様や販売条件が変わった場合はどうなりますか。","acceptedAnswer":{"@type":"Answer","text":"当初合意した商品仕様と販売条件の範囲では、公開までに必要な修正へ対応します。商品仕様、価格、リターン設計などの前提が変更され、再制作が必要になる場合は別途協議します。"}},{"@type":"Question","name":"成果は保証されますか。","acceptedAnswer":{"@type":"Answer","text":"保証は行いません。応援購入総額には、商品と価格が影響します。公開時期と在庫も影響します。広告費やMakuake内露出にも左右されます。"}},{"@type":"Question","name":"制作期間はどれくらいですか。","acceptedAnswer":{"@type":"Answer","text":"商品情報とページ量を確認します。撮影、図解、動画の有無も踏まえ、想定スケジュールを提示します。"}},{"@type":"Question","name":"Makuake後の楽天や自社ECも依頼できますか。","acceptedAnswer":{"@type":"Answer","text":"対応可能です。先行販売と限定数の文脈を外します。割引に頼らず選ばれる一般販売向けページへ再構成します。"}},{"@type":"Question","name":"事前集客も依頼できますか。","acceptedAnswer":{"@type":"Answer","text":"対応可能です。全案件へ必須にはせず、商品単価、目標応援購入額、既存認知、公開初速の必要性から要否を判断します。実行まで依頼する場合は、15万円（税別）＋広告運用費です。広告運用費は広告費の10％、最低5万円（税別）で、広告費は実費です。"}},{"@type":"Question","name":"広告運用を依頼せず、プロジェクトページ制作だけを依頼できますか。","acceptedAnswer":{"@type":"Answer","text":"はい。プロジェクトページ制作が基本です。公開後の広告はMakuakeの広告メニューを利用するケースが一般的です。必要と判断した案件のみ、事前集客サポートを追加できます。"}}]},{"@type":"BreadcrumbList","@id":"https://konishi-marketing.com/makuake/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"トップページ","item":"https://konishi-marketing.com/"},{"@type":"ListItem","position":2,"name":"Makuakeプロジェクトページ制作","item":"https://konishi-marketing.com/makuake/"}]}]}</script>
+</style><meta content="Makuakeプロジェクトページ制作を、構成・コピー・デザイン・管理画面への入稿まで一体で対応。固定費15万円（税別）＋ページ上の応援購入総額15％。全60プロジェクト平均710万円、約9割は事前集客なし。" name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="googlebot"/><meta content="小西秀人" name="author"/><meta content="#f4f0e8" name="theme-color"/><meta content="strict-origin-when-cross-origin" name="referrer"/><meta content="telephone=no" name="format-detection"/><link href="https://konishi-marketing.com/makuake/" rel="canonical"/><link href="https://konishi-marketing.com/makuake/" hreflang="ja-JP" rel="alternate"/><link href="https://konishi-marketing.com/makuake/" hreflang="x-default" rel="alternate"/><meta content="website" property="og:type"/><meta content="ja_JP" property="og:locale"/><meta content="小西マーケティング" property="og:site_name"/><meta content="Makuakeプロジェクトページ制作｜構成・コピー・デザイン・入稿まで｜小西マーケティング" property="og:title"/><meta content="Makuakeプロジェクトページ制作を、構成・コピー・デザイン・管理画面への入稿まで一体で対応。固定費15万円（税別）＋ページ上の応援購入総額15％。全60プロジェクト平均710万円、約9割は事前集客なし。" property="og:description"/><meta content="https://konishi-marketing.com/makuake/" property="og:url"/><meta content="summary" name="twitter:card"/><meta content="Makuakeプロジェクトページ制作｜構成・コピー・デザイン・入稿まで｜小西マーケティング" name="twitter:title"/><meta content="Makuakeプロジェクトページ制作を、構成・コピー・デザイン・管理画面への入稿まで一体で対応。固定費15万円（税別）＋ページ上の応援購入総額15％。全60プロジェクト平均710万円、約9割は事前集客なし。" name="twitter:description"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://konishi-marketing.com/#organization","name":"小西マーケティング","url":"https://konishi-marketing.com/","founder":{"@id":"https://konishi-marketing.com/#person"}},{"@type":"Person","@id":"https://konishi-marketing.com/#person","name":"小西秀人","jobTitle":"代表","worksFor":{"@id":"https://konishi-marketing.com/#organization"},"url":"https://konishi-marketing.com/"},{"@type":"Service","@id":"https://konishi-marketing.com/makuake/#service","name":"Makuakeプロジェクトページ制作","serviceType":["Makuakeプロジェクトページ制作","Makuakeページ制作","Makuake LP制作"],"description":"商品ごとの応援購入理由を設計し、構成・コピー・デザイン・Makuake管理画面への入稿まで担当する制作サービス。固定費15万円（税別）と、ページ上へ表示された応援購入総額の15％（税別）で提供。必要な案件には事前集客サポートを追加できる。","url":"https://konishi-marketing.com/makuake/","provider":{"@id":"https://konishi-marketing.com/#organization"},"areaServed":{"@type":"Country","name":"日本"},"audience":{"@type":"BusinessAudience","audienceType":"Makuakeで新商品を公開する企業・EC事業者"}},{"@type":"WebPage","@id":"https://konishi-marketing.com/makuake/#webpage","url":"https://konishi-marketing.com/makuake/","name":"Makuakeプロジェクトページ制作｜構成・コピー・デザイン・入稿まで｜小西マーケティング","description":"Makuakeプロジェクトページ制作を、構成・コピー・デザイン・管理画面への入稿まで一体で対応。固定費15万円（税別）＋ページ上の応援購入総額15％。全60プロジェクト平均710万円、約9割は事前集客なし。","inLanguage":"ja-JP","isPartOf":{"@type":"WebSite","@id":"https://konishi-marketing.com/#website","url":"https://konishi-marketing.com/","name":"小西マーケティング","publisher":{"@id":"https://konishi-marketing.com/#organization"}},"about":{"@id":"https://konishi-marketing.com/makuake/#service"},"dateModified":"2026-07-30","mainEntity":[{"@id":"https://konishi-marketing.com/makuake/#service"},{"@id":"https://konishi-marketing.com/makuake/#faq-schema"}],"headline":"Makuakeプロジェクトページ制作"},{"@type":"FAQPage","@id":"https://konishi-marketing.com/makuake/#faq-schema","url":"https://konishi-marketing.com/makuake/#faq","mainEntity":[{"@type":"Question","name":"写真がなくても依頼できますか。","acceptedAnswer":{"@type":"Answer","text":"はい。構成とコピーをもとに必要な写真を整理します。撮影が必要な場合は、こちらで手配する方法と、撮影会社へ指示を共有する方法があります。"}},{"@type":"Question","name":"デザインだけ依頼できますか。","acceptedAnswer":{"@type":"Answer","text":"デザインだけの依頼には対応していません。商品資料の確認から、構成・コピー、デザイン、入稿までを一体で担当します。"}},{"@type":"Question","name":"料金はいくらですか。","acceptedAnswer":{"@type":"Answer","text":"固定費15万円（税別）と、プロジェクト終了時にMakuakeページ上へ表示された応援購入総額の15％（税別）です。固定費は契約時に全額、成果報酬はMakuakeからクライアントへの入金後3日以内にお支払いいただきます。成果報酬に最低額と上限はありません。"}},{"@type":"Question","name":"制作途中で商品仕様や販売条件が変わった場合はどうなりますか。","acceptedAnswer":{"@type":"Answer","text":"当初合意した商品仕様と販売条件の範囲では、公開までに必要な修正へ対応します。商品仕様、価格、リターン設計などの前提が変更され、再制作が必要になる場合は別途協議します。"}},{"@type":"Question","name":"成果は保証されますか。","acceptedAnswer":{"@type":"Answer","text":"保証は行いません。応援購入総額には、商品と価格が影響します。公開時期と在庫も影響します。広告費やMakuake内露出にも左右されます。"}},{"@type":"Question","name":"制作期間はどれくらいですか。","acceptedAnswer":{"@type":"Answer","text":"商品情報とページ量を確認します。撮影、図解、動画の有無も踏まえ、想定スケジュールを提示します。"}},{"@type":"Question","name":"Makuake後の楽天や自社ECも依頼できますか。","acceptedAnswer":{"@type":"Answer","text":"対応可能です。先行販売と限定数の文脈を外します。割引に頼らず選ばれる一般販売向けページへ再構成します。"}},{"@type":"Question","name":"事前集客も依頼できますか。","acceptedAnswer":{"@type":"Answer","text":"対応可能です。全案件へ必須にはせず、商品単価、目標応援購入額、既存認知、公開初速の必要性から要否を判断します。実行まで依頼する場合は、15万円（税別）＋広告運用費です。広告運用費は広告費の10％、最低5万円（税別）で、広告費は実費です。"}},{"@type":"Question","name":"広告運用を依頼せず、プロジェクトページ制作だけを依頼できますか。","acceptedAnswer":{"@type":"Answer","text":"はい。プロジェクトページ制作が基本です。公開後の広告はMakuakeの広告メニューを利用するケースが一般的です。必要と判断した案件のみ、事前集客サポートを追加できます。"}}]},{"@type":"BreadcrumbList","@id":"https://konishi-marketing.com/makuake/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"トップページ","item":"https://konishi-marketing.com/"},{"@type":"ListItem","position":2,"name":"Makuakeプロジェクトページ制作","item":"https://konishi-marketing.com/makuake/"}]}]}</script>
 <meta content="https://script.google.com/macros/s/AKfycbyO2WuhDl_-N2aFd2sdqr80UpIJ_iCMVKetndhO7vjDLgQmSp0SWnTB8CGXC4qCo39i/exec" name="makuake-form-endpoint"/><style>
 /* v3.17 final cascade lock */
 .profile-stat-label{
@@ -1575,7 +1719,437 @@ footer a{
     padding:24px 20px;
   }
 }
-</style></head>
+</style>
+<style>
+/* v3.22 local v13: FV直下の実績を主証拠として再設計 */
+.hero{
+  min-height:760px;
+}
+.hero-grid{
+  grid-template-columns:1fr;
+}
+.hero-copy{
+  max-width:900px;
+  padding:112px 0 92px;
+}
+.hero-results{
+  position:relative;
+  overflow:hidden;
+  padding:74px 0 68px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:#fffdfa;
+}
+.hero-results::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(rgba(178,23,50,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(178,23,50,.035) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+.hero-results-inner{
+  position:relative;
+  z-index:1;
+}
+.hero-results-top{
+  display:grid;
+  grid-template-columns:minmax(0,1.18fr) minmax(300px,.82fr);
+  gap:72px;
+  align-items:end;
+  padding-bottom:42px;
+  border-bottom:3px solid var(--ink);
+}
+.hero-results-kicker{
+  margin:0 0 16px;
+  color:var(--red);
+  font-size:15px;
+  font-weight:900;
+  line-height:1.4;
+  letter-spacing:.12em;
+}
+.hero-results-title{
+  margin:0;
+}
+.hero-results-title > span{
+  display:block;
+  margin-bottom:18px;
+  color:var(--ink);
+  font-size:clamp(20px,2.2vw,30px);
+  font-weight:900;
+  line-height:1.3;
+  letter-spacing:-.035em;
+}
+.hero-results-title > strong{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  color:var(--ink);
+  font-size:clamp(96px,12vw,148px);
+  font-weight:950;
+  line-height:.78;
+  letter-spacing:-.075em;
+  white-space:nowrap;
+}
+.hero-results-title > strong em{
+  font-size:.34em;
+  font-style:normal;
+  letter-spacing:-.04em;
+}
+.hero-results-caption{
+  margin:22px 0 0;
+  color:#5a534c;
+  font-size:16px;
+  font-weight:850;
+  line-height:1.5;
+}
+.hero-results-condition{
+  margin:0 0 4px;
+  padding-left:28px;
+  border-left:4px solid var(--red);
+  color:#332f2b;
+  font-size:18px;
+  font-weight:800;
+  line-height:1.85;
+}
+.hero-results-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+}
+.hero-result-stat{
+  min-width:0;
+  padding:36px 26px 30px;
+  border-right:1px solid var(--line);
+}
+.hero-result-stat:first-child{
+  padding-left:0;
+}
+.hero-result-stat:last-child{
+  padding-right:0;
+  border-right:0;
+}
+.hero-result-stat strong{
+  display:block;
+  color:var(--ink);
+  font-size:clamp(38px,4.1vw,54px);
+  font-weight:950;
+  line-height:1;
+  letter-spacing:-.06em;
+  white-space:nowrap;
+}
+.hero-result-stat span{
+  display:block;
+  margin-top:13px;
+  color:#5f574f;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.5;
+}
+.hero-result-stat--prelaunch strong{
+  color:var(--red);
+}
+@media(max-width:900px){
+  .hero{
+    min-height:auto;
+  }
+  .hero-copy{
+    max-width:760px;
+    padding:90px 0 74px;
+  }
+  .hero-results-top{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+  .hero-results-condition{
+    max-width:680px;
+  }
+  .hero-results-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .hero-result-stat{
+    padding:32px 24px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-result-stat:nth-child(2){
+    padding-right:0;
+    border-right:0;
+  }
+  .hero-result-stat:nth-child(3){
+    padding-left:0;
+    border-bottom:0;
+  }
+  .hero-result-stat:nth-child(4){
+    border-right:0;
+    border-bottom:0;
+  }
+}
+@media(max-width:560px){
+  .hero-copy{
+    padding:72px 0 64px;
+  }
+  .hero-results{
+    padding:56px 0 50px;
+  }
+  .hero-results-top{
+    gap:24px;
+    padding-bottom:30px;
+    border-bottom-width:2px;
+  }
+  .hero-results-kicker{
+    margin-bottom:12px;
+    font-size:13px;
+  }
+  .hero-results-title > span{
+    margin-bottom:14px;
+    font-size:20px;
+  }
+  .hero-results-title > strong{
+    gap:7px;
+    font-size:clamp(76px,25vw,98px);
+    line-height:.82;
+  }
+  .hero-results-caption{
+    margin-top:17px;
+    font-size:14px;
+  }
+  .hero-results-condition{
+    padding-left:18px;
+    border-left-width:3px;
+    font-size:16px;
+    line-height:1.75;
+  }
+  .desktop-break{
+    display:none;
+  }
+  .hero-results-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .hero-result-stat,
+  .hero-result-stat:first-child,
+  .hero-result-stat:last-child{
+    padding:27px 16px 25px;
+  }
+  .hero-result-stat:nth-child(odd){
+    padding-left:0;
+  }
+  .hero-result-stat:nth-child(even){
+    padding-right:0;
+  }
+  .hero-result-stat strong{
+    font-size:clamp(29px,9.2vw,39px);
+  }
+  .hero-result-stat span{
+    margin-top:10px;
+    font-size:12px;
+    line-height:1.45;
+  }
+}
+</style>
+<style id="continuity-v18-layout">
+@media (min-width:901px){
+  #continuity .section-head{grid-template-columns:.95fr 1.05fr;gap:60px}
+  #continuity #continuity-title{font-size:54px}
+}
+</style>
+<style id="pricing-support-heading-v22">
+/* 料金提示後の補足ブロックは、料金本体より一段低い視覚階層にする */
+#scope-title,
+#prelaunch-support-title,
+#preflight-title{
+  font-size:42px;
+  line-height:1.14;
+}
+@media(min-width:901px){
+  #scope .section-head,
+  #prelaunch-support .section-head,
+  .preflight-grid{
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+  }
+}
+@media(max-width:560px){
+  #scope-title,
+  #prelaunch-support-title,
+  #preflight-title{
+    font-size:30px;
+    line-height:1.18;
+  }
+}
+</style>
+<style id="pricing-chapter-v23">
+/* v23: 価格・対応範囲・事前集客を一つの章として整理 */
+.pricing-chapter{
+  background:rgba(235,229,219,.55);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.pricing-chapter #pricing,
+.pricing-chapter #scope,
+.pricing-chapter #prelaunch-support{
+  background:transparent;
+}
+.pricing-chapter #scope,
+.pricing-chapter #prelaunch-support{
+  border-top:1px solid rgba(203,195,183,.72);
+  border-bottom:0;
+}
+.pricing-chapter-label{
+  margin:0 0 18px;
+  color:var(--red);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.14em;
+}
+.pricing-chapter .pricing-condition-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.pricing-chapter .pricing-condition:last-child{
+  grid-column:1 / -1;
+}
+@media(max-width:700px){
+  .pricing-chapter .pricing-condition-grid{grid-template-columns:1fr}
+  .pricing-chapter .pricing-condition:last-child{grid-column:auto}
+  .pricing-chapter-label{margin-bottom:14px;font-size:12px}
+}
+</style>
+
+<style id="hero-results-benchmark-v24">
+.hero-results-context{
+  display:grid;
+  gap:24px;
+  align-self:end;
+}
+.hero-results-benchmark{
+  padding:24px 26px 22px;
+  border:1px solid rgba(178,23,50,.22);
+  border-radius:18px;
+  background:rgba(255,255,255,.78);
+  box-shadow:0 16px 34px rgba(39,31,28,.06);
+}
+.hero-results-benchmark-label{
+  margin:0 0 12px;
+  color:#5a534c;
+  font-size:13px;
+  font-weight:850;
+  line-height:1.5;
+  letter-spacing:.035em;
+}
+.hero-results-benchmark-compare{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:22px;
+}
+.hero-results-market-average,
+.hero-results-ratio{
+  margin:0;
+}
+.hero-results-market-average strong{
+  display:flex;
+  align-items:baseline;
+  gap:5px;
+  color:var(--ink);
+  font-size:44px;
+  font-weight:950;
+  line-height:1;
+  letter-spacing:-.055em;
+  white-space:nowrap;
+}
+.hero-results-market-average em{
+  font-size:.42em;
+  font-style:normal;
+  letter-spacing:-.02em;
+}
+.hero-results-ratio{
+  display:grid;
+  justify-items:end;
+  gap:3px;
+  text-align:right;
+}
+.hero-results-ratio span{
+  color:#5a534c;
+  font-size:13px;
+  font-weight:800;
+  line-height:1.4;
+}
+.hero-results-ratio strong{
+  color:var(--red);
+  font-size:42px;
+  font-weight:950;
+  line-height:1;
+  letter-spacing:-.055em;
+  white-space:nowrap;
+}
+.hero-results-source{
+  margin:14px 0 0;
+  color:#746d65;
+  font-size:12px;
+  font-weight:650;
+  line-height:1.65;
+}
+.hero-results-source a{
+  color:inherit;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+@media(max-width:900px){
+  .hero-results-context{
+    max-width:720px;
+  }
+  .hero-results-benchmark-compare{
+    justify-content:flex-start;
+  }
+  .hero-results-ratio{
+    justify-items:start;
+    text-align:left;
+  }
+}
+@media(max-width:560px){
+  .hero-results-benchmark{
+    padding:20px 18px 18px;
+    border-radius:14px;
+  }
+  .hero-results-benchmark-label{
+    margin-bottom:11px;
+    font-size:12px;
+  }
+  .hero-results-benchmark-compare{
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+  }
+  .hero-results-market-average strong{
+    font-size:34px;
+  }
+  .hero-results-ratio{
+    justify-items:end;
+    text-align:right;
+  }
+  .hero-results-ratio span{
+    font-size:11px;
+  }
+  .hero-results-ratio strong{
+    font-size:32px;
+  }
+  .hero-results-source{
+    margin-top:12px;
+    font-size:11px;
+  }
+}
+@media(max-width:370px){
+  .hero-results-benchmark-compare{
+    display:grid;
+    justify-content:start;
+  }
+  .hero-results-ratio{
+    justify-items:start;
+    text-align:left;
+  }
+}
+</style>
+</head>
 <body><a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="topbar" role="banner">
 <div class="inner">
@@ -1594,18 +2168,25 @@ footer a{
 <div class="wrap hero-grid">
 <div class="hero-copy">
 <h1 class="service-title" id="page-title">Makuakeプロジェクトページ制作</h1><p class="hero-headline">まだ知られていない商品を、<br/><span class="red">いつもの比較で終わらせない。</span></p>
-<div class="sub hero-subcopy"><p class="hero-sub-problem">商品の違いを詳しく説明したはずなのに、<br/>最後には「似た商品より何が優れているか」で判断される。<br/><br/>その比較に入った瞬間、<br/>新しい使い方も、開発した理由も、<br/>価格とスペックの差へ戻されます。<br/><br/>これでは、商品を買う理由は残っても、<br/>Makuakeで応援購入する理由は残りません。</p><p class="hero-sub-redefinition">伝える材料が足りなかったからではありません。<br/>商品を見る前から使われていた物差しが、<br/>ページの中に残っていたからです。</p></div>
+<div class="sub hero-subcopy"><p class="hero-sub-problem">商品の違いを詳しく説明したはずなのに、<br/>最後には「似た商品より何が優れているか」で判断される。<br/><br/>その比較に入ると、<br/>新しい使い方も、開発した理由も伝わりません。<br/>最後に残るのは、価格とスペックの比較だけです。<br/><br/>これでは、商品を買う理由は残っても、<br/>Makuakeで応援購入する理由は残りません。</p><p class="hero-sub-redefinition">伝える材料が足りなかったからではありません。<br/>商品を見る前から使われていた物差しが、<br/>ページの中に残っていたからです。</p></div>
 </div>
-<div class="hero-side">
-<aside aria-label="Makuake制作実績" class="hero-proof" role="complementary"><p class="hero-proof-title">Makuake制作実績｜全60プロジェクト平均</p>
-<div class="proof-big">710<span style="font-size:.55em">万円</span></div>
-<div class="proof-label">平均応援購入額</div>
-<div class="proof-meta">
-<div><b>4億円超</b><span>累計応援購入額</span></div>
-<div><b>6,600万円</b><span>最高応援購入額</span></div>
-<div><b>3回</b><span>Makuake総合1位</span></div>
-</div><p class="proof-disclosure">成功案件だけを抽出せず、成果未達を含む全60プロジェクトの平均です。</p><p class="proof-prelaunch"><strong>約9割</strong><span>公開前の事前集客なし</span></p>
-</aside>
+</div>
+</section>
+<section aria-labelledby="hero-results-title" class="hero-results" id="hero-results">
+<div class="wrap hero-results-inner">
+<div class="hero-results-top">
+<div class="hero-results-main">
+<p class="hero-results-kicker">Makuake制作実績</p>
+<h2 class="hero-results-title" id="hero-results-title"><span>全60プロジェクト平均</span><strong>710<em>万円</em></strong></h2>
+<p class="hero-results-caption">平均応援購入額</p>
+</div>
+
+<div class="hero-results-context"><div aria-label="Makuake公表値との比較" class="hero-results-benchmark"><p class="hero-results-benchmark-label">Makuake公表値から算出した2025年平均</p><div class="hero-results-benchmark-compare"><p class="hero-results-market-average"><strong>約301<em>万円</em></strong></p><p class="hero-results-ratio"><span>710万円は</span><strong>約2.4倍</strong></p></div></div><p class="hero-results-condition">成功案件だけを抽出せず、<br class="desktop-break"/>成果未達を含む全60プロジェクトの平均です。</p></div></div><p class="hero-results-source">※Makuake公表の2025年1月1日〜10月31日終了分：応援購入総額約152億円・5,042件から算出。出典：<a href="https://www.makuake.co.jp/5102/" rel="noopener noreferrer" target="_blank">株式会社マクアケ「2025年年間ヒット情報」</a></p>
+<div aria-label="Makuake制作実績の内訳" class="hero-results-grid">
+<div class="hero-result-stat"><strong>4億円超</strong><span>累計応援購入額</span></div>
+<div class="hero-result-stat"><strong>6,600万円</strong><span>最高応援購入額</span></div>
+<div class="hero-result-stat"><strong>3回</strong><span>Makuake総合1位</span></div>
+<div class="hero-result-stat hero-result-stat--prelaunch"><strong>約9割</strong><span>公開前の事前集客なし</span></div>
 </div>
 </div>
 </section>
@@ -1615,10 +2196,10 @@ footer a{
 <h2 id="statement-title">写真も、機能も、<br/>すでにそろっている。</h2>
 </div>
 <div>
-<p class="copy statement-punch">材料はある。けれど、サポーターが応援購入へ進む一本の流れになっていない。</p><p class="statement-explanation">これは能力不足ではありません。作り手には一続きに見えている情報が、初めて見る人には<span class="statement-emphasis">別々の特徴</span>として届くからです。</p>
-<p class="side">必要になる理由が見える前に機能を並べると、機能は選ぶ理由ではなく、比較材料になります。</p>
+<p class="copy statement-punch">それでも応援購入につながらないのは、説明不足だからではありません。</p>
+<p class="statement-explanation">「なぜ必要なのか」が伝わる前に機能を並べると、サポーターは似た商品との比較に戻ります。</p>
 </div>
-<p class="section-bridge section-bridge--dark section-bridge--full">機能が比較材料のまま公開されれば、返ってくる数字は商品の評価とは限りません。</p></div>
+<p class="section-bridge section-bridge--dark section-bridge--full">そのまま公開すれば、返ってくる数字は商品の評価とは限りません。</p></div>
 </section>
 <section aria-labelledby="pain-title" class="section pain-section">
 <div class="wrap pain-grid">
@@ -1632,7 +2213,16 @@ footer a{
 <div class="decision"><b>一般販売へ進む判断</b><span>楽天、自社EC、卸への展開が止まります。</span></div>
 <div class="decision"><b>次の広告費を使う判断</b><span>商品とページのどちらを直すべきか分からなくなります。</span></div>
 </div>
-<p class="section-bridge section-bridge--full">商品ごとに、誰のどの場面から見せるかを決めます。そこで生まれた応援購入理由を、構成・コピー・写真・デザイン・入稿まで同じ線上で保ちます。</p></div>
+</div>
+</section>
+<section aria-labelledby="mechanism-turn-title" class="mechanism-turn" id="mechanism-turn">
+<div class="wrap mechanism-turn-inner">
+<h2 aria-label="商品の良さが伝わらないまま、残念な結果だけが残る。私は、そんなページをつくりません。" id="mechanism-turn-title"><span aria-hidden="true" class="mechanism-turn-copy-desktop">商品の良さが伝わらないまま、<br/>残念な結果だけが残る。<br/>私は、そんなページを<br/>つくりません。</span><span aria-hidden="true" class="mechanism-turn-copy-mobile">商品の良さが<br/>伝わらないまま、<br/>残念な結果だけが残る。<br/>私は、そんなページを<br/>つくりません。</span></h2>
+<div class="mechanism-turn-copy">
+<p class="mechanism-turn-method"><span class="mechanism-turn-method-line">商品ごとに、誰が、なぜ</span><span class="mechanism-turn-method-line">応援購入するのかを決めます。</span><span class="mechanism-turn-method-line">その理由を、</span><span class="mechanism-turn-method-line">構成・コピー・写真・デザインへ</span><span class="mechanism-turn-method-line">反映し、私が入稿まで仕上げます。</span></p>
+<p class="mechanism-turn-proof">実際に、商品ごとに何を見せ直したのかをご覧ください。</p>
+</div>
+</div>
 </section>
 <section aria-labelledby="cases-title" class="section" id="cases">
 <div class="wrap">
@@ -1685,22 +2275,22 @@ footer a{
 </div>
 </article>
 </div><p class="case-proof-note">※応援購入総額と広告ROASは、各プロジェクトの実績です。成果は商品・価格・公開時期によって異なります。広告費やMakuake内露出にも左右されます。</p>
-<p class="section-bridge">次に必要なのは、商品ごとに決めた見せ方を、公開画面まで保つことです。</p></div>
-</section><section aria-labelledby="prelaunch-proof-title" class="section prelaunch-proof" id="prelaunch-proof"><div class="wrap prelaunch-proof-grid"><div class="prelaunch-proof-copy"><p class="kicker">実績の条件</p><h2 id="prelaunch-proof-title">その710万円は、<br/>公開前に集めた人を流し込んだ数字ではありません。</h2><p class="lead">事前集客で見込み客を集めてから公開すれば、初日の応援購入額は伸ばしやすくなります。ただし、その数字だけでは、プロジェクトページが初めて見る人の判断を変えたのか分かりません。</p></div><div class="prelaunch-proof-card"><div class="prelaunch-proof-number">約9割</div><p class="prelaunch-proof-label">公開前の事前集客を行わずに公開</p><p class="prelaunch-proof-body">小西が担当した全60プロジェクトの約9割は、公開前広告、ティザーLP、LINE・メール登録などによる見込み客獲得を行っていません。初めて商品を知る人が、既存商品の比較から抜け、応援購入へ進めるページを設計してきました。</p><p class="prelaunch-proof-judgment">事前集客込みの実績と、事前集客なしの実績は、同じ数字では比べられません。</p><p class="prelaunch-proof-note">※事前集客とは、公開前広告、ティザーLP、LINE・メール登録などによる見込み客獲得を指します。</p></div></div></section><section class="section dark">
+<p class="section-bridge">ここまでの実績は、事前集客で見込み客を集めた案件だけの数字ではありません。</p></div>
+</section><section aria-labelledby="prelaunch-proof-title" class="section prelaunch-proof" id="prelaunch-proof"><div class="wrap prelaunch-proof-grid"><div class="prelaunch-proof-copy"><p class="kicker">実績の条件</p><h2 id="prelaunch-proof-title">事前集客だけで作った<br/>実績ではありません。</h2><p class="lead">小西が担当した全60プロジェクトの約9割は、公開前の事前集客なしで公開しました。</p></div><div class="prelaunch-proof-card"><div class="prelaunch-proof-number">約9割</div><p class="prelaunch-proof-label">公開前の事前集客なし</p><p class="prelaunch-proof-body">公開前広告やティザーLP、LINE・メール登録で見込み客を集めず、Makuake上で初めて商品を知った人が、ページを読んで応援購入を判断した案件が大半です。</p><p class="prelaunch-proof-judgment">事前集客に頼れない商品でも、ページの中で応援購入する理由をつくってきました。</p><p class="prelaunch-proof-note">※平均710万円は、事前集客あり・なしを含む全60プロジェクトの平均です。全60プロジェクトの約9割は、事前集客なしで公開しています。</p></div></div></section><section aria-labelledby="continuity-title" class="section dark" id="continuity">
 <div class="wrap">
 <div class="section-head">
-<div><h2>担当が変わるたび、<br/>使う理由が、機能の一覧へ戻っていく。</h2></div>
-<p class="intro">構成で決めた使用場面も、コピー、写真、デザインへ渡るたびに別の解釈が加わります。公開時には、使う理由より機能の数が前へ出ます。</p>
+<div><h2 id="continuity-title">応援購入する理由を、<br/>完成まで変えません。</h2></div>
+<p class="intro">構成・コピー・写真・デザイン・入稿まで、私が一貫して担当します。途中で担当者が変わると、最初に決めた理由より、各工程で説明しやすい機能が前に出やすくなるからです。</p>
 </div>
-<div class="flow"><div class="step"><div class="n">01</div><h3>構成で決める</h3><p>誰のどの場面から見せるかを決める。</p></div><div class="step"><div class="n">02</div><h3>引き継ぎでずれる</h3><p>言葉、写真、見る順序が別々に決まり始める。</p></div><div class="step"><div class="n">03</div><h3>公開時に戻る</h3><p>使う理由より、機能の一覧が前へ出る。</p></div></div>
-<p class="reason-conclusion">構成で決めた使用場面と応援購入理由を、コピーと写真へ落とします。<br/><span>デザイン、広告、入稿まで同じ理由を保ちます。</span></p>
-<p class="section-bridge section-bridge--dark">構成から入稿までを同じ担当で進める方法は、Makuake後の販売まで見据える企業に向いています。</p></div>
+<div class="flow"><div class="step"><div class="n">01</div><h3>応援購入する理由を決める</h3><p>誰が、なぜ応援購入するのかを決める。</p></div><div class="step"><div class="n">02</div><h3>機能説明が足される</h3><p>コピー、写真、デザインの担当者が、それぞれ機能を追加する。</p></div><div class="step"><div class="n">03</div><h3>応援購入する理由が薄れる</h3><p>完成時には、応援購入する理由より機能の一覧が前に出る。</p></div></div>
+<p class="reason-conclusion">最初に決めた応援購入の理由を、<br/><span>完成したページまで変えません。</span></p>
+<p class="section-bridge section-bridge--dark">Makuake後に楽天や自社ECへ展開するときも、「誰が、なぜ選ぶのか」を変えずに伝えられます。</p></div>
 </section><section aria-labelledby="fit-title" class="section" id="fit" style="background:var(--paper-2)">
 <div class="wrap">
 <div class="section-head section-head--single">
-<div><h2 id="fit-title">Makuakeを、<br/>公開して終わる場所にしない企業へ。</h2></div>
+<div><h2 id="fit-title">Makuakeを、<br/>公開して終わりにしたくないあなたへ。</h2></div>
 </div>
-<div class="fit-groups"><div class="fit-group"><h3 class="fit-group-title">商品に関する条件</h3><div class="fit-grid"><div class="fit-card"><h3>新しい使い方を説明する必要がある商品</h3><p>構造や使い方を見直した自社開発品。海外では売れているが、日本ではまだ知られていない商品。</p></div><div class="fit-card"><h3>価格の理由を先に伝える必要がある商品</h3><p>価格を見る前に、構造と品質を理解してもらう必要がある商品。開発背景や使用後の変化まで伝える商品。</p></div></div></div><div class="fit-group"><h3 class="fit-group-title">販売計画に関する条件</h3><div class="fit-grid"><div class="fit-card"><h3>事前集客の要否から判断したい企業</h3><p>事前集客を前提にせず、商品単価、目標応援購入額、既存認知、公開初速の必要性から実施するかを決めたい企業。</p></div><div class="fit-card"><h3>Makuake後の販売先が決まっている企業</h3><p>楽天、自社EC、Amazonなどへ、Makuakeで得た反応を持ち出したい企業。</p></div></div></div></div>
+<div class="fit-groups"><div class="fit-group"><h3 class="fit-group-title">こんな商品に向いています</h3><div class="fit-grid"><div class="fit-card"><h3>新しい使い方を説明する必要がある商品</h3><p>構造や使い方を見直した自社開発品。海外では売れているが、日本ではまだ知られていない商品。</p></div><div class="fit-card"><h3>価格の理由を先に伝える必要がある商品</h3><p>価格を見る前に、構造と品質を理解してもらう必要がある商品。開発背景や使用後の変化まで伝える商品。</p></div></div></div><div class="fit-group"><h3 class="fit-group-title">こんな販売を考えている企業に向いています</h3><div class="fit-grid"><div class="fit-card"><h3>事前集客の要否から判断したい企業</h3><p>事前集客を前提にせず、商品単価、目標応援購入額、既存認知、公開初速の必要性から実施するかを決めたい企業。</p></div><div class="fit-card"><h3>Makuake後の販売先が決まっている企業</h3><p>楽天、自社EC、Amazonなどへ、Makuakeで得た反応を持ち出したい企業。</p></div></div></div></div>
 </div>
 </section>
 <section aria-labelledby="service-title" class="section" id="service">
@@ -1718,11 +2308,18 @@ footer a{
 </div>
 </div>
 </section>
+<div aria-label="料金と対応範囲" class="pricing-chapter">
+<section aria-labelledby="pricing-title" class="section" id="pricing">
+<div class="wrap">
+<p class="pricing-chapter-label">料金と対応範囲</p>
+<div class="pricing"><h2 id="pricing-title">固定費は15万円。<br/>応援購入額が伸びなかった場合は、<br/>成果報酬も低くなります。</h2><div class="pricing-formula-v318"><div class="pricing-amount-block"><span class="pricing-amount-label">固定費</span><strong class="pricing-amount">15万円</strong><small class="pricing-tax">税別</small></div><div class="pricing-plus-v318">＋</div><div class="pricing-amount-block"><span class="pricing-amount-label">成果報酬</span><strong class="pricing-amount">15％</strong><small class="pricing-tax">ページ上の応援購入総額に対して・税別</small></div></div><p class="pricing-intro-v318">成果が出たときだけ、応援購入額に応じて成果報酬が増える料金です。商品ごとの応援購入理由を決め、構成・コピー・デザイン・管理画面への入稿まで担当します。</p><div class="pricing-condition-grid"><div class="pricing-condition"><h3>成果報酬の計算</h3><p>プロジェクト終了時にMakuakeページ上へ表示された応援購入総額の15％です。広告、自然流入、Makuake内流入を問わず合算します。</p></div><div class="pricing-condition"><h3>支払時期</h3><p>固定費は契約時に全額お支払いいただきます。成果報酬は、Makuakeからクライアントへの入金後3日以内にお支払いいただきます。</p></div><div class="pricing-condition"><h3>中止・上限</h3><p>クライアント都合で公開を中止した場合、固定費は返金されません。成果報酬に最低額と上限は設けていません。</p></div></div></div>
+</div>
+</section>
 <section aria-labelledby="scope-title" class="section" id="scope">
 <div class="wrap">
 <div class="section-head">
-<div><h2 id="scope-title">見積もりに含む工程を、<br/>先に分けます。</h2></div>
-<p class="intro">契約前に、基本料金に含む工程と追加対応を明示します。</p>
+<div><h2 id="scope-title">基本料金に含まれるもの。<br/>追加費用になるもの。</h2></div>
+<p class="intro">契約前に、どこまでが基本料金に含まれ、どこから追加費用になるかを明示します。</p>
 </div>
 <div class="list-grid">
 <div class="list-panel">
@@ -1731,25 +2328,23 @@ footer a{
 </div>
 <div class="list-panel">
 <h3>追加対応</h3>
-<ul class="clean-list scope-summary-list"><li><b>写真撮影</b><span>商品撮影、モデル手配、スタジオ</span></li><li><b>動画撮影・CG</b><span>動画撮影、3DCG。支給動画の編集は基本料金に含みます</span></li><li><b>翻訳</b><span>外国語資料やページ表現への対応</span></li><li><b>事前集客サポート</b><span>ティザーLP、登録導線、公開前配信、Meta広告運用</span></li><li><b>一般販売向け再構成</b><span>Makuake後の楽天・自社ECへの再構成</span></li></ul>
+<ul class="clean-list scope-summary-list"><li><b>写真撮影</b><span>商品撮影、モデル手配、スタジオ</span></li><li><b>動画撮影・CG</b><span>動画撮影、3DCG</span></li><li><b>翻訳</b><span>外国語資料やページ表現への対応</span></li><li><b>一般販売向け再構成</b><span>Makuake後の楽天・自社ECへの再構成</span></li></ul>
 </div>
 </div>
 </div>
 </section>
-<section aria-labelledby="prelaunch-support-title" class="section prelaunch-support" id="prelaunch-support"><div class="wrap"><div class="section-head"><div><h2 id="prelaunch-support-title">必要な商品だけ、<br/>公開前の見込み客獲得まで追加します。</h2></div><p class="intro">事前集客を前提にページを作るのではありません。商品単価、目標応援購入額、既存認知、公開初速の必要性から要否を判断します。</p></div><div class="prelaunch-support-grid"><div class="prelaunch-support-card"><p class="prelaunch-support-label">基本サービス内</p><h3>事前集客を行うか、先に判断します。</h3><p>必要性の判定と、実施する場合の訴求方向を整理します。公開前の案内からMakuakeページまで、同じ応援購入理由でつなぎます。</p></div><div class="prelaunch-support-card prelaunch-support-card--option"><p class="prelaunch-support-label">追加オプション</p><h3>事前集客サポート</h3><p>ティザーLP、広告クリエイティブ、LINE・メール登録導線、公開前配信、Meta広告運用まで対応します。</p><div class="prelaunch-option-price"><strong>15万円（税別）</strong><span>＋ 広告運用費</span></div><p class="prelaunch-support-note">広告運用費は広告費の10％、最低5万円（税別）です。広告費は実費となります。</p></div></div></div></section><section aria-labelledby="preflight-title" class="section preflight">
+<section aria-labelledby="prelaunch-support-title" class="section prelaunch-support" id="prelaunch-support"><div class="wrap"><div class="section-head"><div><h2 id="prelaunch-support-title">必要な場合のみ、<br/>公開前の見込み客獲得も追加できます。</h2></div><p class="intro">事前集客を前提にページを作るのではありません。商品単価、目標応援購入額、既存認知、公開初速の必要性から要否を判断します。</p></div><div class="prelaunch-support-grid"><div class="prelaunch-support-card"><p class="prelaunch-support-label">基本サービス内</p><h3>事前集客を行うか、先に判断します。</h3><p>必要性の判定と、実施する場合の訴求方向を整理します。公開前の案内からMakuakeページまで、同じ応援購入理由でつなぎます。</p></div><div class="prelaunch-support-card prelaunch-support-card--option"><p class="prelaunch-support-label">追加オプション</p><h3>事前集客サポート</h3><p>ティザーLP、広告クリエイティブ、LINE・メール登録導線、公開前配信、Meta広告運用まで対応します。</p><div class="prelaunch-option-price"><strong>15万円（税別）</strong><span>＋ 広告運用費</span></div><p class="prelaunch-support-note">広告運用費は広告費の10％、最低5万円（税別）です。広告費は実費となります。</p></div></div></div></section>
+</div>
+<section aria-labelledby="preflight-title" class="section preflight">
 <div class="wrap preflight-grid">
 <div>
-<h2 id="preflight-title">契約前に、<br/>制作条件と追加工程を確認します。</h2>
+<h2 id="preflight-title">お見積もりの前に、<br/>商品資料を確認します。</h2>
 <p class="bodycopy">商品仕様、販売条件、表現根拠を確認します。写真撮影、動画撮影、事前集客など、追加工程の有無もここで決めます。</p>
 </div>
 <div class="preflight-groups"><div class="preflight-group"><h3>見積もりに必要な情報</h3><div class="preflight-list"><div class="preflight-item"><b>商品仕様</b><p>外観、機構、付属品を確認します。使用方法も確定し、ページ内容と撮影条件を固定します。</p></div><div class="preflight-item"><b>販売条件</b><p>販売予定価格とリターンを確定します。配送時期と保証条件も確認します。</p></div><div class="preflight-item"><b>表現根拠</b><p>検査結果と数値を確認できる資料を共有いただきます。原材料、特許、比較表現の根拠も確認します。</p></div></div></div><div class="preflight-group"><h3>対象とする依頼</h3><div class="preflight-list"><div class="preflight-item"><b>構成からの再設計</b><p>商品資料を確認し、構成とコピーを組み直します。写真・図解、デザイン、入稿まで同じ判断で進める依頼を対象にしています。用意済み文章の画像化だけを目的とする場合は対象外です。</p></div></div></div></div>
 </div>
 </section>
-<section aria-labelledby="pricing-title" class="section" id="pricing">
-<div class="wrap">
-<div class="pricing"><h2 id="pricing-title">初期負担を抑え、<br/>結果が出た分を分ける料金です。</h2><div class="pricing-formula-v318"><div class="pricing-amount-block"><span class="pricing-amount-label">固定費</span><strong class="pricing-amount">15万円</strong><small class="pricing-tax">税別</small></div><div class="pricing-plus-v318">＋</div><div class="pricing-amount-block"><span class="pricing-amount-label">成果報酬</span><strong class="pricing-amount">15％</strong><small class="pricing-tax">ページ上の応援購入総額に対して・税別</small></div></div><p class="pricing-intro-v318">商品ごとの応援購入理由を設計し、構成・コピー・デザイン・管理画面への入稿まで担当します。固定費は契約時にお支払いいただき、報酬の中心は公開結果に連動します。</p><div class="pricing-condition-grid"><div class="pricing-condition"><h3>固定費に含む範囲</h3><p>Makuakeのプロジェクト審査通過後から、公開できる状態になるまでの制作と修正を含みます。当初合意した商品仕様と販売条件の範囲で対応します。</p></div><div class="pricing-condition"><h3>成果報酬の計算</h3><p>プロジェクト終了時にMakuakeページ上へ表示された応援購入総額の15％です。広告、自然流入、Makuake内流入を問わず合算します。</p></div><div class="pricing-condition"><h3>支払時期</h3><p>固定費は契約時に全額お支払いいただきます。成果報酬は、Makuakeからクライアントへの入金後3日以内にお支払いいただきます。</p></div><div class="pricing-condition"><h3>追加費用</h3><p>写真撮影と動画撮影は別途お見積もりします。支給された動画素材の編集は基本料金に含みます。</p></div><div class="pricing-condition"><h3>中止・上限</h3><p>クライアント都合で公開を中止した場合、固定費は返金されません。成果報酬に最低額と上限は設けていません。</p></div></div></div>
-</div>
-</section><section aria-labelledby="flow-title" class="section dark" id="flow">
+<section aria-labelledby="flow-title" class="section dark" id="flow">
 <div class="wrap">
 <div class="section-head section-head--single">
 <div><h2 id="flow-title">商品資料の確認から、<br/>公開画面の完成まで進めます。</h2></div>
@@ -1782,11 +2377,11 @@ footer a{
 <details><summary role="button">事前集客も依頼できますか。</summary><div class="answer">対応可能です。全案件へ必須にはせず、商品単価、目標応援購入額、既存認知、公開初速の必要性から要否を判断します。実行まで依頼する場合は、15万円（税別）＋広告運用費です。広告運用費は広告費の10％、最低5万円（税別）で、広告費は実費です。</div></details><details><summary role="button">広告運用を依頼せず、プロジェクトページ制作だけを依頼できますか。</summary><div class="answer">はい。プロジェクトページ制作が基本です。公開後の広告はMakuakeの広告メニューを利用するケースが一般的です。必要と判断した案件のみ、事前集客サポートを追加できます。</div></details></div>
 </div>
 </section>
-<section aria-labelledby="contact-title" class="closing" id="contact"><div class="wrap contact-form-layout"><div class="contact-form-intro"><div class="kicker">ご相談</div><h2 id="contact-title">公開結果を、<br/>商品力の結論にする前に。</h2><p class="contact-intro-lead">誰に、何と比べられ、何を理由に応援購入される商品なのか。まずは商品適合診断で整理します。制作時期や担当範囲を先に確認したい場合は、制作相談を選択してください。</p></div><div class="contact-form-card"><form action="https://script.google.com/macros/s/AKfycbyO2WuhDl_-N2aFd2sdqr80UpIJ_iCMVKetndhO7vjDLgQmSp0SWnTB8CGXC4qCo39i/exec" class="contact-form" data-contact-form="makuake" id="contact-form" method="post"><input id="consult-type-hidden" name="consult_type" type="hidden" value="Makuake商品適合診断"/><input id="form-started-at" name="form_started_at" type="hidden" value=""/><input id="user-agent" name="user_agent" type="hidden" value=""/><input id="source-page" name="source_page" type="hidden" value="https://konishi-marketing.com/makuake/"/><div aria-hidden="true" class="hp-field"><label for="website">ウェブサイト</label><input autocomplete="off" id="website" name="website" tabindex="-1" type="text"/></div><div class="inquiry-select"><div class="inquiry-select-title">ご希望の内容<span class="required-mark">必須</span></div><div class="inquiry-radio-group"><input checked="" class="inquiry-toggle" id="inquiry-product_fit" name="inquiry_type" type="radio" value="Makuake商品適合診断"/><label class="inquiry-radio-card" for="inquiry-product_fit"><span class="inquiry-radio-ui"></span><span class="inquiry-radio-text"><strong>Makuake商品適合診断を受けたい</strong><small>商品・競合・見込み客の簡易リサーチ結果をレポートで受け取りたい方</small></span></label><input class="inquiry-toggle" id="inquiry-consultation" name="inquiry_type" type="radio" value="制作相談"/><label class="inquiry-radio-card" for="inquiry-consultation"><span class="inquiry-radio-ui"></span><span class="inquiry-radio-text"><strong>制作について相談したい</strong><small>公開時期、制作範囲、費用、進め方を先に相談したい方</small></span></label></div></div><div class="diagnosis-explanation" id="diagnosis-explanation"><div class="diagnosis-scope"><h3>レポートで返す内容</h3><ul><li>商品の見立て：新規性、既存商品との違い、一般販売後にも残る購入理由</li><li>競合の見立て：競合が使う比較軸と、同じ軸に入った場合の埋もれ方</li><li>見込み客の見立て：反応しやすい人、現在の代替行動、購入を止める躊躇</li><li>次に決めること：Makuakeページ制作前に確定すべき判断項目</li></ul></div><p class="diagnosis-note">無料診断では、誰に、何と比べられ、何を理由に見せるかまで整理します。<br/>完成コピー、ページ構成、ワイヤー、デザインは制作依頼後に設計します。</p></div><div class="form-field"><label for="company">会社名・屋号</label><input autocomplete="organization" id="company" name="company" type="text"/><p aria-live="polite" class="field-error" id="company-error"></p></div><div class="form-field"><label for="name">お名前<span class="required">必須</span></label><input aria-required="true" autocomplete="name" id="name" name="name" required="" type="text"/><p aria-live="polite" class="field-error" id="name-error"></p></div><div class="form-field"><label for="email">メールアドレス<span class="required">必須</span></label><input aria-required="true" autocomplete="email" id="email" inputmode="email" name="email" required="" type="email"/><p aria-live="polite" class="field-error" id="email-error"></p></div><div id="diagnosis-fields"><div class="form-field"><label for="product">商品名・商品カテゴリ<span class="required">必須</span></label><input aria-required="true" autocomplete="off" id="product" name="product" placeholder="例：充電式ポータブル冷蔵庫／アウトドア家電" type="text"/><p aria-live="polite" class="field-error" id="product-error"></p></div><div class="form-field"><label for="reference-url">商品資料・参考URL</label><input autocomplete="url" id="reference-url" inputmode="url" name="reference_url" placeholder="商品資料、既存販売ページ、競合商品などのURL" type="url"/><p aria-live="polite" class="field-error" id="reference-url-error"></p></div></div><div class="form-field"><label for="message" id="inquiry-message-label"><span class="message-label-diagnosis">商品情報・現在の状況</span><span class="message-label-consultation">ご相談内容</span><span class="required">必須</span></label><textarea aria-required="true" id="inquiry-message" name="message" placeholder="例：
+<section aria-labelledby="contact-title" class="closing" id="contact"><div class="wrap contact-form-layout"><div class="contact-form-intro"><div class="kicker">ご相談</div><h2 id="contact-title">誰が、なぜ応援購入するか。<br/>それが、成果を伸ばす決め手です。</h2><p class="contact-intro-lead">誰に、何と比べられ、何を理由に応援購入される商品なのか。まずは商品適合診断で整理します。制作時期や担当範囲を先に確認したい場合は、制作相談を選択してください。</p></div><div class="contact-form-card"><form action="https://script.google.com/macros/s/AKfycbyO2WuhDl_-N2aFd2sdqr80UpIJ_iCMVKetndhO7vjDLgQmSp0SWnTB8CGXC4qCo39i/exec" class="contact-form" data-contact-form="makuake" id="contact-form" method="post"><input id="consult-type-hidden" name="consult_type" type="hidden" value="Makuake商品適合診断"/><input id="form-started-at" name="form_started_at" type="hidden" value=""/><input id="user-agent" name="user_agent" type="hidden" value=""/><input id="source-page" name="source_page" type="hidden" value="https://konishi-marketing.com/makuake/"/><div aria-hidden="true" class="hp-field"><label for="website">ウェブサイト</label><input autocomplete="off" id="website" name="website" tabindex="-1" type="text"/></div><div class="inquiry-select"><div class="inquiry-select-title">ご希望の内容<span class="required-mark">必須</span></div><div class="inquiry-radio-group"><input checked="" class="inquiry-toggle" id="inquiry-product_fit" name="inquiry_type" type="radio" value="Makuake商品適合診断"/><label class="inquiry-radio-card" for="inquiry-product_fit"><span class="inquiry-radio-ui"></span><span class="inquiry-radio-text"><strong>Makuake商品適合診断を受けたい</strong><small>商品・競合・見込み客の簡易リサーチ結果をレポートで受け取りたい方</small></span></label><input class="inquiry-toggle" id="inquiry-consultation" name="inquiry_type" type="radio" value="制作相談"/><label class="inquiry-radio-card" for="inquiry-consultation"><span class="inquiry-radio-ui"></span><span class="inquiry-radio-text"><strong>制作について相談したい</strong><small>公開時期、制作範囲、費用、進め方を先に相談したい方</small></span></label></div></div><div class="diagnosis-explanation" id="diagnosis-explanation"><div class="diagnosis-scope"><h3>レポートで返す内容</h3><ul><li>商品の見立て：新規性、既存商品との違い、一般販売後にも残る購入理由</li><li>競合の見立て：競合が使う比較軸と、同じ軸に入った場合の埋もれ方</li><li>見込み客の見立て：反応しやすい人、現在の代替行動、購入を止める躊躇</li><li>次に決めること：Makuakeページ制作前に確定すべき判断項目</li></ul></div><p class="diagnosis-note">無料診断では、誰に、何と比べられ、何を理由に見せるかまで整理します。<br/>完成コピー、ページ構成、ワイヤー、デザインは制作依頼後に設計します。</p></div><div class="form-field"><label for="company">会社名・屋号</label><input autocomplete="organization" id="company" name="company" type="text"/><p aria-live="polite" class="field-error" id="company-error"></p></div><div class="form-field"><label for="name">お名前<span class="required">必須</span></label><input aria-required="true" autocomplete="name" id="name" name="name" required="" type="text"/><p aria-live="polite" class="field-error" id="name-error"></p></div><div class="form-field"><label for="email">メールアドレス<span class="required">必須</span></label><input aria-required="true" autocomplete="email" id="email" inputmode="email" name="email" required="" type="email"/><p aria-live="polite" class="field-error" id="email-error"></p></div><div id="diagnosis-fields"><div class="form-field"><label for="product">商品名・商品カテゴリ<span class="required">必須</span></label><input aria-required="true" autocomplete="off" id="product" name="product" placeholder="例：充電式ポータブル冷蔵庫／アウトドア家電" type="text"/><p aria-live="polite" class="field-error" id="product-error"></p></div><div class="form-field"><label for="reference-url">商品資料・参考URL</label><input autocomplete="url" id="reference-url" inputmode="url" name="reference_url" placeholder="商品資料、既存販売ページ、競合商品などのURL" type="url"/><p aria-live="polite" class="field-error" id="reference-url-error"></p></div></div><div class="form-field"><label for="inquiry-message" id="inquiry-message-label"><span class="message-label-diagnosis">商品情報・現在の状況</span><span class="message-label-consultation">ご相談内容</span><span class="required">必須</span></label><textarea aria-required="true" id="inquiry-message" name="message" placeholder="例：
 ・商品の概要や現在の準備状況
 ・公開希望時期
 ・相談したい内容や制作範囲
-分かる範囲で構いません。" required="" rows="7"></textarea><p aria-live="polite" class="field-error" id="message-error"></p></div><div class="form-consent"><input aria-describedby="privacy-consent-error" aria-required="true" id="privacy-consent" name="privacy_consent" required="" type="checkbox" value="同意する"/><label for="privacy-consent"><a href="https://konishi-marketing.com/privacy/" rel="noopener noreferrer" target="_blank">プライバシーポリシー</a>を確認し、入力内容の取り扱いに同意します。</label><p aria-live="polite" class="field-error" id="privacy-consent-error"></p></div><button class="form-submit" id="inquiry-submit" type="submit"><span class="submit-label-diagnosis">Makuake商品適合診断を申し込む</span><span class="submit-label-consultation">制作について相談する</span></button><div aria-live="polite" class="submit-microcopy" id="inquiry-dynamic-microcopy" role="status"><p class="submit-microcopy-line submit-microcopy-diagnosis">2営業日以内にレポートを返送します。営業電話や、ご希望のない有料提案は行いません。</p><p class="submit-microcopy-line submit-microcopy-consultation">2営業日以内にメールでご連絡します。相談と見積もり作成に費用はかかりません。</p></div><div aria-live="polite" class="form-status" id="form-status" role="status" tabindex="-1"></div></form></div></div></section>
+分かる範囲で構いません。" required="" rows="7"></textarea><p aria-live="polite" class="field-error" id="inquiry-message-error"></p></div><div class="form-consent"><input aria-describedby="privacy-consent-error" aria-required="true" id="privacy-consent" name="privacy_consent" required="" type="checkbox" value="同意する"/><label for="privacy-consent"><a href="https://konishi-marketing.com/privacy/" rel="noopener noreferrer" target="_blank">プライバシーポリシー</a>を確認し、入力内容の取り扱いに同意します。</label><p aria-live="polite" class="field-error" id="privacy-consent-error"></p></div><button class="form-submit" id="inquiry-submit" type="submit"><span class="submit-label-diagnosis">Makuake商品適合診断を申し込む</span><span class="submit-label-consultation">制作について相談する</span></button><div aria-live="polite" class="submit-microcopy" id="inquiry-dynamic-microcopy" role="status"><p class="submit-microcopy-line submit-microcopy-diagnosis">2営業日以内にレポートを返送します。営業電話や、ご希望のない有料提案は行いません。</p><p class="submit-microcopy-line submit-microcopy-consultation">2営業日以内にメールでご連絡します。相談と見積もり作成に費用はかかりません。</p></div><div aria-live="polite" class="form-status" id="form-status" role="status" tabindex="-1"></div></form></div></div></section>
 </main>
 <footer class="footer" role="contentinfo">© 小西マーケティング<span aria-hidden="true"> ｜ </span><a href="https://konishi-marketing.com/privacy/">プライバシーポリシー</a></footer><script>
 document.addEventListener('DOMContentLoaded', function () {
