@@ -1,24 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="color-scheme" content="only light">
-<link rel="canonical" href="https://konishi-marketing.com/articles/rakuten-shohin-page-kaizen-irai-mae-ni-kakunin.html">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="only light" name="color-scheme"/>
+<link href="https://konishi-marketing.com/articles/rakuten-shohin-page-kaizen-irai-mae-ni-kakunin.html" rel="canonical"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>楽天商品ページ改善を依頼しても転換率が上がらない理由｜小西マーケティング</title>
-<meta name="description" content="制作会社にリニューアルを依頼した。ページは綺麗になった。それでも転換率は変わらない。次の依頼先を探す前に、商品ページ前半で選ぶ理由が届いているかを見る必要があります。">
-
+<meta content="制作会社へリニューアルを依頼してページは綺麗になった。それでも転換率が変わらないとき、次の依頼先を探す前に確認すべき3つと、改善箇所の見分け方を解説します。" name="description"/>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
 <script>
 window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());
 gtag('config','G-SWS3R3K4W5');
 </script>
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <style>
 :root {
   --navy: #1a2744;
@@ -133,10 +131,72 @@ html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
 .service-route a { color: var(--gold-light); font-weight: 700; text-underline-offset: .2em; }
 .service-route a:hover { color: var(--white); }
 @media (max-width: 640px) { .service-route { font-size: .86rem; } }
-</style>
 
-<script type="application/ld+json">
-{
+
+/* rakuten-improvement-hub-v1 */
+.improvement-hub-intro {
+  margin-bottom: 1.35rem !important;
+}
+.improvement-hub {
+  margin: 1.75rem 0 2.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .9rem;
+}
+.improvement-route {
+  display: flex;
+  flex-direction: column;
+  min-height: 124px;
+  padding: 1.2rem 1.25rem;
+  border: 1px solid var(--gray-200);
+  border-top: 3px solid var(--gold);
+  background: var(--off-white);
+  text-decoration: none;
+  transition: transform .18s ease, border-color .18s ease, background-color .18s ease;
+}
+.improvement-route:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold);
+  background: #fff;
+}
+.improvement-route-state {
+  display: block;
+  margin-bottom: .55rem;
+  color: var(--navy);
+  font-size: .98rem;
+  font-weight: 700;
+  line-height: 1.75;
+}
+.improvement-route-title {
+  display: block;
+  color: var(--gray-600);
+  font-size: .78rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: .03em;
+}
+.improvement-route-title::after {
+  content: '  →';
+  color: var(--gold);
+  white-space: nowrap;
+}
+.improvement-hub-note {
+  margin-top: -.4rem !important;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid var(--gold);
+  background: var(--gray-100);
+  color: var(--gray-600) !important;
+  font-size: .9rem !important;
+  line-height: 1.9 !important;
+}
+@media (max-width: 640px) {
+  .improvement-hub { grid-template-columns: 1fr; gap: .75rem; }
+  .improvement-route { min-height: 0; padding: 1.05rem 1.1rem; }
+  .improvement-route-state { font-size: .95rem; }
+  .improvement-route-title { font-size: .78rem; }
+}
+</style>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -145,7 +205,7 @@ html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
       "name": "ポートフォリオを見て制作会社を選ぶだけでは、なぜ転換率が上がりにくいのですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ポートフォリオで分かるのは、見た目の完成度やデザインの方向性です。ただ、そのページで読者がどこで「これでよさそうだ」と思ったのかまでは分かりません。次の依頼先を選ぶ前に、現在の商品ページ前半で選ぶ理由が届いているかを見る必要があります。"
+        "text": "ポートフォリオで分かるのは、見た目の完成度です。誰が、どの説明で購入を決めたかまでは分かりません。現在の商品ページ前半で、読者が「自分に必要だ」と判断できる内容になっているかを先に確認します。"
       }
     },
     {
@@ -153,7 +213,7 @@ html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
       "name": "コピーライティング込みのお任せプランなら解決しますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "コピー込みのプランで、自社で原稿を用意する負担は減ります。ただ、どの読者に向けて、何を先に伝えるのかが決まっていなければ、きれいな原稿にはなっても購入にはつながりにくくなります。コピー込みかどうかより、商品ページ前半で選ぶ理由が届く順番になっているかを確認する必要があります。"
+        "text": "コピー込みなら原稿作成の負担は減ります。ただし、誰に、何を、どの順番で伝えるかまで決まっていなければ、読みやすくなっても購入にはつながりません。プラン名ではなく、購入理由を決める工程が含まれるかを確認します。"
       }
     },
     {
@@ -161,22 +221,20 @@ html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
       "name": "制作会社に丸ごと任せれば転換率も改善しますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "丸ごと任せられる範囲は、制作会社ごとに違います。ページ制作の進行、見た目の整理、画像作成まで含まれることはあります。ただ、読者がどこで迷い、何を受け取れば購入に進めるかまで含まれているかは、事前に確認する必要があります。"
+        "text": "制作会社ごとに「丸ごと」の範囲は違います。進行、画像制作、デザインだけでなく、誰がなぜ選ぶ商品かを決める工程まで含まれるかを確認してください。"
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "楽天商品ページ改善を依頼しても転換率が上がらない理由",
-  "description": "制作会社にリニューアルを依頼した。ページは綺麗になった。それでも転換率は変わらない。次の依頼先を探す前に、商品ページ前半で選ぶ理由が届いているかを見る必要があります。",
+  "description": "制作会社へリニューアルを依頼してページは綺麗になった。それでも転換率が変わらないとき、次の依頼先を探す前に確認すべき3つと、改善箇所の見分け方を解説します。",
   "image": "https://konishi-marketing.com/images/konishi.JPG",
   "url": "https://konishi-marketing.com/articles/rakuten-shohin-page-kaizen-irai-mae-ni-kakunin.html",
   "datePublished": "2026-04-21",
-  "dateModified": "2026-05-05",
+  "dateModified": "2026-07-31",
   "author": {
     "@type": "Person",
     "name": "小西 秀人",
@@ -187,271 +245,182 @@ html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
     "name": "小西マーケティング",
     "url": "https://konishi-marketing.com"
   }
-}
-</script>
+}</script>
 </head>
 <body>
-
 <div class="site-wrap">
-
 <header class="site-header">
-  <a href="https://konishi-marketing.com/">小西マーケティング</a>
+<a href="https://konishi-marketing.com/">小西マーケティング</a>
 </header>
-
 <div class="hero">
-  <span class="hero-category">楽天商品ページ改善 / 外注依頼</span>
-  <h1 class="hero-title">楽天商品ページ改善を依頼しても転換率が上がらない理由</h1>
-  <p class="hero-lead">制作会社にリニューアルを依頼した。ページは綺麗になった。けれどRMSの転換率は変わらない——次の依頼先を探す前に見るべきなのは、商品ページ前半で選ぶ理由が届いているかです。EC100店舗超の現状を見てきた経験から解説します。</p>
-  <p class="hero-meta">小西マーケティング｜2026.04</p>
+<span class="hero-category">楽天商品ページ改善 / 外注依頼</span>
+<h1 class="hero-title">楽天商品ページ改善を依頼しても転換率が上がらない理由</h1>
+<p class="hero-lead">制作会社にリニューアルを依頼した。ページは綺麗になった。けれどRMSの転換率は変わらない——次の依頼先を探す前に、商品ページ前半で読者が「自分に必要な商品だ」と判断できるかを確認してください。EC100店舗超の現状を見てきた経験から解説します。</p>
+<p class="hero-meta">小西マーケティング｜2026.04｜最終更新 2026.07</p>
 </div>
-
 <div class="author-box">
   この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
 </div>
-
 <div class="article-body">
+<h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">依頼した。でも動かない</h2>
+<p>楽天に強い制作会社へ依頼した。ヒアリングも丁寧だった。写真も差し替え、バナーも整い、スマホでも見やすいページになった。</p>
+<p>公開直後は、以前より良くなった実感がある。社内でも「見やすくなった」と言われる。</p>
+<p>一週間後、RMSを見る。転換率はほとんど変わっていない。</p>
+<p>このとき、「もっと実績のある会社にすればよかったのか」「次はコピー込みの会社にすべきか」と考えやすくなります。</p>
+<div class="insight">制作会社を選び間違えた、とは限りません。<br/><em>商品ページ前半で、誰に、何を、どの順番で伝えるかが決まらないまま、見た目だけを整えた可能性があります。</em></div>
+<p>制作会社の主な役割は、渡された情報を見やすく整え、ページとして形にすることです。</p>
+<p>これは必要な仕事です。ただ、誰に、何を、どの順番で伝えるかが決まっていなければ、見た目が整っても転換率は動きにくくなります。</p>
+<div class="callout"><strong>次の依頼先を探す前に。</strong><br/>実績やポートフォリオを比べるだけでは、現在のページで何が伝わっていないかは分かりません。まず、商品ページ前半で読者が「自分に必要な商品だ」と判断できる内容になっているかを確認します。</div>
+<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">依頼前に確認する3つ</h2>
+<div class="check-block">
+<div class="check-header">依頼前の確認事項</div>
+<div class="check-item">
+<div class="check-num">1</div>
+<div class="check-body"><span class="check-label">ページ前半の内容を、誰が決めるのか</span>原稿を店舗側が用意するなら、ページの中身を決めるのも店舗側です。制作会社が原稿を書く場合は、どの読者に何を先に伝えるかまで決めてもらえるのかを確認します。</div>
+</div>
+<div class="check-item">
+<div class="check-num">2</div>
+<div class="check-body"><span class="check-label">納品後も、転換率を見て直すのか</span>公開後に転換率を確認し、数字が動かなければページ前半を直す担当者がいるかを確認します。作業報告だけで終わる契約では、売れない原因が残りやすくなります。</div>
+</div>
+<div class="check-item">
+<div class="check-num">3</div>
+<div class="check-body"><span class="check-label">デザイン前に、購入前の迷いを確認するのか</span>商品の特徴だけを聞き、すぐ原稿やデザインへ進むと、購入前の迷いがページに残ります。誰が何に迷い、何が分かれば購入できるのかまで確認するかを見ます。</div>
+</div>
+</div>
+<p>この3つを確認しないまま依頼すると、以前と同じ進め方を繰り返しやすくなります。</p>
+<p>質問しにくい内容ですが、依頼後に転換率が動かないリスクを減らすために、契約前に確認してください。</p>
+<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">見た目では選べない</h2>
+<p>複数社から見積もりを取る。ポートフォリオを並べる。楽天での制作件数を見る。</p>
+<p>最終的には、「デザインが好み」「楽天実績が多い」「金額が妥当」という見方で選びやすくなります。</p>
+<p>この判断は自然です。発注前に見えるものが、それくらいしかないからです。</p>
+<div class="misrec-block">
+<div class="misrec-header">ポートフォリオを見る前に確認すること</div>
+<div class="misrec-row">
+<div class="misrec-cell label">よくある見方</div>
+<div class="misrec-cell truth">楽天での制作実績が多く、見た目が良い会社なら、商品ページの転換率も上がりやすい</div>
+</div>
+<div class="misrec-row">
+<div class="misrec-cell label">残っていること</div>
+<div class="misrec-cell truth">ポートフォリオで分かるのは見た目の完成度。誰が、どの説明で購入を決めたかまでは分からない</div>
+</div>
+</div>
+<p>楽天での制作件数が多いことは、仕様や運用に慣れている目安になります。</p>
+<p>ただ、その会社が、誰に何をどの順番で伝えるかまで決めるかは別です。</p>
 
-  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">依頼した。でも動かない</h2>
+<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">「丸ごとお任せ」だけでは足りない</h2>
+<p>自社で原稿やページ前半の流れを決められない場合、「コピーライティング込み」「丸ごとお任せ」のプランが安心に見えます。</p>
+<p>ただ、コピー込みというだけでは、転換率が上がるかは判断できません。</p>
 
-  <p>楽天に強い制作会社へ依頼した。ヒアリングも丁寧だった。写真も差し替え、バナーも整い、スマホでも見やすいページになった。</p>
+<div class="misrec-block">
+<div class="misrec-header">お任せの前に見ること</div>
+<div class="misrec-row">
+<div class="misrec-cell label">よくある見方</div>
+<div class="misrec-cell truth">コピーライティング込みのプランなら、売れる文章まで任せられる</div>
+</div>
+<div class="misrec-row">
+<div class="misrec-cell label">残っていること</div>
+<div class="misrec-cell truth">誰に、何を、どの順番で伝えるかが決まっていなければ、読みやすい原稿になっても購入にはつながりにくい</div>
+</div>
+</div>
+<p>商品の説明を整えることと、購入を決めるまでの説明順をつくることは別です。</p>
+<p>「丸ごとお任せ」に、誰が、なぜこの商品を選ぶのかを決める工程まで含まれるかを確認してください。</p>
 
-  <p>公開直後は、以前より良くなった実感がある。社内でも「見やすくなった」と言われる。</p>
+<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">依頼内容を決める3つの基準</h2>
+<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">見た目の改善と転換率の改善を分ける</h3>
+<p>見た目を整える作業と、転換率を上げる作業は同じではありません。写真・バナー・レイアウトに加え、商品ページ前半で読者が「自分に必要な商品だ」と判断できる順番まで見直すのかを確認します。</p>
 
-  <p>一週間後、RMSを見る。転換率はほとんど変わっていない。</p>
 
-  <p>このとき、「もっと実績のある会社にすればよかったのか」「次はコピー込みの会社にすべきか」と考えやすくなります。</p>
+<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">購入までのどこで止まっているかを確認する</h3>
+<p>アクセスはあるのに購入されないのか。ページ前半で離脱するのか。CTAまで読まれていないのか。止まる場所によって、先に直す箇所は変わります。</p>
+<p>ここを確認せずに依頼すると、原因に関係なく「ページ全体を綺麗に作り直す」提案へ流れやすくなります。</p>
 
-  <div class="insight">
-    制作会社を選び間違えた、とは限りません。<br>
-    <em>見た目を整える前に、商品ページ前半で選ぶ理由が届く順番が決まっていないことがあります。</em>
-  </div>
+<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">広告を増やす前に、転換率を確認する</h3>
+<p>ページ改善の相談で、広告やアクセス増加を提案されることがあります。</p>
+<p>ただ、転換率が低いまま集客を増やすと、購入されないアクセスへの費用も増えます。先に、ページ内で購入理由が伝わっているかを確認します。</p>
 
-  <p>制作会社の主な役割は、渡された情報を見やすく整え、ページとして形にすることです。</p>
-
-  <p>これは必要な仕事です。ただ、何をどの順番で届けるかが決まっていなければ、見た目が整っても転換率は動きにくくなります。</p>
-
-  <div class="callout">
-    <strong>次の依頼先を探す前に。</strong><br>
-    依頼先の実績数やポートフォリオを見ることは必要です。ただ、それだけでは現在のページで読者がどこで止まっているかまでは分かりません。先に、商品ページ前半で選ぶ理由が届いているかを見る必要があります。
-  </div>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">先に見る3つ</h2>
-
-  <div class="check-block">
-    <div class="check-header">依頼前の確認事項</div>
-    <div class="check-item">
-      <div class="check-num">1</div>
-      <div class="check-body">
-        <span class="check-label">誰が「何を先に伝えるか」を決めるのか</span>
-        依頼前に、原稿やページ前半の流れを誰が決めるのかを確認します。原稿を店舗側が用意する場合、ページの中身は自社で作ることになります。制作会社が原稿まで作る場合も、どの読者に向けて何を先に伝えるのかを確認する必要があります。
-      </div>
-    </div>
-    <div class="check-item">
-      <div class="check-num">2</div>
-      <div class="check-body">
-        <span class="check-label">転換率を見ながら直す人がいるか</span>
-        納品物が綺麗でも、転換率が動かないことがあります。公開後に、どこで読者が止まっているかを見て、商品ページ前半を直す人がいるかを確認します。作業報告だけで終わる場合、数字が動かない場所は残りやすくなります。
-      </div>
-    </div>
-    <div class="check-item">
-      <div class="check-num">3</div>
-      <div class="check-body">
-        <span class="check-label">デザイン前に読者の迷いを見ているか</span>
-        デザインの前に、読者が何で迷い、何を受け取れば「これでよさそうだ」と思えるのかを見る必要があります。ヒアリングで商品の特徴だけを聞き、すぐ原稿やデザインに進む場合、読者の迷いが置き去りになることがあります。
-      </div>
-    </div>
-  </div>
-
-  <p>この3つが見えない状態で依頼が始まると、以前と同じ進め方になりやすくなります。</p>
-
-  <p>聞きにくい質問ではあります。ただ、依頼後に数字が動かないリスクを減らすためには、先に確認しておく必要があります。</p>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">見た目では選べない</h2>
-
-  <p>複数社から見積もりを取る。ポートフォリオを並べる。楽天での制作件数を見る。</p>
-
-  <p>最終的には、「デザインが好み」「楽天実績が多い」「金額が妥当」という見方で選びやすくなります。</p>
-
-  <p>この判断は自然です。発注前に見えるものが、それくらいしかないからです。</p>
-
-  <div class="misrec-block">
-    <div class="misrec-header">ポートフォリオを見る前に確認すること</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">よくある見方</div>
-      <div class="misrec-cell truth">楽天での制作実績が多く、見た目が良い会社なら、商品ページの転換率も上がりやすい</div>
-    </div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">残っていること</div>
-      <div class="misrec-cell truth">ポートフォリオで分かるのは見た目の完成度。読者がどこで「これでよさそうだ」と思ったのかまでは分からない</div>
-    </div>
-  </div>
-
-  <p>楽天での制作件数が多いことは、仕様や運用に慣れているという意味では参考になります。</p>
-
-  <p>ただ、その会社が自社の商品ページで、読者が選ぶ理由を受け取る順番まで見てくれるかは別です。</p>
-
-  <p>ポートフォリオで見えるのは完成後の外観です。読者がページ内でどこに迷い、どこで購入に進んだのかまでは見えません。</p>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">お任せでも残る</h2>
-
-  <p>自社で原稿を用意できない。ページ前半の流れも決められない。</p>
-
-  <p>その場合、「コピーライティング込み」「丸ごとお任せ」のプランが安心に見えます。</p>
-
-  <p>ただ、コピー込みかどうかだけでは、転換率が上がるかは判断できません。</p>
-
-  <div class="misrec-block">
-    <div class="misrec-header">お任せの前に見ること</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">よくある見方</div>
-      <div class="misrec-cell truth">コピーライティング込みのプランなら、売れる文章まで任せられる</div>
-    </div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">残っていること</div>
-      <div class="misrec-cell truth">どの読者に向けて、何を先に伝えるのかが決まっていなければ、きれいな原稿にはなっても購入にはつながりにくい</div>
-    </div>
-  </div>
-
-  <p>コピー込みのプランでも、商品の説明を整える原稿と、読者が「これでよさそうだ」と思える順番で書く原稿は違います。</p>
-
-  <p>大切なのは、原稿を書く人が商品の特徴だけでなく、読者の迷いを見ているかです。</p>
-
-  <p>「丸ごとお任せ」に含まれている範囲が、ページ制作の進行と見た目の整理なのか、読者が選ぶ理由を受け取る順番まで含むのかを確認する必要があります。</p>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">依頼前に見ること</h2>
-
-  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">見た目の改善と転換率の改善を分ける</h3>
-
-  <p>ページを綺麗にしたいのか、転換率を上げたいのか。</p>
-
-  <p>どちらも必要な場合があります。ただ、必要な作業は同じではありません。</p>
-
-  <p>見た目の改善は、写真、バナー、レイアウト、読みやすさを整えます。転換率の改善では、商品ページ前半で読者が「これでよさそうだ」と思える理由を受け取れているかを見る必要があります。</p>
-
-  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">現在どこで止まっているかを見る</h3>
-
-  <p>アクセスはあるのに購入に進まない。ヒートマップで前半が読まれていない。CTAまで到達していない。</p>
-
-  <p>こうした場所が見えているかどうかで、依頼後に受ける提案は変わります。</p>
-
-  <p>止まっている場所が分からないまま依頼すると、「綺麗に作り直す」提案に流れやすくなります。</p>
-
-  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">集客提案をどう扱うかを見る</h3>
-
-  <p>ページ改善の相談で「まず広告費を増やしましょう」「アクセスを集めましょう」という提案が出ることがあります。</p>
-
-  <p>集客が必要な場面はあります。ただ、転換率が低いままアクセスを増やすと、購入に進まないアクセスへの費用が増えます。</p>
-
-  <p>先に、商品ページで購入に進む理由が届いているかを見る必要があります。</p>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">同じ結果になるサイン</h2>
-
-  <p>以下の状態が続いているなら、依頼先を変える前に確認すべき場所があります。</p>
-
-  <ul class="prob-list">
-    <li data-num="✓">過去の依頼で「ページの原稿は店舗様でご用意ください」と言われた</li>
-    <li data-num="✓">リニューアル後、「広告費を増やして集客しましょう」という提案しか出なかった</li>
-    <li data-num="✓">定例ミーティングが作業報告で終わり、転換率の分析が出てこなかった</li>
-    <li data-num="✓">ポートフォリオを比較しても「どこも同じに見える」という感覚が続いている</li>
-  </ul>
-
-  <div class="cta-block">
-    <div class="cta-block-label">無料診断</div>
-    <div class="cta-block-title">次の依頼前に、商品ページ前半で選ぶ理由が届いているかを見る。</div>
-    <div class="cta-block-sub">
-      依頼しても転換率が動かなかったなら、商品ページ前半で読者が止まっている可能性があります。<br>
-      URLを送るだけで、どこで選ぶ理由が届いていないかを2営業日以内に診断レポートで整理します。
-    </div>
-    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">依頼前に止まる場所を診断する</a>
-    <div class="cta-note">※営業電話は一切いたしません。</div>
-  </div>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">まず、前半を見る</h2>
-
-  <p>楽天実績のある制作会社に依頼すること、ポートフォリオを比較すること、コピー込みのプランを選ぶこと。どれも必要な場面があります。</p>
-
-  <p>ただ、依頼しても転換率が動かなかったなら、次の依頼先を探す前に見るべき場所があります。</p>
-
-  <p>商品ページ前半で、読者が「これでよさそうだ」と思える理由を受け取れているか。そこが見えれば、誰に何を依頼すべきかも判断しやすくなります。</p>
+<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">当てはまる状態から、先に読む記事を選んでください</h2><p class="improvement-hub-intro">商品ページを一度に作り直す必要はありません。今どこで購入が止まっているかによって、先に直す場所は変わります。</p><div class="improvement-hub"><a class="improvement-route" href="https://konishi-marketing.com/articles/rakuten-access-aru-noni-urenai-kyotsuten.html"><span class="improvement-route-state">アクセスはあるのに転換率が上がらない</span><span class="improvement-route-title">この記事を読む</span></a><a class="improvement-route" href="https://konishi-marketing.com/articles/rakuten-shohin-page-design-yori-sekkei-ga-saki.html"><span class="improvement-route-state">ページを綺麗にしても転換率が上がらない</span><span class="improvement-route-title">この記事を読む</span></a><a class="improvement-route" href="https://konishi-marketing.com/articles/rakuten-mazu-samune-kara-tetsukeru-tadashii-riyu.html"><span class="improvement-route-state">サムネイルのクリックは増えたのに購入されない</span><span class="improvement-route-title">この記事を読む</span></a><a class="improvement-route" href="https://konishi-marketing.com/articles/rakuten-thumbnail-1-5-mai-handan-jiku-watasu.html"><span class="improvement-route-state">1〜5枚目で価格比較に戻られている</span><span class="improvement-route-title">この記事を読む</span></a><a class="improvement-route" href="https://konishi-marketing.com/articles/rakuten-shohin-page-kaizen-seika-deru-kaisha-denai-kaisha.html"><span class="improvement-route-state">制作会社を比較しても依頼先を決められない</span><span class="improvement-route-title">この記事を読む</span></a><a class="improvement-route" href="https://konishi-marketing.com/articles/rakuten-shohin-page-kaizen-toshi-taiko-ka-kaishu.html"><span class="improvement-route-state">改善費用を回収できるか不安</span><span class="improvement-route-title">この記事を読む</span></a></div><p class="improvement-hub-note">依頼先を変える前に、どこで購入が止まっているかを絞ると、直す範囲と依頼内容を決めやすくなります。</p><h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">次の依頼でも、転換率が変わらないサイン</h2>
+<p>次の状態が当てはまるなら、依頼先を変える前に、何を改善するかを確認してください。</p>
+<ul class="prob-list">
+<li data-num="✓">過去の依頼で「ページの原稿は店舗様でご用意ください」と言われた</li>
+<li data-num="✓">リニューアル後、「広告費を増やして集客しましょう」という提案しか出なかった</li>
+<li data-num="✓">定例ミーティングが作業報告で終わり、転換率の分析が出てこなかった</li>
+<li data-num="✓">ポートフォリオを比較しても「どこも同じに見える」という感覚が続いている</li>
+</ul>
+<div class="cta-block">
+<div class="cta-block-label">無料診断</div>
+<div class="cta-block-title">次の依頼先を決める前に、ページ前半で「この商品を選ぶ理由」が伝わっているか確認する。</div>
+<div class="cta-block-sub">転換率が動かなかったなら、商品ページ前半で購入理由が伝わりにくくなっている可能性があります。<br/>URLを送るだけで、伝わりにくい箇所を2営業日以内の診断レポートで整理します。</div>
+<a class="cta-btn" href="https://konishi-marketing.com/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=mid_cta">商品ページを無料で診断する</a>
+<div class="cta-note">※営業電話は一切いたしません。</div>
+</div>
+<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">次の依頼先を探す前に、ページ前半を確認する</h2>
+<p>楽天実績、ポートフォリオ、コピー込みの有無は、依頼先を選ぶ材料になります。</p>
+<p>ただ、転換率が動かなかったなら、先に商品ページ前半を確認してください。読者が「自分に必要な商品だ」と判断できる内容になっているか。そこが分かれば、次に誰へ何を依頼するかも決めやすくなります。</p>
 
 </div><!-- /article-body -->
-
 <div class="faq-section" id="article-faq">
-  <div class="faq-label">よくある質問</div>
-
-  <div class="faq-item">
-    <div class="faq-q">ポートフォリオを見て制作会社を選ぶだけでは、なぜ転換率が上がりにくいのですか？</div>
-    <div class="faq-a">ポートフォリオで分かるのは、見た目の完成度やデザインの方向性です。ただ、そのページで読者がどこで「これでよさそうだ」と思ったのかまでは分かりません。次の依頼先を選ぶ前に、現在の商品ページ前半で選ぶ理由が届いているかを見る必要があります。</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q">コピーライティング込みのお任せプランなら解決しますか？</div>
-    <div class="faq-a">コピー込みのプランで、自社で原稿を用意する負担は減ります。ただ、どの読者に向けて、何を先に伝えるのかが決まっていなければ、きれいな原稿にはなっても購入にはつながりにくくなります。コピー込みかどうかより、商品ページ前半で選ぶ理由が届く順番になっているかを確認する必要があります。</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q">制作会社に丸ごと任せれば転換率も改善しますか？</div>
-    <div class="faq-a">丸ごと任せられる範囲は、制作会社ごとに違います。ページ制作の進行、見た目の整理、画像作成まで含まれることはあります。ただ、読者がどこで迷い、何を受け取れば購入に進めるかまで含まれているかは、事前に確認する必要があります。</div>
-  </div>
+<div class="faq-label">よくある質問</div>
+<div class="faq-item">
+<div class="faq-q">ポートフォリオを見て制作会社を選ぶだけでは、なぜ転換率が上がりにくいのですか？</div>
+<div class="faq-a">ポートフォリオで分かるのは、見た目の完成度です。誰が、どの説明で購入を決めたかまでは分かりません。現在の商品ページ前半で、読者が「自分に必要だ」と判断できる内容になっているかを先に確認します。</div>
 </div>
-
+<div class="faq-item">
+<div class="faq-q">コピーライティング込みのお任せプランなら解決しますか？</div>
+<div class="faq-a">コピー込みなら原稿作成の負担は減ります。ただし、誰に、何を、どの順番で伝えるかまで決まっていなければ、読みやすくなっても購入にはつながりません。プラン名ではなく、購入理由を決める工程が含まれるかを確認します。</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">制作会社に丸ごと任せれば転換率も改善しますか？</div>
+<div class="faq-a">制作会社ごとに「丸ごと」の範囲は違います。進行、画像制作、デザインだけでなく、誰がなぜ選ぶ商品かを決める工程まで含まれるかを確認してください。</div>
+</div>
+</div>
 <!-- FAQ：推進型 -->
 <div class="faq-section nextstep-faq">
-  <div class="faq-label">Next Step</div>
-
-  <div class="faq-item">
-    <div class="faq-q">制作会社へ依頼する前に、何を確認すべきですか？</div>
-    <div class="faq-a">誰が、なぜこの商品を選ぶのかを整理し、その理由を構成、コピー、写真、デザインまで一貫して反映できるかを確認します。見た目や納品枚数だけでなく、購入理由を作る工程が含まれているかを見ることが重要です。</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q">小西マーケティングへ依頼すると、どこから始まりますか？</div>
-    <div class="faq-a">商品情報や現在の販売状況を確認し、誰が、なぜ選ぶ商品かを決めるところから始めます。その判断をもとに、構成、コピー、写真の見せ方、デザイン、入稿まで一貫して進めます。</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q">依頼前に、対応範囲や料金を確認できますか？</div>
-    <div class="faq-a">楽天商品ページ制作サービスのページで、対応範囲、制作実績、料金、制作の進め方をご確認いただけます。内容を確認したうえで、そのまま制作について相談できます。</div>
-  </div>
-
+<div class="faq-label">Next Step</div>
+<div class="faq-item">
+<div class="faq-q">制作会社へ依頼する前に、何を確認すべきですか？</div>
+<div class="faq-a">誰が、なぜこの商品を選ぶのかを先に決め、その理由を構成・コピー・写真・デザインまで反映する工程があるかを確認します。納品枚数や見た目だけでなく、購入理由を決めるところから対応するかが重要です。</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">小西マーケティングへ依頼すると、どこから始まりますか？</div>
+<div class="faq-a">商品情報と現在の販売状況を確認し、誰が、なぜ選ぶ商品かを決めます。その後、構成、コピー、写真の見せ方、デザイン、入稿まで一貫して進めます。</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">依頼前に、対応範囲や料金を確認できますか？</div>
+<div class="faq-a">楽天商品ページ制作サービスのページで、対応範囲、制作実績、料金、制作の進め方をご確認いただけます。内容を確認したうえで、そのまま制作について相談できます。</div>
+</div>
 </div><!-- /faq -->
-
 <div class="cta-block" style="margin:0;">
-  <div class="cta-block-label">楽天商品ページ制作・改善</div>
-  <div class="cta-block-title">サムネイルから下部LPまで、まとめて見直す。</div>
-  <div class="cta-block-sub">
-    誰が、なぜ選ぶ商品かを決め、構成・コピー・写真・デザイン・入稿まで一貫して対応します。<br>
+<div class="cta-block-label">楽天商品ページ制作・改善</div>
+<div class="cta-block-title">サムネイルから下部LPまで、まとめて見直す。</div>
+<div class="cta-block-sub">
+    誰が、なぜ選ぶ商品かを決め、構成・コピー・写真・デザイン・入稿まで一貫して対応します。<br/>
     料金、対応範囲、制作実績はサービスページでご確認いただけます。
   </div>
-  <a class="cta-btn" href="https://konishi-marketing.com/rakuten/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=rakuten_service&amp;utm_content=rakuten-shohin-page-kaizen-irai-mae-ni-kakunin">楽天商品ページ制作サービスを見る</a>
-  <div class="service-route">まず止まっている場所を確認する方は、<a href="https://konishi-marketing.com/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=bottom_diagnosis_secondary&amp;utm_content=rakuten-shohin-page-kaizen-irai-mae-ni-kakunin#form">無料診断をご利用ください</a>。</div>
-  <div class="cta-note">※サービス内容をご確認後、そのままご相談いただけます。</div>
+<a class="cta-btn" href="https://konishi-marketing.com/rakuten/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=rakuten_service&amp;utm_content=rakuten-shohin-page-kaizen-irai-mae-ni-kakunin">楽天商品ページ制作サービスを見る</a>
+<div class="service-route">まず止まっている場所を確認する方は、<a href="https://konishi-marketing.com/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=bottom_diagnosis_secondary&amp;utm_content=rakuten-shohin-page-kaizen-irai-mae-ni-kakunin#form">無料診断をご利用ください</a>。</div>
+<div class="cta-note">※サービス内容をご確認後、そのままご相談いただけます。</div>
 </div>
-
 <div class="author-profile">
-  <div class="author-profile-label">この記事を書いた人</div>
-  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
-    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
-      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
-    </div>
-    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
-  </div>
-  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの改善からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+<div class="author-profile-label">この記事を書いた人</div>
+<div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+<div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+<img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/>
 </div>
-
+<div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+</div>
+<div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの改善からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
 <div class="related-section">
-  <div class="related-label">関連記事</div>
-  <ul class="related-list">
-    <li><a href="https://konishi-marketing.com/articles/rakuten-design-gaisha-ni-irai-shite-mo-uriage-kawaranu.html">楽天でデザイン会社に依頼しても売上が変わらない理由</a></li>
-    <li><a href="https://konishi-marketing.com/articles/rakuten-konsaru-ni-makasete-mo-kazu-kawaranu.html">楽天コンサルに任せても転換率が上がらない理由</a></li>
-    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率が上がらない理由</a></li>
-  </ul>
+<div class="related-label">関連記事</div>
+<ul class="related-list">
+<li><a href="https://konishi-marketing.com/articles/rakuten-design-gaisha-ni-irai-shite-mo-uriage-kawaranu.html">楽天でデザイン会社に依頼しても売上が変わらない理由</a></li>
+<li><a href="https://konishi-marketing.com/articles/rakuten-konsaru-ni-makasete-mo-kazu-kawaranu.html">楽天コンサルに任せても転換率が上がらない理由</a></li>
+<li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率が上がらない理由</a></li>
+</ul>
 </div>
-
 <footer class="site-footer">
-  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+<a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
 </footer>
-
 </div><!-- /site-wrap -->
 </body>
 </html>
