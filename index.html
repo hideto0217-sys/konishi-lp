@@ -825,6 +825,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 }
 .track-grid--four{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:0;}
 .track-grid--three{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:0;}
+.track-grid--two{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:0;}
 .faq-list{margin-top:2rem;border-top:1px solid var(--g200);}
 .faq-item{padding:1.35rem 0;border-bottom:1px solid var(--g200);}
 .faq-q{
@@ -841,10 +842,10 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 }
 @media(max-width:760px){
   .mechanism-grid,.fit-grid{grid-template-columns:1fr;}
-  .track-grid--four,.track-grid--three{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .track-grid--four,.track-grid--three,.track-grid--two{grid-template-columns:repeat(2,minmax(0,1fr));}
 }
 @media(max-width:359px){
-  .track-grid,.track-grid--four,.track-grid--three{grid-template-columns:1fr!important;}
+  .track-grid,.track-grid--four,.track-grid--three,.track-grid--two{grid-template-columns:1fr!important;}
   .track-num{font-size:2.7rem;}
 }
 
@@ -1074,9 +1075,9 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 </div>
 
 <div class="track-group-title">先行販売・広告の実績</div>
-<div class="track-grid track-grid--three">
+<div class="track-grid track-grid--two">
 <div class="track-card"><span class="track-num">3<span class="track-unit">回</span></span><div class="track-desc">Makuake<br/>総合ランキング1位</div></div>
-<div class="track-card"><span class="track-num">2,000<span class="track-unit">%+</span></span><div class="track-desc">Makuake<br/>ROAS達成（複数回）</div></div>
+
 <div class="track-card"><span class="track-num">3,000<span class="track-unit">円以下</span></span><div class="track-desc">Meta広告<br/>CPO達成</div></div>
 </div>
 
