@@ -2172,6 +2172,11 @@ footer a{
   #continuity .reason-conclusion{font-size:27px;line-height:1.45}
 }
 </style>
+
+<style id="general-sales-faq-target-v4">
+#makuake-general-sales{scroll-margin-top:88px}
+#makuake-general-sales:target{outline:2px solid rgba(178,23,50,.45);outline-offset:8px}
+</style>
 </head>
 <body><a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="topbar" role="banner">
@@ -2396,7 +2401,7 @@ footer a{
 <details><summary role="button">料金はいくらですか。</summary><div class="answer">固定費15万円（税別）と、プロジェクト終了時にMakuakeページ上へ表示された応援購入総額の15％（税別）です。固定費は契約時に全額、成果報酬はMakuakeからクライアントへの入金後3日以内にお支払いいただきます。成果報酬に最低額と上限はありません。</div></details>
 <details><summary role="button">制作途中で商品仕様や販売条件が変わった場合はどうなりますか。</summary><div class="answer">当初合意した商品仕様と販売条件の範囲では、公開までに必要な修正へ対応します。商品仕様、価格、リターン設計などの前提が変更され、再制作が必要になる場合は別途協議します。</div></details><details><summary role="button">成果は保証されますか。</summary><div class="answer">保証は行いません。応援購入総額には、商品と価格が影響します。公開時期と在庫も影響します。広告費やMakuake内露出にも左右されます。</div></details>
 <details><summary role="button">制作期間はどれくらいですか。</summary><div class="answer">商品情報とページ量を確認します。撮影、図解、動画の有無も踏まえ、想定スケジュールを提示します。</div></details>
-<details><summary role="button">Makuake後の楽天や自社ECも依頼できますか。</summary><div class="answer">対応可能です。先行販売と限定数の文脈を外します。割引に頼らず選ばれる一般販売向けページへ再構成します。</div></details>
+<details id="makuake-general-sales"><summary role="button">Makuake後の楽天や自社ECも依頼できますか。</summary><div class="answer">対応可能です。先行販売と限定数の文脈を外します。割引に頼らず選ばれる一般販売向けページへ再構成します。</div></details>
 <details><summary role="button">事前集客も依頼できますか。</summary><div class="answer">対応可能です。全案件へ必須にはせず、商品単価、目標応援購入額、既存認知、公開初速の必要性から要否を判断します。実行まで依頼する場合は、15万円（税別）＋広告運用費です。広告運用費は広告費の10％、最低5万円（税別）で、広告費は実費です。</div></details><details><summary role="button">広告運用を依頼せず、プロジェクトページ制作だけを依頼できますか。</summary><div class="answer">はい。プロジェクトページ制作が基本です。公開後の広告はMakuakeの広告メニューを利用するケースが一般的です。必要と判断した案件のみ、事前集客サポートを追加できます。</div></details></div>
 </div>
 </section>
@@ -2686,5 +2691,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-</script></body>
+</script>
+<script id="general-sales-faq-target-script-v4">
+(function(){
+  var target=document.getElementById('makuake-general-sales');
+  if(!target){return;}
+  function openGeneralSalesFaq(){
+    if(window.location.hash==='#makuake-general-sales'){
+      target.open=true;
+      window.requestAnimationFrame(function(){
+        target.scrollIntoView({block:'start'});
+      });
+    }
+  }
+  window.addEventListener('hashchange',openGeneralSalesFaq);
+  openGeneralSalesFaq();
+})();
+</script>
+</body>
 </html>
