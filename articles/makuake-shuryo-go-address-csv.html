@@ -6,26 +6,34 @@
 <meta content="only light" name="color-scheme"/>
 <link href="https://konishi-marketing.com/articles/makuake-shuryo-go-address-csv.html" rel="canonical"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Makuake終了後の住所CSVの取得方法｜住所ロック・発送前の確認手順｜小西マーケティング</title>
-<meta content="Makuake終了後、サポーターのお届け先住所はいつ取得できるのか。終了翌日12時以降のCSV取得、住所ロック、3回のダウンロード制限、CSVに含まれる項目、発送前の確認順を2026年8月時点のMakuake公式情報に沿って整理します。" name="description"/>
+<title>Makuake終了後の発送で誤配送を防ぐ｜住所CSV・住所ロックから発送データ確定まで｜小西マーケティング</title>
+<meta content="Makuake終了後の発送で、住所変更漏れ・リターン違い・数量違いを防ぐための実務設計を解説。住所CSV・住所ロック、リターン・数量・バリエーション照合、変更依頼、倉庫連携まで、誰に何を届けるかを確定する順番を整理します。" name="description"/>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Makuake終了後、住所CSVはいつダウンロードできますか？",
+      "name": "Makuake終了後、住所CSVはいつ取得できますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "現在のMakuakeでは、原則としてプロジェクト終了の翌日からダウンロードできます。公式案内では翌日12時以降が目安です。発送に使用する場合は、先に住所ロックを行ってから最新のCSVを取得します。"
+        "text": "現在のMakuakeでは、原則としてプロジェクト終了の翌日から取得できます。公式案内では翌日12時以降が目安です。ただし、発送に使う最終データは、発送準備が整ったあとに住所ロックを行い、その後に取得します。"
       }
     },
     {
       "@type": "Question",
-      "name": "住所CSVをダウンロードしたあと、サポーターが住所を変更することはありますか？",
+      "name": "住所CSVを取ったら、そのまま配送会社へ渡してもいいですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "住所ロック前であれば変更できます。現在のMakuakeでは、実行者が住所ロックするまでサポーター自身がお届け先を変更できます。CSV取得後に変更される可能性があるため、発送用データは住所ロック後に取得します。"
+        "text": "住所だけでなく、注文ID、リターン、数量、質問回答、個別対応の有無まで出荷条件と照合してから使う方が安全です。CSV取得後に別ファイルへ加工する場合は、どのファイルを最新の正本として扱うかも決めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "住所ロック後にサポーターから住所変更の連絡が来たらどうしますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "まず、送り状作成前・倉庫連携後・発送後のどの段階かを確認します。変更可能な段階なら発送データへ反映し、反映先と対応状況を1か所で管理します。Makuake上の連絡にはメッセージ機能を使います。"
       }
     },
     {
@@ -33,31 +41,23 @@
       "name": "Makuake終了後のCSVは何回までダウンロードできますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "終了後のサポーター情報CSVは3回までです。上限に達した場合はMakuakeの問い合わせ窓口へ相談する必要があります。"
+        "text": "プロジェクト終了後のサポーター情報CSVは3回までです。不要な確認ダウンロードを減らし、発送用の最新CSVを確実に取得できるようにしておきます。"
       }
     },
     {
       "@type": "Question",
-      "name": "住所CSVにサポーターのメールアドレスは入っていますか？",
+      "name": "配送後の問い合わせは一般販売にも使えますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "入りません。終了後のCSVには氏名、電話番号、郵便番号、住所、リターン情報、配送予定月などが含まれますが、メールアドレスは提供されません。個別連絡にはMakuakeのメッセージ機能を使います。"
+        "text": "使えます。届かない、使い方が分かりにくい、想像と違った、梱包で迷ったといった問い合わせは、一般販売用の商品ページ、FAQ、同梱物、配送案内を改善する材料になります。"
       }
     },
     {
       "@type": "Question",
-      "name": "All or Nothingで目標未達だった場合も住所CSVを取得できますか？",
+      "name": "Makuake後の一般販売用ページは配送中から準備できますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "取得できません。All or Nothing形式で目標未達のまま終了した場合はプロジェクトが不成立となるため、サポーターの個人情報はダウンロードできません。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Makuake後の楽天・Amazon・自社EC向けページも依頼できますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "対応可能です。Makuakeの配送を進めながら、一般販売先で比較されるための商品ページを準備できます。 対応範囲と料金は、Makuake後の一般販売支援ページで確認できます。"
+        "text": "準備できます。Makuakeで得た実績、選ばれたリターン、質問回答、配送後の問い合わせを整理し、楽天・Amazon・自社ECで比較される条件に合わせてページを組み替えます。販売開始はMakuakeのルールに従います。 対応範囲と料金は、Makuake後の一般販売支援ページで確認できます。"
       }
     },
     {
@@ -65,7 +65,7 @@
       "name": "配送完了前でも相談できますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "相談できます。Makuakeページ、一般販売予定の販路、現在の製造・配送状況が分かる段階で準備を始められます。実際の販売開始はMakuakeの遵守事項を確認して進めます。"
+        "text": "相談できます。Makuakeページ、一般販売予定の販路、現在の製造・配送状況が分かる段階で準備を始められます。"
       }
     },
     {
@@ -81,15 +81,15 @@
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Makuake終了後の住所CSVの取得方法｜住所ロック・発送前の確認手順",
-  "description": "Makuake終了後、サポーターのお届け先住所はいつ取得できるのか。終了翌日12時以降のCSV取得、住所ロック、3回のダウンロード制限、CSVに含まれる項目、発送前の確認順を2026年8月時点のMakuake公式情報に沿って整理します。",
+  "headline": "Makuake終了後の発送で誤配送を防ぐ｜住所CSV・住所ロックから発送データ確定まで",
+  "description": "Makuake終了後の発送で、住所変更漏れ・リターン違い・数量違いを防ぐための実務設計を解説。住所CSV・住所ロック、リターン・数量・バリエーション照合、変更依頼、倉庫連携まで、誰に何を届けるかを確定する順番を整理します。",
   "image": "https://konishi-marketing.com/images/konishi.JPG",
   "url": "https://konishi-marketing.com/articles/makuake-shuryo-go-address-csv.html",
   "datePublished": "2026-08-08",
   "dateModified": "2026-08-08",
   "author": {
     "@type": "Person",
-    "name": "小西 秀人",
+    "name": "小西秀人",
     "url": "https://konishi-marketing.com"
   },
   "publisher": {
@@ -245,143 +245,162 @@ html,body{background-color:#f8f7f4!important;color:#1e1d1a}
 <a href="https://konishi-marketing.com/">小西マーケティング</a>
 </header>
 <div class="hero">
-<span class="hero-category">Makuake / プロジェクト終了後 / 住所CSV・配送準備</span>
-<h1 class="hero-title">Makuake終了後の住所CSVの取得方法｜住所ロック・発送前の確認手順</h1>
-<p class="hero-lead">Makuakeのプロジェクトが終了したあと、サポーターの住所はいつ取得できるのか。現在は原則として終了翌日12時以降にCSVを取得できます。ただし、発送に使うデータは、ダウンロードできた時点で確定ではありません。住所ロックを行い、最新の住所CSVを取得してから発送へ進みます。</p>
+<span class="hero-category">Makuake / プロジェクト終了後 / 発送事故防止</span>
+<h1 class="hero-title">Makuake終了後の発送で誤配送を防ぐ｜住所CSV・住所ロックから発送データ確定まで</h1>
+<p class="hero-lead">Makuake終了後、住所CSVを取得して発送する。操作自体はMakuake公式ヘルプで確認できます。実際の発送では、CSV取得後にも、住所・リターン・数量・色・サイズなどの回答・個別変更を照合し、「誰に・何を・どの条件で送るか」を確定する必要があります。これらが一致していないと、誤配送や入れ違いにつながる可能性があります。</p>
 <p class="hero-meta">小西マーケティング｜2026.08</p>
 </div>
-<div class="author-box">この記事は、<strong>担当した全60プロジェクトの平均応援購入額710万円</strong>（目標到達の有無を問わず含む全案件平均）、<strong>累計4億円超・最高6,600万円・総合1位3回</strong>の実績を持つ小西秀人が、2026年8月時点のMakuake公式情報を確認して執筆しています。</div>
+<div class="author-box">この記事は、<strong>担当した全60プロジェクトの平均応援購入額710万円</strong>（目標到達の有無を問わず含む全案件平均）、<strong>累計4億円超・最高6,600万円・総合1位3回</strong>の実績を持つ小西秀人が、Makuake公式ルールとEC発送実務を分けて整理しています。</div>
 <div class="article-body">
-<h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">住所CSVは、原則として終了翌日12時以降に取得できる</h2>
-<p>Makuakeでリターンを発送する場合、プロジェクト終了後にサポーターのお届け先情報を取得します。</p>
-<p>現在のMakuakeでは、原則としてプロジェクト終了の翌日から、実行者向け管理画面で住所を含むサポーター情報CSVをダウンロードできます。公式案内では、翌日12時以降が目安です。</p>
-<div class="callout">
-<strong>この段階のCSVは「取得可能になったデータ」です。</strong><br/>
-      発送用の最終データは、発送準備が整ったあとに住所ロックを行い、その後に取得します。
-    </div>
-<div class="callout">
-<strong>この記事は、現在の住所ロック方式を前提にしています。</strong><br/>
-      Makuake公式では、2025年8月20日より前に公開されたプロジェクトは住所変更の扱いが異なると案内しています。過去プロジェクトを扱う場合は、対象プロジェクトの公開日と最新の公式ヘルプを確認してください。
-    </div>
-<h2>発送に使うCSVは、住所ロック後に取得する</h2>
-<p>住所ロックをするまで、サポーターはマイページからお届け先を変更できます。終了翌日にCSVを取得しても、その後に住所が変われば手元のファイルは最新ではありません。</p>
-<div class="misrec-block">
-<div class="misrec-header">確認用と発送用を分ける</div>
-<div class="misrec-row">
-<div class="misrec-cell label">確認用</div>
-<div class="misrec-cell truth">終了翌日以降に、サポーター数、リターン内容、質問回答、住所データの有無を確認する。</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">発送用</div>
-<div class="misrec-cell truth">製造・検品・梱包・配送会社の準備が整ったら住所ロックし、その後に最新CSVを取得する。</div>
-</div>
-</div>
-<p>ロック後はサポーター自身で住所変更できなくなるため、発送できるタイミングから逆算して住所を確定します。</p>
-<h2>住所ロックからCSV取得までの手順</h2>
-<p>現在のMakuake公式ヘルプでは、発送前の手順を次の順番で案内しています。</p>
-<ul class="prob-list">
-<li data-num="1">実行者向け管理画面を開く</li>
-<li data-num="2">「配送管理」から対象リターンの住所ロックを行う</li>
-<li data-num="3">「サポーター一覧」を開く</li>
-<li data-num="4">「サポーター情報をダウンロードする（CSV形式）」を選ぶ</li>
-<li data-num="5">通知されたパスワードを使ってサポーター情報ファイルを開く</li>
-</ul>
-<p>ダウンロードしたサポーター情報はパスワードで保護されています。パスワードは、実行者アカウントに登録しているメールアドレスへ通知されます。</p>
-<div class="callout">
-<strong>住所ロック前に発送用CSVを確定しない。</strong><br/>
-住所ロックをしないままCSVを取得すると、その後に住所変更が発生しても手元のファイルへ自動反映されません。誤配送を避けるため、発送用データはロック後に取得します。
-</div>
-<h2>Makuake終了後のCSVで確認できる項目</h2>
-<p>配送先情報を取得する設定のプロジェクトでは、終了後CSVで主に次の情報を確認できます。</p>
-<div class="misrec-block">
-<div class="misrec-header">終了後CSVの主な項目</div>
-<div class="misrec-row">
-<div class="misrec-cell label">注文・サポーター</div>
-<div class="misrec-cell truth">注文ID、購入日・注文登録日、ユーザーID、ユーザー名、氏名、電話番号、生年、性別。</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">リターン</div>
-<div class="misrec-cell truth">リターンID、リターンタイトル、リターン内容、支援金額、質問と回答。</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">配送</div>
-<div class="misrec-cell truth">発送状態、郵便番号、住所、配送予定月。</div>
-</div>
-</div>
-<p>一方、サポーターのメールアドレスは提供されません。キャンセルとなったサポーターの情報もCSVには含まれません。</p>
-<p>住所不備などで個別確認が必要な場合は、Makuakeのメッセージ機能でサポーターへ連絡できます。</p>
-<h2>終了後CSVは3回まで。不要な確認ダウンロードはしない</h2>
-<p>プロジェクト終了後のサポーター情報CSVは、個人情報保護のためダウンロード回数が3回に制限されています。</p>
-<p>そのため、確認のためだけに毎回取得するのではなく、管理画面で確認できる内容はそちらで確認し、CSV取得が本当に必要な場面に絞ります。</p>
+<h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">住所CSVではなく、「発送データ」を確定する</h2>
+<p>Makuake終了後に必要なのは、住所CSVをダウンロードすること自体ではありません。</p>
+<p>発送時に必要なのは、<strong>誰に、何を、何個、どの条件で届けるか</strong>が1注文単位で一致しているデータです。</p>
 <div class="insight">
-      3回をどう使い切るかではなく、<br/>
-<em>発送用の最新CSVを確実に取れるよう、不要な取得を減らす。</em>
+住所は、発送条件の一部です。<br/>
+<em>発送事故を防ぐには、住所・リターン・数量・バリエーション・個別対応を同じ注文単位で確定します。</em>
 </div>
-<p>特に発送用CSVは、住所ロック後に取得します。上限に達した場合はMakuakeの問い合わせ窓口へ相談が必要です。</p>
-<p>一度もダウンロードしていないのに回数制限エラーが表示される場合は、Makuakeへの提出書類が不足している可能性もあるため、担当キュレーターへ確認します。</p>
-<h2>All or Nothingで未達なら、住所CSVは取得できない</h2>
-<p>すべての終了プロジェクトで住所CSVが取得できるわけではありません。</p>
-<p>All or Nothing形式で目標金額に達せず終了した場合、プロジェクトは不成立です。この場合、サポーターへのリターン履行は発生せず、住所を含む個人情報もダウンロードできません。</p>
-<p>終了後にCSVが見つからない場合は、操作方法だけでなく、プロジェクトが成立しているかも確認します。</p>
-<h2>住所不備や確認事項があれば、Makuakeメッセージで連絡する</h2>
-<p>住所の番地が不足している、建物名が必要、離島配送条件を確認したい、質問回答とリターン内容が合わない。発送前には個別確認が必要になることがあります。</p>
-<p>サポーターのメールアドレスはCSVで提供されないため、直接連絡する場合はMakuake内のメッセージ機能を使います。</p>
-<p>Makuake公式では、メッセージ送信後3営業日が経過しても返信がない場合、まず実行者から電話またはSMSで連絡し、それでも連絡がつかない場合はMakuakeへ相談する流れを案内しています。</p>
+<p>Makuakeの終了後CSVには、注文ID、氏名、電話番号、住所、リターンID、リターン内容、質問と回答などが含まれます。つまり、住所録としてではなく、発送条件を照合する元データとして使えます。</p>
+<h2>公式ルールは、住所ロック後に最新CSVを取得する</h2>
+<p>現在のMakuakeでは、原則としてプロジェクト終了翌日からサポーター情報CSVを取得でき、公式案内では翌日12時以降が目安です。</p>
+<p>ただし、実行者が住所ロックするまで、サポーター自身がお届け先を変更できます。CSV取得後でも住所は変わり得るため、Makuakeは発送準備が整った段階で住所ロックし、その後に最新CSVを取得するよう案内しています。</p>
+<div class="misrec-block">
+<div class="misrec-header">公式ルールとして押さえる3点</div>
+<div class="misrec-row">
+<div class="misrec-cell label">取得開始</div>
+<div class="misrec-cell truth">原則として終了翌日。翌日12時以降が目安。</div>
+</div>
+<div class="misrec-row">
+<div class="misrec-cell label">住所確定</div>
+<div class="misrec-cell truth">発送準備が整ったら住所ロックし、その後に最新CSVを取得する。</div>
+</div>
+<div class="misrec-row">
+<div class="misrec-cell label">取得回数</div>
+<div class="misrec-cell truth">終了後CSVは3回まで。不要な確認ダウンロードは減らす。</div>
+</div>
+</div>
 <div class="callout">
-<strong>住所ロック後の個別変更は、自社の発送進行と一緒に管理する。</strong><br/>
-住所ロック後はサポーター自身で変更できません。変更相談が来た場合は、Makuakeメッセージで内容を確認し、まだ送り状作成前なのか、倉庫へ連携済みなのかを見ながら、どの発送データへ反映するかを管理します。
+<strong>ここまではMakuake公式ルールです。</strong><br/>
+以下の「正本管理」「照合」「変更反映」は、Makuakeの操作説明ではなく、発送事故を防ぐための実務上の管理方法として整理します。
 </div>
-<h2>発送前に、CSVと実際の出荷条件を照合する</h2>
-<p>住所ロックとCSV取得が終わったら、ファイルをそのまま配送会社へ渡す前に、実際のリターンと照合します。</p>
+<h2>発送前に、注文ID単位で5項目を照合する</h2>
+<p>CSVを取得したら、住所だけを見て送り状を作るのではなく、注文ID単位で出荷条件を照合します。</p>
 <ul class="prob-list">
-<li data-num="✓">住所ロック後に取得した最新CSVか</li>
-<li data-num="✓">リターンID・内容・数量が出荷商品と一致しているか</li>
-<li data-num="✓">サイズ・カラーなど質問回答の反映漏れがないか</li>
-<li data-num="✓">郵便番号・住所・電話番号に明らかな欠落がないか</li>
-<li data-num="✓">発送対象外・個別対応中の注文を混ぜていないか</li>
+<li data-num="1">配送先｜郵便番号・住所・氏名・電話番号</li>
+<li data-num="2">商品｜リターンID・リターン内容</li>
+<li data-num="3">数量｜同一リターン内の個数、セット内容</li>
+<li data-num="4">選択条件｜色・サイズなど質問回答で指定された内容</li>
+<li data-num="5">例外｜住所確認中、交換対応、発送保留などの個別対応</li>
 </ul>
-<p>CSVは住所を取得するためだけのファイルではありません。誰に、何を、どの条件で届けるかを確定する発送台帳として扱います。</p>
-<h2>配送準備と並行して、一般販売用ページの材料を整理する</h2>
-<p>一般販売を予定しているなら、配送中にMakuakeで選ばれたリターン、質問回答、問い合わせを整理しておきます。これらは、一般販売で何を説明すべきかを考える材料になります。</p>
-<p>ただし、Makuakeと楽天・Amazon・自社ECでは比較条件が変わります。Makuakeの実績や反応は残しつつ、次の販路で選ばれるための情報へ組み替えます。</p>
+<p>この5項目が一致して初めて、「発送できる1件」になります。</p>
+<p>特に質問回答で色やサイズを選ばせている場合、住所とリターン名だけでは出荷条件が確定しません。CSV上の回答と、実際に倉庫へ渡す商品コードやSKUを一致させます。</p>
+<h2>加工したファイルを増やすほど、「どれが最新か」を決める必要がある</h2>
+<p>実際の発送では、MakuakeのCSVをそのまま配送会社へ渡せない場合があります。</p>
+<p>倉庫用CSV、送り状ソフト用CSV、社内管理表などへ加工すると、同じ注文情報を持つファイルが複数できます。</p>
+<div class="misrec-block">
+<div class="misrec-header">実務上の管理ルール</div>
+<div class="misrec-row">
+<div class="misrec-cell label">正本を1つ決める</div>
+<div class="misrec-cell truth">住所変更や発送保留など、最新状態をどのファイルで管理するかを固定する。</div>
+</div>
+<div class="misrec-row">
+<div class="misrec-cell label">注文IDを残す</div>
+<div class="misrec-cell truth">加工後の倉庫用・送り状用データにも注文IDを残し、元データへ戻れるようにする。</div>
+</div>
+<div class="misrec-row">
+<div class="misrec-cell label">手修正を記録する</div>
+<div class="misrec-cell truth">住所、商品、数量などを変更した場合、誰が・何を・どこへ反映したかを1か所へ残す。</div>
+</div>
+</div>
+<p>誤配送は「CSVの情報が間違っていた」場合だけに起きるわけではありません。CSVから別ファイルへ移す途中で、変更が片方にしか反映されないことでも起こります。</p>
+<h2>住所ロック後の変更依頼は、発送の進行段階で扱いを分ける</h2>
+<p>住所ロック後は、サポーター自身で住所を変更できません。それでも、引っ越しなどで変更相談が来ることはあります。</p>
+<p>この場合は「変更できる・できない」を一律に決めるより、発送がどこまで進んでいるかを確認します。</p>
+<div class="misrec-block">
+<div class="misrec-header">変更依頼が来たときの確認順</div>
+<div class="misrec-row">
+<div class="misrec-cell label">送り状作成前</div>
+<div class="misrec-cell truth">変更内容を確認し、正本データと出荷データの両方へ反映する。</div>
+</div>
+<div class="misrec-row">
+<div class="misrec-cell label">倉庫・配送会社へ連携後</div>
+<div class="misrec-cell truth">出荷停止・データ差し替えが可能か確認し、対応結果を管理表へ残す。</div>
+</div>
+<div class="misrec-row">
+<div class="misrec-cell label">発送後</div>
+<div class="misrec-cell truth">配送会社の転送可否や受取人対応を確認し、実行者側だけで変更できる前提にしない。</div>
+</div>
+</div>
+<p>Makuake上のサポーター連絡にはメッセージ機能を使います。個別変更を受けた場合は、メッセージだけで完了扱いにせず、実際にどの発送データへ反映したかまで確認します。</p>
+<h2>倉庫へ渡す前に、「発送対象外」を混ぜていないか確認する</h2>
+<p>発送事故は、届け先や商品を間違えるだけではありません。まだ発送してはいけない注文を混ぜることもあります。</p>
+<ul class="prob-list">
+<li data-num="✓">住所確認中の注文を含めていないか</li>
+<li data-num="✓">個別対応中・発送保留の注文を含めていないか</li>
+<li data-num="✓">質問回答が不足している注文を含めていないか</li>
+<li data-num="✓">リターン内容と倉庫側SKUが対応しているか</li>
+<li data-num="✓">数量・セット内容が商品コードへ正しく展開されているか</li>
+</ul>
+<p>倉庫へ渡すファイルでは、発送対象と保留対象が同じ表に混在したままにならないようにします。発送可否が確定した注文だけを出荷データへ渡す方が確認しやすくなります。</p>
+<h2>発送後の問い合わせは、配送事故と商品理解の問題を分ける</h2>
+<p>発送が終わったあとに届く問い合わせも、一般販売へ移る前の重要なデータです。</p>
+<div class="misrec-block">
+<div class="misrec-header">問い合わせを分けて残す</div>
+<div class="misrec-row">
+<div class="misrec-cell label">配送の問題</div>
+<div class="misrec-cell truth">届かない、住所違い、破損、数量不足、商品違いなど。発送工程や検品の改善材料。</div>
+</div>
+<div class="misrec-row">
+<div class="misrec-cell label">商品理解の問題</div>
+<div class="misrec-cell truth">使い方が分からない、想像と違った、組み立て方が不明など。商品ページ・FAQ・同梱物の改善材料。</div>
+</div>
+</div>
+<p>両方を「問い合わせ」として一括りにすると、一般販売で何を直すべきかが見えにくくなります。</p>
+<p>配送事故なら発送工程を直し、商品理解の問題なら商品ページや説明物を直す。配送後の声を改善先まで分けて残します。</p>
+<h2>配送・問い合わせ対応で、一般販売用ページへ持っていく情報を残す</h2>
+<p>Makuake後に楽天・Amazon・自社ECで一般販売するなら、発送実務で得た情報もページ改善へ使えます。</p>
+<p>選ばれたリターン、質問回答、問い合わせ、誤解された点、想定外の使い方。これらは一般販売で「何を先に説明すべきか」を決める材料になります。</p>
+<p>Makuakeで使ったページをそのまま移すのではなく、配送後に分かったことまで加えて、次の販路で比較されるための情報へ組み替えます。</p>
 <div class="cta-block">
 <div class="cta-block-label">Makuake後の一般販売</div>
-<div class="cta-block-title">配送を進めながら、一般販売用ページの準備も進める。</div>
-<div class="cta-block-sub">Makuakeで得た実績・リターン反応・問い合わせを整理し、楽天・Amazon・自社ECで比較されるページへ再構成します。</div>
+<div class="cta-block-title">配送後に分かったことまで、一般販売用ページへ残す。</div>
+<div class="cta-block-sub">Makuakeで得た実績・質問・問い合わせを整理し、楽天・Amazon・自社ECで比較されるページへ再構成します。</div>
 <a class="cta-btn" href="https://konishi-marketing.com/makuake/after-makuake.html?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=makuake-shuryo-go-address-csv&amp;utm_content=mid_cta">Makuake後の一般販売支援を見る</a>
-<div class="cta-note">販売開始前の段階から相談できます。</div>
+<div class="cta-note">配送中の準備段階から相談できます。</div>
 </div>
-<h2>Makuake終了後の住所CSV｜発送までの7手順</h2>
+<h2>Makuake終了後の発送データ確定｜7つの確認</h2>
 <ul class="prob-list">
-<li data-num="1">終了翌日12時以降にCSVを取得できることを確認する</li>
-<li data-num="2">製造・検品・梱包・配送会社の準備を進める</li>
-<li data-num="3">発送準備が整ったら住所ロックする</li>
-<li data-num="4">住所ロック後に最新CSVを取得する</li>
-<li data-num="5">リターン内容・質問回答・配送先を出荷条件と照合する</li>
-<li data-num="6">不備があればMakuakeメッセージ等で個別確認する</li>
-<li data-num="7">確定した発送データで配送へ進む</li>
+<li data-num="1">発送準備が整った段階で住所ロックする</li>
+<li data-num="2">住所ロック後に最新のMakuake CSVを取得する</li>
+<li data-num="3">注文ID単位で住所・商品・数量・選択条件を照合する</li>
+<li data-num="4">発送保留・個別対応中の注文を分ける</li>
+<li data-num="5">倉庫用・送り状用へ加工しても注文IDを残す</li>
+<li data-num="6">住所や商品条件の変更は正本と出荷データの両方へ反映する</li>
+<li data-num="7">配送後の問い合わせを、発送工程と商品説明の改善へ分けて残す</li>
 </ul>
-<p>住所CSVは、ダウンロードできた時点で発送データになるわけではありません。</p>
-<p>現在のMakuakeでは、住所ロック前ならサポーター自身が住所変更できます。発送準備が整ってから住所をロックし、その後に取得した最新CSVを使う。ここまでが誤配送を避けるための一続きの手順です。</p>
+<p>住所CSVは、発送作業の入口です。</p>
+<p>発送事故を減らすには、その先で「誰に・何を・何個・どの条件で届けるか」を1注文単位で確定し、変更があれば最新状態を1か所へ集約します。</p>
+<p>この管理ができていれば、Makuakeの配送を終えたあとも、一般販売で使える問い合わせや購入後データを残しやすくなります。</p>
 <div class="callout">
-<strong>公式情報の確認先</strong><br/>
-この記事の制度・操作部分は、2026年8月8日時点のMakuake公式ヘルプをもとに整理しています。運用は変更される可能性があるため、実際の発送時には最新情報も確認してください。<br/>
-<a href="https://mkhelp.makuake.com/hc/ja/articles/13793902630169">Makuake公式「プロジェクト終了後、住所CSVはどのようにダウンロードできますか？」</a>
+<strong>公式情報と実務上の提案を分けています。</strong><br/>
+住所CSVの取得時期、住所ロック、CSVの項目、3回のダウンロード制限は、2026年8月8日時点のMakuake公式ヘルプを確認しています。正本管理、注文IDでの照合、変更履歴の一元管理は、発送事故防止のための実務上の管理方法です。<br/>
+<a href="https://mkhelp.makuake.com/hc/ja/articles/13793902630169">Makuake公式｜終了後の住所CSVのダウンロード方法</a><br/>
+<a href="https://mkhelp.makuake.com/hc/ja/articles/13898871536793">Makuake公式｜サポーターは住所をいつまで変更できるか</a><br/>
+<a href="https://mkhelp.makuake.com/hc/ja/articles/24229062038937">Makuake公式｜サポーター情報CSVで確認できる項目</a>
 </div>
 </div>
 <div class="faq-section" id="article-faq">
 <div class="faq-label">よくある質問</div>
-<div class="faq-item"><div class="faq-q">Makuake終了後、住所CSVはいつダウンロードできますか？</div><div class="faq-a">現在のMakuakeでは、原則としてプロジェクト終了の翌日からダウンロードできます。公式案内では翌日12時以降が目安です。発送に使用する場合は、先に住所ロックを行ってから最新のCSVを取得します。</div></div><div class="faq-item"><div class="faq-q">住所CSVをダウンロードしたあと、サポーターが住所を変更することはありますか？</div><div class="faq-a">住所ロック前であれば変更できます。現在のMakuakeでは、実行者が住所ロックするまでサポーター自身がお届け先を変更できます。CSV取得後に変更される可能性があるため、発送用データは住所ロック後に取得します。</div></div><div class="faq-item"><div class="faq-q">Makuake終了後のCSVは何回までダウンロードできますか？</div><div class="faq-a">終了後のサポーター情報CSVは3回までです。上限に達した場合はMakuakeの問い合わせ窓口へ相談する必要があります。</div></div><div class="faq-item"><div class="faq-q">住所CSVにサポーターのメールアドレスは入っていますか？</div><div class="faq-a">入りません。終了後のCSVには氏名、電話番号、郵便番号、住所、リターン情報、配送予定月などが含まれますが、メールアドレスは提供されません。個別連絡にはMakuakeのメッセージ機能を使います。</div></div><div class="faq-item"><div class="faq-q">All or Nothingで目標未達だった場合も住所CSVを取得できますか？</div><div class="faq-a">取得できません。All or Nothing形式で目標未達のまま終了した場合はプロジェクトが不成立となるため、サポーターの個人情報はダウンロードできません。</div></div>
+<div class="faq-item"><div class="faq-q">Makuake終了後、住所CSVはいつ取得できますか？</div><div class="faq-a">現在のMakuakeでは、原則としてプロジェクト終了の翌日から取得できます。公式案内では翌日12時以降が目安です。ただし、発送に使う最終データは、発送準備が整ったあとに住所ロックを行い、その後に取得します。</div></div><div class="faq-item"><div class="faq-q">住所CSVを取ったら、そのまま配送会社へ渡してもいいですか？</div><div class="faq-a">住所だけでなく、注文ID、リターン、数量、質問回答、個別対応の有無まで出荷条件と照合してから使う方が安全です。CSV取得後に別ファイルへ加工する場合は、どのファイルを最新の正本として扱うかも決めます。</div></div><div class="faq-item"><div class="faq-q">住所ロック後にサポーターから住所変更の連絡が来たらどうしますか？</div><div class="faq-a">まず、送り状作成前・倉庫連携後・発送後のどの段階かを確認します。変更可能な段階なら発送データへ反映し、反映先と対応状況を1か所で管理します。Makuake上の連絡にはメッセージ機能を使います。</div></div><div class="faq-item"><div class="faq-q">Makuake終了後のCSVは何回までダウンロードできますか？</div><div class="faq-a">プロジェクト終了後のサポーター情報CSVは3回までです。不要な確認ダウンロードを減らし、発送用の最新CSVを確実に取得できるようにしておきます。</div></div><div class="faq-item"><div class="faq-q">配送後の問い合わせは一般販売にも使えますか？</div><div class="faq-a">使えます。届かない、使い方が分かりにくい、想像と違った、梱包で迷ったといった問い合わせは、一般販売用の商品ページ、FAQ、同梱物、配送案内を改善する材料になります。</div></div>
 </div>
 <div class="faq-section nextstep-faq">
 <div class="faq-label">Next Step</div>
 <div class="faq-item">
-<div class="faq-q">Makuake後の楽天・Amazon・自社EC向けページも依頼できますか？</div>
-<div class="faq-a">対応可能です。Makuakeの配送を進めながら、一般販売先で比較されるための商品ページを準備できます。 <a href="https://konishi-marketing.com/makuake/after-makuake.html">対応範囲と料金は、Makuake後の一般販売支援ページで確認できます。</a></div>
+<div class="faq-q">Makuake後の一般販売用ページは配送中から準備できますか？</div>
+<div class="faq-a">準備できます。Makuakeで得た実績、選ばれたリターン、質問回答、配送後の問い合わせを整理し、楽天・Amazon・自社ECで比較される条件に合わせてページを組み替えます。販売開始はMakuakeのルールに従います。 <a href="https://konishi-marketing.com/makuake/after-makuake.html">対応範囲と料金は、Makuake後の一般販売支援ページで確認できます。</a></div>
 </div>
 <div class="faq-item">
 <div class="faq-q">配送完了前でも相談できますか？</div>
-<div class="faq-a">相談できます。Makuakeページ、一般販売予定の販路、現在の製造・配送状況が分かる段階で準備を始められます。実際の販売開始はMakuakeの遵守事項を確認して進めます。</div>
+<div class="faq-a">相談できます。Makuakeページ、一般販売予定の販路、現在の製造・配送状況が分かる段階で準備を始められます。</div>
 </div>
 <div class="faq-item">
 <div class="faq-q">相談や見積もり作成に費用はかかりますか？</div>
@@ -390,10 +409,10 @@ html,body{background-color:#f8f7f4!important;color:#1e1d1a}
 </div>
 <div class="cta-block" style="margin:0;">
 <div class="cta-block-label">Makuake後の一般販売相談</div>
-<div class="cta-block-title">配送中に準備し、完了後の一般販売へつなげる。</div>
-<div class="cta-block-sub">Makuakeページと一般販売予定の販路、現在の製造・配送状況を送ってください。Makuakeで得た実績や反応を残しながら、一般販売用の商品ページを準備します。</div>
+<div class="cta-block-title">配送後の実データを、一般販売のページ改善へつなげる。</div>
+<div class="cta-block-sub">Makuakeページ、一般販売予定の販路、配送後に集まった問い合わせやレビューを確認し、次の販路で選ばれるページへ組み替えます。</div>
 <a class="cta-btn" href="https://konishi-marketing.com/makuake/after-makuake.html?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=makuake-shuryo-go-address-csv&amp;utm_content=bottom_cta#contact">一般販売への移行を相談する</a>
-<div class="cta-note">販売開始前の相談も可能です。相談・見積もり作成に費用はかかりません。</div>
+<div class="cta-note">配送完了前の相談も可能です。相談・見積もり作成に費用はかかりません。</div>
 </div>
 <div class="author-profile">
 <div class="author-profile-label">この記事を書いた人</div>
@@ -412,7 +431,7 @@ html,body{background-color:#f8f7f4!important;color:#1e1d1a}
 <div class="related-section">
 <div class="related-label">関連記事</div>
 <ul class="related-list">
-<li><a href="https://konishi-marketing.com/articles/makuake-shuryo-go-saisho-ni-yarukoto.html">Makuake終了後に最初にやること｜住所データ・入金・製造・配送の順番</a></li>
+<li><a href="https://konishi-marketing.com/articles/makuake-shuryo-go-saisho-ni-yarukoto.html">Makuake終了後、一般販売へ進む前に決める4つのこと</a></li>
 <li><a href="https://konishi-marketing.com/articles/makuake-ippan-hanbai-urenai-kozo.html">Makuakeでは売れたのに一般販売で止まる理由</a></li>
 <li><a href="https://konishi-marketing.com/articles/makuake-shuryo-go-rakuten-amazon-tenkai-sekkei.html">Makuakeで売れたのに楽天・Amazonで売れないページが見る場所</a></li>
 </ul>
