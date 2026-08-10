@@ -101,6 +101,9 @@ a{color:inherit;}
 .cat-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;border-bottom:2px solid var(--gold);padding-bottom:.75rem;margin-bottom:1px;}
 .cat-title{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--navy);line-height:1.4;}
 .cat-note{font-size:.75rem;color:var(--g400);line-height:1.6;}
+.cat-actions{display:flex;align-items:center;gap:.85rem;flex-wrap:wrap;justify-content:flex-end;}
+.cat-list-link{font-size:.76rem;font-weight:700;color:var(--navy);text-decoration:none;letter-spacing:.03em;white-space:nowrap;}
+.cat-list-link:hover{text-decoration:underline;text-underline-offset:4px;}
 .article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--g200);border:1px solid var(--g200);border-top:none;}
 .article-card{background:var(--white);padding:1.35rem;text-decoration:none;min-height:180px;display:flex;flex-direction:column;transition:background .18s;}
 .article-card:hover{background:var(--paper);}
@@ -161,7 +164,7 @@ a{color:inherit;}
 .foot-achieve{font-size:.68rem;color:var(--gold-lt);font-weight:700;margin-top:3px;}
 .foot-link{font-size:.72rem;color:rgba(255,255,255,.3);text-decoration:none;}
 @media(max-width:900px){.channel-grid{grid-template-columns:repeat(2,1fr);}.featured-wrap{grid-template-columns:1fr;}.article-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:680px){.page{max-width:none;}.hd{padding:.75rem 1.25rem;}.hd-nav a:not(.hd-cta){display:none;}.hero{padding:4rem 1.25rem 3.5rem;}.hero::after{display:none;}.statement,.sec,.form-sec,.cta-band,.author-strip{padding-left:1.25rem;padding-right:1.25rem;}.channel-grid,.article-grid,.guide-box{grid-template-columns:1fr;}.featured-main{padding:1.75rem;min-height:auto;}.cat-head{align-items:flex-start;flex-direction:column;}.author-box{align-items:flex-start;}.foot{flex-direction:column;align-items:flex-start;}}
+@media(max-width:680px){.page{max-width:none;}.hd{padding:.75rem 1.25rem;}.hd-nav a:not(.hd-cta){display:none;}.hero{padding:4rem 1.25rem 3.5rem;}.hero::after{display:none;}.statement,.sec,.form-sec,.cta-band,.author-strip{padding-left:1.25rem;padding-right:1.25rem;}.channel-grid,.article-grid,.guide-box{grid-template-columns:1fr;}.featured-main{padding:1.75rem;min-height:auto;}.cat-head{align-items:flex-start;flex-direction:column;}.cat-actions{justify-content:flex-start;}.author-box{align-items:flex-start;}.foot{flex-direction:column;align-items:flex-start;}}
 
 /* robust consult type radios */
 .radio-card input[type="radio"]{display:block!important;width:auto!important;height:auto!important;margin:.25rem .25rem 0 0!important;accent-color:var(--navy);flex-shrink:0;position:static!important;opacity:1!important;}
@@ -194,6 +197,23 @@ a{color:inherit;}
     "name": "小西マーケティング",
     "url": "https://konishi-marketing.com"
   },
+  "hasPart": [
+    {
+      "@type": "CollectionPage",
+      "name": "楽天市場の記事一覧",
+      "url": "https://konishi-marketing.com/articles/rakuten.html"
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Yahoo!ショッピングの記事一覧",
+      "url": "https://konishi-marketing.com/articles/yahoo.html"
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Makuakeの記事一覧",
+      "url": "https://konishi-marketing.com/articles/makuake.html"
+    }
+  ],
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [
@@ -285,17 +305,17 @@ a{color:inherit;}
 <h2 class="sec-h2">まず、売り場を選ぶ。</h2>
 <p class="sec-p">楽天で起きる離脱と、Meta広告から自社ECで起きる離脱は同じではありません。検索して比較している人と、SNSから偶然入ってきた人では、渡すべき情報の順番が変わります。</p>
 <div class="channel-grid">
-<a class="channel-card" href="#rakuten">
+<a class="channel-card" href="https://konishi-marketing.com/articles/rakuten.html">
 <span class="channel-en">Rakuten</span>
 <div class="channel-name">楽天市場</div>
 <p class="channel-desc">検索一覧、サムネイル、商品ページ、レビュー。比較される状態の中で、どう選ばれるかを整理します。</p>
-<span class="channel-link">記事を見る →</span>
+<span class="channel-link">楽天の記事一覧へ →</span>
 </a>
-<a class="channel-card" href="#yahoo">
+<a class="channel-card" href="https://konishi-marketing.com/articles/yahoo.html">
 <span class="channel-en">Yahoo</span>
 <div class="channel-name">Yahoo!ショッピング</div>
 <p class="channel-desc">価格、ポイント、モール内導線。PayPay経済圏の中で、購入に進む理由が止まる場所を整理します。</p>
-<span class="channel-link">記事を見る →</span>
+<span class="channel-link">Yahoo!の記事一覧へ →</span>
 </a>
 <a class="channel-card" href="#amazon">
 <span class="channel-en">Amazon</span>
@@ -309,11 +329,11 @@ a{color:inherit;}
 <p class="channel-desc">Meta広告、記事LP、本LP、購入後導線。広告流入から購入まで、どこで買う理由が止まるかを整理します。</p>
 <span class="channel-link">記事を見る →</span>
 </a>
-<a class="channel-card" href="#makuake">
+<a class="channel-card" href="https://konishi-marketing.com/articles/makuake.html">
 <span class="channel-en">Crowdfunding</span>
 <div class="channel-name">Makuake<br/>クラファン</div>
 <p class="channel-desc">企画、プロジェクトページ、応援購入、ページ制作、終了後の一般販売。Makuake前後の判断を整理します。</p>
-<span class="channel-link">記事を見る →</span>
+<span class="channel-link">Makuakeの記事一覧へ →</span>
 </a>
 </div>
 </div>
@@ -384,9 +404,9 @@ a{color:inherit;}
 <div class="inner">
 <span class="sec-label">Articles</span>
 <h2 class="sec-h2">記事一覧。</h2>
-<p class="sec-p">主な公開記事を、販売チャネル別に整理しています。楽天、Yahoo!ショッピング、Amazon、自社EC、Makuake。それぞれの売り場で、次に確認すべき記事を選べます。</p>
+<p class="sec-p">主な公開記事を、販売チャネル別に整理しています。楽天、Yahoo!ショッピング、Makuakeは専用の記事一覧ページから公開済み記事をまとめて確認できます。Amazon、自社ECも含め、ここでは各売り場の入口になる記事を選べます。</p>
 <div class="article-section" id="rakuten">
-<div class="cat-head"><div class="cat-title">楽天市場</div><div class="cat-note">検索一覧、サムネイル、商品ページ転換率</div></div>
+<div class="cat-head"><div class="cat-title">楽天市場</div><div class="cat-actions"><div class="cat-note">検索一覧、サムネイル、商品ページ転換率</div><a class="cat-list-link" href="https://konishi-marketing.com/articles/rakuten.html">楽天の記事一覧はこちら →</a></div></div>
 <div class="article-grid">
 <a class="article-card" href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">
 <span class="article-tag">楽天市場 / 転換率</span>
@@ -415,7 +435,7 @@ a{color:inherit;}
 </div>
 </div>
 <div class="article-section" id="yahoo">
-<div class="cat-head"><div class="cat-title">Yahoo!ショッピング</div><div class="cat-note">価格、ポイント、モール内比較</div></div>
+<div class="cat-head"><div class="cat-title">Yahoo!ショッピング</div><div class="cat-actions"><div class="cat-note">価格、ポイント、モール内比較</div><a class="cat-list-link" href="https://konishi-marketing.com/articles/yahoo.html">Yahoo!の記事一覧はこちら →</a></div></div>
 <div class="article-grid">
 <a class="article-card" href="https://konishi-marketing.com/articles/yahoo-urenai-shohin-page-kyotsuten.html">
 <span class="article-tag">Yahoo! / 商品ページ</span>
@@ -490,7 +510,7 @@ a{color:inherit;}
 </div>
 </div>
 <div class="article-section" id="makuake">
-<div class="cat-head"><div class="cat-title">Makuake（クラファン）</div><div class="cat-note">企画、ページ制作、応援購入、終了後の一般販売</div></div>
+<div class="cat-head"><div class="cat-title">Makuake（クラファン）</div><div class="cat-actions"><div class="cat-note">企画、ページ制作、応援購入、終了後の一般販売</div><a class="cat-list-link" href="https://konishi-marketing.com/articles/makuake.html">Makuakeの記事一覧はこちら →</a></div></div>
 <div class="article-grid"><a class="article-card" href="https://konishi-marketing.com/articles/makuake-shien-atsumara-nai-kyotsuten.html">
 <span class="article-tag">Makuake / 応援購入</span>
 <div class="article-title">Makuakeでアクセスはあるのに応援購入が増えない理由</div>
