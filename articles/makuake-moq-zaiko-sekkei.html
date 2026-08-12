@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="only light" name="color-scheme"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://konishi-marketing.com/articles/makuake-moq-zaiko-sekkei.html" rel="canonical"/>
+<title>MakuakeのMOQはどう設計する？最低発注数と応援購入数がずれたときの在庫判断｜小西マーケティング</title>
+<meta content="Makuakeで最低発注数（MOQ）と応援購入数がずれたとき、在庫をどう考えるか。総数ではなく色・サイズなどSKU別MOQ、一般販売で吸収できる残数、先行支出まで分けて、公開前に確認する方法を解説します。" name="description"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="MakuakeのMOQはどう設計する？最低発注数と応援購入数がずれたときの在庫判断"/>
+<meta property="og:description" content="Makuakeで最低発注数（MOQ）と応援購入数がずれたとき、在庫をどう考えるか。総数ではなく色・サイズなどSKU別MOQ、一般販売で吸収できる残数、先行支出まで分けて、公開前に確認する方法を解説します。"/>
+<meta property="og:url" content="https://konishi-marketing.com/articles/makuake-moq-zaiko-sekkei.html"/>
+<meta property="og:site_name" content="小西マーケティング"/>
+<meta property="og:image" content="https://konishi-marketing.com/images/konishi.JPG"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="MakuakeのMOQはどう設計する？最低発注数と応援購入数がずれたときの在庫判断"/>
+<meta name="twitter:description" content="Makuakeで最低発注数（MOQ）と応援購入数がずれたとき、在庫をどう考えるか。総数ではなく色・サイズなどSKU別MOQ、一般販売で吸収できる残数、先行支出まで分けて、公開前に確認する方法を解説します。"/>
+<meta name="twitter:image" content="https://konishi-marketing.com/images/konishi.JPG"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Makuakeなら、応援購入数を見てから発注できるので在庫リスクはなくなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "在庫リスクは抑えやすくなりますが、なくなるとは限りません。仕入先や工場にMOQ（最低発注数）がある場合、応援購入数がMOQを下回れば、その差分を在庫として持つか、発注条件を見直す必要があります。"}}, {"@type": "Question", "name": "MOQとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "MOQはMinimum Order Quantityの略で、仕入先や工場が1回の発注で求める最低数量です。商品全体で1つのMOQではなく、色・サイズ・型番ごとに最低数量が設定される場合もあるため、見積書や契約条件で確認します。"}}, {"@type": "Question", "name": "Makuakeの応援購入数がMOQを下回ったらどうすればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "差分を一般販売の初期在庫として持てるか、必要な現金を用意できるか、保管や販売計画まで含めて判断します。吸収できない場合は、公開前にSKU数を減らす、MOQを交渉する、発注条件を変更するなどの対応を検討します。"}}, {"@type": "Question", "name": "Makuakeの目標金額は、MOQを満たす金額に設定すればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "目標金額とMOQは別の数字です。目標金額はプロジェクト上の達成基準、MOQは製造・仕入れ条件です。MOQを満たすために必要な数量や資金は確認しますが、目標金額へ機械的に置き換えません。"}}, {"@type": "Question", "name": "色違いやサイズ違いがある商品では、何を確認すればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "総応援購入数だけでなく、色・サイズ・型番ごとのMOQを確認します。全体では必要数量を超えていても、特定SKUだけ最低発注数に届かず、余剰在庫が生まれることがあります。"}}, {"@type": "Question", "name": "余ったMOQ分は、Makuake終了後の一般販売で売れば問題ありませんか？", "acceptedAnswer": {"@type": "Answer", "text": "一般販売で吸収できる見込みがあり、資金・保管・販売価格まで成立するなら選択肢になります。ただし、Makuakeの応援購入実績をそのまま一般販売需要へ置き換えず、一般販売での需要を別に見積もります。"}}, {"@type": "Question", "name": "Makuakeページ制作でMOQや在庫条件も確認しますか？", "acceptedAnswer": {"@type": "Answer", "text": "価格やリターン数量に影響する場合は確認します。商品仕様、一般販売予定価格、MOQ、SKU別条件、原価・送料、公開初日の計画を確認し、リターン設計や価格と矛盾しない状態へ整えます。"}}, {"@type": "Question", "name": "公開前のMakuakeページ制作について相談する場合、何を送ればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "商品資料、仕入先・工場の見積書、MOQやSKU別の発注条件、一般販売予定価格、原価・送料、審査状況、公開予定日、既存写真・動画を送ってください。公開中プロジェクトへの途中対応は行っていません。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "MakuakeのMOQはどう設計する？最低発注数と応援購入数がずれたときの在庫判断", "description": "Makuakeで最低発注数（MOQ）と応援購入数がずれたとき、在庫をどう考えるか。総数ではなく色・サイズなどSKU別MOQ、一般販売で吸収できる残数、先行支出まで分けて、公開前に確認する方法を解説します。", "image": "https://konishi-marketing.com/images/konishi.JPG", "url": "https://konishi-marketing.com/articles/makuake-moq-zaiko-sekkei.html", "datePublished": "2026-08-12", "dateModified": "2026-08-12", "author": {"@type": "Person", "name": "小西 秀人", "url": "https://konishi-marketing.com"}, "publisher": {"@type": "Organization", "name": "小西マーケティング", "url": "https://konishi-marketing.com"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://konishi-marketing.com/"}, {"@type": "ListItem", "position": 2, "name": "オウンドメディア", "item": "https://konishi-marketing.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "Makuake", "item": "https://konishi-marketing.com/articles/makuake.html"}, {"@type": "ListItem", "position": 4, "name": "MakuakeのMOQはどう設計する？最低発注数と応援購入数がずれたときの在庫判断", "item": "https://konishi-marketing.com/articles/makuake-moq-zaiko-sekkei.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SWS3R3K4W5');</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif;color-scheme:only light}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;background:#f8f7f4}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.breadcrumb{font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto}
+.breadcrumb a{color:#6b6860;text-decoration:none}.breadcrumb span.sep{margin:0 .45rem;color:#a09e97}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--gold-light);margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.8);line-height:2;margin-bottom:1.5rem}.hero-meta{font-size:.8rem;color:rgba(255,255,255,.48)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy);line-height:1.5;margin:4.2rem 0 1.4rem;padding-top:1.35rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0;padding-top:0;border-top:none}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.05;margin-bottom:1.25rem}.article-body strong{color:var(--navy)}
+.article-body a{color:var(--navy);text-decoration:underline;text-underline-offset:2px}
+.insight{background:var(--navy);color:var(--white);padding:1.35rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}.callout strong{color:var(--navy)}
+.prob-list{list-style:none;margin:1rem 0 1.5rem}.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.decision-table{width:100%;border-collapse:collapse;margin:1.5rem 0 1.75rem;font-size:.9rem;line-height:1.8}.decision-table th{background:var(--navy);color:var(--white);text-align:left;padding:.8rem .9rem;border:1px solid var(--navy-light)}.decision-table td{padding:.8rem .9rem;border:1px solid var(--gray-200);vertical-align:top;color:var(--gray-800)}.decision-table tr:nth-child(even) td{background:var(--off-white)}
+.source-note{font-size:.82rem!important;color:var(--gray-600)!important;line-height:1.85!important;background:var(--gray-100);padding:1rem 1.15rem;margin:1.5rem 0!important}.source-note a{font-size:.82rem}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;color:var(--gold-light);margin-bottom:.75rem}.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.72);line-height:1.9;margin-bottom:1.5rem}.cta-btn{display:inline-block;background:var(--gold);color:var(--navy)!important;font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none!important;letter-spacing:.04em;border-bottom:3px solid #a8893a}.cta-note{font-size:.75rem;color:rgba(255,255,255,.45);margin-top:.75rem}
+.faq-section{padding:2.5rem;border-top:1px solid var(--gray-200)}.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;color:var(--gold);margin-bottom:1.5rem}.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+#article-faq{background:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200)}#article-faq .faq-label{color:var(--navy)}#article-faq .faq-item{border-bottom:1px solid var(--gray-200)}#article-faq .faq-a{background:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem}
+.nextstep-faq{background:var(--navy-light);border-top:none}.nextstep-faq .faq-label{color:var(--gold-light)}.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}.nextstep-faq .faq-q{color:var(--white)}.nextstep-faq .faq-q::before{color:var(--gold-light)}.nextstep-faq .faq-a{color:rgba(255,255,255,.8)}.nextstep-faq .faq-a::before{color:var(--gold-light)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;color:var(--gray-400);margin-bottom:1rem}.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.author-proof-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin:1rem 0 1.25rem;border:1px solid var(--gray-200);background:var(--gray-200)}.author-proof-item{min-width:0;padding:1rem 1.1rem;background:var(--white)}.author-proof-label{display:block;margin-bottom:.35rem;color:var(--gray-600);font-size:.72rem;font-weight:700;line-height:1.5}.author-proof-value{display:block;color:var(--navy);font-size:1.35rem;font-weight:700;line-height:1.35;letter-spacing:-.025em}.author-proof-note{display:block;margin-top:.35rem;color:var(--gray-600);font-size:.72rem;line-height:1.65}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}.related-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;color:var(--gray-400);margin-bottom:1.25rem}.related-list{list-style:none}.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}.related-list li:last-child{border-bottom:none}.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.decision-table{font-size:.82rem}.decision-table th,.decision-table td{padding:.65rem .55rem}.author-proof-grid{grid-template-columns:1fr}.author-proof-value{font-size:1.25rem}}
+</style>
+</head>
+<body>
+<div class="site-wrap">
+<header class="site-header"><a href="https://konishi-marketing.com/">小西マーケティング</a></header>
+<nav class="breadcrumb" aria-label="パンくず">
+<a href="https://konishi-marketing.com/">ホーム</a><span class="sep">›</span>
+<a href="https://konishi-marketing.com/articles/">オウンドメディア</a><span class="sep">›</span>
+<a href="https://konishi-marketing.com/articles/makuake.html">Makuake</a><span class="sep">›</span>
+<span aria-current="page">MakuakeのMOQはどう設計する？最低発注数と応援購入数がずれたときの在庫判断</span>
+</nav>
+
+<div class="hero">
+<span class="hero-category">Makuake / MOQ / 在庫設計</span>
+<h1 class="hero-title">MakuakeのMOQはどう設計する？最低発注数と応援購入数がずれたときの在庫判断</h1>
+<p class="hero-lead">Makuakeは、応援購入数を見てから量産しやすいため在庫リスクを抑えられます。ただ、工場や仕入先にMOQがある商品では、応援購入数と同じ数量だけ発注できるとは限りません。総数だけでなく色・サイズなどSKU別の最低発注数、MOQとの差分を一般販売で吸収できるか、発注前に必要な現金まで公開前に確認します。</p>
+<p class="hero-meta">小西マーケティング｜2026.08</p>
+</div>
+
+<div class="author-box">
+この記事は、<strong>担当した全60プロジェクトの平均応援購入額710万円</strong>（目標到達の有無を問わず含む全案件平均）、<strong>累計4億円超・最高6,600万円・Makuake総合1位3回</strong>の実績を持つ小西秀人が、20年以上のEC実務経験をもとに執筆しています。
+</div>
+
+<main class="article-body">
+<h2>結論｜Makuakeは在庫リスクを減らせるが、MOQの差分までは消えない</h2>
+
+<p>Makuakeは、一般販売前に応援購入を受け付けられるため、需要を見てから量産しやすい販売方法です。</p>
+
+<p>Makuake公式も、先行販売では「売れる見込み」を確認してから量産でき、在庫リスクを抑えやすいことをメリットとして挙げています。</p>
+
+<p>ただし、工場や仕入先にMOQがある商品では、応援購入された数量だけを発注できるとは限りません。</p>
+
+<div class="insight">
+<em>応援購入数が分かってから発注できることと、応援購入数と同じ数量だけ発注できることは別です。</em><br/>
+MOQが500個で応援購入が320個なら、残る180個をどう扱うかまで決めて初めて在庫リスクを計算できます。
+</div>
+
+<p>そのため公開前に見るべきなのは、単純な「売れるか」だけではありません。</p>
+
+<p><strong>最低発注数、SKU別の最低数量、発注時に必要な現金、MOQとの差分を一般販売で吸収できるか</strong>まで確認します。</p>
+
+<p class="source-note"><strong>Makuake公式：</strong><br/>
+<a href="https://lp-mk-2.makuake.com/article/070" rel="noopener">先行販売とは？ 新商品の在庫リスクを抑え熱狂的ファンを作る方法</a><br/>
+<a href="https://lp-mk-2.makuake.com/article/061" rel="noopener">Makuake成功事例20選｜ジャンル別に学ぶプロジェクト設計のポイント</a>
+</p>
+
+<h2>1｜最初に「MOQが何に対して設定されているか」を確認する</h2>
+
+<p>MOQは、見積書に「500個」と書いてあれば終わりではありません。</p>
+
+<p>実際の発注条件では、商品全体、色、サイズ、型番など、どの単位に最低数量が設定されているかを確認します。</p>
+
+<table class="decision-table">
+<thead><tr><th>確認する条件</th><th>公開前に聞くこと</th></tr></thead>
+<tbody>
+<tr><td>商品全体のMOQ</td><td>全色・全サイズを合計して最低数量を満たせばよいか</td></tr>
+<tr><td>色別MOQ</td><td>ブラック300個、ホワイト300個のように色ごとに最低数量があるか</td></tr>
+<tr><td>サイズ別MOQ</td><td>S・M・Lなどサイズごとに最低数量があるか</td></tr>
+<tr><td>発注単位</td><td>MOQを超えた後は1個単位か、50個単位などの刻みがあるか</td></tr>
+<tr><td>最低発注金額</td><td>数量とは別に、1回の注文金額にも下限があるか</td></tr>
+</tbody>
+</table>
+
+<p>ここを曖昧にしたままリターンを作ると、応援購入数は足りているのに、特定の色だけMOQに届かないということが起こります。</p>
+
+<div class="callout">
+<strong>例：</strong><br/>
+2色の商品で合計500件の応援購入があっても、ブラック400件・ホワイト100件と分かれ、色別MOQが300個なら、ホワイトは200個分を余分に発注する必要があります。
+</div>
+
+<p>総応援購入数だけで「MOQは超えた」と判断しないことが重要です。</p>
+
+<h2>2｜MOQとの差分は、一般販売で持つ初期在庫として計算する</h2>
+
+<p>応援購入数がMOQを下回った場合、差分をすべて「失敗」と考える必要はありません。</p>
+
+<p>一般販売へ進む商品で、その差分を初期在庫として販売できるなら、Makuake分と一般販売分を同じ発注にまとめる判断もできます。</p>
+
+<p>たとえばMOQ500個、Makuakeで320個なら、差分は180個です。</p>
+
+<table class="decision-table">
+<thead><tr><th>数字</th><th>例</th><th>確認する意味</th></tr></thead>
+<tbody>
+<tr><td>MOQ</td><td>500個</td><td>工場へ最低限発注する数量</td></tr>
+<tr><td>Makuakeで必要な数量</td><td>320個</td><td>サポーターへ届ける分</td></tr>
+<tr><td>MOQとの差分</td><td>180個</td><td>一般販売在庫として持つ候補</td></tr>
+</tbody>
+</table>
+
+<p>ここで見るのは「180個ならそのうち売れるだろう」ではありません。</p>
+
+<ul class="prob-list">
+<li data-num="1"><strong>一般販売で180個を売る見込みがあるか：</strong>Makuakeの反応をそのまま一般販売需要へ置き換えない。</li>
+<li data-num="2"><strong>一般販売価格で利益が残るか：</strong>Makuake価格とは別に、一般販売で継続できる価格を確認する。</li>
+<li data-num="3"><strong>保管できるか：</strong>商品の大きさ、保管期間、倉庫費用を確認する。</li>
+<li data-num="4"><strong>追加発注までのリードタイム：</strong>初回で多めに持つか、一般販売後に追加発注するかを判断する。</li>
+</ul>
+
+<p>Makuake公式の事例でも、先行販売で先に売上を立てて仕入れ数を決めたり、「先行販売→テストマーケティング→成功したら在庫を持つ」へ切り替えた企業が紹介されています。</p>
+
+<p>重要なのは、Makuakeで売れた数量をそのまま一般販売需要とみなすことではなく、<strong>MOQとの差分を一般販売で持つ理由があるかを別に判断すること</strong>です。</p>
+
+<h2>3｜MOQを満たすために、目標金額や早割数量を逆算しない</h2>
+
+<p>MOQが大きいと、「500個売らないと発注できないから、Makuakeでも500個売れる計画にしよう」と考えたくなります。</p>
+
+<p>ただ、工場の最低発注数と、Makuakeで実際に応援購入される数量は別の数字です。</p>
+
+<p>500個必要だからといって、500件の需要が生まれるわけではありません。</p>
+
+<div class="insight">
+<em>MOQは供給側の条件。想定応援購入数は、需要側から見積もる数字です。</em><br/>
+供給条件に合わせて需要を大きく見積もるのではなく、需要を見積もった後でMOQとの差分をどう吸収するかを決めます。
+</div>
+
+<p>Makuakeの目標金額も、MOQを満たすための販売ノルマと同じではありません。</p>
+
+<p>目標金額をどう決めるかは、<a href="https://konishi-marketing.com/articles/makuake-mokuhyo-kingaku-kimekata.html">Makuakeの目標金額の決め方｜売上目標とは分けて考える3つの基準</a>で整理しています。</p>
+
+<p>早割数量も、余っているMOQを消化するために増やすものではありません。初日に必要な応援購入人数と、売り切れ後の価格から決めます。</p>
+
+<h2>4｜SKUが増えるほど、色・サイズごとの余剰在庫が増えやすい</h2>
+
+<p>色やサイズを増やすと、サポーターには選びやすく見えることがあります。</p>
+
+<p>一方、MOQがSKUごとに設定される商品では、選択肢を増やすほど必要な最低発注数量が増える場合があります。</p>
+
+<p>たとえば、色別MOQが300個の商品を3色展開すると、各色300個が必要なら合計900個です。</p>
+
+<p>その状態で、応援購入が合計600件あっても、色別の数量によっては大量の差分が残ります。</p>
+
+<div class="callout">
+<strong>公開前に確認すること：</strong><br/>
+「何色あれば売れやすいか」だけでなく、各色を追加したときに最低何個の余剰在庫が生まれうるかを同時に見ます。
+</div>
+
+<p>色・サイズを増やした方がよいかは、選択肢の豊富さだけでなく、応援購入の分散とMOQの増加を含めて決めます。</p>
+
+<p>リターンの種類・数量・価格差を決める順番は、<a href="https://konishi-marketing.com/articles/makuake-return-gouka-moushikomirtsu.html">Makuakeのリターン設計｜種類・数量・価格差を決める5つの順番</a>をご覧ください。</p>
+
+<div class="cta-block">
+<div class="cta-block-label">Makuakeページ制作</div>
+<div class="cta-block-title">価格・リターンを作る前に、SKUごとの最低発注数と余剰在庫を確認する。</div>
+<div class="cta-block-sub">仕入先・工場のMOQ、色・サイズ別条件、原価、一般販売予定価格、初日に見込む応援購入人数を確認し、供給条件に合わせて無理な販売目標を作らず、リターン数量とページ設計へつなげます。</div>
+<a class="cta-btn" href="https://konishi-marketing.com/makuake/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=makuake-moq-zaiko-sekkei&amp;utm_content=mid_cta">Makuakeページ制作を見る</a>
+<div class="cta-note">公開前の案件が対象です。公開中プロジェクトへの途中対応は行っていません。</div>
+</div>
+
+<h2>5｜MOQとの差分を持つなら、発注前の現金まで確認する</h2>
+
+<p>MOQとの差分を一般販売在庫として持てるとしても、資金が足りなければ発注できません。</p>
+
+<p>見るべきなのは、最終的に利益が出るかだけではなく、工場へいつ、いくら支払う必要があるかです。</p>
+
+<ul class="prob-list">
+<li data-num="1"><strong>発注時の前金：</strong>量産開始前に何％必要か。</li>
+<li data-num="2"><strong>残金支払時期：</strong>出荷前、船積み前、納品後など、いつ現金が必要か。</li>
+<li data-num="3"><strong>MOQ差分の原価：</strong>Makuake分以外に何個分の仕入資金を先に持つか。</li>
+<li data-num="4"><strong>輸送・検品・関税等：</strong>商品代以外に、数量増加で増える費用がいくらか。</li>
+</ul>
+
+<p>Makuakeは先行販売で資金を確保しやすい仕組みですが、製造・輸入の支払条件とMakuakeからの入金時期が完全に一致するとは限りません。</p>
+
+<p>入金前の資金ギャップは、<a href="https://konishi-marketing.com/articles/makuake-yosan-cashflow.html">Makuakeで応援購入が集まっても資金不足になる理由｜入金前のキャッシュフロー</a>で詳しく解説しています。</p>
+
+<h2>公開前は、MOQをこの5項目へ分けて確認する</h2>
+
+<table class="decision-table">
+<thead><tr><th>確認項目</th><th>公開前に決めること</th></tr></thead>
+<tbody>
+<tr><td><strong>1. MOQの単位</strong></td><td>商品全体か、色・サイズ・型番ごとか</td></tr>
+<tr><td><strong>2. 想定応援購入数</strong></td><td>MOQから逆算せず、需要側から数量を見積もる</td></tr>
+<tr><td><strong>3. MOQとの差分</strong></td><td>一般販売初期在庫として何個持つことになるか</td></tr>
+<tr><td><strong>4. 差分を吸収できる条件</strong></td><td>一般販売需要、利益、保管、追加発注の条件が成立するか</td></tr>
+<tr><td><strong>5. 発注前の現金</strong></td><td>MOQ分を発注するために、いついくら必要か</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+<em>Makuakeで需要を確認してから作る。</em><br/>
+その利点を活かすには、MOQを「満たすべき販売目標」ではなく、需要が見えた後に処理する供給条件として扱います。
+</div>
+
+<p>Makuake終了後の追加発注を決めるときは、<a href="https://konishi-marketing.com/articles/makuake-shuryo-go-zaiko-tsuika-hacchu.html">Makuake終了後の在庫・追加発注をどう決める？応援購入実績を発注数へそのまま置き換えない</a>もあわせてご覧ください。</p>
+</main>
+
+<section class="faq-section" id="article-faq">
+<div class="faq-label">よくある質問</div>
+<div class="faq-item"><div class="faq-q">Makuakeなら、応援購入数を見てから発注できるので在庫リスクはなくなりますか？</div><div class="faq-a">在庫リスクは抑えやすくなりますが、なくなるとは限りません。仕入先や工場にMOQ（最低発注数）がある場合、応援購入数がMOQを下回れば、その差分を在庫として持つか、発注条件を見直す必要があります。</div></div><div class="faq-item"><div class="faq-q">MOQとは何ですか？</div><div class="faq-a">MOQはMinimum Order Quantityの略で、仕入先や工場が1回の発注で求める最低数量です。商品全体で1つのMOQではなく、色・サイズ・型番ごとに最低数量が設定される場合もあるため、見積書や契約条件で確認します。</div></div><div class="faq-item"><div class="faq-q">Makuakeの応援購入数がMOQを下回ったらどうすればいいですか？</div><div class="faq-a">差分を一般販売の初期在庫として持てるか、必要な現金を用意できるか、保管や販売計画まで含めて判断します。吸収できない場合は、公開前にSKU数を減らす、MOQを交渉する、発注条件を変更するなどの対応を検討します。</div></div><div class="faq-item"><div class="faq-q">Makuakeの目標金額は、MOQを満たす金額に設定すればいいですか？</div><div class="faq-a">目標金額とMOQは別の数字です。目標金額はプロジェクト上の達成基準、MOQは製造・仕入れ条件です。MOQを満たすために必要な数量や資金は確認しますが、目標金額へ機械的に置き換えません。</div></div><div class="faq-item"><div class="faq-q">色違いやサイズ違いがある商品では、何を確認すればいいですか？</div><div class="faq-a">総応援購入数だけでなく、色・サイズ・型番ごとのMOQを確認します。全体では必要数量を超えていても、特定SKUだけ最低発注数に届かず、余剰在庫が生まれることがあります。</div></div><div class="faq-item"><div class="faq-q">余ったMOQ分は、Makuake終了後の一般販売で売れば問題ありませんか？</div><div class="faq-a">一般販売で吸収できる見込みがあり、資金・保管・販売価格まで成立するなら選択肢になります。ただし、Makuakeの応援購入実績をそのまま一般販売需要へ置き換えず、一般販売での需要を別に見積もります。</div></div>
+</section>
+
+<section class="faq-section nextstep-faq">
+<div class="faq-label">Next Step</div>
+<div class="faq-item"><div class="faq-q">Makuakeページ制作でMOQや在庫条件も確認しますか？</div><div class="faq-a">価格やリターン数量に影響する場合は確認します。商品仕様、一般販売予定価格、MOQ、SKU別条件、原価・送料、公開初日の計画を確認し、リターン設計や価格と矛盾しない状態へ整えます。</div></div><div class="faq-item"><div class="faq-q">公開前のMakuakeページ制作について相談する場合、何を送ればいいですか？</div><div class="faq-a">商品資料、仕入先・工場の見積書、MOQやSKU別の発注条件、一般販売予定価格、原価・送料、審査状況、公開予定日、既存写真・動画を送ってください。公開中プロジェクトへの途中対応は行っていません。</div></div>
+</section>
+
+<div class="cta-block" style="margin:0;">
+<div class="cta-block-label">公開前のMakuakeページ制作相談</div>
+<div class="cta-block-title">MOQを知らずにリターンを作らない。</div>
+<div class="cta-block-sub">商品資料だけでなく、工場・仕入先の見積書、MOQ、SKU別発注条件、原価、一般販売予定価格まで確認し、供給条件と販売計画が矛盾しない状態で構成・コピー・リターン設計へ進めます。</div>
+<a class="cta-btn" href="https://konishi-marketing.com/makuake/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=makuake-moq-zaiko-sekkei&amp;utm_content=bottom_cta">公開前のMakuakeページ制作を見る</a>
+<div class="cta-note">相談・見積もりは無料です。公開中プロジェクトへの途中対応は行っていません。</div>
+</div>
+
+<section class="author-profile">
+<div class="author-profile-label">この記事を書いた人</div>
+<div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+<div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+<img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;"/>
+</div>
+<div class="author-profile-name" style="margin-bottom:0;">小西秀人｜小西マーケティング</div>
+</div>
+<div class="author-proof-grid">
+<div class="author-proof-item"><span class="author-proof-label">Makuake担当実績</span><span class="author-proof-value">全60プロジェクト平均710万円</span><span class="author-proof-note">目標到達の有無を問わず含む全案件平均</span></div>
+<div class="author-proof-item"><span class="author-proof-label">累計応援購入額</span><span class="author-proof-value">4億円超</span><span class="author-proof-note">担当したMakuakeプロジェクトの累計</span></div>
+<div class="author-proof-item"><span class="author-proof-label">最高応援購入額</span><span class="author-proof-value">6,600万円</span><span class="author-proof-note">1プロジェクトでの最高額</span></div>
+<div class="author-proof-item"><span class="author-proof-label">Makuake総合ランキング</span><span class="author-proof-value">1位 3回</span><span class="author-proof-note">担当プロジェクトでの獲得回数</span></div>
+</div>
+<div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年以上のEC実務経験をもとに、Makuakeのプロジェクトページ制作から、終了後の一般販売用ページへの再設計まで対応している。</div>
+</section>
+
+<section class="related-section">
+<div class="related-label">関連記事</div>
+<ul class="related-list">
+<li><a href="https://konishi-marketing.com/articles/makuake-mokuhyo-kingaku-kimekata.html">Makuakeの目標金額の決め方｜売上目標とは分けて考える3つの基準</a></li>
+<li><a href="https://konishi-marketing.com/articles/makuake-yosan-cashflow.html">Makuakeで応援購入が集まっても資金不足になる理由｜入金前のキャッシュフロー</a></li>
+<li><a href="https://konishi-marketing.com/articles/makuake-shuryo-go-zaiko-tsuika-hacchu.html">Makuake終了後の在庫・追加発注をどう決める？応援購入実績を発注数へそのまま置き換えない</a></li>
+</ul>
+</section>
+
+<footer class="site-footer"><a href="https://konishi-marketing.com">https://konishi-marketing.com</a></footer>
+</div>
+</body>
+</html>
