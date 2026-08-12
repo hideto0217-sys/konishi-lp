@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="only light" name="color-scheme"/>
+<link href="https://konishi-marketing.com/articles/yahoo-tamall-yasui-urenai.html" rel="canonical"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Yahoo!ショッピングで他モールより安くしても売れない理由｜価格比較の前に必要な判断｜小西マーケティング</title>
+<meta content="Yahoo!ショッピングで楽天やAmazonより安くしても売れない理由を解説。価格を下げる前に、商品を候補に残す理由、価格差の意味、PayPayポイント、送料・発送条件まで購入判断の順番を整理します。" name="description"/>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --red: #b71c1c;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--off-white);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── layout ── */
+.site-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--white);
+}
+
+/* ── header ── */
+.site-header {
+  background: var(--navy);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--gold);
+}
+.site-header a {
+  color: var(--gold-light);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+/* ── hero ── */
+.hero {
+  background: var(--navy);
+  padding: 3rem 2.5rem 2.5rem;
+  border-bottom: 3px solid var(--gold);
+}
+.hero-category {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.hero-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+}
+.hero-lead {
+  font-size: 1rem;
+  color: rgba(255,255,255,.78);
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+.hero-meta {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,.45);
+}
+
+/* ── author box ── */
+.author-box {
+  background: var(--gray-100);
+  border-left: 3px solid var(--gold);
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+}
+.author-box strong { color: var(--navy); }
+
+/* ── article body ── */
+.article-body {
+  padding: 2.5rem 2.5rem;
+}
+
+.article-body h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy) !important;
+  line-height: 1.4;
+  margin: 4.5rem 0 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: .75rem;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 2px solid var(--gold);
+}
+.article-body h2:first-child { margin-top: 0; }
+
+.article-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy) !important;
+  margin: 3.5rem 0 1rem;
+  padding: .6rem 0 .6rem .75rem;
+  border-left: 3px solid var(--gold);
+  background-color: var(--gray-100);
+  line-height: 1.45;
+}
+
+.article-body p {
+  font-size: 1rem;
+  color: var(--gray-800);
+  line-height: 2.1;
+  margin-bottom: 1.25rem;
+}
+.article-body p:last-child { margin-bottom: 0; }
+
+.article-body strong { color: var(--navy); }
+
+/* insight box */
+.insight {
+  background: var(--navy);
+  color: var(--white);
+  padding: 1.25rem 1.75rem;
+  margin: 1.75rem 0;
+  font-size: 1rem;
+  line-height: 2;
+  font-weight: 700;
+}
+.insight em {
+  font-style: normal;
+  color: var(--gold-light);
+}
+
+/* quote / callout */
+.callout {
+  background: var(--off-white);
+  border-left: 3px solid var(--navy);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 2;
+}
+.callout strong { color: var(--navy); }
+
+/* misrecognition 3-layer table */
+.misrec-block {
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+.misrec-header {
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  padding: .6rem 1.25rem;
+}
+.misrec-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--gray-200);
+}
+.misrec-row:first-of-type { border-top: none; }
+.misrec-cell {
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--gray-800);
+}
+.misrec-cell.label {
+  background: var(--gray-100);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  letter-spacing: .05em;
+  border-right: 1px solid var(--gray-200);
+}
+.misrec-cell.belief { background: var(--white); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+
+/* structure problems list */
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li {
+  padding: 1rem 1.25rem 1rem 3rem;
+  position: relative;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 1.9;
+}
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before {
+  content: attr(data-num);
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* CTA block */
+.cta-block {
+  background: var(--navy);
+  padding: 2rem 2.5rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+.cta-block-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.cta-block-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.6;
+  margin-bottom: .75rem;
+}
+.cta-block-sub {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,.7);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+.cta-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: .85rem 2.5rem;
+  text-decoration: none;
+  letter-spacing: .06em;
+  border-bottom: 3px solid #a8893a;
+  transition: opacity .2s;
+}
+.cta-btn:hover { opacity: .88; }
+.cta-note {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,.4);
+  margin-top: .75rem;
+}
+
+/* FAQ */
+.faq-section {
+  padding: 2.5rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.faq-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.faq-item {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.6;
+  margin-bottom: .75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.faq-q::before {
+  content: 'Q';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.faq-a {
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  line-height: 2;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.faq-a::before {
+  content: 'A';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* author profile */
+.author-profile {
+  background: var(--gray-100);
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.author-profile-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.author-profile-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: .5rem;
+}
+.author-profile-body {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.95;
+}
+
+/* related */
+.related-section {
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+.related-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.related-list { list-style: none; }
+.related-list li {
+  padding: .75rem 0 .75rem 1rem;
+  border-bottom: 1px solid var(--gray-100);
+  position: relative;
+}
+.related-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.1em;
+  width: 6px;
+  height: 1px;
+  background: var(--navy);
+}
+.related-list li:last-child { border-bottom: none; }
+.related-list a {
+  font-size: 0.9rem;
+  color: var(--navy);
+  text-decoration: underline;
+  line-height: 1.7;
+}
+
+/* footer */
+.site-footer {
+  background: var(--navy);
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+}
+.site-footer a {
+  color: rgba(255,255,255,.55);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+
+/* misrec-block table override */
+table.misrec-block {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+table.misrec-block th.misrec-header {
+  text-align: left;
+  display: table-cell;
+  width: 100%;
+}
+table.misrec-block td.misrec-cell.label {
+  width: 40%;
+}
+
+
+
+/* ── 記事FAQ（よくある質問）専用スタイル ── */
+#article-faq {
+  background-color: var(--gray-100);
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid var(--gray-200);
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+#article-faq .faq-label {
+  color: var(--navy);
+  font-size: 0.75rem;
+}
+#article-faq .faq-item {
+  border-bottom: 1px solid var(--gray-200);
+  padding-left: 0;
+}
+#article-faq .faq-q {
+  font-size: 1.0rem;
+  color: var(--navy) !important;
+}
+#article-faq .faq-a {
+  background-color: var(--white);
+  padding: 1rem 1.25rem 1rem 2.25rem;
+  border-radius: 0;
+  margin-top: 0.5rem;
+  line-height: 2;
+  color: var(--gray-800);
+}
+
+/* ── Next Step（診断FAQ）専用スタイル ── */
+.nextstep-faq {
+  background-color: var(--navy-light);
+  border-top: none;
+  padding: 2.5rem 2.5rem;
+}
+.nextstep-faq .faq-label {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-item {
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q {
+  color: var(--white);
+}
+.nextstep-faq .faq-q::before {
+  color: var(--gold-light);
+}
+.nextstep-faq .faq-a {
+  color: rgba(255,255,255,.78);
+}
+.nextstep-faq .faq-a::before {
+  color: var(--gold-light);
+}
+
+/* ── ダークモード完全無効化 ── */
+:root {
+  color-scheme: only light;
+}
+html, body {
+  background-color: #f8f7f4 !important;
+  color: #1e1d1a;
+}
+.prob-list li {
+  background-color: #ffffff;
+}
+.article-body {
+  background-color: #ffffff;
+}
+
+/* responsive */
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+
+/* rakuten-service-route-v1 */
+.service-route { margin-top: 1.15rem; padding-top: 1rem; border-top: 1px solid rgba(201,168,76,.32); font-size: .9rem; line-height: 1.8; color: rgba(255,255,255,.68); }
+.service-route a { color: var(--gold-light); font-weight: 700; text-underline-offset: .2em; }
+.service-route a:hover { color: var(--white); }
+@media (max-width: 640px) { .service-route { font-size: .86rem; } }
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Yahoo!ショッピングでは他モールより安くすれば売れますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "同一商品では価格は重要な比較条件ですが、商品を候補に残す理由や送料・ポイント・発送条件まで含めて判断されるため、安さだけで決まるとは限りません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PayPayポイントと値下げは同じように考えてよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "どちらも購入条件ですが、表示価格と還元条件は分けて理解できるようにします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "値下げ後に購買率が上がれば価格が原因ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "同時期の流入、イベント、ポイント、在庫なども確認します。条件が同時に変わっていれば価格だけの効果とは判断できません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "価格競争を避ける商品ページを作れますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "価格だけに戻らないよう、選ぶ基準と商品差から購入理由を設計します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "楽天・Amazonとの価格差も考慮できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "同一商品の販売条件を確認し、Yahoo!側で何を比較条件として見せるか整理します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "サービス内容はどこで確認できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yahoo!ショッピングの商品ページ制作サービスページで確認できます。"
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Yahoo!ショッピングで他モールより安くしても売れない理由｜価格比較の前に必要な判断",
+  "description": "Yahoo!ショッピングで楽天やAmazonより安くしても売れない理由を解説。価格を下げる前に、商品を候補に残す理由、価格差の意味、PayPayポイント、送料・発送条件まで購入判断の順番を整理します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/yahoo-tamall-yasui-urenai.html",
+  "datePublished": "2026-08-12",
+  "dateModified": "2026-08-12",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://konishi-marketing.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "オウンドメディア",
+      "item": "https://konishi-marketing.com/articles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Yahoo!ショッピング",
+      "item": "https://konishi-marketing.com/articles/yahoo.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Yahoo!ショッピングで他モールより安くしても売れない理由｜価格比較の前に必要な判断",
+      "item": "https://konishi-marketing.com/articles/yahoo-tamall-yasui-urenai.html"
+    }
+  ]
+}</script>
+</head>
+<body>
+<div class="site-wrap">
+<!-- header -->
+<header class="site-header">
+<a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<nav aria-label="パンくず" style="font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto;"><a href="https://konishi-marketing.com/" style="color:#6b6860;text-decoration:none;">ホーム</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">オウンドメディア</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/yahoo.html" style="color:#6b6860;text-decoration:none;">Yahoo!ショッピング</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><span aria-current="page" style="color:#3a3834;">Yahoo!ショッピングで他モールより安くしても売れない理由｜価格比較の前に必要な判断</span></nav>
+<!-- hero -->
+<div class="hero">
+<span class="hero-category">Yahoo!ショッピング / 商品ページ改善</span>
+<h1 class="hero-title">Yahoo!ショッピングで他モールより安くしても売れない理由｜価格比較の前に必要な判断</h1>
+<p class="hero-lead">Yahoo!ショッピングで他モールより安くしても売れないなら、値下げ幅ではなく、価格を見る前の購入判断が止まっている可能性があります。</p>
+<p class="hero-meta">小西マーケティング｜2026.08</p>
+</div>
+<!-- author micro box -->
+<div class="author-box">この記事は、Yahoo!ショッピング総合ランキング1位・楽天SOY（ショップ・オブ・ザ・イヤー）受賞企業 元店長の小西秀人が、20年以上のEC実務経験をもとに執筆しています。</div>
+<!-- article body -->
+<div class="article-body">
+<h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">結論｜安さは「商品を選ぶ理由」ができた後に効く比較条件</h2>
+<p>楽天やAmazonより価格を下げても、Yahoo!ショッピングで必ず売れるとは限りません。</p>
+<p>買い手がまだ「どの商品を選ぶか」を決められていない段階では、安さも複数ある比較項目の一つだからです。</p>
+<div class="insight"><em>価格を下げる前に、候補へ残る理由を作る。</em><br/>その後に価格、ポイント、送料、発送条件を比較できるようにします。</div>
+<h2>1｜価格を見る前に、この商品を候補に残す理由があるか</h2>
+<p>商品差が分からなければ、買い手は最も比較しやすい価格へ戻ります。</p>
+<p>先に、どの違いを見ると使用結果が変わるのかという選ぶ基準と、自商品の違いを示します。</p>
+<h2>2｜「他モールより安い」だけでは、その価格差の価値は決まらない</h2>
+<p>同じ商品なら価格差は分かりやすい比較条件です。ただし、送料、ポイント、発送時期、在庫など購入条件が違えば、表示価格だけでは最終条件を比較できません。</p>
+<p>何を含めた条件で比較しているのかを揃えます。</p>
+<h2>3｜表示価格とPayPayポイントを「お得」の一言でまとめない</h2>
+<p>Yahoo!ショッピングでは購入時にPayPayポイントが付与され、商品ごとにポイント倍率を設定できます。</p>
+<p>値下げとポイントを同じ「お得」の一語でまとめず、商品価格と購入時の還元条件として分けて理解できるようにします。</p>
+<p class="source-note"><strong>Yahoo!ショッピング公式：</strong><br/><a href="https://business-ec.yahoo.co.jp/shopping/cost/" rel="noopener">料金・費用</a></p>
+<h2>4｜送料・発送時期まで見たとき、比較結果が変わらないか</h2>
+<p>Yahoo!ショッピングでは配送方法、送料、配送スケジュールなども購入条件になります。</p>
+<p>商品価格だけ安く見えても、送料や到着時期を確認した段階で条件が変われば、買い手はもう一度比較します。</p>
+<p class="source-note"><strong>Yahoo!ショッピング公式：</strong><br/><a href="https://business-ec.yahoo.co.jp/shopping/function/overview/" rel="noopener">ストア運営の概要</a></p>
+<h2>5｜値下げで売れたとしても、何の判断が変わったかを確認する</h2>
+<p>値下げ後に購買率が上がっても、同時にポイント条件、広告流入、イベント、在庫状況が変わっていれば、価格だけの効果とは言い切れません。</p>
+<p>変更日と条件を記録し、できるだけ同じ条件で前後を確認します。</p>
+<h2>まとめ｜表示価格だけで安さを判断せず、最終条件まで見て比較する</h2>
+<div class="insight"><em>商品を選ぶ理由 → 表示価格 → PayPayポイント → 送料・発送条件。</em><br/>他モールより安いかは表示価格だけで決めず、ポイント・送料・発送条件まで確認したあとでも、その商品を選ぶ条件になっているかを見ます。</div>
+</div><!-- /article-body -->
+<!-- 記事FAQ -->
+<div class="faq-section" id="article-faq"><div class="faq-label">よくある質問</div><div class="faq-item"><div class="faq-q">Yahoo!ショッピングでは他モールより安くすれば売れますか？</div><div class="faq-a">同一商品では価格は重要な比較条件ですが、商品を候補に残す理由や送料・ポイント・発送条件まで含めて判断されるため、安さだけで決まるとは限りません。</div></div><div class="faq-item"><div class="faq-q">PayPayポイントと値下げは同じように考えてよいですか？</div><div class="faq-a">どちらも購入条件ですが、表示価格と還元条件は分けて理解できるようにします。</div></div><div class="faq-item"><div class="faq-q">値下げ後に購買率が上がれば価格が原因ですか？</div><div class="faq-a">同時期の流入、イベント、ポイント、在庫なども確認します。条件が同時に変わっていれば価格だけの効果とは判断できません。</div></div></div><!-- /記事FAQ -->
+<!-- FAQ：推進型 -->
+<div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div><div class="faq-item"><div class="faq-q">価格競争を避ける商品ページを作れますか？</div><div class="faq-a">価格だけに戻らないよう、選ぶ基準と商品差から購入理由を設計します。</div></div><div class="faq-item"><div class="faq-q">楽天・Amazonとの価格差も考慮できますか？</div><div class="faq-a">同一商品の販売条件を確認し、Yahoo!側で何を比較条件として見せるか整理します。</div></div><div class="faq-item"><div class="faq-q">サービス内容はどこで確認できますか？</div><div class="faq-a">Yahoo!ショッピングの商品ページ制作サービスページで確認できます。</div></div></div><!-- /faq -->
+<!-- bottom CTA -->
+<div class="cta-block" style="margin:0;">
+<div class="cta-block-label">Yahoo!ショッピング商品ページ制作</div>
+<div class="cta-block-title">価格を下げる前に、この商品を比較対象へ残す理由を作る。</div>
+<div class="cta-block-sub">商品差から価格、PayPayポイント、送料・発送条件まで、比較が途中でやり直しにならない商品ページを設計します。</div>
+<a class="cta-btn" href="https://konishi-marketing.com/yahoo/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=yahoo-tamall-yasui-urenai">Yahoo!ショッピング商品ページ制作を見る</a>
+<div class="cta-note">※サービス内容・制作範囲・料金はサービスページで確認できます。</div>
+</div>
+<!-- author profile -->
+<div class="author-profile">
+<div class="author-profile-label">この記事を書いた人</div>
+<div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+<div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+<img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/>
+</div>
+<div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+</div>
+<div class="author-profile-body">Yahoo!ショッピング総合ランキング1位、楽天SOY（ショップ・オブ・ザ・イヤー）受賞企業 元店長。楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年以上のEC実務経験をもとに、商品ページの構成・コピー・デザインを購買判断の順番から設計している。</div>
+</div>
+<!-- related -->
+<div class="related-section">
+<div class="related-label">関連記事</div>
+<ul class="related-list"><li><a href="https://konishi-marketing.com/articles/yahoo-paypay-user-sekkei.html">PayPayポイントを活かす商品ページ設計</a></li><li><a href="https://konishi-marketing.com/articles/yahoo-koubairitsu-agekata.html">Yahoo!ショッピングの購買率の上げ方</a></li><li><a href="https://konishi-marketing.com/yahoo/">Yahoo!ショッピング商品ページ制作</a></li></ul>
+</div>
+<!-- footer -->
+<footer class="site-footer">
+<a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+</div><!-- /site-wrap -->
+</body>
+</html>
