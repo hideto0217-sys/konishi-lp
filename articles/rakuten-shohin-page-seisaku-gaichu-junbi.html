@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="only light" name="color-scheme"/>
+<link href="https://konishi-marketing.com/articles/rakuten-shohin-page-seisaku-gaichu-junbi.html" rel="canonical"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>楽天商品ページ制作を外注する前に準備する資料｜商品情報・レビュー・証拠・写真・販売条件｜小西マーケティング</title>
+<meta content="楽天の商品ページ制作を外注する前に、何を準備すれば構成・コピー・画像制作が止まらないかを解説。商品情報、レビュー・問い合わせ、証拠、写真、販売条件の5セットに分けて整理します。" name="description"/>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+.article-body { padding: 2.5rem 2.5rem; background: var(--white); }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; background: #fff; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+
+/* rakuten-service-route-v1 */
+.service-route { margin-top: 1.15rem; padding-top: 1rem; border-top: 1px solid rgba(201,168,76,.32); font-size: .9rem; line-height: 1.8; color: rgba(255,255,255,.68); }
+.service-route a { color: var(--gold-light); font-weight: 700; text-underline-offset: .2em; }
+.service-route a:hover { color: var(--white); }
+@media (max-width: 640px) { .service-route { font-size: .86rem; } }
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "楽天の商品ページ制作を外注するとき、最初に何を渡せばよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "まず、商品仕様・価格・サイズなどの事実、購入者の声や問い合わせ、実績や検査結果などの証拠、使える写真、送料・納期・保証などの販売条件を整理します。完成した原稿まで用意する必要はありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "商品説明の原稿は自社で書いておく必要がありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "構成やコピーから依頼する場合は、完成原稿まで用意する必要はありません。むしろ、事実・証拠・写真・購入者の声を分けて渡す方が、制作側が何をどの順番で見せるか判断しやすくなります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "写真は何枚くらい必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "枚数を先に決めるより、どの使用場面・機能・サイズ感・比較・証拠を見せる必要があるかを決めます。必要な説明から逆算して不足カットを追加します。"
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "楽天商品ページ制作を外注する前に準備する資料｜商品情報・レビュー・証拠・写真・販売条件",
+  "description": "楽天の商品ページ制作を外注する前に、何を準備すれば構成・コピー・画像制作が止まらないかを解説。商品情報、レビュー・問い合わせ、証拠、写真、販売条件の5セットに分けて整理します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/rakuten-shohin-page-seisaku-gaichu-junbi.html",
+  "datePublished": "2026-08-13",
+  "dateModified": "2026-08-13",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://konishi-marketing.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "オウンドメディア",
+      "item": "https://konishi-marketing.com/articles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "楽天市場",
+      "item": "https://konishi-marketing.com/articles/rakuten.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "楽天商品ページ制作を外注する前に準備する資料｜商品情報・レビュー・証拠・写真・販売条件",
+      "item": "https://konishi-marketing.com/articles/rakuten-shohin-page-seisaku-gaichu-junbi.html"
+    }
+  ]
+}</script>
+</head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+<a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<nav aria-label="パンくず" style="font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto;"><a href="https://konishi-marketing.com/" style="color:#6b6860;text-decoration:none;">ホーム</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">オウンドメディア</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/rakuten.html" style="color:#6b6860;text-decoration:none;">楽天市場</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><span aria-current="page" style="color:#3a3834;">楽天商品ページ制作を外注する前に準備する資料｜商品情報・レビュー・証拠・写真・販売条件</span></nav>
+<div class="hero">
+<span class="hero-category">楽天商品ページ制作 / 外注準備</span>
+<h1 class="hero-title">楽天商品ページ制作を外注する前に準備する資料｜商品情報・レビュー・証拠・写真・販売条件</h1>
+<p class="hero-lead">楽天の商品ページ制作を外注するとき、完成原稿や大量の資料を先に作る必要はありません。制作側がページの順番を決められるように、商品情報・購入者の声・証拠・写真・販売条件の5セットに分けて渡す方が、手戻りを減らせます。</p>
+<p class="hero-meta">小西マーケティング｜2026.08</p>
+</div>
+<div class="author-box">この記事は、楽天SOY（ショップ・オブ・ザ・イヤー）受賞企業の元店長で、楽天総合ランキング1位を2回・年間ランキング11回・ランキング1位通算1,000回以上を経験したECコンサルタント・小西秀人が、20年間のEC実務経験をもとに執筆しています。</div>
+<div class="article-body">
+<h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">外注前に必要なのは「完成した原稿」ではない</h2>
+<p>楽天の商品ページ制作を外注しようとすると、「何を用意すれば制作会社が進められるのか」で止まりやすくなります。</p>
+<p>商品説明を書き直す。写真を大量に集める。競合ページを何十件も保存する。資料を一つのPowerPointへまとめる。</p>
+<p>そこまで先に作らなくても大丈夫です。</p>
+<div class="insight"><em>制作会社へ渡すのは、完成原稿ではなく、ページを作るための事実と材料です。</em></div>
+<p>構成・コピーから依頼するなら、文章まで自社で完成させると、制作会社がその原稿を整えるだけの仕事になりやすくなります。</p>
+<p>先に必要なのは、「何が事実か」「何を証明できるか」「誰がどこで困っているか」「どんな写真があるか」を分けて渡すことです。</p>
+<h2>準備するのは5セット｜商品・顧客・証拠・写真・販売条件</h2>
+<p>制作前の資料は、次の5つの箱に分けると抜け漏れを確認しやすくなります。</p>
+<ul class="prob-list">
+<li data-num="1"><strong>商品</strong>：仕様・サイズ・素材・機能・使い方</li>
+<li data-num="2"><strong>顧客</strong>：レビュー・問い合わせ・使用場面・購入理由</li>
+<li data-num="3"><strong>証拠</strong>：実績・試験結果・比較データ・受賞・認証</li>
+<li data-num="4"><strong>写真</strong>：商品単体・使用中・サイズ感・細部・同梱物</li>
+<li data-num="5"><strong>販売条件</strong>：価格・送料・納期・保証・バリエーション</li>
+</ul>
+<p>この5つがあれば、制作側は「何を先に見せるか」「どこを写真で見せるか」「どの主張に証拠が必要か」を判断しやすくなります。</p>
+<h2>1｜商品情報は、文章ではなく事実で渡す</h2>
+<p>商品情報は、きれいな説明文にする必要はありません。</p>
+<p>まず、事実として確定している情報を揃えます。</p>
+<ul class="prob-list">
+<li data-num="1">商品名・型番・バリエーション</li>
+<li data-num="2">サイズ・重量・素材・容量・電源などの仕様</li>
+<li data-num="3">使い方・手順・手入れ方法</li>
+<li data-num="4">既存商品や旧モデルとの違い</li>
+<li data-num="5">できること・できないこと・使用上の条件</li>
+</ul>
+<div class="callout"><strong>「高品質」「使いやすい」「便利」ではなく、その根拠になる事実を渡します。</strong><br/>制作時に、その事実がどんな使用結果につながるかを整理できます。</div>
+<h2>2｜レビューと問い合わせは、売り文句ではなく読者の判断材料になる</h2>
+<p>既に販売実績がある商品なら、レビュー、問い合わせ、返品理由、購入前によく聞かれる質問を用意します。</p>
+<p>ここから分かるのは「お客様に人気です」ということだけではありません。</p>
+<p>どこで迷うのか。何と比較するのか。購入後に何が良かったのか。想定と違った点は何か。</p>
+<p>この情報があると、商品ページで先に説明すべき場所が見えます。</p>
+<div class="misrec-block">
+<div class="misrec-header">レビューの渡し方</div>
+<div class="misrec-row"><div class="misrec-cell label">まとめなくてよいもの</div><div class="misrec-cell truth">「高評価レビュー20件」のような宣伝用の要約</div></div>
+<div class="misrec-row"><div class="misrec-cell label">渡したいもの</div><div class="misrec-cell truth">購入理由、使用場面、迷った点、不満、問い合わせ内容が分かる原文や一覧</div></div>
+</div>
+<h2>3｜実績や数値は、何を証明する数字か分ける</h2>
+<p>売上、ランキング、販売個数、試験結果、第三者評価、認証などがある場合は、元資料を用意します。</p>
+<p>数字だけを並べるのではなく、次の情報も一緒にします。</p>
+<ul class="prob-list">
+<li data-num="1">何を測った数値か</li>
+<li data-num="2">期間・条件・母数</li>
+<li data-num="3">比較対象がある場合は、その条件</li>
+<li data-num="4">ページ上で使ってよい表現の範囲</li>
+</ul>
+<p>「No.1」「○％改善」「○万人が購入」などは、数字が大きいから使うのではなく、読者が確認したい判断を強める場所で使います。</p>
+<h2>4｜写真は「あるもの全部」ではなく、何が写っているか分ける</h2>
+<p>写真素材は、ファイル名が連番のまま大量に渡されると、制作側が一枚ずつ内容を確認する必要があります。</p>
+<p>次のように分けておくだけで十分です。</p>
+<ul class="prob-list">
+<li data-num="1">商品単体・正面・側面・背面</li>
+<li data-num="2">手に持った状態・設置した状態などサイズ感が分かる写真</li>
+<li data-num="3">実際に使っている場面</li>
+<li data-num="4">素材・構造・操作部など細部</li>
+<li data-num="5">付属品・梱包・セット内容</li>
+</ul>
+<p>不足写真があっても、ページ構成が決まる前に撮り直す必要はありません。</p>
+<div class="insight"><em>先にページで必要な説明を決め、その説明に足りない写真だけを追加します。</em></div>
+<h2>5｜価格・送料・納期・保証は最後ではなく最初に渡す</h2>
+<p>商品ページ制作では、商品そのものの情報だけに目が向きやすくなります。</p>
+<p>しかし、価格、送料、納期、保証、返品条件、バリエーションは購入直前の判断に直接関わります。</p>
+<p>制作の最後に判明すると、ページ構成や見出しを戻して修正することがあります。</p>
+<p>そのため、販売条件は最初の資料セットに入れます。</p>
+<h2>既存ページの改善なら、数字をもう1セット加える</h2>
+<p>すでに楽天で販売している商品なら、資料5セットに加えて現在の数字も用意します。</p>
+<ul class="prob-list">
+<li data-num="1">アクセス数</li>
+<li data-num="2">購買率・転換率</li>
+<li data-num="3">広告流入の有無と比率</li>
+<li data-num="4">売上・注文数の推移</li>
+<li data-num="5">スマホとPCで差があればその数字</li>
+</ul>
+<p>これがあると、「ページを直すべきなのか」「そもそもアクセスや広告側が問題なのか」を分けやすくなります。</p>
+<p>ページ制作を依頼する前に、ページ以外の問題まで制作会社へ押し込まないための材料です。</p>
+<h2>資料を一つの企画書にまとめる必要はない</h2>
+<p>5セットを一つの綺麗な資料へ作り直す必要はありません。</p>
+<p>商品仕様はExcel、レビューはCSV、写真はフォルダ、実績はPDF、販売条件はテキストでも構いません。</p>
+<div class="callout"><strong>大切なのは、資料の見た目ではなく「これは商品情報」「これは顧客の声」「これは証拠」と区別できることです。</strong><br/>制作会社が材料を探す時間を減らし、ページの順番を考える時間へ使える状態にします。</div>
+<h2>外注前に自社で決めなくてよい3つのこと</h2>
+<h3>1｜ページの完成構成</h3>
+<p>構成から依頼するなら、自社で完成ワイヤーまで作る必要はありません。</p>
+<h3>2｜完成コピー</h3>
+<p>事実と証拠が揃っていれば、見出しや本文は制作工程で作れます。</p>
+<h3>3｜必要な写真枚数</h3>
+<p>ページで何を説明するかが決まってから、不足カットを逆算できます。</p>
+<p>この3つまで自社で作り込むと、外注先へ渡す前に社内で一度ページ制作を終えることになります。</p>
+<div class="cta-block">
+<div class="cta-block-label">楽天商品ページ制作・改善</div>
+<div class="cta-block-title">資料を完成させる前に、何が足りないかを確認する。</div>
+<div class="cta-block-sub">現在の商品ページ、商品資料、写真がある範囲で、構成・コピー・商品画像・下部LPを作るために不足している情報や撮影カットを整理できます。</div>
+<a class="cta-btn" href="https://konishi-marketing.com/rakuten/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=rakuten_consultation&amp;utm_content=rakuten-shohin-page-seisaku-gaichu-junbi_mid">楽天商品ページ制作・改善を見る</a>
+<div class="cta-note">※相談・見積もり作成に費用はかかりません。</div>
+</div>
+<h2>準備が終わるとは、「ページの順番を決められる材料が揃う」こと</h2>
+<p>外注前の準備は、原稿やワイヤーを完成させることではありません。</p>
+<p>商品、顧客、証拠、写真、販売条件を分けて渡せる状態にすることです。</p>
+<p>既存ページの改善なら、そこに現在の数字を加える。</p>
+<p>この状態なら、制作会社は資料を文章へ写し替える作業ではなく、何をどの順番で見せるページにするかを決めるところから始められます。</p>
+</div><!-- /article-body -->
+<div class="faq-section" id="article-faq"><div class="faq-label">よくある質問</div><div class="faq-item"><div class="faq-q">楽天の商品ページ制作を外注するとき、最初に何を渡せばよいですか？</div><div class="faq-a">まず、商品仕様・価格・サイズなどの事実、購入者の声や問い合わせ、実績や検査結果などの証拠、使える写真、送料・納期・保証などの販売条件を整理します。完成した原稿まで用意する必要はありません。</div></div><div class="faq-item"><div class="faq-q">商品説明の原稿は自社で書いておく必要がありますか？</div><div class="faq-a">構成やコピーから依頼する場合は、完成原稿まで用意する必要はありません。むしろ、事実・証拠・写真・購入者の声を分けて渡す方が、制作側が何をどの順番で見せるか判断しやすくなります。</div></div><div class="faq-item"><div class="faq-q">写真は何枚くらい必要ですか？</div><div class="faq-a">枚数を先に決めるより、どの使用場面・機能・サイズ感・比較・証拠を見せる必要があるかを決めます。必要な説明から逆算して不足カットを追加します。</div></div></div>
+<!-- FAQ：推進型 -->
+<div class="faq-section nextstep-faq">
+<div class="faq-label">Next Step</div>
+<div class="faq-item"><div class="faq-q">資料が一部しか揃っていなくても相談できますか？</div><div class="faq-a">はい。現在ある商品ページ、商品資料、写真を確認し、制作前に追加で必要な情報や証拠を整理できます。</div></div>
+<div class="faq-item"><div class="faq-q">新商品でレビューや販売実績がない場合はどうしますか？</div><div class="faq-a">商品仕様、想定する使用場面、既存の検査・試験結果、競合商品で起きている不満など、現時点で確認できる材料から不足箇所を整理します。実績がないことを実績があるようには扱いません。</div></div>
+<div class="faq-item"><div class="faq-q">相談や見積もり作成に費用はかかりますか？</div><div class="faq-a">費用はかかりません。商品ページURLや商品資料があれば、現在あるものから確認できます。</div></div>
+</div><!-- /faq -->
+<div class="cta-block" style="margin:0;">
+<div class="cta-block-label">楽天商品ページ制作・改善</div>
+<div class="cta-block-title">完成原稿ではなく、いまある材料から始める。</div>
+<div class="cta-block-sub">商品情報・購入者の声・証拠・写真・販売条件を確認し、ページ制作に不足しているものを整理できます。</div>
+<a class="cta-btn" href="https://konishi-marketing.com/rakuten/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=rakuten_consultation&amp;utm_content=rakuten-shohin-page-seisaku-gaichu-junbi_bottom">楽天商品ページ制作・改善を見る</a>
+<div class="cta-note">※相談・見積もり作成に費用はかかりません。</div>
+</div>
+<div class="author-profile">
+<div class="author-profile-label">この記事を書いた人</div>
+<div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+<div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+<img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/>
+</div>
+<div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+</div>
+<div class="author-profile-body">楽天SOY（ショップ・オブ・ザ・イヤー）受賞企業 元店長。楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの改善からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
+</div>
+<div class="related-section">
+<div class="related-label">関連記事</div>
+<ul class="related-list"><li><a href="https://konishi-marketing.com/articles/rakuten-konsaru-irai-mae-junbi-subeki-data.html">楽天コンサルにデータを渡しても提案が浅くなる理由</a></li><li><a href="https://konishi-marketing.com/articles/rakuten-shohin-page-shindan-mae-junbi.html">楽天商品ページ診断を受ける前に準備するもの</a></li><li><a href="https://konishi-marketing.com/articles/rakuten-shohin-page-kaizen-irai-mae-ni-kakunin.html">楽天商品ページ改善を依頼しても転換率が上がらない理由</a></li></ul>
+</div>
+<footer class="site-footer">
+<a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+</div><!-- /site-wrap -->
+</body>
+</html>
