@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<link href="https://konishi-marketing.com/images/favicon.ico" rel="icon" sizes="any"/>
+<meta charset="utf-8"/>
+<meta content="only light" name="color-scheme"/>
+<link href="https://konishi-marketing.com/articles/ai-lp-seisaku-shippai-kyotsuten.html" rel="canonical"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>AI LP制作で失敗するページに共通する問題｜小西マーケティング</title>
+<meta content="AIでLPを作ったのに売れないとき、共通する問題はAI利用そのものではありません。入力情報、訴求、構成、証拠、検収の5つを分け、制作速度が上がっても成果につながらない理由を整理します。" name="description"/>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+<style id="makuake-author-profile-standard-v1">
+/* Makuake article author profile standardization 2026-08-07 */
+.author-proof-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  margin:1rem 0 1.25rem;
+  border:1px solid var(--gray-200);
+  background:var(--gray-200);
+}
+.author-proof-item{
+  min-width:0;
+  padding:1rem 1.1rem;
+  background:var(--white);
+}
+.author-proof-label{
+  display:block;
+  margin-bottom:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  font-weight:700;
+  line-height:1.5;
+}
+.author-proof-value{
+  display:block;
+  color:var(--navy);
+  font-size:1.35rem;
+  font-weight:700;
+  line-height:1.35;
+  letter-spacing:-.025em;
+}
+.author-proof-note{
+  display:block;
+  margin-top:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  line-height:1.65;
+}
+@media(max-width:640px){
+  .author-proof-grid{grid-template-columns:1fr}
+  .author-proof-value{font-size:1.25rem}
+}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "AIを使ったLPや商品ページは売れないのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AIを使うこと自体が原因ではありません。商品・顧客・競合の情報、中心訴求、構成、証拠、検収基準が揃っているかで結果は変わります。AIは案の展開や制作作業を速くできます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "AIが作った文章や画像はそのまま使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "そのまま使える場合もありますが、商品事実、数値、固有名詞、画像内の形状や文字、法的表現、媒体の表示条件は人が原資料と照合して確認してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "AIを使う制作会社は避けた方がよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AIの使用有無だけでは判断できません。誰が調査・訴求・構成を決め、AIをどの工程で使い、誰が最終成果物を検収するかを確認してください。"
+      }
+    }
+  ]
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI LP制作で失敗しやすいのは、制作速度より前の判断が抜けたとき",
+  "description": "AIでLPを作ったのに売れないとき、共通する問題はAI利用そのものではありません。入力情報、訴求、構成、証拠、検収の5つを分け、制作速度が上がっても成果につながらない理由を整理します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/ai-lp-seisaku-shippai-kyotsuten.html",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-18",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://konishi-marketing.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "オウンドメディア",
+      "item": "https://konishi-marketing.com/articles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI LP改善",
+      "item": "https://konishi-marketing.com/articles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "AI LP制作で失敗するページに共通する問題",
+      "item": "https://konishi-marketing.com/articles/ai-lp-seisaku-shippai-kyotsuten.html"
+    }
+  ]
+}</script></head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+<a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<nav aria-label="パンくず" style="font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto;"><a href="https://konishi-marketing.com/" style="color:#6b6860;text-decoration:none;">ホーム</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">オウンドメディア</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">AI LP改善</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><span aria-current="page" style="color:#3a3834;">AI LP制作で失敗するページに共通する問題</span></nav>
+<div class="hero">
+<span class="hero-category">AI / LP制作 / 失敗原因</span>
+<h1 class="hero-title">AI LP制作で失敗しやすいのは、制作速度より前の判断が抜けたとき</h1>
+<p class="hero-lead">AIでLPを作ると、初稿は驚くほど速く出ます。問題は、その速さのまま完成扱いしてしまうことです。失敗しやすいページには、AIの種類より前に共通する5つの欠落があります。</p>
+<p class="hero-meta">小西マーケティング｜2026.08</p>
+</div>
+<div class="author-box">この記事は、楽天SOY受賞企業の元店長として商品ページ改善とEC運営に携わり、20年以上にわたりLP・商品ページの構成、コピー、デザイン、広告まで実務で担当してきた小西秀人が、生成AIを「制作速度」ではなく「売れるページをどう設計・検収するか」の観点から解説しています。</div>
+<div class="article-body">
+<h2 style="margin-top:0;padding-top:0;border-top:none;">AI LP制作の失敗は、5つの工程のどこで起きたかに分ける</h2>
+<p>AIで作ったLPが売れなかったとき、「AIだから失敗した」とまとめると、次に何を直すべきか分かりません。</p>
+<div class="insight"><em>入力情報 → 訴求 → 構成 → 証拠 → 検収。</em><br/>この5地点に分けると、AIを捨てずに失敗箇所だけ戻せます。</div>
+<div class="misrec-block">
+<div class="misrec-header">AI LP制作｜5地点診断</div>
+<div class="misrec-row"><div class="misrec-cell label">1．入力情報</div><div class="misrec-cell truth">商品資料だけで作り、顧客の比較・不安・使用場面が入っていない。</div></div>
+<div class="misrec-row"><div class="misrec-cell label">2．訴求</div><div class="misrec-cell truth">特徴は整理されたが、何を一番の購入理由にするか決まっていない。</div></div>
+<div class="misrec-row"><div class="misrec-cell label">3．構成</div><div class="misrec-cell truth">一般的なLPの型はあるが、その商品で必要な判断順になっていない。</div></div>
+<div class="misrec-row"><div class="misrec-cell label">4．証拠</div><div class="misrec-cell truth">コピーは強いが、主張を確定する数値・写真・比較・レビューが足りない。</div></div>
+<div class="misrec-row"><div class="misrec-cell label">5．検収</div><div class="misrec-cell truth">文章の自然さ・見た目の綺麗さだけで完成扱いし、事実・因果・一貫性を確認していない。</div></div>
+</div>
+<h2>1｜入力情報の失敗｜商品資料はあるが、購入前の比較が入っていない</h2>
+<p>AIへ渡しやすいのは、商品仕様、機能、会社資料です。</p>
+<p>一方、購入前に何と比較しているか、どこで迷うか、どんな場面で使いたいかは、商品資料だけでは分かりません。</p>
+<div class="callout">
+<strong>具体例｜「商品の良さ」は詳しいのに、誰の迷いを解くかがない</strong><br/>
+商品仕様を20項目渡せば、AIは詳しいLPを作れます。<br/>
+しかし「AとBで迷っている人が、何を見れば自分にはAだと判断できるか」が入力されていなければ、説明は増えても比較は終わりません。
+</div>
+<h2>2｜訴求の失敗｜特徴を整理しただけで、中心が決まっていない</h2>
+<p>特徴を5つ、メリットを7つ、FAQを10個と整理しても、どれを主役にするか未確定なら、読者は自分で重要度を決め直します。</p>
+<p>AIへ案を出させる前に、誰にとって何が最優先かを決めます。</p>
+<h2>3｜構成の失敗｜LPの型はあるが、判断の順番になっていない</h2>
+<p>「悩み→商品→特徴→実績→FAQ」のような型を指定すれば、見た目のあるLPは作れます。</p>
+<p>ただし、価格差が最大の不安なら価格の理由が必要です。使い方が想像できない商品なら、機能説明より使用場面を先に見せる必要があります。</p>
+<div class="callout"><strong>構成はセクション名ではなく、未完了の判断で決める。</strong><br/>「次に何を知れば買う・買わないを決められるか」を順番に並べます。</div>
+<h2>4｜証拠の失敗｜強いコピーを作ったが、信じる材料がない</h2>
+<p>「圧倒的」「選ばれる」「高耐久」といった言い換えは、根拠そのものではありません。</p>
+<p>数値、比較条件、レビュー、第三者評価、構造、写真など、主張を確定する材料を対応させます。</p>
+<h2>5｜検収の失敗｜「自然」「綺麗」で完成扱いする</h2>
+<ul class="prob-list">
+<li data-num="✓">誰向けのページか途中で変わっていないか</li>
+<li data-num="✓">一番の購入理由が途中で増えていないか</li>
+<li data-num="✓">仕様から使用結果までの因果が飛んでいないか</li>
+<li data-num="✓">数値や固有名詞をAIが補完していないか</li>
+<li data-num="✓">同じ結論を言い換えて長くしていないか</li>
+</ul>
+<h2>どこで失敗したか分かれば、全部作り直す必要はない</h2>
+<p>入力情報が足りないなら調査へ戻る。訴求が曖昧なら中心訴求へ戻る。構成だけが悪いなら掲載順を直す。</p>
+<p>AIで作った文章・画像・コードを捨てずに、誤った地点から再生成できます。</p>
+<p>実際の改善順序は、<a href="https://konishi-marketing.com/articles/ai-lp-kaizen-junjo.html">AIで作ったLPを売れるページに直す改善順序</a>で、計測からテストまで順番に整理しています。</p>
+<div class="cta-block">
+<div class="cta-block-label">LP・商品ページ制作／改善</div>
+<div class="cta-block-title">失敗した工程を特定してから、必要な場所だけ作り直す。</div>
+<div class="cta-block-sub">AIの利用をやめるのではなく、入力・訴求・構成・証拠・検収のどこで判断が抜けたかを整理します。</div>
+<a class="cta-btn" href="https://konishi-marketing.com/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=ai-lp-seisaku-shippai-kyotsuten&amp;utm_content=mid_cta">小西マーケティングの支援内容を見る</a>
+<div class="cta-note">AIの使用有無ではなく、戦略・訴求・構成・検収の担当範囲を明確にして進めます。</div>
+</div>
+</div><!-- /article-body -->
+<div class="faq-section" id="article-faq"><div class="faq-label">よくある質問</div><div class="faq-item"><div class="faq-q">AIを使ったLPや商品ページは売れないのですか？</div><div class="faq-a">AIを使うこと自体が原因ではありません。商品・顧客・競合の情報、中心訴求、構成、証拠、検収基準が揃っているかで結果は変わります。AIは案の展開や制作作業を速くできます。</div></div><div class="faq-item"><div class="faq-q">AIが作った文章や画像はそのまま使えますか？</div><div class="faq-a">そのまま使える場合もありますが、商品事実、数値、固有名詞、画像内の形状や文字、法的表現、媒体の表示条件は人が原資料と照合して確認してください。</div></div><div class="faq-item"><div class="faq-q">AIを使う制作会社は避けた方がよいですか？</div><div class="faq-a">AIの使用有無だけでは判断できません。誰が調査・訴求・構成を決め、AIをどの工程で使い、誰が最終成果物を検収するかを確認してください。</div></div></div>
+<div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div><div class="faq-item"><div class="faq-q">AIで作った既存ページをそのまま改善できますか？</div><div class="faq-a">できます。既存の文章・画像・HTMLを捨てず、問題がある工程だけを戻して修正できます。</div></div><div class="faq-item"><div class="faq-q">AIを使わずに作り直す必要がありますか？</div><div class="faq-a">必須ではありません。AIを制作作業に使いながら、訴求・構成・事実確認・最終検収を人が持つ形でも進められます。</div></div><div class="faq-item"><div class="faq-q">相談するときに何を用意すればよいですか？</div><div class="faq-a">現在のページURL、商品・サービス資料、アクセスやCVRなど分かる範囲の数値、現在困っていることを共有してください。</div></div></div>
+<div class="cta-block" style="margin:0;"><div class="cta-block-label">LP・商品ページ制作／改善</div>
+<div class="cta-block-title">AIを使うかではなく、何を誰が決めるかからLPを見直す。</div>
+<div class="cta-block-sub">調査・訴求・構成・コピー・デザイン・実装のうち、どこが未確定かを整理してから制作・改善へ進みます。</div>
+<a class="cta-btn" href="https://konishi-marketing.com/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=ai-lp-seisaku-shippai-kyotsuten&amp;utm_content=bottom_cta">小西マーケティングの支援内容を見る</a>
+<div class="cta-note">相談・見積もり作成に費用はかかりません。</div></div>
+<div class="author-profile">
+<div class="author-profile-label">この記事を書いた人</div>
+<div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+<div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+<img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/>
+</div>
+<div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+</div>
+<div class="author-profile-body">EC・D2Cの商品ページ／LP改善を専門とするコンサルタント。楽天市場・Makuake・自社ECなどで、調査から訴求設計、構成、コピー、デザイン、実装まで一体で担当。生成AIも制作工程に活用しながら、最終的な戦略判断・事実確認・品質検収は人が持つ体制で支援している。</div>
+</div>
+<div class="related-section">
+<div class="related-label">関連記事</div>
+<ul class="related-list"><li><a href="https://konishi-marketing.com/articles/ai-shohin-page-tenkanritsu-agaranai.html">AIで作った商品ページの見た目は整うのに転換率が上がらない理由</a></li><li><a href="https://konishi-marketing.com/articles/ai-lp-kaizen-junjo.html">AIで作ったLPを売れるページに直す改善順序</a></li><li><a href="https://konishi-marketing.com/articles/rakuten-ai-shohin-page-urenai-junban.html">AIで作った楽天商品ページが売れないときに見るべき順番</a></li></ul>
+</div>
+<footer class="site-footer">
+<a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+</div><!-- /site-wrap -->
+</body>
+</html>
