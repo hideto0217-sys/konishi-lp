@@ -211,6 +211,35 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 .channel-service-link::after{content:'→';color:var(--gold);}
 .channel-service-link:hover{color:var(--gold);border-bottom-color:var(--navy);}
 
+/* ── CVR driver ── */
+.driver-box{
+  margin-top:2.25rem;border:1px solid var(--g200);background:var(--white);
+}
+.driver-formula{
+  padding:1.45rem 1.6rem;border-bottom:1px solid var(--g200);
+  font-family:var(--serif);font-size:clamp(1.15rem,3vw,1.55rem);
+  font-weight:700;color:var(--navy);line-height:1.65;text-align:center;
+}
+.driver-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--g200);
+}
+.driver-card{background:var(--white);padding:1.6rem;}
+.driver-card strong{
+  display:block;font-family:var(--serif);font-size:1.05rem;color:var(--navy);
+  line-height:1.6;margin-bottom:.55rem;
+}
+.driver-card p{font-size:.9rem;color:var(--g600);line-height:1.95;}
+.driver-example{
+  margin-top:1.5rem;padding:1.45rem 1.6rem;background:var(--navy);
+  color:rgba(255,255,255,.82);font-size:.92rem;line-height:2;
+}
+.driver-example strong{color:var(--gold-lt);}
+.driver-close{
+  margin-top:1.5rem;font-family:var(--serif);font-size:1.08rem;font-weight:700;
+  color:var(--navy);line-height:1.85;
+}
+@media(max-width:680px){.driver-grid{grid-template-columns:1fr;}}
+
 /* ── cause list ── */
 .cause-list{list-style:none;margin-top:2rem;}
 .cause-item{
@@ -1004,8 +1033,31 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 </div>
 </div>
 </section>
-<!-- stop patterns -->
+<!-- CVR driver -->
 <section class="sec sec--paper">
+<div class="inner">
+<span class="sec-label">なぜCVRを見るのか</span>
+<h2 class="sec-h2">アクセスを増やす前に、<br/>今あるアクセスが売上に変わっているかを見る。</h2>
+<p class="sec-p">ECの売上は、アクセス数だけでは決まりません。同じ人数が商品ページを見ても、購入に進む割合が違えば、同じ集客から生まれる売上は変わります。</p>
+<div class="driver-box">
+<div class="driver-formula">売上 ＝ アクセス数 × CVR × 客単価</div>
+<div class="driver-grid">
+<div class="driver-card">
+<strong>CVRが低いまま集客を増やす。</strong>
+<p>広告や検索から訪問者を増やしても、商品ページで購入が止まれば、売上に変わらないアクセスまで一緒に増えます。</p>
+</div>
+<div class="driver-card">
+<strong>同じアクセスから、購入に進む人を増やす。</strong>
+<p>商品ページで買う理由が伝わると、追加の集客費を増やさなくても、今あるアクセスから生まれる注文数を増やせます。</p>
+</div>
+</div>
+</div>
+<div class="driver-example"><strong>たとえば、月間アクセス10,000、客単価10,000円の場合。</strong><br/>CVR1％なら売上は100万円。CVR2％なら、同じアクセス数のまま売上は200万円です。逆にCVR1％のまま200万円を作るには、アクセスを20,000まで増やす必要があります。</div>
+<p class="driver-close">だから、すでにアクセスがあるのに売上が伸びないときは、集客を増やす前に「どこで購入が止まっているか」を確認します。</p>
+</div>
+</section>
+<!-- stop patterns -->
+<section class="sec sec--white">
 <div class="inner">
 <span class="sec-label">先に分けること</span>
 <h2 class="sec-h2">直す前に、<br/>止まった理由を分ける。</h2>
