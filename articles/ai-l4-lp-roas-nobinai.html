@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<link href="https://konishi-marketing.com/images/favicon.ico" rel="icon" sizes="any"/>
+<meta charset="utf-8"/>
+<meta content="only light" name="color-scheme"/>
+<link href="https://konishi-marketing.com/articles/ai-l4-lp-roas-nobinai.html" rel="canonical"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>AIで作ったLPに広告を流しても売れない理由｜広告とLPの説明がズレていないか｜小西マーケティング</title>
+<meta content="AIで作ったLPに広告を流しても売れないときは、広告で伝えた内容とLPの説明がつながっているかを確認します。広告で何を伝え、読者がどこまで理解し、LPがどこから説明を始めるべきかを整理します。" name="description"/>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+<style id="makuake-author-profile-standard-v1">
+/* Makuake article author profile standardization 2026-08-07 */
+.author-proof-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  margin:1rem 0 1.25rem;
+  border:1px solid var(--gray-200);
+  background:var(--gray-200);
+}
+.author-proof-item{
+  min-width:0;
+  padding:1rem 1.1rem;
+  background:var(--white);
+}
+.author-proof-label{
+  display:block;
+  margin-bottom:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  font-weight:700;
+  line-height:1.5;
+}
+.author-proof-value{
+  display:block;
+  color:var(--navy);
+  font-size:1.35rem;
+  font-weight:700;
+  line-height:1.35;
+  letter-spacing:-.025em;
+}
+.author-proof-note{
+  display:block;
+  margin-top:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  line-height:1.65;
+}
+@media(max-width:640px){
+  .author-proof-grid{grid-template-columns:1fr}
+  .author-proof-value{font-size:1.25rem}
+}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "広告とLPは、どこまで内容をつなげるべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "広告で伝えた内容を前提にして、その次に必要な説明からLPを始めます。同じ説明を繰り返さず、広告でまだ伝えていない判断だけをLPへ残します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "商品を知っている人なら、すぐ比較表を見せていいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "商品名を知っていても、何を基準に比べるかまで分かっているとは限りません。比べ方が曖昧なら、その軸だけ先に整理します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Meta広告では、悩みの説明から始めるLPにすべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一律には決められません。広告ですでに何を伝えたかで変わります。媒体名ではなく、広告を見た時点で何まで分かっているかを確認してください。"
+      }
+    }
+  ]
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "広告では悩みを伝えただけなのに、LPはいきなり商品比較から始まっていないか",
+  "description": "AIで作ったLPに広告を流しても売れないときは、広告で伝えた内容とLPの説明がつながっているかを確認します。広告で何を伝え、読者がどこまで理解し、LPがどこから説明を始めるべきかを整理します。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/ai-l4-lp-roas-nobinai.html",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-18",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://konishi-marketing.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "オウンドメディア",
+      "item": "https://konishi-marketing.com/articles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI LP改善",
+      "item": "https://konishi-marketing.com/articles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "AIで作ったLPに広告を流しても売れない理由｜広告とLPの説明がズレていないか",
+      "item": "https://konishi-marketing.com/articles/ai-l4-lp-roas-nobinai.html"
+    }
+  ]
+}</script></head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+<a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<nav aria-label="パンくず" style="font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto;"><a href="https://konishi-marketing.com/" style="color:#6b6860;text-decoration:none;">ホーム</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">オウンドメディア</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">AI LP改善</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><span aria-current="page" style="color:#3a3834;">AIで作ったLPに広告を流しても売れない理由｜広告とLPの説明がズレていないか</span></nav>
+<div class="hero">
+<span class="hero-category">AI / LP設計 / ROAS改善</span>
+<h1 class="hero-title">広告では悩みを伝えただけなのに、LPはいきなり商品比較から始まっていないか</h1>
+<p class="hero-lead">広告では「こんな悩みありませんか？」までしか伝えていない。ところがLPを開くと、いきなり3商品の違いや機能比較が始まる。これでは、読者がまだ決めていないことを飛ばしたまま次の説明へ進んでしまいます。AIでLPを作るときは、広告を見た時点で何まで分かっているかを確認して、その続きから始めます。</p>
+<p class="hero-meta">小西マーケティング｜2026.08</p>
+</div>
+<div class="author-box">この記事は、楽天SOY受賞企業の元店長として商品ページ改善とEC運営に携わり、20年以上にわたりLP・商品ページの構成、コピー、デザイン、広告まで実務で担当してきた小西秀人が、生成AIを「制作速度」ではなく「売れるページをどう設計・検収するか」の観点から解説しています。</div>
+<div class="article-body">
+<h2 style="margin-top:0;padding-top:0;border-top:none;">広告で伝えていないことを、LPの最初から理解済みにしない</h2>
+<p>広告とLPは、別々のページではなく一続きの説明です。</p>
+<p>広告で悩みまでしか伝えていないなら、読者はまだ「どんな解決策があるか」「何を基準に商品を選ぶか」まで決めていません。</p>
+<div class="insight"><em>LPは、広告の続きを書く。</em><br/>広告で何を伝え、読者がどこまで分かったかを確認して、その次の説明から始めます。</div>
+<div class="callout">
+<strong>具体例｜広告とLPの説明が一段飛んでいる</strong><br/>
+広告：「毎日の作業に時間がかかっていませんか？」<br/>
+LP：「Aモデルは軽量、Bモデルは高耐久、Cモデルは多機能」<br/><br/>
+広告では問題しか伝えていないのに、LPでは「この商品カテゴリが必要」「比較軸も分かっている」という前提で始まっています。読者は商品比較の前に、まだ一つ前の判断を残しています。
+</div>
+<h2>楽天で売れたLPをMeta広告へ持ってきても、同じ結果にならないことがある</h2>
+<p>たとえば楽天のカテゴリ検索から来た人は、すでに商品カテゴリを知り、複数商品を比べるつもりでページを開いていることがあります。</p>
+<p>一方、Meta広告では、広告を見て初めて商品を知った人も流入します。</p>
+<div class="callout">
+<strong>同じLPでも、流入前に持っている情報が違う。</strong><br/>
+楽天検索：カテゴリ名を入力し、比較候補を探している。<br/>
+Meta広告：広告クリエイティブで商品を初めて知り、まだ「自分に必要か」を判断している。<br/><br/>
+この2人へ同じ開始地点を置けば、どちらかに説明不足または説明過多が起こります。
+</div>
+<p>もちろん、楽天検索なら必ず比較できる、Meta広告なら必ず何も知らない、という意味ではありません。見るべきなのは媒体名ではなく、流入前に何を知っていたかです。</p>
+<h2>商品名を知っていても、比べ方まで分かっているとは限らない</h2>
+<p>ここで重要なのは、商品カテゴリや候補を知っているだけでは、比較できる状態とは限らないことです。</p>
+<p>比較軸を理解し、商品の違いを自分の使用結果へつなげられて初めて、差分・条件・証拠から直接判断できます。</p>
+<div class="misrec-block">
+<div class="misrec-header">商品を知っている人でも、必要な説明は違う</div>
+<div class="misrec-row"><div class="misrec-cell label">比較軸まで理解済み</div><div class="misrec-cell truth">差分・条件・証拠から直接進む。問題説明をやり直さない。</div></div>
+<div class="misrec-row"><div class="misrec-cell label">比較軸が曖昧</div><div class="misrec-cell truth">候補は知っていても、何を基準に比べるかが定まっていない。比較軸だけを整理する。</div></div>
+<div class="misrec-row"><div class="misrec-cell label">前提理解に誤りがある</div><div class="misrec-cell truth">問題・原因・解決策のどこかを誤って理解している。誤っている地点までだけ戻る。</div></div>
+</div>
+<p>AIに「商品を知っている顧客向け」とだけ指示すると、比較できる人・比較軸が曖昧な人・前提を誤っている人を同じ状態として扱いやすくなります。</p>
+<h2>AIは、こちらが渡した前提どおりにLPを作る</h2>
+<p>AIの問題は、比較から始めるLPを作れないことではありません。</p>
+<p>むしろ「比較検討中」「商品を知っている」「スペックを理解している」と前提を渡せば、その前提に合わせた見出しや比較表を速く作れます。</p>
+<p>ただし、その前提が流入全体に合っているかは別です。</p>
+<div class="callout">
+<strong>具体例｜広告では「こんな悩みありませんか？」だけ伝え、LPではいきなり3モデル比較</strong><br/>
+広告を見た人は、問題には気づいたが、解決策カテゴリや評価基準までは分かっていない。<br/>
+そこでLPが「Aモデルは軽量、Bモデルは高耐久、Cモデルは多機能」と始まると、比較表は理解できても「なぜこのカテゴリが必要か」が未完了のままです。
+</div>
+<p>比較情報を増やすほど、未完了の判断を飛ばしたまま詳しくなることがあります。</p>
+<h2>すでに分かっている説明を、もう一度やり直さない</h2>
+<p>反対に、すでに比較軸まで理解している人へ、悩みの共感や問題説明を長く繰り返すと判断が遅れます。</p>
+<p>「AI広告流入だから、まず悩みを深掘りする」と固定するのも同じ間違いです。</p>
+<div class="insight"><em>説明不足を防ぐために全員をL2へ戻すのではなく、確認できた地点からだけ始める。</em></div>
+<p>比較軸まで理解済みなら差分・条件・証拠から進む。比較軸が曖昧なら、その軸だけ補う。前提理解に誤りがある場合だけ、誤っている地点まで戻します。</p>
+<h2>ROASを見るなら、LPだけでなく広告クリエイティブとの役割分担を見る</h2>
+<p>広告クリエイティブで問題、原因、解決策、商品差まで十分に伝えているなら、LPは短くても成立します。</p>
+<p>逆に広告では興味だけを作り、LPで初めて商品カテゴリを説明するなら、LP側にその説明が必要です。</p>
+<div class="misrec-block">
+<div class="misrec-header">広告とLPを一続きで見る</div>
+<div class="misrec-row"><div class="misrec-cell label">広告で渡した判断</div><div class="misrec-cell truth">問題認識、必要性、解決策、比較軸、商品差のどこまで伝えたか。</div></div>
+<div class="misrec-row"><div class="misrec-cell label">LPで残った判断</div><div class="misrec-cell truth">広告で未完了だった判断だけを引き継ぎ、購入条件と証拠まで進める。</div></div>
+</div>
+<p>広告とLPを別々に最適化すると、同じ説明を二度したり、必要な説明が両方から抜けたりします。</p>
+<h2>広告を流しても売れないときは、広告とLPのつなぎ目を確認する</h2>
+<ul class="prob-list">
+<li data-num="1">流入前に、読者は問題を知っていたか</li>
+<li data-num="2">解決策カテゴリを知っていたか</li>
+<li data-num="3">比較軸を理解していたか</li>
+<li data-num="4">広告でどこまで理解を進めたか</li>
+<li data-num="5">LPはその続きから始まっているか</li>
+</ul>
+<p>この5つが揃えば、差分から始めるのか、比較軸だけ補うのか、さらに前から説明するのかを分けられます。</p>
+<h2>AIには「誰向けか」より「どこまで説明済みか」を渡す</h2>
+<p>AIへ「比較から始めるLPを作って」とだけ伝えるより、流入前の理解を具体的に渡します。</p>
+<div class="callout">
+<strong>例：</strong><br/>
+「Meta広告から流入。広告では『作業時間が長い』という問題と商品カテゴリまで説明済み。商品A・B・Cの違いは未説明。LPでは比較軸を1つ整理してから商品差へ進む。」<br/><br/>
+このように開始地点を渡すと、AIは必要な深さから構成案を作りやすくなります。
+</div>
+<h2>AIでLPを作る前に、広告の続きをどこから書くかを決める</h2>
+<p>すでに比べ方まで分かっている人には、差分から始めるLPは効率的です。</p>
+<p>ROASが伸びにくくなるのは、読者がどこまで分かっているかを確認せず、全員を同じ開始地点へ置いたときです。</p>
+<p>AIでLPを作る前に、流入、広告で渡した知識、残っている判断を整理します。</p>
+<p>LP全体の改善順序は、<a href="https://konishi-marketing.com/articles/ai-lp-kaizen-junjo.html">AIで作ったLPを売れるページに直す改善順序</a>で確認できます。</p>
+<p>楽天では売れるのにMeta広告では成約しない場合は、<a href="https://konishi-marketing.com/articles/jisha-ec-meta-kokoku-nagashite-mo-seiyaku-shinai.html">楽天では売れるのにMeta広告では成約しない自社ECが見る場所</a>も関連します。</p>
+<div class="cta-block">
+<div class="cta-block-label">LP・商品ページ制作／改善</div>
+<div class="cta-block-title">広告で何を伝え、LPで何を続けるかを揃える。</div>
+<div class="cta-block-sub">広告・検索・既存顧客など、流入前に持っている情報を確認し、LPでまだ説明が必要なことだけを残して構成します。</div>
+<a class="cta-btn" href="https://konishi-marketing.com/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=ai-l4-lp-roas-nobinai&amp;utm_content=mid_cta">小西マーケティングの支援内容を見る</a>
+<div class="cta-note">流入媒体だけで意識レベルを固定せず、広告からLPまで一続きで確認します。</div>
+</div>
+</div><!-- /article-body -->
+<div class="faq-section" id="article-faq"><div class="faq-label">よくある質問</div><div class="faq-item"><div class="faq-q">広告とLPは、どこまで内容をつなげるべきですか？</div><div class="faq-a">広告で伝えた内容を前提にして、その次に必要な説明からLPを始めます。同じ説明を繰り返さず、広告でまだ伝えていない判断だけをLPへ残します。</div></div><div class="faq-item"><div class="faq-q">商品を知っている人なら、すぐ比較表を見せていいですか？</div><div class="faq-a">商品名を知っていても、何を基準に比べるかまで分かっているとは限りません。比べ方が曖昧なら、その軸だけ先に整理します。</div></div><div class="faq-item"><div class="faq-q">Meta広告では、悩みの説明から始めるLPにすべきですか？</div><div class="faq-a">一律には決められません。広告ですでに何を伝えたかで変わります。媒体名ではなく、広告を見た時点で何まで分かっているかを確認してください。</div></div></div>
+<div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div><div class="faq-item"><div class="faq-q">流入ごとに別LPを作る必要がありますか？</div><div class="faq-a">必ずしも必要ありません。広告や導線側で理解を揃える、LP内で分岐を作る、同じ構成でも導入だけ変えるなど、判断数を増やさない方法を選びます。</div></div><div class="faq-item"><div class="faq-q">検索広告でも意識レベルは混在しますか？</div><div class="faq-a">混在します。検索語が商品名か悩み語かでも違い、同じ検索広告でも理解度は一律ではありません。</div></div><div class="faq-item"><div class="faq-q">ROAS改善を相談するとき何を共有すればよいですか？</div><div class="faq-a">広告クリエイティブ、流入先LP、媒体別のCVR・CPA・ROAS、商品資料、現在のターゲット設定を共有してください。</div></div></div>
+<div class="cta-block" style="margin:0;">
+<div class="cta-block-label">LP・商品ページ制作／改善</div>
+<div class="cta-block-title">広告とLPを別々に直す前に、開始地点を揃える。</div>
+<div class="cta-block-sub">広告で何を伝え、LPで何を判断してもらうかを一続きで確認してから改善します。</div>
+<a class="cta-btn" href="https://konishi-marketing.com/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=ai-l4-lp-roas-nobinai&amp;utm_content=bottom_cta">小西マーケティングの支援内容を見る</a>
+<div class="cta-note">相談・見積もり作成に費用はかかりません。</div>
+</div>
+<div class="author-profile">
+<div class="author-profile-label">この記事を書いた人</div>
+<div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+<div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+<img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/>
+</div>
+<div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+</div>
+<div class="author-profile-body">EC・D2Cの商品ページ／LP改善を専門とするコンサルタント。楽天市場・Makuake・自社ECなどで、調査から訴求設計、構成、コピー、デザイン、実装まで一体で担当。生成AIも制作工程に活用しながら、最終的な戦略判断・事実確認・品質検収は人が持つ体制で支援している。</div>
+</div>
+<div class="related-section">
+<div class="related-label">関連記事</div>
+<ul class="related-list"><li><a href="https://konishi-marketing.com/articles/ai-lp-kaizen-junjo.html">AIで作ったLPを売れるページに直す改善順序</a></li><li><a href="https://konishi-marketing.com/articles/jisha-ec-meta-kokoku-nagashite-mo-seiyaku-shinai.html">楽天では売れるのにMeta広告では成約しない自社ECが見る場所</a></li><li><a href="https://konishi-marketing.com/articles/ai-jidai-lp-seisakugaisha-erabikata.html">生成AI時代にLP制作会社を選ぶ基準</a></li></ul>
+</div>
+<footer class="site-footer">
+<a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+</div><!-- /site-wrap -->
+</body>
+</html>
