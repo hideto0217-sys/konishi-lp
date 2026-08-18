@@ -1,464 +1,188 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-<link rel="icon" href="https://konishi-marketing.com/images/favicon.ico" sizes="any"/>
-<meta charset="UTF-8">
-<meta name="color-scheme" content="only light">
-<link rel="canonical" href="https://konishi-marketing.com/articles/ec-shohin-page-ab-test-kino-shinai-genin.html">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ECの商品ページのA/Bテストが機能しない根本的な原因｜小西マーケティング</title>
-<meta name="description" content="A/Bテストを繰り返してもCVRが動かないなら、テストする前にページ内で読者が止まっている場所が残っている可能性があります。EC100店舗超の現状を見てきた経験から、その流れを解説します。">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "A/BテストでAパターンが勝ったのに、翌月CVRが落ちたのはなぜですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A/Bテストで分かるのは、比べた2つの差です。ただ、ページは前後の流れで読まれます。変更した箇所だけが良くなっても、読者がその前で止まっているなら、全体のCVRは動きにくいままです。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "アクセスが少なくてA/Bテストが終わりません。どうすればいいですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "アクセスが少ないページで細かい要素を比べると、結果が出るまでに時間がかかります。その間にも機会は流れていきます。まず見るべきなのは、テストする要素ではなく、ページ内で読者がどこで止まっているかです。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "A/Bテストはいつ有効ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A/Bテストは、ページ内で読者が止まっている場所が見えていて、その場所をどう変えるかを比べるときに有効です。どこで止まっているかが見えないままテストをすると、どちらが良いかは分かっても、なぜ良いのか、次に何を変えるべきかが見えにくくなります。"
-      }
-    }
-  ]
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><link href="https://konishi-marketing.com/articles/ec-shohin-page-ab-test-kino-shinai-genin.html" rel="canonical"/><title>ECの商品ページA/Bテストが機能しない理由｜テスト前に決める6つの条件｜小西マーケティング</title><meta content="ECの商品ページA/Bテストが機能しない理由を、仮説・変更要素・勝敗指標・テスト条件の6項目から解説します。" name="description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ECの商品ページA/Bテストが機能しない理由｜テスト前に決める6つの条件", "description": "ECの商品ページA/Bテストが機能しない理由を、仮説・変更要素・勝敗指標・テスト条件の6項目から解説します。", "url": "https://konishi-marketing.com/articles/ec-shohin-page-ab-test-kino-shinai-genin.html", "dateModified": "2026-08-18", "author": {"@type": "Person", "name": "小西秀人", "url": "https://konishi-marketing.com"}, "publisher": {"@type": "Organization", "name": "小西マーケティング", "url": "https://konishi-marketing.com"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "商品ページのA/Bテストは何から始めるべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "どの購入判断が止まっているかを特定し、その停止点を動かす主要変更を1つ決めるところから始めます。"}}, {"@type": "Question", "name": "A/Bテストでは一度に複数箇所を変えてもいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "目的によりますが、何が効いたか学習したい場合は主要変更を1つに絞る方が次の改善へつなげやすくなります。"}}, {"@type": "Question", "name": "差が出なかったテストは失敗ですか？", "acceptedAnswer": {"@type": "Answer", "text": "必ずしも失敗ではありません。仮説、変更幅、母数、別の停止点などを切り分ける材料になります。"}}]}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SWS3R3K4W5');</script><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/><style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+<style id="makuake-author-profile-standard-v1">
+/* Makuake article author profile standardization 2026-08-07 */
+.author-proof-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  margin:1rem 0 1.25rem;
+  border:1px solid var(--gray-200);
+  background:var(--gray-200);
 }
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "ECの商品ページのA/Bテストが機能しない根本的な原因",
-  "description": "A/Bテストを繰り返してもCVRが動かないなら、テストする前にページ内で読者が止まっている場所が残っている可能性があります。EC100店舗超の現状を見てきた経験から、その流れを解説します。",
-  "image": "https://konishi-marketing.com/images/konishi.JPG",
-  "url": "https://konishi-marketing.com/articles/ec-shohin-page-ab-test-kino-shinai-genin.html",
-  "datePublished": "2026-04-21",
-  "dateModified": "2026-04-21",
-  "author": {
-    "@type": "Person",
-    "name": "小西 秀人",
-    "url": "https://konishi-marketing.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "小西マーケティング",
-    "url": "https://konishi-marketing.com"
-  }
+.author-proof-item{
+  min-width:0;
+  padding:1rem 1.1rem;
+  background:var(--white);
 }
-</script>
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script><script>
-window.dataLayer=window.dataLayer||[];
-function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-gtag('config','G-SWS3R3K4W5');
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --navy: #1a2744;
-  --navy-light: #243461;
-  --gold: #c9a84c;
-  --gold-light: #e8d5a3;
-  --white: #ffffff;
-  --off-white: #f8f7f4;
-  --gray-100: #f1f0ed;
-  --gray-200: #e4e2dc;
-  --gray-400: #a09e97;
-  --gray-600: #6b6860;
-  --gray-800: #3a3834;
-  --text: #1e1d1a;
-  --red: #b71c1c;
-  --sans: 'Noto Sans JP', sans-serif;
+.author-proof-label{
+  display:block;
+  margin-bottom:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  font-weight:700;
+  line-height:1.5;
 }
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; }
-body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
-
-.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
-
-.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
-.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
-
-.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
-.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
-.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
-.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
-.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
-
-.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
-.author-box strong { color: var(--navy); }
-
-.article-body { padding: 2.5rem 2.5rem; }
-.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
-.article-body h2:first-child { margin-top: 0; }
-.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
-.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
-.article-body p:last-child { margin-bottom: 0; }
-.article-body strong { color: var(--navy); }
-
-.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
-.insight em { font-style: normal; color: var(--gold-light); }
-
-.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
-.callout strong { color: var(--navy); }
-
-.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
-.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
-.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
-.misrec-row:first-of-type { border-top: none; }
-.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
-.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
-.misrec-cell.belief { background: var(--white); }
-.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
-
-.prob-list { list-style: none; margin: 1rem 0; }
-.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; }
-.prob-list li:last-child { border-bottom: none; }
-.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-
-.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
-.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
-.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
-.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
-.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
-.cta-btn:hover { opacity: .88; }
-.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
-
-.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
-.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
-.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
-.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
-.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
-.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
-.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
-
-.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
-.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
-.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
-.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
-
-.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
-.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
-.related-list { list-style: none; }
-.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
-.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
-.related-list li:last-child { border-bottom: none; }
-.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
-
-.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
-.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
-
-table.misrec-block { width: 100%; border-collapse: collapse; margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
-table.misrec-block th.misrec-header { text-align: left; display: table-cell; width: 100%; }
-table.misrec-block td.misrec-cell.label { width: 40%; }
-
-#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
-#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
-#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
-#article-faq .faq-q { font-size: 1.0rem; color: var(--navy) !important; }
-#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; border-radius: 0; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
-
-.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
-.nextstep-faq .faq-label { color: var(--gold-light); }
-.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
-.nextstep-faq .faq-item:last-child { border-bottom: none; }
-.nextstep-faq .faq-q { color: var(--white); }
-.nextstep-faq .faq-q::before { color: var(--gold-light); }
-.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
-.nextstep-faq .faq-a::before { color: var(--gold-light); }
-
-:root { color-scheme: only light; }
-html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
-.prob-list li { background-color: #ffffff; }
-.article-body { background-color: #ffffff; }
-
-@media (max-width: 640px) {
-  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
-  .hero { padding-top: 2rem; }
-  .cta-block { padding: 1.75rem 1.25rem; }
-  .misrec-row { grid-template-columns: 1fr; }
-  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
-  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+.author-proof-value{
+  display:block;
+  color:var(--navy);
+  font-size:1.35rem;
+  font-weight:700;
+  line-height:1.35;
+  letter-spacing:-.025em;
+}
+.author-proof-note{
+  display:block;
+  margin-top:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  line-height:1.65;
+}
+@media(max-width:640px){
+  .author-proof-grid{grid-template-columns:1fr}
+  .author-proof-value{font-size:1.25rem}
 }
 </style>
-</head>
-<body>
-
-<div class="site-wrap">
-
-<header class="site-header">
-  <a href="https://konishi-marketing.com/">小西マーケティング</a>
-</header>
-
-<div class="hero">
-  <span class="hero-category">EC 商品ページ改善</span>
-  <h1 class="hero-title">ECの商品ページのA/Bテストが機能しない根本的な原因</h1>
-  <p class="hero-lead">ボタンの色を赤から緑に変えてテストした。キャッチコピーのAとBを比較した。「Aパターンが勝った」と本番に反映した。翌月、なぜか全体のCVRが落ちていた。テストのやり方だけの問題ではありません。A/Bテストを繰り返してもCVRが動かないなら、テストする前にページ内で読者が止まっている場所が残っている可能性があります。EC100店舗超の現状を見てきた経験から、その流れを解説します。</p>
-  <p class="hero-meta">小西マーケティング｜2026.04</p>
-</div>
-
-<div class="author-box">
-  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間の現場経験をもとに執筆しています。
-</div>
-
-<div class="article-body">
-
-  <h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">勝ったはずなのに、下がった</h2>
-
-  <p>赤いボタンと緑のボタンをテストする。2週間待つ。Aパターンのクリック率が少し高かった。本番に反映する。</p>
-
-  <p>翌月のRMSを開く。全体のCVRは、テスト前より下がっている。</p>
-
-  <p>「テスト結果は正しかったはずなのに」。この経験が積み重なると、A/Bテストへの信頼が揺らぎ始めます。</p>
-
-  <p>次のテスト案を考える。キャッチコピーを変える。ファーストビューの写真を変える。ボタンの文言を変える。それでも結果は誤差の範囲に収まる。次に何をテストすればいいかが見えなくなる。</p>
-
-  <div class="insight">
-    A/Bテストでできるのは、2つの違いを比べることです。<br>
-    <em>ただ、読者がその前で止まっているなら、どちらを比べても大きな差は出にくくなります。</em>
-  </div>
-
-  <p>A/Bテストは、比べた2つのうち、どちらが良かったかを見るためのものです。</p>
-
-  <p>ただし、読者がその箇所まで来ていない。あるいは、その箇所に来る前に「自分には関係ない」と感じて離脱している。この状態では、ボタンの色や文言を比べても数字は動きにくいままです。</p>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">何を変えても、差が出ない</h2>
-
-  <p>テスト結果が誤差の範囲に収まることが続くと、「もっと大きく変えないと分からないのかもしれない」と考えます。</p>
-
-  <p>次は見出しを大きく変える。次はファーストビューの構成を丸ごと変える。次はレビューの位置を変える。変更は大きくなっていく。</p>
-
-  <div class="misrec-block">
-    <div class="misrec-header">要素に目が向く理由</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">事業者が見ている場所</div>
-      <div class="misrec-cell truth">テストする要素の違いが小さすぎる。あるいは選び方が間違っているから差が出ないと考える</div>
-    </div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">残っている可能性</div>
-      <div class="misrec-cell truth">読者がその要素に反応する前に止まっている。AもBも、読者にとって大きな違いとして届いていない</div>
-    </div>
-  </div>
-
-  <p>ボタンの色が原因で止まっているなら、色を変える意味があります。</p>
-
-  <p>でも、読者がボタンにたどり着く前に離脱しているなら、ボタンの色を変えても数字は動きにくい。ファーストビューの見出しも同じです。読者がその言葉を自分の話として受け取れていなければ、AでもBでも通過されます。</p>
-
-  <div class="callout">
-    <strong>A/Bテストを使う場合。</strong><br>
-    ECでは、A/Bテストが改善策として語られてきました。どれも必要な場面があります。ただ、テストで分かるのは、比べた2つの差です。ページ内で読者がどこで止まっているかまでは、別で見る必要があります。
-  </div>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">勝ったのに、全体は動かない</h2>
-
-  <p>特定のセクションでA/Bテストを行い、Aパターンが勝つ。本番に反映する。しかし全体のCVRは変わらない。あるいは翌月に下がっている。</p>
-
-  <p>このとき、テスト結果が間違っていたとは限りません。見ていた場所が狭かった可能性があります。</p>
-
-  <div class="misrec-block">
-    <div class="misrec-header">勝ったのに下がる理由</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">事業者が信じている原因</div>
-      <div class="misrec-cell truth">テストで勝ったパターンを反映すれば、ページ全体のCVRも上がるはずだと考える</div>
-    </div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">残っている可能性</div>
-      <div class="misrec-cell truth">テストで見ているのは、変更した箇所の差です。ページは前後の流れで読まれるため、その箇所だけが良くなっても、前で止まっている読者には届かない</div>
-    </div>
-  </div>
-
-  <p>ページは、部品の集合ではありません。読者は上から順に読み、途中で納得したり、疑ったり、離脱したりします。</p>
-
-  <p>途中の1箇所を良くしても、その前で止まっている読者には届きません。逆に、1箇所だけを強くすると、前後の話とズレて、ページ全体の読み方が悪くなることもあります。</p>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">他社で勝った型を入れても、変わらない</h2>
-
-  <p>テストのアイデアが枯渇したとき、「他社でCVRが上がった見出し」「成果が出たボタン文言」「成功事例のファーストビュー」を参考にすることがあります。</p>
-
-  <p>表面だけを見ると、すぐに使えそうに見えます。しかし自社ページでは反応しない。</p>
-
-  <div class="misrec-block">
-    <div class="misrec-header">他社事例で残る問題</div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">市場で選ばれやすい手段</div>
-      <div class="misrec-cell truth">他社で効果が出たキャッチコピーやデザインの型を、自社のA/Bテスト素材として使う</div>
-    </div>
-    <div class="misrec-row">
-      <div class="misrec-cell label">それでも残る問題</div>
-      <div class="misrec-cell truth">他社で効いた表現は、その会社の商品と読者の中で効いたものです。自社の読者が止まっている場所と合っていなければ、借りてきた表現も流される</div>
-    </div>
-  </div>
-
-  <p>他社で効いた表現は、その会社の商品、その読者、そのページの中で意味を持っていました。</p>
-
-  <p>自社の読者がどこで止まっているかが見えていないまま表現だけを借りても、同じようには届きません。結果として、「何をテストしても差が出ない」という状態が続きます。</p>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">A/Bテストで止まるページの3つの状態</h2>
-
-  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">何を変えるべきかが見えていない</h3>
-
-  <p>「次は何をテストすればいいか」が分からない。これは、アイデア不足だけの問題ではありません。</p>
-
-  <p>ページ内で読者がどこで止まっているかが見えていないため、何を変えるべきかを選べない状態です。</p>
-
-  <p>どこで止まっているかが見えていれば、見出しを変えるのか、写真を変えるのか、順番を変えるのかが見えやすくなります。そこが見えないままでは、テストは候補探しになります。</p>
-
-  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">結果を待つ間に、機会が流れる</h3>
-
-  <p>アクセスが少ないページでA/Bテストを行うと、結果が見えるまでに時間がかかります。</p>
-
-  <p>月に数千PV以下のページで、ボタンの色や細かい文言を比べる。結果が出るまでに数ヶ月かかる。その間にも、ページへ来た読者は買わずに離脱していきます。</p>
-
-  <p>アクセスが少ない段階では、細かいテストより先に、ページ内で止まっている場所を見る方が現実的です。</p>
-
-  <h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">部分だけ直して、流れが崩れる</h3>
-
-  <p>お客様の声を上に移動する。FAQを削る。ファーストビューのコピーを強くする。</p>
-
-  <p>それぞれの変更は、単体では良く見えることがあります。ただ、ページ全体として読むと、話のつながりが悪くなることがあります。</p>
-
-  <p>部分だけを直し続けると、どのセクションが何のためにあるのかが見えにくくなります。結果として、長いのに読まれないページが残ります。</p>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">テストで動くページ、止まるページ</h2>
-
-  <p>止まるページでは、どこで読者が止まっているかが見えないままテストが繰り返されています。</p>
-
-  <p>ボタン、見出し、色、順番。比べる対象は増えます。しかし、読者が止まっている場所と合っていなければ、どれを比べても差は出にくい。</p>
-
-  <p>テストで動くページでは、先に読者が止まっている場所を見ています。そのうえで、そこをどう変えるかを比べています。</p>
-
-  <div class="insight">
-    A/Bテストが動かない理由は、テストの手法だけではありません。<br>
-    <em>テストの前に、読者がページ内のどこで止まっているかを見る必要があります。</em>
-  </div>
-
-  <p>以下の状態が続いているなら、A/Bテストの前に確認すべき場所があります。</p>
-
-  <ul class="prob-list">
-    <li data-num="✓">テスト結果が毎回誤差1〜2%の範囲内に収まり、差が出ない</li>
-    <li data-num="✓">「Aパターンが勝った」と適用したのに、翌月全体のCVRが落ちた</li>
-    <li data-num="✓">「次に何をテストすればいいか」のアイデアが枯渇している</li>
-    <li data-num="✓">アクセスが少なく、テストが終わるまでの待機期間が長すぎる</li>
-  </ul>
-
-  <div class="cta-block">
-    <div class="cta-block-label">無料診断</div>
-    <div class="cta-block-title">テストの前に、止まっている場所を見る。</div>
-    <div class="cta-block-sub">
-      A/Bテストを繰り返してもCVRが動かないなら、ページ内で読者が止まっている場所が残っている可能性があります。<br>
-      どこで買う理由が届いていないかを確認します。<br>
-      URLを送るだけで、2営業日以内に診断レポートをお送りします。
-    </div>
-    <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=mid_cta" class="cta-btn">テスト前に診断する</a>
-    <div class="cta-note">※営業電話は一切いたしません。</div>
-  </div>
-
-  <h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
-
-  <p>ECでは、A/Bテストが購入率改善の手段として語られてきました。ボタン、見出し、写真、ファーストビュー。比べることで分かることはあります。</p>
-
-  <p>ただ、A/Bテストで分かるのは、比べた2つの差です。ページ内で読者がその前に止まっているなら、どちらを比べても大きな差は出にくくなります。</p>
-
-  <p>A/Bテストを始める前に、ページ内で読者がどこで止まっているかを確認する。そこが見えると、何をテストすべきかの見え方が変わります。</p>
-
-</div><!-- /article-body -->
-
-<div class="faq-section" id="article-faq">
-  <div class="faq-label">よくある質問</div>
-
-  <div class="faq-item">
-    <div class="faq-q">A/BテストでAパターンが勝ったのに、翌月CVRが落ちたのはなぜですか？</div>
-    <div class="faq-a">A/Bテストで分かるのは、比べた2つの差です。ただ、ページは前後の流れで読まれます。変更した箇所だけが良くなっても、読者がその前で止まっているなら、全体のCVRは動きにくいままです。</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q">アクセスが少なくてA/Bテストが終わりません。どうすればいいですか？</div>
-    <div class="faq-a">アクセスが少ないページで細かい要素を比べると、結果が出るまでに時間がかかります。その間にも機会は流れていきます。まず見るべきなのは、テストする要素ではなく、ページ内で読者がどこで止まっているかです。</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q">A/Bテストはいつ有効ですか？</div>
-    <div class="faq-a">A/Bテストは、ページ内で読者が止まっている場所が見えていて、その場所をどう変えるかを比べるときに有効です。どこで止まっているかが見えないままテストをすると、どちらが良いかは分かっても、なぜ良いのか、次に何を変えるべきかが見えにくくなります。</div>
-  </div>
-</div><!-- /記事FAQ -->
-
-<div class="faq-section nextstep-faq">
-  <div class="faq-label">Next Step</div>
-
-  <div class="faq-item">
-    <div class="faq-q">A/Bテストを有効にするために、何を先に確認すべきですか？</div>
-    <div class="faq-a">ページ内で読者がどこで止まっているかを先に確認します。止まっている場所が見えれば、何を変えるべきかが見えやすくなります。そのうえでA/Bテストを使うと、比べる意味のある箇所をテストできます。</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q">「何をテストすればいいか分からない」状態は何が原因ですか？</div>
-    <div class="faq-a">ページ内で読者がどこで止まっているかが見えていない可能性があります。止まっている場所が見えないままでは、他社事例や直感で候補を選ぶことになりやすくなります。まず、読者がどこで離脱しているか、どこで買う理由を受け取れていないかを見る必要があります。</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q">診断では、A/Bテストが動かない原因をどう確認しますか？</div>
-    <div class="faq-a">ページ全体を読み、読者がどこで止まっているかを確認します。ボタンや見出しを変える前に、買う理由がどこで届いていないかを整理します。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
-  </div>
-
-</div><!-- /faq -->
-
-<div class="cta-block" style="margin:0;">
-  <div class="cta-block-label">診断を申し込む</div>
-  <div class="cta-block-title">まず、止まっている場所を見る。</div>
-  <div class="cta-block-sub">
-    A/Bテストが動かない場所が分かれば、何を変えればいいかが見えてきます。<br>
-    何を変えればいいかが見えると、テストする場所の選び方が変わります。<br>
-    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
-  </div>
-  <a href="https://konishi-marketing.com/?utm_source=article&utm_medium=cta&utm_campaign=bottom_cta#form" class="cta-btn">無料で診断を申し込む──2営業日以内に返送</a>
-  <div class="cta-note">※営業電話はいたしません。</div>
-</div>
-
-<div class="author-profile">
-  <div class="author-profile-label">この記事を書いた人</div>
-  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
-    <div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
-      <img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人" width="72" height="72" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
-    </div>
-    <div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
-  </div>
-  <div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
-</div>
-
-<div class="related-section">
-  <div class="related-label">関連記事</div>
-  <ul class="related-list">
-    <li><a href="https://konishi-marketing.com/articles/rakuten-heatmap-bunseki-kaizen-ni-tsunagaranu.html">楽天のヒートマップ分析が改善につながらない理由</a></li>
-    <li><a href="https://konishi-marketing.com/articles/rakuten-shohin-page-design-yori-sekkei-ga-saki.html">楽天の商品ページはデザインより構成が先である理由</a></li>
-    <li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">楽天で商品ページの転換率（CVR）が上がらない本当の理由</a></li>
-  </ul>
-</div>
-
-<footer class="site-footer">
-  <a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
-</footer>
-
-</div><!-- /site-wrap -->
-
-</body>
-</html>
+<style id="nextstep-faq-link-contrast-fix">
+.nextstep-faq .faq-a a{
+  color:var(--gold-light);
+  text-decoration:underline;
+  text-underline-offset:2px;
+  font-weight:700;
+}
+.nextstep-faq .faq-a a:visited{
+  color:var(--gold-light);
+}
+.nextstep-faq .faq-a a:hover{
+  color:var(--white);
+}
+</style>
+<style id="makuake-channel-map-v1">
+.channel-map{margin:2rem 0;border:1px solid var(--gray-200);background:var(--white)}
+.channel-map-title{padding:.75rem 1rem;background:var(--navy);color:var(--gold-light);font-size:.8rem;font-weight:700;letter-spacing:.06em}
+.channel-map-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.channel-map-table{width:100%;min-width:720px;border-collapse:collapse}
+.channel-map-table th,.channel-map-table td{padding:1rem;vertical-align:top;border-right:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);font-size:.88rem;line-height:1.8;text-align:left}
+.channel-map-table th{background:var(--gray-100);color:var(--navy);font-weight:700}
+.channel-map-table td{color:var(--gray-800)}
+.channel-map-table th:last-child,.channel-map-table td:last-child{border-right:none}
+.channel-map-table tr:last-child td{border-bottom:none}
+.channel-map-table td:first-child{width:24%;background:var(--off-white)}
+</style></head><body><div class="site-wrap"><header class="site-header"><a href="https://konishi-marketing.com/">小西マーケティング</a></header><nav aria-label="パンくず" style="font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto;"><a href="https://konishi-marketing.com/" style="color:#6b6860;text-decoration:none;">ホーム</a><span style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">オウンドメディア</a><span style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">EC・マーケティング</a><span style="margin:0 .45rem;color:#a09e97;">›</span><span>ECの商品ページA/Bテストが機能しない理由｜テスト前に決める6つの条件</span></nav><div class="hero"><span class="hero-category">EC総合 / A/Bテスト / CVR改善</span><h1 class="hero-title">ECの商品ページA/Bテストが機能しない理由｜テスト前に決める6つの条件</h1><p class="hero-lead">A/Bテストを始める前に、<strong style="color:#fff;">どの購入判断が止まり、何を変えれば動くと考えるのか</strong>を1つ決めます。</p><p class="hero-meta">小西マーケティング｜2026.08</p></div><div class="author-box">この記事は、<strong>楽天最大CVR62%（月間最高66%）・Yahoo!ショッピング総合1位・年間ランキング入賞11回・カテゴリ1位1,000回超</strong>などのEC実務経験を持つ小西秀人が、物販ECの商品ページ・CVR改善という観点から整理しています。</div><div class="article-body">
+<h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">A/Bテストは「良いページを探す方法」ではなく、仮説を比較する方法</h2>
+<p>商品ページでA案とB案を作っても、何を検証したいのか決まっていなければ、勝敗が出ても次の改善へつながりません。</p>
+<div class="insight">テスト前に必要なのは、<em>どの購入判断が止まっていて、何を変えればその停止点が動くと考えるのか</em>を1つ決めることです。</div>
+<h2>1｜まずテストする「停止点」を決める</h2>
+<p>クリック率、商品理解、価格納得、証拠不足、配送条件など、購入が止まる場所は複数あります。ページ全体をA/Bする前に、どの判断を動かすテストなのかを固定します。</p>
+<h2>2｜一度に複数要素を変えすぎない</h2>
+<p>画像、コピー、価格、レビュー表示を同時に変えると、結果が動いても何が効いたか分かりません。次の改善へ使えるよう、主要変更を1つに絞ります。</p>
+<h2>3｜勝敗指標をテスト前に決める</h2>
+<p>クリック率を改善するテストなのに売上だけを見る、CVRを改善するテストなのに滞在時間だけを見る、といった指標ズレを避けます。</p>
+<div class="callout"><strong>例：</strong><br/>サムネイル → クリック率<br/>商品ページ冒頭 → 離脱・CVR<br/>価格訴求 → CVR・1注文利益<br/>アップセル → 客単価<br/>目的と判定指標を揃える。</div>
+<h2>4｜テスト期間中に大きな販促条件を同時変更しない</h2>
+<p>イベント、クーポン、広告流入、在庫、価格が同時に変わると、A/B差より外部条件の影響が大きくなります。可能な範囲で比較条件を揃えます。</p>
+<h2>5｜差が出なかったときに「AもBも同じ」だけで終わらせない</h2>
+<p>差が出ない場合、仮説が間違っていた、変更幅が小さかった、母数が不足した、そもそも別の停止点が主原因だった可能性があります。次のテストへ進むために理由を分けます。</p>
+<h2>6｜A/Bテストを「改善の最初」に置かない</h2>
+<p>ページの問題がまだ特定できていない段階でテストを始めると、候補案を大量に作るだけになります。原因仮説を作り、改善案を絞った後にA/Bテストを置きます。</p>
+<h2>A/Bテスト前の確認順</h2>
+<ul class="prob-list">
+<li data-num="1">止まっている購入判断を特定する</li>
+<li data-num="2">変える主要要素を1つ決める</li>
+<li data-num="3">勝敗指標を決める</li>
+<li data-num="4">期間・販促・流入条件を揃える</li>
+<li data-num="5">差が出ない場合の解釈を用意する</li>
+<li data-num="6">テスト結果を次の改善仮説へつなぐ</li>
+</ul>
+<h2>A/Bテストの価値は「勝ち案を決めること」だけではない</h2>
+<p>テストの価値は、どの購入判断が売上・CVRへ影響しているかを学習できることです。<strong>仮説 → 変更 → 指標 → 解釈</strong>まで決めて初めて、次の改善へ使えるテストになります。</p>
+</div><div class="faq-section" id="article-faq"><div class="faq-label">よくある質問</div><div class="faq-item"><div class="faq-q">商品ページのA/Bテストは何から始めるべきですか？</div><div class="faq-a">どの購入判断が止まっているかを特定し、その停止点を動かす主要変更を1つ決めるところから始めます。</div></div><div class="faq-item"><div class="faq-q">A/Bテストでは一度に複数箇所を変えてもいいですか？</div><div class="faq-a">目的によりますが、何が効いたか学習したい場合は主要変更を1つに絞る方が次の改善へつなげやすくなります。</div></div><div class="faq-item"><div class="faq-q">差が出なかったテストは失敗ですか？</div><div class="faq-a">必ずしも失敗ではありません。仮説、変更幅、母数、別の停止点などを切り分ける材料になります。</div></div></div><div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div><div class="faq-item"><div class="faq-q">自社では、どこから確認すべきですか？</div><div class="faq-a">アクセス・CVR・商品別売上と現在のページ・販促条件を並べると、最初に直す場所を絞れます。 <a href="https://konishi-marketing.com/">支援内容はこちらです。</a></div></div><div class="faq-item"><div class="faq-q">相談や見積もり作成に費用はかかりますか？</div><div class="faq-a">費用はかかりません。サービスページから相談できます。</div></div></div><div class="cta-block"><div class="cta-block-label">ECの商品ページ・CVR改善</div><div class="cta-block-title">A/Bテストの前に、検証する仮説を決める。</div><div class="cta-block-sub">停止点・変更要素・勝敗指標を揃え、テスト結果を次の改善へ使える形にします。</div><a class="cta-btn" href="https://konishi-marketing.com/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=ec-shohin-page-ab-test-kino-shinai-genin&amp;utm_content=bottom_cta">小西マーケティングの支援を見る</a><div class="cta-note">相談・見積もり作成に費用はかかりません。</div></div>
+<div class="author-profile"><div class="author-profile-label">この記事を書いた人</div>
+<div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;"><div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;"><img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/></div><div class="author-profile-name" style="margin-bottom:0;">小西秀人｜小西マーケティング</div></div>
+<div class="author-proof-grid">
+<div class="author-proof-item"><span class="author-proof-label">楽天最大CVR</span><strong class="author-proof-value">62%</strong><span class="author-proof-note">月間最高66%</span></div>
+<div class="author-proof-item"><span class="author-proof-label">Yahoo!ショッピング</span><strong class="author-proof-value">総合1位</strong><span class="author-proof-note">担当商品で獲得</span></div>
+<div class="author-proof-item"><span class="author-proof-label">年間ランキング</span><strong class="author-proof-value">11回</strong><span class="author-proof-note">担当商品の入賞実績</span></div>
+<div class="author-proof-item"><span class="author-proof-label">カテゴリ1位</span><strong class="author-proof-value">1,000回超</strong><span class="author-proof-note">楽天市場での累計獲得実績</span></div></div>
+<div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年以上のEC実務経験をもとに、商品ページ、広告、販促、CVR改善を一体で設計している。</div></div><div class="related-section"><div class="related-label">関連記事</div><ul class="related-list"><li><a href="https://konishi-marketing.com/articles/ec-shohin-page-kaizen-yusendo.html">ECの商品ページ改善の優先順位のつけ方</a></li><li><a href="https://konishi-marketing.com/articles/ec-shohin-page-kaizen-tejun.html">ECで初めて商品ページを改善するときの正しい手順</a></li><li><a href="https://konishi-marketing.com/articles/ecuriage9kaizen.html">ECの売上が伸びないときに最初に見る場所</a></li></ul></div><footer class="site-footer"><a href="https://konishi-marketing.com">https://konishi-marketing.com</a></footer></div></body></html>
