@@ -1,348 +1,192 @@
 <!DOCTYPE html>
 
-<html lang="ja">
-<head>
-<link rel="icon" href="https://konishi-marketing.com/images/favicon.ico" sizes="any"/>
-<meta charset="utf-8"/>
-<meta content="only light" name="color-scheme"/>
-<link href="https://konishi-marketing.com/articles/amazon-brand-store-unit-session-rate-kawaranu.html" rel="canonical"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Amazonのブランドストアを作ってもユニットセッション率が変わらない理由｜小西マーケティング</title>
-<meta content="数十万かけて作ったブランドストア。広告でアクセスも集めた。それでもユニットセッション率が変わらない理由は、ストアが洗練された商品一覧で止まり、選ぶ理由が届いていないことにあります。EC100店舗超の現状を見てきた経験から解説します。" name="description"/>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
-<script>
-window.dataLayer=window.dataLayer||[];
-function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-gtag('config','G-SWS3R3K4W5');
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<style>
-:root {
-  --navy: #1a2744;
-  --navy-light: #243461;
-  --gold: #c9a84c;
-  --gold-light: #e8d5a3;
-  --white: #ffffff;
-  --off-white: #f8f7f4;
-  --gray-100: #f1f0ed;
-  --gray-200: #e4e2dc;
-  --gray-400: #a09e97;
-  --gray-600: #6b6860;
-  --gray-800: #3a3834;
-  --text: #1e1d1a;
-  --sans: 'Noto Sans JP', sans-serif;
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><link href="https://konishi-marketing.com/articles/amazon-brand-store-unit-session-rate-kawaranu.html" rel="canonical"/><title>Amazonブランドストアを作っても商品詳細ページのユニットセッション率が上がるとは限らない理由｜小西マーケティング</title><meta content="Amazonブランドストアを作ってもユニットセッション率が上がらない理由を、ブランドストアと商品詳細ページの役割分離から解説します。" name="description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Amazonブランドストアを作っても商品詳細ページのユニットセッション率が上がるとは限らない理由", "description": "Amazonブランドストアを作ってもユニットセッション率が上がらない理由を、ブランドストアと商品詳細ページの役割分離から解説します。", "url": "https://konishi-marketing.com/articles/amazon-brand-store-unit-session-rate-kawaranu.html", "dateModified": "2026-08-18", "author": {"@type": "Person", "name": "小西秀人", "url": "https://konishi-marketing.com"}, "publisher": {"@type": "Organization", "name": "小西マーケティング", "url": "https://konishi-marketing.com"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Amazonブランドストアを作ればユニットセッション率は上がりますか？", "acceptedAnswer": {"@type": "Answer", "text": "一律には言えません。ブランドストアはブランド理解・商品群の比較・回遊を担い、個別商品の購入判断は商品詳細ページ側にも依存します。"}}, {"@type": "Question", "name": "ブランドストアでは何を測ればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "Amazon AdsはBrand Store Insightsで訪問、ページビュー、売上、流入元などを確認できると案内しています。商品詳細ページ側のCVRとは分けて見ます。"}}, {"@type": "Question", "name": "Sponsored Brandsの着地先にブランドストアを使うべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "Amazon AdsではBrand StoreをSponsored Brands等の着地先にできます。使う場合は広告の訴求とストア入口の分類を一致させます。"}}]}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SWS3R3K4W5');</script><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/><style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+<style id="makuake-author-profile-standard-v1">
+/* Makuake article author profile standardization 2026-08-07 */
+.author-proof-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  margin:1rem 0 1.25rem;
+  border:1px solid var(--gray-200);
+  background:var(--gray-200);
 }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; }
-body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
-.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
-.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
-.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
-.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
-.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
-.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
-.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
-.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
-.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
-.author-box strong { color: var(--navy); }
-.article-body { padding: 2.5rem 2.5rem; background: var(--white); }
-.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
-.article-body h2:first-child { margin-top: 0; }
-.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
-.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
-.article-body p:last-child { margin-bottom: 0; }
-.article-body strong { color: var(--navy); }
-.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
-.insight em { font-style: normal; color: var(--gold-light); }
-.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
-.callout strong { color: var(--navy); }
-.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
-.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
-.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
-.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
-.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
-.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
-.prob-list { list-style: none; margin: 1rem 0; }
-.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; background: #fff; }
-.prob-list li:last-child { border-bottom: none; }
-.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
-.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
-.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
-.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
-.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
-.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
-.cta-btn:hover { opacity: .88; }
-.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
-.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
-.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
-.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
-.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
-.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
-.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
-.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
-.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
-.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
-.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
-.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
-.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
-.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
-.related-list { list-style: none; }
-.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
-.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
-.related-list li:last-child { border-bottom: none; }
-.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
-.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
-.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
-#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
-#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
-#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
-#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
-.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
-.nextstep-faq .faq-label { color: var(--gold-light); }
-.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
-.nextstep-faq .faq-item:last-child { border-bottom: none; }
-.nextstep-faq .faq-q { color: var(--white); }
-.nextstep-faq .faq-q::before { color: var(--gold-light); }
-.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
-.nextstep-faq .faq-a::before { color: var(--gold-light); }
-:root { color-scheme: only light; }
-html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
-@media (max-width: 640px) {
-  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
-  .hero { padding-top: 2rem; }
-  .cta-block { padding: 1.75rem 1.25rem; }
-  .misrec-row { grid-template-columns: 1fr; }
-  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
-  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+.author-proof-item{
+  min-width:0;
+  padding:1rem 1.1rem;
+  background:var(--white);
+}
+.author-proof-label{
+  display:block;
+  margin-bottom:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  font-weight:700;
+  line-height:1.5;
+}
+.author-proof-value{
+  display:block;
+  color:var(--navy);
+  font-size:1.35rem;
+  font-weight:700;
+  line-height:1.35;
+  letter-spacing:-.025em;
+}
+.author-proof-note{
+  display:block;
+  margin-top:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  line-height:1.65;
+}
+@media(max-width:640px){
+  .author-proof-grid{grid-template-columns:1fr}
+  .author-proof-value{font-size:1.25rem}
 }
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "ブランドストアを作ったのにユニットセッション率が変わらないのはなぜですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ストアの見た目が整っていても、読者が商品ページへ進むとは限りません。ストアが商品を整理して並べた陳列棚で止まっていると、読者はストア内でも価格とレビューで比べ続けます。必要なのは、ストアに来た読者へ「この商品を選ぶ理由」が届く流れです。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "スポンサーブランド広告でストアへのアクセスを増やせば改善しますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "スポンサーブランド広告はストアへのアクセスを増やします。ただし、ストア内で選ぶ理由が届いていなければ、来た読者はそのまま離脱します。広告費を増やす前に、ストア内のどこで読者が止まっているかを確認する必要があります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "ブランドの世界観やこだわりを伝えれば転換率は上がりますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "世界観やこだわりは、ブランドを覚えてもらう助けになります。ただし、それだけで今この商品を選ぶ理由までは届きません。創業者の想いや素材へのこだわりが、読者の悩みや用途とつながっているかを見る必要があります。"
-      }
-    }
-  ]
+<style id="nextstep-faq-link-contrast-fix">
+.nextstep-faq .faq-a a{
+  color:var(--gold-light);
+  text-decoration:underline;
+  text-underline-offset:2px;
+  font-weight:700;
 }
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Amazonのブランドストアを作ってもユニットセッション率が変わらない理由",
-  "description": "数十万かけて作ったブランドストア。広告でアクセスも集めた。それでもユニットセッション率が変わらない理由は、ストアが洗練された商品一覧で止まり、選ぶ理由が届いていないことにあります。EC100店舗超の現状を見てきた経験から解説します。",
-  "image": "https://konishi-marketing.com/images/konishi.JPG",
-  "url": "https://konishi-marketing.com/articles/amazon-brand-store-unit-session-rate-kawaranu.html",
-  "datePublished": "2026-04-25",
-  "dateModified": "2026-04-25",
-  "author": {
-    "@type": "Person",
-    "name": "小西 秀人",
-    "url": "https://konishi-marketing.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "小西マーケティング",
-    "url": "https://konishi-marketing.com"
-  }
+.nextstep-faq .faq-a a:visited{
+  color:var(--gold-light);
 }
-</script>
-</head>
-<body>
-<div class="site-wrap">
-<header class="site-header">
-<a href="https://konishi-marketing.com/">小西マーケティング</a>
-</header>
-<div class="hero">
-<span class="hero-category">Amazon ブランドストア / ユニットセッション率</span>
-<h1 class="hero-title">Amazonのブランドストアを作ってもユニットセッション率が変わらない理由</h1>
-<p class="hero-lead">数十万かけて作ったブランドストアが公開された。スポンサーブランド広告からアクセスも集まる。しかしストアに来た読者は、商品ページへ進む前に離脱している。セラーセントラルの売上グラフも、公開前とほとんど変わらない。ストアを「洗練されたカタログ」として作るほど、読者は商品を眺めて終わりやすくなります。EC100店舗超の現状を見てきた経験から解説します。</p>
-<p class="hero-meta">小西マーケティング｜2026.04</p>
-</div>
-<div class="author-box">
-  この記事は、<strong>楽天総合ランキング1位を2回・年間ランキングを11回・通算1,000回以上ランキング1位を獲得したECコンサルタント・小西秀人</strong>が、自身の20年間のEC実務経験をもとに執筆しています。
-</div>
-<div class="article-body">
-<h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">ストアに来て、すぐ帰る</h2>
-<p>ブランド登録を済ませ、制作会社に依頼する。ライフスタイル画像、ブランドロゴ、カテゴリ別の商品一覧。数週間後、洗練されたブランドストアが完成する。</p>
-<p>スポンサーブランド広告を設定して、ストアへのクリックを集める。翌日、ストアのインサイトを確認する。直帰率が高い。トップページから個別の商品ページへ進み、購入した読者はほとんどいない。</p>
-<p>デザインが問題なのか。商品の並べ方が悪いのか。そう考えて、トップの画像を変え、カテゴリ名を変え、商品の順番を変える。それでも直帰率は変わらない。ストア構築の費用と広告費だけが積み上がっていく。</p>
-<div class="insight">
-    ストアの見た目が整っていても、読者が商品ページへ進むとは限りません。<br/>
-<em>ストアが洗練された陳列棚で終わると、読者は価格とレビューで比べ続けます。</em>
-</div>
-<p>ブランドストアは、商品を綺麗に並べ、世界観を伝える場所。そう考えるのは自然です。Amazon公式の案内も、制作会社の提案も、ストアの見栄えや整理のしやすさに目が向きやすいからです。</p>
-<p>ただ、デザインの完成度だけでは、読者が商品ページへ進む理由は生まれません。ストアに来た読者が、何を見て「この商品を見てみよう」と思うのか。そこが見えないまま、見た目だけを整えても数字は動きにくいままです。</p>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">自社ストア内に、比較棚を作っている</h2>
-<p>有名ブランドのストアを参考にする。トップページにカテゴリ別の商品一覧を並べる。スキンケア、ヘアケア、ボディケア。商品が整然と並ぶ。</p>
-<p>見た目は分かりやすい。ただ、読者がその一覧を見た瞬間、何が起きるか。商品名、価格、レビュー、画像。読者はストア内でも比較を始めます。</p>
-<div class="misrec-block">
-<div class="misrec-header">ストアが比較棚になる理由</div>
-<div class="misrec-row">
-<div class="misrec-cell label">セラーが見ている場所</div>
-<div class="misrec-cell truth">ブランドストアのデザイン、商品の探しやすさ、カテゴリの分かりやすさ。ここを整えれば、読者がストア内で商品を買ってくれると考える</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">実際に起きやすいこと</div>
-<div class="misrec-cell truth">ストアが商品の陳列棚で止まると、読者はストア内でも価格とレビューで比較する。自社のブランドストア内に、自社商品の比較棚を作っている状態になる</div>
-</div>
-</div>
-<p>Amazonの検索結果と同じように、ストア内にも商品が並ぶ。すると読者は、自社商品の中でどれが安いか、どれがレビューが多いかを見ます。その後、さらに安い競合商品を探しにストアを離れる。</p>
-<p>洗練されたブランドストアが、高品質な比較棚として機能している。この状態では、アクセスが増えるほど比較も増えます。</p>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">想いはある。読者の迷いは残る。</h2>
-<p>ブランドストアのトップページに、創業者の想い、素材へのこだわり、製造工程への信念を載せる。美しい画像や動画も配置する。完成度は高い。</p>
-<p>ただ、読者がストアを訪れたとき、最初に見るのは「自分に関係があるか」です。創業者の想いや素材のこだわりが、自分の悩みや用途とつながっていなければ、それは企業の自己紹介として処理されます。</p>
-<div class="misrec-block">
-<div class="misrec-header">世界観だけでは届かない理由</div>
-<div class="misrec-row">
-<div class="misrec-cell label">よくある見立て</div>
-<div class="misrec-cell truth">自社にはまだ知名度がない。だからブランドストアを作っても機能しない。ブランド力が高まれば、自然にストアから売れるようになると考える</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">残っている可能性</div>
-<div class="misrec-cell truth">知名度の前に、ストアに来た読者へ「自分に関係がある」と感じる理由が届いていない。想いやこだわりが、読者の今の悩みとつながっていない</div>
-</div>
-</div>
-<p>ブランドの雰囲気を整えることは、覚えてもらう助けになります。けれど、それだけで「今この商品を選ぶ理由」までは届きません。</p>
-<div class="callout">
-<strong>世界観を伝えること自体が悪いわけではありません。</strong><br/>
-    問題は、その世界観が読者の状況とつながっているかです。読者が「自分のための商品だ」と感じる前にブランドの想いだけを見せても、購入の理由にはなりにくいままです。
-  </div>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">広告で来ても、そのまま帰る</h2>
-<p>ストアが完成した後、スポンサーブランド広告の入札を強める。ストアへのクリック数は増える。しかし直帰率も上がる。広告費が消えていく。ACOSが悪化する。</p>
-<p>より多くの読者を連れてくれば成約数が増える。そう考えるのは自然です。ただ、ストア内で選ぶ理由が届いていなければ、来た読者が帰るスピードを加速させているだけになります。</p>
-<div class="misrec-block">
-<div class="misrec-header">よく選ばれる改善策</div>
-<div class="misrec-row">
-<div class="misrec-cell label">市場で選ばれやすい手段</div>
-<div class="misrec-cell truth">リッチな動画やライフスタイル画像を増やして、ブランドの雰囲気を高める。またはスポンサーブランド広告の入札を強めて、ストアへの露出を増やす</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">それでも残る問題</div>
-<div class="misrec-cell truth">雰囲気が良くなっても、読者が商品ページへ進む理由がなければ離脱は止まりにくい。広告でアクセスを増やしても、受け皿のストアで選ぶ理由が届いていなければ、ACOSだけが悪化しやすい</div>
-</div>
-</div>
-<p>ブランドストアが、商品ページへ進む理由を持った場所になっているなら、スポンサーブランド広告は成約の加速装置になります。</p>
-<p>しかし、その理由がない状態でアクセスを増やすことは、穴の空いたバケツへの注水です。広告の前に、ストアのどこで読者が止まっているかを見る必要があります。</p>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">クーポンがある時だけ売れる</h2>
-<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">価格以外で選ぶ理由がない</h3>
-<p>ブランドストアを作れば、リピーターが増える。そう期待することがあります。しかし実際には、クーポンの有無でしか売上が立たない。クーポンがあるから試してみる。なくなると買わない。</p>
-<p>この状態は、価格以外で選ぶ理由がストアや商品ページに届いていないことが続いた結果です。ストアが洗練されたカタログで止まっている間、読者は価格で判断します。</p>
-<p>価格以外で選ぶ理由が届くと、ストアの役割は変わります。ただ、そこを見る仕事は、デザイン変更や広告調整とは別です。</p>
-<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">どこを直せばいいかが見えない</h3>
-<p>ストアのトップページのデザインを変える。商品の並び順を変える。カテゴリの名称を変える。それでもユニットセッション率は変わらない。</p>
-<p>どこを直せば数字が動くのか。そこが見えないまま、表示だけを変えている状態です。必要なのは、今のストアで読者が何を受け取り、どこで離脱しているかを見ることです。</p>
-<p>以下の状態が続いているなら、次のデザイン変更より先に確認すべき場所があります。</p>
+.nextstep-faq .faq-a a:hover{
+  color:var(--white);
+}
+</style>
+<style id="makuake-channel-map-v1">
+.channel-map{margin:2rem 0;border:1px solid var(--gray-200);background:var(--white)}
+.channel-map-title{padding:.75rem 1rem;background:var(--navy);color:var(--gold-light);font-size:.8rem;font-weight:700;letter-spacing:.06em}
+.channel-map-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.channel-map-table{width:100%;min-width:720px;border-collapse:collapse}
+.channel-map-table th,.channel-map-table td{padding:1rem;vertical-align:top;border-right:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);font-size:.88rem;line-height:1.8;text-align:left}
+.channel-map-table th{background:var(--gray-100);color:var(--navy);font-weight:700}
+.channel-map-table td{color:var(--gray-800)}
+.channel-map-table th:last-child,.channel-map-table td:last-child{border-right:none}
+.channel-map-table tr:last-child td{border-bottom:none}
+.channel-map-table td:first-child{width:24%;background:var(--off-white)}
+</style></head><body><div class="site-wrap"><header class="site-header"><a href="https://konishi-marketing.com/">小西マーケティング</a></header><nav aria-label="パンくず" style="font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto;"><a href="https://konishi-marketing.com/" style="color:#6b6860;text-decoration:none;">ホーム</a><span style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">オウンドメディア</a><span style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/amazon.html" style="color:#6b6860;text-decoration:none;">Amazon</a><span style="margin:0 .45rem;color:#a09e97;">›</span><span>Amazonブランドストアを作っても商品詳細ページのユニットセッション率が上がるとは限らない理由</span></nav><div class="hero"><span class="hero-category">Amazon / ブランドストア / ユニットセッション率</span><h1 class="hero-title">Amazonブランドストアを作っても商品詳細ページのユニットセッション率が上がるとは限らない理由</h1><p class="hero-lead">ブランドストアを作っただけでは、個別商品のCVRは自動では上がりません。<strong style="color:#fff;">ブランド理解・商品選択・商品詳細ページでの購入判断</strong>を分けて設計します。</p><p class="hero-meta">小西マーケティング｜2026.08</p></div><div class="author-box">この記事は、楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC実務を20年以上経験してきた小西秀人が、Amazonの商品詳細ページ・ブランドストア・CVR改善という観点から整理しています。</div><div class="article-body">
+<h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">ブランドストアは「ブランド全体を理解・回遊する場所」。商品詳細ページとは役割が違う</h2>
+<p>Amazon AdsはBrand Storeを、ブランドストーリー、商品群、ライフスタイルコンテンツを見せ、商品理解や回遊を促す専用ページとして案内しています。Sponsored Brandsなどの広告着地先にもできます。</p>
+<div class="insight">だから、ブランドストアを作っただけで個別商品のユニットセッション率が自動的に上がる、と考えない方がよいです。</div>
+<h2>1｜まず「ブランドストアの成果」と「商品詳細ページのCVR」を分ける</h2>
+<p>Amazon AdsはBrand Store Insightsで、訪問、ページビュー、売上、流入元などを確認できると案内しています。まずストア内で何が起きているかを見ます。</p>
+<p>ブランドストアの訪問が増えたことと、個別商品のユニットセッション率が上がったことは別の成果です。</p>
+<h2>2｜ブランドストアから、どの商品へ進ませるかを決める</h2>
+<p>商品を大量に並べるだけでは、閲覧者が自分向けの商品を選ぶための分類作業が増えます。用途、悩み、価格帯、シリーズなど、購入者が迷わない一つの基準で商品群を分けます。</p>
+<h2>3｜ストア内で商品説明を完結させず、商品詳細ページへ判断を渡す</h2>
+<p>ブランドストアでは、ブランド理解や商品群の違いを整理します。個別商品の仕様、価格、レビュー、配送、購入条件などは商品詳細ページ側で判断する情報です。</p>
+<p>同じ説明を二重に置くのではなく、「どの商品を選ぶか」までをブランドストア、「この商品を買うか」までを商品詳細ページへ分けます。</p>
+<h2>4｜Sponsored Brandsの訴求と、着地したストアの入口を一致させる</h2>
+<p>広告で「敏感肌向け」を訴求したのに、ブランドストアの最初がブランド沿革だけだと、閲覧者は自分向けの商品を探し直します。広告で作った判断軸を、着地後も同じ言葉・同じ分類で続けます。</p>
+<h2>5｜商品詳細ページ側の停止点をブランドストアで隠さない</h2>
+<p>ブランドストアから商品詳細ページへ多く送れていても、価格、レビュー、画像、Bullet Point、A+などで購入判断が止まれば、ユニットセッション率は動きません。</p>
+<div class="callout"><strong>分けて見る：</strong><br/>ブランドストア＝訪問・回遊・商品詳細ページへの遷移<br/>商品詳細ページ＝ユニットセッション率・注文・売上<br/>同じKPIとして扱わない。</div>
+<h2>6｜改善後はBrand Store Insightsと商品別指標を並べる</h2>
+<p>Amazon AdsはBrand Store Insightsで売上、訪問、ページビュー、流入元などを確認できると案内しています。ストア内の回遊が改善したのか、商品詳細ページで購入率が改善したのかを分けて追います。</p>
+<h2>ブランドストアを改善する確認順</h2>
 <ul class="prob-list">
-<li data-num="✓">ブランドストアへのアクセスはあるが直帰率が高く、個別商品ページへ進む読者が少ない</li>
-<li data-num="✓">スポンサーブランド広告でストアへのクリックを増やしているが、ACOSが改善せず広告費だけが消えている</li>
-<li data-num="✓">創業者の想いやブランドのこだわりを丁寧に表現しているが、クーポンの有無でしか売上が立たない</li>
-<li data-num="✓">ストアのデザインや商品の並び順を変えても数字が動かず、どこを修正すればいいかが分からない</li>
+<li data-num="1">ブランドストアの目的を決める</li>
+<li data-num="2">商品群を一つの選択基準で整理する</li>
+<li data-num="3">広告訴求と着地入口を一致させる</li>
+<li data-num="4">商品詳細ページへ渡す判断を決める</li>
+<li data-num="5">商品詳細ページ側の停止点を確認する</li>
+<li data-num="6">ストア指標と商品別CVRを別々に見る</li>
 </ul>
-<div class="cta-block">
-<div class="cta-block-label">無料診断</div>
-<div class="cta-block-title">ストアを直す前に、止まっている場所を見る。</div>
-<div class="cta-block-sub">
-      ブランドストアへのアクセスがあっても転換しないなら、見た目以外の場所で止まっている可能性があります。<br/>
-      ストアで読者がどこで離脱しているかを確認します。<br/>
-      URLを送るだけで、2営業日以内に診断レポートをお送りします。
-    </div>
-<a class="cta-btn" href="https://konishi-marketing.com/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=mid_cta">ブランドストアを診断する</a>
-<div class="cta-note">※営業電話は一切いたしません。</div>
-</div>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">まとめ</h2>
-<p>ブランドストアは、商品を綺麗に並べて世界観を伝える場所。そう考えると、デザインや商品整理に目が向きます。もちろん、それらは必要です。</p>
-<p>ただ、ストアが洗練された陳列棚で止まっていると、読者は価格とレビューで比べ続けます。その状態では、クーポン以外の購入理由も生まれにくい。</p>
-<p>次にデザインを変える前に、ストアのどこで選ぶ理由が止まっているかを確認する必要があります。そこが見えると、ストアの役割も変わります。</p>
-</div><!-- /article-body -->
-<div class="faq-section" id="article-faq">
-<div class="faq-label">よくある質問</div>
-<div class="faq-item">
-<div class="faq-q">ブランドストアを作ったのにユニットセッション率が変わらないのはなぜですか？</div>
-<div class="faq-a">ストアの見た目が整っていても、読者が商品ページへ進むとは限りません。ストアが商品を整理して並べた陳列棚で止まっていると、読者はストア内でも価格とレビューで比べ続けます。必要なのは、ストアに来た読者へ「この商品を選ぶ理由」が届く流れです。</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">スポンサーブランド広告でストアへのアクセスを増やせば改善しますか？</div>
-<div class="faq-a">スポンサーブランド広告はストアへのアクセスを増やします。ただし、ストア内で選ぶ理由が届いていなければ、来た読者はそのまま離脱します。広告費を増やす前に、ストア内のどこで読者が止まっているかを確認する必要があります。</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">ブランドの世界観やこだわりを伝えれば転換率は上がりますか？</div>
-<div class="faq-a">世界観やこだわりは、ブランドを覚えてもらう助けになります。ただし、それだけで今この商品を選ぶ理由までは届きません。創業者の想いや素材へのこだわりが、読者の悩みや用途とつながっているかを見る必要があります。</div>
-</div>
-</div>
-<div class="faq-section nextstep-faq">
-<div class="faq-label">Next Step</div>
-<div class="faq-item">
-<div class="faq-q">ブランドストアでユニットセッション率を改善するために、まず何を確認すればいいですか？</div>
-<div class="faq-a">まず、ストアのトップページから個別商品ページへ進む割合を見ます。そこが低い場合、トップページで選ぶ理由が届いていない可能性があります。次に、遷移後の商品ページで購入につながっているかを確認します。どこで止まっているかによって、直す場所は変わります。</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">クーポンの有無でしか売上が立たない状態から抜け出すには？</div>
-<div class="faq-a">価格以外で選ぶ理由を届ける必要があります。ストアが商品一覧で止まっていると、読者は価格やレビューで判断しやすくなります。診断では、ストア内でクーポン以外の購入理由が生まれる場所があるかを確認します。</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">診断では、ユニットセッション率が低いブランドストアのどこを確認しますか？</div>
-<div class="faq-a">ストアのトップページで、読者が自分に関係する理由を受け取れているかを確認します。デザインの問題なのか、商品ページへ進む理由が届いていないのかを整理します。URLを送るだけで2営業日以内に診断レポートをお送りします。</div>
-</div>
-</div>
-<div class="cta-block" style="margin:0;">
-<div class="cta-block-label">診断を申し込む</div>
-<div class="cta-block-title">まず、ストアで止まっている場所を見る。</div>
-<div class="cta-block-sub">
-    止まっている場所が分かれば、何を変えるべきかが変わる。<br/>
-    変えるべき場所が変われば、スポンサーブランド広告の役割も変わる。<br/>
-    フォームに入力するだけで、2営業日以内に診断レポートをお送りします。
-  </div>
-<a class="cta-btn" href="https://konishi-marketing.com/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=bottom_cta#form">無料で診断を申し込む──2営業日以内に返送</a>
-<div class="cta-note">※営業電話はいたしません。</div>
-</div>
-<div class="author-profile">
-<div class="author-profile-label">この記事を書いた人</div>
-<div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
-<div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
-<img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/>
-</div>
-<div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
-</div>
-<div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの構成変更からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
-</div>
-<div class="related-section">
-<div class="related-label">関連記事</div>
-<ul class="related-list">
-<li><a href="https://konishi-marketing.com/articles/amazon-aplus-tsukutte-mo-uriage-kawaranu-riyu.html">AmazonのA+コンテンツを作っても売上が変わらない理由</a></li>
-<li><a href="https://konishi-marketing.com/articles/amazon-urenai-shohin-page-mondai.html">Amazonで売れない商品ページに共通する問題</a></li>
-<li><a href="https://konishi-marketing.com/articles/amazon-sponsor-kokoku-fuyashite-mo-rieki-nokoranai.html">Amazonのスポンサー広告を増やしても利益が残らない理由</a></li>
-</ul>
-</div>
-<footer class="site-footer">
-<a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
-</footer>
-</div><!-- /site-wrap -->
-</body>
-</html>
+<h2>ブランドストアを作ることと、個別商品が買われることを分ける</h2>
+<p>Brand Storeには、ブランドを理解してもらい、商品群を比較し、適切な商品へ進んでもらう役割があります。<strong>ブランドストアの役割を果たした後に、商品詳細ページが購入判断を完了できるか</strong>まで見て、初めてユニットセッション率改善へつながります。</p>
+<div class="callout"><strong>参考・一次情報：</strong><br/>
+<a href="https://advertising.amazon.com/solutions/products/stores">Amazon Ads｜Brand Stores</a></div>
+</div><div class="faq-section" id="article-faq"><div class="faq-label">よくある質問</div><div class="faq-item"><div class="faq-q">Amazonブランドストアを作ればユニットセッション率は上がりますか？</div><div class="faq-a">一律には言えません。ブランドストアはブランド理解・商品群の比較・回遊を担い、個別商品の購入判断は商品詳細ページ側にも依存します。</div></div><div class="faq-item"><div class="faq-q">ブランドストアでは何を測ればいいですか？</div><div class="faq-a">Amazon AdsはBrand Store Insightsで訪問、ページビュー、売上、流入元などを確認できると案内しています。商品詳細ページ側のCVRとは分けて見ます。</div></div><div class="faq-item"><div class="faq-q">Sponsored Brandsの着地先にブランドストアを使うべきですか？</div><div class="faq-a">Amazon AdsではBrand StoreをSponsored Brands等の着地先にできます。使う場合は広告の訴求とストア入口の分類を一致させます。</div></div></div><div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div><div class="faq-item"><div class="faq-q">自社では、どこから確認すべきですか？</div><div class="faq-a">アクセス・転換率・商品別売上と、現在のページ・販促条件を並べると最初に直す場所を絞れます。 <a href="https://konishi-marketing.com/">支援内容はこちらです。</a></div></div><div class="faq-item"><div class="faq-q">相談や見積もり作成に費用はかかりますか？</div><div class="faq-a">費用はかかりません。サービスページから相談できます。</div></div></div><div class="cta-block"><div class="cta-block-label">Amazonの商品詳細ページ改善</div><div class="cta-block-title">ブランドストアと商品詳細ページの役割を分ける。</div><div class="cta-block-sub">回遊を増やす場所と、購入判断を終える場所を分けてCVRを確認します。</div><a class="cta-btn" href="https://konishi-marketing.com/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=amazon-brand-store-unit-session-rate-kawaranu&amp;utm_content=bottom_cta">小西マーケティングの支援を見る</a><div class="cta-note">相談・見積もり作成に費用はかかりません。</div></div>
+<div class="author-profile"><div class="author-profile-label">この記事を書いた人</div>
+<div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;"><div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;"><img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/></div><div class="author-profile-name" style="margin-bottom:0;">小西秀人｜小西マーケティング</div></div>
+<div class="author-proof-grid">
+<div class="author-proof-item"><span class="author-proof-label">楽天最大CVR</span><strong class="author-proof-value">62%</strong><span class="author-proof-note">月間最高66%</span></div>
+<div class="author-proof-item"><span class="author-proof-label">Yahoo!ショッピング</span><strong class="author-proof-value">総合1位</strong><span class="author-proof-note">担当商品で獲得</span></div>
+<div class="author-proof-item"><span class="author-proof-label">年間ランキング</span><strong class="author-proof-value">11回</strong><span class="author-proof-note">担当商品の入賞実績</span></div>
+<div class="author-proof-item"><span class="author-proof-label">カテゴリ1位</span><strong class="author-proof-value">1,000回超</strong><span class="author-proof-note">楽天市場での累計獲得実績</span></div></div>
+<div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年以上のEC実務経験をもとに、商品ページ、広告、販促、CVR改善を一体で設計している。</div></div><div class="related-section"><div class="related-label">関連記事</div><ul class="related-list"><li><a href="https://konishi-marketing.com/articles/amazon-aplus-tsukutte-mo-unit-session-rate-agaranai.html">AmazonのA+コンテンツを作っても転換しない理由</a></li><li><a href="https://konishi-marketing.com/articles/amazon-shohin-page-kaizen-tejun.html">Amazon商品ページ改善の正しい手順と優先順位</a></li><li><a href="https://konishi-marketing.com/articles/amazon-shohin-page-kino-yori-saki.html">Amazonの商品ページで機能より先に伝えるべきこと</a></li></ul></div><footer class="site-footer"><a href="https://konishi-marketing.com">https://konishi-marketing.com</a></footer></div></body></html>
