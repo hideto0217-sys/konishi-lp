@@ -1,405 +1,182 @@
 <!DOCTYPE html>
 
-<html lang="ja">
-<head>
-<link rel="icon" href="https://konishi-marketing.com/images/favicon.ico" sizes="any"/>
-<meta charset="utf-8"/>
-<meta content="only light" name="color-scheme"/>
-<link href="https://konishi-marketing.com/articles/rakuten-shohin-page-jisha-kaizen-shippai-pattern.html" rel="canonical"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>楽天商品ページを自社で改善しても転換率が上がらない理由｜小西マーケティング</title>
-<meta content="数週間かけて商品ページを作り直した。社員からは綺麗になったと言われた。それでもRMSの転換率は変わらない。内製を続ける前に、商品ページ前半で選ぶ理由が届いているかを見る必要があります。" name="description"/>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
-<script>
-window.dataLayer=window.dataLayer||[];
-function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-gtag('config','G-SWS3R3K4W5');
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<style>
-:root {
-  --navy: #1a2744;
-  --navy-light: #243461;
-  --gold: #c9a84c;
-  --gold-light: #e8d5a3;
-  --white: #ffffff;
-  --off-white: #f8f7f4;
-  --gray-100: #f1f0ed;
-  --gray-200: #e4e2dc;
-  --gray-400: #a09e97;
-  --gray-600: #6b6860;
-  --gray-800: #3a3834;
-  --text: #1e1d1a;
-  --sans: 'Noto Sans JP', sans-serif;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; }
-body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
-.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
-.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
-.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
-.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
-.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
-.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
-.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
-.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
-.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
-.author-box strong { color: var(--navy); }
-.article-body { padding: 2.5rem 2.5rem; background: var(--white); }
-.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
-.article-body h2:first-child { margin-top: 0; }
-.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
-.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
-.article-body p:last-child { margin-bottom: 0; }
-.article-body strong { color: var(--navy); }
-.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
-.insight em { font-style: normal; color: var(--gold-light); }
-.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
-.callout strong { color: var(--navy); }
-.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
-.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
-.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
-.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
-.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
-.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
-.prob-list { list-style: none; margin: 1rem 0; }
-.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; background: #fff; }
-.prob-list li:last-child { border-bottom: none; }
-.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
-.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
-.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
-.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
-.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
-.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
-.cta-btn:hover { opacity: .88; }
-.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
-.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
-.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
-.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
-.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
-.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
-.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
-.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
-.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
-.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
-.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
-.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
-.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
-.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
-.related-list { list-style: none; }
-.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
-.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
-.related-list li:last-child { border-bottom: none; }
-.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
-.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
-.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
-#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
-#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
-#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
-#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
-.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
-.nextstep-faq .faq-label { color: var(--gold-light); }
-.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
-.nextstep-faq .faq-item:last-child { border-bottom: none; }
-.nextstep-faq .faq-q { color: var(--white); }
-.nextstep-faq .faq-q::before { color: var(--gold-light); }
-.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
-.nextstep-faq .faq-a::before { color: var(--gold-light); }
-:root { color-scheme: only light; }
-html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
-@media (max-width: 640px) {
-  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
-  .hero { padding-top: 2rem; }
-  .cta-block { padding: 1.75rem 1.25rem; }
-  .misrec-row { grid-template-columns: 1fr; }
-  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
-  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
-}
-
-/* rakuten-service-route-v1 */
-.service-route { margin-top: 1.15rem; padding-top: 1rem; border-top: 1px solid rgba(201,168,76,.32); font-size: .9rem; line-height: 1.8; color: rgba(255,255,255,.68); }
-.service-route a { color: var(--gold-light); font-weight: 700; text-underline-offset: .2em; }
-.service-route a:hover { color: var(--white); }
-@media (max-width: 640px) { .service-route { font-size: .86rem; } }
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><link href="https://konishi-marketing.com/articles/rakuten-shohin-page-jisha-kaizen-shippai-pattern.html" rel="canonical"/><title>楽天商品ページを自社で改善しても転換率が上がらない理由｜内製で止まりやすい6つの工程｜小西マーケティング</title><meta content="楽天商品ページを自社で改善しても転換率が上がらない理由を、原因特定・仮説・構成・制作・実装・検証の6工程から解説します。" name="description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "楽天商品ページを自社で改善しても転換率が上がらない理由｜内製で止まりやすい6つの工程", "description": "楽天商品ページを自社で改善しても転換率が上がらない理由を、原因特定・仮説・構成・制作・実装・検証の6工程から解説します。", "url": "https://konishi-marketing.com/articles/rakuten-shohin-page-jisha-kaizen-shippai-pattern.html", "dateModified": "2026-08-18", "author": {"@type": "Person", "name": "小西秀人", "url": "https://konishi-marketing.com"}, "publisher": {"@type": "Organization", "name": "小西マーケティング", "url": "https://konishi-marketing.com"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "楽天商品ページは自社で改善できますか？", "acceptedAnswer": {"@type": "Answer", "text": "可能です。内製か外注かより、原因特定・仮説・制作・実装・検証の工程が一周するかを確認します。"}}, {"@type": "Question", "name": "自社改善で一番起きやすい失敗は何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "制作・更新が目的になり、何の購入判断を動かす変更か、変更後のCVRがどう動いたかの検証が抜けることです。"}}, {"@type": "Question", "name": "外注先はAIを使っていない会社を選ぶべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "AI使用の有無だけでは判断しません。誰が原因分析・主要訴求・構成を決め、実装後の検証まで責任を持つかを確認します。"}}]}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SWS3R3K4W5');</script><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/><style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
 </style>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "商品のことを一番知っている自社がページを作るのに、なぜ転換率が上がらないのですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "商品を深く知っていることと、初めて見る読者が「これでよさそうだ」と思える順番で届けることは別です。自社は商品を一番知っています。ただ、読者がどこで迷い、何を受け取れば購入に進めるかは、外から見る必要があります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "時間をかけて丁寧に作れば、自社でも売れるページができますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "時間をかけることで、情報は丁寧に整理できます。ただ、読者がどこで「これでよさそうだ」と思うのかが見えていなければ、丁寧に作られた売れにくいページになります。時間を増やす前に、商品ページ前半で選ぶ理由が届いているかを見る必要があります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "自社でやってみてダメなら外注する、という進め方は危険ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "まず自社で試す判断は自然です。ただ、転換率が低いまま数ヶ月続くと、その期間の機会損失が見えにくいコストになります。内製を続ける前に、現在のページで読者がどこで止まっているかを確認する必要があります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "この記事の内容が、自社の商品ページにも当てはまるか確認できますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "確認できます。まず現在の商品ページの改善余地と、優先して見直す箇所を知りたい場合は、楽天サービスページで「無料診断レポート」を選択してください。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "無料診断レポートでは、何を確認しますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "現在の伝え方、価格やレビューに戻って比較されていないか、最初に見直すべき画像・説明・証拠を確認します。数値をご共有いただける場合は、改善後の見込みも試算します。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "改善する商品が決まっていて、制作まで依頼したい場合はどうすればいいですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "楽天サービスページで「制作について相談」を選択してください。制作範囲、必要素材、費用、制作期間、着手時期、進め方を確認できます。"
-      }
-    }
-  ]
-}</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "楽天商品ページを自社で改善しても転換率が上がらない理由",
-  "description": "数週間かけて商品ページを作り直した。社員からは綺麗になったと言われた。それでもRMSの転換率は変わらない。内製を続ける前に、商品ページ前半で選ぶ理由が届いているかを見る必要があります。",
-  "image": "https://konishi-marketing.com/images/konishi.JPG",
-  "url": "https://konishi-marketing.com/articles/rakuten-shohin-page-jisha-kaizen-shippai-pattern.html",
-  "datePublished": "2026-04-23",
-  "dateModified": "2026-05-05",
-  "author": {
-    "@type": "Person",
-    "name": "小西 秀人",
-    "url": "https://konishi-marketing.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "小西マーケティング",
-    "url": "https://konishi-marketing.com"
-  }
+<style id="makuake-author-profile-standard-v1">
+/* Makuake article author profile standardization 2026-08-07 */
+.author-proof-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  margin:1rem 0 1.25rem;
+  border:1px solid var(--gray-200);
+  background:var(--gray-200);
 }
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "ホーム",
-      "item": "https://konishi-marketing.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "オウンドメディア",
-      "item": "https://konishi-marketing.com/articles/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "楽天市場",
-      "item": "https://konishi-marketing.com/articles/rakuten.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "楽天商品ページを自社で改善しても転換率が上がらない理由",
-      "item": "https://konishi-marketing.com/articles/rakuten-shohin-page-jisha-kaizen-shippai-pattern.html"
-    }
-  ]
+.author-proof-item{
+  min-width:0;
+  padding:1rem 1.1rem;
+  background:var(--white);
 }
-</script>
-</head>
-<body>
-<div class="site-wrap">
-<header class="site-header">
-<a href="https://konishi-marketing.com/">小西マーケティング</a>
-</header>
-<nav aria-label="パンくず" style="font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto;"><a href="https://konishi-marketing.com/" style="color:#6b6860;text-decoration:none;">ホーム</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">オウンドメディア</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/rakuten.html" style="color:#6b6860;text-decoration:none;">楽天市場</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><span aria-current="page" style="color:#3a3834;">楽天商品ページを自社で改善しても転換率が上がらない理由</span></nav>
-<div class="hero">
-<span class="hero-category">楽天商品ページ改善 / 内製改善</span>
-<h1 class="hero-title">楽天商品ページを自社で改善しても転換率が上がらない理由</h1>
-<p class="hero-lead">数週間かけて商品ページを作り直した。社員からは綺麗になったと言われた。けれどRMSの転換率は変わらない——内製を続ける前に見るべきなのは、商品ページ前半で選ぶ理由が届いているかです。EC100店舗超の現状を見てきた経験から解説します。</p>
-<p class="hero-meta">小西マーケティング｜2026.04</p>
-</div>
-<div class="author-box">この記事は、楽天SOY（ショップ・オブ・ザ・イヤー）受賞企業の元店長で、楽天総合ランキング1位を2回・年間ランキング11回・ランキング1位通算1,000回以上を経験したECコンサルタント・小西秀人が、20年間のEC実務経験をもとに執筆しています。</div>
-<div class="article-body">
-<h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">自社で作った</h2>
-<p>受注処理、在庫確認、見る場所合わせ対応。その合間に時間を作って、商品ページを作り直す。</p>
-<p>素材の良さ、製法へのこだわり、他社との違い。自社だから分かる情報を一つずつ入れていく。</p>
-<p>数週間後、ページが公開される。社内からは「綺麗になった」「前より分かりやすい」と言われる。</p>
-<p>翌朝、RMSを開く。転換率はほとんど変わっていない。場合によっては、少し下がっている。</p>
-<div class="insight">
-    自社で作ったことが悪いわけではありません。<br/>
-<em>商品を知っていることと、初めて見る読者が「これでよさそうだ」と思える順番で届けることは別です。</em>
-</div>
-<p>自社は商品を一番知っています。これは外部にはない強みです。</p>
-<p>ただ、読者は商品を初めて見る状態でページに来ます。作り手が伝えたい順番と、読者が受け取りやすい順番は同じとは限りません。</p>
-<p>内製ページで転換率が動かないとき、見るべきなのは「想いが足りないか」ではありません。商品ページ前半で、読者が選ぶ理由を受け取れているかです。</p>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">知っているから見えない</h2>
-<p>「商品のことは自分たちが一番分かっている」。</p>
-<p>この前提でページを作ると、素材、製法、歴史、こだわり、受賞歴が並びやすくなります。</p>
-<p>どれも大切な情報です。ただ、読者が最初に見ているのは「その情報が自分に関係あるか」です。</p>
-<div class="misrec-block">
-<div class="misrec-header">自社で作る前に見ること</div>
-<div class="misrec-row">
-<div class="misrec-cell label">よくある見方</div>
-<div class="misrec-cell truth">自社には綺麗なデザインやコピーの力が足りない。社内に作れる人が育てば、転換率も上がる</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">残っていること</div>
-<div class="misrec-cell truth">商品への愛着が強いほど、初めて見る読者がどこで迷い、何を受け取れば「これでよさそうだ」と思えるかが見えにくくなる</div>
-</div>
-</div>
-<p>作り手は、商品の機能やこだわりをよく知っています。</p>
-<p>しかし読者は、「このこだわりは自分の悩みと関係があるか」「このスペックは自分の状況で意味があるか」という見方で読みます。</p>
-<p>商品のことを知っているほど、読者が知らない状態で見る視点は持ちにくくなります。これは能力の見る場所ではありません。関わりが深いからこそ、外からの見え方が遠くなります。</p>
-<div class="callout">
-<strong>内製が悪いという話ではありません。</strong><br/>
-    自社が持っている商品情報は、外部にはない資産です。ただ、その情報を読者が受け取りやすい順番に並べ直すには、外から見る視点が必要になります。
-  </div>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">時間を足しても残る</h2>
-<p>「忙しいから作り込めなかった。まとまった時間があれば、もっと良いページができる」。</p>
-<p>そう考えて、週末や夜の時間を使ってページを直す。</p>
-<p>情報は丁寧に整います。写真も増えます。説明も詳しくなります。</p>
-<p>それでも転換率が変わらないことがあります。</p>
-<div class="misrec-block">
-<div class="misrec-header">時間を増やす前に見ること</div>
-<div class="misrec-row">
-<div class="misrec-cell label">よくある見方</div>
-<div class="misrec-cell truth">日々の業務が忙しくて時間が取れないから、ページが改善できない。まとまった時間があれば、丁寧に作り込める</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">残っていること</div>
-<div class="misrec-cell truth">時間を増やしても、読者がどこで「これでよさそうだ」と思うのかが見えていなければ、丁寧に作られた売れにくいページになる</div>
-</div>
-</div>
-<p>商品の特徴を正確に書くことは、時間をかければ整いやすくなります。</p>
-<p>ただ、読者がページを見ながら購入に進む理由を受け取る流れは、時間の量だけでは生まれません。</p>
-<p>作業時間を増やす前に、商品ページ前半で何を受け取れば「自分にはこれが合いそうだ」と思えるのかを見る必要があります。</p>
-<div class="callout">
-<strong>まず自社で試す判断について。</strong><br/>
-    まず自社で試す判断は自然です。ただ、転換率が低いまま数ヶ月続くと、その期間の機会損失が見えにくいコストになります。月間アクセスが1万件で転換率が1%低い状態が3ヶ月続くと、客単価5,000円なら150万円分の売上機会が失われます。
-  </div>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">真似ても届かない</h2>
-<p>売れている競合ページを参考にする。流れの順番、画像の見せ方、レビューの置き方を真似る。</p>
-<p>その結果、見た目は競合に近づきます。</p>
-<p>ただ、転換率は変わらないことがあります。</p>
-<div class="misrec-block">
-<div class="misrec-header">競合を真似る前に見ること</div>
-<div class="misrec-row">
-<div class="misrec-cell label">よくある見方</div>
-<div class="misrec-cell truth">売れている競合のページを分析し、順番や見せ方を参考にすれば、自社ページも売れやすくなる</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">残っていること</div>
-<div class="misrec-cell truth">競合の見た目や順番を真似しても、なぜそのページで読者が購入に進んだのかまでは真似できない</div>
-</div>
-</div>
-<p>競合が売れている理由は、ページの順番だけとは限りません。</p>
-<p>レビュー数、認知度、広告量、過去の購入者、ブランドへの信頼。そうした積み上げが、ページの見え方を支えています。</p>
-<p>その背景がないまま外側だけを真似ると、読者にとっては「似たようなページ」になります。必要なのは、競合の真似ではなく、自社の商品を見に来る読者がどこで選ぶ理由を受け取れるかを見ることです。</p>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">止まる3つの型</h2>
-<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">言いたいことが並ぶ</h3>
-<p>自社で作ると、素材、製法、歴史、受賞歴、開発者の想いが並びやすくなります。</p>
-<p>これは誠実な情報です。ただ、読者が求めているのは「この商品が今の自分にどう関係するか」です。</p>
-<p>作り手の伝えたいことと、読者が受け取りたいことの間にはズレが生まれます。このズレを埋めるには、商品への愛着とは別に、読者の見方を入れる必要があります。</p>
-<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">直すほど散らかる</h3>
-<p>ファーストビューを直す。レビューを足す。競合にあったバナーを追加する。</p>
-<p>日々の業務の合間に、気づいた場所を部分的に直していく。</p>
-<p>この進め方が続くと、ページ全体で何を伝えたいのかがぼやけていきます。各パーツは良くなっていても、読者が選ぶ理由を受け取る流れがつながらなくなります。</p>
-<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">見えない費用</h3>
-<p>外注すると費用がかかる。だから自社で作る。</p>
-<p>この判断は自然です。ただ、社員の作業時間、修正にかかる日数、転換率が低いまま続く期間も費用として残ります。</p>
-<p>外注費だけを見ると、内製は安く見えます。けれど、転換率が動かない期間の売上機会まで含めると、内製の方が高くつくことがあります。</p>
-<p>以下の状態が続いているなら、内製での改善を続ける前に確認すべき場所があります。</p>
+.author-proof-label{
+  display:block;
+  margin-bottom:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  font-weight:700;
+  line-height:1.5;
+}
+.author-proof-value{
+  display:block;
+  color:var(--navy);
+  font-size:1.35rem;
+  font-weight:700;
+  line-height:1.35;
+  letter-spacing:-.025em;
+}
+.author-proof-note{
+  display:block;
+  margin-top:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  line-height:1.65;
+}
+@media(max-width:640px){
+  .author-proof-grid{grid-template-columns:1fr}
+  .author-proof-value{font-size:1.25rem}
+}
+</style>
+<style id="nextstep-faq-link-contrast-fix">
+.nextstep-faq .faq-a a{
+  color:var(--gold-light);
+  text-decoration:underline;
+  text-underline-offset:2px;
+  font-weight:700;
+}
+.nextstep-faq .faq-a a:visited{
+  color:var(--gold-light);
+}
+.nextstep-faq .faq-a a:hover{
+  color:var(--white);
+}
+</style>
+<style id="makuake-channel-map-v1">
+.channel-map{margin:2rem 0;border:1px solid var(--gray-200);background:var(--white)}
+.channel-map-title{padding:.75rem 1rem;background:var(--navy);color:var(--gold-light);font-size:.8rem;font-weight:700;letter-spacing:.06em}
+.channel-map-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.channel-map-table{width:100%;min-width:720px;border-collapse:collapse}
+.channel-map-table th,.channel-map-table td{padding:1rem;vertical-align:top;border-right:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);font-size:.88rem;line-height:1.8;text-align:left}
+.channel-map-table th{background:var(--gray-100);color:var(--navy);font-weight:700}
+.channel-map-table td{color:var(--gray-800)}
+.channel-map-table th:last-child,.channel-map-table td:last-child{border-right:none}
+.channel-map-table tr:last-child td{border-bottom:none}
+.channel-map-table td:first-child{width:24%;background:var(--off-white)}
+</style></head><body><div class="site-wrap"><header class="site-header"><a href="https://konishi-marketing.com/">小西マーケティング</a></header><nav aria-label="パンくず" style="font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto;"><a href="https://konishi-marketing.com/" style="color:#6b6860;text-decoration:none;">ホーム</a><span style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">オウンドメディア</a><span style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/rakuten.html" style="color:#6b6860;text-decoration:none;">楽天市場</a><span style="margin:0 .45rem;color:#a09e97;">›</span><span>楽天商品ページを自社で改善しても転換率が上がらない理由｜内製で止まりやすい6つの工程</span></nav><div class="hero"><span class="hero-category">楽天市場 / 内製改善 / 転換率</span><h1 class="hero-title">楽天商品ページを自社で改善しても転換率が上がらない理由｜内製で止まりやすい6つの工程</h1><p class="hero-lead">楽天の商品ページを自社で直してもCVRが上がらないなら、<strong style="color:#fff;">内製そのものではなく、改善工程のどこが切れているか</strong>を確認します。</p><p class="hero-meta">小西マーケティング｜2026.08</p></div><div class="author-box">この記事は、<strong>楽天最大CVR62%（月間最高66%）・楽天総合ランキング1位・年間ランキング入賞11回・カテゴリ1位1,000回超</strong>などのEC実務経験を持つ小西秀人が、楽天市場の商品ページ・CVR改善という観点から整理しています。</div><div class="article-body">
+<h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">問題は「内製だから」ではなく、改善工程が途中で切れやすいこと</h2>
+<p>楽天商品ページを自社で改善できる店舗は多くあります。内製そのものが転換率低下の原因ではありません。</p>
+<div class="insight">転換率が上がらないときは、<em>原因特定 → 仮説 → 制作 → 実装 → 検証</em>のどこが抜けているかを確認します。</div>
+<h2>1｜「見た目を良くする」を改善目的にしない</h2>
+<p>デザイン変更、画像追加、コピー修正が目的になると、何の購入判断を動かす変更か分からなくなります。先に商品別アクセス・CVRを見て、停止点を決めます。</p>
+<h2>2｜担当者の感覚だけで原因を決めない</h2>
+<p>「この画像が弱い」「説明が長い」といった仮説は出発点です。R-Karteなどで商品別のアクセス・転換率・離脱を確認し、どの数字を動かすのかを固定します。</p>
+<h2>3｜制作できることと、訴求を決められることを分ける</h2>
+<p>画像制作やHTML更新ができても、何を主役にするか、どの比較基準で選ばせるかは別の判断です。制作作業を増やす前に、商品名を消しても成立する主要価値を決めます。</p>
+<h2>4｜一度に複数箇所を変えすぎない</h2>
+<p>サムネイル、価格、商品説明、FAQ、レビュー表示を同時に変えると、CVRが動いても原因を学習できません。主要変更と検証指標を一つに絞ります。</p>
+<h2>5｜更新した時点で完了にしない</h2>
+<p>内製では制作・反映までが業務として完了しやすく、その後の検証が後回しになることがあります。変更日、対象商品、変更内容、比較期間、CVR・注文数を同じ単位で記録します。</p>
+<h2>6｜外注するなら「作業」ではなく不足工程を外へ出す</h2>
+<p>内製が悪いから外注するのではありません。原因分析はできるが制作が足りない、制作はできるが構成設計が弱い、検証まで回らないなど、不足している工程だけを外へ出します。</p><p>外注先を比較するときも、AIを使うか使わないかだけでは判断しません。確認するのは、<strong>誰が原因分析を行い、主要訴求と構成を決め、その判断に責任を持つか</strong>です。AIを使っていても、戦略・訴求・構成を人が設計し検証できるなら、単純な量産とは別です。逆に、判断主体が曖昧なまま制作量だけ増えるなら、不足工程は埋まりません。</p>
+<div class="callout"><strong>内製で確認する工程：</strong><br/>原因特定 → 仮説 → 訴求・構成 → 制作 → 実装 → 検証。<br/>人ではなく、抜けている工程を特定する。</div>
+<h2>自社改善で確認する6つの工程</h2>
 <ul class="prob-list">
-<li data-num="✓">時間をかけてページを作り直したが、転換率が変わらない</li>
-<li data-num="✓">競合のページを参考にするほど、自社商品の違いが見えにくくなった</li>
-<li data-num="✓">部分的な修正を繰り返すほど、ページ全体の流れが散らかってきた</li>
-<li data-num="✓">内製を続けるか外注するかの判断基準が見えない</li>
+<li data-num="1">商品別データで停止点を決める</li>
+<li data-num="2">原因仮説を作る</li>
+<li data-num="3">主要訴求・構成を決める</li>
+<li data-num="4">変更範囲を絞って制作する</li>
+<li data-num="5">実装後にCVR・注文数を検証する</li>
+<li data-num="6">不足工程だけ外注するか判断する</li>
 </ul>
-<div class="cta-block">
-<div class="cta-block-label">無料診断レポート</div>
-<div class="cta-block-title">内製を続ける前に、商品ページ前半で選ぶ理由が届いているかを見る。</div>
-<div class="cta-block-sub">まず現在の商品ページの改善余地と、優先して見直す箇所を確認したい場合は、サービスページで「無料診断レポート」を選択してください。</div>
-<a class="cta-btn" href="https://konishi-marketing.com/rakuten/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=rakuten_free_diagnosis&amp;utm_content=rakuten-shohin-page-jisha-kaizen-shippai-pattern_mid#contact">無料診断レポートを受け取る</a>
-<div class="cta-note">※完成コピー・掲載順・レイアウト・デザインは制作依頼後に作成します。</div>
-</div>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">まず、前半を見る</h2>
-<p>自社で商品ページを作ること、商品の想いを伝えること、社内で改善を続けること。どれも必要な場面があります。</p>
-<p>ただ、転換率が動かないなら、内製か外注かを決める前に見るべき場所があります。</p>
-<p>商品ページ前半で、読者が「自分にはこの商品が合いそうだ」と思える理由を受け取れているか。そこが見えれば、自社で担うべき場所と、外部の視点が必要な場所も判断しやすくなります。</p>
-</div><!-- /article-body -->
-<div class="faq-section" id="article-faq">
-<div class="faq-label">よくある質問</div>
-<div class="faq-item">
-<div class="faq-q">商品のことを一番知っている自社がページを作るのに、なぜ転換率が上がらないのですか？</div>
-<div class="faq-a">商品を深く知っていることと、初めて見る読者が「これでよさそうだ」と思える順番で届けることは別です。自社は商品を一番知っています。ただ、読者がどこで迷い、何を受け取れば購入に進めるかは、外から見る必要があります。</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">時間をかけて丁寧に作れば、自社でも売れるページができますか？</div>
-<div class="faq-a">時間をかけることで、情報は丁寧に整理できます。ただ、読者がどこで「これでよさそうだ」と思うのかが見えていなければ、丁寧に作られた売れにくいページになります。時間を増やす前に、商品ページ前半で選ぶ理由が届いているかを見る必要があります。</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">自社でやってみてダメなら外注する、という進め方は危険ですか？</div>
-<div class="faq-a">まず自社で試す判断は自然です。ただ、転換率が低いまま数ヶ月続くと、その期間の機会損失が見えにくいコストになります。内製を続ける前に、現在のページで読者がどこで止まっているかを確認する必要があります。</div>
-</div>
-</div>
-<!-- FAQ：推進型 -->
-<div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div><div class="faq-item"><div class="faq-q">この記事の内容が、自社の商品ページにも当てはまるか確認できますか？</div><div class="faq-a">確認できます。まず現在の商品ページの改善余地と、優先して見直す箇所を知りたい場合は、楽天サービスページで「無料診断レポート」を選択してください。</div></div><div class="faq-item"><div class="faq-q">無料診断レポートでは、何を確認しますか？</div><div class="faq-a">現在の伝え方、価格やレビューに戻って比較されていないか、最初に見直すべき画像・説明・証拠を確認します。数値をご共有いただける場合は、改善後の見込みも試算します。</div></div><div class="faq-item"><div class="faq-q">改善する商品が決まっていて、制作まで依頼したい場合はどうすればいいですか？</div><div class="faq-a">楽天サービスページで「制作について相談」を選択してください。制作範囲、必要素材、費用、制作期間、着手時期、進め方を確認できます。</div></div></div><!-- /faq -->
-<div class="cta-block" style="margin:0;">
-<div class="cta-block-label">無料診断レポート</div>
-<div class="cta-block-title">サムネイルから下部LPまで、まとめて見直す。</div>
-<div class="cta-block-sub">まず現在の商品ページの改善余地と、優先して見直す箇所を確認したい場合は、サービスページで「無料診断レポート」を選択してください。</div>
-<a class="cta-btn" href="https://konishi-marketing.com/rakuten/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=rakuten_free_diagnosis&amp;utm_content=rakuten-shohin-page-jisha-kaizen-shippai-pattern_bottom#contact">無料診断レポートを受け取る</a>
-<div class="cta-note">※完成コピー・掲載順・レイアウト・デザインは制作依頼後に作成します。</div>
-</div>
-<div class="author-profile">
-<div class="author-profile-label">この記事を書いた人</div>
-<div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
-<div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
-<img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/>
-</div>
-<div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
-</div>
-<div class="author-profile-body">楽天SOY（ショップ・オブ・ザ・イヤー）受賞企業 元店長。楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの改善からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
-</div>
-<div class="related-section">
-<div class="related-label">関連記事</div>
-<ul class="related-list">
-<li><a href="https://konishi-marketing.com/articles/ec-hajimete-shohin-page-kaizen-tadashii-tejun.html">ECで初めて商品ページを改善するときに見る場所</a></li>
-<li><a href="https://konishi-marketing.com/articles/ec-shohin-page-naisei-gaichuu-handan.html">ECの商品ページを内製するか外注するかの考え方</a></li>
-<li><a href="https://konishi-marketing.com/articles/rakuten-unei-daiko-to-shohin-page-konsaru-no-chigai.html">楽天運営代行と商品ページ改善の役割の違い</a></li>
-</ul>
-</div>
-<footer class="site-footer">
-<a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
-</footer>
-</div><!-- /site-wrap -->
-</body>
-</html>
+<h2>「自社でやるか、外注するか」より、改善工程が一周するかを見る</h2>
+<p>内製でも外注でも、転換率改善に必要なのは工程がつながることです。<strong>誰が作るかではなく、原因から検証までが切れずに回るか</strong>を判断基準にします。</p>
+<div class="callout"><strong>参考・一次情報：</strong><br/>
+<a href="https://www.rakuten.co.jp/ec/environment/service/analysis/">楽天市場｜R-Karteで売上データを分析する</a><br/>
+<a href="https://www.rakuten.co.jp/ec/start/ecsite_analysis/">楽天市場｜ECサイト分析の基本と手法まとめ</a></div>
+</div><div class="faq-section" id="article-faq"><div class="faq-label">よくある質問</div><div class="faq-item"><div class="faq-q">楽天商品ページは自社で改善できますか？</div><div class="faq-a">可能です。内製か外注かより、原因特定・仮説・制作・実装・検証の工程が一周するかを確認します。</div></div><div class="faq-item"><div class="faq-q">自社改善で一番起きやすい失敗は何ですか？</div><div class="faq-a">制作・更新が目的になり、何の購入判断を動かす変更か、変更後のCVRがどう動いたかの検証が抜けることです。</div></div><div class="faq-item"><div class="faq-q">外注先はAIを使っていない会社を選ぶべきですか？</div><div class="faq-a">AI使用の有無だけでは判断しません。誰が原因分析・主要訴求・構成を決め、実装後の検証まで責任を持つかを確認します。</div></div></div><div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div><div class="faq-item"><div class="faq-q">自社では、どこから確認すべきですか？</div><div class="faq-a">アクセス・CVR・商品別売上と現在のページ・販促条件を並べると、最初に直す場所を絞れます。 <a href="https://konishi-marketing.com/rakuten/">支援内容はこちらです。</a></div></div><div class="faq-item"><div class="faq-q">相談や見積もり作成に費用はかかりますか？</div><div class="faq-a">費用はかかりません。サービスページから相談できます。</div></div></div><div class="cta-block"><div class="cta-block-label">楽天市場の商品ページ改善</div><div class="cta-block-title">内製か外注かではなく、抜けている工程を見つける。</div><div class="cta-block-sub">原因特定から検証までをつなぎ、改善を作業で終わらせない状態へ整えます。</div><a class="cta-btn" href="https://konishi-marketing.com/rakuten/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=rakuten-shohin-page-jisha-kaizen-shippai-pattern&amp;utm_content=bottom_cta">楽天商品ページ支援を見る</a><div class="cta-note">相談・見積もり作成に費用はかかりません。</div></div><div class="author-profile"><div class="author-profile-label">この記事を書いた人</div><div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;"><div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;"><img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/></div><div class="author-profile-name" style="margin-bottom:0;">小西秀人｜小西マーケティング</div></div><div class="author-proof-grid"><div class="author-proof-item"><span class="author-proof-label">楽天最大CVR</span><strong class="author-proof-value">62%</strong><span class="author-proof-note">月間最高66%</span></div><div class="author-proof-item"><span class="author-proof-label">楽天総合1位</span><strong class="author-proof-value">総合1位</strong><span class="author-proof-note">Yahoo!ショッピング総合1位も獲得</span></div><div class="author-proof-item"><span class="author-proof-label">年間ランキング</span><strong class="author-proof-value">11回</strong><span class="author-proof-note">担当商品の入賞実績</span></div><div class="author-proof-item"><span class="author-proof-label">カテゴリ1位</span><strong class="author-proof-value">1,000回超</strong><span class="author-proof-note">楽天市場での累計獲得実績</span></div></div><div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年以上のEC実務経験をもとに、商品ページ、広告、販促、CVR改善を一体で設計している。</div></div><div class="related-section"><div class="related-label">関連記事</div><ul class="related-list"><li><a href="https://konishi-marketing.com/articles/rakuten-kaizen-seika-kitaichi.html">楽天商品ページ改善の効果はどう測る？</a></li><li><a href="https://konishi-marketing.com/articles/rakuten-kabu-lp-samune-yusendo.html">楽天商品ページ改善は何から？</a></li><li><a href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-jisha-gaichuu-chigai.html">楽天の転換率改善を自社でやるべき店舗・外注すべき店舗の違い</a></li></ul></div><footer class="site-footer"><a href="https://konishi-marketing.com">https://konishi-marketing.com</a></footer></div></body></html>
