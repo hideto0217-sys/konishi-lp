@@ -1,821 +1,183 @@
 <!DOCTYPE html>
 
-<html lang="ja">
-<head>
-<link rel="icon" href="https://konishi-marketing.com/images/favicon.ico" sizes="any"/>
-<meta charset="utf-8"/>
-<meta content="only light" name="color-scheme"/>
-<link href="https://konishi-marketing.com/articles/rakuten-kokokuhi-fuyashite-mo-rieki-nokoranai.html" rel="canonical"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>楽天で広告費を増やしても利益が残らない理由｜小西マーケティング</title>
-<meta content="RPP広告を回すほど売上は立つ。けれど月末に現金が残らない。広告費やポイント倍率を増やす前に、商品ページで選ぶ理由が届いているかを確認する必要があります。" name="description"/>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
-<script>
-window.dataLayer=window.dataLayer||[];
-function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-gtag('config','G-SWS3R3K4W5');
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<style>
-:root {
-  --navy: #1a2744;
-  --navy-light: #243461;
-  --gold: #c9a84c;
-  --gold-light: #e8d5a3;
-  --white: #ffffff;
-  --off-white: #f8f7f4;
-  --gray-100: #f1f0ed;
-  --gray-200: #e4e2dc;
-  --gray-400: #a09e97;
-  --gray-600: #6b6860;
-  --gray-800: #3a3834;
-  --text: #1e1d1a;
-  --red: #b71c1c;
-  --sans: 'Noto Sans JP', sans-serif;
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { font-size: 16px; }
-
-body {
-  font-family: var(--sans);
-  font-size: 1rem;
-  color: var(--text);
-  background: var(--off-white);
-  line-height: 1.9;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ── layout ── */
-.site-wrap {
-  max-width: 860px;
-  margin: 0 auto;
-  background: var(--white);
-}
-
-/* ── header ── */
-.site-header {
-  background: var(--navy);
-  padding: 1rem 2rem;
-  border-bottom: 2px solid var(--gold);
-}
-.site-header a {
-  color: var(--gold-light);
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-}
-
-/* ── hero ── */
-.hero {
-  background: var(--navy);
-  padding: 3rem 2.5rem 2.5rem;
-  border-bottom: 3px solid var(--gold);
-}
-.hero-category {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: .2em;
-  color: var(--gold-light);
-  text-transform: uppercase;
-  margin-bottom: .75rem;
-}
-.hero-title {
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.45;
-  margin-bottom: 1.25rem;
-}
-.hero-lead {
-  font-size: 1rem;
-  color: rgba(255,255,255,.78);
-  line-height: 2;
-  margin-bottom: 1.5rem;
-}
-.hero-meta {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,.45);
-}
-
-/* ── author box ── */
-.author-box {
-  background: var(--gray-100);
-  border-left: 3px solid var(--gold);
-  padding: 1rem 1.5rem;
-  font-size: 0.85rem;
-  color: var(--gray-600);
-  line-height: 1.8;
-}
-.author-box strong { color: var(--navy); }
-
-/* ── article body ── */
-.article-body {
-  padding: 2.5rem 2.5rem;
-}
-
-.article-body h2 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--navy) !important;
-  line-height: 1.4;
-  margin: 4.5rem 0 1.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: .75rem;
-  border-top: 1px solid var(--gray-200);
-  border-bottom: 2px solid var(--gold);
-}
-.article-body h2:first-child { margin-top: 0; }
-
-.article-body h3 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--navy) !important;
-  margin: 3.5rem 0 1rem;
-  padding: .6rem 0 .6rem .75rem;
-  border-left: 3px solid var(--gold);
-  background-color: var(--gray-100);
-  line-height: 1.45;
-}
-
-.article-body p {
-  font-size: 1rem;
-  color: var(--gray-800);
-  line-height: 2.1;
-  margin-bottom: 1.25rem;
-}
-.article-body p:last-child { margin-bottom: 0; }
-
-.article-body strong { color: var(--navy); }
-
-/* insight box */
-.insight {
-  background: var(--navy);
-  color: var(--white);
-  padding: 1.25rem 1.75rem;
-  margin: 1.75rem 0;
-  font-size: 1rem;
-  line-height: 2;
-  font-weight: 700;
-}
-.insight em {
-  font-style: normal;
-  color: var(--gold-light);
-}
-
-/* quote / callout */
-.callout {
-  background: var(--off-white);
-  border-left: 3px solid var(--navy);
-  padding: 1.25rem 1.5rem;
-  margin: 1.5rem 0;
-  font-size: 0.95rem;
-  color: var(--gray-800);
-  line-height: 2;
-}
-.callout strong { color: var(--navy); }
-
-/* misrecognition 3-layer table */
-.misrec-block {
-  margin: 2rem 0;
-  border: 1px solid var(--gray-200);
-  overflow: hidden;
-}
-.misrec-header {
-  background: var(--navy);
-  color: var(--gold-light);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  padding: .6rem 1.25rem;
-}
-.misrec-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  border-top: 1px solid var(--gray-200);
-}
-.misrec-row:first-of-type { border-top: none; }
-.misrec-cell {
-  padding: 1rem 1.25rem;
-  font-size: 0.9rem;
-  line-height: 1.9;
-  color: var(--gray-800);
-}
-.misrec-cell.label {
-  background: var(--gray-100);
-  font-weight: 700;
-  font-size: 0.8rem;
-  color: var(--gray-600);
-  letter-spacing: .05em;
-  border-right: 1px solid var(--gray-200);
-}
-.misrec-cell.belief { background: var(--white); }
-.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
-
-/* structure problems list */
-.prob-list { list-style: none; margin: 1rem 0; }
-.prob-list li {
-  padding: 1rem 1.25rem 1rem 3rem;
-  position: relative;
-  border-bottom: 1px solid var(--gray-100);
-  font-size: 0.95rem;
-  color: var(--gray-800);
-  line-height: 1.9;
-}
-.prob-list li:last-child { border-bottom: none; }
-.prob-list li::before {
-  content: attr(data-num);
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: var(--navy);
-  color: var(--white);
-  font-size: 0.75rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-/* CTA block */
-.cta-block {
-  background: var(--navy);
-  padding: 2rem 2.5rem;
-  margin: 2.5rem 0;
-  text-align: center;
-}
-.cta-block-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: .2em;
-  color: var(--gold-light);
-  text-transform: uppercase;
-  margin-bottom: .75rem;
-}
-.cta-block-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.6;
-  margin-bottom: .75rem;
-}
-.cta-block-sub {
-  font-size: 0.875rem;
-  color: rgba(255,255,255,.7);
-  line-height: 1.9;
-  margin-bottom: 1.5rem;
-}
-.cta-btn {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--navy);
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: .85rem 2.5rem;
-  text-decoration: none;
-  letter-spacing: .06em;
-  border-bottom: 3px solid #a8893a;
-  transition: opacity .2s;
-}
-.cta-btn:hover { opacity: .88; }
-.cta-note {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,.4);
-  margin-top: .75rem;
-}
-
-/* FAQ */
-.faq-section {
-  padding: 2.5rem 2.5rem;
-  border-top: 1px solid var(--gray-200);
-}
-.faq-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: .2em;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-.faq-item {
-  margin-bottom: 1.75rem;
-  padding-bottom: 1.75rem;
-  border-bottom: 1px solid var(--gray-100);
-}
-.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.faq-q {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--navy);
-  line-height: 1.6;
-  margin-bottom: .75rem;
-  padding-left: 1.5rem;
-  position: relative;
-}
-.faq-q::before {
-  content: 'Q';
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--gold);
-}
-.faq-a {
-  font-size: 0.95rem;
-  color: var(--gray-800);
-  line-height: 2;
-  padding-left: 1.5rem;
-  position: relative;
-}
-.faq-a::before {
-  content: 'A';
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--navy);
-}
-
-/* author profile */
-.author-profile {
-  background: var(--gray-100);
-  padding: 2rem 2.5rem;
-  border-top: 1px solid var(--gray-200);
-}
-.author-profile-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: .2em;
-  color: var(--gray-400);
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-.author-profile-name {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: .5rem;
-}
-.author-profile-body {
-  font-size: 0.875rem;
-  color: var(--gray-600);
-  line-height: 1.95;
-}
-
-/* related */
-.related-section {
-  padding: 2rem 2.5rem;
-  border-top: 1px solid var(--gray-200);
-}
-.related-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: .2em;
-  color: var(--gray-400);
-  text-transform: uppercase;
-  margin-bottom: 1.25rem;
-}
-.related-list { list-style: none; }
-.related-list li {
-  padding: .75rem 0 .75rem 1rem;
-  border-bottom: 1px solid var(--gray-100);
-  position: relative;
-}
-.related-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 1.1em;
-  width: 6px;
-  height: 1px;
-  background: var(--navy);
-}
-.related-list li:last-child { border-bottom: none; }
-.related-list a {
-  font-size: 0.9rem;
-  color: var(--navy);
-  text-decoration: underline;
-  line-height: 1.7;
-}
-
-/* footer */
-.site-footer {
-  background: var(--navy);
-  padding: 1.5rem 2.5rem;
-  text-align: center;
-}
-.site-footer a {
-  color: rgba(255,255,255,.55);
-  text-decoration: none;
-  font-size: 0.8rem;
-}
-
-
-/* misrec-block table override */
-table.misrec-block {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-  border: 1px solid var(--gray-200);
-  overflow: hidden;
-}
-table.misrec-block th.misrec-header {
-  text-align: left;
-  display: table-cell;
-  width: 100%;
-}
-table.misrec-block td.misrec-cell.label {
-  width: 40%;
-}
-
-
-
-/* ── 記事FAQ（よくある質問）専用スタイル ── */
-#article-faq {
-  background-color: var(--gray-100);
-  border-top: 3px solid var(--gold);
-  border-bottom: 1px solid var(--gray-200);
-  margin-top: 2.5rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-#article-faq .faq-label {
-  color: var(--navy);
-  font-size: 0.75rem;
-}
-#article-faq .faq-item {
-  border-bottom: 1px solid var(--gray-200);
-  padding-left: 0;
-}
-#article-faq .faq-q {
-  font-size: 1.0rem;
-  color: var(--navy) !important;
-}
-#article-faq .faq-a {
-  background-color: var(--white);
-  padding: 1rem 1.25rem 1rem 2.25rem;
-  border-radius: 0;
-  margin-top: 0.5rem;
-  line-height: 2;
-  color: var(--gray-800);
-}
-
-/* ── Next Step（診断FAQ）専用スタイル ── */
-.nextstep-faq {
-  background-color: var(--navy-light);
-  border-top: none;
-  padding: 2.5rem 2.5rem;
-}
-.nextstep-faq .faq-label {
-  color: var(--gold-light);
-}
-.nextstep-faq .faq-item {
-  border-bottom: 1px solid rgba(255,255,255,.12);
-}
-.nextstep-faq .faq-item:last-child { border-bottom: none; }
-.nextstep-faq .faq-q {
-  color: var(--white);
-}
-.nextstep-faq .faq-q::before {
-  color: var(--gold-light);
-}
-.nextstep-faq .faq-a {
-  color: rgba(255,255,255,.78);
-}
-.nextstep-faq .faq-a::before {
-  color: var(--gold-light);
-}
-
-/* ── ダークモード完全無効化 ── */
-:root {
-  color-scheme: only light;
-}
-html, body {
-  background-color: #f8f7f4 !important;
-  color: #1e1d1a;
-}
-.prob-list li {
-  background-color: #ffffff;
-}
-.article-body {
-  background-color: #ffffff;
-}
-
-/* responsive */
-@media (max-width: 640px) {
-  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-  .hero { padding-top: 2rem; }
-  .cta-block { padding: 1.75rem 1.25rem; }
-  .misrec-row { grid-template-columns: 1fr; }
-  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
-  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
-}
-
-/* rakuten-service-route-v1 */
-.service-route { margin-top: 1.15rem; padding-top: 1rem; border-top: 1px solid rgba(201,168,76,.32); font-size: .9rem; line-height: 1.8; color: rgba(255,255,255,.68); }
-.service-route a { color: var(--gold-light); font-weight: 700; text-underline-offset: .2em; }
-.service-route a:hover { color: var(--white); }
-@media (max-width: 640px) { .service-route { font-size: .86rem; } }
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><link href="https://konishi-marketing.com/articles/rakuten-kokokuhi-fuyashite-mo-rieki-nokoranai.html" rel="canonical"/><title>楽天で広告費を増やしても利益が残らない理由｜広告増額前に見る6つの数字｜小西マーケティング</title><meta content="楽天で広告費を増やしても利益が残らない理由を、1注文利益・許容CPO・ROAS・CVR・販促負担の6つの数字から解説します。" name="description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "楽天で広告費を増やしても利益が残らない理由｜広告増額前に見る6つの数字", "description": "楽天で広告費を増やしても利益が残らない理由を、1注文利益・許容CPO・ROAS・CVR・販促負担の6つの数字から解説します。", "url": "https://konishi-marketing.com/articles/rakuten-kokokuhi-fuyashite-mo-rieki-nokoranai.html", "dateModified": "2026-08-18", "author": {"@type": "Person", "name": "小西秀人", "url": "https://konishi-marketing.com"}, "publisher": {"@type": "Organization", "name": "小西マーケティング", "url": "https://konishi-marketing.com"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "楽天で広告費を増やす前に最初に見る数字は何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "商品別の1注文あたり広告前利益と許容CPOです。広告売上やROASだけでなく、1注文増えたときに何円残るかを確認します。"}}, {"@type": "Question", "name": "ROASが高ければ広告は黒字ですか？", "acceptedAnswer": {"@type": "Answer", "text": "一律ではありません。原価、送料、ポイント、クーポン、モール費用などで利益構造が違うため、ROASと利益を分けて見ます。"}}, {"@type": "Question", "name": "CVRが低い商品でも広告を増やせば売上は増えますか？", "acceptedAnswer": {"@type": "Answer", "text": "アクセスは増やせますが、購入判断が止まっていれば広告費だけ増える可能性があります。商品別CVRを先に確認します。"}}]}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SWS3R3K4W5');</script><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/><style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
 </style>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "楽天のRPP広告のROASが低い場合、まず何を見ればいいですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "広告の入札設定だけを見る前に、商品ページで選ぶ理由が届いているかを確認します。クリック単価だけを見るのではなく、広告から来た人のうち何人が購入に進んでいるかを見る必要があります。商品ページで選ぶ理由が届いていなければ、広告費を増やしても利益は残りにくくなります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "広告費を使わずに楽天で売上を上げることはできますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "広告をすぐに止める必要はありません。まず、広告から来た人が商品ページで選ぶ理由を受け取れているかを確認します。商品ページで購入に進む人が増えれば、同じ広告費でも売上と利益の残り方が変わります。広告に頼りきらない状態に近づくには、まず商品ページで選ぶ理由が届いているかを見る必要があります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "ポイント倍率を上げると転換率は上がりますが、これは先に見るべき改善ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ポイント倍率で購入の後押しができる場面はあります。ただ、ポイントを戻した瞬間に転換率も戻るなら、商品ページで選ぶ理由が届いていない可能性があります。値引きやポイントの前に、価格以外に何を見て選べばいいかがページ内で届いているかを確認する必要があります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "この記事の内容が、自社の商品ページにも当てはまるか確認できますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "確認できます。まず現在の商品ページの改善余地と、優先して見直す箇所を知りたい場合は、楽天サービスページで「無料診断レポート」を選択してください。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "無料診断レポートでは、何を確認しますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "現在の伝え方、価格やレビューに戻って比較されていないか、最初に見直すべき画像・説明・証拠を確認します。数値をご共有いただける場合は、改善後の見込みも試算します。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "改善する商品が決まっていて、制作まで依頼したい場合はどうすればいいですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "楽天サービスページで「制作について相談」を選択してください。制作範囲、必要素材、費用、制作期間、着手時期、進め方を確認できます。"
-      }
-    }
-  ]
-}</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "楽天で広告費を増やしても利益が残らない理由",
-  "description": "RPP広告を回すほど売上は立つ。けれど月末に現金が残らない。広告費やポイント倍率を増やす前に、商品ページで選ぶ理由が届いているかを確認する必要があります。",
-  "image": "https://konishi-marketing.com/images/konishi.JPG",
-  "url": "https://konishi-marketing.com/articles/rakuten-kokokuhi-fuyashite-mo-rieki-nokoranai.html",
-  "datePublished": "2026-04-12",
-  "dateModified": "2026-05-05",
-  "author": {
-    "@type": "Person",
-    "name": "小西 秀人",
-    "url": "https://konishi-marketing.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "小西マーケティング",
-    "url": "https://konishi-marketing.com"
-  }
+<style id="makuake-author-profile-standard-v1">
+/* Makuake article author profile standardization 2026-08-07 */
+.author-proof-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  margin:1rem 0 1.25rem;
+  border:1px solid var(--gray-200);
+  background:var(--gray-200);
 }
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "ホーム",
-      "item": "https://konishi-marketing.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "オウンドメディア",
-      "item": "https://konishi-marketing.com/articles/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "楽天市場",
-      "item": "https://konishi-marketing.com/articles/rakuten.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "楽天で広告費を増やしても利益が残らない理由",
-      "item": "https://konishi-marketing.com/articles/rakuten-kokokuhi-fuyashite-mo-rieki-nokoranai.html"
-    }
-  ]
+.author-proof-item{
+  min-width:0;
+  padding:1rem 1.1rem;
+  background:var(--white);
 }
-</script>
-</head>
-<body>
-<div class="site-wrap">
-<!-- header -->
-<header class="site-header">
-<a href="https://konishi-marketing.com/">小西マーケティング</a>
-</header>
-<nav aria-label="パンくず" style="font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto;"><a href="https://konishi-marketing.com/" style="color:#6b6860;text-decoration:none;">ホーム</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">オウンドメディア</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/rakuten.html" style="color:#6b6860;text-decoration:none;">楽天市場</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><span aria-current="page" style="color:#3a3834;">楽天で広告費を増やしても利益が残らない理由</span></nav>
-<!-- hero -->
-<div class="hero">
-<span class="hero-category">楽天商品ページ改善 / 広告費改善</span>
-<h1 class="hero-title">楽天で広告費を増やしても利益が残らない理由</h1>
-<p class="hero-lead">RPP広告を回せば売上は立つ。スーパーSALEのたびに注文も入る。それでも月末に現金が残らない——広告費を増やす前に見るべきなのは、広告で来た人が商品ページで選ぶ理由を受け取れているかです。EC100店舗の現状を見てきた経験から解説します。</p>
-<p class="hero-meta">小西マーケティング｜2026.04</p>
-</div>
-<!-- author micro box -->
-<div class="author-box">この記事は、楽天SOY（ショップ・オブ・ザ・イヤー）受賞企業の元店長で、楽天総合ランキング1位を2回・年間ランキング11回・ランキング1位通算1,000回以上を経験したECコンサルタント・小西秀人が、20年間のEC実務経験をもとに執筆しています。</div>
-<!-- article body -->
-<div class="article-body">
-<h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">売上はある</h2>
-<p>RMS画面の売上数字は悪くない。RPP広告は常時稼働している。スーパーSALEのたびに予算を積み、それなりの注文数も入る。</p>
-<p>それでも月末に広告費、ポイント原資、送料、モール手数料を差し引くと、手元に残る現金は少ない。</p>
-<p>売れている感覚はある。けれど、利益が残っている実感がない。</p>
-<div class="insight">
-    売上が立つことと、利益が残ることは別です。<br/>
-<em>広告で来た人が商品ページで選ぶ理由を受け取れていなければ、広告費を増やしても利益は残りにくくなります。</em>
-</div>
-<p>広告は、人を商品ページに連れてくる施策です。</p>
-<p>ただ、商品ページに来た人が購入に進まなければ、クリック費用だけが積み上がります。広告費を増やす前に、商品ページで選ぶ理由が届いているかを見る必要があります。</p>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">広告だけでは変わらない</h2>
-<p>利益が残らない状態が続くと、最初に広告の設定を見直したくなります。キーワード、入札単価、除外設定、CPC、ROAS。</p>
-<p>もちろん、広告運用の見直しが必要な場面はあります。無駄なクリックを減らすことにも意味があります。</p>
-<p>ただ、広告で来た人が商品ページで購入に進まない状態では、広告の調整だけで利益を残すのは難しくなります。</p>
-<div class="misrec-block">
-<div class="misrec-header">広告を見る前に確認すること</div>
-<div class="misrec-row">
-<div class="misrec-cell label">よくある見方</div>
-<div class="misrec-cell truth">広告の入札単価やキーワード設定が合っていないから、広告費が増えて利益が残らない</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">残っていること</div>
-<div class="misrec-cell truth">広告から来た人が、商品ページで選ぶ理由を受け取れていない。転換率が低いまま広告を回しているため、クリック費用だけが積み上がる</div>
-</div>
-</div>
-<p>転換率が1%のページに10,000人を送れば、購入は100人です。転換率が3%なら、同じ10,000人から300人が購入します。</p>
-<p>クリック単価だけを見るのではなく、来た人のうち何人が購入に進むかを見る必要があります。</p>
-<div class="callout">
-<strong>CPCが高くて苦しい場合について。</strong><br/>
-    CPCの見直しは必要です。ただ、商品ページで選ぶ理由が届いていなければ、CPCを少し下げても利益の残り方は大きく変わりにくくなります。先に見るべきなのは、広告から来た人が購入に進む理由を受け取れているかです。
-  </div>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">増やすほど薄くなる</h2>
-<p>広告費を入れれば売上は立つ。止めれば売上が落ちる。だから、広告を止められない。</p>
-<p>この状態が続くと、広告に振り回されている感覚が生まれます。</p>
-<p>楽天では広告やイベント参加が改善策として提案される場面があります。アクセスを増やす施策として必要な場合もあります。</p>
-<p>ただ、商品ページで選ぶ理由が届いていなければ、広告費を増やしても利益は残りにくくなります。</p>
-<div class="misrec-block">
-<div class="misrec-header">アクセスを増やす前に見ること</div>
-<div class="misrec-row">
-<div class="misrec-cell label">よくある見方</div>
-<div class="misrec-cell truth">広告費を増やせばアクセスが増え、注文数も増える。だから売上と利益も伸びる</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">残っていること</div>
-<div class="misrec-cell truth">商品ページで、価格以外に何を見て選べばいいかが届いていない。広告で来た人が、比較に戻ったり、安い競合へ流れたりしている</div>
-</div>
-</div>
-<p>アクセスが増えると、売上は増えることがあります。</p>
-<p>ただ、転換率が低いままなら、同時に広告費も増えます。さらにポイントやクーポンを重ねると、売上は立っても利益が薄くなります。</p>
-<p>広告で来た人が、商品ページの中で「この商品を選ぶ理由」を受け取れているか。そこを見ないまま広告費だけを増やすと、忙しいのに残らない状態になりやすくなります。</p>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">乗り換えても残る</h2>
-<p>広告費が利益を圧迫しているとき、広告代理店を変える。AI入札ツールを入れる。ポイント倍率を上げる。クーポンを追加する。</p>
-<p>こうした施策が必要な場面はあります。</p>
-<p>ただ、商品ページで選ぶ理由が届いていない場合、別の施策を入れても同じ場所で利益が止まりやすくなります。</p>
-<div class="misrec-block">
-<div class="misrec-header">施策を変える前に見ること</div>
-<div class="misrec-row">
-<div class="misrec-cell label">よくある見方</div>
-<div class="misrec-cell truth">より良い広告代理店に変える。入札ツールを入れる。ポイント倍率を上げれば、ROASや転換率は改善する</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">残っていること</div>
-<div class="misrec-cell truth">商品ページで購入に進む理由が届いていない。広告の効率や値引きで一時的に動いても、利益の残り方が変わりにくい</div>
-</div>
-</div>
-<p>ポイント倍率やクーポンは、購入前の後押しになります。</p>
-<p>ただ、商品ページで選ぶ理由が届いていない状態では、値引きが購入理由そのものになりやすくなります。ポイントを戻した瞬間に転換率も戻るなら、商品ページ側に先に見る場所が残っています。</p>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">利益が止まる3つの型</h2>
-<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">売れている感覚がある</h3>
-<p>RMSの売上数字は動いている。注文数も入っている。だから、事業が動いている感覚がある。</p>
-<p>ただ、売上が立っていることと、利益が残っていることは別です。広告費、ポイント原資、送料、手数料を引いた後に現金が残らないなら、商品ページで購入に進む効率を見直す必要があります。</p>
-<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">止めたら落ちる不安がある</h3>
-<p>広告を止めたら、アクセスも売上も大きく落ちる。その不安があるため、広告費を削れない。</p>
-<p>この不安は自然です。実際に、広告を止めると売上が落ちる店舗はあります。</p>
-<p>ただ、その状態は、広告なしでは商品ページが選ばれにくい状態でもあります。広告を止める前に、商品ページで選ぶ理由が届いているかを見る必要があります。</p>
-<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">イベント中だけ動く</h3>
-<p>スーパーSALEやお買い物マラソンでは売れる。だから、この商品ページは悪くないと思いやすくなります。</p>
-<p>ただ、イベント中はポイント還元や買い回りの後押しがあります。通常期に戻ると売上が止まるなら、商品ページだけで選ぶ理由が届いているかを確認する必要があります。</p>
-<p>イベントで売れることと、通常期でも選ばれることは別です。</p>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">残るページ、消えるページ</h2>
-<p>広告費を投じても利益が残る店舗と、残らない店舗の差は、広告の運用精度だけではありません。</p>
-<p>商品ページで、価格以外に何を見て選べばいいかが届いているかです。</p>
-<p>価格以外の選ぶ理由が届いていないページでは、最後に安い競合やポイントの多い店舗と比べられやすくなります。そこで勝つには、価格を下げるか、ポイントを積むしかなくなります。</p>
-<p>反対に、選ぶ理由が届いているページでは、読者が「この商品でよさそうだ」と受け取りやすくなります。同じ広告費でも、購入に進む人数が変わります。</p>
-<div class="insight">
-    利益が残るかどうかの分かれ目は、広告費だけではありません。<br/>
-<em>商品ページで「価格以外に何を見て選べばいいか」が届いているかです。</em>
-</div>
-<p>以下の状態が続いているなら、広告費を増やす前に確認すべき場所があります。</p>
+.author-proof-label{
+  display:block;
+  margin-bottom:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  font-weight:700;
+  line-height:1.5;
+}
+.author-proof-value{
+  display:block;
+  color:var(--navy);
+  font-size:1.35rem;
+  font-weight:700;
+  line-height:1.35;
+  letter-spacing:-.025em;
+}
+.author-proof-note{
+  display:block;
+  margin-top:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  line-height:1.65;
+}
+@media(max-width:640px){
+  .author-proof-grid{grid-template-columns:1fr}
+  .author-proof-value{font-size:1.25rem}
+}
+</style>
+<style id="nextstep-faq-link-contrast-fix">
+.nextstep-faq .faq-a a{
+  color:var(--gold-light);
+  text-decoration:underline;
+  text-underline-offset:2px;
+  font-weight:700;
+}
+.nextstep-faq .faq-a a:visited{
+  color:var(--gold-light);
+}
+.nextstep-faq .faq-a a:hover{
+  color:var(--white);
+}
+</style>
+<style id="makuake-channel-map-v1">
+.channel-map{margin:2rem 0;border:1px solid var(--gray-200);background:var(--white)}
+.channel-map-title{padding:.75rem 1rem;background:var(--navy);color:var(--gold-light);font-size:.8rem;font-weight:700;letter-spacing:.06em}
+.channel-map-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.channel-map-table{width:100%;min-width:720px;border-collapse:collapse}
+.channel-map-table th,.channel-map-table td{padding:1rem;vertical-align:top;border-right:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);font-size:.88rem;line-height:1.8;text-align:left}
+.channel-map-table th{background:var(--gray-100);color:var(--navy);font-weight:700}
+.channel-map-table td{color:var(--gray-800)}
+.channel-map-table th:last-child,.channel-map-table td:last-child{border-right:none}
+.channel-map-table tr:last-child td{border-bottom:none}
+.channel-map-table td:first-child{width:24%;background:var(--off-white)}
+</style></head><body><div class="site-wrap"><header class="site-header"><a href="https://konishi-marketing.com/">小西マーケティング</a></header><nav aria-label="パンくず" style="font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto;"><a href="https://konishi-marketing.com/" style="color:#6b6860;text-decoration:none;">ホーム</a><span style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">オウンドメディア</a><span style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/rakuten.html" style="color:#6b6860;text-decoration:none;">楽天市場</a><span style="margin:0 .45rem;color:#a09e97;">›</span><span>楽天で広告費を増やしても利益が残らない理由｜広告増額前に見る6つの数字</span></nav><div class="hero"><span class="hero-category">楽天市場 / 広告費 / 利益</span><h1 class="hero-title">楽天で広告費を増やしても利益が残らない理由｜広告増額前に見る6つの数字</h1><p class="hero-lead">楽天で広告費を増やす前に、<strong style="color:#fff;">広告経由で1注文増えたとき、最終的にいくら利益が残るか</strong>を確認します。</p><p class="hero-meta">小西マーケティング｜2026.08</p></div><div class="author-box">この記事は、<strong>楽天最大CVR62%（月間最高66%）・楽天総合ランキング1位・年間ランキング入賞11回・カテゴリ1位1,000回超</strong>などのEC実務経験を持つ小西秀人が、楽天市場の商品ページ・CVR改善という観点から整理しています。</div><div class="article-body">
+<h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">広告費を増やす前に、「1注文増えるといくら残るか」を決める</h2>
+<p>楽天市場ではRPP広告などで集客を増やせます。楽天公式も、RPP広告はクリック課金型で、費用対効果を見ながら投資額を段階的に調整する考え方を案内しています。</p>
+<div class="insight">広告増額の判断は、<em>ROASだけでなく、広告経由で1注文増えたときに何円残るか</em>まで計算して行います。</div>
+<p><a href="https://konishi-marketing.com/articles/rakuten-kokokuhi-keru-demo-riekioritsu-modoranai.html">「楽天で広告費を削っても利益率が戻らない理由」</a>は広告削減後の利益構造を扱います。この記事は、広告を増やす前の採算判断に限定します。</p>
+<h2>1｜広告経由の売上ではなく、1注文あたり利益を出す</h2>
+<p>商品価格から原価、送料、モール費用、決済費用、ポイント・クーポン負担などを引き、広告費を追加する前に残る金額を確認します。</p>
+<h2>2｜許容CPOを決める</h2>
+<p>1注文あたり広告前利益が2,000円なら、広告獲得単価が2,500円では注文が増えるほど赤字が広がります。目標利益を残すなら、許容CPOはさらに低くなります。</p>
+<h2>3｜ROASだけで黒字と判断しない</h2>
+<p>高単価商品と低粗利商品では、同じROASでも残る利益が違います。ROASは広告売上との比率であり、利益率そのものではありません。</p>
+<h2>4｜CVRが低い商品へ広告を足す前にページ側を見る</h2>
+<p>クリックを増やしても、商品ページで購入判断が止まっていれば広告費だけ増えます。広告前に商品別CVRを確認し、アクセス不足か転換率不足かを分けます。</p>
+<h2>5｜ポイント・クーポン・イベント負担を合算する</h2>
+<p>広告と同時にポイント倍率やクーポンを強くすると、売上増の原因が混ざり、利益も薄くなります。商品別に販促負担を合算して見ます。</p>
+<h2>6｜広告費を増やすなら段階的に検証する</h2>
+<p>楽天公式もRPP広告について、費用対効果を測定しながら投資額を段階的に調整する考え方を案内しています。一度に大きく増額せず、CPO・CVR・追加利益を見ながら広げます。</p>
+<div class="callout"><strong>広告増額前に見る6つ：</strong><br/>商品別CVR／客単価／1注文あたり広告前利益／許容CPO／ポイント・クーポン負担／追加利益。</div>
+<h2>広告増額の確認順</h2>
 <ul class="prob-list">
-<li data-num="✓">売上は立っているが、月末に現金が残らない</li>
-<li data-num="✓">広告を止めると、売上がゼロに近くなる</li>
-<li data-num="✓">スーパーSALEのたびに忙しいが、利益が出ない</li>
-<li data-num="✓">ROASが改善しないまま、広告費だけが増えている</li>
+<li data-num="1">1注文あたり広告前利益を出す</li>
+<li data-num="2">許容CPOを決める</li>
+<li data-num="3">ROASと利益を分ける</li>
+<li data-num="4">商品別CVRを見る</li>
+<li data-num="5">販促負担を合算する</li>
+<li data-num="6">段階的に増額して追加利益を確認する</li>
 </ul>
-<div class="cta-block">
-<div class="cta-block-label">無料診断レポート</div>
-<div class="cta-block-title">広告費を増やす前に、商品ページで選ぶ理由が届いているかを見る。</div>
-<div class="cta-block-sub">まず現在の商品ページの改善余地と、優先して見直す箇所を確認したい場合は、サービスページで「無料診断レポート」を選択してください。</div>
-<a class="cta-btn" href="https://konishi-marketing.com/rakuten/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=rakuten_free_diagnosis&amp;utm_content=rakuten-kokokuhi-fuyashite-mo-rieki-nokoranai_mid#contact">無料診断レポートを受け取る</a>
-<div class="cta-note">※完成コピー・掲載順・レイアウト・デザインは制作依頼後に作成します。</div>
-</div>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">まず、商品ページを見る</h2>
-<p>楽天で利益が残らないとき、広告運用、入札単価、ポイント倍率を見直すことはあります。どれも必要な場面があります。</p>
-<p>ただ、広告費を増やしても利益が残らないなら、先に商品ページで選ぶ理由が届いているかを見る必要があります。</p>
-<p>広告で来た人が、価格以外に何を見て選べばいいかを受け取れているか。そこが見えれば、広告費を増やすべきか、商品ページを直すべきかも判断しやすくなります。</p>
-</div><!-- /article-body -->
-<!-- 記事FAQ -->
-<div class="faq-section" id="article-faq">
-<div class="faq-label">よくある質問</div>
-<div class="faq-item">
-<div class="faq-q">楽天のRPP広告のROASが低い場合、まず何を見ればいいですか？</div>
-<div class="faq-a">広告の入札設定だけを見る前に、商品ページで選ぶ理由が届いているかを確認します。クリック単価だけを見るのではなく、広告から来た人のうち何人が購入に進んでいるかを見る必要があります。商品ページで選ぶ理由が届いていなければ、広告費を増やしても利益は残りにくくなります。</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">広告費を使わずに楽天で売上を上げることはできますか？</div>
-<div class="faq-a">広告をすぐに止める必要はありません。まず、広告から来た人が商品ページで選ぶ理由を受け取れているかを確認します。商品ページで購入に進む人が増えれば、同じ広告費でも売上と利益の残り方が変わります。広告に頼りきらない状態に近づくには、まず商品ページで選ぶ理由が届いているかを見る必要があります。</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">ポイント倍率を上げると転換率は上がりますが、これは先に見るべき改善ですか？</div>
-<div class="faq-a">ポイント倍率で購入の後押しができる場面はあります。ただ、ポイントを戻した瞬間に転換率も戻るなら、商品ページで選ぶ理由が届いていない可能性があります。値引きやポイントの前に、価格以外に何を見て選べばいいかがページ内で届いているかを確認する必要があります。</div>
-</div>
-</div><!-- /記事FAQ -->
-<!-- FAQ：推進型 -->
-<div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div><div class="faq-item"><div class="faq-q">この記事の内容が、自社の商品ページにも当てはまるか確認できますか？</div><div class="faq-a">確認できます。まず現在の商品ページの改善余地と、優先して見直す箇所を知りたい場合は、楽天サービスページで「無料診断レポート」を選択してください。</div></div><div class="faq-item"><div class="faq-q">無料診断レポートでは、何を確認しますか？</div><div class="faq-a">現在の伝え方、価格やレビューに戻って比較されていないか、最初に見直すべき画像・説明・証拠を確認します。数値をご共有いただける場合は、改善後の見込みも試算します。</div></div><div class="faq-item"><div class="faq-q">改善する商品が決まっていて、制作まで依頼したい場合はどうすればいいですか？</div><div class="faq-a">楽天サービスページで「制作について相談」を選択してください。制作範囲、必要素材、費用、制作期間、着手時期、進め方を確認できます。</div></div></div><!-- /faq -->
-<!-- bottom CTA -->
-<div class="cta-block" style="margin:0;">
-<div class="cta-block-label">無料診断レポート</div>
-<div class="cta-block-title">まず、商品ページで選ぶ理由が届いているかを見る。</div>
-<div class="cta-block-sub">まず現在の商品ページの改善余地と、優先して見直す箇所を確認したい場合は、サービスページで「無料診断レポート」を選択してください。</div>
-<a class="cta-btn" href="https://konishi-marketing.com/rakuten/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=rakuten_free_diagnosis&amp;utm_content=rakuten-kokokuhi-fuyashite-mo-rieki-nokoranai_bottom#contact">無料診断レポートを受け取る</a>
-<div class="cta-note">※完成コピー・掲載順・レイアウト・デザインは制作依頼後に作成します。</div>
-</div>
-<!-- author profile -->
-<div class="author-profile">
-<div class="author-profile-label">この記事を書いた人</div>
-<div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
-<div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
-<img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/>
-</div>
-<div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
-</div>
-<div class="author-profile-body">楽天SOY（ショップ・オブ・ザ・イヤー）受賞企業 元店長。楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの改善からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
-</div>
-<!-- related -->
-<div class="related-section">
-<div class="related-label">関連記事</div>
-<ul class="related-list">
-<li><a href="https://konishi-marketing.com/articles/rakuten-rpp-keyword-tenkanritsu-sagaru.html">楽天でRPP広告のキーワードを増やすと転換率が下がる理由</a></li>
-<li><a href="https://konishi-marketing.com/articles/ec-roas-kaizen-shinai-genin.html">ECで広告ROASが改善しない理由</a></li>
-<li><a href="https://konishi-marketing.com/articles/rakuten-supersale-urete-mo-fudan-urenai-mondai.html">楽天スーパーSALEでは売れるのに普段売れない理由</a></li>
-</ul>
-</div>
-<!-- footer -->
-<footer class="site-footer">
-<a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
-</footer>
-</div><!-- /site-wrap -->
-</body>
-</html>
+<h2>広告費を増やす判断を、売上目標だけで決めない</h2>
+<p>広告はアクセスを増やす手段です。利益を増やすには、<strong>追加アクセスが購入へ変わり、その注文から広告費を引いても利益が残ること</strong>まで確認する必要があります。</p>
+<div class="callout"><strong>参考・一次情報：</strong><br/>
+<a href="https://www.rakuten.co.jp/ec/start/rakutenichiba_urikata/">楽天市場｜楽天市場での売り方は？</a><br/>
+<a href="https://www.rakuten.co.jp/ec/start/rakutenichiba_shikumi/">楽天市場の仕組みを徹底解説</a></div>
+</div><div class="faq-section" id="article-faq"><div class="faq-label">よくある質問</div><div class="faq-item"><div class="faq-q">楽天で広告費を増やす前に最初に見る数字は何ですか？</div><div class="faq-a">商品別の1注文あたり広告前利益と許容CPOです。広告売上やROASだけでなく、1注文増えたときに何円残るかを確認します。</div></div><div class="faq-item"><div class="faq-q">ROASが高ければ広告は黒字ですか？</div><div class="faq-a">一律ではありません。原価、送料、ポイント、クーポン、モール費用などで利益構造が違うため、ROASと利益を分けて見ます。</div></div><div class="faq-item"><div class="faq-q">CVRが低い商品でも広告を増やせば売上は増えますか？</div><div class="faq-a">アクセスは増やせますが、購入判断が止まっていれば広告費だけ増える可能性があります。商品別CVRを先に確認します。</div></div></div><div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div><div class="faq-item"><div class="faq-q">自社では、どこから確認すべきですか？</div><div class="faq-a">アクセス・CVR・商品別売上と現在のページ・販促条件を並べると、最初に直す場所を絞れます。 <a href="https://konishi-marketing.com/rakuten/">支援内容はこちらです。</a></div></div><div class="faq-item"><div class="faq-q">相談や見積もり作成に費用はかかりますか？</div><div class="faq-a">費用はかかりません。サービスページから相談できます。</div></div></div><div class="cta-block"><div class="cta-block-label">楽天市場の商品ページ改善</div><div class="cta-block-title">広告を増やす前に、1注文で残る利益を決める。</div><div class="cta-block-sub">ROAS・CVR・許容CPO・販促負担を分け、広告増額の採算を判断します。</div><a class="cta-btn" href="https://konishi-marketing.com/rakuten/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=rakuten-kokokuhi-fuyashite-mo-rieki-nokoranai&amp;utm_content=bottom_cta">楽天商品ページ支援を見る</a><div class="cta-note">相談・見積もり作成に費用はかかりません。</div></div><div class="author-profile"><div class="author-profile-label">この記事を書いた人</div><div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;"><div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;"><img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/></div><div class="author-profile-name" style="margin-bottom:0;">小西秀人｜小西マーケティング</div></div><div class="author-proof-grid"><div class="author-proof-item"><span class="author-proof-label">楽天最大CVR</span><strong class="author-proof-value">62%</strong><span class="author-proof-note">月間最高66%</span></div><div class="author-proof-item"><span class="author-proof-label">楽天総合1位</span><strong class="author-proof-value">総合1位</strong><span class="author-proof-note">Yahoo!ショッピング総合1位も獲得</span></div><div class="author-proof-item"><span class="author-proof-label">年間ランキング</span><strong class="author-proof-value">11回</strong><span class="author-proof-note">担当商品の入賞実績</span></div><div class="author-proof-item"><span class="author-proof-label">カテゴリ1位</span><strong class="author-proof-value">1,000回超</strong><span class="author-proof-note">楽天市場での累計獲得実績</span></div></div><div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年以上のEC実務経験をもとに、商品ページ、広告、販促、CVR改善を一体で設計している。</div></div><div class="related-section"><div class="related-label">関連記事</div><ul class="related-list"><li><a href="https://konishi-marketing.com/articles/rakuten-kokokuhi-keru-demo-riekioritsu-modoranai.html">楽天で広告費を削っても利益率が戻らない理由</a></li><li><a href="https://konishi-marketing.com/articles/rakuten-riekioritsu-mokuhyo-settei-mae-miru-basho.html">楽天で利益率の目標を設定する前に見ること</a></li><li><a href="https://konishi-marketing.com/articles/rakuten-riekioritsu-kokokuhi-sakugen-kara-hajimete-ha-ikenai.html">楽天の利益率改善は何から始める？</a></li></ul></div><footer class="site-footer"><a href="https://konishi-marketing.com">https://konishi-marketing.com</a></footer></div></body></html>

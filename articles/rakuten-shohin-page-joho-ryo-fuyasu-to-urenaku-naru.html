@@ -1,403 +1,183 @@
 <!DOCTYPE html>
 
-<html lang="ja">
-<head>
-<link rel="icon" href="https://konishi-marketing.com/images/favicon.ico" sizes="any"/>
-<meta charset="utf-8"/>
-<meta content="only light" name="color-scheme"/>
-<link href="https://konishi-marketing.com/articles/rakuten-shohin-page-joho-ryo-fuyasu-to-urenaku-naru.html" rel="canonical"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>楽天商品ページに情報を足しても転換率が上がらない理由｜小西マーケティング</title>
-<meta content="商品ページに素材説明、FAQ、バナーを足した。それでも転換率は動かない。情報を増やす前に、商品ページ前半で選ぶ理由が届いているかを見る必要があります。" name="description"/>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
-<script>
-window.dataLayer=window.dataLayer||[];
-function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-gtag('config','G-SWS3R3K4W5');
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<style>
-:root {
-  --navy: #1a2744;
-  --navy-light: #243461;
-  --gold: #c9a84c;
-  --gold-light: #e8d5a3;
-  --white: #ffffff;
-  --off-white: #f8f7f4;
-  --gray-100: #f1f0ed;
-  --gray-200: #e4e2dc;
-  --gray-400: #a09e97;
-  --gray-600: #6b6860;
-  --gray-800: #3a3834;
-  --text: #1e1d1a;
-  --sans: 'Noto Sans JP', sans-serif;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; }
-body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
-.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
-.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
-.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
-.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
-.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
-.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
-.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
-.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
-.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
-.author-box strong { color: var(--navy); }
-.article-body { padding: 2.5rem 2.5rem; background: var(--white); }
-.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
-.article-body h2:first-child { margin-top: 0; }
-.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
-.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
-.article-body p:last-child { margin-bottom: 0; }
-.article-body strong { color: var(--navy); }
-.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
-.insight em { font-style: normal; color: var(--gold-light); }
-.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
-.callout strong { color: var(--navy); }
-.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
-.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
-.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
-.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
-.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
-.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
-.prob-list { list-style: none; margin: 1rem 0; }
-.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; background: #fff; }
-.prob-list li:last-child { border-bottom: none; }
-.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
-.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
-.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
-.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
-.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
-.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
-.cta-btn:hover { opacity: .88; }
-.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
-.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
-.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
-.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
-.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
-.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
-.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
-.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
-.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
-.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
-.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
-.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
-.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
-.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
-.related-list { list-style: none; }
-.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
-.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
-.related-list li:last-child { border-bottom: none; }
-.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
-.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
-.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
-#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
-#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
-#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
-#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
-.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
-.nextstep-faq .faq-label { color: var(--gold-light); }
-.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
-.nextstep-faq .faq-item:last-child { border-bottom: none; }
-.nextstep-faq .faq-q { color: var(--white); }
-.nextstep-faq .faq-q::before { color: var(--gold-light); }
-.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
-.nextstep-faq .faq-a::before { color: var(--gold-light); }
-:root { color-scheme: only light; }
-html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
-@media (max-width: 640px) {
-  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
-  .hero { padding-top: 2rem; }
-  .cta-block { padding: 1.75rem 1.25rem; }
-  .misrec-row { grid-template-columns: 1fr; }
-  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
-  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
-}
-
-/* rakuten-service-route-v1 */
-.service-route { margin-top: 1.15rem; padding-top: 1rem; border-top: 1px solid rgba(201,168,76,.32); font-size: .9rem; line-height: 1.8; color: rgba(255,255,255,.68); }
-.service-route a { color: var(--gold-light); font-weight: 700; text-underline-offset: .2em; }
-.service-route a:hover { color: var(--white); }
-@media (max-width: 640px) { .service-route { font-size: .86rem; } }
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><link href="https://konishi-marketing.com/articles/rakuten-shohin-page-joho-ryo-fuyasu-to-urenaku-naru.html" rel="canonical"/><title>楽天商品ページは情報量より順番｜情報を足しても転換率が上がらない6つの原因｜小西マーケティング</title><meta content="楽天商品ページに情報を足しても転換率が上がらない理由を、イベントバナー・素材説明・レビュー・FAQ・情報順序の6項目から解説します。" name="description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "楽天商品ページは情報量より順番｜情報を足しても転換率が上がらない6つの原因", "description": "楽天商品ページに情報を足しても転換率が上がらない理由を、イベントバナー・素材説明・レビュー・FAQ・情報順序の6項目から解説します。", "url": "https://konishi-marketing.com/articles/rakuten-shohin-page-joho-ryo-fuyasu-to-urenaku-naru.html", "dateModified": "2026-08-18", "author": {"@type": "Person", "name": "小西秀人", "url": "https://konishi-marketing.com"}, "publisher": {"@type": "Organization", "name": "小西マーケティング", "url": "https://konishi-marketing.com"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "楽天の商品ページは短い方が転換率が上がりますか？", "acceptedAnswer": {"@type": "Answer", "text": "一律ではありません。長さではなく、情報が既存の判断軸へ迷わず格納されるか、前半で選ぶ理由が成立しているかを確認します。"}}, {"@type": "Question", "name": "イベントバナーは削るべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "必要な場合は残します。ただし商品価値より先に大量に置かず、販促条件として位置づけます。"}}, {"@type": "Question", "name": "FAQやレビューを増やせば転換率は上がりますか？", "acceptedAnswer": {"@type": "Answer", "text": "一律ではありません。FAQは不足説明の代替にせず、レビューは主要価値を裏付ける証拠として使います。"}}]}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SWS3R3K4W5');</script><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/><style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
 </style>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "楽天の商品ページに情報を足したのに、なぜ転換率が上がらないのですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "情報を増やすことが必要な場面はあります。ただ、読者が「これでよさそうだ」と思う前に情報が増えると、読む量だけが増え、購入が先送りされることがあります。情報を足す前に、商品ページ前半で選ぶ理由が届いているかを見る必要があります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "どの情報を残して、どの情報を削ればいいですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "基準は情報量ではなく、読者が購入に進むために必要かどうかです。読者が「自分にはこの商品が合いそうだ」と思うために必要な情報は残し、それ以外の情報は位置を下げるか削る候補になります。単純に削るのではなく、商品ページ前半で選ぶ理由が届く順番になっているかを確認します。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "情報量が多い楽天ページでも売れている店舗があるのはなぜですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "売れているページが長いのは、長いから売れているのではありません。前半で「これでよさそうだ」と思える理由が届いた後に、詳しい情報が安心材料として続いているからです。選ぶ理由が届く前に情報だけが増えると、読者は読み進めにくくなります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "この記事の内容が、自社の商品ページにも当てはまるか確認できますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "確認できます。まず現在の商品ページの改善余地と、優先して見直す箇所を知りたい場合は、楽天サービスページで「無料診断レポート」を選択してください。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "無料診断レポートでは、何を確認しますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "現在の伝え方、価格やレビューに戻って比較されていないか、最初に見直すべき画像・説明・証拠を確認します。数値をご共有いただける場合は、改善後の見込みも試算します。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "改善する商品が決まっていて、制作まで依頼したい場合はどうすればいいですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "楽天サービスページで「制作について相談」を選択してください。制作範囲、必要素材、費用、制作期間、着手時期、進め方を確認できます。"
-      }
-    }
-  ]
-}</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "楽天商品ページに情報を足しても転換率が上がらない理由",
-  "description": "商品ページに素材説明、FAQ、バナーを足した。それでも転換率は動かない。情報を増やす前に、商品ページ前半で選ぶ理由が届いているかを見る必要があります。",
-  "image": "https://konishi-marketing.com/images/konishi.JPG",
-  "url": "https://konishi-marketing.com/articles/rakuten-shohin-page-joho-ryo-fuyasu-to-urenaku-naru.html",
-  "datePublished": "2026-04-21",
-  "dateModified": "2026-05-05",
-  "author": {
-    "@type": "Person",
-    "name": "小西 秀人",
-    "url": "https://konishi-marketing.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "小西マーケティング",
-    "url": "https://konishi-marketing.com"
-  }
+<style id="makuake-author-profile-standard-v1">
+/* Makuake article author profile standardization 2026-08-07 */
+.author-proof-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  margin:1rem 0 1.25rem;
+  border:1px solid var(--gray-200);
+  background:var(--gray-200);
 }
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "ホーム",
-      "item": "https://konishi-marketing.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "オウンドメディア",
-      "item": "https://konishi-marketing.com/articles/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "楽天市場",
-      "item": "https://konishi-marketing.com/articles/rakuten.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "楽天商品ページに情報を足しても転換率が上がらない理由",
-      "item": "https://konishi-marketing.com/articles/rakuten-shohin-page-joho-ryo-fuyasu-to-urenaku-naru.html"
-    }
-  ]
+.author-proof-item{
+  min-width:0;
+  padding:1rem 1.1rem;
+  background:var(--white);
 }
-</script>
-</head>
-<body>
-<div class="site-wrap">
-<header class="site-header">
-<a href="https://konishi-marketing.com/">小西マーケティング</a>
-</header>
-<nav aria-label="パンくず" style="font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto;"><a href="https://konishi-marketing.com/" style="color:#6b6860;text-decoration:none;">ホーム</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">オウンドメディア</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/rakuten.html" style="color:#6b6860;text-decoration:none;">楽天市場</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><span aria-current="page" style="color:#3a3834;">楽天商品ページに情報を足しても転換率が上がらない理由</span></nav>
-<div class="hero">
-<span class="hero-category">楽天商品ページ改善 / 情報整理</span>
-<h1 class="hero-title">楽天商品ページに情報を足しても転換率が上がらない理由</h1>
-<p class="hero-lead">情報が足りないと思い、素材説明を足した。FAQも増やした。イベントバナーも追加した。けれどヒートマップを見ると、追加した箇所は読まれていない——情報が足りないのではなく、選ぶ理由が届く前に情報が増えている可能性があります。EC100店舗超の停滞を見てきた経験から解説します。</p>
-<p class="hero-meta">小西マーケティング｜2026.04</p>
-</div>
-<div class="author-box">この記事は、楽天SOY（ショップ・オブ・ザ・イヤー）受賞企業の元店長で、楽天総合ランキング1位を2回・年間ランキング11回・ランキング1位通算1,000回以上を経験したECコンサルタント・小西秀人が、20年間のEC実務経験をもとに執筆しています。</div>
-<div class="article-body">
-<h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">足したのに読まれない</h2>
-<p>競合に負けないように、スペックの説明を追加する。素材へのこだわりを入れる。FAQを増やす。楽天イベントのたびにバナーも足す。</p>
-<p>気づけば、スマホで何度スクロールしても終わらない商品ページになっている。</p>
-<p>それでも転換率は上がらない。</p>
-<p>ヒートマップを見ると、追加した「こだわりの素材説明」はほとんど読まれていない。店長からのメッセージも通過されている。商品を選んでほしい理由は、イベントバナーや追加情報の下に埋もれている。</p>
-<div class="insight">
-    情報を増やすことが悪いわけではありません。<br/>
-<em>ただ、読者が「これでよさそうだ」と思う前に情報が増えると、読む量だけが増え、購入が先送りされることがあります。</em>
-</div>
-<p>読者が商品ページでしているのは、情報収集だけではありません。</p>
-<p>「この商品を選ぶかどうか」を判断しています。その判断に必要な情報と、そうでない情報が混ざっていると、必要な情報が届く前に読者は離脱しやすくなります。</p>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">増やしても届かない</h2>
-<p>転換率が上がらないとき、「商品の良さがまだ伝わっていない」と考えやすくなります。</p>
-<p>素材の説明を増やす。受賞歴を足す。FAQを充実させる。レビューを追加する。</p>
-<p>対策は増えます。ただ、転換率は動かないことがあります。</p>
-<div class="misrec-block">
-<div class="misrec-header">情報量を見る前に確認すること</div>
-<div class="misrec-row">
-<div class="misrec-cell label">よくある見方</div>
-<div class="misrec-cell truth">商品の魅力がまだ十分に伝わっていない。情報を追加すれば読者に伝わり、購入に進みやすくなる</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">残っていること</div>
-<div class="misrec-cell truth">商品ページ前半で選ぶ理由が届く前に、処理しきれない量の情報が増えている。情報量が増えるほど、購入が先送りされやすくなる</div>
-</div>
-</div>
-<p>読者が「この商品でよさそうだ」と思えていない状態で情報が10個届いても、判断する材料が10個増えるだけです。</p>
-<p>その結果、「もう少し調べてから決めよう」という先送りが起きます。</p>
-<div class="callout">
-<strong>情報を増やす改善について。</strong><br/>
-    楽天では、商品ページの情報量を増やす改善が提案される場面があります。これは必要な場合があります。ただ、情報を増やすことと、読者が選ぶ理由を受け取れることは別です。
-  </div>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">長さを真似ても止まる</h2>
-<p>ランキング上位の競合ページを開くと、たしかに長くて情報量が多い。</p>
-<p>だから、自社ページも同じように情報を増やす。素材説明、開発背景、受賞歴、レビュー、FAQ。競合と同じくらいの長さに近づけていく。</p>
-<p>しかし、競合と同じ量の情報を入れても、転換率は競合のように動かないことがあります。</p>
-<div class="misrec-block">
-<div class="misrec-header">競合の長さを見る前に確認すること</div>
-<div class="misrec-row">
-<div class="misrec-cell label">よくある見方</div>
-<div class="misrec-cell truth">競合の長いページが売れているのは情報量が多いから。同じ量の情報を揃えれば同じように売れるはず</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">残っていること</div>
-<div class="misrec-cell truth">売れているページが長いのは、長いから売れているのではない。前半で「これでよさそうだ」と思える理由が届いた後に、詳しい情報が安心材料として続いている</div>
-</div>
-</div>
-<p>前半で選ぶ理由が届いているページでは、後半の詳しい情報が確認材料になります。</p>
-<p>反対に、その理由が届く前に情報だけが増えると、読者は前半から情報量の多さに直面します。同じ長さでも、読まれ方は変わります。</p>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">図解でも流れる</h2>
-<p>情報量が多すぎると感じたとき、次に行いやすいのが見せ方の整理です。</p>
-<p>箇条書きにする。アイコンを使う。図解にする。インフォグラフィックにする。</p>
-<p>ページは見やすくなります。ただ、それでも転換率が変わらないことがあります。</p>
-<div class="misrec-block">
-<div class="misrec-header">図解にする前に見ること</div>
-<div class="misrec-row">
-<div class="misrec-cell label">よくある見方</div>
-<div class="misrec-cell truth">情報が多くて見づらいから伝わっていない。箇条書きや図解にすれば、読者に伝わりやすくなる</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">残っていること</div>
-<div class="misrec-cell truth">読者がその情報を読む理由をまだ受け取っていない。見やすく整っていても、読む理由がなければ通過される</div>
-</div>
-</div>
-<p>図解やアイコンは、情報を受け取りやすくします。</p>
-<p>ただ、読者がその情報を読む理由をまだ受け取っていなければ、通過されます。見やすさの前に、読む理由が届いているかを見る必要があります。</p>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">止まる3つの型</h2>
-<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">削るのが怖くなっている</h3>
-<p>終了したイベントのバナーが残っている。数年前に作ったコンテンツが誰も触れないまま残っている。</p>
-<p>「削ったせいで売上が落ちたらどうしよう」と考えるのは自然です。</p>
-<p>ただ、要素が残り続けると、ページ全体として何が最も重要なのかが読者に伝わりにくくなります。</p>
-<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">イベントバナーが積み上がる</h3>
-<p>楽天スーパーSALE、お買い物マラソン、ポイント変倍キャンペーン。</p>
-<p>イベントのたびに告知バナーが上部に追加される。その結果、商品本来のファーストビューとコンセプトが下に埋もれていく。</p>
-<p>ページを開いた読者が最初に受け取るのがセール告知になると、読者は価格とポイントで判断しやすくなります。</p>
-<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid #c9a84c;background-color:#f1f0ed;font-size:1.05rem;line-height:1.45;color:#1a2744;">書いてあるのに聞かれる</h3>
-<p>「サイズ感はどうですか？」「いつ届きますか？」</p>
-<p>ページに明記している内容が、問い合わせとして届き続けることがあります。</p>
-<p>これは、情報が足りないというより、読者が必要な情報を見つけられていないサインです。情報量が増えるほど、必要な情報の場所が分かりにくくなることがあります。</p>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">読まれる情報、流れる情報</h2>
-<p>読まれない情報は、内容が悪いとは限りません。</p>
-<p>読者がその情報を読む理由を、前半で受け取れていないことがあります。選ぶ理由が届く前に情報が増えると、読者は「読むべき場所が多い」と感じます。</p>
-<p>読まれる情報は、読者が「これでよさそうだ」と思った後に届いています。その後に続く素材説明、FAQ、レビュー、製法説明は、安心材料として働きやすくなります。</p>
-<div class="insight">
-    情報量を増やすほど転換率が下がる理由は、情報の質だけではありません。<br/>
-<em>商品ページ前半で、読者が選ぶ理由を受け取れているかです。</em>
-</div>
-<p>以下の状態が続いているなら、情報を足す前に確認すべき場所があります。</p>
+.author-proof-label{
+  display:block;
+  margin-bottom:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  font-weight:700;
+  line-height:1.5;
+}
+.author-proof-value{
+  display:block;
+  color:var(--navy);
+  font-size:1.35rem;
+  font-weight:700;
+  line-height:1.35;
+  letter-spacing:-.025em;
+}
+.author-proof-note{
+  display:block;
+  margin-top:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  line-height:1.65;
+}
+@media(max-width:640px){
+  .author-proof-grid{grid-template-columns:1fr}
+  .author-proof-value{font-size:1.25rem}
+}
+</style>
+<style id="nextstep-faq-link-contrast-fix">
+.nextstep-faq .faq-a a{
+  color:var(--gold-light);
+  text-decoration:underline;
+  text-underline-offset:2px;
+  font-weight:700;
+}
+.nextstep-faq .faq-a a:visited{
+  color:var(--gold-light);
+}
+.nextstep-faq .faq-a a:hover{
+  color:var(--white);
+}
+</style>
+<style id="makuake-channel-map-v1">
+.channel-map{margin:2rem 0;border:1px solid var(--gray-200);background:var(--white)}
+.channel-map-title{padding:.75rem 1rem;background:var(--navy);color:var(--gold-light);font-size:.8rem;font-weight:700;letter-spacing:.06em}
+.channel-map-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.channel-map-table{width:100%;min-width:720px;border-collapse:collapse}
+.channel-map-table th,.channel-map-table td{padding:1rem;vertical-align:top;border-right:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);font-size:.88rem;line-height:1.8;text-align:left}
+.channel-map-table th{background:var(--gray-100);color:var(--navy);font-weight:700}
+.channel-map-table td{color:var(--gray-800)}
+.channel-map-table th:last-child,.channel-map-table td:last-child{border-right:none}
+.channel-map-table tr:last-child td{border-bottom:none}
+.channel-map-table td:first-child{width:24%;background:var(--off-white)}
+</style></head><body><div class="site-wrap"><header class="site-header"><a href="https://konishi-marketing.com/">小西マーケティング</a></header><nav aria-label="パンくず" style="font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto;"><a href="https://konishi-marketing.com/" style="color:#6b6860;text-decoration:none;">ホーム</a><span style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">オウンドメディア</a><span style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/rakuten.html" style="color:#6b6860;text-decoration:none;">楽天市場</a><span style="margin:0 .45rem;color:#a09e97;">›</span><span>楽天商品ページは情報量より順番｜情報を足しても転換率が上がらない6つの原因</span></nav><div class="hero"><span class="hero-category">楽天市場 / 商品ページ / 情報整理</span><h1 class="hero-title">楽天商品ページは情報量より順番｜情報を足しても転換率が上がらない6つの原因</h1><p class="hero-lead">楽天の商品ページは、情報量より順番です。<strong style="color:#fff;">選ぶ理由が届く前に情報を増やすと、判断材料だけが増える</strong>ことがあります。</p><p class="hero-meta">小西マーケティング｜2026.08</p></div><div class="author-box">この記事は、<strong>楽天最大CVR62%（月間最高66%）・楽天総合ランキング1位・年間ランキング入賞11回・カテゴリ1位1,000回超</strong>などのEC実務経験を持つ小西秀人が、楽天市場の商品ページ・CVR改善という観点から整理しています。</div><div class="article-body">
+<h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">この記事は「EC全体の情報過多」ではなく、楽天の商品ページで何を残し、どこへ置くかを扱う</h2>
+<p>楽天の商品ページでは、商品説明、イベントバナー、レビュー、ランキング実績、FAQなど、追加できる情報が多くあります。情報が多いこと自体が問題ではありません。</p>
+<div class="insight">問題は、<em>購入者がまだ必要としていない情報まで前半に置き、選ぶ理由が届く前に判断数を増やしていること</em>です。</div>
+<p><a href="https://konishi-marketing.com/articles/ec-shohin-page-joho-tareba-ureru-hassou-machigai.html">「ECの商品ページで情報を足せばより売れるという発想が間違っている理由」</a>はEC全体の原則記事です。この記事は、楽天の商品ページで実際に何を残し、何を下げるかを扱います。</p>
+<h2>1｜イベントバナーを商品価値より上に積み上げない</h2>
+<p>スーパーSALEやお買い物マラソンなどの訴求は重要ですが、商品を選ぶ理由より先に並べると、購入者は価格・ポイントから判断を始めます。</p>
+<h2>2｜素材・製法・開発背景は「なぜ読むか」を先に渡す</h2>
+<p>素材や製法の説明は、その情報が品質・耐久性・使い方など何の判断に使われるのかが分かって初めて意味を持ちます。説明だけを増やしません。</p>
+<h2>3｜ランキング・レビュー・受賞歴は証拠として置く</h2>
+<p>実績を先に大量に並べても、何を証明しているのか分からなければ判断は進みません。主要価値を示した後に、その価値を裏付ける証拠として配置します。</p>
+<h2>4｜FAQは前半で作れなかった理解の代わりにしない</h2>
+<p>FAQを増やす前に、価格、サイズ、配送、使用条件など重要な不安が本文で適切な位置にあるか確認します。</p>
+<h2>5｜削る基準は「長いか」ではなく「判断を増やすか」</h2>
+<p>長文でも、既に作った判断軸へ迷わず格納できる情報なら問題ありません。逆に短い説明でも、新しい分類や比較を増やすなら負荷になります。</p>
+<div class="callout"><strong>残す基準：</strong><br/>この情報は、どの購入判断を強めるのか。<br/>その判断は既にページ内で作られているか。<br/>新しい比較基準を無駄に増やしていないか。</div>
+<h2>6｜情報追加前に、前半3画面だけで主要判断が成立するか見る</h2>
+<p>スマホで最初の数画面を見て、何の商品か、誰向けか、価格に見合う理由が分かるか確認します。ここが曖昧なら、後半情報を増やす前に前半を直します。</p>
+<h2>楽天商品ページで情報を整理する順番</h2>
 <ul class="prob-list">
-<li data-num="✓">情報を追加するたびに転換率が改善されない、あるいは下がっている</li>
-<li data-num="✓">ヒートマップで追加したセクションが真っ青になって離脱・読み飛ばされている</li>
-<li data-num="✓">楽天イベントのバナーが積み重なり、商品の訴求がファーストビューから消えている</li>
-<li data-num="✓">ページに書いてある内容を顧客から問い合わせで聞かれ続けている</li>
+<li data-num="1">商品と主要価値を前半で成立させる</li>
+<li data-num="2">イベント情報は上乗せ条件へ戻す</li>
+<li data-num="3">素材・製法は判断先を示してから説明する</li>
+<li data-num="4">レビュー・実績を証拠として置く</li>
+<li data-num="5">FAQを不足説明の代替にしない</li>
+<li data-num="6">追加前に前半3画面を検証する</li>
 </ul>
-<div class="cta-block">
-<div class="cta-block-label">無料診断レポート</div>
-<div class="cta-block-title">情報を足す前に、商品ページ前半で選ぶ理由が届いているかを見る。</div>
-<div class="cta-block-sub">まず現在の商品ページの改善余地と、優先して見直す箇所を確認したい場合は、サービスページで「無料診断レポート」を選択してください。</div>
-<a class="cta-btn" href="https://konishi-marketing.com/rakuten/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=rakuten_free_diagnosis&amp;utm_content=rakuten-shohin-page-joho-ryo-fuyasu-to-urenaku-naru_mid#contact">無料診断レポートを受け取る</a>
-<div class="cta-note">※完成コピー・掲載順・レイアウト・デザインは制作依頼後に作成します。</div>
-</div>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">まず、前半を見る</h2>
-<p>商品ページに詳しい情報を載せること、FAQを整えること、イベント告知を出すこと。どれも必要な場面があります。</p>
-<p>ただ、情報を足しても転換率が動かないなら、情報量を増やす前に見るべき場所があります。</p>
-<p>商品ページ前半で、読者が「これでよさそうだ」と思える理由を受け取れているか。そこが見えれば、何を残し、何を下げ、何を削るべきかも判断しやすくなります。</p>
-</div><!-- /article-body -->
-<div class="faq-section" id="article-faq">
-<div class="faq-label">よくある質問</div>
-<div class="faq-item">
-<div class="faq-q">楽天の商品ページに情報を足したのに、なぜ転換率が上がらないのですか？</div>
-<div class="faq-a">情報を増やすことが必要な場面はあります。ただ、読者が「これでよさそうだ」と思う前に情報が増えると、読む量だけが増え、購入が先送りされることがあります。情報を足す前に、商品ページ前半で選ぶ理由が届いているかを見る必要があります。</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">どの情報を残して、どの情報を削ればいいですか？</div>
-<div class="faq-a">基準は情報量ではなく、読者が購入に進むために必要かどうかです。読者が「自分にはこの商品が合いそうだ」と思うために必要な情報は残し、それ以外の情報は位置を下げるか削る候補になります。単純に削るのではなく、商品ページ前半で選ぶ理由が届く順番になっているかを確認します。</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">情報量が多い楽天ページでも売れている店舗があるのはなぜですか？</div>
-<div class="faq-a">売れているページが長いのは、長いから売れているのではありません。前半で「これでよさそうだ」と思える理由が届いた後に、詳しい情報が安心材料として続いているからです。選ぶ理由が届く前に情報だけが増えると、読者は読み進めにくくなります。</div>
-</div>
-</div><!-- /記事FAQ -->
-<div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div><div class="faq-item"><div class="faq-q">この記事の内容が、自社の商品ページにも当てはまるか確認できますか？</div><div class="faq-a">確認できます。まず現在の商品ページの改善余地と、優先して見直す箇所を知りたい場合は、楽天サービスページで「無料診断レポート」を選択してください。</div></div><div class="faq-item"><div class="faq-q">無料診断レポートでは、何を確認しますか？</div><div class="faq-a">現在の伝え方、価格やレビューに戻って比較されていないか、最初に見直すべき画像・説明・証拠を確認します。数値をご共有いただける場合は、改善後の見込みも試算します。</div></div><div class="faq-item"><div class="faq-q">改善する商品が決まっていて、制作まで依頼したい場合はどうすればいいですか？</div><div class="faq-a">楽天サービスページで「制作について相談」を選択してください。制作範囲、必要素材、費用、制作期間、着手時期、進め方を確認できます。</div></div></div><!-- /faq -->
-<div class="cta-block" style="margin:0;">
-<div class="cta-block-label">無料診断レポート</div>
-<div class="cta-block-title">まず、商品ページ前半で選ぶ理由が届いているかを見る。</div>
-<div class="cta-block-sub">まず現在の商品ページの改善余地と、優先して見直す箇所を確認したい場合は、サービスページで「無料診断レポート」を選択してください。</div>
-<a class="cta-btn" href="https://konishi-marketing.com/rakuten/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=rakuten_free_diagnosis&amp;utm_content=rakuten-shohin-page-joho-ryo-fuyasu-to-urenaku-naru_bottom#contact">無料診断レポートを受け取る</a>
-<div class="cta-note">※完成コピー・掲載順・レイアウト・デザインは制作依頼後に作成します。</div>
-</div>
-<div class="author-profile">
-<div class="author-profile-label">この記事を書いた人</div>
-<div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
-<div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
-<img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/>
-</div>
-<div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
-</div>
-<div class="author-profile-body">楽天SOY（ショップ・オブ・ザ・イヤー）受賞企業 元店長。楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年間のEC実務経験をもとに、商品ページの改善からCVRを改善する「小西式CVR設計」を展開。楽天総合ランキング1位2回・年間ランキング入賞11回・ランキング1位通算1,000回以上、Yahoo!ショッピング総合ランキング1位、Makuake総合ランキング1位3回・ROAS2,000%以上を複数回達成、自社ECではCPO3,000円以下を安定達成。</div>
-</div>
-<div class="related-section">
-<div class="related-label">関連記事</div>
-<ul class="related-list">
-<li><a href="https://konishi-marketing.com/articles/ec-shohin-page-joho-tareba-ureru-hassou-machigai.html">ECの商品ページで「情報を足せば売れる」とは限らない理由</a></li>
-<li><a href="https://konishi-marketing.com/articles/rakuten-setsumeibun-ridatsu-tomaranai.html">楽天で商品説明を丁寧に書いても離脱が止まらない理由</a></li>
-<li><a href="https://konishi-marketing.com/articles/rakuten-shohin-page-design-yori-sekkei-ga-saki.html">楽天の商品ページはデザインより伝える順番が先である理由</a></li>
-</ul>
-</div>
-<footer class="site-footer">
-<a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
-</footer>
-</div><!-- /site-wrap -->
-</body>
-</html>
+<h2>情報量を減らすのではなく、判断の順番を整える</h2>
+<p>楽天の商品ページは長くても構いません。重要なのは、<strong>選ぶ理由が先に届き、その後の情報が確認材料として迷わず格納されること</strong>です。</p>
+<div class="callout"><strong>参考・一次情報：</strong><br/>
+<a href="https://www.rakuten.co.jp/ec/environment/service/analysis/">楽天市場｜R-Karteで売上データを分析する</a><br/>
+<a href="https://www.rakuten.co.jp/ec/start/rakutenichiba_shikumi/">楽天市場の仕組みを徹底解説</a></div>
+</div><div class="faq-section" id="article-faq"><div class="faq-label">よくある質問</div><div class="faq-item"><div class="faq-q">楽天の商品ページは短い方が転換率が上がりますか？</div><div class="faq-a">一律ではありません。長さではなく、情報が既存の判断軸へ迷わず格納されるか、前半で選ぶ理由が成立しているかを確認します。</div></div><div class="faq-item"><div class="faq-q">イベントバナーは削るべきですか？</div><div class="faq-a">必要な場合は残します。ただし商品価値より先に大量に置かず、販促条件として位置づけます。</div></div><div class="faq-item"><div class="faq-q">FAQやレビューを増やせば転換率は上がりますか？</div><div class="faq-a">一律ではありません。FAQは不足説明の代替にせず、レビューは主要価値を裏付ける証拠として使います。</div></div></div><div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div><div class="faq-item"><div class="faq-q">自社では、どこから確認すべきですか？</div><div class="faq-a">アクセス・CVR・商品別売上と現在のページ・販促条件を並べると、最初に直す場所を絞れます。 <a href="https://konishi-marketing.com/rakuten/">支援内容はこちらです。</a></div></div><div class="faq-item"><div class="faq-q">相談や見積もり作成に費用はかかりますか？</div><div class="faq-a">費用はかかりません。サービスページから相談できます。</div></div></div><div class="cta-block"><div class="cta-block-label">楽天市場の商品ページ改善</div><div class="cta-block-title">情報を減らす前に、判断の順番を整える。</div><div class="cta-block-sub">前半で選ぶ理由を成立させ、その後の情報を証拠・確認材料として配置します。</div><a class="cta-btn" href="https://konishi-marketing.com/rakuten/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=rakuten-shohin-page-joho-ryo-fuyasu-to-urenaku-naru&amp;utm_content=bottom_cta">楽天商品ページ支援を見る</a><div class="cta-note">相談・見積もり作成に費用はかかりません。</div></div><div class="author-profile"><div class="author-profile-label">この記事を書いた人</div><div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;"><div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;"><img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/></div><div class="author-profile-name" style="margin-bottom:0;">小西秀人｜小西マーケティング</div></div><div class="author-proof-grid"><div class="author-proof-item"><span class="author-proof-label">楽天最大CVR</span><strong class="author-proof-value">62%</strong><span class="author-proof-note">月間最高66%</span></div><div class="author-proof-item"><span class="author-proof-label">楽天総合1位</span><strong class="author-proof-value">総合1位</strong><span class="author-proof-note">Yahoo!ショッピング総合1位も獲得</span></div><div class="author-proof-item"><span class="author-proof-label">年間ランキング</span><strong class="author-proof-value">11回</strong><span class="author-proof-note">担当商品の入賞実績</span></div><div class="author-proof-item"><span class="author-proof-label">カテゴリ1位</span><strong class="author-proof-value">1,000回超</strong><span class="author-proof-note">楽天市場での累計獲得実績</span></div></div><div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年以上のEC実務経験をもとに、商品ページ、広告、販促、CVR改善を一体で設計している。</div></div><div class="related-section"><div class="related-label">関連記事</div><ul class="related-list"><li><a href="https://konishi-marketing.com/articles/ec-shohin-page-joho-tareba-ureru-hassou-machigai.html">ECの商品ページで情報を足せばより売れるという発想が間違っている理由</a></li><li><a href="https://konishi-marketing.com/articles/rakuten-shohin-setsumei-teinei-demo-ridatsu.html">楽天で商品説明を丁寧に書いても離脱が止まらない理由</a></li><li><a href="https://konishi-marketing.com/articles/rakuten-firstview-sekkei-gensoku.html">楽天商品ページのファーストビューで何を見せる？</a></li></ul></div><footer class="site-footer"><a href="https://konishi-marketing.com">https://konishi-marketing.com</a></footer></div></body></html>

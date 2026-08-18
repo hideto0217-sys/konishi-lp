@@ -1,524 +1,96 @@
 <!DOCTYPE html>
 
-<html lang="ja">
-<head>
-<link rel="icon" href="https://konishi-marketing.com/images/favicon.ico" sizes="any"/>
-<meta charset="utf-8"/>
-<meta content="only light" name="color-scheme"/>
-<link href="https://konishi-marketing.com/articles/makuake-mokuhyo-kingaku-tasseideki-nai.html" rel="canonical"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Makuakeで公開後に伸びないプロジェクトが公開前に見る場所｜小西マーケティング</title>
-<meta content="ページも作った。事前告知もした。広告も出した。それでも目標金額に届かない。公開後にページ本体を自由に直しにくいMakuakeだからこそ、公開前に申し込む理由が届いているかを見る必要があります。" name="description"/>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
-<script>
-window.dataLayer=window.dataLayer||[];
-function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-gtag('config','G-SWS3R3K4W5');
-</script>
+<html lang="ja"><head>
+<link href="https://konishi-marketing.com/images/favicon.ico" rel="icon" sizes="any"/>
+<meta charset="utf-8"/><meta content="only light" name="color-scheme"/>
+<link href="https://konishi-marketing.com/articles/makuake-mokuhyo-kingaku-tasseideki-nai.html" rel="canonical"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Makuakeで目標金額に届かない原因｜公開初日に失速しないための6つの事前設計｜小西マーケティング</title><meta content="Makuakeで目標金額に届かない原因を、公開初日に失速しないための事前設計として、初日に動く人・事前告知・リターン・今買う理由・変更しにくい条件・初日KPIの6項目で解説します。" name="description"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Makuakeで目標金額に届かないとき、公開前に何を確認すべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "初日に動く人、事前告知とページ冒頭の一致、主要リターン、今応援購入する理由、初日アクセスと申込率を分けて確認します。"}}, {"@type": "Question", "name": "公開後にリターン内容は変更できますか？", "acceptedAnswer": {"@type": "Answer", "text": "Makuakeヘルプでは、原則として一度公開したリターン内容の変更・取消はできないと案内されています。必要時は担当キュレーターへの相談が必要です。"}}, {"@type": "Question", "name": "初日の目標は応援購入額だけで良いですか？", "acceptedAnswer": {"@type": "Answer", "text": "応援購入額だけでなく、事前登録者数、アクセス、申込率、平均応援購入単価を分けると原因を特定しやすくなります。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Makuakeで目標金額に届かない原因｜公開初日に失速しないための6つの事前設計", "description": "Makuakeで目標金額に届かない原因を、公開初日に失速しないための事前設計として、初日に動く人・事前告知・リターン・今買う理由・変更しにくい条件・初日KPIの6項目で解説します。", "image": "https://konishi-marketing.com/images/konishi.JPG", "url": "https://konishi-marketing.com/articles/makuake-mokuhyo-kingaku-tasseideki-nai.html", "dateModified": "2026-08-18", "author": {"@type": "Person", "name": "小西秀人", "url": "https://konishi-marketing.com"}, "publisher": {"@type": "Organization", "name": "小西マーケティング", "url": "https://konishi-marketing.com"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://konishi-marketing.com/"}, {"@type": "ListItem", "position": 2, "name": "オウンドメディア", "item": "https://konishi-marketing.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "Makuake", "item": "https://konishi-marketing.com/articles/makuake.html"}, {"@type": "ListItem", "position": 4, "name": "Makuake後の一般販売は初月に何を見る？売上が続くかを判断する4つの指標", "item": "https://konishi-marketing.com/articles/makuake-go-ippan-hanbai-shogetsu.html"}]}</script>
+<!-- Google tag (gtag.js) --><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SWS3R3K4W5');</script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <style>
-:root {
-  --navy: #1a2744;
-  --navy-light: #243461;
-  --gold: #c9a84c;
-  --gold-light: #e8d5a3;
-  --white: #ffffff;
-  --off-white: #f8f7f4;
-  --gray-100: #f1f0ed;
-  --gray-200: #e4e2dc;
-  --gray-400: #a09e97;
-  --gray-600: #6b6860;
-  --gray-800: #3a3834;
-  --text: #1e1d1a;
-  --red: #b71c1c;
-  --sans: 'Noto Sans JP', sans-serif;
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { font-size: 16px; }
-
-body {
-  font-family: var(--sans);
-  font-size: 1rem;
-  color: var(--text);
-  background: var(--off-white);
-  line-height: 1.9;
-  -webkit-font-smoothing: antialiased;
-}
-
-.site-wrap {
-  max-width: 860px;
-  margin: 0 auto;
-  background: var(--white);
-}
-
-.site-header {
-  background: var(--navy);
-  padding: 1rem 2rem;
-  border-bottom: 2px solid var(--gold);
-}
-.site-header a {
-  color: var(--gold-light);
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-}
-
-.hero {
-  background: var(--navy);
-  padding: 3rem 2.5rem 2.5rem;
-  border-bottom: 3px solid var(--gold);
-}
-.hero-category {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: .2em;
-  color: var(--gold-light);
-  text-transform: uppercase;
-  margin-bottom: .75rem;
-}
-.hero-title {
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.45;
-  margin-bottom: 1.25rem;
-}
-.hero-lead {
-  font-size: 1rem;
-  color: rgba(255,255,255,.78);
-  line-height: 2;
-  margin-bottom: 1.5rem;
-}
-.hero-meta {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,.45);
-}
-
-.author-box {
-  background: var(--gray-100);
-  border-left: 3px solid var(--gold);
-  padding: 1rem 1.5rem;
-  font-size: 0.85rem;
-  color: var(--gray-600);
-  line-height: 1.8;
-}
-.author-box strong { color: var(--navy); }
-
-.article-body {
-  padding: 2.5rem 2.5rem;
-}
-
-.article-body h2 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--navy) !important;
-  line-height: 1.4;
-  margin: 4.5rem 0 1.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: .75rem;
-  border-top: 1px solid var(--gray-200);
-  border-bottom: 2px solid var(--gold);
-}
-.article-body h2:first-child { margin-top: 0; }
-
-.article-body h3 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--navy) !important;
-  margin: 3.5rem 0 1rem;
-  padding: .6rem 0 .6rem .75rem;
-  border-left: 3px solid var(--gold);
-  background-color: var(--gray-100);
-  line-height: 1.45;
-}
-
-.article-body p {
-  font-size: 1rem;
-  color: var(--gray-800);
-  line-height: 2.1;
-  margin-bottom: 1.25rem;
-}
-.article-body p:last-child { margin-bottom: 0; }
-
-.article-body strong { color: var(--navy); }
-
-.insight {
-  background: var(--navy);
-  color: var(--white);
-  padding: 1.25rem 1.75rem;
-  margin: 1.75rem 0;
-  font-size: 1rem;
-  line-height: 2;
-  font-weight: 700;
-}
-.insight em {
-  font-style: normal;
-  color: var(--gold-light);
-}
-
-.callout {
-  background: var(--off-white);
-  border-left: 3px solid var(--navy);
-  padding: 1.25rem 1.5rem;
-  margin: 1.5rem 0;
-  font-size: 0.95rem;
-  color: var(--gray-800);
-  line-height: 2;
-}
-.callout strong { color: var(--navy); }
-
-.misrec-block {
-  margin: 2rem 0;
-  border: 1px solid var(--gray-200);
-  overflow: hidden;
-}
-.misrec-header {
-  background: var(--navy);
-  color: var(--gold-light);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  padding: .6rem 1.25rem;
-}
-.misrec-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  border-top: 1px solid var(--gray-200);
-}
-.misrec-row:first-of-type { border-top: none; }
-.misrec-cell {
-  padding: 1rem 1.25rem;
-  font-size: 0.9rem;
-  line-height: 1.9;
-  color: var(--gray-800);
-}
-.misrec-cell.label {
-  background: var(--gray-100);
-  font-weight: 700;
-  font-size: 0.8rem;
-  color: var(--gray-600);
-  letter-spacing: .05em;
-  border-right: 1px solid var(--gray-200);
-}
-.misrec-cell.belief { background: var(--white); }
-.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
-
-.prob-list { list-style: none; margin: 1rem 0; }
-.prob-list li {
-  padding: 1rem 1.25rem 1rem 3rem;
-  position: relative;
-  border-bottom: 1px solid var(--gray-100);
-  font-size: 0.95rem;
-  color: var(--gray-800);
-  line-height: 1.9;
-}
-.prob-list li:last-child { border-bottom: none; }
-.prob-list li::before {
-  content: attr(data-num);
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: var(--navy);
-  color: var(--white);
-  font-size: 0.75rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.cta-block {
-  background: var(--navy);
-  padding: 2rem 2.5rem;
-  margin: 2.5rem 0;
-  text-align: center;
-}
-.cta-block-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: .2em;
-  color: var(--gold-light);
-  text-transform: uppercase;
-  margin-bottom: .75rem;
-}
-.cta-block-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.6;
-  margin-bottom: .75rem;
-}
-.cta-block-sub {
-  font-size: 0.875rem;
-  color: rgba(255,255,255,.7);
-  line-height: 1.9;
-  margin-bottom: 1.5rem;
-}
-.cta-btn {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--navy);
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: .85rem 2.5rem;
-  text-decoration: none;
-  letter-spacing: .06em;
-  border-bottom: 3px solid #a8893a;
-  transition: opacity .2s;
-}
-.cta-btn:hover { opacity: .88; }
-.cta-note {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,.4);
-  margin-top: .75rem;
-}
-
-.faq-section {
-  padding: 2.5rem 2.5rem;
-  border-top: 1px solid var(--gray-200);
-}
-.faq-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: .2em;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-.faq-item {
-  margin-bottom: 1.75rem;
-  padding-bottom: 1.75rem;
-  border-bottom: 1px solid var(--gray-100);
-}
-.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.faq-q {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--navy);
-  line-height: 1.6;
-  margin-bottom: .75rem;
-  padding-left: 1.5rem;
-  position: relative;
-}
-.faq-q::before {
-  content: 'Q';
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--gold);
-}
-.faq-a {
-  font-size: 0.95rem;
-  color: var(--gray-800);
-  line-height: 2;
-  padding-left: 1.5rem;
-  position: relative;
-}
-.faq-a::before {
-  content: 'A';
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--navy);
-}
-
-.author-profile {
-  background: var(--gray-100);
-  padding: 2rem 2.5rem;
-  border-top: 1px solid var(--gray-200);
-}
-.author-profile-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: .2em;
-  color: var(--gray-400);
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-.author-profile-name {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: .5rem;
-}
-.author-profile-body {
-  font-size: 0.875rem;
-  color: var(--gray-600);
-  line-height: 1.95;
-}
-
-.related-section {
-  padding: 2rem 2.5rem;
-  border-top: 1px solid var(--gray-200);
-}
-.related-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: .2em;
-  color: var(--gray-400);
-  text-transform: uppercase;
-  margin-bottom: 1.25rem;
-}
-.related-list { list-style: none; }
-.related-list li {
-  padding: .75rem 0 .75rem 1rem;
-  border-bottom: 1px solid var(--gray-100);
-  position: relative;
-}
-.related-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 1.1em;
-  width: 6px;
-  height: 1px;
-  background: var(--navy);
-}
-.related-list li:last-child { border-bottom: none; }
-.related-list a {
-  font-size: 0.9rem;
-  color: var(--navy);
-  text-decoration: underline;
-  line-height: 1.7;
-}
-
-.site-footer {
-  background: var(--navy);
-  padding: 1.5rem 2.5rem;
-  text-align: center;
-}
-.site-footer a {
-  color: rgba(255,255,255,.55);
-  text-decoration: none;
-  font-size: 0.8rem;
-}
-
-#article-faq {
-  background-color: var(--gray-100);
-  border-top: 3px solid var(--gold);
-  border-bottom: 1px solid var(--gray-200);
-  margin-top: 2.5rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-#article-faq .faq-label {
-  color: var(--navy);
-  font-size: 0.75rem;
-}
-#article-faq .faq-item {
-  border-bottom: 1px solid var(--gray-200);
-  padding-left: 0;
-}
-#article-faq .faq-q {
-  font-size: 1.0rem;
-  color: var(--navy) !important;
-}
-#article-faq .faq-a {
-  background-color: var(--white);
-  padding: 1rem 1.25rem 1rem 2.25rem;
-  border-radius: 0;
-  margin-top: 0.5rem;
-  line-height: 2;
-  color: var(--gray-800);
-}
-
-.nextstep-faq {
-  background-color: var(--navy-light);
-  border-top: none;
-  padding: 2.5rem 2.5rem;
-}
-.nextstep-faq .faq-label { color: var(--gold-light); }
-.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
-.nextstep-faq .faq-item:last-child { border-bottom: none; }
-.nextstep-faq .faq-q { color: var(--white); }
-.nextstep-faq .faq-q::before { color: var(--gold-light); }
-.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
-.nextstep-faq .faq-a::before { color: var(--gold-light); }
-
-:root { color-scheme: only light; }
-html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
-.prob-list li { background-color: #ffffff; }
-.article-body { background-color: #ffffff; }
-
-@media (max-width: 640px) {
-  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-  .hero { padding-top: 2rem; }
-  .cta-block { padding: 1.75rem 1.25rem; }
-  .misrec-row { grid-template-columns: 1fr; }
-  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
-  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
-}
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
 </style>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Makuakeで目標金額に届かない一番の理由は何ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "公開前の告知とプロジェクトページの間で、今申し込む理由が途切れている可能性があります。告知で期待を作っても、公開日に見たページでその理由が届かなければ、申し込みには進みにくくなります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Makuakeのプロジェクトページは公開後に修正できますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Makuakeでは、公開後にページ本体を自由に直せる前提では進められません。公開後にできることは限られるため、公開前にページを見た人が今申し込む理由を受け取れているかを確認しておく必要があります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "事前集客をしたのに申し込み率が低いのはなぜですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "事前告知で作った期待と、公開日に見たページの冒頭がずれている可能性があります。告知で気になった人がページを開いたとき、そこで今申し込む理由を受け取れなければ離脱します。事前告知とページは、別々ではなく同じ流れで見る必要があります。"
-      }
-    }
-  ]
-}</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Makuakeで公開後に伸びないプロジェクトが公開前に見る場所",
-  "description": "ページも作った。事前告知もした。広告も出した。それでも目標金額に届かない。公開後にページ本体を自由に直しにくいMakuakeだからこそ、公開前に申し込む理由が届いているかを見る必要があります。",
-  "image": "https://konishi-marketing.com/images/konishi.JPG",
-  "url": "https://konishi-marketing.com/articles/makuake-mokuhyo-kingaku-tasseideki-nai.html",
-  "datePublished": "2026-04-20",
-  "dateModified": "2026-08-07",
-  "author": {
-    "@type": "Person",
-    "name": "小西 秀人",
-    "url": "https://konishi-marketing.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "小西マーケティング",
-    "url": "https://konishi-marketing.com"
-  }
-}
-</script>
 <style id="makuake-author-profile-standard-v1">
 /* Makuake article author profile standardization 2026-08-07 */
 .author-proof-grid{
@@ -561,170 +133,77 @@ html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
   .author-proof-grid{grid-template-columns:1fr}
   .author-proof-value{font-size:1.25rem}
 }
-</style><script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "ホーム",
-      "item": "https://konishi-marketing.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "オウンドメディア",
-      "item": "https://konishi-marketing.com/articles/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Makuake",
-      "item": "https://konishi-marketing.com/articles/makuake.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Makuakeで公開後に伸びないプロジェクトが公開前に見る場所",
-      "item": "https://konishi-marketing.com/articles/makuake-mokuhyo-kingaku-tasseideki-nai.html"
-    }
-  ]
+</style>
+<style id="nextstep-faq-link-contrast-fix">
+.nextstep-faq .faq-a a{
+  color:var(--gold-light);
+  text-decoration:underline;
+  text-underline-offset:2px;
+  font-weight:700;
 }
-</script>
-<style>
-.source-note{margin:1.5rem 0;padding:1rem 1.2rem;border:1px solid var(--gray-200);background:var(--gray-100);font-size:.82rem;color:var(--gray-600);line-height:1.8}
-.source-note a{word-break:break-word;color:var(--navy)}
-</style></head>
-<body>
-<div class="site-wrap">
-<header class="site-header">
-<a href="https://konishi-marketing.com/">小西マーケティング</a>
-</header>
-<nav aria-label="パンくず" style="font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto;"><a href="https://konishi-marketing.com/" style="color:#6b6860;text-decoration:none;">ホーム</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">オウンドメディア</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/makuake.html" style="color:#6b6860;text-decoration:none;">Makuake</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><span aria-current="page" style="color:#3a3834;">Makuakeで公開後に伸びないプロジェクトが公開前に見る場所</span></nav>
-<div class="hero">
-<span class="hero-category">Makuake・公開前診断・申し込み率改善</span>
-<h1 class="hero-title">Makuakeで公開後に伸びないプロジェクトが公開前に見る場所</h1>
-<p class="hero-lead">ページも作った。事前告知もした。広告も出した。それでも公開から数日で失速し、目標金額に届かない——公開後にページ本体を自由に直しにくいMakuakeだからこそ、公開前に申し込む理由が届いているかを見る必要があります。</p>
-<p class="hero-meta">小西マーケティング｜2026.04</p>
-</div>
-<div class="author-box">この記事は、<strong>担当した全60プロジェクトの平均応援購入額710万円</strong>（目標到達の有無を問わず含む全案件平均）、<strong>累計4億円超・最高6,600万円・総合1位3回</strong>の実績を持つ小西秀人が、20年以上のEC実務経験をもとに執筆しています。</div>
+.nextstep-faq .faq-a a:visited{
+  color:var(--gold-light);
+}
+.nextstep-faq .faq-a a:hover{
+  color:var(--white);
+}
+</style>
+<style id="makuake-channel-map-v1">
+.channel-map{margin:2rem 0;border:1px solid var(--gray-200);background:var(--white)}
+.channel-map-title{padding:.75rem 1rem;background:var(--navy);color:var(--gold-light);font-size:.8rem;font-weight:700;letter-spacing:.06em}
+.channel-map-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.channel-map-table{width:100%;min-width:720px;border-collapse:collapse}
+.channel-map-table th,.channel-map-table td{padding:1rem;vertical-align:top;border-right:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);font-size:.88rem;line-height:1.8;text-align:left}
+.channel-map-table th{background:var(--gray-100);color:var(--navy);font-weight:700}
+.channel-map-table td{color:var(--gray-800)}
+.channel-map-table th:last-child,.channel-map-table td:last-child{border-right:none}
+.channel-map-table tr:last-child td{border-bottom:none}
+.channel-map-table td:first-child{width:24%;background:var(--off-white)}
+</style>
+<style id="article-table-standard-v1">
+.article-body table{width:100%;border-collapse:collapse;margin:1.75rem 0;font-size:.9rem;line-height:1.85}.article-body th,.article-body td{padding:1rem 1.1rem;border:1px solid var(--gray-200);vertical-align:top;text-align:left}.article-body th{background:var(--gray-100);color:var(--navy);font-weight:700}.article-body td{color:var(--gray-800)}@media(max-width:640px){.article-body table{font-size:.84rem}.article-body th,.article-body td{padding:.85rem}}
+</style>
+</head><body><div class="site-wrap">
+<header class="site-header"><a href="https://konishi-marketing.com/">小西マーケティング</a></header>
+<nav aria-label="パンくず" style="font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto;"><a href="https://konishi-marketing.com/" style="color:#6b6860;text-decoration:none;">ホーム</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">オウンドメディア</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/makuake.html" style="color:#6b6860;text-decoration:none;">Makuake</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><span aria-current="page" style="color:#3a3834;">Makuakeで目標金額に届かない原因｜公開初日に失速しないための6つの事前設計</span></nav>
+<div class="hero"><span class="hero-category">Makuake / 目標金額 / 公開前設計</span><h1 class="hero-title">Makuakeで目標金額に届かない原因｜公開初日に失速しないための6つの事前設計</h1><p class="hero-lead">Makuakeで目標金額に届かない原因を考えるなら、公開後だけでは足りません。<strong style="color:#fff;">初日に誰が来て、何を期待し、どのリターンを選ぶか</strong>を公開前に設計します。</p><p class="hero-meta">小西マーケティング｜2026.08</p></div>
+<div class="author-box">この記事は、<strong>Makuake累計応援購入額4億円超・最高6,600万円・総合1位3回・全60プロジェクト平均710万円</strong>の支援実績を持つ小西秀人が、Makuakeの公開前設計・プロジェクトページ・応援購入率改善という観点から整理しています。</div>
 <div class="article-body">
-<p>「公開したのに、なぜ数字が動かないのか。」</p>
-<p>この状態になると、事前告知を増やすか、広告を追加するかに意識が向きます。ただ、Makuakeには他のECページと違う前提があります。</p>
-<p><strong>Makuakeでは、公開後にページ本体を自由に直せる前提では進められません。</strong></p><div class="source-note"><strong>Makuake公式：</strong><br/><a href="https://mkhelp.makuake.com/hc/ja/articles/13899341899929-%E5%85%AC%E9%96%8B%E5%BE%8C-%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AF%E4%BF%AE%E6%AD%A3%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%81%8B">Makuake公式｜公開後のプロジェクトページ修正</a></div>
-<p>公開後にできることは限られます。だからこそ、公開前の段階で、ページを見た人が今申し込む理由を受け取れているかを確認しておく必要があります。</p>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">公開後には直しにくい</h2>
-<p>目標金額に届かなかったとき、「ページの見せ方が甘かった」「写真をもっと良くすればよかった」「説明が足りなかった」と振り返ることがあります。</p>
-<p>その振り返り自体は必要です。ただ、公開後にページ本体を自由に直せないなら、その反省は次回に持ち越されます。今のプロジェクトでは、広告やSNS告知で人を呼ぶことが中心になります。</p>
-<div class="misrec-block">
-<div class="misrec-header">公開後に気づいても遅くなりやすい場所</div>
-<div class="misrec-row">
-<div class="misrec-cell label">見られやすい問題</div>
-<div class="misrec-cell truth">ページのデザイン、写真、説明量、リターンの見せ方。公開後に数字が止まると、ここを直したくなる</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">先に見ておく場所</div>
-<div class="misrec-cell truth">ページを見た人が、今このプロジェクトに申し込む理由を受け取れているか。公開前の告知で作った期待と、ページの冒頭がつながっているか</div>
-</div>
-</div>
-<p>綺麗なページと、申し込みに進むページは同じではありません。見た目が整っていても、読者が「自分に必要だ」と思える理由まで進めなければ、申し込みは起きにくくなります。</p>
-<div class="callout">
-    他のECページであれば、公開後に数字を見ながら修正できます。ただ、Makuakeでは同じ前提では進めにくい。だから公開前に、今申し込む理由が届いているかを見ることが重要になります。
-  </div>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">綺麗でも届かない</h2>
-<p>「では最初から良いページを作ればいい。制作会社に頼もう」と考えるのは自然です。</p>
-<p>制作会社は、デザインや情報整理を担うことが多いです。これは必要な役割です。写真の配置、文章の整理、見やすいレイアウト。これらが整うことで、ページの信頼感は上がります。</p>
-<p>ただ、ページを見た人が今申し込む理由まで受け取れているかは、別で見る必要があります。</p>
-<div class="misrec-block">
-<div class="misrec-header">制作で整うもの、別で見るもの</div>
-<div class="misrec-row">
-<div class="misrec-cell label">制作で整いやすいもの</div>
-<div class="misrec-cell truth">写真、デザイン、レイアウト、説明の整理、ページ全体の見やすさ</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">別で見る必要があるもの</div>
-<div class="misrec-cell truth">読者がなぜ今申し込むのか。告知で気になった人が、ページを見て自分に必要だと思えるか</div>
-</div>
-</div>
-<p>制作会社が悪いという話ではありません。役割が違います。見た目を整えることと、申し込む理由が届く流れを作ることは、別の確認が必要です。</p>
-<p>
-    公開前の段階から、商品・市場・想定サポーターを整理し、申し込む理由を構成・コピー・写真・画面へ落とし込む場合は、
-    <a href="https://konishi-marketing.com/makuake/?utm_source=article&amp;utm_medium=internal_link&amp;utm_campaign=makuake-mokuhyo-kingaku-tasseideki-nai&amp;utm_content=service_route#continuity">Makuakeページ制作の考え方</a>
-    をご確認ください。
-  </p>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">告知とページがずれる</h2>
-<p>「事前にLINE登録者を集めたのに、公開日に申し込みが伸びなかった」というケースがあります。</p>
-<p>事前告知で読者の期待を作ることは必要です。ただ、その期待と公開日のページがずれていると、ページを開いた瞬間に止まります。</p>
-<div class="misrec-block">
-<div class="misrec-header">事前告知とページのずれ</div>
-<div class="misrec-row">
-<div class="misrec-cell label">事前告知で起きること</div>
-<div class="misrec-cell truth">読者が商品に興味を持つ。公開日を待つ。LINE登録やSNSフォローをする</div>
-</div>
-<div class="misrec-row">
-<div class="misrec-cell label">ページで必要なこと</div>
-<div class="misrec-cell truth">告知で気になったことの答えが冒頭で受け取れること。今申し込む理由が、公開日のページで続いていること</div>
-</div>
-</div>
-<p>告知で「A」に期待させたのに、ページを開いたら「B」の話から始まる。読者の中で流れが切れます。</p>
-<p>事前告知とプロジェクトページは、別々の施策ではありません。公開前に作った期待を、公開日のページで受け止める必要があります。</p>
-<div class="insight">
-    事前告知とプロジェクトページは、同じ流れで見る。<br/>
-<em>公開前に期待を作り、公開日にその期待を受け止め、今申し込む理由まで進める。ここがつながっていないと、登録者やアクセスがあっても申し込みに変わりにくくなります。</em>
-</div>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">初日に待っていた人が来る</h2>
-<p>Makuakeでは、公開直後の動きが重要です。初速が弱いと、そこから露出も伸びにくくなります。</p>
-<p>Makuake公式は、公開前からSNSやメルマガで期待感を高め、公開と同時に応援購入が集まる状態を作ることを推奨しています。2026年1月時点の公式記事では、開始24時間以内に表示目標金額の30％を集めたプロジェクトの95％が成功したという過去データも紹介されています。この数値は初日の勢いと最終結果の関連を見る参考データとして扱います。</p><div class="source-note"><strong>Makuake公式：</strong><br/><a href="https://lp-mk-2.makuake.com/article/062">Makuake公式｜2026年版｜公開初日のスタートダッシュと事前告知</a></div>
-<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">公開前に期待が作れているか</h3>
-<p>達成するプロジェクトは、公開前から特定の読者に向けて情報を届けています。ただ告知文を並べるのではなく、読者が「これは自分に関係がある」と思える流れを作っています。</p>
-<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">ページで申し込む理由が届いているか</h3>
-<p>ページを開いた読者は、商品スペックを見る前に「自分に必要かどうか」を見ています。その判断に答えられていないページでは、どれだけ詳しく書いても離脱されます。</p>
-<h3 style="margin-top:3rem;margin-bottom:1rem;padding:.65rem .75rem;background:#f1f0ed;border-left:3px solid #c9a84c;font-size:1.05rem;line-height:1.45;color:#1a2744;">告知とページが同じ流れでつながっているか</h3>
-<p>事前告知で作った期待と、公開日のページがつながっていれば、登録者やフォロワーは申し込みに進みやすくなります。ずれていれば、ページで止まります。</p>
-<p>以下の状態が続いているなら、公開前の告知とページのどこかで、申し込む理由が途切れている可能性があります。</p>
+<h2 style="margin-top:0;margin-bottom:1.25rem;padding-top:0;padding-bottom:.75rem;border-top:none;border-bottom:2px solid #c9a84c;font-size:1.15rem;line-height:1.4;color:#1a2744;">この記事は「アクセスはあるのに支援されない原因」ではなく、公開前の初日設計に限定する</h2>
+<p>Makuake公式は、公開前からSNSやメルマガで期待感を高め、公開と同時に応援購入が集まる状態を作ることを推奨しています。2026年公開の公式記事では、過去データとして開始24時間以内に目標金額の30％を集めたプロジェクトの95％が成功したと紹介されています。</p>
+<div class="insight">だから公開前に見るのは、<em>ページが完成したかではなく、初日に誰が・なぜ・どのリターンを応援購入するかがつながっているか</em>です。</div>
+<p><a href="https://konishi-marketing.com/articles/makuake-shien-atsumara-nai-kyotsuten.html">「Makuakeでアクセスはあるのに支援が集まらないページが見る場所」</a>は公開後の申込率診断です。この記事は、その前段の初日設計だけを扱います。</p>
+<h2>1｜初日に動く人を「広いターゲット」で置かない</h2>
+<p>誰でも買える商品でも、公開初日に動く人は限られます。既存顧客、SNSフォロワー、LINE登録者など、最初に届く人を具体化します。</p>
+<h2>2｜事前告知とページ冒頭で同じ期待を受け止める</h2>
+<p>告知で「軽さ」に興味を持たせたのに、ページ冒頭がブランドストーリーから始まれば、読者は期待の答えを探し直します。</p>
+<h2>3｜初日に選ばせたいリターンを決める</h2>
+<p>リターン数を増やすほど選択肢は広がりますが、初日から全てを同じ強さで並べると比較が増えます。早割、セット、限定仕様など、初日に選んでほしい条件を明確にします。</p>
+<h2>4｜「今応援購入する理由」を一般販売との差で示す</h2>
+<p>Makuakeでは、一般販売を待つ選択肢があります。価格だけでなく、先行性、限定性、セット内容など、今申し込む理由を確認します。</p>
+<h2>5｜公開後に直しにくい条件を公開前に潰す</h2>
+<p>Makuakeヘルプでは、公開後のリターン内容は原則変更・取消できないと案内されています。公開後に自由修正できる前提では進めず、価格・内容・条件・ページの主要訴求を事前に確認します。</p>
+<h2>6｜初日KPIを「目標金額」だけで見ない</h2>
+<p>応援購入額だけでなく、事前登録者数、公開初日のアクセス、申込率、主要リターンの選択比率を分けると、集客不足かページ側の問題かを判断しやすくなります。</p>
+<div class="callout"><strong>初日に見る：</strong><br/>事前に届く人数 → 公開初日のアクセス → 申込率 → 平均応援購入単価 → 応援購入額。<br/>目標金額だけで原因をまとめない。</div>
+<h2>公開前に確認する6つの初日設計</h2>
 <ul class="prob-list">
-<li data-num="✓">事前集客でLINE登録者を集めたが、公開日の申し込みが想定より少なかった</li>
-<li data-num="✓">新着の露出が切れた後から、アクセスも申し込みも止まっている</li>
-<li data-num="✓">知人からの支援はあるが、見知らぬサポーターが動かない</li>
-<li data-num="✓">広告を出してもクリックはあるが、申し込みに変わらない</li>
+<li data-num="1">初日に動く人を具体化する</li>
+<li data-num="2">事前告知とページ冒頭を一致させる</li>
+<li data-num="3">初日に選ばせたいリターンを決める</li>
+<li data-num="4">今応援購入する理由を作る</li>
+<li data-num="5">公開後に直しにくい条件を確認する</li>
+<li data-num="6">初日アクセス・申込率・単価を分けて見る</li>
 </ul>
-<div class="cta-block"><div class="cta-block-label">ページ制作の考え方</div><div class="cta-block-title">公開後に直す前に、公開前に決めることを見る。</div><div class="cta-block-sub">告知とページの間で理由を途切れさせないために、誰がなぜ今応援購入するのかを先に決める制作工程を確認できます。</div><a class="cta-btn" href="https://konishi-marketing.com/makuake/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=makuake-mokuhyo-kingaku-tasseideki-nai&amp;utm_content=mid_cta#continuity">Makuakeページ制作の考え方を見る</a><div class="cta-note">制作方法、実績、料金までサービスページで確認できます。</div></div>
-<h2 style="margin-top:3.5rem;margin-bottom:1.25rem;padding-top:1.25rem;padding-bottom:.75rem;border-top:1px solid #e4e2dc;border-bottom:2px solid #c9a84c;">まず、公開前に見る</h2>
-<p>Makuakeで目標金額に届かないとき、ページの質、事前告知の量、広告露出が見られやすくなります。どれも必要な場面があります。</p>
-<p>ただ、Makuakeでは公開後にページ本体を自由に直せる前提では進められません。だから、公開前に見る必要があります。</p>
-<p>告知で作った期待と、ページで受け取る内容がつながっているか。ページを見た人が今申し込む理由を受け取れているか。ここが確認できれば、告知を増やすべきか、ページを直すべきか、公開前に整える場所が見えてきます。</p>
-</div><!-- /article-body -->
-<div class="faq-section" id="article-faq">
-<div class="faq-label">よくある質問</div>
-<div class="faq-item">
-<div class="faq-q">Makuakeで目標金額に届かない一番の理由は何ですか？</div>
-<div class="faq-a">公開前の告知とプロジェクトページの間で、今申し込む理由が途切れている可能性があります。告知で期待を作っても、公開日に見たページでその理由が届かなければ、申し込みには進みにくくなります。</div>
+<h2>公開後の失速を、公開前に分解しておく</h2>
+<p>目標金額に届かない原因を「告知不足」や「ページが弱い」でまとめず、<strong>誰が来るか → 何に期待するか → どのリターンを選ぶか → 今買う理由 → 申込率</strong>まで公開前に分けます。</p>
+<div class="callout"><strong>参考・一次情報：</strong><br/>
+<a href="https://lp-mk-2.makuake.com/article/062">Makuake公式｜クラウドファンディング型ECの始め方と成功のコツ</a><br/>
+<a href="https://mkhelp.makuake.com/hc/ja/articles/13899409943833">Makuakeヘルプ｜公開後のリターン内容変更</a></div>
 </div>
-<div class="faq-item">
-<div class="faq-q">Makuakeのプロジェクトページは公開後に修正できますか？</div>
-<div class="faq-a">Makuakeでは、公開後にページ本体を自由に直せる前提では進められません。公開後にできることは限られるため、公開前にページを見た人が今申し込む理由を受け取れているかを確認しておく必要があります。</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">事前集客をしたのに申し込み率が低いのはなぜですか？</div>
-<div class="faq-a">事前告知で作った期待と、公開日に見たページの冒頭がずれている可能性があります。告知で気になった人がページを開いたとき、そこで今申し込む理由を受け取れなければ離脱します。事前告知とページは、別々ではなく同じ流れで見る必要があります。</div>
-</div>
-</div>
-<div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div><div class="faq-item"><div class="faq-q">記事で説明した考え方は、ページ制作でどう反映しますか？</div><div class="faq-a">誰が、なぜ一般販売を待たずに今応援購入するのかを制作前に決め、その理由を構成・コピー・写真・デザインへ反映します。機能やストーリーを増やす前に、ページ全体で何を判断してもらうかを揃えます。</div></div><div class="faq-item"><div class="faq-q">公開前のページ制作について相談する場合、何を送ればいいですか？</div><div class="faq-a">商品資料、構成案や参考URL、審査状況、公開予定日、現在困っていることを送ってください。内容を確認し、公開前に対応できる範囲と進め方をご案内します。公開中のプロジェクトへの途中対応は行っていません。</div></div><div class="faq-item"><div class="faq-q">相談や見積もり作成に費用はかかりますか？</div><div class="faq-a">費用はかかりません。フォームで「制作についての相談」を選択してください。特定の応援購入額や申込み率を保証するものではありません。</div></div></div>
-<div class="cta-block" style="margin:0;"><div class="cta-block-label">公開前のMakuakeページ制作相談</div><div class="cta-block-title">公開前に、商品ごとの応援購入理由からページを設計する。</div><div class="cta-block-sub">公開前の案件を対象に、構成・コピー・写真・デザイン・管理画面への入稿まで、必要な担当範囲を確認します。</div><a class="cta-btn" href="https://konishi-marketing.com/makuake/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=makuake-mokuhyo-kingaku-tasseideki-nai&amp;utm_content=bottom_cta">公開前のMakuakeページ制作を相談する</a><div class="cta-note">公開中プロジェクトへの途中対応は行っていません。相談・見積もり作成に費用はかかりません。</div></div>
-<div class="author-profile"><div class="author-profile-label">この記事を書いた人</div><div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;"><div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;"><img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/></div><div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div></div><div class="author-proof-grid"><div class="author-proof-item"><span class="author-proof-label">全60プロジェクト平均</span><strong class="author-proof-value">710万円</strong><span class="author-proof-note">目標到達の有無を問わず含む全案件平均</span></div><div class="author-proof-item"><span class="author-proof-label">累計応援購入額</span><strong class="author-proof-value">4億円超</strong><span class="author-proof-note">担当したMakuakeプロジェクトの累計</span></div><div class="author-proof-item"><span class="author-proof-label">最高応援購入額</span><strong class="author-proof-value">6,600万円</strong><span class="author-proof-note">1プロジェクトでの最高額</span></div><div class="author-proof-item"><span class="author-proof-label">Makuake総合1位</span><strong class="author-proof-value">3回</strong><span class="author-proof-note">担当プロジェクトでの獲得回数</span></div></div><div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年以上のEC実務経験をもとに、商品資料の確認から、構成・コピー・写真・デザイン・管理画面への入稿まで一体で対応している。</div></div>
-<div class="related-section">
-<div class="related-label">関連記事</div>
-<ul class="related-list">
-<li><a href="https://konishi-marketing.com/articles/makuake-shien-atsumara-nai-kyotsuten.html">Makuakeで支援が集まらないプロジェクトの共通点</a></li>
-<li><a href="https://konishi-marketing.com/articles/makuake-project-page-dare-ni-irai.html">Makuakeのプロジェクトページを誰に依頼すべきか</a></li>
-<li><a href="https://konishi-marketing.com/articles/ec-kakaku-sagete-mo-uriage-nobinai-hontono-riyu.html">ECで価格を下げても売上が伸びないときに見る場所</a></li>
-</ul>
-</div>
-<footer class="site-footer">
-<a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
-</footer>
-</div><!-- /site-wrap -->
-</body>
-</html>
+<div class="faq-section" id="article-faq"><div class="faq-label">よくある質問</div><div class="faq-item"><div class="faq-q">Makuakeで目標金額に届かないとき、公開前に何を確認すべきですか？</div><div class="faq-a">初日に動く人、事前告知とページ冒頭の一致、主要リターン、今応援購入する理由、初日アクセスと申込率を分けて確認します。</div></div><div class="faq-item"><div class="faq-q">公開後にリターン内容は変更できますか？</div><div class="faq-a">Makuakeヘルプでは、原則として一度公開したリターン内容の変更・取消はできないと案内されています。必要時は担当キュレーターへの相談が必要です。</div></div><div class="faq-item"><div class="faq-q">初日の目標は応援購入額だけで良いですか？</div><div class="faq-a">応援購入額だけでなく、事前登録者数、アクセス、申込率、平均応援購入単価を分けると原因を特定しやすくなります。</div></div></div>
+<div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div><div class="faq-item"><div class="faq-q">自社では、どこから確認すべきですか？</div><div class="faq-a">アクセス・CVR・商品別売上と現在のページ・販促条件を並べると、最初に直す場所を絞れます。 <a href="https://konishi-marketing.com/makuake/">支援内容はこちらです。</a></div></div><div class="faq-item"><div class="faq-q">相談や見積もり作成に費用はかかりますか？</div><div class="faq-a">費用はかかりません。サービスページから相談できます。</div></div></div>
+<div class="cta-block" style="margin:0;"><div class="cta-block-label">Makuakeプロジェクトページ制作</div><div class="cta-block-title">公開初日に動く理由を、公開前に設計する。</div><div class="cta-block-sub">事前告知・ページ冒頭・リターン・申込率を一つの流れとして設計します。</div><a class="cta-btn" href="https://konishi-marketing.com/makuake/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=makuake-mokuhyo-kingaku-tasseideki-nai&amp;utm_content=bottom_cta">Makuakeページ制作を見る</a><div class="cta-note">相談・見積もり作成に費用はかかりません。</div></div>
+<div class="author-profile"><div class="author-profile-label">この記事を書いた人</div><div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;"><div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;"><img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/></div><div class="author-profile-name" style="margin-bottom:0;">小西秀人｜小西マーケティング</div></div><div class="author-proof-grid"><div class="author-proof-item"><span class="author-proof-label">全60プロジェクト平均</span><strong class="author-proof-value">710万円</strong><span class="author-proof-note">目標到達の有無を問わず含む全案件平均</span></div><div class="author-proof-item"><span class="author-proof-label">累計応援購入額</span><strong class="author-proof-value">4億円超</strong><span class="author-proof-note">担当したMakuakeプロジェクトの累計</span></div><div class="author-proof-item"><span class="author-proof-label">最高応援購入額</span><strong class="author-proof-value">6,600万円</strong><span class="author-proof-note">1プロジェクトでの最高額</span></div><div class="author-proof-item"><span class="author-proof-label">Makuake総合1位</span><strong class="author-proof-value">3回</strong><span class="author-proof-note">担当プロジェクトでの獲得回数</span></div></div><div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年以上のEC実務経験をもとに、Makuakeのプロジェクトページ制作から、終了後の一般販売用ページへの再設計まで対応している。</div></div>
+<div class="related-section"><div class="related-label">関連記事</div><ul class="related-list"><li><a href="https://konishi-marketing.com/articles/makuake-shien-atsumara-nai-kyotsuten.html">Makuakeでアクセスはあるのに支援が集まらないページが見る場所</a></li><li><a href="https://konishi-marketing.com/articles/makuake-jisshi-kikan-kaishibi-shuryobi.html">Makuakeの実施期間は何日がいい？</a></li><li><a href="https://konishi-marketing.com/articles/makuake-keisai-moshikomi-timing.html">Makuakeへの掲載申込みはいつ？</a></li></ul></div>
+<footer class="site-footer"><a href="https://konishi-marketing.com">https://konishi-marketing.com</a></footer></div></body></html>
