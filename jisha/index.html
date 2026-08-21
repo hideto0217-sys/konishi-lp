@@ -685,7 +685,7 @@ footer{
     </div>
 
     <div class="contact-form-card">
-      <form class="contact-form" data-contact-form="jisha" id="contact-form" method="post">
+      <form action="https://script.google.com/macros/s/AKfycbyO2WuhDl_-N2aFd2sdqr80UpIJ_iCMVKetndhO7vjDLgQmSp0SWnTB8CGXC4qCo39i/exec" class="contact-form" data-contact-form="jisha" id="contact-form" method="post">
         <input id="consult-type-hidden" name="consult_type" type="hidden" value="広告→LP無料診断レポート"/>
         <input name="page_type" type="hidden" value="jisha_ec_meta_lp"/>
         <input id="form-started-at" name="form_started_at" type="hidden" value=""/>
@@ -898,15 +898,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (message) {
       message.placeholder = consultation
-        ? '例：
-・現在の広告・LP
-・現在感じている課題
-・希望する制作時期
-・確認したい制作範囲や進め方'
-        : '例：
-・広告からLPへ遷移した後にCVRが落ちている
-・CPOが高止まりしている
-・記事LPを挟むべきか確認したい';
+        ? '例：\n・現在の広告・LP\n・現在感じている課題\n・希望する制作時期\n・確認したい制作範囲や進め方'
+        : '例：\n・広告からLPへ遷移した後にCVRが落ちている\n・CPOが高止まりしている\n・記事LPを挟むべきか確認したい';
     }
 
     if (consultType) {
