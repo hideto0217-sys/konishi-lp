@@ -1,0 +1,891 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amazon商品ページ制作・改善｜商品画像・A+まで購入判断から設計｜小西マーケティング</title>
+<meta name="description" content="Amazonで既に販売しているメーカー・EC事業者向け。商品画像、タイトル・箇条書き、A+を別々に作らず、購入判断の残り方から商品ページ全体を設計・制作します。">
+<link rel="canonical" href="https://konishi-marketing.com/amazon/">
+<link rel="icon" href="https://konishi-marketing.com/images/favicon.ico" sizes="any">
+<meta name="theme-color" content="#ff9900">
+<meta name="amazon-form-endpoint" content="https://script.google.com/macros/s/AKfycbyO2WuhDl_-N2aFd2sdqr80UpIJ_iCMVKetndhO7vjDLgQmSp0SWnTB8CGXC4qCo39i/exec">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());gtag('config','G-SWS3R3K4W5');
+</script>
+<style>
+:root{
+ --paper:#f5f0e8;--white:#fffdf9;--ink:#171717;--sub:#4a443e;--muted:#686159;
+ --line:#cfc5b8;--accent:#ff9900;--accent2:#e68a00;--accent-soft:#fff3df;
+ --navy:#131e29;--dark:#171717;--max:1180px
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:linear-gradient(rgba(23,23,23,.024) 1px,transparent 1px),linear-gradient(90deg,rgba(23,23,23,.024) 1px,transparent 1px),var(--paper);background-size:32px 32px;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif;font-size:17px;line-height:1.9;letter-spacing:.025em;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+.topbar{position:sticky;top:0;z-index:30;border-bottom:1px solid rgba(23,23,23,.1);backdrop-filter:blur(16px);background:rgba(245,240,232,.9)}
+.nav{height:66px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:14px;font-weight:900;letter-spacing:.06em}.navlinks{display:flex;gap:22px;align-items:center;font-size:12px;font-weight:800;color:#5b554f}.navcta{padding:10px 16px;border-radius:999px;background:var(--ink);color:#fff;font-size:12px;font-weight:800}
+.breadcrumb{border-bottom:1px solid rgba(17,24,39,.08);background:#fff}.breadcrumb ol{max-width:1180px;margin:0 auto;padding:12px 24px;display:flex;gap:8px;list-style:none;font-size:12px;color:#6b7280}.breadcrumb li+li:before{content:"›";margin-right:8px;color:#aaa}
+.hero{min-height:820px;display:flex;align-items:center;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero:after{content:"";position:absolute;right:-150px;bottom:-140px;width:540px;height:540px;border:1px solid rgba(255,153,0,.35);border-radius:50%;box-shadow:0 0 0 70px rgba(255,153,0,.07),0 0 0 140px rgba(255,153,0,.035)}
+.hero>.wrap{position:relative;z-index:2;padding:118px 0}.hero-inner{max-width:900px}
+.eyebrow,.kicker{display:inline-flex;align-items:center;gap:10px;margin:0 0 22px;color:#c77700;font-size:12px;font-weight:850;letter-spacing:.18em}.eyebrow:before,.kicker:before{content:"";width:28px;height:2px;background:var(--accent)}
+h1{margin:0;font-size:clamp(48px,7vw,88px);line-height:1.04;letter-spacing:-.055em;font-weight:900}h2{margin:0 0 28px;font-size:clamp(36px,5vw,66px);line-height:1.08;letter-spacing:-.045em;font-weight:900}h3{margin:0 0 16px;font-size:clamp(22px,3vw,34px);line-height:1.28;letter-spacing:-.03em;font-weight:850}
+.hero p{margin:34px 0 0;max-width:800px;font-size:20px;color:#3f3a35}.lead{font-size:19px;color:#2d2925;max-width:880px}
+.ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:14px 24px;border-radius:999px;font-weight:900}.primary{background:var(--ink);color:#fff}.secondary{border:1px solid #c77700;color:#9b5d00;background:rgba(255,253,249,.7)}
+section{padding:112px 0}.white{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.dark{background:var(--navy);color:#fff}.dark .kicker{color:#ffc66d}.dark .kicker:before{background:#ffc66d}.dark .lead{color:#d6dbe0}
+.grid3,.grid4{display:grid;gap:0;margin-top:44px}.grid3{grid-template-columns:repeat(3,1fr)}.grid4{grid-template-columns:repeat(4,1fr)}
+.card{background:rgba(255,253,249,.72);border:1px solid var(--line);padding:32px 28px}.card+.card{border-left:0}.card h3{font-size:23px;line-height:1.45}.card p{color:var(--sub)}.num{color:#b66d00;font-size:13px;font-weight:900;letter-spacing:.12em}
+.dark .card{background:transparent;border-color:#40505d;color:#fff}.dark .card p{color:#c7d0d8}.dark .num{color:#ffc66d}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:42px}.box{border-radius:24px;padding:34px}.old{background:var(--paper);border:1px solid var(--line)}.new{background:var(--navy);color:#fff}.new p{color:#d6dbe0}
+.route{margin-top:46px;border-top:1px solid #40505d}.route-row{display:grid;grid-template-columns:90px .8fr 1.2fr;gap:30px;padding:28px 0;border-bottom:1px solid #40505d}.route-row b{color:#ffc66d;font-size:14px}.route-row h3{font-size:22px;color:#fff}.route-row p{margin:0;color:#c7d0d8}
+.proof{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:42px}.proof div{padding:28px;border-right:1px solid var(--line)}.proof div:last-child{border-right:0}.proof strong{display:block;font-size:34px;line-height:1.2;color:#b66d00}.proof span{font-size:14px;color:var(--muted)}
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:38px}.case{background:#fff;border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:24px;padding:34px}.case .metric{font-size:38px;font-weight:950;line-height:1.1;color:#b66d00}.case small{color:var(--muted)}
+.scope{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:40px;border:1px solid var(--line)}.scope div{padding:28px;border-bottom:1px solid var(--line)}.scope div:nth-child(odd){border-right:1px solid var(--line)}.scope div:nth-last-child(-n+2){border-bottom:0}.scope b{display:block;margin-bottom:8px;font-size:19px}.scope p{margin:0;color:var(--sub)}
+.price-main{margin-top:46px;background:var(--white);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:28px;padding:40px}.tag{display:inline-block;background:var(--accent);color:#171717;border-radius:999px;padding:6px 11px;font-size:12px;font-weight:900}.price{font-size:clamp(50px,7vw,78px);font-weight:950;letter-spacing:-.055em;line-height:1;color:#b66d00;margin:16px 0 6px}.tax,.note{font-size:14px;color:var(--muted)}.price-cols{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:30px}.price-cols ul{margin:0;padding-left:1.2em}
+.profile{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}.profile-card{aspect-ratio:4/5;border-radius:30px;background:#ddd;border:1px solid var(--line);position:relative;overflow:hidden}.profile-card:before{content:"KONISHI";position:absolute;left:28px;bottom:20px;z-index:2;font-size:58px;line-height:.95;font-weight:950;letter-spacing:-.06em;color:#c77700;mix-blend-mode:multiply}.profile-card img{width:100%;height:100%;object-fit:cover;object-position:center 28%}.profile-note{margin:22px 0 0;padding-top:18px;border-top:1px solid rgba(255,153,0,.35);font-weight:700}.profile-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0}.profile-stat{padding:18px 16px;border-top:1px solid var(--line)}.profile-stat span{display:block;color:#a96300;font-size:12px;font-weight:850}.profile-stat b{display:block;margin-top:8px;font-size:19px;line-height:1.45}
+.faq details{border-top:1px solid var(--line)}.faq details:last-child{border-bottom:1px solid var(--line)}.faq summary{list-style:none;cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;gap:20px;font-size:19px;font-weight:850}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"＋";color:#b66d00;font-size:25px}.faq details[open] summary:after{content:"−"}.faq p{padding:0 0 28px;max-width:900px;color:#4d4741}
+.contact{background:var(--navy);color:#fff;scroll-margin-top:88px}.contact-layout{display:grid;grid-template-columns:minmax(0,.82fr) minmax(420px,1.18fr);gap:64px;align-items:start}.contact-intro{position:sticky;top:104px}.contact-intro .kicker{color:#ffc66d}.contact-intro .kicker:before{background:#ffc66d}.contact-intro h2{color:#fff}.contact-intro p{color:#d6dbe0;font-size:18px}.form-card{background:var(--white);color:var(--ink);border-radius:20px;padding:34px;box-shadow:0 24px 60px rgba(0,0,0,.24)}
+.radio-group{display:grid;gap:10px;margin-bottom:28px}.radio{display:flex;gap:12px;padding:16px;border:1px solid #ddd;background:#fff;cursor:pointer}.radio input{margin-top:7px}.radio:has(input:checked){border:2px solid var(--accent);background:var(--accent-soft)}.radio strong{display:block}.radio small{display:block;color:#666}
+.explain{padding:22px;border:1px solid rgba(255,153,0,.35);background:#fffaf1;margin-bottom:24px}.explain h3{font-size:18px}.explain ul{margin:0;padding-left:1.2em;font-size:15px}
+.field{margin-bottom:20px}.field label{display:block;margin-bottom:7px;font-weight:800}.req{display:inline-block;margin-left:7px;padding:1px 7px;border-radius:999px;background:var(--accent);font-size:11px}.field input,.field textarea{width:100%;border:1px solid #cfc7bd;border-radius:10px;background:#fff;color:#171717;font:inherit;font-size:16px;padding:13px 14px}.field textarea{min-height:150px;resize:vertical}.field input:focus,.field textarea:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px rgba(255,153,0,.15)}.consent{display:flex;gap:9px;font-size:13px;color:#555;margin:8px 0 22px}.submit{width:100%;min-height:58px;border:0;border-radius:12px;background:var(--accent);color:#171717;font:inherit;font-weight:900;cursor:pointer}.micro{font-size:13px;color:#655f58;text-align:center}
+footer{padding:26px 0;background:var(--navy);color:rgba(255,255,255,.78);border-top:1px solid rgba(255,255,255,.1);font-size:12px}
+@media(max-width:900px){.navlinks{display:none}.hero{min-height:auto}.hero>.wrap{padding:92px 0 72px}.grid3,.grid4,.case-grid,.price-cols,.profile,.contact-layout{grid-template-columns:1fr}.hero-proof-inline{grid-template-columns:1fr}.hero-proof-inline .hero-proof-item{border-left:0;border-top:1px solid var(--line);padding:18px 0 0}.hero-proof{max-width:none}.card+.card{border-left:1px solid var(--line);border-top:0}.dark .card+.card{border-left:1px solid #40505d}.route-row{grid-template-columns:60px 1fr}.route-row p{grid-column:2}.proof{grid-template-columns:1fr 1fr}.scope{grid-template-columns:1fr}.scope div,.scope div:nth-child(odd){border-right:0;border-bottom:1px solid var(--line)}.scope div:last-child{border-bottom:0}.contact-intro{position:static}}
+@media(max-width:620px){.wrap{width:min(calc(100% - 26px),var(--max))}section{padding:78px 0}h1{font-size:46px}h2{font-size:38px}.hero p{font-size:18px}.ctas{display:grid}.proof{grid-template-columns:1fr}.proof div{border-right:0;border-bottom:1px solid var(--line)}.price-main,.form-card{padding:26px 20px}.profile-card:before{font-size:44px}}
+
+.hero-proof-section{padding:44px 0}.hero-proof{background:rgba(255,253,249,.96);border:1px solid rgba(23,23,23,.12);border-radius:28px;padding:30px 34px;box-shadow:0 18px 48px rgba(30,23,18,.08)}.hero-proof-inline{display:grid;grid-template-columns:1.05fr .95fr .95fr;gap:24px;align-items:center}.hero-proof-inline .hero-proof-main{margin:0}.hero-proof-inline .hero-proof-item{border-top:0;border-left:1px solid var(--line);padding:0 0 0 24px}.hero-proof-inline .hero-proof-note{grid-column:1/-1;padding-top:14px;border-top:1px solid var(--line)}
+.hero-proof-label{font-size:12px;font-weight:900;letter-spacing:.12em;color:#a96300;margin-bottom:14px}
+.hero-proof-main{font-size:clamp(34px,4.4vw,54px);font-weight:950;line-height:1.14;letter-spacing:-.04em;margin-bottom:24px}
+.hero-proof-item{padding:18px 0;border-top:1px solid var(--line)}
+.hero-proof-item span{display:block;color:#a96300;font-size:12px;font-weight:900;letter-spacing:.08em}
+.hero-proof-item b{display:block;font-size:22px;line-height:1.45;margin-top:5px}
+.hero-proof-item small{display:block;color:var(--muted);font-size:13px;line-height:1.6;margin-top:3px}
+.hero-proof-note{margin:18px 0 0!important;font-size:12px!important;line-height:1.7!important;color:var(--muted)!important}
+
+
+@media(max-width:620px){
+  .hero>.wrap{padding:48px 0 64px!important}
+}
+
+
+/* Hero spacing fix: generic section padding must not apply to FV */
+.hero{padding:0!important}
+@media(max-width:620px){
+  .hero{padding:0!important}
+  .hero>.wrap{padding:42px 0 58px!important}
+}
+
+
+/* Mobile proof block: prevent narrow multi-column wrapping */
+@media(max-width:900px){
+  .hero-proof-section{padding:28px 0!important}
+  .hero-proof-inline{
+    display:block!important;
+  }
+  .hero-proof{
+    padding:26px 22px!important;
+    border-radius:20px!important;
+  }
+  .hero-proof-label{
+    margin-bottom:8px!important;
+    font-size:11px!important;
+    line-height:1.5!important;
+    letter-spacing:.1em!important;
+  }
+  .hero-proof-main{
+    margin:0 0 20px!important;
+    font-size:30px!important;
+    line-height:1.3!important;
+    letter-spacing:-.03em!important;
+  }
+  .hero-proof-main br{display:none!important}
+  .hero-proof-item{
+    display:grid!important;
+    grid-template-columns:92px 1fr!important;
+    gap:4px 14px!important;
+    align-items:start!important;
+    padding:18px 0!important;
+    border-left:0!important;
+    border-top:1px solid var(--line)!important;
+  }
+  .hero-proof-item span{
+    grid-row:1 / span 2!important;
+    font-size:13px!important;
+    line-height:1.5!important;
+    padding-top:3px!important;
+  }
+  .hero-proof-item b{
+    margin:0!important;
+    font-size:21px!important;
+    line-height:1.45!important;
+    word-break:keep-all!important;
+    overflow-wrap:normal!important;
+  }
+  .hero-proof-item small{
+    margin:2px 0 0!important;
+    font-size:13px!important;
+    line-height:1.65!important;
+    word-break:normal!important;
+  }
+  .hero-proof-note{
+    margin:4px 0 0!important;
+    padding-top:16px!important;
+    border-top:1px solid var(--line)!important;
+    font-size:12px!important;
+    line-height:1.8!important;
+  }
+}
+@media(max-width:390px){
+  .hero-proof-item{
+    grid-template-columns:78px 1fr!important;
+    gap:4px 10px!important;
+  }
+  .hero-proof-item b{font-size:19px!important}
+}
+
+
+/* v9 cognitive-load reset */
+.hero>.wrap{padding-top:88px;padding-bottom:76px}
+.hero-inner{max-width:860px}
+.hero h1{font-size:clamp(44px,5.4vw,72px);line-height:1.1;max-width:880px}
+.hero p{max-width:760px}
+.proof-strip-section{padding:30px 0!important}
+.proof-strip{display:grid;grid-template-columns:1.1fr 1fr 1fr;border:1px solid var(--line);background:#fff;border-radius:18px;overflow:hidden}
+.proof-strip>div{padding:18px 22px}
+.proof-strip-title{font-weight:900;background:#faf7f1}
+.proof-strip-item{border-left:1px solid var(--line)}
+.proof-strip-item b{display:block;color:#9b5d00;font-size:15px}
+.proof-strip-item span{display:block;margin-top:4px;font-size:18px;font-weight:850}
+.proof-strip-note{margin:10px 0 0;font-size:12px;color:var(--muted)}
+.simple-rows{margin-top:34px;border-top:1px solid var(--line)}
+.simple-row{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
+.simple-row b{font-size:18px}.simple-row span{color:var(--sub)}
+.how-steps{margin-top:40px;border-top:1px solid #40505d}
+.how-step{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid #40505d}
+.how-step>span{color:#ffc66d;font-weight:900}.how-step b{display:block;font-size:20px}.how-step p{margin:5px 0 0;color:#c7d0d8}
+.case-grid-simple .case{padding:28px}
+.case-grid-simple .case h3{font-size:21px}
+.scope-simple div{padding:24px}
+.fit-rows{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px}
+.fit-rows>div{padding:28px;border:1px solid var(--line);background:#fff}
+.fit-rows b{font-size:20px}.fit-rows p{margin:8px 0 0;color:var(--sub)}
+.profile-stats-simple{grid-template-columns:repeat(3,1fr)}
+section{padding:88px 0}
+h2{font-size:clamp(34px,4.2vw,54px);line-height:1.18}
+.lead{font-size:18px;line-height:1.85}
+@media(max-width:900px){
+  .hero>.wrap{padding:38px 0 54px!important}
+  .hero h1{font-size:38px!important;line-height:1.2!important}
+  .hero p{font-size:17px!important;line-height:1.8!important;margin-top:24px!important}
+  .proof-strip{grid-template-columns:1fr!important}
+  .proof-strip>div{padding:15px 18px!important}
+  .proof-strip-item{border-left:0!important;border-top:1px solid var(--line)!important}
+  .proof-strip-item{display:flex!important;align-items:baseline!important;justify-content:space-between!important;gap:14px!important}
+  .proof-strip-item b{font-size:14px!important}
+  .proof-strip-item span{font-size:17px!important;margin:0!important;text-align:right!important}
+  .simple-row{grid-template-columns:1fr!important;gap:4px!important;padding:17px 0!important}
+  .simple-row b{font-size:17px!important}
+  .simple-row span{font-size:15px!important}
+  .how-step{grid-template-columns:42px 1fr!important}
+  .how-step b{font-size:18px!important}
+  .how-step p{font-size:15px!important}
+  .fit-rows{grid-template-columns:1fr!important}
+  .profile-stats-simple{grid-template-columns:1fr!important}
+  section{padding:68px 0!important}
+  h2{font-size:32px!important;line-height:1.28!important}
+  .lead{font-size:16px!important;line-height:1.8!important}
+  .case-grid-simple .case{padding:24px!important}
+  .case-grid-simple .metric{font-size:32px!important}
+}
+
+
+/* v10 final cognitive-load tightening */
+@media(max-width:900px){
+  .hero h1{
+    font-size:36px!important;
+    line-height:1.19!important;
+    letter-spacing:-.035em!important;
+  }
+  h2{
+    font-size:30px!important;
+    line-height:1.3!important;
+    letter-spacing:-.03em!important;
+  }
+  section{
+    padding:62px 0!important;
+  }
+  .proof-strip-section{
+    padding:24px 0!important;
+  }
+}
+
+
+/* v12: one-block-one-conclusion */
+.proof-message-section{padding:54px 0!important}
+.proof-message{max-width:980px}
+.proof-message h2{margin-bottom:18px}
+.proof-message .lead{max-width:820px}
+.proof-results{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.proof-result{padding:24px;border:1px solid var(--line);background:#fff;border-radius:18px}
+.proof-result span{display:block;color:#9b5d00;font-size:15px;font-weight:900;margin-bottom:6px}
+.proof-result b{display:block;font-size:28px;line-height:1.3}
+.proof-result small{display:block;margin-top:7px;color:var(--muted);font-size:13px;line-height:1.65}
+@media(max-width:900px){
+  .proof-message-section{padding:42px 0!important}
+  .proof-results{grid-template-columns:1fr!important;gap:12px!important;margin-top:24px!important}
+  .proof-result{padding:20px!important}
+  .proof-result b{font-size:23px!important}
+}
+
+
+/* v13 final refinement */
+.experience-list{margin-top:34px;border-top:1px solid var(--line)}
+.experience-row{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:22px 0;border-bottom:1px solid var(--line)}
+.experience-row b{font-size:20px;color:#9b5d00}
+.experience-row span{font-size:17px;line-height:1.8;color:var(--sub)}
+@media(max-width:900px){
+  .experience-row{grid-template-columns:1fr!important;gap:5px!important;padding:18px 0!important}
+  .experience-row b{font-size:18px!important}
+  .experience-row span{font-size:15px!important;line-height:1.75!important}
+}
+
+
+/* form branch visibility */
+.radio:has(input:checked){border-color:#b66b00!important;background:#fff8ed!important;box-shadow:0 0 0 2px rgba(182,107,0,.08)}
+.radio:has(input:checked) strong{color:#8f5300}
+.explain[hidden]{display:none!important}
+.opt{display:inline-block;margin-left:6px;font-size:11px;font-weight:800;color:var(--muted);background:#eee9e1;padding:2px 7px;border-radius:999px}
+
+</style>
+
+<style id="amazon-production-form">
+#contact{
+  background:#131e29!important;
+  color:#fff;
+  scroll-margin-top:88px;
+  padding:120px 0!important;
+}
+.contact-form-layout{
+  display:grid;
+  grid-template-columns:minmax(0,.82fr) minmax(420px,1.18fr);
+  gap:64px;
+  align-items:start;
+}
+.contact-form-intro{position:sticky;top:104px}
+.contact-form-intro .kicker{color:#ffd18a!important}
+.contact-form-intro .kicker:before{background:#ffd18a!important}
+.contact-form-intro h2{color:#fff;margin-bottom:22px;font-size:clamp(45px,6vw,76px)}
+.contact-form-intro .contact-intro-lead{color:rgba(255,255,255,.86);font-size:18px;line-height:1.9}
+.contact-form-card{
+  background:#fffdf9;
+  color:#171717;
+  border-radius:20px;
+  padding:34px;
+  box-shadow:0 24px 60px rgba(0,0,0,.24);
+}
+.contact-form-card,.contact-form-card form{color:#171717}
+.contact-form-card p,.contact-form-card label{color:#302d29}
+
+.inquiry-select{margin:0 0 28px}
+.inquiry-select-title{margin:0 0 10px;font-size:15px;font-weight:800;line-height:1.5}
+.required-mark{margin-left:8px;color:#b66d00;font-size:12px}
+.inquiry-radio-group{display:grid;gap:10px}
+.inquiry-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.inquiry-radio-card{
+  display:flex;align-items:flex-start;gap:12px;padding:16px;
+  border:1px solid #ddd;background:#fff;cursor:pointer;
+  transition:border-color .15s,background .15s;
+}
+.inquiry-radio-card:hover{border-color:#b66d00}
+.inquiry-radio-ui{width:18px;height:18px;margin-top:3px;border:2px solid #aaa;border-radius:50%;position:relative;flex:0 0 auto}
+.inquiry-toggle:checked + .inquiry-radio-card{border-color:#b66d00;background:#fff8ed}
+.inquiry-toggle:checked + .inquiry-radio-card .inquiry-radio-ui{border-color:#b66d00}
+.inquiry-toggle:checked + .inquiry-radio-card .inquiry-radio-ui::after{content:"";position:absolute;inset:3px;border-radius:50%;background:#b66d00}
+.inquiry-radio-text strong{display:block;margin:0 0 3px;font-size:16px;line-height:1.5}
+.inquiry-radio-text small{display:block;color:#666;font-size:13px;line-height:1.7}
+
+.diagnosis-explanation{margin:0 0 28px}
+.diagnosis-scope{margin:0 0 12px;padding:24px;border:1px solid rgba(182,109,0,.2);background:#fffaf2}
+.diagnosis-scope h3{margin:0 0 14px;font-size:18px;line-height:1.5}
+.diagnosis-scope ul{margin:0;padding-left:1.2em}
+.diagnosis-scope li{margin:.55em 0;line-height:1.8;font-size:15px}
+.diagnosis-note{margin:0;padding:14px 16px;background:#f7f7f7;font-size:13px;line-height:1.8;color:#555!important}
+
+.form-field{margin-bottom:22px}
+.form-field label{display:flex;align-items:center;gap:8px;margin-bottom:8px;font-weight:700;color:#171717}
+.required{display:inline-flex;align-items:center;min-height:20px;padding:2px 7px;border-radius:999px;background:#b66d00;color:#fff!important;font-size:11px;line-height:1}
+.form-field input,.form-field textarea{
+  width:100%;border:1px solid #cfc7bd;border-radius:10px;background:#fff;color:#171717;
+  font:inherit;font-size:16px;line-height:1.6;padding:13px 14px;
+  transition:border-color .18s ease,box-shadow .18s ease;
+  -webkit-text-fill-color:#171717;
+}
+.form-field textarea{resize:vertical;min-height:160px}
+.form-field input:focus,.form-field textarea:focus{border-color:#b66d00;outline:none;box-shadow:0 0 0 3px rgba(182,109,0,.14)}
+.form-field input[aria-invalid="true"],.form-field textarea[aria-invalid="true"]{border-color:#b00020}
+.form-field input::placeholder,.form-field textarea::placeholder{color:#7a746d;opacity:1}
+.field-help{margin:7px 0 0;color:#655f58!important;font-size:13px;line-height:1.7}
+.field-error{min-height:18px;margin:6px 0 0;color:#a8001d!important;font-size:13px;font-weight:700}
+.form-data-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+
+.form-consent{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;margin:4px 0 24px}
+.form-consent input{width:18px;height:18px;margin-top:3px}
+.form-consent label{color:#302d29;line-height:1.7}
+.form-consent label a{color:#8f5300;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.form-consent .field-error{grid-column:1/-1}
+
+.form-submit{
+  width:100%;min-height:58px;border:0;border-radius:12px;background:#b66d00;color:#fff!important;
+  font:inherit;font-size:16px;font-weight:800;cursor:pointer;
+  transition:transform .18s ease,background .18s ease;
+}
+.form-submit:hover{background:#8f5300;transform:translateY(-1px)}
+.form-submit:disabled{cursor:wait;opacity:.7;transform:none}
+
+.submit-microcopy{margin:12px 0 0;text-align:center}
+.submit-microcopy-line{margin:0;color:#655f58!important;font-size:13px;line-height:1.75}
+.form-status{margin-top:14px;color:#302d29!important;font-size:14px;font-weight:700;line-height:1.7}
+.form-status strong{color:#176b38}
+.hp-field{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(1px,1px,1px,1px)!important;white-space:nowrap!important}
+
+#diagnosis-fields[hidden],#diagnosis-explanation[hidden],#consultation-explanation[hidden]{display:none!important}
+#consultation-explanation{display:none;margin:0 0 28px}
+
+.message-label-consultation,.submit-label-consultation,.submit-microcopy-consultation{display:none}
+#contact-form:has(#inquiry-consultation:checked) #diagnosis-explanation,
+#contact-form:has(#inquiry-consultation:checked) #diagnosis-fields{display:none!important}
+#contact-form:has(#inquiry-consultation:checked) #consultation-explanation{display:block!important}
+#contact-form:has(#inquiry-consultation:checked) .message-label-diagnosis,
+#contact-form:has(#inquiry-consultation:checked) .submit-label-diagnosis,
+#contact-form:has(#inquiry-consultation:checked) .submit-microcopy-diagnosis{display:none!important}
+#contact-form:has(#inquiry-consultation:checked) .message-label-consultation,
+#contact-form:has(#inquiry-consultation:checked) .submit-label-consultation{display:inline}
+#contact-form:has(#inquiry-consultation:checked) .submit-microcopy-consultation{display:block}
+
+@media(max-width:900px){
+  .contact-form-layout{grid-template-columns:1fr;gap:34px}
+  .contact-form-intro{position:static}
+}
+@media(max-width:620px){
+  #contact{padding:82px 0!important}
+  .contact-form-card{padding:22px 18px;border-radius:14px}
+  .form-data-grid{grid-template-columns:1fr}
+  .contact-form-intro h2{font-size:39px}
+  .contact-form-intro .contact-intro-lead{font-size:17px}
+}
+</style>
+
+
+<link rel="alternate" hreflang="ja-JP" href="https://konishi-marketing.com/amazon/">
+<link rel="alternate" hreflang="x-default" href="https://konishi-marketing.com/amazon/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="author" content="小西秀人">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="小西マーケティング">
+<meta property="og:title" content="Amazon商品ページ制作・改善｜商品画像・A+まで一式｜小西マーケティング">
+<meta property="og:description" content="Amazonで既に販売しているメーカー・EC事業者向け。商品画像・商品情報・A+を別々に作らず、ページ全体を見直して『選ばれる構成』へ改善・制作します。">
+<meta property="og:url" content="https://konishi-marketing.com/amazon/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Amazon商品ページ制作・改善｜商品画像・A+まで一式｜小西マーケティング">
+<meta name="twitter:description" content="Amazonで既に販売しているメーカー・EC事業者向け。商品画像・商品情報・A+を別々に作らず、ページ全体を見直して『選ばれる構成』へ改善・制作します。">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://konishi-marketing.com/#organization","name":"小西マーケティング","url":"https://konishi-marketing.com/","founder":{"@id":"https://konishi-marketing.com/#person"}},{"@type":"Person","@id":"https://konishi-marketing.com/#person","name":"小西秀人","jobTitle":"代表","worksFor":{"@id":"https://konishi-marketing.com/#organization"},"url":"https://konishi-marketing.com/"},{"@type":"Service","@id":"https://konishi-marketing.com/amazon/#service","name":"Amazon商品ページ制作・改善","serviceType":["Amazon商品ページ改善","Amazon商品ページ制作","Amazon商品画像制作","Amazon A+コンテンツ制作"],"description":"Amazonで既に販売している商品を対象に、商品画像、商品情報原稿、A+コンテンツをまとめて見直し、調査・構成・コピー・デザインまで一式で制作するサービス。","url":"https://konishi-marketing.com/amazon/","provider":{"@id":"https://konishi-marketing.com/#organization"},"areaServed":{"@type":"Country","name":"日本"},"audience":{"@type":"BusinessAudience","audienceType":"Amazonで既存商品を販売するメーカー・EC事業者"},"offers":{"@type":"Offer","url":"https://konishi-marketing.com/amazon/","price":"299800","priceCurrency":"JPY","availability":"https://schema.org/InStock","description":"Amazon商品ページ改善・制作一式。商品・競合・VOC調査、構成、コピー、商品画像、商品情報原稿、A+、スマホ撮影素材からのAI画像合成を含む税別料金。"}},{"@type":"WebPage","@id":"https://konishi-marketing.com/amazon/#webpage","url":"https://konishi-marketing.com/amazon/","name":"Amazon商品ページ制作・改善｜商品画像・A+まで一式｜小西マーケティング","description":"Amazonで既に販売しているメーカー・EC事業者向け。商品画像・商品情報・A+をまとめて見直し、『選ばれる構成』へ改善・制作します。","inLanguage":"ja-JP","about":{"@id":"https://konishi-marketing.com/amazon/#service"},"headline":"Amazon商品ページ制作・改善"},{"@type":"BreadcrumbList","@id":"https://konishi-marketing.com/amazon/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"トップページ","item":"https://konishi-marketing.com/"},{"@type":"ListItem","position":2,"name":"Amazon商品ページ制作・改善","item":"https://konishi-marketing.com/amazon/"}]}]}</script>
+</head>
+<body>
+<header class="topbar"><div class="wrap nav">
+<a class="brand" href="https://konishi-marketing.com/">小西マーケティング</a>
+<nav class="navlinks"><a href="/rakuten/">楽天</a><a href="/yahoo/">Yahoo!</a><a href="/makuake/">Makuake</a><a href="/jisha/">自社EC</a><a href="/articles/">記事</a></nav>
+<a class="navcta" href="#contact" data-ga-event="cta_click" data-ga-cta-type="consultation" data-ga-location="header">制作相談をする</a>
+</div></header>
+<main>
+<nav class="breadcrumb" aria-label="パンくず"><ol><li><a href="https://konishi-marketing.com/">トップページ</a></li><li aria-current="page">Amazon商品ページ制作・改善</li></ol></nav>
+
+<section class="hero"><div class="wrap">
+<div class="hero-inner">
+<div class="eyebrow">Amazon商品ページ制作・改善</div>
+<h1>Amazonの売上を、<br>「選ばれる構成」から<br>もう一段伸ばす。</h1>
+<p>画像を増やすだけではありません。商品画像・商品情報・A+を一つにつなぎ、比較されたときに「この商品を選ぶ理由」が伝わる商品ページへ作り直します。</p>
+<div class="ctas">
+<a class="btn primary" href="#contact" data-ga-event="cta_click" data-ga-cta-type="consultation" data-ga-location="hero">制作について相談する</a>
+<a class="btn secondary" href="#contact" data-ga-event="cta_click" data-ga-cta-type="free_diagnosis" data-ga-location="hero">無料診断を受ける</a>
+</div>
+<p class="note" style="margin-top:14px">既存商品の改善を主な対象としています。</p>
+</div>
+</div></section>
+
+<section class="white proof-message-section"><div class="wrap">
+<div class="proof-message">
+<div class="kicker">実績</div>
+<h2>売れる商品には、<br>売れる構成があります。</h2>
+<p class="lead">enevoltとiRingでは、商品ページの構成と販売訴求を設計しました。その商品が実際にどこまで売れたかまで、数字で確認できます。</p>
+<div class="proof-results">
+<div class="proof-result"><span>enevolt</span><b>シリーズ累計527万本</b><small>商品ページ構成・販売訴求を設計／在籍中の2021年9月時点</small></div>
+<div class="proof-result"><span>iRing</span><b>国内累計18万個+</b><small>商品ページ構成・販売訴求を設計</small></div>
+</div>
+<p class="note">※販売数はAmazon単独ではなく、Amazonを含むECで販売されたブランド・商品の累計実績です。</p>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="kicker">WHY</div>
+<h2>商品画像とA+を別々に考えると、<br>「選ぶ理由」が分かれやすい。</h2>
+<p class="lead">Amazonでは、価格・レビュー・配送・商品画像・商品情報・A+を行き来しながら比較されます。どこか一つだけ強くしても、ページ全体で「この商品を選ぶ理由」がつながっていなければ、競合との比較は終わりません。</p>
+<div class="simple-rows">
+<div class="simple-row"><b>商品画像</b><span>まず「何が違う商品か」を一目で伝える</span></div>
+<div class="simple-row"><b>商品情報</b><span>価格やレビューだけでは分からない「選ぶ理由」を補う</span></div>
+<div class="simple-row"><b>A+</b><span>上で済んだ説明は繰り返さず、最後に残る不安だけを解消する</span></div>
+</div>
+</div></section>
+
+<section class="dark"><div class="wrap">
+<div class="kicker">HOW</div>
+<h2>ページ全体を見てから、<br>商品画像とA+を作ります。</h2>
+<p class="lead">先に画像枚数やA+のモジュール数を決めません。今のページで何が伝わっていないかを確認し、商品画像・商品情報・A+の役割を分けてから制作します。</p>
+<div class="how-steps">
+<div class="how-step"><span>01</span><div><b>今のページを確認</b><p>何は伝わっていて、何がまだ弱いのかを確認します。</p></div></div>
+<div class="how-step"><span>02</span><div><b>役割を分ける</b><p>商品画像・商品情報・A+に、必要な内容だけを分けます。</p></div></div>
+<div class="how-step"><span>03</span><div><b>一つにつなげる</b><p>どのパーツを見ても、同じ「この商品を選ぶ理由」へつながるよう整えます。</p></div></div>
+</div>
+</div></section>
+
+
+
+<section class="white"><div class="wrap">
+<div class="kicker">経験</div>
+<h2>違うカテゴリでも、<br>売れる構成を作ってきました。</h2>
+<p class="lead">電池とスマホアクセサリー。商品の選ばれ方が違う2カテゴリで、商品ページ構成と販売訴求を設計しています。</p>
+<div class="experience-list">
+<div class="experience-row"><b>enevolt</b><span>機能差が見えにくい電池カテゴリで、選ぶ理由が伝わる構成を設計</span></div>
+<div class="experience-row"><b>iRing</b><span>比較されやすいスマホアクセサリーで、違いが伝わる構成を設計</span></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="kicker">SCOPE</div>
+<h2>構成だけで終わらせず、<br>商品画像とA+まで完成させます。</h2>
+<p class="lead">調査で「何を伝えるか」を決め、そのままコピー・商品画像・商品情報・A+の完成データまで一貫して制作します。</p>
+<div class="scope scope-simple">
+<div><b>調査・構成</b><p>競合・レビュー・購入前の迷いを確認し、何を伝えるかを決めます。</p></div>
+<div><b>商品画像</b><p>構成・コピー・完成デザインまで制作します。</p></div>
+<div><b>商品情報原稿</b><p>タイトル・箇条書きなど、必要なテキストを整えます。</p></div>
+<div><b>A+</b><p>上部で伝えきれない内容だけを構成・デザインします。</p></div>
+<div><b>AI画像合成</b><p>スマホ撮影素材から、必要な背景・使用シーンを合成します。</p></div>
+<div><b>納品</b><p>Seller Centralへ反映できる完成データと原稿を納品します。</p></div>
+</div>
+<p class="note" style="margin-top:18px">※プロカメラマン撮影、モデル手配、ロケ等は別途。Seller Centralへの登録作業は行いません。</p>
+</div></section>
+
+<section class="white"><div class="wrap">
+<div class="kicker">PRICING</div>
+<h2>299,800円で、<br>商品画像からA+まで一式。</h2>
+<div class="price-main">
+<span class="tag">STANDARD</span>
+<h3>Amazon商品ページ改善・制作 一式</h3>
+<div class="price">299,800円</div><div class="tax">税別 / 1商品</div>
+<div class="price-cols">
+<div><p>現在の商品ページを確認し、必要な商品画像・商品情報・A+をまとめて制作します。</p>
+<ul><li>商品・競合・VOCリサーチ</li><li>商品ページ全体の構成設計</li><li>商品画像 構成・コピー・デザイン</li><li>タイトル・箇条書き等の原稿</li><li>A+ 構成・コピー・デザイン</li><li>スマホ撮影素材からのAI画像合成</li></ul></div>
+<div><h3 style="font-size:22px">基本条件</h3>
+<ul><li>修正2回まで</li><li>完成データ・原稿を納品</li><li>Seller Central登録作業なし</li><li>プロ撮影・モデル撮影等は別途</li><li>追加SKU・大幅な仕様違いは別途お見積り</li></ul>
+<p class="note">初回設計と異なる方向への全面変更、制作開始後の商品仕様変更などは修正回数内でも別途ご相談となる場合があります。</p></div>
+</div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="kicker">FIT</div>
+<h2>新規出品より、<br>「今より伸ばしたい既存商品」向けです。</h2>
+<div class="fit-rows">
+<div><b>向いている</b><p>すでに販売実績があり、画像やA+まで作ったがCVRが伸びない。競合比較で負ける理由をページから見直したい。</p></div>
+<div><b>向いていない</b><p>新規出品を安く立ち上げたい。Seller Centralの登録や運用代行だけを任せたい。画像だけを枚数指定で作りたい。</p></div>
+</div>
+</div></section>
+
+<section class="white"><div class="wrap profile">
+<div class="profile-card"><img src="https://konishi-marketing.com/images/konishi.JPG" alt="小西秀人プロフィール写真" loading="lazy" width="960" height="1200"></div>
+<div>
+<div class="kicker">担当者</div>
+<h2>ページを作るだけでなく、<br>売上とCVRまで見てきた人間が担当します。</h2>
+<p class="profile-note">Amazonを含むECで大量販売された商品の構成設計に加え、楽天・Yahoo!ショッピングでは公開後のCVRや売上まで追ってきました。</p>
+<div class="profile-stats profile-stats-simple">
+<div class="profile-stat"><span>Amazonを含むEC</span><b>enevolt / iRing<br>ページ構成を設計</b></div>
+<div class="profile-stat"><span>楽天市場</span><b>商品別CVR<br>最大62％</b></div>
+<div class="profile-stat"><span>楽天・Yahoo!</span><b>総合ランキング<br>1位</b></div>
+</div>
+<p>EC・D2C実務20年。商品ページ制作だけでなく、CVRや売上まで見てきた経験をもとに担当します。</p>
+</div>
+</div></section>
+
+<section><div class="wrap faq">
+<div class="kicker">FAQ</div><h2>よくある質問</h2>
+<details open><summary>A+コンテンツも料金に含まれますか？</summary><p>はい。基本料金299,800円（税別）に、通常のA+コンテンツの構成・コピー・デザインを含みます。A+を商品画像の長い説明版にはせず、商品画像や商品情報だけでは伝えきれない内容に絞って設計します。</p></details>
+<details><summary>商品撮影は必要ですか？</summary><p>必ずしもプロ撮影は必要ありません。商品に応じて必要な素材カットをご案内し、スマートフォン等で撮影いただいた素材からAI合成・背景生成・使用シーン化を行う範囲は基本料金に含みます。プロカメラマン、モデル、ロケ等が必要な場合は別途です。</p></details>
+<details><summary>Seller Centralへの登録もお願いできますか？</summary><p>登録・反映作業は行いません。商品画像、A+、タイトル・箇条書き等、クライアント側で入稿できる完成データと原稿を納品します。</p></details>
+<details><summary>新規出品でも依頼できますか？</summary><p>サービスの主対象は、すでにAmazonで販売していて改善余地を持つメーカー・EC事業者です。新規出品は商品・体制・目的を確認したうえで個別に判断します。</p></details>
+<details><summary>Amazon広告運用も依頼できますか？</summary><p>本サービスは広告運用代行ではなく、商品ページの改善・制作が中心です。広告流入がある場合は、流入後にどこで比較や離脱が起きているかをページ改善の材料として確認します。</p></details>
+<details><summary>修正は何回までですか？</summary><p>2回まで基本料金に含みます。初回設計と異なる方向への全面変更、制作開始後の商品仕様変更、追加SKUや大幅な仕様違いへの展開は別途ご相談となります。</p></details>
+</div></section>
+
+<section aria-labelledby="contact-title" class="contact" id="contact">
+<div class="wrap contact-form-layout">
+<div class="contact-form-intro">
+<p class="kicker">ご相談</p>
+<h2 id="contact-title">今のAmazonページ、<br>どこを直せば伸びるか。</h2>
+<p class="contact-intro-lead">まずページの改善余地を確認したい場合は、無料診断レポートを選択してください。改善する商品が決まっており、制作範囲や進め方を確認したい場合は、制作相談を選択してください。</p>
+</div>
+<div class="contact-form-card">
+<form action="https://script.google.com/macros/s/AKfycbyO2WuhDl_-N2aFd2sdqr80UpIJ_iCMVKetndhO7vjDLgQmSp0SWnTB8CGXC4qCo39i/exec" class="contact-form" data-contact-form="amazon" id="contact-form" method="post">
+<input id="consult-type-hidden" name="consult_type" type="hidden" value="Amazon無料診断レポート">
+<input id="form-started-at" name="form_started_at" type="hidden" value="">
+<input id="user-agent" name="user_agent" type="hidden" value="">
+<input id="source-page" name="source_page" type="hidden" value="https://konishi-marketing.com/amazon/">
+<div aria-hidden="true" class="hp-field"><label for="website">ウェブサイト</label><input autocomplete="off" id="website" name="website" tabindex="-1" type="text"></div>
+
+<div class="inquiry-select">
+<div class="inquiry-select-title">ご希望の内容<span class="required-mark">必須</span></div>
+<div class="inquiry-radio-group">
+<input checked class="inquiry-toggle" id="inquiry-diagnosis" name="inquiry_type" type="radio" value="Amazon無料診断レポート">
+<label class="inquiry-radio-card" for="inquiry-diagnosis"><span class="inquiry-radio-ui"></span><span class="inquiry-radio-text"><strong>無料診断レポートを受け取りたい</strong><small>主力商品1ページの改善余地と、優先して見直す箇所を確認したい方</small></span></label>
+<input class="inquiry-toggle" id="inquiry-consultation" name="inquiry_type" type="radio" value="制作相談">
+<label class="inquiry-radio-card" for="inquiry-consultation"><span class="inquiry-radio-ui"></span><span class="inquiry-radio-text"><strong>制作について相談したい</strong><small>制作範囲、必要素材、費用、進め方を先に確認したい方</small></span></label>
+</div>
+</div>
+
+<div class="diagnosis-explanation" id="diagnosis-explanation">
+<div class="diagnosis-scope">
+<h3>無料診断レポートで確認すること</h3>
+<ul>
+<li>現在の伝え方：商品画像・商品情報・A+が、同じ「選ぶ理由」につながっているか</li>
+<li>比較のされ方：価格やレビューだけの比較へ戻っていないか</li>
+<li>改善優先度：最初に見直すべき商品画像・商品情報・A+</li>
+<li>改善後の見込み：数値をご共有いただける場合は、CVRと売上への影響を試算</li>
+</ul>
+</div>
+<p class="diagnosis-note">無料診断では、現在の商品ページで購入者が迷いやすい箇所を整理します。完成コピー、画像構成、A+デザインは制作依頼後に作成します。</p>
+</div>
+
+<div class="diagnosis-explanation" hidden id="consultation-explanation">
+<div class="diagnosis-scope">
+<h3>制作相談で確認すること</h3>
+<ul>
+<li>改善・制作したいAmazon商品ページと、現在感じている課題</li>
+<li>商品画像・商品情報原稿・A+のうち、必要な制作範囲</li>
+<li>使用できる商品写真と、AI合成・新規撮影の必要性</li>
+<li>費用、制作期間、着手時期、進め方</li>
+</ul>
+</div>
+<p class="diagnosis-note">ご相談と見積もり作成に費用はかかりません。商品ページURLや商品資料がある場合は、ご相談内容欄へ記載してください。</p>
+</div>
+
+<div class="form-field"><label for="company">会社名・屋号</label><input autocomplete="organization" id="company" name="company" type="text"><p aria-live="polite" class="field-error" id="company-error"></p></div>
+<div class="form-field"><label for="name">お名前<span class="required">必須</span></label><input aria-required="true" autocomplete="name" id="name" name="name" required type="text"><p aria-live="polite" class="field-error" id="name-error"></p></div>
+<div class="form-field"><label for="email">メールアドレス<span class="required">必須</span></label><input aria-required="true" autocomplete="email" id="email" inputmode="email" name="email" required type="email"><p aria-live="polite" class="field-error" id="email-error"></p></div>
+
+<div id="diagnosis-fields">
+<div class="form-field"><label for="product">商品名・商品カテゴリ<span class="required">必須</span></label><input aria-required="true" autocomplete="off" id="product" name="product" placeholder="例：充電池／生活家電／スマホアクセサリー" type="text"><p aria-live="polite" class="field-error" id="product-error"></p></div>
+<div class="form-field"><label for="page-url">Amazon商品ページURL<span class="required">必須</span></label><input aria-required="true" autocomplete="url" id="page-url" inputmode="url" name="page_url" placeholder="https://www.amazon.co.jp/..." type="url"><p aria-live="polite" class="field-error" id="page-url-error"></p></div>
+<div class="form-data-grid">
+<div class="form-field"><label for="monthly-access">月間セッション数</label><input id="monthly-access" inputmode="numeric" name="monthly_access" placeholder="例：10,000" type="text"></div>
+<div class="form-field"><label for="current-cvr">ユニットセッション率</label><input id="current-cvr" inputmode="decimal" name="current_cvr" placeholder="例：8.5％" type="text"></div>
+<div class="form-field"><label for="average-price">平均販売価格</label><input id="average-price" inputmode="numeric" name="average_price" placeholder="例：9,980円" type="text"></div>
+</div>
+<p class="field-help">数値が不明な場合は空欄で構いません。共有いただける範囲で診断します。</p>
+</div>
+
+<div class="form-field"><label for="inquiry-message" id="inquiry-message-label"><span class="message-label-diagnosis">商品情報・現在の状況</span><span class="message-label-consultation">ご相談内容</span><span class="required">必須</span></label><textarea aria-required="true" id="inquiry-message" name="message" placeholder="例：
+・現在感じている課題
+・これまでに行った改善
+・確認したいこと
+分かる範囲で構いません。" required rows="7"></textarea><p aria-live="polite" class="field-error" id="inquiry-message-error"></p></div>
+
+<div class="form-consent"><input aria-describedby="privacy-consent-error" aria-required="true" id="privacy-consent" name="privacy_consent" required type="checkbox" value="同意する"><label for="privacy-consent"><a href="https://konishi-marketing.com/privacy/" rel="noopener noreferrer" target="_blank">プライバシーポリシー</a>を確認し、入力内容の取り扱いに同意します。</label><p aria-live="polite" class="field-error" id="privacy-consent-error"></p></div>
+
+<button class="form-submit" id="inquiry-submit" type="submit"><span class="submit-label-diagnosis">無料診断レポートを申し込む</span><span class="submit-label-consultation">制作について相談する</span></button>
+<div aria-live="polite" class="submit-microcopy" id="inquiry-dynamic-microcopy" role="status">
+<p class="submit-microcopy-line submit-microcopy-diagnosis">2営業日以内にレポートを返送します。営業電話や、ご希望のない有料提案は行いません。</p>
+<p class="submit-microcopy-line submit-microcopy-consultation">2営業日以内にメールでご連絡します。相談と見積もり作成に費用はかかりません。</p>
+</div>
+<div aria-live="polite" class="form-status" id="form-status" role="status" tabindex="-1"></div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer><div class="wrap">© 小西マーケティング</div></footer>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const endpointMeta = document.querySelector('meta[name="amazon-form-endpoint"]');
+  const endpoint = endpointMeta ? endpointMeta.content.trim() : form.action;
+  const submitButton = document.getElementById('inquiry-submit');
+  const status = document.getElementById('form-status');
+  const startedAt = document.getElementById('form-started-at');
+  const sourcePage = document.getElementById('source-page');
+  const userAgent = document.getElementById('user-agent');
+  const diagnosisFields = document.getElementById('diagnosis-fields');
+  const diagnosisExplanation = document.getElementById('diagnosis-explanation');
+  const consultationExplanation = document.getElementById('consultation-explanation');
+  const product = document.getElementById('product');
+  const pageUrl = document.getElementById('page-url');
+  const message = document.getElementById('inquiry-message');
+  const consultType = document.getElementById('consult-type-hidden');
+  const diagnosisRadio = document.getElementById('inquiry-diagnosis');
+  const consultationRadio = document.getElementById('inquiry-consultation');
+  const radios = form.querySelectorAll('input[name="inquiry_type"]');
+
+  function selectedType() {
+    const selected = form.querySelector('input[name="inquiry_type"]:checked');
+    return selected ? selected.value : 'Amazon無料診断レポート';
+  }
+
+  function isConsultation() {
+    return selectedType() === '制作相談';
+  }
+
+  function syncInquiryType() {
+    const consultation = isConsultation();
+
+    [diagnosisFields, diagnosisExplanation].forEach(function (node) {
+      if (!node) return;
+      node.hidden = consultation;
+      node.style.display = consultation ? 'none' : '';
+    });
+
+    if (consultationExplanation) {
+      consultationExplanation.hidden = !consultation;
+      consultationExplanation.style.display = consultation ? 'block' : 'none';
+    }
+
+    [product, pageUrl].forEach(function (element) {
+      if (!element) return;
+      element.required = !consultation;
+      element.setAttribute('aria-required', consultation ? 'false' : 'true');
+    });
+
+    if (message) {
+      message.placeholder = consultation
+        ? '例：\n・改善したいAmazon商品ページ\n・現在の課題\n・希望する制作時期\n・確認したい制作範囲や進め方'
+        : '例：\n・現在感じている課題\n・これまでに行った改善\n・確認したいこと\n分かる範囲で構いません。';
+    }
+
+    if (consultType) {
+      consultType.value = consultation ? '制作相談' : 'Amazon無料診断レポート';
+    }
+  }
+
+  radios.forEach(function (radio) {
+    radio.addEventListener('change', syncInquiryType);
+  });
+
+  document.querySelectorAll('a[href="#contact"][data-ga-cta-type]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (link.dataset.gaCtaType === 'consultation' && consultationRadio) consultationRadio.checked = true;
+      if (link.dataset.gaCtaType === 'free_diagnosis' && diagnosisRadio) diagnosisRadio.checked = true;
+      syncInquiryType();
+    });
+  });
+
+  if (startedAt) startedAt.value = String(Date.now());
+  if (sourcePage) sourcePage.value = window.location.href;
+  if (userAgent) userAgent.value = navigator.userAgent;
+  syncInquiryType();
+
+  const standardFields = [
+    ['name', 'お名前をご入力ください。'],
+    ['email', 'メールアドレスをご入力ください。'],
+    ['inquiry-message', 'ご入力内容をご確認ください。']
+  ];
+
+  function errorNode(element) {
+    if (!element) return null;
+    return document.getElementById(element.id + '-error');
+  }
+
+  function clearError(element) {
+    if (!element) return;
+    element.removeAttribute('aria-invalid');
+    const node = errorNode(element);
+    if (node) node.textContent = '';
+  }
+
+  function setError(element, messageText) {
+    if (!element) return;
+    element.setAttribute('aria-invalid', 'true');
+    const node = errorNode(element);
+    if (node) node.textContent = messageText;
+  }
+
+  standardFields.forEach(function (entry) {
+    const element = document.getElementById(entry[0]);
+    if (element) element.addEventListener('input', function () { clearError(element); });
+  });
+
+  [product, pageUrl].forEach(function (element) {
+    if (element) element.addEventListener('input', function () { clearError(element); });
+  });
+
+  const consent = document.getElementById('privacy-consent');
+  if (consent) {
+    consent.addEventListener('change', function () {
+      const node = document.getElementById('privacy-consent-error');
+      if (node) node.textContent = '';
+    });
+  }
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    let firstInvalid = null;
+
+    standardFields.forEach(function (entry) {
+      const element = document.getElementById(entry[0]);
+      if (!element) return;
+      clearError(element);
+
+      if (!element.value.trim()) {
+        setError(element, entry[1]);
+        if (!firstInvalid) firstInvalid = element;
+      } else if (element.type === 'email' && !element.validity.valid) {
+        setError(element, 'メールアドレスの形式をご確認ください。');
+        if (!firstInvalid) firstInvalid = element;
+      }
+    });
+
+    if (!isConsultation()) {
+      if (product) {
+        clearError(product);
+        if (!product.value.trim()) {
+          setError(product, '商品名・商品カテゴリをご入力ください。');
+          if (!firstInvalid) firstInvalid = product;
+        }
+      }
+
+      if (pageUrl) {
+        clearError(pageUrl);
+        if (!pageUrl.value.trim()) {
+          setError(pageUrl, 'Amazon商品ページURLをご入力ください。');
+          if (!firstInvalid) firstInvalid = pageUrl;
+        } else if (!pageUrl.validity.valid) {
+          setError(pageUrl, 'URLの形式をご確認ください。');
+          if (!firstInvalid) firstInvalid = pageUrl;
+        }
+      }
+    }
+
+    if (consent && !consent.checked) {
+      const node = document.getElementById('privacy-consent-error');
+      if (node) node.textContent = '同意のうえ送信してください。';
+      if (!firstInvalid) firstInvalid = consent;
+    }
+
+    if (firstInvalid) {
+      firstInvalid.focus();
+      if (status) status.textContent = '入力内容をご確認ください。';
+      return;
+    }
+
+    if (!endpoint || !endpoint.startsWith('https://script.google.com/macros/s/')) {
+      if (status) status.textContent = '送信先を確認できませんでした。';
+      return;
+    }
+
+    const submittedType = selectedType();
+    const originalHtml = submitButton ? submitButton.innerHTML : '';
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = '送信しています…';
+    }
+    if (status) status.textContent = '';
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        body: new FormData(form),
+        redirect: 'follow'
+      });
+
+      const result = await response.json();
+      if (!result.ok) throw new Error(result.message || '送信できませんでした。');
+
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'form_submit_success', {
+          form_name: 'amazon_service_page',
+          inquiry_type: submittedType
+        });
+      }
+
+      form.reset();
+      if (diagnosisRadio) diagnosisRadio.checked = true;
+      syncInquiryType();
+
+      if (startedAt) startedAt.value = String(Date.now());
+      if (sourcePage) sourcePage.value = window.location.href;
+      if (userAgent) userAgent.value = navigator.userAgent;
+
+      if (status) {
+        status.innerHTML = submittedType === '制作相談'
+          ? '<strong>制作相談を受け付けました。</strong><br>受付ID：' + String(result.receiptId || '') + '<br>2営業日以内にメールでご連絡します。'
+          : '<strong>無料診断を受け付けました。</strong><br>受付ID：' + String(result.receiptId || '') + '<br>診断レポートを返送します。';
+
+        if (status.focus) status.focus();
+      }
+    } catch (error) {
+      console.error(error);
+      if (status) {
+        status.textContent = error && error.message
+          ? error.message
+          : '送信できませんでした。時間を置いて再度お試しください。';
+      }
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalHtml;
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+<style>
+@media(max-width:900px){
+  .hero-proof-label{
+    color:#6b6259!important;
+    letter-spacing:.04em!important;
+    text-transform:none!important;
+  }
+  .hero-proof-main{
+    font-size:27px!important;
+    line-height:1.45!important;
+    max-width:620px!important;
+  }
+  .hero-proof-main br{display:none!important}
+}
+</style>
+
+<style>
+.hero-proof-label{
+  font-size:15px!important;
+  line-height:1.5!important;
+  font-weight:900!important;
+  letter-spacing:.03em!important;
+  color:#7a4a00!important;
+}
+@media(max-width:900px){
+  .hero-proof-label{
+    font-size:15px!important;
+    line-height:1.6!important;
+    letter-spacing:.02em!important;
+    color:#6b4a16!important;
+    margin-bottom:12px!important;
+  }
+}
+</style>
