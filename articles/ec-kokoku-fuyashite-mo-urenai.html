@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<link href="https://konishi-marketing.com/images/favicon.ico" rel="icon" sizes="any"/>
+<meta charset="utf-8"/>
+<meta content="only light" name="color-scheme"/>
+<link href="https://konishi-marketing.com/articles/ec-kokoku-fuyashite-mo-urenai.html" rel="canonical"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>EC広告を増やしても売上が伸びない理由｜クリック後に止まっていないか｜小西マーケティング</title>
+<meta content="EC広告を増やしても売上が伸びないときは、広告設定だけでなくクリック後の商品ページ・カート・購入完了まで確認します。広告で人を連れて来られていないのか、来た人が買っていないのかを切り分けます。" name="description"/>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-SWS3R3K4W5');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+</style>
+<style id="makuake-author-profile-standard-v1">
+/* Makuake article author profile standardization 2026-08-07 */
+.author-proof-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  margin:1rem 0 1.25rem;
+  border:1px solid var(--gray-200);
+  background:var(--gray-200);
+}
+.author-proof-item{
+  min-width:0;
+  padding:1rem 1.1rem;
+  background:var(--white);
+}
+.author-proof-label{
+  display:block;
+  margin-bottom:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  font-weight:700;
+  line-height:1.5;
+}
+.author-proof-value{
+  display:block;
+  color:var(--navy);
+  font-size:1.35rem;
+  font-weight:700;
+  line-height:1.35;
+  letter-spacing:-.025em;
+}
+.author-proof-note{
+  display:block;
+  margin-top:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  line-height:1.65;
+}
+@media(max-width:640px){
+  .author-proof-grid{grid-template-columns:1fr}
+  .author-proof-value{font-size:1.25rem}
+}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "EC広告を増やしても売れないとき、広告設定を見直せばいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "広告設定に原因がある場合もありますが、クリック後の商品ページ・価格・送料・決済などで止まっている場合もあります。まず広告前とクリック後を分けます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "クリック数が増えているなら広告は成功ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "クリック獲得までは進んでいますが、売上目的なら購入まで見る必要があります。流入した人が商品と合っているか、商品ページからカート・購入へ進んでいるかを確認します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "広告費を止めて商品ページを直すべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一律には決められません。広告で正しい人が来ているなら継続しながらページを改善する方法もあります。重要なのは、広告とページのどちらに停止原因があるかを先に分けることです。"
+      }
+    }
+  ]
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "広告費を増やしたのに売上が伸びないなら、クリック後まで見る",
+  "description": "EC広告を増やしても売上が伸びないときは、広告設定だけでなくクリック後の商品ページ・カート・購入完了まで確認します。広告で人を連れて来られていないのか、来た人が買っていないのかを切り分けます。",
+  "image": "https://konishi-marketing.com/images/konishi.JPG",
+  "url": "https://konishi-marketing.com/articles/ec-kokoku-fuyashite-mo-urenai.html",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-18",
+  "author": {
+    "@type": "Person",
+    "name": "小西 秀人",
+    "url": "https://konishi-marketing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "小西マーケティング",
+    "url": "https://konishi-marketing.com"
+  }
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://konishi-marketing.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "オウンドメディア",
+      "item": "https://konishi-marketing.com/articles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "自社EC",
+      "item": "https://konishi-marketing.com/articles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "EC広告を増やしても売上が伸びない理由｜クリック後に止まっていないか",
+      "item": "https://konishi-marketing.com/articles/ec-kokoku-fuyashite-mo-urenai.html"
+    }
+  ]
+}</script></head>
+<body>
+<div class="site-wrap">
+<header class="site-header">
+<a href="https://konishi-marketing.com/">小西マーケティング</a>
+</header>
+<nav aria-label="パンくず" style="font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto;"><a href="https://konishi-marketing.com/" style="color:#6b6860;text-decoration:none;">ホーム</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">オウンドメディア</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><a href="https://konishi-marketing.com/articles/" style="color:#6b6860;text-decoration:none;">自社EC</a><span aria-hidden="true" style="margin:0 .45rem;color:#a09e97;">›</span><span aria-current="page" style="color:#3a3834;">EC広告を増やしても売上が伸びない理由｜クリック後に止まっていないか</span></nav>
+<div class="hero">
+<span class="hero-category">自社EC / 広告 / 売上が伸びない</span>
+<h1 class="hero-title">広告費を増やしたのに売上が伸びないなら、クリック後まで見る</h1>
+<p class="hero-lead">広告費を増やした。クリックも増えた。それなのに注文はほとんど増えない。この状態で、広告の設定だけを何度も変えても直らないことがあります。まず、広告で人を連れてくるところまでが悪いのか、来た後に買わなくなっているのかを分けます。</p>
+<p class="hero-meta">小西マーケティング｜2026.08</p>
+</div>
+<div class="author-box">この記事は、楽天SOY受賞企業の元店長として商品ページ改善とEC運営に携わり、20年以上にわたり楽天市場・自社EC・D2Cの集客、商品ページ、CVR改善、広告まで実務で担当してきた小西秀人が、ECで売れない原因を施策の印象ではなく、購入までの数字と行動から切り分けて解説しています。</div>
+<div class="article-body">
+<h2 style="margin-top:0;padding-top:0;border-top:none;">広告費を増やした結果だけ見て、「広告が悪い」と決めない</h2>
+<p>広告を増やして売上が伸びないと、入札、ターゲティング、クリエイティブを疑いたくなります。</p>
+<p>ただ、広告の役割は購入者を商品ページへ連れてくるところまでです。</p>
+<div class="insight"><em>広告で人を連れて来られていないのか。来た人が買っていないのか。</em><br/>まずこの2つを分けます。</div>
+<h2>最初に見るのは、表示 → クリック → 商品ページ → カート → 購入</h2>
+<div class="misrec-block">
+<div class="misrec-header">広告から購入までを5段階で見る</div>
+<div class="misrec-row"><div class="misrec-cell label">表示</div><div class="misrec-cell truth">狙った人へ広告が届いているか。</div></div>
+<div class="misrec-row"><div class="misrec-cell label">クリック</div><div class="misrec-cell truth">広告の内容で興味を持ち、ページへ進んでいるか。</div></div>
+<div class="misrec-row"><div class="misrec-cell label">商品ページ</div><div class="misrec-cell truth">広告で期待した内容と、商品・ページがつながっているか。</div></div>
+<div class="misrec-row"><div class="misrec-cell label">カート</div><div class="misrec-cell truth">商品・価格・証拠を見て買う候補に入っているか。</div></div>
+<div class="misrec-row"><div class="misrec-cell label">購入</div><div class="misrec-cell truth">送料、納期、決済などで最後に止まっていないか。</div></div>
+</div>
+<h2>クリックが増えないなら、まず広告側を疑う</h2>
+<p>広告は表示されているのにクリックされないなら、ページへ来る前で止まっています。</p>
+<ul class="prob-list">
+<li data-num="1">商品を欲しい人へ配信できているか</li>
+<li data-num="2">広告だけで何の商品か分かるか</li>
+<li data-num="3">クリックした後に何が分かるか期待できるか</li>
+<li data-num="4">競合広告と比べて見る理由があるか</li>
+</ul>
+<p>この状態では、商品ページだけを直してもページへ来る人数は増えません。</p>
+<h2>クリックは増えたのにカートへ進まないなら、広告設定だけを直し続けない</h2>
+<p>広告から商品ページまで人が来ているなら、次はページ以降を見ます。</p>
+<div class="callout">
+<strong>例｜広告では「コンパクトで狭い部屋でも使える」と訴求</strong><br/>
+クリック後の商品ページでは大型写真と機能一覧だけで、設置寸法や狭い部屋での使用例がない。<br/><br/>
+広告で作った期待と、商品ページで判断できる情報がつながっていません。
+</div>
+<p>この場合、広告のCTRをさらに上げても、ページ上の未完了判断は残ります。</p>
+<h2>広告で集めた人と商品が合っていなければ、ページ改善だけでも直らない</h2>
+<p>クリック後のCVRが低いとき、商品ページを原因に固定するのも危険です。</p>
+<p>「安さ」を期待してクリックした人へ高価格商品を見せる、「初心者向け」と広告したのに専門仕様の商品へ送るなど、流入そのものが商品とずれている場合があります。</p>
+<p>広告クリエイティブとLPの説明が一段飛んでいるケースは、<a href="https://konishi-marketing.com/articles/ai-l4-lp-roas-nobinai.html">AIで作ったLPに広告を流しても売れない理由</a>でも扱っています。</p>
+<h2>カートまで進むなら、広告より購入条件を見る</h2>
+<p>カート投入まで進んでいるなら、広告は購入候補を連れてきています。</p>
+<p>そこから購入されない場合は、送料、納期、在庫、決済、会員登録など購入直前の条件を確認します。</p>
+<div class="insight"><em>広告費を増やしたのに売れないときは、広告の数字だけで完結させない。</em><br/>購入までのどこで人数が落ちたかを見て、次に直す場所を決めます。</div>
+<h2>広告を増やす判断は、クリック後まで確認してから</h2>
+<p>広告から来た人が一定割合でカート・購入へ進んでいるなら、広告量を増やす意味があります。</p>
+<p>一方、同じ場所で大量に離脱しているなら、広告費を増やす前にその停止を改善します。</p>
+<p>売上が伸びないときに集客不足かどうかを分ける方法は、<a href="https://konishi-marketing.com/articles/jisha-ec-uriage-nobinai-shukyaku.html">自社ECの売上が伸びないのは集客不足？</a>で整理しています。</p>
+<div class="cta-block">
+<div class="cta-block-label">自社EC・広告改善</div>
+<div class="cta-block-title">広告設定を直す前に、売上が広告の前後どちらで止まっているかを見る。</div>
+<div class="cta-block-sub">表示・クリック・商品ページ・カート・購入を分け、広告と商品ページのどちらを優先して直すか整理します。</div>
+<a class="cta-btn" href="https://konishi-marketing.com/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=ec-kokoku-fuyashite-mo-urenai&amp;utm_content=mid_cta">小西マーケティングの支援内容を見る</a>
+<div class="cta-note">広告費増額とページ改善を一律にセットで勧めず、停止箇所から優先順位を決めます。</div>
+</div>
+<p class="cluster-route">この個別原因だけでなく、自社ECのCVRがどこで止まっているかを全体から切り分けたい場合は、<a href="https://konishi-marketing.com/articles/jishaec-cvr-agekata.html">自社ECのCVR改善で施策を増やす前に確認する7つの順番</a>から確認できます。</p></div><!-- /article-body -->
+<div class="faq-section" id="article-faq"><div class="faq-label">よくある質問</div><div class="faq-item"><div class="faq-q">EC広告を増やしても売れないとき、広告設定を見直せばいいですか？</div><div class="faq-a">広告設定に原因がある場合もありますが、クリック後の商品ページ・価格・送料・決済などで止まっている場合もあります。まず広告前とクリック後を分けます。</div></div><div class="faq-item"><div class="faq-q">クリック数が増えているなら広告は成功ですか？</div><div class="faq-a">クリック獲得までは進んでいますが、売上目的なら購入まで見る必要があります。流入した人が商品と合っているか、商品ページからカート・購入へ進んでいるかを確認します。</div></div><div class="faq-item"><div class="faq-q">広告費を止めて商品ページを直すべきですか？</div><div class="faq-a">一律には決められません。広告で正しい人が来ているなら継続しながらページを改善する方法もあります。重要なのは、広告とページのどちらに停止原因があるかを先に分けることです。</div></div></div>
+<div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div><div class="faq-item"><div class="faq-q">広告側とページ側、両方に問題がある場合はどちらから直しますか？</div><div class="faq-a">購入を大きく止めている方から確認します。広告で商品と合わない人ばかり集めている場合は流入から、正しい人が来ているのに購入されない場合はページ以降から直します。</div></div><div class="faq-item"><div class="faq-q">広告を続けながらページ改善してもいいですか？</div><div class="faq-a">できます。テスト条件が分かるよう広告費・配信・ページ変更日を記録し、何が変わったか比較できる状態にします。</div></div><div class="faq-item"><div class="faq-q">広告改善相談では何を共有すればいいですか？</div><div class="faq-a">媒体別の表示・クリック・費用・CV、流入先URL、商品ページのカート投入・購入データを共有してください。</div></div></div>
+<div class="cta-block" style="margin:0;">
+<div class="cta-block-label">自社EC・売上改善</div>
+<div class="cta-block-title">広告の数字だけでなく、クリック後まで一続きで見る。</div>
+<div class="cta-block-sub">広告・商品ページ・カート・購入のどこで売上が止まっているかを確認します。</div>
+<a class="cta-btn" href="https://konishi-marketing.com/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=ec-kokoku-fuyashite-mo-urenai&amp;utm_content=bottom_cta">小西マーケティングの支援内容を見る</a>
+<div class="cta-note">相談・見積もり作成に費用はかかりません。</div>
+</div>
+<div class="author-profile">
+<div class="author-profile-label">この記事を書いた人</div>
+<div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;">
+<div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;">
+<img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/>
+</div>
+<div class="author-profile-name" style="margin-bottom:0;">小西 秀人｜小西マーケティング</div>
+</div>
+<div class="author-profile-body">EC・D2Cの商品ページ／LP改善を専門とするコンサルタント。楽天市場・Makuake・自社ECなどで、集客から商品ページ、CVR、広告まで一体で確認し、売上が止まっている場所を特定してから改善施策を設計している。</div>
+</div>
+<div class="related-section">
+<div class="related-label">関連記事</div>
+<ul class="related-list"><li><a href="https://konishi-marketing.com/articles/jisha-ec-uriage-nobinai-shukyaku.html">自社ECの売上が伸びないのは集客不足？アクセスを増やす前の切り分け方</a></li><li><a href="https://konishi-marketing.com/articles/ec-access-aru-noni-urenai.html">アクセスはあるのに自社ECで売れない原因</a></li><li><a href="https://konishi-marketing.com/articles/ai-l4-lp-roas-nobinai.html">AIで作ったLPに広告を流しても売れない理由</a></li></ul>
+</div>
+<footer class="site-footer">
+<a href="https://konishi-marketing.com">https://konishi-marketing.com</a>
+</footer>
+</div><!-- /site-wrap -->
+</body>
+</html>
