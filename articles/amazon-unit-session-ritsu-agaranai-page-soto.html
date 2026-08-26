@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head><meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://konishi-marketing.com/articles/amazon-unit-session-ritsu-agaranai-page-soto.html" rel="canonical"/>
+<title>Amazonのユニットセッション率が上がらない原因｜ページ改善後に確認する5項目｜小西マーケティング</title>
+<meta content="Amazonで商品ページを改善してもユニットセッション率が上がらないときに確認したい、広告流入・検索語・価格・レビュー・在庫・配送などページ外の要因を整理します。" name="description"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "商品ページを直してもユニットセッション率が上がらない原因は？", "description": "Amazonで商品ページを改善してもユニットセッション率が上がらないときに確認したい、広告流入・検索語・価格・レビュー・在庫・配送などページ外の要因を整理します。", "url": "https://konishi-marketing.com/articles/amazon-unit-session-ritsu-agaranai-page-soto.html", "datePublished": "2026-08-27", "dateModified": "2026-08-27", "author": {"@type": "Person", "name": "小西秀人", "url": "https://konishi-marketing.com"}, "publisher": {"@type": "Organization", "name": "小西マーケティング", "url": "https://konishi-marketing.com"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "商品ページを改善してもユニットセッション率が上がらないのはなぜですか？", "acceptedAnswer": {"@type": "Answer", "text": "流入する検索語や広告ターゲティング、価格、レビュー、在庫、配送条件など、ページ外の条件が変わっている可能性があります。"}}, {"@type": "Question", "name": "広告を増やすとユニットセッション率が下がることはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "あります。広告拡大で商品との適合が弱い流入まで増えると、セッションは増えても購入率が下がる場合があります。"}}, {"@type": "Question", "name": "ページ内とページ外のどちらが原因か、どう分けますか？", "acceptedAnswer": {"@type": "Answer", "text": "改善前後で流入元、検索語、価格、レビュー、在庫・配送条件を記録し、ページ変更と同時期に何が変わったかを切り分けます。"}}]}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SWS3R3K4W5');</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#1a2744;--navy-light:#243461;--gold:#c9a84c;--gold-light:#e8d5a3;--white:#ffffff;--off-white:#f8f7f4;--gray-100:#f1f0ed;--gray-200:#e4e2dc;--gray-400:#a09e97;--gray-600:#6b6860;--gray-800:#3a3834;--text:#1e1d1a;--sans:'Noto Sans JP',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:1rem;color:var(--text);background:var(--off-white);line-height:1.9;-webkit-font-smoothing:antialiased}
+.site-wrap{max-width:860px;margin:0 auto;background:var(--white)}
+.site-header{background:var(--navy);padding:1rem 2rem;border-bottom:2px solid var(--gold)}
+.site-header a{color:var(--gold-light);text-decoration:none;font-size:.875rem;font-weight:700;letter-spacing:.1em}
+.hero{background:var(--navy);padding:3rem 2.5rem 2.5rem;border-bottom:3px solid var(--gold)}
+.hero-category{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.hero-title{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;color:var(--white);line-height:1.45;margin-bottom:1.25rem}
+.hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:2;margin-bottom:1.5rem}
+.hero-meta{font-size:.8rem;color:rgba(255,255,255,.45)}
+.author-box{background:var(--gray-100);border-left:3px solid var(--gold);padding:1rem 1.5rem;font-size:.85rem;color:var(--gray-600);line-height:1.8}
+.author-box strong{color:var(--navy)}
+.article-body{padding:2.5rem 2.5rem;background:var(--white)}
+.article-body h2{font-size:1.15rem;font-weight:700;color:var(--navy)!important;line-height:1.4;margin:4.5rem 0 1.5rem;padding-top:1.5rem;padding-bottom:.75rem;border-top:1px solid var(--gray-200);border-bottom:2px solid var(--gold)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy)!important;margin:3.5rem 0 1rem;padding:.6rem 0 .6rem .75rem;border-left:3px solid var(--gold);background-color:var(--gray-100);line-height:1.45}
+.article-body p{font-size:1rem;color:var(--gray-800);line-height:2.1;margin-bottom:1.25rem}
+.article-body p:last-child{margin-bottom:0}
+.article-body strong{color:var(--navy)}
+.insight{background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;margin:1.75rem 0;font-size:1rem;line-height:2;font-weight:700}
+.insight em{font-style:normal;color:var(--gold-light)}
+.callout{background:var(--off-white);border-left:3px solid var(--navy);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.95rem;color:var(--gray-800);line-height:2}
+.callout strong{color:var(--navy)}
+.misrec-block{margin:2rem 0;border:1px solid var(--gray-200);overflow:hidden}
+.misrec-header{background:var(--navy);color:var(--gold-light);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.25rem}
+.misrec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--gray-200)}
+.misrec-cell{padding:1rem 1.25rem;font-size:.9rem;line-height:1.9;color:var(--gray-800)}
+.misrec-cell.label{background:var(--gray-100);font-weight:700;font-size:.8rem;color:var(--gray-600);letter-spacing:.05em;border-right:1px solid var(--gray-200)}
+.misrec-cell.truth{background:var(--off-white);border-left:1px solid var(--gray-200)}
+.prob-list{list-style:none;margin:1rem 0}
+.prob-list li{padding:1rem 1.25rem 1rem 3rem;position:relative;border-bottom:1px solid var(--gray-100);font-size:.95rem;color:var(--gray-800);line-height:1.9;background:#fff}
+.prob-list li:last-child{border-bottom:none}
+.prob-list li::before{content:attr(data-num);position:absolute;left:1rem;top:1rem;width:1.5rem;height:1.5rem;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cta-block{background:var(--navy);padding:2rem 2.5rem;margin:2.5rem 0;text-align:center}
+.cta-block-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:.75rem}
+.cta-block-title{font-size:1.2rem;font-weight:700;color:var(--white);line-height:1.6;margin-bottom:.75rem}
+.cta-block-sub{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.85rem 2.5rem;text-decoration:none;letter-spacing:.06em;border-bottom:3px solid #a8893a;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.75rem}
+.faq-section{padding:2.5rem 2.5rem;border-top:1px solid var(--gray-200)}
+.faq-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-item{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--gray-100)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.6;margin-bottom:.75rem;padding-left:1.5rem;position:relative}
+.faq-q::before{content:'Q';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--gold)}
+.faq-a{font-size:.95rem;color:var(--gray-800);line-height:2;padding-left:1.5rem;position:relative}
+.faq-a::before{content:'A';position:absolute;left:0;top:0;font-size:.75rem;font-weight:700;color:var(--navy)}
+.author-profile{background:var(--gray-100);padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.author-profile-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1rem}
+.author-profile-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.author-profile-body{font-size:.875rem;color:var(--gray-600);line-height:1.95}
+.related-section{padding:2rem 2.5rem;border-top:1px solid var(--gray-200)}
+.related-label{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--gray-400);text-transform:uppercase;margin-bottom:1.25rem}
+.related-list{list-style:none}
+.related-list li{padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--gray-100);position:relative}
+.related-list li::before{content:'';position:absolute;left:0;top:1.1em;width:6px;height:1px;background:var(--navy)}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-size:.9rem;color:var(--navy);text-decoration:underline;line-height:1.7}
+.site-footer{background:var(--navy);padding:1.5rem 2.5rem;text-align:center}
+.site-footer a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.8rem}
+#article-faq{background-color:var(--gray-100);border-top:3px solid var(--gold);border-bottom:1px solid var(--gray-200);margin-top:2.5rem;padding-top:2.5rem;padding-bottom:2.5rem}
+#article-faq .faq-label{color:var(--navy);font-size:.75rem}
+#article-faq .faq-item{border-bottom:1px solid var(--gray-200);padding-left:0}
+#article-faq .faq-a{background-color:var(--white);padding:1rem 1.25rem 1rem 2.25rem;margin-top:.5rem;line-height:2;color:var(--gray-800)}
+.nextstep-faq{background-color:var(--navy-light);border-top:none;padding:2.5rem 2.5rem}
+.nextstep-faq .faq-label{color:var(--gold-light)}
+.nextstep-faq .faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
+.nextstep-faq .faq-item:last-child{border-bottom:none}
+.nextstep-faq .faq-q{color:var(--white)}
+.nextstep-faq .faq-q::before{color:var(--gold-light)}
+.nextstep-faq .faq-a{color:rgba(255,255,255,.78)}
+.nextstep-faq .faq-a::before{color:var(--gold-light)}
+:root{color-scheme:only light}
+html,body{background-color:#f8f7f4!important;color:#1e1d1a}
+@media(max-width:640px){.hero,.article-body,.faq-section,.author-profile,.related-section,.site-footer{padding-left:1.25rem;padding-right:1.25rem}.hero{padding-top:2rem}.cta-block{padding:1.75rem 1.25rem}.misrec-row{grid-template-columns:1fr}.misrec-cell.label{border-right:none;border-bottom:1px solid var(--gray-200)}.misrec-cell.truth{border-left:none;border-top:1px solid var(--gray-200)}}
+.breadcrumb{font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto}.breadcrumb a{color:#6b6860;text-decoration:none}.breadcrumb span.sep{margin:0 .45rem;color:#a09e97}
+</style>
+<style id="makuake-author-profile-standard-v1">
+/* Makuake article author profile standardization 2026-08-07 */
+.author-proof-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  margin:1rem 0 1.25rem;
+  border:1px solid var(--gray-200);
+  background:var(--gray-200);
+}
+.author-proof-item{
+  min-width:0;
+  padding:1rem 1.1rem;
+  background:var(--white);
+}
+.author-proof-label{
+  display:block;
+  margin-bottom:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  font-weight:700;
+  line-height:1.5;
+}
+.author-proof-value{
+  display:block;
+  color:var(--navy);
+  font-size:1.35rem;
+  font-weight:700;
+  line-height:1.35;
+  letter-spacing:-.025em;
+}
+.author-proof-note{
+  display:block;
+  margin-top:.35rem;
+  color:var(--gray-600);
+  font-size:.72rem;
+  line-height:1.65;
+}
+@media(max-width:640px){
+  .author-proof-grid{grid-template-columns:1fr}
+  .author-proof-value{font-size:1.25rem}
+}
+</style>
+<style id="nextstep-faq-link-contrast-fix">
+.nextstep-faq .faq-a a{
+  color:var(--gold-light);
+  text-decoration:underline;
+  text-underline-offset:2px;
+  font-weight:700;
+}
+.nextstep-faq .faq-a a:visited{
+  color:var(--gold-light);
+}
+.nextstep-faq .faq-a a:hover{
+  color:var(--white);
+}
+</style>
+<style id="makuake-channel-map-v1">
+.channel-map{margin:2rem 0;border:1px solid var(--gray-200);background:var(--white)}
+.channel-map-title{padding:.75rem 1rem;background:var(--navy);color:var(--gold-light);font-size:.8rem;font-weight:700;letter-spacing:.06em}
+.channel-map-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.channel-map-table{width:100%;min-width:720px;border-collapse:collapse}
+.channel-map-table th,.channel-map-table td{padding:1rem;vertical-align:top;border-right:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);font-size:.88rem;line-height:1.8;text-align:left}
+.channel-map-table th{background:var(--gray-100);color:var(--navy);font-weight:700}
+.channel-map-table td{color:var(--gray-800)}
+.channel-map-table th:last-child,.channel-map-table td:last-child{border-right:none}
+.channel-map-table tr:last-child td{border-bottom:none}
+.channel-map-table td:first-child{width:24%;background:var(--off-white)}
+</style></head><body><div class="site-wrap">
+<header class="site-header"><a href="https://konishi-marketing.com/">小西マーケティング</a></header>
+<nav aria-label="パンくず" class="breadcrumb"><a href="https://konishi-marketing.com/">ホーム</a><span class="sep">›</span><a href="https://konishi-marketing.com/articles/">オウンドメディア</a><span class="sep">›</span><a href="https://konishi-marketing.com/articles/amazon.html">Amazon</a><span class="sep">›</span><span aria-current="page">Amazonでユニットセッション率が上がらないとき、商品ページの外で起きていること</span></nav>
+<div class="hero"><span class="hero-category">Amazon / ユニットセッション率 / 原因</span><h1 class="hero-title">商品ページを直してもユニットセッション率が上がらない原因は？</h1><p class="hero-lead">画像やA+を直しても数字が動かないなら、<strong style="color:#fff">商品ページの外で変わった条件</strong>を確認します。流入の質や販売条件が変われば、同じページでも転換率は変わります。</p><p class="hero-meta">小西マーケティング｜2026.08.27</p></div>
+<div class="author-box">この記事は、楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC実務を20年以上経験してきた小西秀人が、Amazonの商品詳細ページ・広告・CVR改善の観点から整理しています。</div>
+<div class="article-body">
+<h2 style="margin-top:0">ページを直したのに数字が変わらないなら、同時期に変わった条件を見る</h2>
+<p>画像、Bullet、A+を直してもユニットセッション率が動かないとき、さらにページを作り込む前に確認したいことがあります。<strong>同じ商品詳細ページでも、誰が・どの条件で来たかが変われば、転換のしやすさも変わる</strong>からです。</p>
+<p>この記事では商品ページ内の改善方法ではなく、ページの外側でユニットセッション率を押し下げる要因に限定します。</p>
+<div class="insight">ページを直したのに数字が動かない。<br/><em>そのとき、次に疑うのは「ページの作り込み不足」だけではありません。</em></div>
+<h2>1｜広告で、買う可能性の低い流入が増えている</h2>
+<p>広告を拡大するとセッションは増えます。ただし、商品との適合が弱い検索語やターゲティングまで広がれば、購入しない訪問も増えます。</p>
+<p>この場合、商品ページが以前と同じでも、流入構成が変わったことでユニットセッション率が下がることがあります。広告経由とその他の流入を分け、どこから増えたセッションなのかを確認します。</p>
+<h2>2｜価格差が広がり、比較段階で負けている</h2>
+<p>商品ページの説明が変わっていなくても、競合価格、クーポン、ポイント、セット条件など周辺の比較条件は変わります。購入者が同じカテゴリ内で比較しているなら、ページ内の説得だけでは埋められない差が生まれることがあります。</p>
+<p>値下げを先にするのではなく、価格差が発生した時期とユニットセッション率の変化が重なるかを確認します。</p>
+<h2>3｜レビュー評価・件数の差で、最後に選ばれなくなっている</h2>
+<p>レビューは商品ページ内に表示されますが、制作側が自由に書き換えられるクリエイティブではありません。競合との評価差や件数差が大きい場合、画像やA+を改善しても購入直前で迷うことがあります。</p>
+<p>特に、商品説明で強く訴求している点とレビューで繰り返し指摘される不満が衝突していないかを確認します。</p>
+<h2>4｜在庫・配送条件が変わっている</h2>
+<p>配送予定、在庫状況、FBA利用状況などの販売条件も購入直前の選択に影響します。ページ制作だけを追っていると、クリエイティブ変更と同時期に起きた販売条件の変化を見落とします。</p>
+<p>改善前後を比べるときは、画像や文章だけでなく、在庫・配送・価格・販促条件も記録しておきます。</p>
+<h2>5｜流入キーワードと商品の適合がずれている</h2>
+<p>検索露出が広がった結果、商品が本来強い用途とは違う検索から訪問が増えることがあります。セッション数だけを見ると成長しているように見えても、その訪問者が求める条件と商品が合わなければ転換しません。</p>
+<p>Amazon Adsも、クリックが多いのにコンバージョン率が低い場合、商品詳細ページを見直すことを案内しています。同時に、成果の低いキーワードやターゲティングを見直す必要があります。</p>
+<h2>商品ページ外を確認する順番</h2>
+<ul class="prob-list">
+<li data-num="1">セッションが増えた流入元・広告を確認する</li>
+<li data-num="2">検索語・ターゲティングと商品の適合を確認する</li>
+<li data-num="3">競合との価格・販促条件の変化を確認する</li>
+<li data-num="4">レビュー評価・件数・内容の変化を確認する</li>
+<li data-num="5">在庫・配送条件の変化を確認する</li>
+</ul>
+<h2>ページ内とページ外を分けると、次に触る場所が決まる</h2>
+<p>商品ページ外の条件に問題がないなら、そこで初めてページ内で購入者が迷っている場所へ戻ります。逆に、流入の質や販売条件が原因なら、A+やサブ画像を追加しても根本の停止点は残ります。</p>
+<div class="callout"><strong>ページ内の改善を確認する場合：</strong><br/><a href="https://konishi-marketing.com/articles/amazon-unit-session-ritsu-agekata.html">Amazonのユニットセッション率改善で確認する7つの順番</a><br/><a href="https://konishi-marketing.com/articles/amazon-shohin-page-kaizen-nanikara.html">Amazon商品ページ改善は何から？セッション・CVR・広告を分けて決める優先順位</a></div>
+<h2>「商品ページを直したのに上がらない」は、改善失敗とは限らない</h2>
+<p>ユニットセッション率は、ページ制作物だけで決まる数字ではありません。流入構成、価格、レビュー、配送、在庫などが変われば、同じページでも結果は変わります。</p>
+<p>改善前後を正しく比較するには、<strong>ページで何を変えたかと、ページ外で何が変わったかを分けて記録する</strong>ことが必要です。</p>
+<div class="callout"><strong>Amazon公式の確認先：</strong><br/><a href="https://advertising.amazon.com/ja-jp/library/guides/measure-improve-campaigns">キャンペーンを測定して改善する方法</a></div>
+</div>
+<div class="faq-section" id="article-faq"><div class="faq-label">よくある質問</div><div class="faq-item"><div class="faq-q">商品ページを改善してもユニットセッション率が上がらないのはなぜですか？</div><div class="faq-a">流入する検索語や広告ターゲティング、価格、レビュー、在庫、配送条件など、ページ外の条件が変わっている可能性があります。</div></div><div class="faq-item"><div class="faq-q">広告を増やすとユニットセッション率が下がることはありますか？</div><div class="faq-a">あります。広告拡大で商品との適合が弱い流入まで増えると、セッションは増えても購入率が下がる場合があります。</div></div><div class="faq-item"><div class="faq-q">ページ内とページ外のどちらが原因か、どう分けますか？</div><div class="faq-a">改善前後で流入元、検索語、価格、レビュー、在庫・配送条件を記録し、ページ変更と同時期に何が変わったかを切り分けます。</div></div></div>
+<div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div><div class="faq-item"><div class="faq-q">自社の商品ページでは、何から確認すべきですか？</div><div class="faq-a">まず、検索結果で選ばれていないのか、商品詳細ページに来た後で止まっているのかを分けます。そのうえで、最初に未完了になっている購入判断だけを改善します。</div></div><div class="faq-item"><div class="faq-q">商品ページ改善を外部に相談できますか？</div><div class="faq-a"><a href="https://konishi-marketing.com/amazon/">Amazon商品ページ制作・改善の支援内容</a>を確認できます。相談・見積もり作成に費用はかかりません。</div></div></div>
+<div class="cta-block" style="margin:0;"><div class="cta-block-label">Amazon商品ページ改善</div><div class="cta-block-title">ページ内を直し続ける前に、ページ外の変化を切り分ける。</div><div class="cta-block-sub">広告流入・検索語・価格・レビュー・在庫・配送まで含めて、ユニットセッション率が止まる場所を特定します。</div><a class="cta-btn" href="https://konishi-marketing.com/amazon/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=amazon-unit-session-ritsu-agaranai-page-soto&amp;utm_content=bottom_cta">Amazon商品ページの支援を見る</a><div class="cta-note">相談・見積もり作成に費用はかかりません。</div></div>
+<div class="author-profile"><div class="author-profile-label">この記事を書いた人</div>
+<div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;"><div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;"><img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/></div><div class="author-profile-name" style="margin-bottom:0;">小西秀人｜小西マーケティング</div></div>
+<div class="author-proof-grid">
+<div class="author-proof-item"><span class="author-proof-label">楽天市場</span><strong class="author-proof-value">総合1位</strong><span class="author-proof-note">担当商品で獲得</span></div>
+<div class="author-proof-item"><span class="author-proof-label">Yahoo!ショッピング</span><strong class="author-proof-value">総合1位</strong><span class="author-proof-note">担当商品で獲得</span></div>
+<div class="author-proof-item"><span class="author-proof-label">年間ランキング</span><strong class="author-proof-value">11回</strong><span class="author-proof-note">担当商品の入賞実績</span></div>
+<div class="author-proof-item"><span class="author-proof-label">カテゴリ1位</span><strong class="author-proof-value">1,000回超</strong><span class="author-proof-note">楽天市場での累計獲得実績</span></div></div>
+<div class="author-profile-body">楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECの物販EC支援を専門とするコンサルタント。20年以上のEC実務経験をもとに、商品ページ、広告、販促、CVR改善を一体で設計している。</div></div>
+<div class="related-section"><div class="related-label">関連記事</div><ul class="related-list"><li><a href="https://konishi-marketing.com/articles/amazon-unit-session-ritsu-agekata.html">Amazonのユニットセッション率改善で確認する7つの順番</a></li><li><a href="https://konishi-marketing.com/articles/amazon-shohin-page-kaizen-nanikara.html">Amazon商品ページ改善は何から？セッション・CVR・広告を分けて決める優先順位</a></li><li><a href="https://konishi-marketing.com/articles/amazon-a-plus-sekkei-kangaekata.html">Amazon A+コンテンツを改善するには？成果につなげる6つの見直し順</a></li></ul></div>
+<footer class="site-footer"><a href="https://konishi-marketing.com">https://konishi-marketing.com</a></footer></div></body></html>
