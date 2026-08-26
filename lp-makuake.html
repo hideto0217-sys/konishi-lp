@@ -6,6 +6,8 @@
 <title>Makuake商品戦略レポート 無料送付｜次回案件の勝ち筋と採用戦略を整理</title>
 <meta name="description" content="次回Makuakeを検討中の企業様へ。商品・価格・セット・主訴求・KV〜冒頭の方向性まで整理した商品戦略レポートを無料でメール送付。「この戦略で行く」と判断できるところまで具体化します。">
 <meta name="robots" content="noindex,follow">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0c1110">
 <link rel="canonical" href="https://konishi-marketing.com/lp-makuake.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Makuake商品戦略レポート 無料送付｜次回案件の勝ち筋と採用戦略を整理">
@@ -27,8 +29,9 @@ gtag('config','G-SWS3R3K4W5');
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;700;800&family=Syne:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
+html{scroll-behavior:smooth;font-size:16px;background:#f7f6f1}
 :root{
+  color-scheme:light;
   --ink:#0c1110;--ink-mid:#141b19;--ink-soft:#26312e;
   --paper:#f7f6f1;--paper-dark:#eeece5;--paper-mid:#dedbd1;
   --makuake:#00a6a0;--makuake-dark:#007d78;--makuake-soft:rgba(0,166,160,.10);
@@ -69,11 +72,95 @@ section{padding:92px 0}.h2{font-family:var(--font-display);font-size:clamp(28px,
 .success{display:none;text-align:center;padding:50px 16px}.success.show{display:block}.success-mark{width:52px;height:52px;display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--makuake);color:var(--makuake);font-family:var(--font-sans);font-weight:800;font-size:20px;margin-bottom:18px}.success h3{font-family:var(--font-display);font-size:22px;margin-bottom:10px}.success p{font-size:14px;line-height:1.9;color:var(--ink-soft)}
 footer{background:var(--ink-mid);color:rgba(247,246,241,.74);padding:48px 24px;border-top:1px solid rgba(247,246,241,.1)}.footer-name{font-family:var(--font-display);font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}.footer-text{font-size:12.5px;line-height:1.95}.footer-links{margin-top:16px;display:flex;gap:18px;flex-wrap:wrap}.footer-links a{font-size:12px;color:rgba(247,246,241,.7)}.legal{border-top:1px solid rgba(247,246,241,.1);margin-top:20px;padding-top:18px;font-size:11.5px;line-height:1.9;color:rgba(247,246,241,.5)}
 
+.sp-break{display:none}
 @media(max-width:650px){
   .sec-label span{font-size:13px;line-height:1.55}
   .sec-label{margin-bottom:18px}
-section{padding:72px 0}.hero{min-height:auto}.hero-inner{padding:64px var(--gutter) 60px}.hero h1{font-size:clamp(34px,9.3vw,48px)}.btn{width:100%;padding-left:16px;padding-right:16px}.compare{grid-template-columns:1fr}.diag-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.stats.six{grid-template-columns:repeat(2,1fr)}.profile{grid-template-columns:76px 1fr;gap:16px}.profile img{width:76px;height:76px}.form-wrap{padding:28px 20px}.flow li{grid-template-columns:54px 1fr}}
+  .sp-break{display:inline}
+  section{padding:68px 0}
+  .hero{min-height:auto}
+  .hero-inner{padding:52px var(--gutter) 46px}
+  .overline{margin-bottom:22px}
+  .hero h1{font-size:clamp(30px,8.4vw,36px);line-height:1.42;margin-bottom:24px}
+  .hero h1 .pre{font-size:15px;line-height:1.55;margin-bottom:10px}
+  .hero-lead{font-size:15px;line-height:1.85}
+  .hero-cta{margin-top:30px}
+  .btn{width:100%;padding-left:16px;padding-right:16px;font-size:14px;letter-spacing:.02em}
+  .btn-note{margin-top:11px;line-height:1.75}
+  .compare{grid-template-columns:1fr}
+  .diag-grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stats.six{grid-template-columns:repeat(2,1fr)}
+  .profile{grid-template-columns:76px 1fr;gap:16px}
+  .profile img{width:76px;height:76px}
+  .form-wrap{padding:28px 20px}
+  .flow li{grid-template-columns:54px 1fr}
+}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.submit-btn{transition:none}}
+
+/* ===== 強制ダークモード対策：配色を最終確定 ===== */
+html,body{background-color:#f7f6f1 !important;color:#0c1110 !important}
+section{background-color:#f7f6f1 !important}
+.on-paper{background-color:#f7f6f1 !important}
+.on-paper-d{background-color:#eeece5 !important}
+h1,h2,h3,.h2{color:#0c1110 !important}
+.body{color:#26312e !important}
+.body strong{color:#0c1110 !important}
+.overline span,.sec-label span,.diag-num,.compare-label{color:#00a6a0 !important}
+/* 6項目カード */
+.diag-card{background-color:#eeece5 !important;border-color:#dedbd1 !important}
+.diag-card h3{color:#0c1110 !important}
+.diag-card p{color:#26312e !important}
+/* 比較カード（左：白／右：ダーク） */
+.compare-card{background-color:#fff !important;border-color:#dedbd1 !important}
+.compare-card .compare-title{color:#0c1110 !important}
+.compare-card .compare-body{color:#26312e !important}
+.compare-card.new{background-color:#0c1110 !important;border-color:#00a6a0 !important}
+.compare-card.new .compare-label{color:#00a6a0 !important}
+.compare-card.new .compare-title{color:#fff !important}
+.compare-card.new .compare-body{color:rgba(247,246,241,.83) !important}
+/* 流れ */
+.flow li{background-color:#fff !important;border-color:#dedbd1 !important}
+.flow span{color:#26312e !important}
+.flow strong{color:#0c1110 !important}
+/* 実績（明色セクション内のダークタイル） */
+.stat{background-color:#0c1110 !important;border-color:#00a6a0 !important}
+.stat strong{color:#fff !important}
+.stat span{color:rgba(247,246,241,.76) !important}
+/* フォーム */
+.form-wrap{background-color:#fff !important}
+.form-label{color:#0c1110 !important}
+.form-input,.form-select,textarea.form-input{background-color:#f7f6f1 !important;color:#0c1110 !important;border-color:#dedbd1 !important}
+.form-hint,.form-notes,.form-intro{color:#747b77 !important}
+.badge{background-color:#eeece5 !important;color:#747b77 !important}
+.badge.req{background-color:#00a6a0 !important;color:#fff !important}
+.btn,.submit-btn{background-color:#00a6a0 !important;color:#fff !important}
+.success h3{color:#0c1110 !important}
+.success p{color:#26312e !important}
+.success-mark{color:#00a6a0 !important;border-color:#00a6a0 !important}
+/* 暗色セクション（後から上書き） */
+.hero,.on-ink{background-color:#0c1110 !important}
+.hero h1,.on-ink h2,.on-ink h3,.on-ink .h2{color:#fff !important}
+.hero .pre{color:rgba(247,246,241,.72) !important}
+.hero-lead{color:rgba(247,246,241,.9) !important}
+.hero-lead strong{color:#fff !important}
+.hero .btn-note{color:rgba(247,246,241,.62) !important}
+.on-ink .body{color:rgba(247,246,241,.88) !important}
+.on-ink .body strong{color:#fff !important}
+.on-ink .diag-card{background-color:rgba(247,246,241,.045) !important;border-color:rgba(247,246,241,.14) !important}
+.on-ink .diag-card h3{color:#fff !important}
+.on-ink .diag-card p{color:rgba(247,246,241,.80) !important}
+.on-ink .emph{background-color:rgba(0,166,160,.10) !important}
+.on-ink .emph p{color:#fff !important}
+.faq q{color:#fff !important}
+.faq p{color:rgba(247,246,241,.84) !important}
+.profile-name{color:#0c1110 !important}
+.profile-text{color:#26312e !important}
+footer{background-color:#0c1110 !important;color:rgba(247,246,241,.66) !important}
+.footer-name{color:#fff !important}
+.footer-text{color:rgba(247,246,241,.66) !important}
+.footer-links a{color:rgba(247,246,241,.7) !important}
+.legal{color:rgba(247,246,241,.5) !important}
 </style>
 </head>
 <body>
@@ -82,9 +169,9 @@ section{padding:72px 0}.hero{min-height:auto}.hero-inner{padding:64px var(--gutt
   <div class="hero-bg" aria-hidden="true">戦略</div>
   <div class="hero-inner">
     <div class="overline rv"><span>Makuake商品戦略レポート 無料送付</span></div>
-    <h1 class="rv"><span class="pre">次回Makuakeを検討中の企業様へ</span>次のMakuakeで、<br><em>「この戦略で行く」を先に決めませんか。</em></h1>
-    <p class="hero-lead rv">次にMakuakeへ出したい商品があれば、<strong>「この戦略で進もう」と納得できるところまで、勝ち筋と進め方を商品戦略レポートにまとめて無料でお送りします。</strong></p>
-    <div class="hero-cta rv"><a class="btn js-cta" href="#strategy">次回Makuakeの勝ち筋レポートを無料で受け取る</a><p class="btn-note">商品候補・企画段階でも可 ／ 無料 ／ メールでレポート送付 ／ 営業電話なし</p></div>
+    <h1 class="rv"><span class="pre">次回Makuakeを検討中の企業様へ</span>ページを作る前に、<br><em>「どう売るか」を<span class="sp-break"><br></span>先に決めませんか。</em></h1>
+    <p class="hero-lead rv">商品情報をもとに、<strong>誰に・何を理由に・どう見せるか</strong>を整理し、商品戦略レポートにまとめて無料でお送りします。</p>
+    <div class="hero-cta rv"><a class="btn js-cta" href="#strategy">商品戦略レポートを無料で受け取る</a><p class="btn-note">商品候補・企画段階でも可 ／ 無料 ／ 営業電話なし<br>お申し込み時に、商品名と商品概要のご記入が必要です</p></div>
   </div>
 </section>
 
@@ -116,56 +203,36 @@ section{padding:72px 0}.hero{min-height:auto}.hero-inner{padding:64px var(--gutt
 <section class="on-ink">
   <div class="wrap">
     <div class="sec-label rv"><span>同じMakuakeでも、商品が変われば設計も変わります。</span></div>
-    <h2 class="h2 rv">売れるMakuakeページの「型」に、<br>商品を当てはめません。</h2>
-    
-    <p class="body rv">「売れるMakuakeページの型」に商品を当てはめるのではありません。商品の買われ方と、読者がどこで迷い、先へ進めなくなっているかによって、ページの役割そのものを変えます。</p>
+    <h2 class="h2 rv">ページの「型」ではなく、<br>その商品の買われ方から決めます。</h2>
+    <p class="body rv">困りごとを解決する商品と、今より良い暮らしを欲しくさせる商品では、最初に伝えることが違います。競合との比較で選ばれる商品なら、また別の順番が必要です。</p>
 
     <div class="diag-grid rv">
       <div class="diag-card" style="background:rgba(247,246,241,.05);border-color:rgba(247,246,241,.15)">
-        <div class="diag-num">01｜商品タイプ</div>
-        <h3 style="color:#fff">まず、何が購買を動かす商品かを見る</h3>
-        <p style="color:rgba(247,246,241,.80)">困りごとを解決する商品、今より良い暮らしを欲しくさせる商品、比較の中で選ばれる商品では、同じ構成にしません。問題解決型・欲求拡大型・比較型で、ページの背骨から変えます。</p>
+        <div class="diag-num">01｜商品を見る</div>
+        <h3 style="color:#fff">何が、買う理由になる商品か</h3>
+        <p style="color:rgba(247,246,241,.80)">機能の数ではなく、その商品を欲しくなる主な理由を見ます。カテゴリ共通の特徴だけで終わらない選択理由があるかを確認します。</p>
       </div>
       <div class="diag-card" style="background:rgba(247,246,241,.05);border-color:rgba(247,246,241,.15)">
-        <div class="diag-num">02｜リード</div>
-        <h3 style="color:#fff">冒頭で、何を納得してもらうかを決める</h3>
-        <p style="color:rgba(247,246,241,.80)">いきなり商品の特徴を並べません。すでに分かっていることを説明し直すのでもありません。読者が「まだ納得できていないこと」を見つけ、まずそこだけを前に進めます。</p>
+        <div class="diag-num">02｜相手を決める</div>
+        <h3 style="color:#fff">誰に、何を理由に選ばれるか</h3>
+        <p style="color:rgba(247,246,241,.80)">広いターゲット像だけで決めず、実際の使い方や購入理由から、どんな人のどんな判断を先に進めるべきかを絞ります。</p>
       </div>
       <div class="diag-card" style="background:rgba(247,246,241,.05);border-color:rgba(247,246,241,.15)">
-        <div class="diag-num">03｜ボディ</div>
-        <h3 style="color:#fff">ベネフィットは、三段階で深める</h3>
-        <p style="color:rgba(247,246,241,.80)">「何ができるか」という機能だけで終わらせず、その結果どう感じるか、さらにどんな自分・暮らしへつながるかまで掘ります。ただし、全機能で同じ深掘りを繰り返さず、購買を動かす主力価値へ重みを置きます。</p>
+        <div class="diag-num">03｜順番を決める</div>
+        <h3 style="color:#fff">何を先に見せ、何を後へ回すか</h3>
+        <p style="color:rgba(247,246,241,.80)">KV、冒頭、本文を別々に考えません。前で伝わったことを繰り返さず、次に知りたいことへ順番に進めます。</p>
       </div>
     </div>
 
-    <div class="diag-grid rv">
-      <div class="diag-card" style="background:rgba(247,246,241,.05);border-color:rgba(247,246,241,.15)">
-        <div class="diag-num">04｜クロージング</div>
-        <h3 style="color:#fff">複数の価値を、最後に一つの未来へ回収する</h3>
-        <p style="color:rgba(247,246,241,.80)">ボディで伝えてきた複数の価値を、最後に一つの生活変化へ収束させます。必要な商品では、「買った直後」ではなく、その商品が日常に定着した先の暮らしや自己像まで見せます。</p>
-      </div>
-      <div class="diag-card" style="background:rgba(247,246,241,.05);border-color:rgba(247,246,241,.15)">
-        <div class="diag-num">05｜よくある失敗</div>
-        <h3 style="color:#fff">情報を増やすほど、売れるわけではない</h3>
-        <p style="color:rgba(247,246,241,.80)">問題解決型なのに悩みを繰り返す。欲求拡大型なのに機能説明へ戻る。カテゴリ共通の特徴を差別化として扱う。画像で分かることをコピーでも説明する。情報を足すほど、かえって迷いが増えて、申し込みまで進みにくくなることがあります。</p>
-      </div>
-      <div class="diag-card" style="background:rgba(247,246,241,.05);border-color:rgba(247,246,241,.15)">
-        <div class="diag-num">06｜一貫設計</div>
-        <h3 style="color:#fff">一枚ずつではなく、申し込みまでを一本で見る</h3>
-        <p style="color:rgba(247,246,241,.80)">KV、リード、ボディ、証拠、クロージングを別々に作りません。前で伝わったことを後ろで繰り返さず、次に決めてもらうことだけへ進めます。</p>
-      </div>
-    </div>
-
-    <div class="emph rv"><p>無料レポートでも見るのは、<br>「どんなページにするか」だけではありません。<br><strong>その商品を、誰に・何を理由に・どの順番で買ってもらうか。</strong><br>そこから設計します。</p></div>
+    <div class="emph rv"><p>無料レポートでも、<br><strong>その商品を、誰に・何を理由に・どの順番で買ってもらうか。</strong><br>そこまで具体化します。</p></div>
   </div>
 </section>
 
 <section class="on-paper">
   <div class="wrap">
-    <div class="sec-label rv"><span>ここまで設計するから、この実績につながる</span></div>
-    <h2 class="h2 rv">見た目を整えるだけではなく、<br>買う理由が順番に積み上がるページを作ってきました。</h2>
-    <p class="body rv">商品タイプを見分け、冒頭で何を納得してもらうかを決め、ボディで価値を深め、必要なら最後にその先の未来まで回収する。こうした設計を、商品ごとに組み直してきました。</p>
-    <p class="body rv">その積み重ねが、Makuakeでの実績につながっています。</p>
+    <div class="sec-label rv"><span>商品ごとに設計を変えてきた実績</span></div>
+    <h2 class="h2 rv">見た目を整えるだけではなく、<br>選ばれる理由と順番を作ってきました。</h2>
+    <p class="body rv">同じ型へ当てはめず、商品ごとに「誰に・何を理由に・どの順番で伝えるか」を組み直してきました。その積み重ねが、Makuakeでの実績につながっています。</p>
 
     <div class="stats six rv">
       <div class="stat" style="background:var(--ink);border-color:var(--makuake)"><strong>3度</strong><span>Makuake<br>総合ランキング1位</span></div>
@@ -189,45 +256,45 @@ section{padding:72px 0}.hero{min-height:auto}.hero-inner{padding:64px var(--gutt
 <section class="on-paper-d">
   <div class="wrap">
     <div class="sec-label rv"><span>無料レポートで分かること</span></div>
-    <h2 class="h2 rv">次回Makuakeを、どんな方針で進めればいいか。<br>そこまで具体化してお送りします。</h2>
-    <p class="body rv">共有いただいた商品情報と公開情報をもとに、次回Makuakeで何を軸に戦うべきかを整理し、<strong>「この戦略で行こう」と納得できる状態</strong>を目指してレポートにまとめます。</p>
+    <h2 class="h2 rv">方向性の助言ではなく、<br>キービジュアルのメインコピー案まで書きます。</h2>
+    <p class="body rv">共有いただいた商品情報と、公開されている購入者レビューをもとに作成します。<strong>確認できていない健康効果や競合優位性は書きません。</strong>実際に言えることの範囲で、次回Makuakeの方針を具体化します。</p>
 
     <div class="diag-grid rv">
       <div class="diag-card">
         <div class="diag-num">01｜商品の勝ち筋</div>
         <h3>誰に、何を理由に選ばれるか</h3>
-        <p>どの顧客に対して、何を「この商品を選ぶ理由」にするべきかを整理します。</p>
+        <p>購入者レビューや公開情報から実際の使い方・購入理由を確認し、どんな人に、何を理由に選ばれる商品なのかを絞ります。</p>
       </div>
       <div class="diag-card">
         <div class="diag-num">02｜主訴求</div>
-        <h3>その選択理由を、最初にどう伝えるか</h3>
-        <p>その選択理由を、KVや冒頭で伝わる言葉・見せ方へ落とし込みます。</p>
+        <h3>複数の機能を、一つの意味へ束ねる</h3>
+        <p>機能を別々に並べると、選ぶ理由が分散します。複数の仕様を、買い手から見た一つの価値へまとめ直します。</p>
       </div>
       <div class="diag-card">
-        <div class="diag-num">03｜オファー</div>
-        <h3>価格・セットをどう見せるか</h3>
-        <p>単品・セット・早割・価格差など、価値が伝わりやすく選びやすい売り方を整理します。</p>
+        <div class="diag-num">03｜キービジュアル</div>
+        <h3>メインコピー案と写真の構図まで</h3>
+        <p>「冒頭の方向性」だけで終わらせず、実際のメインコピー案と、どんな写真をどう撮るかまで書きます。一覧で一目で伝えることと、本文で詳しく伝えることも分けます。</p>
       </div>
     </div>
 
     <div class="diag-grid rv">
       <div class="diag-card">
-        <div class="diag-num">04｜KV・冒頭の方向性</div>
-        <h3>最初に何を見せるべきか</h3>
-        <p>KVから冒頭にかけて、何を見せれば次を読みたくなるかを整理します。</p>
+        <div class="diag-num">04｜ページの流れ</div>
+        <h3>何を、どの順番で見せるか</h3>
+        <p>主訴求から適合確認、不安の解消、価格提示まで。プロジェクトページをどの順番で組むかを、ステップごとに整理します。</p>
       </div>
       <div class="diag-card">
-        <div class="diag-num">05｜改善点</div>
-        <h3>既存案がある場合、何を変えるか</h3>
-        <p>既存ページや企画案があれば、最も影響が大きい改善点を優先して整理します。</p>
+        <div class="diag-num">05｜外すもの</div>
+        <h3>何を主役から降ろすか</h3>
+        <p>競合も言える特徴や、単独では選ぶ決め手になりにくい訴求を特定し、主役から外します。足すだけではなく、優先順位を下げることで選ぶ理由を強くします。</p>
       </div>
       <div class="diag-card">
-        <div class="diag-num">06｜次の一手</div>
-        <h3>制作前に何を決めるべきか</h3>
-        <p>次に何を決めておくべきかを、優先順位が分かる形でまとめます。</p>
+        <div class="diag-num">06｜公開前の準備</div>
+        <h3>撮影・寸法・保証まで</h3>
+        <p>どんな写真やGIFを撮るか、どの寸法を提示するか、どの不安を先回りして消すか。制作へ進む前に揃えるべき材料をリスト化します。</p>
       </div>
     </div>
-  
+
     <h3 class="compare-title rv" style="font-size:22px;margin-bottom:18px">ページを作り始める前に、戦略を決める。</h3>
     <div class="compare rv">
       <div class="compare-card"><div class="compare-label">ありがちな進め方</div><div class="compare-title">先に制作を始める</div><p class="compare-body">商品情報をもとにKVやLP制作へ進む。あとから訴求や売り方を見直し、構成まで戻ることがある。</p></div>
@@ -266,12 +333,10 @@ section{padding:72px 0}.hero{min-height:auto}.hero-inner{padding:64px var(--gutt
     <h2 class="h2 rv">申し込む前に、<br>気になること。</h2>
     <ul class="faq rv">
       <li><q>まだ商品が確定していなくてもレポートを作れますか？</q><p>はい。商品候補や企画段階でも構いません。分かっている範囲の情報から、Makuakeとの相性や、詰めるべき商品条件を整理します。</p></li>
+      <li><q>どのくらい具体的な内容で届きますか？</q><p>商品の勝ち筋から、キービジュアルのメインコピー案、ページの順番、公開前に揃える材料まで、実装へ進む前に決めておきたい内容をブラウザでそのまま読める形式でまとめてお送りします。</p></li>
+      <li><q>実際には確認できない効果まで書かれませんか？</q><p>書きません。商品仕様や購入者レビューで確認できる範囲までを記載し、健康効果や競合優位性など、根拠のない主張は「現時点で言い切らないこと」として明示します。</p></li>
       <li><q>海外商品でも大丈夫ですか？</q><p>はい。海外メーカー商品の日本展開も対象です。商品資料や海外販売ページなど、確認できる情報をお送りください。</p></li>
-      <li><q>前回Makuakeを実施していなくても申し込めますか？</q><p>問題ありません。初挑戦の商品でも、次回商品でも対象です。</p></li>
-      <li><q>過去のMakuakeプロジェクトも見てもらえますか？</q><p>はい。実施経験がある場合は、過去URLも共有いただければ、次回戦略を考える参考として確認します。</p></li>
-      <li><q>戦略だけ採用して、自社や他社で実装してもいいですか？</q><p>はい。問題ありません。レポートの戦略に納得できたら、その方針を採用して、自社や他社で実装していただいて構いません。小西マーケティングへの制作依頼は必須ではありません。</p></li>
-      <li><q>営業電話がかかってきますか？</q><p>営業電話は行いません。レポートをご確認いただき、実装まで相談したい場合のみご連絡ください。</p></li>
-      <li><q>本当に無料ですか？</q><p>はい。商品戦略レポートの作成・メール送付までは無料です。</p></li>
+      <li><q>前回Makuakeを実施していなくても申し込めますか？</q><p>問題ありません。初挑戦の商品でも、次回商品でも対象です。実施経験がある場合は、過去URLを共有いただければ参考として確認します。</p></li>
     </ul>
   </div>
 </section>
@@ -280,7 +345,7 @@ section{padding:72px 0}.hero{min-height:auto}.hero-inner{padding:64px var(--gutt
   <div class="wrap">
     <div class="sec-label rv"><span>商品戦略レポート 無料送付</span></div>
     <h2 class="h2 rv">次にMakuakeへ出したい商品を<br>教えてください。</h2>
-    <p class="form-intro rv">商品ページや資料があればURLを。まだない場合は、商品の概要だけでも構いません。<strong>誰に・何を・どう売るか</strong>を整理し、次回Makuakeで「この戦略で行く」と判断できる商品戦略レポートとしてメールでお送りします。</p>
+    <p class="form-intro rv">ご記入いただくのは、会社名・お名前・メールアドレスと、<strong>商品名・商品の概要</strong>です。概要は、どんな商品か・主な特徴・想定価格など、分かる範囲で構いません。資料やメーカーサイトのURLがあれば、そちらもあわせてお送りください。</p>
     <div class="form-wrap rv">
       <form id="diagForm" novalidate>
         <div class="form-group"><label class="form-label" for="store_name">会社名<span class="badge req">必須</span></label><input class="form-input" type="text" id="store_name" name="store_name" autocomplete="organization" placeholder="例：株式会社〇〇" required></div>
