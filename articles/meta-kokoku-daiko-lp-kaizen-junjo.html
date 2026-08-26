@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://konishi-marketing.com/articles/meta-kokoku-daiko-lp-kaizen-junjo.html" rel="canonical"/>
+<title>Meta広告の運用代行とLP改善はどちらが先？数字で決める5つの分岐｜小西マーケティング</title>
+<meta content="Meta広告の運用代行とLP改善のどちらを先に依頼すべきかを、CTR・CPC・LP CVR・CPO・カート離脱の5つに分けて解説。広告かLPかを会社選びの前に切り分けます。" name="description"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Meta広告の運用代行とLP改善、どちらを先に依頼する？", "description": "Meta広告の運用代行とLP改善のどちらを先に依頼すべきかを、CTR・CPC・LP CVR・CPO・カート離脱の5つに分けて解説。広告かLPかを会社選びの前に切り分けます。", "url": "https://konishi-marketing.com/articles/meta-kokoku-daiko-lp-kaizen-junjo.html", "datePublished": "2026-08-27", "dateModified": "2026-08-27", "author": {"@type": "Person", "name": "小西秀人", "url": "https://konishi-marketing.com"}, "publisher": {"@type": "Organization", "name": "小西マーケティング", "url": "https://konishi-marketing.com"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Meta広告とLP改善はどちらを先にすべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "CTR・CPCが悪ければ広告側、クリック後CVRが低ければLP側を先に確認します。広告ごとにCVR差が大きい場合は広告とLPの接続を見ます。"}}, {"@type": "Question", "name": "広告とLPを同時に改善した方が早いですか？", "acceptedAnswer": {"@type": "Answer", "text": "接続自体に問題がある場合は一体で設計します。ただし複数要素を同時に大きく変えると効果判定が難しくなるため、ボトルネックを特定してから進めます。"}}, {"@type": "Question", "name": "どちらが原因か分からない場合はどうしますか？", "acceptedAnswer": {"@type": "Answer", "text": "CPM・CTR・CPC・LP到達後CVR・カート率・購入完了率を並べ、最初に大きく落ちている段階を確認します。"}}]}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SWS3R3K4W5');</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-light: #243461;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --gray-100: #f1f0ed;
+  --gray-200: #e4e2dc;
+  --gray-400: #a09e97;
+  --gray-600: #6b6860;
+  --gray-800: #3a3834;
+  --text: #1e1d1a;
+  --sans: 'Noto Sans JP', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: var(--sans); font-size: 1rem; color: var(--text); background: var(--off-white); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.site-wrap { max-width: 860px; margin: 0 auto; background: var(--white); }
+.site-header { background: var(--navy); padding: 1rem 2rem; border-bottom: 2px solid var(--gold); }
+.site-header a { color: var(--gold-light); text-decoration: none; font-size: 0.875rem; font-weight: 700; letter-spacing: .1em; }
+.hero { background: var(--navy); padding: 3rem 2.5rem 2.5rem; border-bottom: 3px solid var(--gold); }
+.hero-category { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: 1.25rem; }
+.hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 2; margin-bottom: 1.5rem; }
+.hero-meta { font-size: 0.8rem; color: rgba(255,255,255,.45); }
+.author-box { background: var(--gray-100); border-left: 3px solid var(--gold); padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--gray-600); line-height: 1.8; }
+.author-box strong { color: var(--navy); }
+.article-body { padding: 2.5rem 2.5rem; background: var(--white); }
+.article-body h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy) !important; line-height: 1.4; margin: 4.5rem 0 1.5rem; padding-top: 1.5rem; padding-bottom: .75rem; border-top: 1px solid var(--gray-200); border-bottom: 2px solid var(--gold); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy) !important; margin: 3.5rem 0 1rem; padding: .6rem 0 .6rem .75rem; border-left: 3px solid var(--gold); background-color: var(--gray-100); line-height: 1.45; }
+.article-body p { font-size: 1rem; color: var(--gray-800); line-height: 2.1; margin-bottom: 1.25rem; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body strong { color: var(--navy); }
+.insight { background: var(--navy); color: var(--white); padding: 1.25rem 1.75rem; margin: 1.75rem 0; font-size: 1rem; line-height: 2; font-weight: 700; }
+.insight em { font-style: normal; color: var(--gold-light); }
+.callout { background: var(--off-white); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; color: var(--gray-800); line-height: 2; }
+.callout strong { color: var(--navy); }
+.misrec-block { margin: 2rem 0; border: 1px solid var(--gray-200); overflow: hidden; }
+.misrec-header { background: var(--navy); color: var(--gold-light); font-size: 0.75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: .6rem 1.25rem; }
+.misrec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--gray-200); }
+.misrec-cell { padding: 1rem 1.25rem; font-size: 0.9rem; line-height: 1.9; color: var(--gray-800); }
+.misrec-cell.label { background: var(--gray-100); font-weight: 700; font-size: 0.8rem; color: var(--gray-600); letter-spacing: .05em; border-right: 1px solid var(--gray-200); }
+.misrec-cell.truth { background: var(--off-white); border-left: 1px solid var(--gray-200); }
+.prob-list { list-style: none; margin: 1rem 0; }
+.prob-list li { padding: 1rem 1.25rem 1rem 3rem; position: relative; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-800); line-height: 1.9; background: #fff; }
+.prob-list li:last-child { border-bottom: none; }
+.prob-list li::before { content: attr(data-num); position: absolute; left: 1rem; top: 1rem; width: 1.5rem; height: 1.5rem; background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.cta-block { background: var(--navy); padding: 2rem 2.5rem; margin: 2.5rem 0; text-align: center; }
+.cta-block-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: .75rem; }
+.cta-block-title { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.6; margin-bottom: .75rem; }
+.cta-block-sub { font-size: 0.875rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 1.5rem; }
+.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: .85rem 2.5rem; text-decoration: none; letter-spacing: .06em; border-bottom: 3px solid #a8893a; transition: opacity .2s; }
+.cta-btn:hover { opacity: .88; }
+.cta-note { font-size: 0.75rem; color: rgba(255,255,255,.4); margin-top: .75rem; }
+.faq-section { padding: 2.5rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.faq-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+.faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--gray-100); }
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.faq-q { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: .75rem; padding-left: 1.5rem; position: relative; }
+.faq-q::before { content: 'Q'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+.faq-a { font-size: 0.95rem; color: var(--gray-800); line-height: 2; padding-left: 1.5rem; position: relative; }
+.faq-a::before { content: 'A'; position: absolute; left: 0; top: 0; font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+.author-profile { background: var(--gray-100); padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.author-profile-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1rem; }
+.author-profile-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.author-profile-body { font-size: 0.875rem; color: var(--gray-600); line-height: 1.95; }
+.related-section { padding: 2rem 2.5rem; border-top: 1px solid var(--gray-200); }
+.related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .2em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 1.25rem; }
+.related-list { list-style: none; }
+.related-list li { padding: .75rem 0 .75rem 1rem; border-bottom: 1px solid var(--gray-100); position: relative; }
+.related-list li::before { content: ''; position: absolute; left: 0; top: 1.1em; width: 6px; height: 1px; background: var(--navy); }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { font-size: 0.9rem; color: var(--navy); text-decoration: underline; line-height: 1.7; }
+.site-footer { background: var(--navy); padding: 1.5rem 2.5rem; text-align: center; }
+.site-footer a { color: rgba(255,255,255,.55); text-decoration: none; font-size: 0.8rem; }
+#article-faq { background-color: var(--gray-100); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--gray-200); margin-top: 2.5rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#article-faq .faq-label { color: var(--navy); font-size: 0.75rem; }
+#article-faq .faq-item { border-bottom: 1px solid var(--gray-200); padding-left: 0; }
+#article-faq .faq-a { background-color: var(--white); padding: 1rem 1.25rem 1rem 2.25rem; margin-top: 0.5rem; line-height: 2; color: var(--gray-800); }
+.nextstep-faq { background-color: var(--navy-light); border-top: none; padding: 2.5rem 2.5rem; }
+.nextstep-faq .faq-label { color: var(--gold-light); }
+.nextstep-faq .faq-item { border-bottom: 1px solid rgba(255,255,255,.12); }
+.nextstep-faq .faq-item:last-child { border-bottom: none; }
+.nextstep-faq .faq-q { color: var(--white); }
+.nextstep-faq .faq-q::before { color: var(--gold-light); }
+.nextstep-faq .faq-a { color: rgba(255,255,255,.78); }
+.nextstep-faq .faq-a::before { color: var(--gold-light); }
+:root { color-scheme: only light; }
+html, body { background-color: #f8f7f4 !important; color: #1e1d1a; }
+@media (max-width: 640px) {
+  .hero, .article-body, .faq-section, .author-profile, .related-section, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 2rem; }
+  .cta-block { padding: 1.75rem 1.25rem; }
+  .misrec-row { grid-template-columns: 1fr; }
+  .misrec-cell.label { border-right: none; border-bottom: 1px solid var(--gray-200); }
+  .misrec-cell.truth { border-left: none; border-top: 1px solid var(--gray-200); }
+}
+.breadcrumb{font-size:.72rem;line-height:1.6;color:#6b6860;padding:.7rem 1.5rem;background:#fff;border-bottom:1px solid #e4e2dc;white-space:nowrap;overflow-x:auto}.breadcrumb a{color:#6b6860;text-decoration:none}.breadcrumb span.sep{margin:0 .45rem;color:#a09e97}
+</style></head><body><div class="site-wrap">
+<header class="site-header"><a href="https://konishi-marketing.com/">小西マーケティング</a></header>
+<nav aria-label="パンくず" class="breadcrumb"><a href="https://konishi-marketing.com/">ホーム</a><span class="sep">›</span><a href="https://konishi-marketing.com/articles/">オウンドメディア</a><span class="sep">›</span><a href="https://konishi-marketing.com/articles/jisha.html">自社EC</a><span class="sep">›</span><span aria-current="page">Meta広告の運用代行とLP改善、どちらを先に依頼する？</span></nav>
+<div class="hero"><span class="hero-category">自社EC / Meta広告 / LP改善</span><h1 class="hero-title">Meta広告の運用代行とLP改善、どちらを先に依頼する？</h1><p class="hero-lead">「広告を変えるべきか、LPを直すべきか」は固定で決まりません。<strong style="color:#fff">数字が最初に落ちている場所</strong>から決めます。</p><p class="hero-meta">小西マーケティング｜2026.08.27</p></div>
+<div class="author-box"><strong>自社ECのMeta広告でCPO3,000円以下。</strong>
+広告クリエイティブだけ、LPだけではなく、公開後のCVR・CPO・ROASまで確認してきた小西秀人が、20年のEC・D2C実務経験をもとに解説します。</div>
+<div class="article-body">
+<h2 style="margin-top:0">先に決めるのは依頼先ではなく、数字が落ちている場所</h2>
+<p>Meta広告のCPOが高いとき、運用代行を変えるべきか、LPを作り直すべきか迷います。</p>
+<p>ここで会社から選ぶと、広告会社は広告改善、制作会社はLP改善を提案しやすくなります。先に決めたいのは依頼先ではなく、<strong>広告から購入までのどこで数字が落ちているか</strong>です。</p>
+<div class="insight">広告運用代行とLP改善の順番は固定しない。<em>先にボトルネックを特定する。</em></div>
+<h2>CTR・CPCが悪いなら、広告側を先に見る</h2>
+<p>広告が表示されてもクリックされない、CPCが高い、狙った層へ十分届いていない。この状態ではLPへ人が来る前に止まっています。</p>
+<p>クリエイティブ、訴求、配信設定、ターゲティングなど、広告側を先に確認します。ただし、CTRだけを上げる強い訴求へ変えてLPとのズレを作らないようにします。</p>
+<h2>CTRは悪くないのにLP到達後CVRが低いなら、LPを先に見る</h2>
+<p>広告はクリックされているのに購入されない場合、広告運用だけを細かく調整しても改善幅が小さいことがあります。</p>
+<p>広告で期待させた内容がLP冒頭で続いているか、商品の違いが分かるか、価格やオファーへの納得が作れているか、購入前の不安が残っていないかを確認します。</p>
+<h2>広告別にCVR差が大きいなら、広告とLPの接続を見る</h2>
+<p>同じLPへ送っているのに、広告Aは売れ、広告Bは売れない。この場合はLP単体の問題とも広告単体の問題とも限りません。</p>
+<p>広告ごとに連れてきている人、期待させている結果、使用場面が違い、その違いをLPが受け取れていない可能性があります。</p>
+<p>このケースでは「運用代行かLP制作か」の二択より、広告→LPの訴求設計を先に直す方が合理的です。</p>
+<h2>LPのCVRも悪くないのにCPOが高いなら、広告側へ戻る</h2>
+<p>LPへ来た人は十分購入しているのにCPOが高いなら、流入獲得コストが高い可能性があります。</p>
+<p>CPM、CTR、CPC、クリエイティブの疲弊、配信対象、予算配分を確認し、同じCVRを維持したままより安く適切な流入を獲得できるかを見ます。</p>
+<h2>カート以降で落ちているなら、広告もLPも先ではない</h2>
+<p>LPからカート投入までは悪くないのに購入完了率が低いなら、送料、配送、会員登録、決済手段など、購入直前の問題が残っている可能性があります。</p>
+<p>この状態で広告会社を変えても、LPを全面改修しても、主因は残ります。</p>
+<h2>どちらを先に依頼するかは、この表で分ける</h2>
+<div class="misrec-block"><div class="misrec-header">現在の状態 → 先に見る場所</div>
+<div class="misrec-row"><div class="misrec-cell label">CTR・CPCが悪い</div><div class="misrec-cell truth">広告クリエイティブ、訴求、配信設定を先に確認</div></div>
+<div class="misrec-row"><div class="misrec-cell label">CTRは良い／LP CVRが低い</div><div class="misrec-cell truth">LP冒頭、商品理解、オファー、不安解消を先に確認</div></div>
+<div class="misrec-row"><div class="misrec-cell label">広告ごとにLP CVR差が大きい</div><div class="misrec-cell truth">広告とLPのメッセージ接続を確認</div></div>
+<div class="misrec-row"><div class="misrec-cell label">LP CVRは良い／CPOが高い</div><div class="misrec-cell truth">広告側の流入コスト・配信効率を確認</div></div>
+<div class="misrec-row"><div class="misrec-cell label">カート後に離脱</div><div class="misrec-cell truth">送料・配送・決済など購入導線を確認</div></div>
+</div>
+<h2>両方悪いときは、同時に全部直さない</h2>
+<p>広告もLPも数字が悪いと、両方を一度に全面改修したくなります。ただ、同時に大きく変えると、何が効いたのか分からなくなります。</p>
+<p>まず大きく落ちている場所を一つ決め、変更後に次の段階へ進みます。広告で完了した説明をLPで繰り返すなど、接続自体に問題がある場合は一体で設計します。</p>
+<h2>ボトルネックが分かれば、先に依頼する相手も決まる</h2>
+<p>広告代理店へ相談すれば広告の改善案が、LP制作会社へ相談すればLPの改善案が出るのは自然です。</p>
+<p>だから、依頼先を決める前に広告→LP→購入の数字を並べ、どこが最初のボトルネックかを確認します。そこが分かれば、広告運用代行、LP改善、広告→LP接続、購入導線のどこへ費用を使うかを決められます。</p>
+</div>
+<div class="faq-section" id="article-faq"><div class="faq-label">よくある質問</div><div class="faq-item"><div class="faq-q">Meta広告とLP改善はどちらを先にすべきですか？</div><div class="faq-a">CTR・CPCが悪ければ広告側、クリック後CVRが低ければLP側を先に確認します。広告ごとにCVR差が大きい場合は広告とLPの接続を見ます。</div></div><div class="faq-item"><div class="faq-q">広告とLPを同時に改善した方が早いですか？</div><div class="faq-a">接続自体に問題がある場合は一体で設計します。ただし複数要素を同時に大きく変えると効果判定が難しくなるため、ボトルネックを特定してから進めます。</div></div><div class="faq-item"><div class="faq-q">どちらが原因か分からない場合はどうしますか？</div><div class="faq-a">CPM・CTR・CPC・LP到達後CVR・カート率・購入完了率を並べ、最初に大きく落ちている段階を確認します。</div></div></div>
+<div class="faq-section nextstep-faq"><div class="faq-label">Next Step</div>
+<div class="faq-item"><div class="faq-q">広告とLPのどちらに原因があるか分からない場合は？</div><div class="faq-a">CTR・CPC・LP到達後CVR・カート率・購入率を分けて確認します。広告で人を連れてくるまでと、LP到達後のどちらで大きく落ちているかを先に切り分けます。</div></div>
+<div class="faq-item"><div class="faq-q">広告とLPをまとめて相談できますか？</div><div class="faq-a"><a href="https://konishi-marketing.com/jisha/">自社EC・Meta広告→LP制作の支援内容</a>を確認できます。広告とLPのどちらから直すべきかを先に切り分けます。</div></div></div>
+<div class="cta-block" style="margin:0;"><div class="cta-block-label">自社EC / Meta広告→LP</div><div class="cta-block-title">広告会社かLP制作会社かを選ぶ前に、先に直す場所を決める。</div><div class="cta-block-sub">CTR・CPC・LP CVR・CPO・購入完了まで確認し、必要な改善範囲だけを決めます。</div>
+<a class="cta-btn" href="https://konishi-marketing.com/jisha/?utm_source=article&amp;utm_medium=cta&amp;utm_campaign=meta-kokoku-daiko-lp-kaizen-junjo&amp;utm_content=bottom_cta">支援内容を見る</a><div class="cta-note">相談・見積もり作成に費用はかかりません。</div></div>
+<div class="author-profile"><div class="author-profile-label">この記事を書いた人</div>
+<div style="display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;"><div style="width:72px;height:72px;min-width:72px;overflow:hidden;border-radius:4px;border:2px solid #c9a84c;flex-shrink:0;"><img alt="小西秀人" height="72" src="https://konishi-marketing.com/images/konishi.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" width="72"/></div><div class="author-profile-name" style="margin-bottom:0;">小西秀人｜小西マーケティング</div></div>
+<div class="author-profile-body">EC・D2C実務20年。自社ECではMeta広告のCPO3,000円以下まで改善。広告・LP・オファー・購入導線を分けず、どこから購入が減っているかを確認してから、構成・コピー・デザイン・広告改善へつなげている。</div></div>
+<div class="related-section"><div class="related-label">関連記事</div><ul class="related-list"><li><a href="https://konishi-marketing.com/articles/meta-cpm-ctr-cpo-sagaranai.html">Meta広告のCTRは上がったのにCPOが下がらない原因</a></li><li><a href="https://konishi-marketing.com/articles/meta-cta-lp-message.html">Meta広告とLPの訴求を一致させるには？5つの確認ポイント</a></li><li><a href="https://konishi-marketing.com/articles/jishaec-conversion-ritsu-agaranai-shisaku-tarinai-dewanai.html">自社ECのCVRが上がらないとき、施策を増やす前に見る場所</a></li></ul></div>
+<footer class="site-footer"><a href="https://konishi-marketing.com">https://konishi-marketing.com</a></footer></div></body></html>
