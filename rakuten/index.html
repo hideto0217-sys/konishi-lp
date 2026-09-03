@@ -1068,6 +1068,39 @@ a:focus-visible,summary:focus-visible{outline-color:#F08A8A!important}
     font-size:15px !important;
   }
 }
+
+/* 2022年の近年実績は、既存の制作例と混同しないテキスト証拠として表示 */
+.recent-proof{
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+  margin:28px 0 34px;
+  padding:18px 20px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:var(--soft);
+}
+.recent-proof-year{
+  flex:0 0 auto;
+  font-size:16px;
+  line-height:1;
+  font-weight:900;
+  letter-spacing:.04em;
+}
+.recent-proof strong{
+  display:block;
+  font-size:18px;
+  line-height:1.55;
+}
+.recent-proof p{
+  margin:5px 0 0;
+  color:var(--muted);
+  font-size:14px;
+}
+@media (max-width:640px){
+  .recent-proof{gap:12px;padding:16px;}
+  .recent-proof strong{font-size:16px;}
+}
 </style>
 
 
@@ -1120,7 +1153,7 @@ a:focus-visible,summary:focus-visible{outline-color:#F08A8A!important}
 <div class="inner">
 <a aria-label="小西マーケティング トップページ" class="brand" href="https://konishi-marketing.com/">小西マーケティング</a>
 <nav aria-label="ページ内ナビゲーション" class="nav">
-<a aria-label="ページの作り方へ移動" href="#mechanism">作り方</a>
+<a aria-label="ページの作り方へ移動" href="#mechanism">改善の考え方</a>
 <a aria-label="制作例へ移動" href="#cases">制作例</a>
 <a aria-label="制作内容へ移動" href="#scope">制作内容</a>
 <a aria-label="料金へ移動" href="#pricing">料金</a>
@@ -1135,10 +1168,9 @@ a:focus-visible,summary:focus-visible{outline-color:#F08A8A!important}
 <div class="hero-copy">
 <h1 class="service-title" id="page-title">楽天商品ページ改善・制作</h1>
 <p class="hero-headline">画像も説明も変えた。<br/>それでもCVRが動かないなら。</p>
-<p class="sub">次の修正箇所を探す前に、購入者・競合・販売データから、どこで選ばれなくなっているかを見ます。そこから構成・コピー・デザインを組み直し、商品画像20枚に仕上げます。</p>
+<p class="sub">メイン画像も、説明も、比較表も変えた。それでも数字が動かないなら、もう一つ修正箇所を増やす前に、見直したいことがあります。</p>
 <div class="hero-cta">
-<a aria-label="制作について相談する" class="btn primary" data-ga-cta-type="consultation" data-ga-event="cta_click" data-ga-location="hero" href="#contact">制作について相談する</a>
-<a aria-label="無料診断レポートを受け取る" class="btn secondary" data-ga-cta-type="free_diagnosis" data-ga-event="cta_click" data-ga-location="hero" href="#contact">無料診断レポートを受け取る</a>
+<a aria-label="無料診断レポートを受け取る" class="btn primary" data-ga-cta-type="free_diagnosis" data-ga-event="cta_click" data-ga-location="hero" href="#contact">無料診断レポートを受け取る</a>
 </div>
 </div>
 <aside aria-label="楽天店舗運営・CVR改善実績" class="hero-proof" role="complementary">
@@ -1170,70 +1202,36 @@ a:focus-visible,summary:focus-visible{outline-color:#F08A8A!important}
 <p class="kicker">直した。それでも動かなかった。</p>
 <div>
 <p class="big">メイン画像を変えた。<br/>商品説明も増やした。<br/>比較表も入れた。<br/>それでも<em>CVRが伸び切らない。</em></p>
-<p class="side">一つひとつの改善が、間違っていたとは限りません。それでも数字が動かないなら、もう一つ修正箇所を増やす前に、見る場所があります。</p>
+<p class="side">一つひとつの改善が、間違っていたとは限りません。それでも、メイン画像、説明、比較表と手を入れて数字が動かなかった。だとすれば、次に考えるべきなのは「まだ直していない場所はどこか」だけではありません。</p>
 </div>
 </div>
 </section>
-<section aria-labelledby="difference-title" class="section pain" data-judgment-id="J03" id="difference">
-<div class="wrap pain-grid">
-<div>
-<p class="kicker">改善箇所を探す前に</p>
-<h2 id="difference-title">先に見るのは、<br/>購入者がどこで決めきれなくなっているか。</h2>
-<p class="pain-copy">違いが分からないのか。自分に合うか決められないのか。主張を信じ切れないのか。どこで決めきれなくなっているかが違えば、変えるべきページも変わります。</p>
-</div>
-<div class="decision-rail">
-<div class="decision"><b>販売データを読む</b><span>アクセスやCVR、価格、広告・流入状況から、ページを変えることで動かせる問題かを切り分けます。</span></div>
-<div class="decision"><b>購入者の声を読む</b><span>レビューや使われ方から、購入前に迷いやすい点と、最後に選ぶ理由を拾います。</span></div>
-<div class="decision"><b>競合との違いを洗う</b><span>同じ候補に並んだとき、どこで違いが見えなくなり、何が比較の決め手になっているかを洗います。</span></div>
-</div>
-</div>
-</section>
-<section aria-labelledby="mechanism-title" class="section mechanism" data-judgment-id="J04" id="mechanism">
+<section aria-labelledby="difference-title" class="section mechanism" data-judgment-id="J03" id="difference">
 <div class="wrap">
 <div class="section-head">
 <div>
-<p class="kicker">買わない地点が違えば、作るべきページも変わる</p>
-<h2 id="mechanism-title">同じ「CVRが低い」でも、<br/>打つべき手は同じではありません。</h2>
+<p class="kicker">改善する場所を変える前に</p>
+<h2 id="difference-title">20枚を良くすることと、<br/>買う理由が決まることは同じではありません。</h2>
 </div>
-<p class="intro">画像・コピー・比較表などを先に決めず、購入者が止まっている地点に合わせてページを組みます。</p>
+<p class="intro">商品画像を何枚改善しても、購入者が決めきれないことが残ったままでは、購入にはつながりにくくなります。</p>
 </div>
 <div class="stage-grid">
-<article class="stage">
-<span class="num">CASE 01</span>
-<h3>違いが分からない</h3>
-<p>競合と並んだときに、何が違う商品なのか判断できない。</p>
-<span class="judge">競合と比べるための基準そのものを作ります。</span>
-</article>
-<article class="stage">
-<span class="num">CASE 02</span>
-<h3>自分に合うか決められない</h3>
-<p>機能は理解できても、自分の使い方や状況に合うか確信できない。</p>
-<span class="judge">使う場面と「自分に合う条件」を具体的に見せます。</span>
-</article>
-<article class="stage">
-<span class="num">CASE 03</span>
-<h3>主張を信じ切れない</h3>
-<p>メリットは魅力的でも、本当にその結果が得られるか不安が残る。</p>
-<span class="judge">説明を増やすより、信じられる根拠を先に見せます。</span>
-</article>
+<article class="stage"><span class="num">CASE 01</span><h3>違いが分からない</h3><p>競合と並んだときに、何が違う商品なのか判断できない。</p><span class="judge">必要なのは、比較するための基準です。</span></article>
+<article class="stage"><span class="num">CASE 02</span><h3>自分に合うか決められない</h3><p>機能は理解できても、自分の使い方や状況に合うか確信できない。</p><span class="judge">必要なのは、使う場面と選べる条件です。</span></article>
+<article class="stage"><span class="num">CASE 03</span><h3>主張を信じ切れない</h3><p>メリットは魅力的でも、本当にその結果が得られるか不安が残る。</p><span class="judge">必要なのは、説明の追加ではなく信じられる根拠です。</span></article>
 </div>
+<p class="lead" style="margin-top:36px">だから、次に直す画像を探す前に、まず「何をまだ決めきれていないのか」を見ます。</p>
+<div class="hero-cta" style="margin-top:28px"><a aria-label="無料診断レポートで確認する" class="btn secondary" data-ga-cta-type="free_diagnosis" data-ga-event="cta_click" data-ga-location="difference" href="#contact">自社商品がどこで決めきれなくなっているか、無料診断で確認する</a></div>
 </div>
 </section>
 <section aria-labelledby="scope-title" class="section scope" data-judgment-id="J05" id="scope">
 <div class="wrap">
-<div class="section-head">
-<div>
-<p class="kicker">商品画像20枚の作り方</p>
-<h2 id="scope-title">だから、20枚を先に埋めません。</h2>
-</div>
-<p class="intro">どこで選ばれなくなっているかを見極めてから、その迷いを解くために必要な内容だけを構成・コピー・デザインへ落とします。</p>
-</div>
+<div class="section-head"><div><p class="kicker">「決めきれない理由」から作る20枚</p><h2 id="scope-title">20枚を作る前に、<br/>何を変えるべきかを決めます。</h2></div><p class="intro">枚数を埋めることから始めず、今の売れ方から購入を止めている可能性が高い理由を絞り、その判断を進める内容だけを20枚へ落とします。</p></div>
 <div class="service-grid">
-<article class="service"><span class="num">01</span><h3>販売状況・購入者・競合を調べる</h3><p>ページだけを見て修正箇所を決めず、現在の売れ方と比較状況まで見ます。</p></article>
-<article class="service core"><span class="num">02</span><h3>今回、何を変えるかを決める</h3><p>購入者がどこで決めきれなくなっているかを整理し、今回のページで最優先に変える一点を決めます。</p></article>
-<article class="service core"><span class="num">03</span><h3>構成・コピーへ落とす</h3><p>その一点を変えるために、何をどの順番で見せれば購入まで進めるかを組みます。</p></article>
-<article class="service"><span class="num">04</span><h3>商品画像20枚へ仕上げる</h3><p>1枚ごとに伝える役割を絞り、写真・商品・見出し・証拠を組み合わせて、楽天へ実装できる完成画像にします。</p></article>
-<article class="service finish"><span class="num">05</span><h3>公開後のCVRを見る</h3><p>既存商品は公開後30日の結果まで見て、数字が動かなければ別の見立てで作り直します。</p></article>
+<article class="service"><span class="num">01</span><h3>今の売れ方を確認する</h3><p>アクセス、CVR、価格、広告・流入、レビュー、競合状況まで見て、ページで動かせる問題かを切り分けます。</p></article>
+<article class="service core"><span class="num">02</span><h3>決めきれない理由を特定する</h3><p>購入者の声と競合を照らし合わせ、今回のページで最優先に解くべき迷いを決めます。</p></article>
+<article class="service core"><span class="num">03</span><h3>必要な順番へ組み直す</h3><p>その迷いを解くために、何を、どの順番で見せれば選べる状態になるかを構成とコピーへ落とします。</p></article>
+<article class="service finish"><span class="num">04</span><h3>商品画像20枚へ仕上げる</h3><p>写真・商品・見出し・証拠を一つの役割へまとめ、楽天へ実装できる完成画像20枚として納品します。</p></article>
 </div>
 </div>
 </section>
@@ -1241,10 +1239,17 @@ a:focus-visible,summary:focus-visible{outline-color:#F08A8A!important}
 <div class="wrap">
 <div class="section-head">
 <div>
-<p class="kicker">楽天年間ランキング入賞商品</p>
+<p class="kicker">楽天での構成・販売実績</p>
 <h2 id="ranking-cases-title">食品でも、家具でも、家電でも。<br/>売る理由は商品ごとに変えてきました。</h2>
 </div>
 <p class="intro">同じ型を当てはめるのではなく、その商品が何を理由に選ばれるべきかを組み直してきた実績です。</p>
+</div>
+<div class="recent-proof" role="note" aria-label="近年の楽天実績">
+  <span class="recent-proof-year">2022</span>
+  <div>
+    <strong>折りたたみ衣類乾燥機「ぽけどらい」｜楽天総合ランキング1位</strong>
+    <p>商品ページ構成を担当。</p>
+  </div>
 </div>
 <div class="ranking-cases-grid">
 <article class="ranking-case">
@@ -1295,7 +1300,18 @@ a:focus-visible,summary:focus-visible{outline-color:#F08A8A!important}
 </div>
 </div>
 </section>
-<section aria-labelledby="pricing-title" class="section" data-judgment-id="J08" id="pricing">
+<section aria-labelledby="impact-title" class="section" data-judgment-id="J08" id="impact">
+<div class="wrap">
+<div class="section-head"><div><p class="kicker">制作費を売上の中で考える</p><h2 id="impact-title">月商800万円なら、<br/>CVRの変化は売上にそのまま効きます。</h2></div><p class="intro">アクセス数と客単価が変わらない前提なら、CVRが相対10％改善すると、売上も単純計算で約10％変わります。</p></div>
+<div class="fit-grid">
+<article class="fit-card"><h3>現在</h3><p><strong style="font-size:28px">月商800万円</strong></p></article>
+<article class="fit-card"><h3>CVRが相対10％改善した場合</h3><p><strong style="font-size:28px">月商880万円</strong></p></article>
+</div>
+<p class="lead" style="margin-top:32px">差は月80万円。単純年換算では960万円です。</p>
+<p class="small">※これは制作効果やCVR改善率を保証する数値ではなく、CVRの変化が売上へ与える影響を示す試算です。実際の売上は価格、流入、レビュー、配送条件、在庫、季節性などの影響も受けます。そのため制作前に、ページ改善で動かせる余地があるかを確認します。</p>
+</div>
+</section>
+<section aria-labelledby="pricing-title" class="section" data-judgment-id="J09" id="pricing">
 <div class="wrap pricing-wrap">
 <div class="pricing-card">
 <p class="kicker">料金</p>
@@ -1310,7 +1326,7 @@ a:focus-visible,summary:focus-visible{outline-color:#F08A8A!important}
 <li>レイアウト・完成デザイン20枚</li>
 <li>写真素材の選定・使用指示</li>
 <li>既存商品は公開後30日のCVR確認</li>
-<li>条件該当時は別の見立てでB案20枚を1回追加</li>
+<li>既存商品は所定条件で未改善時の再制作1回を含む</li>
 </ul>
 </div>
 <div class="pricing-side">
@@ -1320,43 +1336,27 @@ a:focus-visible,summary:focus-visible{outline-color:#F08A8A!important}
 <p>必要な写真、構図、使用場面、証明すべき事実の指示も料金に含みます。カメラマン、モデル、スタジオなどの新規撮影費は含みません。</p>
 <div class="hero-cta">
 <a aria-label="制作について相談する" class="btn primary" data-ga-cta-type="consultation" data-ga-event="cta_click" data-ga-location="pricing" href="#contact">制作について相談する</a>
-<a aria-label="無料診断レポート" class="btn secondary" data-ga-cta-type="free_diagnosis" data-ga-event="cta_click" data-ga-location="pricing" href="#contact">無料診断レポート</a>
 </div>
 </div>
 </div>
 </section>
-<section aria-labelledby="fit-title" class="section fit-criteria" data-judgment-id="J09" id="fit">
+<section aria-labelledby="fit-title" class="section fit-criteria" data-judgment-id="J10" id="fit">
 <div class="wrap">
 <div class="section-head">
 <div>
 <p class="kicker">制作対象</p>
-<h2 id="fit-title">アクセスと販売データがある<br/>既存商品が、制作対象です。</h2>
+<h2 id="fit-title">特に相性がいいのは、<br/>販売データがある既存商品です。</h2>
 </div>
 <p class="intro">商品ページを変えることで動かせる問題かどうかを先に見極めます。ページ外要因が主因の場合は、その点を切り分けてから進めます。</p>
 </div>
 <div class="criteria-grid">
 <article class="criteria-card"><span>既存商品</span><h3>最も相性のよい対象です。</h3><p>納品前後のCVRを比較できるため、何を変えた結果、数字がどう動いたかまで確認できます。</p></article>
-<article class="criteria-card"><span>新商品</span><h3>ご相談いただけます。</h3><p>納品前CVRがないため、公開後のB案自動判定は対象外です。</p></article>
+<article class="criteria-card"><span>新商品</span><h3>ご相談いただけます。</h3><p>既存商品のような前後比較はできませんが、商品情報や近接商品の声をもとに設計します。</p></article>
 <article class="criteria-card"><span>ページ外要因</span><h3>制作前に切り分けます。</h3><p>価格、在庫、配送、広告・流入などが主因なら、ページ制作だけで解決できる問題として扱いません。</p></article>
 </div>
 </div>
 </section>
-<section aria-labelledby="flow-title" class="section flow" data-judgment-id="J10" id="flow">
-<div class="wrap">
-<div class="section-head">
-<div><p class="kicker">制作の流れ</p><h2 id="flow-title">売れ方を見て、変える一点を決めて、制作。<br/>公開後に数字を見ます。</h2></div>
-<p class="intro">修正箇所を先に決めず、今の売れ方を確認するところから進めます。</p>
-</div>
-<div class="process-list">
-<div class="process-row"><span class="num">01</span><h3>今の売れ方を見る</h3><p>商品ページ、アクセス、CVR、価格、広告、レビュー、競合状況を見ます。</p></div>
-<div class="process-row"><span class="num">02</span><h3>購入者・競合を調査</h3><p>購入者レビュー、競合商品の評価、代替行動、購入前の迷いを調べます。</p></div>
-<div class="process-row"><span class="num">03</span><h3>変える一点と構成を確定</h3><p>どこで選ばれなくなっている可能性が高いかを決め、必要な内容と順番へ落とします。</p></div>
-<div class="process-row"><span class="num">04</span><h3>コピー・デザイン制作</h3><p>構成を確定したうえで、楽天へ実装できる商品画像20枚へ仕上げます。</p></div>
-<div class="process-row"><span class="num">05</span><h3>納品・公開</h3><p>完成画像20枚を納品します。RMSへの登録作業は制作範囲に含みません。</p></div>
-<div class="process-row"><span class="num">06</span><h3>公開後30日でCVRを比較</h3><p>既存商品は納品前後を比較し、条件に該当した場合はB案の再制作へ進みます。</p></div>
-</div>
-</div>
-</section>
+
 <section aria-labelledby="profile-title" class="section" data-judgment-id="J11" id="profile">
 <div class="wrap profile">
 <div class="profile-card"><img alt="小西秀人プロフィール写真" decoding="async" fetchpriority="low" height="1280" loading="lazy" src="https://konishi-marketing.com/images/rakuten-page-09.jpg" width="1920"/></div>
@@ -1373,15 +1373,12 @@ a:focus-visible,summary:focus-visible{outline-color:#F08A8A!important}
 <div class="wrap">
 <div class="section-head">
 <div><p class="kicker">よくある質問</p><h2 id="faq-title">制作前によく聞かれること。</h2></div>
-<p class="intro">依頼前によく聞かれる条件だけをまとめています。</p>
+<p class="intro">本文で触れていない実務上の確認事項だけをまとめています。</p>
 </div>
 <div class="faq">
-<details><summary>既存の商品ページがあっても依頼できますか。</summary><div class="answer">はい。既存商品の改善を制作対象としています。現在の販売状況とページを見て、残す部分と変更する部分を分けます。</div></details>
-<details><summary>新商品でも依頼できますか。</summary><div class="answer">ご相談いただけます。購入者レビューがない場合は、近接商品や代替品の声も拾い、確認できた事実と推測を分けて構成します。ただし納品前CVRがないため、B案の自動判定は対象外です。</div></details>
-<details><summary>納品物は何ですか。</summary><div class="answer">楽天へ実装できる商品画像20枚です。販売状況・購入者・競合の確認から、改善方針、構成、コピー、レイアウト、デザインまで一式で制作します。</div></details>
 <details><summary>写真撮影も含まれますか。</summary><div class="answer">必要な写真、構図、使用場面、証明すべき事実の指示は料金に含まれます。カメラマン、モデル、スタジオなどの新規撮影費は含まれません。</div></details>
 <details><summary>楽天への登録作業も含まれますか。</summary><div class="answer">商品登録、RMS内の更新、広告設定、クーポン設定は制作内容に含まれません。</div></details>
-<details><summary>転換率の向上は保証されますか。</summary><div class="answer">特定の転換率や売上額そのものは保証していません。既存商品では納品前30日間と公開後30日間のCVRを比較し、公開後が上回らなかった場合は実測データをもう一度見直し、別の見立てでB案20枚を1回、追加費用なしで制作します。価格、在庫、配送条件、大型セール、広告や流入構成などページ外条件が大きく変わった場合は、その影響を切り分けて判定します。</div></details>
+<details><summary>使える写真素材が少なくても相談できますか。</summary><div class="answer">はい。まず現在ある素材を確認し、今回のページで必要な写真が不足する場合は、必要な構図・使用場面・撮影内容をお伝えします。</div></details>
 <details><summary>制作期間はどのくらいですか。</summary><div class="answer">商品情報、既存素材、調査範囲、撮影の有無によって変わります。事前確認後に必要工程と制作スケジュールをご案内します。</div></details>
 </div>
 </div>
@@ -1390,8 +1387,8 @@ a:focus-visible,summary:focus-visible{outline-color:#F08A8A!important}
 <div class="wrap contact-form-layout">
 <div class="contact-form-intro">
 <p class="kicker">ご相談</p>
-<h2 id="contact-title">まず、今の商品が<br/>どこで選ばれなくなっているかを見ます。</h2>
-<p class="contact-intro-lead">まず改善余地を見たい場合は、無料診断レポートを選択してください。改善する商品が決まっており、制作内容や進め方を知りたい場合は、制作相談を選択してください。</p>
+<h2 id="contact-title">次に必要なのは、<br/>診断か、制作か。</h2>
+<p class="contact-intro-lead">改善余地から確認したい場合は無料診断レポートを。改善する商品が決まっており、費用や進め方を確認したい場合は制作相談を選択してください。</p>
 </div>
 <div class="contact-form-card">
 <form action="https://script.google.com/macros/s/AKfycbyO2WuhDl_-N2aFd2sdqr80UpIJ_iCMVKetndhO7vjDLgQmSp0SWnTB8CGXC4qCo39i/exec" class="contact-form" data-contact-form="rakuten" id="contact-form" method="post">
