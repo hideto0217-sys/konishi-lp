@@ -2369,6 +2369,82 @@ a:focus-visible,summary:focus-visible{outline-color:var(--mk-blue)!important}
 }
 </style>
 
+
+<style id="hero-results-efficiency-v1">
+.hero-results-efficiency{
+  margin-top:42px;
+  padding:34px 36px;
+  border:1px solid rgba(49,94,112,.22);
+  border-radius:22px;
+  background:#F3FAFC;
+}
+.hero-results-efficiency-head{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  gap:42px;
+  align-items:end;
+}
+.hero-results-efficiency h3{
+  margin:0;
+  font-size:clamp(27px,3.2vw,42px);
+  line-height:1.22;
+  letter-spacing:-.035em;
+}
+.hero-results-efficiency-copy{
+  margin:0;
+  color:#49443f;
+  font-size:16px;
+  line-height:1.85;
+}
+.hero-results-efficiency-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0;
+  margin-top:28px;
+  border-top:2px solid var(--ink);
+}
+.hero-results-efficiency-stat{
+  padding:28px 28px 8px 0;
+}
+.hero-results-efficiency-stat + .hero-results-efficiency-stat{
+  padding-left:28px;
+  border-left:1px solid var(--line);
+}
+.hero-results-efficiency-stat strong{
+  display:block;
+  color:var(--mk-blue-deep);
+  font-size:clamp(42px,5vw,66px);
+  font-weight:950;
+  line-height:1;
+  letter-spacing:-.06em;
+}
+.hero-results-efficiency-stat span{
+  display:block;
+  margin-top:12px;
+  color:#4f4942;
+  font-size:14px;
+  font-weight:850;
+  line-height:1.55;
+}
+.hero-results-efficiency-note{
+  margin:24px 0 0;
+  padding-top:20px;
+  border-top:1px solid rgba(49,94,112,.18);
+  color:#5f5952;
+  font-size:13px;
+  line-height:1.75;
+}
+@media(max-width:700px){
+  .hero-results-efficiency{margin-top:30px;padding:26px 22px}
+  .hero-results-efficiency-head{grid-template-columns:1fr;gap:16px}
+  .hero-results-efficiency h3{font-size:28px}
+  .hero-results-efficiency-copy{font-size:15px}
+  .hero-results-efficiency-grid{grid-template-columns:1fr}
+  .hero-results-efficiency-stat{padding:24px 0}
+  .hero-results-efficiency-stat + .hero-results-efficiency-stat{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+  .hero-results-efficiency-stat strong{font-size:46px}
+}
+</style>
 </head>
 <body><a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="topbar" role="banner">
@@ -2471,6 +2547,17 @@ a:focus-visible,summary:focus-visible{outline-color:var(--mk-blue)!important}
 <div class="hero-result-stat"><strong>6,600万円</strong><span>最高応援購入額</span></div>
 <div class="hero-result-stat"><strong>3回</strong><span>Makuake総合1位</span></div>
 <div class="hero-result-stat hero-result-stat--prelaunch"><strong>約9割</strong><span>公開前の事前集客なし</span></div>
+</div>
+<div class="hero-results-efficiency" aria-label="広告効率と申込率の実績">
+<div class="hero-results-efficiency-head">
+<h3>「広告費を多く使ったから伸びた」だけではありません。</h3>
+<p class="hero-results-efficiency-copy">ROAS2,000％超を複数プロジェクトで記録。さらに、ページへ来た人の最高4.7％が応援購入へ進んだ案件もあります。</p>
+</div>
+<div class="hero-results-efficiency-grid">
+<div class="hero-results-efficiency-stat"><strong>2,000％超</strong><span>ROAS｜複数プロジェクト</span></div>
+<div class="hero-results-efficiency-stat"><strong>4.7％</strong><span>最高申込率</span></div>
+</div>
+<p class="hero-results-efficiency-note">※ROAS・申込率は案件ごとの広告条件、商品、価格、公開時期、Makuake内露出などによって変動します。</p>
 </div>
 </div>
 </section>
