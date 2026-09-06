@@ -174,7 +174,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 .sec--paper{background:var(--paper);}
 .sec--navy{background:var(--navy);}
 .sec-label{
-  font-size:.62rem;font-weight:700;letter-spacing:.28em;
+  font-size:.75rem;font-weight:700;letter-spacing:.24em;
   color:var(--gold);text-transform:uppercase;display:block;margin-bottom:.9rem;
 }
 .sec-label--lt{color:rgba(201,168,76,.65);}
@@ -775,9 +775,22 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 #consultDiag:checked ~ .consult-select label[for="consultDiag"] .radio-ui::after,
 #consultConsult:checked ~ .consult-select label[for="consultConsult"] .radio-ui::after{content:'';position:absolute;top:50%;left:50%;width:8px;height:8px;background:var(--navy);border-radius:50%;transform:translate(-50%,-50%);}
 #consultConsult:checked ~ #diagFields{display:none!important;}
+/* submit label: radio state controls text even if JS change event is unavailable */
+.form-submit .submit-consult{display:none;}
+#consultConsult:checked ~ .form-submit .submit-diagnosis{display:none;}
+#consultConsult:checked ~ .form-submit .submit-consult{display:inline;}
+#consultDiag:checked ~ .form-submit .submit-diagnosis{display:inline;}
+#consultDiag:checked ~ .form-submit .submit-consult{display:none;}
+/* フォーム下マイクロコピーもradio状態から直接切り替える（JS非依存） */
+.form-disc.mode-consultation{display:none;}
+#consultConsult:checked ~ .form-disc.mode-diagnosis{display:none!important;}
+#consultConsult:checked ~ .form-disc.mode-consultation{display:block!important;}
+#consultDiag:checked ~ .form-disc.mode-diagnosis{display:block!important;}
+#consultDiag:checked ~ .form-disc.mode-consultation{display:none!important;}
 
 /* ── responsive ── */
 @media(max-width:680px){
+  .sec-label{font-size:.875rem;letter-spacing:.18em;margin-bottom:1rem;}
   .hd{padding:.75rem 1.25rem;}
   .hd-nav{gap:.8rem;}
   .hd-link{font-size:.72rem;}
@@ -1000,6 +1013,25 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 .mode-consultation[hidden],.mode-diagnosis[hidden]{display:none!important;}
 @media(max-width:680px){.front-proof-inner{grid-template-columns:1fr;}.front-proof-inner div{padding:1rem 1.25rem;}}
 @media(max-width:560px){.hd-link{display:none}.hd-nav{gap:0}.hd-cta{font-size:.74rem;padding:.45rem .8rem}}
+
+/* v4: scope as deliverables, report preview */
+.scope-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--g200);margin-top:2rem;}
+.scope-card{background:var(--white);padding:1.7rem;}
+.scope-no{display:block;font-size:.65rem;font-weight:900;letter-spacing:.16em;color:var(--gold);margin-bottom:.55rem;}
+.scope-card h3{font-family:var(--serif);font-size:1.05rem;color:var(--navy);line-height:1.55;margin-bottom:.5rem;}
+.scope-card p{font-size:.88rem;color:var(--g600);line-height:1.9;}
+.report-preview{margin:1.5rem 0 1.25rem;padding:1.25rem;border:1px solid rgba(201,168,76,.45);background:rgba(255,255,255,.06);}
+.report-preview-title{font-family:var(--serif);font-weight:700;font-size:1rem;margin-bottom:.85rem;}
+.report-preview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;}
+.report-preview-grid>div{padding:.85rem;background:rgba(255,255,255,.07);display:flex;gap:.55rem;align-items:flex-start;}
+.report-preview-grid span{font-size:.65rem;font-weight:900;letter-spacing:.12em;color:var(--gold-lt);padding-top:.15rem;}
+.report-preview-grid strong{font-size:.82rem;line-height:1.65;}
+@media(max-width:640px){
+  .scope-grid{grid-template-columns:1fr;}
+  .report-preview-grid{grid-template-columns:1fr;}
+  .hero-lead br{display:none;}
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -1103,7 +1135,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <a class="hd-link hd-link--rakuten" href="https://konishi-marketing.com/rakuten/">楽天商品ページ制作</a>
 <a class="hd-link" href="#services">サービス</a>
 <a class="hd-link hd-link--articles" href="https://konishi-marketing.com/articles/">記事を読む</a>
-<a class="hd-cta" href="#form">無料LP診断を受ける</a>
+<a class="hd-cta" href="#form">無料ページ診断を受ける</a>
 </nav>
 </header>
 <!-- hero -->
@@ -1112,13 +1144,10 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <h1 class="hero-service-title">EC・商品ページのCVR改善</h1>
 <p class="hero-headline">CVRが動かないとき、<br/>最初に決めるのは、<br/>何を変えるかではありません。</p>
 <p class="hero-subheadline">その商品ページ、<br/>本当に最初に直す場所でしょうか。</p>
-<p class="hero-lead" style="color: rgba(255,255,255,0.85);">広告費、商品ページ、価格、レビュー、配送、販促。数字が動かないと、直したい場所はいくつも見えます。けれど、先に施策を決めると、本当の原因と修正内容がずれることがあります。<br/>小西マーケティングでは、まず売上を止めている場所を切り分けます。ページが原因なら、そこで最初に購入を止めている迷いを特定し、その答えを構成・コピー・写真・デザインまで一貫して反映します。</p>
-<div class="service-def">
-<strong>直す場所を先に決めず、売上を止めている場所から改善します。</strong>
-</div>
+<p class="hero-lead" style="color: rgba(255,255,255,0.85);">広告、商品ページ、価格、レビュー、配送。数字が動かない原因は、ページとは限りません。<br/>まず売上を止めている場所を切り分け、そこから直します。</p>
 <div class="cta-row hero-cta-row">
-<a class="btn hero-btn" href="#form">無料LP診断を受ける</a>
-<div class="btn-note hero-btn-note">商品ページURLを送るだけ。<br/>診断レポートは2営業日以内に返送します。</div>
+<a class="btn hero-btn" href="#form">無料ページ診断を受ける</a>
+<div class="btn-note hero-btn-note">商品ページURLを送るだけ。<br/>無料ページ診断のレポートは2営業日以内に返送します。</div>
 </div>
 </div>
 </section>
@@ -1147,7 +1176,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <!-- mechanism -->
 <section class="sec sec--navy">
 <div class="inner">
-<span class="sec-label sec-label--lt">原因を、正しく直し切るために</span>
+<span class="sec-label sec-label--lt">小西式CVR改善設計</span>
 <div class="phil-inner" style="max-width:900px;">
 <h2 class="phil-h">原因を見つけても、<br/>制作の途中で答えが変われば、正しい改善にはならない。</h2>
 <p class="phil-p">原因が分かっても、構成・コピー・写真・デザインで伝えることが変われば、改善はずれます。だから、診断で見つけた答えを、完成まで同じ基準でつなぎます。</p>
@@ -1168,7 +1197,6 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <p>ワイヤーやデザインで別の訴求を足さず、迷いを解消する順番を保ったまま、スマートフォンでの読み方と売り場仕様へ反映します。</p>
 </div>
 </div>
-<div class="mech-close"><strong style="color:var(--gold-lt);">診断した本人が、構成・コピー・ワイヤー・デザインまで担当します。</strong><br/>特定した原因への答えを、制作の途中で別の訴求へ変えないためです。</div>
 </div>
 </div>
 </section>
@@ -1211,31 +1239,15 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <!-- service scope -->
 <section class="sec sec--paper">
 <div class="inner">
-<span class="sec-label">制作範囲</span>
-<h2 class="sec-h2">診断で特定した原因を、<br/>完成データまでずらさない。</h2>
-<p class="sec-p">制作範囲が広いこと自体を売りにしているわけではありません。最初に特定した原因への答えを、調査・構成・コピー・写真・デザインの途中で別の訴求へ変えず、各販売チャネルで使える完成データまでつなげます。</p>
-<div class="value-flow" aria-label="診断結果から完成データまでの制作の流れ">
-  <div class="value-flow-step value-flow-step--origin">
-    <span class="value-flow-kicker">START</span>
-    <h3>診断で特定した原因</h3>
-    <p>売上を止めている場所と、そこで最初に残っている迷いを起点にします。</p>
-  </div>
-  <div class="value-flow-arrow" aria-hidden="true">→</div>
-  <div class="value-flow-step">
-    <span class="value-flow-kicker">DESIGN</span>
-    <h3>その原因に必要な答えだけを設計する</h3>
-    <p>市場・VOC・競合を確認し、構成、見出し、本文、写真・数値・レビューの役割と置き場所を決めます。</p>
-    <div class="value-flow-tags"><span>リサーチ</span><span>構成</span><span>コピー</span><span>ワイヤー</span></div>
-  </div>
-  <div class="value-flow-arrow" aria-hidden="true">→</div>
-  <div class="value-flow-step">
-    <span class="value-flow-kicker">OUTPUT</span>
-    <h3>答えを変えずに、完成データへ落とす</h3>
-    <p>商品画像・LPデザインへ反映し、楽天、Yahoo!、Amazon、Makuake、自社ECの表示仕様に合わせて納品します。</p>
-    <div class="value-flow-tags"><span>商品画像</span><span>LPデザイン</span><span>図解</span><span>完成データ</span></div>
-  </div>
+<span class="sec-label">ご依頼いただける範囲</span>
+<h2 class="sec-h2">診断後に必要なら、<br/>商品ページの完成データまで制作します。</h2>
+<p class="sec-p">ページ改善が必要と判断した場合は、リサーチから構成・コピー・ワイヤー、商品画像・LPデザインまで対応します。販売チャネルごとの表示仕様に合わせ、実際に使える完成データで納品します。</p>
+<div class="scope-grid">
+  <div class="scope-card"><span class="scope-no">01</span><h3>市場・VOC・競合リサーチ</h3><p>買い手の認識、競合との比較状況、商品の事実を確認します。</p></div>
+  <div class="scope-card"><span class="scope-no">02</span><h3>構成・コピー・ワイヤー</h3><p>ページの情報順、見出し、本文、画像・証拠の置き場所まで設計します。</p></div>
+  <div class="scope-card"><span class="scope-no">03</span><h3>商品画像・LPデザイン</h3><p>商品画像、図解、LPデザインへ落とし込み、スマートフォンでの見え方まで整えます。</p></div>
+  <div class="scope-card"><span class="scope-no">04</span><h3>チャネル別の完成データ</h3><p>楽天、Yahoo!、Amazon、Makuake、自社ECなど、各売り場の仕様に合わせて納品します。</p></div>
 </div>
-
 </div>
 </section>
 <!-- channels -->
@@ -1368,10 +1380,10 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <section class="sec sec--paper">
 <div class="inner-n">
 <span class="sec-label">よくある質問</span>
-<h2 class="sec-h2">無料LP診断について、<br/>よくいただく質問。</h2>
+<h2 class="sec-h2">無料ページ診断について、<br/>よくいただく質問。</h2>
 <div class="faq-list">
 <div class="faq-item">
-<div class="faq-q">無料診断だけでも利用できますか。</div>
+<div class="faq-q">無料ページ診断だけでも利用できますか。</div>
 <div class="faq-a">利用できます。制作のご提案は、ご希望いただいた場合のみ行います。</div>
 </div>
 <div class="faq-item">
@@ -1392,6 +1404,14 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <h2 class="form-h mode-consultation" hidden="">売上の状況を見て、次にやるべきことを一緒に整理する。</h2>
 <p class="form-lead mode-diagnosis">商品ページURLと分かる範囲の数字を送ってください。ページを直すべきかも含めて、売上を妨げている可能性が高い箇所と、最初に確認すべき改善ポイントを整理し、診断レポートを2営業日以内に返送します。</p>
 <p class="form-lead mode-consultation" hidden="">現在の販売チャネル、売上状況、課題をお送りください。内容を確認し、2営業日以内にメールでご連絡します。</p>
+<div class="report-preview mode-diagnosis" aria-label="無料ページ診断でお返しする内容">
+  <div class="report-preview-title">無料ページ診断でお返しすること</div>
+  <div class="report-preview-grid">
+    <div><span>01</span><strong>売上を妨げている可能性が高い箇所</strong></div>
+    <div><span>02</span><strong>最初に直す1点</strong></div>
+    <div><span>03</span><strong>改善余地の試算</strong></div>
+  </div>
+</div>
 <div class="form-note-row mode-diagnosis">
 <span class="form-badge">✓ 営業電話なし</span><span class="form-badge">✓ 有料提案は希望時のみ</span><span class="form-badge">✓ 診断レポートを返送</span>
 </div>
@@ -1420,12 +1440,12 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <div class="fld"><label for="messagePlaceholder"><span class="mode-diagnosis">補足したい内容（任意）</span><span class="mode-consultation" hidden="">現在の状況・相談したいこと<span class="req">必須</span></span></label><textarea id="messagePlaceholder" name="message" rows="5"></textarea><span class="hint mode-diagnosis">分かる範囲で構いません。</span><span class="hint mode-consultation" hidden="">現在の販売チャネル、売上状況、課題、相談したい内容をご記入ください。</span></div>
 </div>
 <div class="privacy-consent"><input id="privacyConsent" name="privacy_agreement" type="checkbox" value="同意する"/><label for="privacyConsent"><a href="https://konishi-marketing.com/privacy/" rel="noopener" target="_blank">プライバシーポリシー</a>を確認し、個人情報の取り扱いに同意します。<span class="req">必須</span></label></div>
-<button class="form-submit" type="submit"><span class="mode-diagnosis">無料診断を申し込む</span><span class="mode-consultation" hidden="">事業相談を送信する</span></button>
+<button class="form-submit" type="submit" aria-label="無料ページ診断を申し込む"><span class="submit-diagnosis">無料ページ診断を申し込む</span><span class="submit-consult">事業相談を送信する</span></button>
 <div class="form-disc mode-diagnosis">※本診断は分析に基づくものであり、成果保証ではありません。<br/>※診断結果は、商品・市場・運用状況によって異なります。</div>
-<div class="form-disc mode-consultation" hidden="">※内容を確認後、2営業日以内にメールでご連絡します。<br/>※営業電話は行いません。</div>
+<div class="form-disc mode-consultation">※内容を確認後、2営業日以内にメールでご連絡します。<br/>※営業電話は行いません。</div>
 <div aria-live="polite" class="form-status" id="formStatus" role="status" tabindex="-1"></div>
 </form>
-<div class="form-success" id="formSuccessDiag"><div class="success-icon">✓</div><div class="success-ttl">無料診断を受け付けました。</div><p class="success-p">2営業日以内に診断レポートをお送りします。<br/><br/>レポートでは、①売上を妨げている可能性が高い箇所、②最初に直す1点、③改善余地の試算を整理します。</p></div>
+<div class="form-success" id="formSuccessDiag"><div class="success-icon">✓</div><div class="success-ttl">無料ページ診断を受け付けました。</div><p class="success-p">2営業日以内に診断レポートをお送りします。<br/><br/>レポートでは、①売上を妨げている可能性が高い箇所、②最初に直す1点、③改善余地の試算を整理します。</p></div>
 <div class="form-success" id="formSuccessConsult"><div class="success-icon">✓</div><div class="success-ttl">事業相談を受け付けました。</div><p class="success-p">内容を確認のうえ、2営業日以内にメールでご連絡します。</p></div>
 </div></section>
 <!-- footer -->
@@ -1456,10 +1476,23 @@ const statusNode = document.getElementById('formStatus');
 function currentType(){ return document.querySelector('input[name="consult_type"]:checked')?.value || 'ページ診断'; }
 function setModeVisibility(type){
   const isConsult = type === '事業相談';
-  document.querySelectorAll('.mode-diagnosis').forEach(el => el.hidden = isConsult);
-  document.querySelectorAll('.mode-consultation').forEach(el => el.hidden = !isConsult);
+
+  // モード別ブロックを明示的に切り替える
+  document.querySelectorAll('.mode-diagnosis').forEach(el => {
+    el.hidden = isConsult;
+    el.setAttribute('aria-hidden', isConsult ? 'true' : 'false');
+  });
+  document.querySelectorAll('.mode-consultation').forEach(el => {
+    el.hidden = !isConsult;
+    el.setAttribute('aria-hidden', !isConsult ? 'true' : 'false');
+  });
+
+  // 診断専用入力欄
   diagFields.hidden = isConsult;
+  diagFields.setAttribute('aria-hidden', isConsult ? 'true' : 'false');
   [urlInput,channelSelect,trafficSelect,pvSelect,cvrSelect].forEach(el => el.required = !isConsult);
+
+  // 相談時は相談内容を必須化
   messageInput.required = isConsult;
   messageInput.placeholder = isConsult
     ? `例：
@@ -1470,10 +1503,17 @@ function setModeVisibility(type){
 ・現在の課題
 ・試した施策
 ・診断時に見てほしいこと`;
-  statusNode.textContent=''; statusNode.className='form-status';
+
+  // ボタンの可視文言はCSSでradioのchecked状態から直接切り替える。
+  // JSはアクセシビリティ用ラベルのみ同期する。
+  submitButton.setAttribute('aria-label', isConsult ? '事業相談を送信する' : '無料ページ診断を申し込む');
+
+  statusNode.textContent='';
+  statusNode.className='form-status';
 }
-radios.forEach(r => r.addEventListener('change',()=>setModeVisibility(r.value)));
-document.querySelectorAll('.radio-card').forEach(card=>card.addEventListener('click',()=>{const r=document.getElementById(card.htmlFor);if(r){r.checked=true;setModeVisibility(r.value);}}));
+
+// radioのchangeだけを唯一の切替トリガーにする
+radios.forEach(r => r.addEventListener('change', () => setModeVisibility(currentType())));
 setModeVisibility(currentType());
 
 function setStatus(message,type=''){
