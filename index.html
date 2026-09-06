@@ -392,6 +392,65 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 .delivery-card p{font-size:.82rem;color:var(--g600);line-height:1.8;}
 .scope-note{margin-top:1.5rem;padding:1.1rem 1.25rem;background:var(--paper);border-left:3px solid var(--navy);font-size:.86rem;color:var(--g600);line-height:1.9;}
 
+/* ── causal service scope flow ── */
+.value-flow{
+  margin-top:2.25rem;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1.25fr) auto minmax(0,1.25fr);
+  align-items:stretch;
+  gap:.85rem;
+}
+.value-flow-step{
+  background:var(--white);
+  border:1px solid var(--g200);
+  border-top:3px solid var(--navy);
+  padding:1.55rem;
+  min-width:0;
+}
+.value-flow-step--origin{background:var(--navy);border-color:var(--navy);}
+.value-flow-kicker{
+  display:block;
+  margin-bottom:.6rem;
+  font-size:.62rem;
+  font-weight:900;
+  letter-spacing:.16em;
+  color:var(--gold);
+}
+.value-flow-step h3{
+  font-family:var(--serif);
+  font-size:1.03rem;
+  line-height:1.6;
+  color:var(--navy);
+  margin-bottom:.55rem;
+}
+.value-flow-step p{font-size:.86rem;color:var(--g600);line-height:1.9;}
+.value-flow-step--origin h3{color:var(--gold-lt);}
+.value-flow-step--origin p{color:rgba(255,255,255,.78);}
+.value-flow-arrow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--gold);
+  font-size:1.35rem;
+  font-weight:900;
+}
+.value-flow-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;}
+.value-flow-tags span{
+  display:inline-block;
+  padding:.28rem .5rem;
+  border:1px solid var(--g200);
+  background:var(--paper);
+  color:var(--g600);
+  font-size:.7rem;
+  font-weight:700;
+  line-height:1.5;
+}
+.scope-note strong{color:var(--navy);}
+@media(max-width:760px){
+  .value-flow{grid-template-columns:1fr;gap:.7rem;}
+  .value-flow-arrow{transform:rotate(90deg);min-height:22px;}
+}
+
 /* ── next step ── */
 .nextstep{
   margin-top:2.5rem;padding:2.5rem;
@@ -816,6 +875,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
   gap:1px;background:rgba(201,168,76,.25);margin-top:2rem;
 }
+.mechanism-grid--three{grid-template-columns:repeat(3,minmax(0,1fr));}
 .mech-step{
   background:rgba(255,255,255,.06);padding:1.5rem;
   min-width:0;
@@ -874,7 +934,7 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
   color:var(--navy);margin-bottom:1rem;
 }
 @media(max-width:760px){
-  .mechanism-grid,.fit-grid{grid-template-columns:1fr;}
+  .mechanism-grid,.mechanism-grid--three,.fit-grid{grid-template-columns:1fr;}
   .track-grid--four,.track-grid--three,.track-grid--two{grid-template-columns:repeat(2,minmax(0,1fr));}
 }
 @media(max-width:359px){
@@ -1052,9 +1112,9 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <h1 class="hero-service-title">EC・商品ページのCVR改善</h1>
 <p class="hero-headline">CVRが動かないとき、<br/>最初に決めるのは、<br/>何を変えるかではありません。</p>
 <p class="hero-subheadline">その商品ページ、<br/>本当に最初に直す場所でしょうか。</p>
-<p class="hero-lead" style="color: rgba(255,255,255,0.85);">広告費、商品ページ、価格、レビュー、配送、販促。数字が動かないと、直したい場所はいくつも見えます。けれど、先に施策を決めると、本当の原因と修正内容がずれることがあります。<br/>小西マーケティングでは、アクセス不足なのか、ページに来ても選ばれていないのか、価格・在庫・配送など別の条件なのかを先に切り分けます。ページが原因なら、その後に構成・コピー・デザインまで一貫して改善します。</p>
+<p class="hero-lead" style="color: rgba(255,255,255,0.85);">広告費、商品ページ、価格、レビュー、配送、販促。数字が動かないと、直したい場所はいくつも見えます。けれど、先に施策を決めると、本当の原因と修正内容がずれることがあります。<br/>小西マーケティングでは、まず売上を止めている場所を切り分けます。ページが原因なら、そこで最初に購入を止めている迷いを特定し、その答えを構成・コピー・写真・デザインまで一貫して反映します。</p>
 <div class="service-def">
-<strong>ページ制作が必要かどうかから診断します。</strong>
+<strong>直す場所を先に決めず、売上を止めている場所から改善します。</strong>
 </div>
 <div class="cta-row hero-cta-row">
 <a class="btn hero-btn" href="#form">無料LP診断を受ける</a>
@@ -1069,61 +1129,11 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <div><strong>20年</strong><span>EC実務経験</span></div>
 </div>
 </section>
-<!-- quick service routing -->
-<section class="quick-route" aria-label="サービスを選ぶ">
-<div class="quick-route-inner">
-<div class="quick-route-head">
-<div class="quick-route-title">目的が決まっている方は、ここから直接サービスをご覧いただけます。</div>
-<div class="quick-route-note">まだ何を直すべきか分からない方は、そのまま下へお進みください。</div>
-</div>
-<div class="quick-route-grid">
-<a class="quick-route-link" href="https://konishi-marketing.com/rakuten/">楽天 商品ページ改善</a>
-<a class="quick-route-link" href="https://konishi-marketing.com/rakuten/rakuten-growth.html">楽天 売上改善・運用</a>
-<a class="quick-route-link" href="https://konishi-marketing.com/yahoo/">Yahoo! 商品ページ改善</a>
-<a class="quick-route-link" href="https://konishi-marketing.com/amazon/">Amazon 商品ページ改善</a>
-<a class="quick-route-link" href="https://konishi-marketing.com/makuake/">Makuake 制作</a>
-<a class="quick-route-link" href="https://konishi-marketing.com/makuake/after-makuake.html">Makuake後 一般販売</a>
-<a class="quick-route-link" href="https://konishi-marketing.com/jisha/">自社EC・Meta広告→LP</a>
-<a class="quick-route-link" href="#form">無料LP診断</a>
-</div>
-</div>
-</section>
-<!-- diagnostic framing -->
-<section class="sec sec--white">
-<div class="inner">
-<span class="sec-label">最初に切り分けること</span>
-<h2 class="sec-h2">商品ページに手を入れる前に、<br/>まず「ページが原因か」を確認する。</h2>
-<p class="sec-p">アクセスそのものが足りないのか。商品ページまでは見られているのに選ばれていないのか。価格・在庫・配送など、ページ以外の条件で購入が止まっているのか。ここを分けずに制作へ進むと、正しい改善でも順番を間違えます。</p>
-<div class="fit-grid">
-<div class="fit-card">
-<h3>商品ページを直すと伸びやすい状態</h3>
-<ul class="fit-list">
-<li>商品ページへ一定のアクセスがある</li>
-<li>商品に購入実績または競争力がある</li>
-<li>広告や画像を変えても購入率が伸び切っていない</li>
-</ul>
-</div>
-<div class="fit-card fit-card--paper">
-<h3>ページより先に別の原因を見る状態</h3>
-<ul class="fit-list">
-<li>アクセスそのものが不足している</li>
-<li>商品需要がまだ検証されていない</li>
-<li>在庫、配送、価格条件が主なボトルネックになっている</li>
-</ul>
-</div>
-</div>
-<div class="core-note">
-<h3>制作費をかける前に、<br/>本当にページ改善が次の一手かを確認します。</h3>
-<p>ページ内に主な原因があるなら制作へ進みます。ページ外に主因があるなら、集客・価格・在庫・配送など先に直すべき場所を整理します。ページ制作を売るために、すべてをページの問題として扱いません。</p>
-</div>
-</div>
-</section>
-
 <!-- stop patterns -->
 <section class="sec sec--white">
 <div class="inner">
 <span class="sec-label">ページが原因だった場合</span>
-<h2 class="sec-h2">次に見るのは、<br/>お客さまが最初に迷っている理由です。</h2>
+<h2 class="sec-h2">ページ全体を直す前に、<br/>最初に購入を止めている「迷い」を見つける。</h2>
 <p class="sec-p">「説明を増やす」「レビューを目立たせる」のように、直す場所を先に固定しません。広告や検索結果ですでに分かっていることは繰り返さず、商品ページに来たあと最初に「ここが決まらない」と残っている迷いを特定します。</p>
 <ul class="moment-list">
 <li><strong>違いが分からない。</strong><br/>候補には入ったが、価格やレビュー以外に何を基準に選べばよいか決まっていない。</li>
@@ -1137,65 +1147,29 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <!-- mechanism -->
 <section class="sec sec--navy">
 <div class="inner">
-<span class="sec-label sec-label--lt">部分修正で数字が戻らない理由</span>
+<span class="sec-label sec-label--lt">原因を、正しく直し切るために</span>
 <div class="phil-inner" style="max-width:900px;">
-<h2 class="phil-h">原因を見つけても、<br/>制作の途中で別のことを伝え始めれば、数字は戻らない。</h2>
-<p class="phil-p">最初に残っている迷いを見つけても、その後の構成・コピー・写真・デザインが別々の基準で作られれば、せっかく見つけた迷いへの答えが制作途中でずれてしまいます。</p>
-<div class="mechanism-grid">
+<h2 class="phil-h">原因を見つけても、<br/>制作の途中で答えが変われば、正しい改善にはならない。</h2>
+<p class="phil-p">原因が分かっても、構成・コピー・写真・デザインで伝えることが変われば、改善はずれます。だから、診断で見つけた答えを、完成まで同じ基準でつなぎます。</p>
+<div class="mechanism-grid mechanism-grid--three">
 <div class="mech-step">
 <span class="mech-step-no">01</span>
-<h3>最初に残っている「迷い」を一つに絞る</h3>
-<p>流入元、検索行動、購入者の声、売り場、販売状況を確認し、商品ページに来たあと最初に判断を止めている迷いを特定します。</p>
+<h3>その迷いに、何を見せれば決まるかを定める</h3>
+<p>情報不足だから足す、とは限りません。すでに分かっていることは繰り返さず、残った迷いを解消するために必要な情報と置き場所だけを決めます。</p>
 </div>
 <div class="mech-step">
 <span class="mech-step-no">02</span>
-<h3>その迷いを解消する情報だけを、必要な場所に置く</h3>
-<p>情報不足だから足す、とは限りません。すでに分かっていることは繰り返さず、最初に残った迷いを解消するために必要な情報と置き場所だけを決めます。</p>
-</div>
-<div class="mech-step">
-<span class="mech-step-no">03</span>
 <h3>コピー・写真・実績を、同じ答えへ収束させる</h3>
 <p>見出し、本文、写真、数値、レビューを別々の訴求にせず、最初に残った迷いへ同じ答えを返すように配置します。</p>
 </div>
 <div class="mech-step">
-<span class="mech-step-no">04</span>
-<h3>デザインでも、その答えをぶらさない</h3>
-<p>ワイヤーやデザインでも別の訴求を足さず、最初に残った迷いを解消する順番を保ったまま、スマートフォンでの読み方と売り場仕様へ反映します。</p>
+<span class="mech-step-no">03</span>
+<h3>デザインまで、その答えを変えずに通す</h3>
+<p>ワイヤーやデザインで別の訴求を足さず、迷いを解消する順番を保ったまま、スマートフォンでの読み方と売り場仕様へ反映します。</p>
 </div>
 </div>
-<div class="mech-close"><strong style="color:var(--gold-lt);">小西マーケティングでは、診断した本人が構成・コピー・ワイヤー・デザインまで担当します。</strong><br/>一人で全部できること自体が価値ではありません。最初に見つけた迷いへの答えを、制作途中で別の訴求へ変えないためです。</div>
+<div class="mech-close"><strong style="color:var(--gold-lt);">診断した本人が、構成・コピー・ワイヤー・デザインまで担当します。</strong><br/>特定した原因への答えを、制作の途中で別の訴求へ変えないためです。</div>
 </div>
-</div>
-</section>
-<!-- service scope -->
-<section class="sec sec--paper">
-<div class="inner">
-<span class="sec-label">制作範囲</span>
-<h2 class="sec-h2">診断した原因を、<br/>構成・コピー・デザインまで同じ基準で直し切る。</h2>
-<p class="sec-p">ここからは考え方の説明ではなく、実際の制作範囲です。調査で見つけた原因を起点に、構成、コピー、ワイヤー、デザイン、販売チャネル別の完成データまで一貫して制作します。</p>
-<div class="delivery-grid">
-<div class="delivery-card">
-<span class="delivery-no">01</span>
-<h3>市場・VOC・競合リサーチ</h3>
-<p>購入者レビュー、検索行動、比較状況、競合ページ、販売状況を確認し、構成設計に必要な調査情報を整理します。</p>
-</div>
-<div class="delivery-card">
-<span class="delivery-no">02</span>
-<h3>構成・コピー・ワイヤー制作</h3>
-<p>ページ全体の構成、見出し、本文コピー、写真・数値・レビューの配置、ワイヤーフレームまで制作します。</p>
-</div>
-<div class="delivery-card">
-<span class="delivery-no">03</span>
-<h3>商品画像・LPデザイン制作</h3>
-<p>スマートフォンでの閲覧を前提に、商品画像・LP・必要な図解や訴求パーツまで実制作へ落とし込みます。</p>
-</div>
-<div class="delivery-card">
-<span class="delivery-no">04</span>
-<h3>販売チャネル仕様に合わせた完成データ納品</h3>
-<p>楽天、Yahoo!ショッピング、Amazon、Makuake、自社ECそれぞれの表示仕様に合わせ、実装・入稿に使える完成データを納品します。</p>
-</div>
-</div>
-<div class="scope-note">調査だけ、コピーだけ、デザインだけで分断せず、診断結果をそのまま完成データまでつなげます。</div>
 </div>
 </section>
 <!-- track record -->
@@ -1234,12 +1208,42 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <div class="track-note">※実績は異なる商品・店舗で達成したものを含みます。成果は商品、市場、運用条件によって異なります。</div>
 </div>
 </section>
+<!-- service scope -->
+<section class="sec sec--paper">
+<div class="inner">
+<span class="sec-label">制作範囲</span>
+<h2 class="sec-h2">診断で特定した原因を、<br/>完成データまでずらさない。</h2>
+<p class="sec-p">制作範囲が広いこと自体を売りにしているわけではありません。最初に特定した原因への答えを、調査・構成・コピー・写真・デザインの途中で別の訴求へ変えず、各販売チャネルで使える完成データまでつなげます。</p>
+<div class="value-flow" aria-label="診断結果から完成データまでの制作の流れ">
+  <div class="value-flow-step value-flow-step--origin">
+    <span class="value-flow-kicker">START</span>
+    <h3>診断で特定した原因</h3>
+    <p>売上を止めている場所と、そこで最初に残っている迷いを起点にします。</p>
+  </div>
+  <div class="value-flow-arrow" aria-hidden="true">→</div>
+  <div class="value-flow-step">
+    <span class="value-flow-kicker">DESIGN</span>
+    <h3>その原因に必要な答えだけを設計する</h3>
+    <p>市場・VOC・競合を確認し、構成、見出し、本文、写真・数値・レビューの役割と置き場所を決めます。</p>
+    <div class="value-flow-tags"><span>リサーチ</span><span>構成</span><span>コピー</span><span>ワイヤー</span></div>
+  </div>
+  <div class="value-flow-arrow" aria-hidden="true">→</div>
+  <div class="value-flow-step">
+    <span class="value-flow-kicker">OUTPUT</span>
+    <h3>答えを変えずに、完成データへ落とす</h3>
+    <p>商品画像・LPデザインへ反映し、楽天、Yahoo!、Amazon、Makuake、自社ECの表示仕様に合わせて納品します。</p>
+    <div class="value-flow-tags"><span>商品画像</span><span>LPデザイン</span><span>図解</span><span>完成データ</span></div>
+  </div>
+</div>
+
+</div>
+</section>
 <!-- channels -->
 <section class="sec sec--white" id="services">
 <div class="inner">
-<span class="sec-label">課題別の対応サービス</span>
-<h2 class="sec-h2">販売チャネルが同じでも、<br/>売上が止まる理由で必要な支援は変わります。</h2>
-<p class="sec-p" style="margin-bottom:2.2rem;">上の入口でサービスを決めなかった方は、今起きている状態から近いものを選んでください。チャネル名ではなく、次に解くべき課題で支援内容を分けています。</p>
+<span class="sec-label">対応サービス</span>
+<h2 class="sec-h2">必要な支援が決まっている方は、<br/>該当するサービスへ。</h2>
+<p class="sec-p" style="margin-bottom:2.2rem;">販売チャネルと現在の状態に近いものを選んでください。</p>
 <div class="channel-grid">
 <div class="channel-card">
 <h3>楽天市場｜アクセスはあるのに、商品ページで選ばれない</h3>
@@ -1384,9 +1388,9 @@ body{font-family:var(--sans);color:var(--text);background:var(--white);
 <!-- form -->
 <section class="form-sec" id="form">
 <div class="form-wrap">
-<h2 class="form-h mode-diagnosis">無料LP診断を申し込む。</h2>
+<h2 class="form-h mode-diagnosis">最初にどこを直すべきか、<br/>無料で確認する。</h2>
 <h2 class="form-h mode-consultation" hidden="">売上の状況を見て、次にやるべきことを一緒に整理する。</h2>
-<p class="form-lead mode-diagnosis">商品ページURLと分かる範囲の数字を送ってください。売上を妨げている可能性が高い箇所と、最初に確認すべき改善ポイントを整理し、診断レポートを2営業日以内に返送します。</p>
+<p class="form-lead mode-diagnosis">商品ページURLと分かる範囲の数字を送ってください。ページを直すべきかも含めて、売上を妨げている可能性が高い箇所と、最初に確認すべき改善ポイントを整理し、診断レポートを2営業日以内に返送します。</p>
 <p class="form-lead mode-consultation" hidden="">現在の販売チャネル、売上状況、課題をお送りください。内容を確認し、2営業日以内にメールでご連絡します。</p>
 <div class="form-note-row mode-diagnosis">
 <span class="form-badge">✓ 営業電話なし</span><span class="form-badge">✓ 有料提案は希望時のみ</span><span class="form-badge">✓ 診断レポートを返送</span>
