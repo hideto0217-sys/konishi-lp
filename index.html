@@ -1536,27 +1536,52 @@ function validateForm(){
 form.addEventListener('submit',async e=>{
   e.preventDefault();
   if(!validateForm()) return;
+
   const type=currentType();
   const original=submitButton.innerHTML;
-  submitButton.disabled=true; submitButton.textContent='送信中…'; setStatus('送信しています。');
+  submitButton.disabled=true;
+  submitButton.textContent='送信中…';
+  setStatus('送信しています。');
+
+  // GAS側の既存処理との互換性を維持するため、診断専用項目も
+  // 事業相談時は「項目自体を省略せず空文字」で送る。
   const payload=new URLSearchParams({
-    name:nameInput.value.trim(), email:emailInput.value.trim(), consult_type:type,
-    channel:type==='ページ診断'?channelSelect.value:'', url:type==='ページ診断'?urlInput.value.trim():'',
-    traffic:type==='ページ診断'?trafficSelect.value:'', pv:type==='ページ診断'?pvSelect.value:'', cvr:type==='ページ診断'?cvrSelect.value:'',
-    message:messageInput.value.trim(), privacy_agreement:'同意する', source_page:location.href
+    name:nameInput.value.trim(),
+    email:emailInput.value.trim(),
+    consult_type:type,
+    channel:type==='ページ診断'?channelSelect.value:'',
+    url:type==='ページ診断'?urlInput.value.trim():'',
+    traffic:type==='ページ診断'?trafficSelect.value:'',
+    pv:type==='ページ診断'?pvSelect.value:'',
+    cvr:type==='ページ診断'?cvrSelect.value:'',
+    message:messageInput.value.trim(),
+    privacy_agreement:'同意する',
+    source_page:location.href
   });
+
   try{
-    const response=await fetch(GAS_URL,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:payload.toString(),redirect:'follow'});
-    if(!response.ok) throw new Error('送信先で受付を確認できませんでした。HTTP '+response.status);
-    const text=await response.text();
-    let result=null; try{result=JSON.parse(text);}catch(_e){}
-    if(result && result.ok===false) throw new Error(result.message||'送信できませんでした。');
-    if(!result || result.ok!==true) throw new Error('GASから受付完了を確認できませんでした。メールも送信されていない可能性があります。');
-    if(typeof gtag==='function') gtag('event','form_submit_success',{form_name:'top_page',inquiry_type:type});
+    // Apps Script Web App はPOST後のレスポンス読取でCORSエラーになる場合がある。
+    // no-cors にして既存のPOST自体はそのまま実行し、レスポンス本文は読まない。
+    await fetch(GAS_URL,{
+      method:'POST',
+      mode:'no-cors',
+      headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},
+      body:payload.toString(),
+      redirect:'follow'
+    });
+
+    if(typeof gtag==='function'){
+      gtag('event','form_submit_success',{form_name:'top_page',inquiry_type:type});
+    }
     form.style.display='none';
     document.getElementById(type==='事業相談'?'formSuccessConsult':'formSuccessDiag').classList.add('show');
-  }catch(err){console.error(err);setStatus(err.message||'送信できませんでした。時間を置いて再度お試しください。','error');}
-  finally{submitButton.disabled=false;submitButton.innerHTML=original;}
+  }catch(err){
+    console.error(err);
+    setStatus('送信できませんでした。通信環境をご確認のうえ、再度お試しください。','error');
+  }finally{
+    submitButton.disabled=false;
+    submitButton.innerHTML=original;
+  }
 });
 </script>
 </body>
