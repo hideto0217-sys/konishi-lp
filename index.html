@@ -1533,74 +1533,30 @@ function validateForm(){
   return true;
 }
 
-// GASへのPOSTはhidden iframeへ送信する。
-// fetch/CORSに依存しないため、iOSのローカルHTMLプレビューでも送信できる。
-const gasFrame=document.createElement('iframe');
-gasFrame.name='gasSubmitFrame';
-gasFrame.id='gasSubmitFrame';
-gasFrame.style.display='none';
-gasFrame.setAttribute('aria-hidden','true');
-document.body.appendChild(gasFrame);
-
-form.addEventListener('submit',e=>{
+form.addEventListener('submit',async e=>{
   e.preventDefault();
   if(!validateForm()) return;
-
   const type=currentType();
   const original=submitButton.innerHTML;
-  submitButton.disabled=true;
-  submitButton.textContent='送信中…';
-  setStatus('送信しています。');
-
-  // 相談時は診断専用項目を送らない。
-  [channelSelect,urlInput,trafficSelect,pvSelect,cvrSelect].forEach(el=>{
-    el.disabled = type==='事業相談';
+  submitButton.disabled=true; submitButton.textContent='送信中…'; setStatus('送信しています。');
+  const payload=new URLSearchParams({
+    name:nameInput.value.trim(), email:emailInput.value.trim(), consult_type:type,
+    channel:type==='ページ診断'?channelSelect.value:'', url:type==='ページ診断'?urlInput.value.trim():'',
+    traffic:type==='ページ診断'?trafficSelect.value:'', pv:type==='ページ診断'?pvSelect.value:'', cvr:type==='ページ診断'?cvrSelect.value:'',
+    message:messageInput.value.trim(), privacy_agreement:'同意する', source_page:location.href
   });
-
-  // source_pageはhidden inputとして都度更新。
-  let sourceInput=form.querySelector('input[name="source_page"]');
-  if(!sourceInput){
-    sourceInput=document.createElement('input');
-    sourceInput.type='hidden';
-    sourceInput.name='source_page';
-    form.appendChild(sourceInput);
-  }
-  sourceInput.value=location.href;
-
-  form.action=GAS_URL;
-  form.method='POST';
-  form.target='gasSubmitFrame';
-  form.enctype='application/x-www-form-urlencoded';
-
-  let completed=false;
-  const finishSuccess=()=>{
-    if(completed) return;
-    completed=true;
+  try{
+    const response=await fetch(GAS_URL,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:payload.toString(),redirect:'follow'});
+    if(!response.ok) throw new Error('送信先で受付を確認できませんでした。HTTP '+response.status);
+    const text=await response.text();
+    let result=null; try{result=JSON.parse(text);}catch(_e){}
+    if(result && result.ok===false) throw new Error(result.message||'送信できませんでした。');
+    if(!result || result.ok!==true) throw new Error('GASから受付完了を確認できませんでした。メールも送信されていない可能性があります。');
     if(typeof gtag==='function') gtag('event','form_submit_success',{form_name:'top_page',inquiry_type:type});
     form.style.display='none';
     document.getElementById(type==='事業相談'?'formSuccessConsult':'formSuccessDiag').classList.add('show');
-    [channelSelect,urlInput,trafficSelect,pvSelect,cvrSelect].forEach(el=>{ el.disabled=false; });
-    submitButton.disabled=false;
-    submitButton.innerHTML=original;
-  };
-
-  // cross-origin iframeの中身は読めないため、loadを送信完了の目安にする。
-  gasFrame.onload=()=>{
-    // iframe生成直後のabout:blank loadは送信前なので除外。
-    if(submitButton.disabled) finishSuccess();
-  };
-
-  try{
-    form.submit();
-    // iOS等でloadイベントを取得できない場合のフォールバック。
-    setTimeout(finishSuccess,1800);
-  }catch(err){
-    console.error(err);
-    [channelSelect,urlInput,trafficSelect,pvSelect,cvrSelect].forEach(el=>{ el.disabled=false; });
-    submitButton.disabled=false;
-    submitButton.innerHTML=original;
-    setStatus('送信できませんでした。時間を置いて再度お試しください。','error');
-  }
+  }catch(err){console.error(err);setStatus(err.message||'送信できませんでした。時間を置いて再度お試しください。','error');}
+  finally{submitButton.disabled=false;submitButton.innerHTML=original;}
 });
 </script>
 </body>
