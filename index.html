@@ -2,1556 +2,334 @@
 
 <html lang="ja">
 <head>
-<link rel="icon" href="https://konishi-marketing.com/images/favicon.ico" sizes="any"/>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>ECのCVR改善・商品ページ改善｜売上が止まる原因から設計｜小西マーケティング</title>
-<meta content="楽天・Yahoo!ショッピング・Amazon・Makuake・自社ECを対象に、売上が止まる原因を切り分け、必要な商品ページ改善・運用改善・LP制作・一般販売移行まで支援します。" name="description"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>商品ページの販売力診断｜その売上を、商品の限界だと思っていませんか。｜小西マーケティング</title>
+<meta content="今の売上が商品の限界とは限りません。楽天・Yahoo!・Amazon・Makuake・自社ECの商品ページを見て、まだ売上を伸ばせる余地が残っているかを評価します。" name="description"/>
 <link href="https://konishi-marketing.com/" rel="canonical"/>
-<meta content="index,follow,max-image-preview:large" name="robots"/>
-<meta content="website" property="og:type"/>
-<meta content="https://konishi-marketing.com/" property="og:url"/>
-<meta content="小西マーケティング" property="og:site_name"/>
-<meta content="ECのCVR改善・商品ページ改善｜売上が止まる原因から設計｜小西マーケティング" property="og:title"/>
-<meta content="楽天・Yahoo!ショッピング・Amazon・Makuake・自社ECに対応。商品ページ、A+、プロジェクトページ、Meta広告→LPまで、売上を止めている原因から改善します。" property="og:description"/>
-<meta content="https://konishi-marketing.com/images/konishi.JPG" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="小西 秀人" name="author"/>
-<meta content="ja_JP" property="og:locale"/>
-<!-- Google tag (gtag.js) - GA4 -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SWS3R3K4W5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-SWS3R3K4W5');
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&amp;family=Noto+Serif+JP:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://konishi-marketing.com/images/favicon.ico" rel="icon" sizes="any"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&amp;family=Noto+Serif+JP:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{
-  --navy: #1a2744;
-  --gold: #c9a84c;
-  --gold-lt: #e8d5a3;
-  --white: #ffffff;
-  --paper: #f8f7f4;
-  --g200: #e4e2dc;
-  --g400: #a09e97;
-  --g600: #6b6860;
-  --g800: #3a3834;
-  --text: #1e1d1a;
-  --serif: 'Noto Serif JP',serif;
-  --sans: 'Noto Sans JP',sans-serif;
-}
-html{font-size:16px;scroll-behavior:smooth;}
-body{font-family:var(--sans);color:var(--text);background:var(--white);
-     line-height:1.85;-webkit-font-smoothing:antialiased;letter-spacing:.01em;}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Noto Sans JP',sans-serif;color:#171714;background:#fff;line-height:1.9;-webkit-font-smoothing:antialiased}.serif,h1,h2{font-family:'Noto Serif JP',serif}.wrap{width:min(100% - 40px,980px);margin:auto}.narrow{width:min(100% - 40px,760px);margin:auto}.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid #e6e3dc}.nav-in{height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{color:#162542;text-decoration:none;font-family:'Noto Serif JP',serif;font-weight:700;letter-spacing:.06em}.nav-r{display:flex;align-items:center;gap:18px}.nav-r a{font-size:.78rem;font-weight:700;color:#162542;text-decoration:none}.nav-r .cta{color:#fff;background:#162542;padding:.65rem 1rem;border-bottom:2px solid #c7a557}.hero{background:#162542;color:#fff;padding:86px 0 76px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border:1px solid rgba(199,165,87,.24);border-radius:50%}.eyebrow{display:block;color:#d7bc79;font-size:.72rem;font-weight:900;letter-spacing:.18em;margin-bottom:1.1rem}.hero h1{font-size:clamp(2.55rem,7vw,4.7rem);line-height:1.2;letter-spacing:-.02em;max-width:900px}.hero-lead{margin-top:1.7rem;max-width:720px;font-size:1.06rem;color:rgba(255,255,255,.82);line-height:2.05}
+.hero-questions p{margin:0 0:.72rem;}
+.hero-questions p:not(.hero-question-close)::before{content:'— ';color:var(--gold-lt);font-weight:700;}
+.hero-questions .hero-question-close{margin-top:1.35rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.2);}
+.hero-questions .hero-question-close strong{color:var(--white);}
+.hero-lead strong{color:#fff}.hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:2.3rem}.btn{display:inline-block;text-decoration:none;font-weight:900;padding:1rem 1.65rem;line-height:1.4}.btn-light{background:#fff;color:#162542;border-bottom:3px solid #c7a557}.btn-dark{background:#162542;color:#fff;border-bottom:3px solid #c7a557}.micro{font-size:.75rem;color:rgba(255,255,255,.58);line-height:1.7}.proofbar{border-bottom:1px solid #e6e3dc}.proofgrid{display:grid;grid-template-columns:repeat(3,1fr)}.proofgrid div{padding:18px;text-align:center;border-right:1px solid #e6e3dc}.proofgrid div:last-child{border-right:none}.proofgrid strong{display:block;color:#162542;font-family:'Noto Serif JP',serif;font-size:1.03rem}.proofgrid span{display:block;color:#6b6860;font-size:.75rem;margin-top:.15rem}.sec{padding:78px 0}.paper{background:#f7f5f0}.navy{background:#162542;color:#fff}.label{display:block;color:#b78d31;font-size:.72rem;font-weight:900;letter-spacing:.18em;margin-bottom:.8rem}.sec h2{font-size:clamp(2rem,5vw,3.25rem);line-height:1.35;color:#162542}.navy h2{color:#fff}.intro{font-size:1.03rem;color:#484640;max-width:760px;margin-top:1.3rem}.navy .intro{color:rgba(255,255,255,.74)}.bigline{font-family:'Noto Serif JP',serif;font-size:clamp(1.65rem,4vw,2.4rem);line-height:1.55;color:#162542;margin:2rem 0}.equation{margin-top:2.2rem;border:1px solid #ddd8cd;background:#fff}.eqrow{display:grid;grid-template-columns:1fr 72px 1fr;align-items:center;padding:1.6rem}.eqbox{padding:1.25rem;border:1px solid #e6e3dc;background:#faf9f6;text-align:center}.eqbox small{display:block;color:#8c887f;font-size:.72rem;font-weight:900;letter-spacing:.1em}.eqbox strong{display:block;margin-top:.5rem;color:#162542;font-family:'Noto Serif JP',serif;font-size:1.25rem}.arrow{text-align:center;color:#c7a557;font-size:1.6rem;font-weight:900}.note{margin-top:1.25rem;padding:1.25rem 1.35rem;border-left:4px solid #162542;background:#f7f5f0;color:#484640}.steps{margin-top:2.3rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#dedbd2}.steps-title{grid-column:1/-1;background:#162542;color:#fff;padding:1rem 1.45rem;font-weight:900;font-size:.9rem;letter-spacing:.03em;border-bottom:3px solid #c7a557}.step{background:#fff;padding:1.45rem}.step span{display:block;color:#b78d31;font-size:.68rem;font-weight:900;letter-spacing:.13em}.step h3{font-size:1rem;color:#162542;line-height:1.55;margin:.5rem 0}.step p{font-size:.84rem;color:#6b6860;line-height:1.85}.darksteps{margin-top:2.3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(199,165,87,.28)}.darkstep{background:rgba(255,255,255,.05);padding:1.55rem}.darkstep span{color:#d7bc79;font-size:.68rem;font-weight:900}.darkstep h3{color:#fff;font-size:1.02rem;line-height:1.55;margin:.5rem 0}.darkstep p{color:rgba(255,255,255,.7);font-size:.86rem}.scorebox{margin-top:2rem;border:1px solid #dedbd2;background:#fff}.scorerow{display:grid;grid-template-columns:180px 1fr;border-bottom:1px solid #e6e3dc}.scorerow:last-child{border-bottom:none}.scorerow strong{padding:1.1rem 1.2rem;color:#162542;background:#f7f5f0}.scorerow p{padding:1.1rem 1.2rem;color:#5d5a53;font-size:.9rem}.track{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#dedbd2;margin-top:2rem}.track div{background:#fff;text-align:center;padding:1.7rem 1rem}.track b{display:block;font-family:'Noto Serif JP',serif;color:#162542;font-size:2.4rem;line-height:1}.track span{display:block;margin-top:.65rem;color:#6b6860;font-size:.76rem}.profile{margin-top:2rem;display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:start}.profile img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px}.profile h3{color:#162542;font-family:'Noto Serif JP',serif;font-size:1.2rem}.profile p{color:#5d5a53;font-size:.9rem;margin-top:.75rem}.diagnosis{border:1px solid rgba(199,165,87,.42);padding:1.8rem;margin-top:2rem;background:rgba(255,255,255,.06)}.diagnosis h3{font-family:'Noto Serif JP',serif;font-size:1.25rem;color:#f4e4b6}.diaggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(199,165,87,.25);margin-top:1.2rem}.diaggrid div{padding:1.1rem;background:rgba(255,255,255,.06);font-size:.85rem}.diaggrid span{display:block;color:#d7bc79;font-size:.66rem;font-weight:900}.services{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#dedbd2;margin-top:2rem}.service{background:#fff;padding:1.5rem}.service h3{color:#162542;font-size:1rem;margin-bottom:.5rem}.service p{font-size:.85rem;color:#6b6860}.service p strong{display:block;color:#162542;font-size:.91rem;line-height:1.75;margin-bottom:.35rem}.service a{display:inline-block;margin-top:.8rem;color:#162542;text-decoration:none;border-bottom:1px solid #c7a557;font-size:.8rem;font-weight:900}.finalcta{text-align:center;padding:84px 0;background:#f7f5f0}.finalcta h2{max-width:820px;margin:auto}.finalcta p{max-width:690px;margin:1.25rem auto 0;color:#5d5a53}.finalcta .btn{margin-top:1.8rem}.formsec{padding:82px 0;background:#fff}.formlead{color:#5d5a53;margin:1rem 0 2rem}.report{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#dedbd2;margin:1.4rem 0 2rem}.report div{padding:1rem;background:#f7f5f0;font-size:.8rem;color:#162542;font-weight:700}.report span{display:block;color:#b78d31;font-size:.65rem}.fld{margin-bottom:1.25rem}.fld label,.fldttl{display:block;font-size:.84rem;font-weight:900;color:#162542;margin-bottom:.45rem}.req{color:#b78d31;font-size:.68rem;margin-left:.35rem}.fld input,.fld select,.fld textarea{width:100%;padding:.9rem 1rem;border:1px solid #d8d4cb;background:#fff;font:inherit;font-size:.95rem}.radio-group{display:grid;grid-template-columns:1fr 1fr;gap:10px}.radio-card{display:flex;gap:.7rem;padding:1rem;border:1px solid #d8d4cb;cursor:pointer}.radio-card input{width:auto;margin-top:.35rem}.radio-card strong{display:block;color:#162542;font-size:.9rem}.radio-card small{display:block;color:#6b6860;font-size:.74rem}.privacy{display:flex;gap:.7rem;align-items:flex-start;margin:1rem 0}.privacy input{margin-top:.45rem}.privacy label{font-size:.82rem;color:#6b6860}.privacy a{color:#162542}.submit{width:100%;padding:1rem;background:#162542;color:#fff;border:0;border-bottom:3px solid #c7a557;font-weight:900;font-size:1rem;cursor:pointer}.disc,.status{text-align:center;color:#77736b;font-size:.76rem;line-height:1.7;margin-top:.9rem}.status.is-error{color:#a4001d}.success{display:none;padding:2rem;background:#f7f5f0;text-align:center}.success.show{display:block}.foot{background:#162542;color:rgba(255,255,255,.6);padding:26px 0;font-size:.76rem}.footin{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:rgba(255,255,255,.6);text-decoration:none}.hidden,[hidden]{display:none!important}
+@media(max-width:780px){.nav-r a:not(.cta){display:none}.hero{padding:64px 0 58px}.proofgrid{grid-template-columns:1fr}.proofgrid div{border-right:0;border-bottom:1px solid #e6e3dc}.sec{padding:58px 0}.eqrow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);padding:.5rem}.steps,.darksteps,.track,.diaggrid,.report{grid-template-columns:1fr 1fr}.services{grid-template-columns:1fr}.profile{grid-template-columns:110px 1fr}.scorerow{grid-template-columns:1fr}.scorerow strong{padding-bottom:.35rem}.scorerow p{padding-top:.35rem}.radio-group{grid-template-columns:1fr}}@media(max-width:460px){.wrap,.narrow{width:min(100% - 28px,980px)}.steps,.darksteps,.track,.diaggrid,.report{grid-template-columns:1fr}.profile{grid-template-columns:1fr}.profile img{max-width:140px}.hero h1{font-size:2.35rem}}
 
-/* ── header ── */
-.hd{
-  position:sticky;top:0;z-index:100;
-  background:var(--white);border-bottom:1px solid var(--g200);
-  padding:.9rem 2rem;
-  display:flex;align-items:center;justify-content:space-between;
+/* v10: 無料診断セクションの主見出しを主要H2と同じ視覚階層へ */
+.diagnosis-main-heading {
+  font-size: clamp(2.35rem, 5.2vw, 4.6rem) !important;
+  line-height: 1.42 !important;
+  letter-spacing: -0.035em;
 }
-.hd-logo{font-family:var(--serif);font-size:.85rem;font-weight:700;
-  letter-spacing:.08em;color:var(--navy);text-decoration:none;}
-.hd-cta{
-  display:inline-block;background:var(--navy);color:var(--white);
-  font-size:.78rem;font-weight:700;letter-spacing:.06em;
-  padding:.5rem 1.4rem;text-decoration:none;
-  border-bottom:2px solid var(--gold);transition:opacity .2s;
-}
-.hd-cta:hover{opacity:.85;}
-.hd-nav{
-  display:flex;
-  align-items:center;
-  gap:1.2rem;
-}
-.hd-link{
-  font-size:.78rem;
-  font-weight:700;
-  letter-spacing:.06em;
-  color:var(--navy);
-  text-decoration:none;
-  border-bottom:1px solid transparent;
-  transition:.2s;
-}
-.hd-link:hover{
-  border-bottom-color:var(--gold);
-  color:var(--gold);
+@media (max-width: 720px) {
+  .diagnosis-main-heading {
+    font-size: clamp(2.35rem, 10.5vw, 3.35rem) !important;
+    line-height: 1.48 !important;
+  }
 }
 
 
-/* ── hero ── */
-.hero{
-  padding:6rem 2rem 5rem;background:var(--white);
-  border-bottom:1px solid var(--g200);position:relative;
-}
-.hero::after{
-  content:'';position:absolute;right:0;top:0;bottom:0;
-  width:4px;background:var(--gold);
-}
-.hero-inner{max-width:1000px;margin:0 auto;}
-.hero-label{
-  display:inline-flex;align-items:center;gap:.6rem;
-  font-size:.62rem;font-weight:700;letter-spacing:.25em;
-  color:var(--gold);text-transform:uppercase;margin-bottom:2rem;
-}
-.hero-label::before{content:'';width:24px;height:2px;background:var(--gold);display:block;}
-.hero-h1{
-  font-family:var(--serif);
-  font-size:clamp(2.4rem,6.5vw,3.8rem);font-weight:700;
-  color:var(--navy);line-height:1.2;letter-spacing:.01em;margin-bottom:1.5rem;
-}
-.hero-h1 em{
-  font-style:normal;display:block;
-  font-size:.48em;font-weight:700;letter-spacing:.01em;
-  line-height:1.65;margin-top:.65rem;color:var(--g600);
-}
-.hero-lead{
-  font-size:1.05rem;color:var(--g600);line-height:2.1;
-  max-width:620px;margin-bottom:2.5rem;
-}
-.cta-row{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
-.btn{
-  display:inline-block;background:var(--navy);color:var(--white);
-  font-size:1rem;font-weight:700;letter-spacing:.05em;
-  padding:.95rem 2.5rem;text-decoration:none;
-  border-bottom:3px solid var(--gold);transition:opacity .2s;
-}
-.btn:hover{opacity:.88;}
-.btn-note{font-size:.73rem;color:var(--g400);line-height:1.85;}
-.hero-cta-row{
-  margin-top:2.75rem;
-  gap:1.25rem;
-  align-items:stretch;
-}
-.hero-btn{
-  position:relative;
-  min-width:238px;
-  padding:.78rem 1.9rem;
-  background:var(--white);
-  color:var(--navy);
-  border:1px solid rgba(201,168,76,.75);
-  border-bottom:3px solid var(--gold);
-  box-shadow:0 10px 22px rgba(0,0,0,.2);
-  text-align:center;
-  line-height:1.45;
-}
-.hero-btn:hover{
-  opacity:1;
-  transform:translateY(-1px);
-  box-shadow:0 14px 28px rgba(0,0,0,.25);
-}
-.hero-btn-note{
-  display:flex;
-  font-size:.82rem;
-  align-items:center;
-  padding:.55rem 0;
-  color:rgba(255,255,255,.68)!important;
-  line-height:1.8;
+/* v11: オウンドメディア導線 */
+.article-section{padding:78px 0;background:#f7f5f0}
+.article-hub{margin-top:2rem;border:1px solid #dedbd2;background:#fff;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:1.6rem}
+.article-hub h3{font-family:'Noto Serif JP',serif;color:#162542;font-size:1.35rem;line-height:1.55}
+.article-hub p{margin-top:.65rem;color:#666158;font-size:.9rem}
+.article-grid{margin-top:1px;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#dedbd2}
+.article-card{display:block;background:#fff;padding:1.35rem;text-decoration:none;color:inherit}
+.article-card small{display:block;color:#b78d31;font-weight:900;font-size:.7rem;margin-bottom:.45rem}
+.article-card strong{display:block;color:#162542;font-size:.95rem;line-height:1.65}
+.article-card span{display:inline-block;margin-top:.75rem;color:#162542;font-weight:900;font-size:.78rem;border-bottom:1px solid #c7a557}
+.article-hub .btn{white-space:nowrap}
+
+/* v11: 問い合わせ種別ごとの表示切替 */
+.mode-consultation[hidden],.mode-diagnosis[hidden]{display:none!important}
+.form-mode-box{margin:0 0 2rem;padding:1.35rem 1.45rem;background:#f7f5f0;border-left:4px solid #c7a557}
+.form-mode-box h3{font-family:'Noto Serif JP',serif;color:#162542;font-size:1.2rem;line-height:1.55}
+.form-mode-box p{margin-top:.65rem;color:#5d5a53;font-size:.9rem}
+.form-note-row{display:flex;flex-wrap:wrap;gap:8px;margin:1rem 0 1.4rem}
+.form-badge{font-size:.74rem;color:#162542;background:#f7f5f0;border:1px solid #dedbd2;padding:.45rem .65rem}
+@media(max-width:780px){
+  .article-hub{grid-template-columns:1fr}
+  .article-grid{grid-template-columns:1fr}
 }
 
+/* v13: フォームの表示切替はCSSでも成立。JS非実行のプレビューでも切り替わる */
+.mode-consultation{display:none!important}
+.mode-diagnosis{display:revert!important}
+#diagFields{display:block}
 
-/* ── statement bar ── */
-.stmt{
-  padding:3.5rem 2rem;background:var(--paper);
-  border-top:3px solid var(--navy);border-bottom:1px solid var(--g200);
-  text-align:center;
-}
-.stmt-q{
-  font-family:var(--serif);
-  font-size:clamp(1.3rem,3.5vw,2rem);font-weight:700;
-  color:var(--navy);line-height:1.55;letter-spacing:.01em;margin-bottom:.85rem;
-}
-.stmt-a{font-size:.95rem;color:var(--g600);line-height:2;}
-.stmt-a strong{color:var(--navy);}
+body:has(#consultBusiness:checked) .mode-diagnosis{display:none!important}
+body:has(#consultBusiness:checked) .mode-consultation{display:revert!important}
+body:has(#consultBusiness:checked) #diagFields{display:none!important}
 
-/* ── section shell ── */
-.sec{padding:5rem 2rem;}
-.sec--white{background:var(--white);}
-.sec--paper{background:var(--paper);}
-.sec--navy{background:var(--navy);}
-.sec-label{
-  font-size:.75rem;font-weight:700;letter-spacing:.24em;
-  color:var(--gold);text-transform:uppercase;display:block;margin-bottom:.9rem;
-}
-.sec-label--lt{color:rgba(201,168,76,.65);}
-.sec-h2{
-  font-family:var(--serif);
-  font-size:clamp(1.9rem,4.5vw,3rem);font-weight:700;
-  color:var(--navy);line-height:1.3;letter-spacing:.01em;margin-bottom:2rem;
-}
-.sec-p{font-size:1rem;color:var(--g800);line-height:2.1;max-width:700px;}
-.sec-p + .sec-p{margin-top:1.1rem;}
-.inner{max-width:900px;margin:0 auto;}
-.inner-n{max-width:740px;margin:0 auto;}
-.lead-lines{margin-top:2rem;border-top:1px solid var(--g200);border-bottom:1px solid var(--g200);}
-.lead-line{display:grid;grid-template-columns:7rem 1fr;gap:1.25rem;padding:1.25rem 0;border-bottom:1px solid var(--g200);}
-.lead-line:last-child{border-bottom:none;}
-.lead-line small{font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;padding-top:.15rem;}
-.lead-line p{font-size:.95rem;color:var(--g800);line-height:1.95;}
-.moment-list{list-style:none;margin-top:2rem;border:1px solid var(--g200);background:var(--white);}
-.moment-list li{padding:1.15rem 1.4rem;border-bottom:1px solid var(--g200);font-size:.95rem;color:var(--g800);line-height:1.8;}
-.moment-list li:last-child{border-bottom:none;}
-.moment-list strong{font-family:var(--serif);color:var(--navy);font-size:1.05rem;}
-.channel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--g200);margin-top:2.2rem;}
-.channel-card{background:var(--white);padding:1.65rem;}
-.channel-card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.45rem;line-height:1.55;}
-.channel-card p{font-size:.88rem;color:var(--g600);line-height:1.9;}
-.channel-service-link{
-  display:inline-flex;align-items:center;gap:.45rem;
-  margin-top:1rem;padding-bottom:.18rem;
-  color:var(--navy);font-size:.82rem;font-weight:700;
-  line-height:1.6;text-decoration:none;
-  border-bottom:1px solid var(--gold);
-  transition:color .2s,border-color .2s;
-}
-.channel-service-link::after{content:'→';color:var(--gold);}
-.channel-service-link:hover{color:var(--gold);border-bottom-color:var(--navy);}
+body:has(#consultDiagnosis:checked) .mode-consultation{display:none!important}
+body:has(#consultDiagnosis:checked) .mode-diagnosis{display:revert!important}
+body:has(#consultDiagnosis:checked) #diagFields{display:block!important}
 
-/* ── CVR driver ── */
-.driver-box{
-  margin-top:2.25rem;border:1px solid var(--g200);background:var(--white);
-}
-.driver-formula{
-  padding:1.45rem 1.6rem;border-bottom:1px solid var(--g200);
-  font-family:var(--serif);font-size:clamp(1.15rem,3vw,1.55rem);
-  font-weight:700;color:var(--navy);line-height:1.65;text-align:center;
-}
-.driver-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--g200);
-}
-.driver-card{background:var(--white);padding:1.6rem;}
-.driver-card strong{
-  display:block;font-family:var(--serif);font-size:1.05rem;color:var(--navy);
-  line-height:1.6;margin-bottom:.55rem;
-}
-.driver-card p{font-size:.9rem;color:var(--g600);line-height:1.95;}
-.driver-example{
-  margin-top:1.5rem;padding:1.45rem 1.6rem;background:var(--navy);
-  color:rgba(255,255,255,.82);font-size:.92rem;line-height:2;
-}
-.driver-example strong{color:var(--gold-lt);}
-.driver-close{
-  margin-top:1.5rem;font-family:var(--serif);font-size:1.08rem;font-weight:700;
-  color:var(--navy);line-height:1.85;
-}
-@media(max-width:680px){.driver-grid{grid-template-columns:1fr;}}
+.submit-label-consultation{display:none}
+.submit-label-diagnosis{display:inline}
+body:has(#consultBusiness:checked) .submit-label-diagnosis{display:none!important}
+body:has(#consultBusiness:checked) .submit-label-consultation{display:inline!important}
+body:has(#consultDiagnosis:checked) .submit-label-consultation{display:none!important}
+body:has(#consultDiagnosis:checked) .submit-label-diagnosis{display:inline!important}
 
-/* ── cause list ── */
-.cause-list{list-style:none;margin-top:2rem;}
-.cause-item{
-  display:grid;grid-template-columns:3rem 1fr;gap:1.5rem;
-  padding:1.75rem 0;border-bottom:1px solid var(--g200);align-items:start;
-}
-.cause-item:first-child{border-top:1px solid var(--g200);}
-.cause-no{
-  font-size:.6rem;font-weight:700;letter-spacing:.1em;color:var(--g400);
-  padding-top:.2rem;display:flex;flex-direction:column;align-items:flex-start;gap:.4rem;
-}
-.cause-no::after{content:'';width:18px;height:1px;background:var(--g200);display:block;}
-.cause-body strong{
-  font-family:var(--serif);
-  display:block;font-size:1.05rem;font-weight:700;
-  color:var(--navy);line-height:1.55;margin-bottom:.5rem;
-}
-.cause-body p{font-size:.9rem;color:var(--g600);line-height:1.95;}
-.why-box{
-  margin-top:2.5rem;padding:2rem;
-  border:1px solid var(--g200);border-left:4px solid var(--navy);
-  background:var(--white);
-}
-.why-box-label{
-  font-size:.6rem;font-weight:700;letter-spacing:.2em;
-  color:var(--navy);text-transform:uppercase;display:block;margin-bottom:.75rem;
-}
-.why-box p{font-size:.93rem;color:var(--g800);line-height:2.05;}
-.why-box strong{color:var(--navy);}
-
-.box-heading{
-  font-family:var(--sans);
-  font-size:1.05rem;
-  font-weight:700;
-  line-height:1.7;
-  color:var(--navy);
-  letter-spacing:.02em;
-  margin-bottom:.9rem;
-}
-.box-heading--dark,
-.sec--navy .box-heading{
-  color:var(--gold-lt);
-}
-
-/* ── mismatch ── */
-.mm-wrap{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:2px;margin-top:2rem;background:var(--g200);
-}
-.mm-cell{background:var(--white);padding:1.75rem;}
-.mm-cell--r{background:var(--paper);}
-.mm-tag{
-  font-family:var(--sans);
-  font-size:.98rem;
-  font-weight:700;
-  letter-spacing:.03em;
-  text-transform:none;
+.proofbar small{
   display:block;
-  margin-bottom:.8rem;
-  line-height:1.65;
-}
-.mm-cell .mm-tag{color:var(--navy);}
-.mm-cell--r .mm-tag{color:var(--navy);}
-.mm-text{font-size:.95rem;color:var(--g800);line-height:1.95;font-weight:500;}
-.mm-note{
-  margin-top:1.75rem;padding:1.25rem 1.5rem;
-  background:var(--paper);border-left:3px solid var(--g200);
-  font-size:.875rem;color:var(--g600);line-height:1.95;
-}
-
-/* ── philosophy ── */
-.phil-inner{max-width:700px;}
-.phil-h{
-  font-family:var(--serif);
-  font-size:clamp(2rem,5vw,3.5rem);font-weight:700;
-  color:var(--white);line-height:1.25;letter-spacing:.01em;margin-bottom:1.75rem;
-}
-.phil-p{font-size:1rem;color:rgba(255,255,255,.75);line-height:2.15;margin-bottom:1.25rem;}
-.mechanism{
-  margin-top:2.5rem;background:rgba(255,255,255,.06);
-  border:1px solid rgba(201,168,76,.25);padding:1.75rem;
-}
-.mech-label{
-  font-size:.6rem;font-weight:700;letter-spacing:.2em;
-  color:var(--gold);text-transform:uppercase;display:block;margin-bottom:.75rem;
-}
-.mechanism p{font-size:.9rem;color:rgba(255,255,255,.8);line-height:2.05;}
-
-/* ── TRACK RECORD ── */
-.track-sec{
-  padding:5rem 2rem;background:var(--white);
-  border-top:1px solid var(--g200);border-bottom:1px solid var(--g200);
-}
-.track-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:1px;margin-top:2.5rem;
-  background:var(--g200);
-}
-.track-card{
-  padding:2.15rem 1.2rem;text-align:center;
-  background:var(--white);
-}
-.track-card:last-child{border-right:none;}
-.track-num{
-  font-family:var(--serif);
-  font-size:clamp(3rem,6vw,5rem);font-weight:700;
-  color:var(--navy);line-height:1;letter-spacing:-.02em;
-  margin-bottom:.6rem;display:block;
-}
-.track-unit{font-size:clamp(1rem,2vw,1.5rem);font-weight:400;}
-.track-desc{
-  font-size:.8rem;color:var(--g600);line-height:1.7;
-  margin-top:.5rem;
-}
-.award-row{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:1px;margin-top:1px;background:var(--g200);
-}
-.award-card{
-  background:var(--paper);
-  padding:1.25rem 1.75rem;
-  display:flex;align-items:flex-start;gap:1rem;
-}
-.award-icon{font-size:1.25rem;flex-shrink:0;margin-top:.1rem;}
-.award-ttl{font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:.2rem;}
-.award-desc{font-size:.78rem;color:var(--g600);line-height:1.65;}
-.track-note{
-  margin-top:1.75rem;font-size:.8rem;color:var(--g400);
-  line-height:1.8;padding-top:1.25rem;border-top:1px solid var(--g200);
-}
-
-/* ── service scope ── */
-.service-def{
-  margin-top:2rem;padding:1.35rem 1.5rem;
-  border:1px solid rgba(201,168,76,.35);
-  background:rgba(255,255,255,.06);
-}
-.service-def strong{
-  display:block;color:var(--gold-lt);font-size:.95rem;
-  line-height:1.8;margin-bottom:.35rem;
-}
-.service-def p{font-size:.86rem;color:rgba(255,255,255,.72);line-height:1.95;}
-.delivery-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:1px;background:var(--g200);margin-top:2rem;
-}
-.delivery-card{background:var(--white);padding:1.4rem;}
-.delivery-no{display:block;font-size:.62rem;font-weight:700;letter-spacing:.14em;color:var(--gold);margin-bottom:.5rem;}
-.delivery-card h3{font-size:.95rem;color:var(--navy);line-height:1.55;margin-bottom:.4rem;}
-.delivery-card p{font-size:.82rem;color:var(--g600);line-height:1.8;}
-.scope-note{margin-top:1.5rem;padding:1.1rem 1.25rem;background:var(--paper);border-left:3px solid var(--navy);font-size:.86rem;color:var(--g600);line-height:1.9;}
-
-/* ── causal service scope flow ── */
-.value-flow{
-  margin-top:2.25rem;
-  display:grid;
-  grid-template-columns:minmax(0,1fr) auto minmax(0,1.25fr) auto minmax(0,1.25fr);
-  align-items:stretch;
-  gap:.85rem;
-}
-.value-flow-step{
-  background:var(--white);
-  border:1px solid var(--g200);
-  border-top:3px solid var(--navy);
-  padding:1.55rem;
-  min-width:0;
-}
-.value-flow-step--origin{background:var(--navy);border-color:var(--navy);}
-.value-flow-kicker{
-  display:block;
-  margin-bottom:.6rem;
-  font-size:.62rem;
-  font-weight:900;
-  letter-spacing:.16em;
-  color:var(--gold);
-}
-.value-flow-step h3{
-  font-family:var(--serif);
-  font-size:1.03rem;
-  line-height:1.6;
-  color:var(--navy);
-  margin-bottom:.55rem;
-}
-.value-flow-step p{font-size:.86rem;color:var(--g600);line-height:1.9;}
-.value-flow-step--origin h3{color:var(--gold-lt);}
-.value-flow-step--origin p{color:rgba(255,255,255,.78);}
-.value-flow-arrow{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--gold);
-  font-size:1.35rem;
-  font-weight:900;
-}
-.value-flow-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;}
-.value-flow-tags span{
-  display:inline-block;
-  padding:.28rem .5rem;
-  border:1px solid var(--g200);
-  background:var(--paper);
-  color:var(--g600);
-  font-size:.7rem;
-  font-weight:700;
-  line-height:1.5;
-}
-.scope-note strong{color:var(--navy);}
-@media(max-width:760px){
-  .value-flow{grid-template-columns:1fr;gap:.7rem;}
-  .value-flow-arrow{transform:rotate(90deg);min-height:22px;}
-}
-
-/* ── next step ── */
-.nextstep{
-  margin-top:2.5rem;padding:2.5rem;
-  background:var(--white);border:1px solid var(--g200);
-  border-top:3px solid var(--navy);
-}
-.nextstep-ttl{
-  font-family:var(--serif);
-  font-size:1.15rem;font-weight:700;color:var(--navy);
-  line-height:1.65;margin-bottom:1rem;
-}
-.nextstep-p{font-size:.9rem;color:var(--g600);line-height:2;margin-bottom:1.5rem;}
-.btn-sm{
-  display:inline-block;background:var(--navy);color:var(--white);
-  font-size:.875rem;font-weight:700;letter-spacing:.05em;
-  padding:.8rem 2rem;text-decoration:none;
-  border-bottom:2px solid var(--gold);transition:opacity .2s;
-}
-.btn-sm:hover{opacity:.85;}
-
-/* ── article hub ── */
-.article-hub-box{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:2rem;
-  padding:1.75rem 2rem;
-  background:var(--white);
-  border:1px solid var(--g200);
-  border-left:4px solid var(--navy);
-  margin:2rem 0 2.5rem;
-}
-.article-hub-label{
-  font-size:.62rem;
-  font-weight:700;
-  letter-spacing:.18em;
-  color:var(--gold);
-  text-transform:uppercase;
-  margin-bottom:.5rem;
-}
-.article-hub-box h3{
-  font-family:var(--serif);
-  font-size:1.15rem;
-  color:var(--navy);
-  line-height:1.55;
-  margin-bottom:.5rem;
-}
-.article-hub-box p{
-  font-size:.88rem;
-  color:var(--g600);
-  line-height:1.9;
-}
-.article-hub-btn{
-  flex-shrink:0;
-  display:inline-block;
-  background:var(--navy);
-  color:var(--white);
-  font-size:.82rem;
-  font-weight:700;
-  letter-spacing:.05em;
-  padding:.8rem 1.5rem;
-  text-decoration:none;
-  border-bottom:2px solid var(--gold);
-}
-
-/* ── articles ── */
-.articles{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1px;margin-top:2rem;background:var(--g200);
-}
-.art{
-  background:var(--white);padding:1.75rem;
-  display:flex;flex-direction:column;gap:.6rem;
-  text-decoration:none;transition:background .15s;
-}
-.art:hover{background:var(--paper);}
-.art-tag{font-size:.72rem;font-weight:700;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;}
-.art-ttl{font-size:.9rem;font-weight:700;color:var(--navy);line-height:1.6;flex:1;}
-.art-arr{font-size:.75rem;color:var(--g400);}
-
-/* ── form section ── */
-.form-sec{
-  padding:5rem 2rem;background:var(--paper);
-  border-top:1px solid var(--g200);
-}
-.form-wrap{max-width:640px;margin:0 auto;}
-.form-kicker{
-  display:inline-flex;
-  align-items:center;
-  gap:.65rem;
-  font-size:1.05rem;
-  font-weight:900;
-  letter-spacing:.06em;
-  color:var(--navy);
-  background:var(--white);
-  border:1px solid var(--g200);
-  border-left:5px solid var(--gold);
-  padding:.7rem 1.05rem;
-  margin-bottom:1.2rem;
-  line-height:1.35;
-}
-.form-kicker small{
-  font-size:.72rem;
-  font-weight:900;
-  letter-spacing:.12em;
-  color:var(--gold);
-}
-.form-h{
-  font-family:var(--serif);
-  font-size:clamp(1.75rem,4.5vw,3rem);font-weight:700;
-  color:var(--navy);line-height:1.3;letter-spacing:.01em;
-  margin-bottom:.75rem;
-}
-.form-h em{font-style:normal;color:var(--gold);}
-.form-lead{font-size:.9rem;color:var(--g600);line-height:1.9;margin-bottom:2.5rem;}
-.form-note-row{
-  display:flex;gap:1.5rem;flex-wrap:wrap;
-  margin-bottom:2rem;
-}
-.form-badge{
-  font-size:.8rem;color:var(--g600);
-  padding:.4rem .85rem;border:1px solid var(--g200);
-  background:var(--white);line-height:1.6;
-}
-.fld{margin-bottom:1.5rem;}
-.fld > label{
-  display:block;
-  font-size:.875rem;
-  font-weight:700;
-  color:var(--navy);
-  margin-bottom:.45rem;
-  letter-spacing:.04em;
-}
-.fld label .req{
-  font-size:.65rem;font-weight:700;color:var(--gold);
-  margin-left:.4rem;letter-spacing:.08em;
-}
-.fld input,
-.fld select,
-.fld textarea{
-  width:100%;padding:.9rem 1rem;
-  border:1px solid var(--g200);background:var(--white);
-  font-family:var(--sans);font-size:1rem;color:var(--text);
-  line-height:1.6;outline:none;
-  transition:border-color .2s;
-  appearance:none;
-}
-.fld input:focus,
-.fld select:focus,
-.fld textarea:focus{border-color:var(--navy);}
-.fld .hint{
-  display:block;font-size:.82rem;color:var(--g600);
-  margin-top:.4rem;line-height:1.65;
-}
-.select-wrap{position:relative;}
-.select-wrap::after{
-  content:'▾';position:absolute;right:1rem;top:50%;
-  transform:translateY(-50%);
-  font-size:.75rem;color:var(--g400);pointer-events:none;
-}
-.fld select{padding-right:2.5rem;cursor:pointer;}
-.form-submit{
-  width:100%;padding:1.1rem;margin-top:.5rem;
-  background:var(--navy);color:var(--white);
-  font-family:var(--sans);font-size:1rem;font-weight:700;
-  letter-spacing:.06em;border:none;border-bottom:3px solid var(--gold);
-  cursor:pointer;transition:opacity .2s;
-}
-.form-submit:hover{opacity:.88;}
-.form-disc{
-  margin-top:1.25rem;font-size:.82rem;color:var(--g600);
-  line-height:1.8;text-align:center;
-}
-.form-success{
-  display:none;text-align:center;
-  padding:3rem 2rem;background:var(--white);border:1px solid var(--g200);
-}
-.form-success.show{display:block;}
-.success-icon{font-size:2rem;margin-bottom:1rem;}
-.success-ttl{font-family:var(--serif);font-size:1.25rem;font-weight:700;
-  color:var(--navy);margin-bottom:.5rem;}
-.success-p{font-size:.9rem;color:var(--g600);line-height:1.9;}
-.fld input[type="radio"]{
-  width:auto;
-  padding:0;
-  margin-right:.5rem;
-  transform:scale(1.1);
-}
-.fld-ttl{
-  font-size:.8rem;
-  font-weight:700;
-  color:var(--navy);
-  margin-bottom:.6rem;
-  letter-spacing:.04em;
-}
-
-.radio-group{
-  display:flex;
-  flex-direction:column;
-  gap:.75rem;
-}
-
-.radio-card{
-  display:flex;
-  align-items:flex-start;
-  gap:.75rem;
-  padding:.9rem 1rem;
-  border:1px solid var(--g200);
-  background:var(--white);
-  cursor:pointer;
-  transition:.15s;
-}
-
-.radio-card:hover{
-  border-color:var(--navy);
-}
-
-.radio-card input{
-  display:none;
-}
-
-.radio-ui{
-  width:16px;
-  height:16px;
-  border:2px solid var(--g400);
-  border-radius:50%;
-  margin-top:.25rem;
-  position:relative;
-  flex-shrink:0;
-}
-
-.radio-card input:checked + .radio-ui{
-  border-color:var(--navy);
-}
-
-.radio-card input:checked + .radio-ui::after{
-  content:'';
-  position:absolute;
-  top:50%;
-  left:50%;
-  width:8px;
-  height:8px;
-  background:var(--navy);
-  border-radius:50%;
-  transform:translate(-50%,-50%);
-}
-
-.radio-text strong{
-  display:block;
-  font-size:.9rem;
-  color:var(--navy);
-}
-
-.radio-text small{
-  display:block;
-  font-size:.75rem;
-  color:var(--g600);
-  line-height:1.6;
-}
-
-/* ── URL フィールドの表示切り替え ── */
-#urlField{transition:opacity .2s;}
-#urlField.hidden{display:none;}
-
-
-/* ── privacy consent ── */
-.privacy-consent{
-  display:grid;
-  grid-template-columns:auto 1fr;
-  gap:.7rem;
-  align-items:start;
-  margin:1.35rem 0 1rem;
-  padding:1rem 1.1rem;
-  border:1px solid var(--g200);
-  background:var(--white);
-}
-.privacy-consent input{
-  width:18px;
-  height:18px;
-  margin-top:.25rem;
-  accent-color:var(--navy);
-  cursor:pointer;
-}
-.privacy-consent label{
-  font-size:.84rem;
-  color:var(--g600);
-  line-height:1.8;
-  cursor:pointer;
-}
-.privacy-consent a{
-  color:var(--navy);
-  font-weight:700;
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
-.privacy-consent .req{
-  margin-left:.35rem;
-  color:var(--gold);
+  margin-top:.35rem;
   font-size:.68rem;
-  font-weight:700;
-  letter-spacing:.06em;
-}
-
-/* ── footer ── */
-.foot{
-  padding:1.75rem 2rem;background:var(--navy);
-  display:flex;justify-content:space-between;align-items:center;
-  gap:1rem;flex-wrap:wrap;
-}
-.foot-name{font-size:.78rem;font-weight:700;color:rgba(255,255,255,.65);}
-.foot-achieve{font-size:.75rem;color:var(--gold-lt);font-weight:700;margin-top:3px;}
-.foot-link{font-size:.72rem;color:rgba(255,255,255,.3);text-decoration:none;}
-
-/* robust consult switch: CSS-only fallback */
-.consult-toggle{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;}
-.consult-select .radio-card{display:flex;align-items:flex-start;gap:.75rem;padding:.9rem 1rem;border:1px solid var(--g200);background:var(--white);cursor:pointer;transition:.15s;}
-.consult-select .radio-ui{display:block!important;width:16px;height:16px;border:2px solid var(--g400);border-radius:50%;margin-top:.25rem;position:relative;flex-shrink:0;}
-#consultDiag:checked ~ .consult-select label[for="consultDiag"],
-#consultConsult:checked ~ .consult-select label[for="consultConsult"]{border-color:var(--navy);background:var(--paper);}
-#consultDiag:checked ~ .consult-select label[for="consultDiag"] .radio-ui,
-#consultConsult:checked ~ .consult-select label[for="consultConsult"] .radio-ui{border-color:var(--navy);}
-#consultDiag:checked ~ .consult-select label[for="consultDiag"] .radio-ui::after,
-#consultConsult:checked ~ .consult-select label[for="consultConsult"] .radio-ui::after{content:'';position:absolute;top:50%;left:50%;width:8px;height:8px;background:var(--navy);border-radius:50%;transform:translate(-50%,-50%);}
-#consultConsult:checked ~ #diagFields{display:none!important;}
-/* submit label: radio state controls text even if JS change event is unavailable */
-.form-submit .submit-consult{display:none;}
-#consultConsult:checked ~ .form-submit .submit-diagnosis{display:none;}
-#consultConsult:checked ~ .form-submit .submit-consult{display:inline;}
-#consultDiag:checked ~ .form-submit .submit-diagnosis{display:inline;}
-#consultDiag:checked ~ .form-submit .submit-consult{display:none;}
-/* フォーム下マイクロコピーもradio状態から直接切り替える（JS非依存） */
-.form-disc.mode-consultation{display:none;}
-#consultConsult:checked ~ .form-disc.mode-diagnosis{display:none!important;}
-#consultConsult:checked ~ .form-disc.mode-consultation{display:block!important;}
-#consultDiag:checked ~ .form-disc.mode-diagnosis{display:block!important;}
-#consultDiag:checked ~ .form-disc.mode-consultation{display:none!important;}
-
-/* ── responsive ── */
-@media(max-width:680px){
-  .sec-label{font-size:.875rem;letter-spacing:.18em;margin-bottom:1rem;}
-  .hd{padding:.75rem 1.25rem;}
-  .hd-nav{gap:.8rem;}
-  .hd-link{font-size:.72rem;}
-  .hd-cta{padding:.45rem .9rem;}
-  .hero-btn{width:100%;min-width:0;}
-  .hero-btn-note{width:100%;padding:.2rem 0 0;}
-  .hero{padding:4rem 1.25rem 3.5rem;}
-  .hero::after{display:none;}
-  .sec,.track-sec,.form-sec{padding:3.5rem 1.25rem;}
-  .stmt{padding:2.5rem 1.25rem;}
-  .mm-wrap{grid-template-columns:1fr;}
-  .track-grid{grid-template-columns:repeat(2,1fr);gap:1px;}
-  .track-card{border-right:none;border-bottom:none;}
-  .track-card:nth-child(odd){border-right:none;}
-  .award-row{grid-template-columns:1fr;}
-  .articles{grid-template-columns:1fr;}
-  .delivery-grid{grid-template-columns:1fr 1fr;}
-  .article-hub-box{
-    flex-direction:column;
-    align-items:flex-start;
-    padding:1.5rem;
-  }
-  .article-hub-btn{
-    width:100%;
-    text-align:center;
-  }
-  .nextstep{padding:1.75rem;}
-  .cause-item{grid-template-columns:2rem 1fr;gap:1rem;}
-  .lead-line{grid-template-columns:1fr;gap:.3rem;padding:1.1rem 0;}
-  .moment-list li{padding:1rem 1.1rem;}
-  .foot{flex-direction:column;align-items:flex-start;}
-}
-
-/* Semantic H1 and sales-headline separation */
-.hero-service-title{
-  margin:0 0 1.25rem;
-  color:var(--gold);
-  font-family:var(--sans);
-  font-size:clamp(1rem,2vw,1.35rem);
-  font-weight:900;
   line-height:1.45;
-  letter-spacing:.08em;
-}
-.hero-headline{
-  margin:0 0 .9rem;
-  color:var(--white);
-  font-family:var(--serif);
-  font-size:clamp(2.4rem,6.5vw,4.25rem);
   font-weight:700;
-  line-height:1.2;
-  letter-spacing:.01em;
+  opacity:.72;
 }
-.hero-subheadline{
-  margin:0 0 1.5rem;
-  color:var(--gold-lt);
-  font-family:var(--serif);
-  font-size:clamp(1.15rem,3vw,2rem);
-  font-weight:700;
-  line-height:1.65;
-  letter-spacing:.01em;
-}
-@media(max-width:680px){
-  .hero-service-title{
-    margin-bottom:1rem;
-    font-size:.95rem;
-  }
-  .hero-headline{
-    font-size:clamp(1.6rem,7.8vw,2.5rem);
-    line-height:1.28;
-  }
-  .hero-subheadline{
-    font-size:clamp(1.05rem,4.6vw,1.35rem);
-    line-height:1.65;
-  }
-}
-
-/* ── v3.18 structural additions ── */
-#form{scroll-margin-top:96px;}
-.hero-lead{max-width:680px;}
-.core-note{
-  margin-top:2rem;padding:1.75rem 1.9rem;
-  border:1px solid var(--g200);border-left:4px solid var(--navy);
-  background:var(--paper);
-}
-.core-note h3{
-  font-family:var(--serif);font-size:1.15rem;line-height:1.7;
-  color:var(--navy);margin-bottom:.65rem;
-}
-.core-note p{font-size:.93rem;color:var(--g600);line-height:2;}
-.stop-bridge{
-  margin-top:1.5rem;font-family:var(--serif);font-weight:700;
-  color:var(--navy);font-size:1.05rem;line-height:1.8;
-}
-.mechanism-grid{
-  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:1px;background:rgba(201,168,76,.25);margin-top:2rem;
-}
-.mechanism-grid--three{grid-template-columns:repeat(3,minmax(0,1fr));}
-.mech-step{
-  background:rgba(255,255,255,.06);padding:1.5rem;
-  min-width:0;
-}
-.mech-step-no{
-  display:block;color:var(--gold);font-size:.65rem;
-  font-weight:900;letter-spacing:.16em;margin-bottom:.55rem;
-}
-.mech-step h3{
-  color:var(--gold-lt);font-size:1rem;line-height:1.55;margin-bottom:.45rem;
-}
-.mech-step p{color:rgba(255,255,255,.75);font-size:.88rem;line-height:1.9;}
-.mech-close{
-  margin-top:1.5rem;padding:1.35rem 1.5rem;
-  border:1px solid rgba(201,168,76,.35);background:rgba(255,255,255,.04);
-  color:rgba(255,255,255,.82);font-size:.92rem;line-height:2;
-}
-.fit-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:1px;
-  background:var(--g200);margin-top:2rem;
-}
-.fit-card{background:var(--white);padding:1.75rem;}
-.fit-card--paper{background:var(--paper);}
-.fit-card h3{
-  font-family:var(--serif);font-size:1.05rem;color:var(--navy);
-  line-height:1.6;margin-bottom:.9rem;
-}
-.fit-list{list-style:none;}
-.fit-list li{
-  padding:.7rem 0;border-bottom:1px solid var(--g200);
-  font-size:.9rem;color:var(--g800);line-height:1.8;
-}
-.fit-list li:last-child{border-bottom:none;}
-.fit-note{
-  margin-top:1.4rem;font-size:.86rem;color:var(--g600);line-height:1.9;
-}
-.track-group-title{
-  margin-top:2rem;margin-bottom:.7rem;
-  font-size:.72rem;font-weight:900;letter-spacing:.14em;color:var(--gold);
-}
-.track-grid--four{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:0;}
-.track-grid--three{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:0;}
-.track-grid--two{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:0;}
-.faq-list{margin-top:2rem;border-top:1px solid var(--g200);}
-.faq-item{padding:1.35rem 0;border-bottom:1px solid var(--g200);}
-.faq-q{
-  font-family:var(--serif);font-size:1rem;font-weight:700;
-  color:var(--navy);line-height:1.65;margin-bottom:.45rem;
-}
-.faq-a{font-size:.9rem;color:var(--g600);line-height:1.95;}
-.form-final{
-  margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--g200);
-}
-.form-final-title{
-  font-size:.82rem;font-weight:900;letter-spacing:.08em;
-  color:var(--navy);margin-bottom:1rem;
-}
-@media(max-width:760px){
-  .mechanism-grid,.mechanism-grid--three,.fit-grid{grid-template-columns:1fr;}
-  .track-grid--four,.track-grid--three,.track-grid--two{grid-template-columns:repeat(2,minmax(0,1fr));}
-}
-@media(max-width:359px){
-  .track-grid,.track-grid--four,.track-grid--three,.track-grid--two{grid-template-columns:1fr!important;}
-  .track-num{font-size:2.7rem;}
-}
-
-
-
-/* ── quick service routing ── */
-.quick-route{
-  padding:2.4rem 2rem 2.7rem;
-  background:var(--paper);
-  border-bottom:1px solid var(--g200);
-}
-.quick-route-inner{max-width:900px;margin:0 auto;}
-.quick-route-head{
-  display:flex;align-items:flex-end;justify-content:space-between;
-  gap:1.5rem;margin-bottom:1.2rem;
-}
-.quick-route-title{
-  font-family:var(--serif);
-  font-size:1.15rem;font-weight:700;color:var(--navy);
-  line-height:1.65;
-}
-.quick-route-note{
-  font-size:.78rem;color:var(--g600);line-height:1.7;text-align:right;
-}
-.quick-route-grid{
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:1px;background:var(--g200);
-  border:1px solid var(--g200);
-}
-.quick-route-link{
-  display:flex;align-items:center;justify-content:space-between;
-  gap:.75rem;min-height:66px;padding:.9rem 1rem;
-  background:var(--white);color:var(--navy);
-  text-decoration:none;font-size:.82rem;font-weight:700;line-height:1.55;
-  transition:background .15s,color .15s;
-}
-.quick-route-link::after{content:'→';color:var(--gold);flex-shrink:0;}
-.quick-route-link:hover{background:var(--navy);color:var(--white);}
-@media(max-width:760px){
-  .quick-route{padding:2rem 1.25rem 2.2rem;}
-  .quick-route-head{display:block;}
-  .quick-route-note{margin-top:.35rem;text-align:left;}
-  .quick-route-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
-}
-@media(max-width:359px){
-  .quick-route-grid{grid-template-columns:1fr;}
-}
-
-/* v3.22 top-page review */
-.front-proof{background:var(--white);border-bottom:1px solid var(--g200);}
-.front-proof-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--g200);}
-.front-proof-inner div{background:var(--white);padding:1.25rem 1.5rem;text-align:center;}
-.front-proof-inner strong{display:block;color:var(--navy);font-family:var(--serif);font-size:1.08rem;line-height:1.45;}
-.front-proof-inner span{display:block;margin-top:.2rem;color:var(--g600);font-size:.78rem;}
-.form-status{min-height:1.7rem;margin-top:1rem;color:var(--g600);font-size:.88rem;font-weight:700;line-height:1.7;text-align:center;}
-.form-status.is-error{color:#a4001d;}
-.form-status.is-success{color:#176b38;}
-.mode-consultation[hidden],.mode-diagnosis[hidden]{display:none!important;}
-@media(max-width:680px){.front-proof-inner{grid-template-columns:1fr;}.front-proof-inner div{padding:1rem 1.25rem;}}
-@media(max-width:560px){.hd-link{display:none}.hd-nav{gap:0}.hd-cta{font-size:.74rem;padding:.45rem .8rem}}
-
-/* v4: scope as deliverables, report preview */
-.scope-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--g200);margin-top:2rem;}
-.scope-card{background:var(--white);padding:1.7rem;}
-.scope-no{display:block;font-size:.65rem;font-weight:900;letter-spacing:.16em;color:var(--gold);margin-bottom:.55rem;}
-.scope-card h3{font-family:var(--serif);font-size:1.05rem;color:var(--navy);line-height:1.55;margin-bottom:.5rem;}
-.scope-card p{font-size:.88rem;color:var(--g600);line-height:1.9;}
-.report-preview{margin:1.5rem 0 1.25rem;padding:1.25rem;border:1px solid rgba(201,168,76,.45);background:rgba(255,255,255,.06);}
-.report-preview-title{font-family:var(--serif);font-weight:700;font-size:1rem;margin-bottom:.85rem;}
-.report-preview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;}
-.report-preview-grid>div{padding:.85rem;background:rgba(255,255,255,.07);display:flex;gap:.55rem;align-items:flex-start;}
-.report-preview-grid span{font-size:.65rem;font-weight:900;letter-spacing:.12em;color:var(--gold-lt);padding-top:.15rem;}
-.report-preview-grid strong{font-size:.82rem;line-height:1.65;}
-@media(max-width:640px){
-  .scope-grid{grid-template-columns:1fr;}
-  .report-preview-grid{grid-template-columns:1fr;}
-  .hero-lead br{display:none;}
-}
-
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://konishi-marketing.com/#organization",
-      "name": "小西マーケティング",
-      "alternateName": "Konishi Marketing",
-      "url": "https://konishi-marketing.com/",
-      "description": "ECの売上が止まる原因を切り分け、商品ページ改善・運用改善・Makuake支援・一般販売移行まで支援する事業者です。",
-      "founder": {
-        "@id": "https://konishi-marketing.com/#person"
-      }
-    },
-    {
-      "@type": "Person",
-      "@id": "https://konishi-marketing.com/#person",
-      "name": "小西 秀人",
-      "alternateName": "小西秀人",
-      "url": "https://konishi-marketing.com/",
-      "image": "https://raw.githubusercontent.com/hideto0217-sys/konishi-lp/refs/heads/main/images/konishi.JPG",
-      "jobTitle": "ECコンサルタント",
-      "worksFor": {
-        "@id": "https://konishi-marketing.com/#organization"
-      },
-      "knowsAbout": [
-        "EC商品ページ改善",
-        "CVR改善",
-        "楽天市場",
-        "Yahoo!ショッピング",
-        "Amazon",
-        "Makuake",
-        "自社EC"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://konishi-marketing.com/#website",
-      "url": "https://konishi-marketing.com/",
-      "name": "小西マーケティング",
-      "alternateName": "Konishi Marketing",
-      "inLanguage": "ja-JP",
-      "publisher": {
-        "@id": "https://konishi-marketing.com/#organization"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://konishi-marketing.com/#webpage",
-      "url": "https://konishi-marketing.com/",
-      "name": "ECのCVR改善・商品ページ改善｜売上が止まる原因から設計｜小西マーケティング",
-      "description": "楽天・Yahoo!ショッピング・Amazon・Makuake・自社ECを対象に、売上が止まる原因を切り分け、必要な商品ページ改善・運用改善・LP制作・一般販売移行まで支援します。",
-      "inLanguage": "ja-JP",
-      "isPartOf": {
-        "@id": "https://konishi-marketing.com/#website"
-      },
-      "about": {
-        "@id": "https://konishi-marketing.com/#organization"
-      },
-      "creator": {
-        "@id": "https://konishi-marketing.com/#person"
-      },
-      "mainEntity": {
-        "@id": "https://konishi-marketing.com/#service"
-      }
-    },
-    {
-      "@type": "Service",
-      "@id": "https://konishi-marketing.com/#service",
-      "name": "ECのCVR改善・商品ページ改善",
-      "serviceType": [
-        "EC商品ページのCVR改善",
-        "楽天商品ページ改善",
-        "Yahoo!ショッピング商品ページ改善",
-        "Amazon商品ページ改善・制作",
-        "Makuakeプロジェクトページ改善",
-        "自社EC・Meta広告→LP制作",
-        "Makuake後の一般販売支援"
-      ],
-      "provider": {
-        "@id": "https://konishi-marketing.com/#organization"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "日本"
-      },
-      "url": "https://konishi-marketing.com/",
-      "description": "楽天・Yahoo!ショッピング・Amazon・Makuake・自社ECに対応し、商品ページ改善、A+制作、プロジェクトページ制作、Meta広告→LP制作、Makuake後の一般販売移行を支援するサービス。"
-    }
-  ]
-}
-</script>
 </head>
 <body>
-<!-- header -->
-<header class="hd">
-<a class="hd-logo" href="https://konishi-marketing.com/">小西マーケティング</a>
-<nav class="hd-nav">
-<a class="hd-link hd-link--rakuten" href="https://konishi-marketing.com/rakuten/">楽天商品ページ制作</a>
-<a class="hd-link" href="#services">サービス</a>
-<a class="hd-link hd-link--articles" href="https://konishi-marketing.com/articles/">記事を読む</a>
-<a class="hd-cta" href="#form">無料ページ診断を受ける</a>
-</nav>
-</header>
-<!-- hero -->
-<section class="hero" style="background: var(--navy); color: var(--white);">
-<div class="hero-inner">
-<h1 class="hero-service-title">EC・商品ページのCVR改善</h1>
-<p class="hero-headline">CVRが動かないとき、<br/>最初に決めるのは、<br/>何を変えるかではありません。</p>
-<p class="hero-subheadline">その商品ページ、<br/>本当に最初に直す場所でしょうか。</p>
-<p class="hero-lead" style="color: rgba(255,255,255,0.85);">広告、商品ページ、価格、レビュー、配送。数字が動かない原因は、ページとは限りません。<br/>まず売上を止めている場所を切り分け、そこから直します。</p>
-<div class="cta-row hero-cta-row">
-<a class="btn hero-btn" href="#form">無料ページ診断を受ける</a>
-<div class="btn-note hero-btn-note">商品ページURLを送るだけ。<br/>無料ページ診断のレポートは2営業日以内に返送します。</div>
-</div>
-</div>
-</section>
-<section aria-label="担当者実績" class="front-proof">
-<div class="front-proof-inner">
-<div><strong>楽天SOY企業</strong><span>元店長</span></div>
-<div><strong>SOA企業</strong><span>元CVR責任者</span></div>
-<div><strong>20年</strong><span>EC実務経験</span></div>
-</div>
-</section>
-<!-- stop patterns -->
-<section class="sec sec--white">
-<div class="inner">
-<span class="sec-label">ページが原因だった場合</span>
-<h2 class="sec-h2">ページ全体を直す前に、<br/>最初に購入を止めている「迷い」を見つける。</h2>
-<p class="sec-p">「説明を増やす」「レビューを目立たせる」のように、直す場所を先に固定しません。広告や検索結果ですでに分かっていることは繰り返さず、商品ページに来たあと最初に「ここが決まらない」と残っている迷いを特定します。</p>
-<ul class="moment-list">
-<li><strong>違いが分からない。</strong><br/>候補には入ったが、価格やレビュー以外に何を基準に選べばよいか決まっていない。</li>
-<li><strong>自分に合うか分からない。</strong><br/>商品価値は理解できても、使用条件・サイズ・用途・対象者などの適合判断が残っている。</li>
-<li><strong>買った後を判断できない。</strong><br/>使い方、所有負担、配送、保証、制度条件など、購入後の具体的不安が残っている。</li>
-<li><strong>今買う理由が成立していない。</strong><br/>Makuakeなどでは、商品理解より前に「なぜ今この商品を選ぶのか」という「今買う理由」そのものがまだ弱い場合があります。</li>
-</ul>
-<p class="stop-bridge">最初に残っている迷いが違えば、必要な情報も、見せる場所も、直す順番も変わります。</p>
-</div>
-</section>
-<!-- mechanism -->
-<section class="sec sec--navy">
-<div class="inner">
-<span class="sec-label sec-label--lt">小西式CVR改善設計</span>
-<div class="phil-inner" style="max-width:900px;">
-<h2 class="phil-h">原因を見つけても、<br/>制作の途中で答えが変われば、正しい改善にはならない。</h2>
-<p class="phil-p">原因が分かっても、構成・コピー・写真・デザインで伝えることが変われば、改善はずれます。だから、診断で見つけた答えを、完成まで同じ基準でつなぎます。</p>
-<div class="mechanism-grid mechanism-grid--three">
-<div class="mech-step">
-<span class="mech-step-no">01</span>
-<h3>その迷いに、何を見せれば決まるかを定める</h3>
-<p>情報不足だから足す、とは限りません。すでに分かっていることは繰り返さず、残った迷いを解消するために必要な情報と置き場所だけを決めます。</p>
-</div>
-<div class="mech-step">
-<span class="mech-step-no">02</span>
-<h3>コピー・写真・実績を、同じ答えへ収束させる</h3>
-<p>見出し、本文、写真、数値、レビューを別々の訴求にせず、最初に残った迷いへ同じ答えを返すように配置します。</p>
-</div>
-<div class="mech-step">
-<span class="mech-step-no">03</span>
-<h3>デザインまで、その答えを変えずに通す</h3>
-<p>ワイヤーやデザインで別の訴求を足さず、迷いを解消する順番を保ったまま、スマートフォンでの読み方と売り場仕様へ反映します。</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- track record -->
-<section class="track-sec">
-<div class="inner">
-<span class="sec-label">実績</span>
-<h2 class="sec-h2">売上責任を持つ現場で、<br/>「何を直せば数字が動くか」を20年見てきました。</h2>
-<div style="display:flex;gap:2.5rem;align-items:flex-start;margin-bottom:3rem;flex-wrap:wrap;">
-<div style="flex-shrink:0;width:100%;max-width:180px;margin:0 auto;">
-<img alt="小西秀人" src="https://raw.githubusercontent.com/hideto0217-sys/konishi-lp/refs/heads/main/images/konishi.JPG" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center;display:block;border:1px solid var(--g200);border-radius:12px;box-shadow:0 10px 25px rgba(26,39,68,0.08);"/>
-</div>
-<div style="flex:1;min-width:240px;">
-<div style="font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;">小西 秀人（こにし・ひでと）</div>
-<div style="font-size:.78rem;color:var(--gold);font-weight:700;letter-spacing:.1em;margin-bottom:1rem;">ECコンサルタント／小西マーケティング</div>
-<p style="font-size:.9rem;color:var(--g600);line-height:2.1;">
-楽天市場・Amazon・Yahoo!ショッピング・Makuake・自社ECで、物販ECの販売・改善実務を経験。20年間のEC実務経験をもとに、商品ページの改善から数字が動かない理由を見つける「小西式CVR改善設計」を展開。楽天SOY企業の元店長、楽天SOA企業の元CVR責任者として、売上責任を持つ現場でページ設計を担ってきた。
-</p>
-</div>
-</div>
-<div class="track-group-title">モール販売の実績</div>
-<div class="track-grid track-grid--four">
-<div class="track-card"><span class="track-num">2<span class="track-unit">回</span></span><div class="track-desc">楽天市場<br/>総合ランキング1位</div></div>
-<div class="track-card"><span class="track-num">1<span class="track-unit">回</span></span><div class="track-desc">Yahoo!ショッピング<br/>総合ランキング1位</div></div>
-<div class="track-card"><span class="track-num">11<span class="track-unit">回</span></span><div class="track-desc">楽天<br/>年間ランキング入賞</div></div>
-<div class="track-card"><span class="track-num">1,000<span class="track-unit">+</span></span><div class="track-desc">楽天ランキング1位<br/>通算獲得数</div></div>
-</div>
-<div class="track-group-title">先行販売・広告の実績</div>
-<div class="track-grid track-grid--two">
-<div class="track-card"><span class="track-num">3<span class="track-unit">回</span></span><div class="track-desc">Makuake<br/>総合ランキング1位</div></div>
-<div class="track-card"><span class="track-num">3,000<span class="track-unit">円以下</span></span><div class="track-desc">Meta広告<br/>CPO達成</div></div>
-</div>
-<div class="award-row">
-<div class="award-card"><div><div class="award-ttl">楽天SOY企業 元店長</div><div class="award-desc">店舗月商5,000万円→9,500万円を担当</div></div></div>
-<div class="award-card"><div><div class="award-ttl">楽天SOA企業 元CVR責任者</div><div class="award-desc">月間平均転換率5％を達成</div></div></div>
-</div>
-<div class="track-note">※実績は異なる商品・店舗で達成したものを含みます。成果は商品、市場、運用条件によって異なります。</div>
-</div>
-</section>
-<!-- service scope -->
-<section class="sec sec--paper">
-<div class="inner">
-<span class="sec-label">ご依頼いただける範囲</span>
-<h2 class="sec-h2">診断後に必要なら、<br/>商品ページの完成データまで制作します。</h2>
-<p class="sec-p">ページ改善が必要と判断した場合は、リサーチから構成・コピー・ワイヤー、商品画像・LPデザインまで対応します。販売チャネルごとの表示仕様に合わせ、実際に使える完成データで納品します。</p>
-<div class="scope-grid">
-  <div class="scope-card"><span class="scope-no">01</span><h3>市場・VOC・競合リサーチ</h3><p>買い手の認識、競合との比較状況、商品の事実を確認します。</p></div>
-  <div class="scope-card"><span class="scope-no">02</span><h3>構成・コピー・ワイヤー</h3><p>ページの情報順、見出し、本文、画像・証拠の置き場所まで設計します。</p></div>
-  <div class="scope-card"><span class="scope-no">03</span><h3>商品画像・LPデザイン</h3><p>商品画像、図解、LPデザインへ落とし込み、スマートフォンでの見え方まで整えます。</p></div>
-  <div class="scope-card"><span class="scope-no">04</span><h3>チャネル別の完成データ</h3><p>楽天、Yahoo!、Amazon、Makuake、自社ECなど、各売り場の仕様に合わせて納品します。</p></div>
-</div>
-</div>
-</section>
-<!-- channels -->
-<section class="sec sec--white" id="services">
-<div class="inner">
-<span class="sec-label">対応サービス</span>
-<h2 class="sec-h2">必要な支援が決まっている方は、<br/>該当するサービスへ。</h2>
-<p class="sec-p" style="margin-bottom:2.2rem;">販売チャネルと現在の状態に近いものを選んでください。</p>
-<div class="channel-grid">
-<div class="channel-card">
-<h3>楽天市場｜アクセスはあるのに、商品ページで選ばれない</h3>
-<p>アクセスはあるが、商品画像・レビュー・価格・配送を見ても、「この商品を選ぶ理由」が伝わり切っていない場合。</p>
-<a aria-label="楽天商品ページ改善・制作サービスを見る" class="channel-service-link" href="https://konishi-marketing.com/rakuten/">楽天商品ページ改善・制作を見る</a>
-</div>
-<div class="channel-card">
-<h3>楽天市場｜何から直せば売上が伸びるか分からない</h3>
-<p>ページだけでなく、アクセス・転換率・客単価・CRM・広告のどこを先に直すべきか判断できない場合。</p>
-<a aria-label="楽天運用代行・売上改善支援サービスを見る" class="channel-service-link" href="https://konishi-marketing.com/rakuten/rakuten-growth.html">楽天運用代行・売上改善支援を見る</a>
-</div>
-<div class="channel-card">
-<h3>Yahoo!ショッピング｜価格とポイントだけで比べられてしまう</h3>
-<p>流入はあるが、価格やポイント以外の違いが伝わらず、結局また価格比較へ戻ってしまう場合。</p>
-<a aria-label="Yahoo!ショッピング商品ページ改善・制作サービスを見る" class="channel-service-link" href="https://konishi-marketing.com/yahoo/">Yahoo!ショッピング商品ページ改善・制作を見る</a>
-</div>
-<div class="channel-card">
-<h3>Makuake｜商品は良いのに、「今買う理由」が弱い</h3>
-<p>商品説明はできるが、一般販売を待たずに今応援購入する理由が弱く、「今ほしい」まで気持ちが動いていない場合。</p>
-<a aria-label="Makuakeプロジェクトページ制作サービスを見る" class="channel-service-link" href="https://konishi-marketing.com/makuake/">Makuake制作サービスを見る</a>
-</div>
-<div class="channel-card">
-<h3>Amazon｜商品画像もA+も作った。<br/>それでも売上が伸びない</h3>
-<p>既存の商品ページにアクセスはあるが、商品画像・商品情報・A+が別々に働き、「この商品を選ぶ理由」がつながっていない場合。</p>
-<a aria-label="Amazon商品ページ改善・制作サービスを見る" class="channel-service-link" href="https://konishi-marketing.com/amazon/">Amazon商品ページ改善・制作を見る</a>
-</div>
-<div class="channel-card">
-<h3>自社EC｜広告はクリックされるのに、<br/>購入までつながらない</h3>
-<p>Meta広告でクリックは取れているが、広告・記事LP・本LP・一体型LPの役割が分かれ、CPOやROASが伸び切っていない場合。</p>
-<a aria-label="自社EC・Meta広告からLP制作サービスを見る" class="channel-service-link" href="https://konishi-marketing.com/jisha/">自社EC・Meta広告→LP制作を見る</a>
-</div>
-<div class="channel-card">
-<h3>Makuake後｜応援購入の勢いを、<br/>一般販売でも続けたい</h3>
-<p>Makuakeで得た実績・反応・購入理由を、楽天・Yahoo!ショッピング・Amazon・自社ECの一般販売へ移したい場合。</p>
-<a aria-label="Makuake終了後の一般販売支援サービスを見る" class="channel-service-link" href="https://konishi-marketing.com/makuake/after-makuake.html">Makuake後の一般販売支援を見る</a>
-</div>
-</div>
-</div>
-</section>
-<!-- articles -->
-<section class="sec sec--paper">
-<div class="inner">
-<span class="sec-label">関連記事</span>
-<h2 class="sec-h2" style="margin-bottom:0.5rem;">まず自分で原因を確かめたい方へ。</h2>
-<p style="font-size:1.02rem; color:var(--g600); margin-bottom:2.5rem; line-height:1.8; max-width:680px;">各販売チャネルで、どこを確認すると売れない理由を切り分けやすいかを記事で公開しています。</p>
-<div class="article-hub-box">
+<header class="nav"><div class="wrap nav-in"><a class="logo" href="https://konishi-marketing.com/">小西マーケティング</a><div class="nav-r"><a href="#method">販売設計</a><a href="#services">サービス</a><a href="#articles">記事を読む</a><a class="cta" href="#form">無料診断</a></div></div></header>
+<main>
+<section class="hero"><div class="wrap"><span class="eyebrow">商品ページの販売力診断</span><h1>その売上を、<br/>商品の限界だと思っていませんか。</h1><div class="hero-lead hero-questions"><p>今のページで、商品の価値は一番強く伝わっていますか。</p><p>お客様が「これを選ぶ理由」は、ページを見ればすぐ分かりますか。</p><p>競合ではなく、この商品を選ぶ判断材料は揃っていますか。</p><p>買うまでに残る迷いを、順番に解消できていますか。</p><p class="hero-question-close">もし一つでも答えに迷うなら、<br/><strong>今の売上を、商品の限界だと決めるのはまだ早いかもしれません。</strong></p></div><div class="hero-actions"><a class="btn btn-light" href="#form">商品ページの販売力を無料で診断する</a><div class="micro">営業電話なし<br/>2営業日以内に診断結果を返送</div></div></div></section>
+<section class="proofbar"><div class="wrap proofgrid"><div><strong>楽天ショップ・オブ・ザ・イヤー受賞企業</strong><span>元店長</span></div><div><strong>楽天ショップ・オブ・ジ・エリア受賞企業</strong><span>元・転換率改善責任者</span></div><div><strong>ネット通販・EC実務20年</strong><span>販売・改善の現場経験</span></div></div></section>
+<section class="sec"><div class="narrow"><span class="label">売上の取りこぼし</span><h2>売れた金額と、商品の上限は同じではありません。</h2><p class="intro">100万円売れた商品を見て、「この商品は100万円規模だった」と判断する。けれど、そのページが商品の価値を十分に伝え切れていなかったなら、100万円は商品の限界ではありません。</p><p class="bigline">それは、<br/>その売り方で回収できた売上です。</p><div class="equation"><div class="eqrow"><div class="eqbox"><small>よくある見方</small><strong>現在売上 ＝ 商品の実力</strong></div><div class="arrow">→</div><div class="eqbox"><small>売上を左右するもの</small><strong>商品そのもの × 売り方</strong></div></div></div><div class="note">別の売り方を試していない限り、「これが商品の上限だった」とは断定できません。</div></div></section>
+<section class="sec paper"><div class="wrap"><span class="label">よくある販売の落とし穴</span><h2>売れたからこそ、<br/>取りこぼしに気づけない。</h2><p class="intro">まったく売れなければ、売り方を疑えます。難しいのは、商品自体が強く、普通に作ったページでも一定数が売れたときです。その数字を「この商品の実力」と受け取ると、ページ側に残っている販売余地が見えなくなります。</p><div class="steps"><div class="steps-title">よくある「売上の取りこぼし」に気づけない流れ</div><div class="step"><span>01</span><h3>商品情報を渡す</h3><p>特徴・仕様・素材・実績など、手元にある情報を制作側へ渡す。</p></div><div class="step"><span>02</span><h3>ページを整える</h3><p>商品の良さ、写真、レビュー、デザインを足してページを完成させる。</p></div><div class="step"><span>03</span><h3>一定数は売れる</h3><p>商品自体が強ければ、売り方を十分に考え切れていなくても一定の売上は出る。</p></div><div class="step"><span>04</span><h3>その数字を上限だと思う</h3><p>「これがこの商品の実力だった」と判断し、残っている販売余地が見えなくなる。</p></div></div></div></section>
+<section class="sec navy" id="method"><div class="wrap"><span class="label">ページの販売力</span><h2>同じ商品でも、ページが変われば、<br/>売れ方は変わります。</h2><p class="intro">商品が同じでも、<br/>誰に売るか。何を「選ぶ理由」にするか。何を、どの順番で伝えるか。<br/>それによって、売れ方は変わります。</p><p class="intro"><strong>つまり、商品だけでなく「どう売るか」にも、売上を左右する力があります。</strong></p><p class="intro">私が見るのは、そこです。<br/><strong>今のページは、この商品の価値を売上へ変えられる設計になっているか。</strong></p><div class="diagnosis"><h3>ページを見るときは、次の4点を確認します。</h3><div class="diaggrid"><div><span>01</span><strong>誰に売っているか</strong><br/>その買い手がすでに分かっていることから始まっているか</div><div><span>02</span><strong>何を選ぶ理由にしているか</strong><br/>競合ではなく、この商品を選ぶ理由が明確になっているか</div><div><span>03</span><strong>何を、どの順番で伝えているか</strong><br/>買うまでに残る迷いを、順番に解消できているか</div><div><span>04</span><strong>何で納得させているか</strong><br/>コピー・写真・数値・レビューが、買う判断を前へ進めているか</div></div></div><p class="bigline" style="color:var(--gold-lt);margin-top:2.5rem">だから私は、ページを見て、<br/><strong>商品そのものの力で売れているだけなのか。<br/>ページ側にも、まだ売上を伸ばせる余地が残っているのか。</strong><br/>そこを評価します。</p></div></section>
+<section class="sec paper"><div class="wrap"><span class="label">なぜ判断できるのか</span><h2>なぜ、ページを見て<br/>「まだ売れる余地がある」と判断できるのか。</h2><p class="intro">20年間、ページを作る側だけではなく、売上責任を持つ側で、ページを変えたあとに売上や転換率がどう動いたかまで見続けてきました。楽天ショップ・オブ・ザ・イヤー受賞企業では店長を務め、楽天ショップ・オブ・ジ・エリア受賞企業では転換率改善を担当。見た目の完成度ではなく、販売結果まで追ってきた経験が、ページの販売力を評価する基準になっています。</p><div class="track"><div><b>2回</b><span>楽天市場<br/>総合ランキング1位</span></div><div><b>1回</b><span>Yahoo!ショッピング<br/>総合ランキング1位</span></div><div><b>11回</b><span>楽天<br/>年間ランキング入賞</span></div><div><b>1,000+</b><span>楽天ランキング1位<br/>通算獲得数</span></div><div><b>3回</b><span>Makuake<br/>総合ランキング1位</span></div><div><b>6,600万</b><span>Makuake<br/>最高応援購入額</span></div><div><b>5,000→9,500万</b><span>楽天店舗<br/>月商改善</span></div><div><b>20年</b><span>物販EC<br/>実務経験</span></div></div><div class="profile"><img alt="小西秀人" src="https://raw.githubusercontent.com/hideto0217-sys/konishi-lp/refs/heads/main/images/konishi.JPG"/><div><h3>小西 秀人｜小西マーケティング</h3><p>楽天市場・Yahoo!ショッピング・Amazon・Makuake・自社ECで、販売・改善実務を経験。楽天ショップ・オブ・ザ・イヤー受賞企業で店長を務め、楽天ショップ・オブ・ジ・エリア受賞企業では転換率改善を担当してきました。商品ページを「制作物」ではなく、売上を左右する販売の仕組みとして見てきました。</p><p style="font-size:.76rem;color:#8a867d">※実績は異なる商品・店舗で達成したものを含みます。成果は商品、市場、運用条件によって異なります。</p></div></div></div></section>
+<section class="sec navy"><div class="wrap"><span class="label">無料ページ診断</span><h2>今のページは、<br/>商品の販売力をどこまで引き出せているか。</h2><p class="intro">無料診断では、ページを作り直す前提で見ません。今のページで、商品の良さを売上へ変え切れているかを確認します。そのうえで、商品そのものに限界があるのか、ページの売り方にまだ伸ばせる余地があるのかを見ます。</p><div class="diagnosis"><h3>無料診断でお返しすること</h3><div class="diaggrid"><div><span>01</span>現在ページの販売力</div><div><span>02</span>お客様が買う前に止まっているポイント</div><div><span>03</span>最初に変えるべき一点</div><div><span>04</span>改善余地の見立て</div></div></div><div class="hero-actions"><a class="btn btn-light" href="#form">商品ページの販売力を無料で診断する</a><div class="micro">ページ側に大きな問題がなければ、<br/>無理に作り直す提案はしません。</div></div></div></section>
+<section class="sec paper"><div class="wrap"><span class="label">調査からページ制作まで</span><h2>販売余地が見つかったら、<br/>設計から制作までそのまま任せられます。</h2><p class="intro">実際のお客様の声や競合商品を調べ、誰に何を伝えれば「この商品を選ぶ理由」が最も伝わるかを決めます。そのうえで、構成・コピー・画像・デザインまで一貫して制作します。伝えることを増やすのではなく、「なぜこの商品を選ぶのか」が一番伝わる形に絞ります。</p><div class="steps"><div class="step"><span>01</span><h3>買う人を知る</h3><p>実際のお客様の声や競合商品を調べ、誰が何を求め、何と比べているのかを確認します。</p></div><div class="step"><span>02</span><h3>売れる理由を決める</h3><p>誰に、何を一番の「選ぶ理由」として伝えるかを決めます。</p></div><div class="step"><span>03</span><h3>伝える順番を作る</h3><p>お客様の迷いが順番に消えていくように、構成・コピー・写真を組み立てます。</p></div><div class="step"><span>04</span><h3>デザインして納品する</h3><p>楽天、Amazon、Makuakeなど、それぞれの売り場に合わせて仕上げます。</p></div></div></div></section>
+<section class="sec" id="services"><div class="wrap"><span class="label">売り場別のサービス</span><h2>売り場が変われば、<br/>普通に作ったときの「売れない理由」も変わります。</h2><p class="intro">同じ商品情報を、売り場ごとに見た目だけ変えて載せても十分ではありません。お客様がその売り場で何と比べ、どこで迷い、何が分かれば買えるのかまで変わるからです。</p><div class="services"><div class="service"><h3>楽天市場</h3><p><strong>商品情報をきれいに並べるだけでは、価格・レビュー・ランキング比較の中に埋もれます。</strong><br/>商品画像の段階から「なぜこの商品を選ぶのか」が伝わるよう、比較される前提で販売ページを組み立てます。</p><a href="https://konishi-marketing.com/rakuten/">楽天で選ばれるページ設計を見る →</a></div><div class="service"><h3>Makuake</h3><p><strong>機能や特徴を詰め込むだけでは、「詳しく見たい」が起きず、本文まで進まれません。</strong><br/>初めて商品を知る人にも、新しさと欲しさが立ち上がり、「詳しく見たい」から「今ほしい」へ進める入口から設計します。</p><a href="https://konishi-marketing.com/makuake/">Makuakeで続きを読みたくなる設計を見る →</a></div><div class="service"><h3>Yahoo!ショッピング</h3><p><strong>商品説明が弱いままだと、価格やポイントだけで比べられやすくなります。</strong><br/>条件比較だけで終わらず、「この商品だから選ぶ」と判断できる理由がページ内で伝わるように組み立てます。</p><a href="https://konishi-marketing.com/yahoo/">Yahoo!で選ぶ理由を作る設計を見る →</a></div><div class="service"><h3>Amazon</h3><p><strong>商品画像・商品情報・商品紹介コンテンツを別々に作ると、選ぶ理由が分散します。</strong><br/>一覧から商品詳細まで、同じ「選ぶ理由」が積み上がるように、各表示面の役割をつなげて設計します。</p><a href="https://konishi-marketing.com/amazon/">Amazonで選ぶ理由をつなぐ設計を見る →</a></div><div class="service"><h3>自社EC・Meta広告</h3><p><strong>広告で伝えたことを販売ページの冒頭でもう一度説明すると、せっかく進んだお客様の判断が止まります。</strong><br/>広告で成立した理解を前提に、次に知りたいことから続けて購入へ進める販売ページを設計します。</p><a href="https://konishi-marketing.com/jisha/">広告から購入までつなぐ設計を見る →</a></div><div class="service"><h3>Makuake後の一般販売</h3><p><strong>Makuakeで売れたページを、そのまま楽天・Amazonへ持っていっても、同じようには売れません。</strong><br/>初めて知る人を動かすMakuakeと、比較して買う一般販売では必要な説明が違うため、販売先に合わせて組み直します。</p><a href="https://konishi-marketing.com/makuake/after-makuake.html">Makuake後の一般販売設計を見る →</a></div></div></div></section>
+<section class="article-section" id="articles">
+<div class="wrap">
+<span class="label">販売についての記事</span>
+<h2>まず自分で確かめたい方へ。</h2>
+<p class="intro">楽天、Amazon、Yahoo!ショッピング、Makuake、自社EC。売り場ごとに「なぜ売れないのか」を確認する記事を公開しています。</p>
+<div class="article-hub">
 <div>
-<div class="article-hub-label">記事トップ</div>
-<h3>楽天・Amazon・Yahoo!・Makuake・自社EC。<br/>売れない理由から記事を選べます。</h3>
-<p>
-          楽天、Amazon、Yahoo!ショッピング、自社EC、Makuakeでは、
-          読者が迷う場所が変わります。
-          自社に近い販売チャネルから、次に読む記事を整理できます。
-        </p>
+<h3>自社に近い売り場から、読む記事を選べます。</h3>
+<p>商品ページの見直し方や、売上が伸びないときに最初に確認するポイントをまとめています。</p>
 </div>
-<a class="article-hub-btn" href="https://konishi-marketing.com/articles/">
-        記事トップを見る
-      </a>
+<a class="btn btn-dark" href="https://konishi-marketing.com/articles/">記事トップを見る</a>
 </div>
-<div style="margin-top:2.5rem;">
-<div style="margin-bottom:2.5rem;">
-<div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">楽天市場</div>
-<div class="articles" style="grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));">
-<a class="art" href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">
-<span class="art-tag">楽天市場</span>
-<div class="art-ttl">楽天商品ページを整えても転換率が上がらない理由</div>
-<div class="art-arr">読む →</div>
+<div class="article-grid">
+<a class="article-card" href="https://konishi-marketing.com/articles/rakuten-tenkanritsu-agaranai-hontono-riyu.html">
+<small>楽天市場</small>
+<strong>楽天商品ページを整えても転換率が上がらない理由</strong>
+<span>読む →</span>
 </a>
-<a class="art" href="https://konishi-marketing.com/articles/rakuten-access-aru-noni-urenai-kyotsuten.html">
-<span class="art-tag">楽天市場</span>
-<div class="art-ttl">楽天でアクセスはあるのに転換率が上がらない理由</div>
-<div class="art-arr">読む →</div>
+<a class="article-card" href="https://konishi-marketing.com/articles/rakuten-access-aru-noni-urenai-kyotsuten.html">
+<small>楽天市場</small>
+<strong>楽天でアクセスはあるのに転換率が上がらない理由</strong>
+<span>読む →</span>
 </a>
-</div>
-</div>
-<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:2rem;">
-<div>
-<div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">Amazon</div>
-<a class="art" href="https://konishi-marketing.com/articles/amazon-urenai-shohin-page-mondai.html">
-<span class="art-tag">Amazon</span>
-<div class="art-ttl">Amazonで売れない商品ページに共通する3つの問題</div>
-<div class="art-arr">読む →</div>
+<a class="article-card" href="https://konishi-marketing.com/articles/amazon-urenai-shohin-page-mondai.html">
+<small>Amazon</small>
+<strong>Amazonで売れない商品ページに共通する3つの問題</strong>
+<span>読む →</span>
 </a>
-</div>
-<div>
-<div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">Yahoo!ショッピング</div>
-<a class="art" href="https://konishi-marketing.com/articles/yahoo-koubairitsu-agekata.html">
-<span class="art-tag">Yahoo!ショッピング</span>
-<div class="art-ttl">Yahoo!ショッピングの購買率の上げ方｜施策を増やす前に確認する7つの順番</div>
-<div class="art-arr">読む →</div>
+<a class="article-card" href="https://konishi-marketing.com/articles/yahoo-koubairitsu-agekata.html">
+<small>Yahoo!ショッピング</small>
+<strong>Yahoo!ショッピングの購買率の上げ方｜施策を増やす前に確認する7つの順番</strong>
+<span>読む →</span>
 </a>
-</div>
-<div>
-<div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">Makuake</div>
-<a class="art" href="https://konishi-marketing.com/articles/makuake-shien-atsumara-nai-kyotsuten.html">
-<span class="art-tag">Makuake</span>
-<div class="art-ttl">Makuakeでアクセスはあるのに応援購入が集まらない理由</div>
-<div class="art-arr">読む →</div>
+<a class="article-card" href="https://konishi-marketing.com/articles/makuake-shien-atsumara-nai-kyotsuten.html">
+<small>Makuake</small>
+<strong>Makuakeでアクセスはあるのに応援購入が集まらない理由</strong>
+<span>読む →</span>
 </a>
-</div>
-<div>
-<div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">自社EC / Meta広告</div>
-<a class="art" href="https://konishi-marketing.com/articles/meta-kokoku-cpo-roas-kaizenshinai-kyotsuten.html">
-<span class="art-tag">自社EC / Meta広告</span>
-<div class="art-ttl">Meta広告でクリックはあるのにCPO・ROASが改善しない理由</div>
-<div class="art-arr">読む →</div>
+<a class="article-card" href="https://konishi-marketing.com/articles/meta-kokoku-cpo-roas-kaizenshinai-kyotsuten.html">
+<small>自社EC・Meta広告</small>
+<strong>Meta広告でクリックはあるのにCPO・ROASが改善しない理由</strong>
+<span>読む →</span>
 </a>
-</div>
-<div>
-<div style="font-size:.75rem; font-weight:700; color:var(--gold); letter-spacing:.15em; margin-bottom:.75rem;">EC総合</div>
-<a class="art" href="https://konishi-marketing.com/articles/ec-shohin-page-design-kaete-mo-ugokanu.html">
-<span class="art-tag">EC総合</span>
-<div class="art-ttl">ECで商品ページのデザインを変えても数字が動かない理由</div>
-<div class="art-arr">読む →</div>
+<a class="article-card" href="https://konishi-marketing.com/articles/ec-shohin-page-design-kaete-mo-ugokanu.html">
+<small>EC全般</small>
+<strong>ECで商品ページのデザインを変えても数字が動かない理由</strong>
+<span>読む →</span>
 </a>
 </div>
 </div>
+</section><section class="finalcta"><div class="narrow"><span class="label">商品の限界と決める前に</span><h2>「この商品はここまで」と決める前に、<br/>ページ側の販売余地を一度見てください。</h2><p>今の売上が商品の限界なのか。それとも、今の売り方では取り切れていない売上が残っているのか。商品ページを見て、お客様が買う前にどこで止まっているかを確認します。</p></div></section>
+<section class="formsec" id="form">
+<div class="narrow">
+<span class="label mode-diagnosis">無料ページ診断</span>
+<span class="label mode-consultation">事業相談</span>
+<h2 class="diagnosis-main-heading mode-diagnosis">商品ページの販売力を、<br/>無料で確認する。</h2>
+<h2 class="diagnosis-main-heading mode-consultation">売上や販売の状況から、<br/>次にやることを整理する。</h2>
+<p class="formlead mode-diagnosis">商品ページURLと分かる範囲の数字を送ってください。今のページに、まだ売上を伸ばせる余地が残っているかを確認し、2営業日以内に診断結果を返送します。</p>
+<p class="formlead mode-consultation">現在の販売チャネル、売上状況、困っていることを送ってください。内容を確認し、2営業日以内にメールでご連絡します。</p>
+<div class="report mode-diagnosis">
+<div><span>01</span>現在ページの販売力</div>
+<div><span>02</span>買う前に止まっているポイント</div>
+<div><span>03</span>最初に変える一点</div>
+<div><span>04</span>改善余地の見立て</div>
 </div>
-</div>
-</section>
-<!-- faq -->
-<section class="sec sec--paper">
-<div class="inner-n">
-<span class="sec-label">よくある質問</span>
-<h2 class="sec-h2">無料ページ診断について、<br/>よくいただく質問。</h2>
-<div class="faq-list">
-<div class="faq-item">
-<div class="faq-q">無料ページ診断だけでも利用できますか。</div>
-<div class="faq-a">利用できます。制作のご提案は、ご希望いただいた場合のみ行います。</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">診断には何が必要ですか。</div>
-<div class="faq-a">対象ページのURL、主な流入元、おおよその月間アクセス数、現在のCVRをご入力ください。把握していない数字は、そのまま選択できます。</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">診断で成果は保証されますか。</div>
-<div class="faq-a">成果保証ではありません。ページ、商品、市場状況をもとに、売上を妨げている可能性が高い箇所と、最初に直す場所を整理します。</div>
-</div>
-</div>
-</div>
-</section>
-<!-- form -->
-<section class="form-sec" id="form">
-<div class="form-wrap">
-<h2 class="form-h mode-diagnosis">最初にどこを直すべきか、<br/>無料で確認する。</h2>
-<h2 class="form-h mode-consultation" hidden="">売上の状況を見て、次にやるべきことを一緒に整理する。</h2>
-<p class="form-lead mode-diagnosis">商品ページURLと分かる範囲の数字を送ってください。ページを直すべきかも含めて、売上を妨げている可能性が高い箇所と、最初に確認すべき改善ポイントを整理し、診断レポートを2営業日以内に返送します。</p>
-<p class="form-lead mode-consultation" hidden="">現在の販売チャネル、売上状況、課題をお送りください。内容を確認し、2営業日以内にメールでご連絡します。</p>
-<div class="report-preview mode-diagnosis" aria-label="無料ページ診断でお返しする内容">
-  <div class="report-preview-title">無料ページ診断でお返しすること</div>
-  <div class="report-preview-grid">
-    <div><span>01</span><strong>売上を妨げている可能性が高い箇所</strong></div>
-    <div><span>02</span><strong>最初に直す1点</strong></div>
-    <div><span>03</span><strong>改善余地の試算</strong></div>
-  </div>
+<div class="form-mode-box mode-consultation">
+<h3>ページだけに限らず、今の状況から整理します。</h3>
+<p>売上、販売チャネル、集客、商品ページなどを含めて、今どこから手を付けるべきかを一緒に確認します。</p>
 </div>
 <div class="form-note-row mode-diagnosis">
-<span class="form-badge">✓ 営業電話なし</span><span class="form-badge">✓ 有料提案は希望時のみ</span><span class="form-badge">✓ 診断レポートを返送</span>
+<span class="form-badge">✓ 営業電話なし</span>
+<span class="form-badge">✓ 診断レポートを返送</span>
+<span class="form-badge">✓ 有料提案は希望時のみ</span>
 </div>
-<div class="form-note-row mode-consultation" hidden="">
-<span class="form-badge">✓ 営業電話なし</span><span class="form-badge">✓ 2営業日以内に返信</span><span class="form-badge">✓ 有料提案は希望時のみ</span>
+<div class="form-note-row mode-consultation">
+<span class="form-badge">✓ 営業電話なし</span>
+<span class="form-badge">✓ 2営業日以内に返信</span>
+<span class="form-badge">✓ 有料提案は希望時のみ</span>
 </div>
 <form id="diagForm" novalidate="">
-<input checked="" class="consult-toggle" id="consultDiag" name="consult_type" type="radio" value="ページ診断"/>
-<input class="consult-toggle" id="consultConsult" name="consult_type" type="radio" value="事業相談"/>
-<div class="fld consult-select">
-<div class="fld-ttl">ご相談内容<span class="req">必須</span></div>
+<div class="fld">
+<div class="fldttl">ご相談内容<span class="req">必須</span></div>
 <div class="radio-group">
-<label class="radio-card" for="consultDiag"><span class="radio-ui"></span><span class="radio-text"><strong>ページ診断を受けたい</strong><small>商品ページの改善点を具体的に知りたい方</small></span></label>
-<label class="radio-card" for="consultConsult"><span class="radio-ui"></span><span class="radio-text"><strong>事業について相談したい</strong><small>売上・戦略・方向性を含めて相談したい方</small></span></label>
-</div></div>
+<label class="radio-card">
+<input checked="" id="consultDiagnosis" name="consult_type" type="radio" value="ページ診断"/>
+<span><strong>ページ診断を受けたい</strong><small>商品ページに、まだ売上を伸ばせる余地があるか知りたい方</small></span>
+</label>
+<label class="radio-card">
+<input id="consultBusiness" name="consult_type" type="radio" value="事業相談"/>
+<span><strong>事業について相談したい</strong><small>売上・販売チャネル・方向性を含めて相談したい方</small></span>
+</label>
+</div>
+</div>
 <div id="diagFields">
-<div class="fld"><label for="channelSelect">販売チャネル<span class="req">必須</span></label><div class="select-wrap"><select id="channelSelect" name="channel"><option disabled="" selected="" value="">選択してください</option><option value="楽天市場">楽天市場</option><option value="Makuake・クラウドファンディング">Makuake・クラウドファンディング</option><option value="Yahoo!ショッピング">Yahoo!ショッピング</option><option value="Amazon">Amazon</option><option value="自社EC・Meta広告">自社EC・Meta広告</option><option value="Makuake後・一般販売">Makuake後・一般販売</option><option value="その他">その他</option></select></div></div>
-<div class="fld" id="urlField"><label for="urlInput">商品ページまたはプロジェクトページURL<span class="req">必須</span></label><input autocomplete="url" id="urlInput" name="url" placeholder="https://item.rakuten.co.jp/..." type="url"/><span class="hint">診断したいページのURLを、そのまま貼り付けてください。</span></div>
-<div class="fld"><label for="trafficSelect">主な流入元<span class="req">必須</span></label><div class="select-wrap"><select id="trafficSelect" name="traffic"><option disabled="" selected="" value="">選択してください</option><option>モール内検索</option><option>モール内広告</option><option>Google・Yahoo!検索</option><option>Meta広告・SNS広告</option><option>SNS・メルマガ・LINE</option><option>複数あり</option><option>把握していない</option><option>その他</option></select></div></div>
-<div class="fld"><label for="pvSelect">月間アクセス数（訪問数）<span class="req">必須</span></label><div class="select-wrap"><select id="pvSelect" name="pv"><option disabled="" selected="" value="">選択してください</option><option>1,000未満</option><option>1,000〜3,000</option><option>3,000〜10,000</option><option>10,000〜30,000</option><option>30,000以上</option><option>把握していない</option></select></div><span class="hint">おおよその数字で構いません。</span></div>
-<div class="fld"><label for="cvrSelect">現在のCVR（転換率）<span class="req">必須</span></label><div class="select-wrap"><select id="cvrSelect" name="cvr"><option disabled="" selected="" value="">選択してください</option><option>1%未満</option><option>1〜2%</option><option>2〜3%</option><option>3〜5%</option><option>5%以上</option><option>把握していない</option></select></div><span class="hint">把握していない場合は、そのまま選択してください。</span></div>
+<div class="fld"><label for="channelSelect">販売チャネル<span class="req">必須</span></label><select id="channelSelect" name="channel"><option disabled="" selected="" value="">選択してください</option><option>楽天市場</option><option>Makuake・クラウドファンディング</option><option>Yahoo!ショッピング</option><option>Amazon</option><option>自社EC・Meta広告</option><option>Makuake後・一般販売</option><option>その他</option></select></div>
+<div class="fld"><label for="urlInput">商品ページまたはプロジェクトページURL<span class="req">必須</span></label><input autocomplete="url" id="urlInput" name="url" placeholder="https://item.rakuten.co.jp/..." type="url"/></div>
+<div class="fld"><label for="pvSelect">月間アクセス数（訪問数）<span class="req">必須</span></label><select id="pvSelect" name="pv"><option disabled="" selected="" value="">選択してください</option><option>1,000未満</option><option>1,000〜3,000</option><option>3,000〜10,000</option><option>10,000〜30,000</option><option>30,000以上</option><option>把握していない</option></select></div>
+<div class="fld"><label for="cvrSelect">現在の転換率<span class="req">必須</span></label><select id="cvrSelect" name="cvr"><option disabled="" selected="" value="">選択してください</option><option>1%未満</option><option>1〜2%</option><option>2〜3%</option><option>3〜5%</option><option>5%以上</option><option>把握していない</option></select></div>
 </div>
-<div class="form-final"><div class="form-final-title">ご連絡先</div>
-<div class="fld"><label for="nameInput">お名前<span class="req">必須</span></label><input autocomplete="name" id="nameInput" name="name" placeholder="例：小西 秀人" type="text"/></div>
-<div class="fld"><label for="emailInput">メールアドレス<span class="req">必須</span></label><input autocomplete="email" id="emailInput" name="email" placeholder="例：info@example.com" type="email"/></div>
-<div class="fld"><label for="messagePlaceholder"><span class="mode-diagnosis">補足したい内容（任意）</span><span class="mode-consultation" hidden="">現在の状況・相談したいこと<span class="req">必須</span></span></label><textarea id="messagePlaceholder" name="message" rows="5"></textarea><span class="hint mode-diagnosis">分かる範囲で構いません。</span><span class="hint mode-consultation" hidden="">現在の販売チャネル、売上状況、課題、相談したい内容をご記入ください。</span></div>
+<div class="fld"><label for="nameInput">お名前<span class="req">必須</span></label><input autocomplete="name" id="nameInput" name="name"/></div>
+<div class="fld"><label for="emailInput">メールアドレス<span class="req">必須</span></label><input autocomplete="email" id="emailInput" name="email" type="email"/></div>
+<div class="fld">
+<label for="messageInput">
+<span class="mode-diagnosis">補足したい内容</span>
+<span class="mode-consultation">現在の状況・相談したいこと<span class="req">必須</span></span>
+</label>
+<textarea id="messageInput" name="message" placeholder="現在の課題、試した施策、診断時に見てほしいことなど" rows="5"></textarea>
 </div>
-<div class="privacy-consent"><input id="privacyConsent" name="privacy_agreement" type="checkbox" value="同意する"/><label for="privacyConsent"><a href="https://konishi-marketing.com/privacy/" rel="noopener" target="_blank">プライバシーポリシー</a>を確認し、個人情報の取り扱いに同意します。<span class="req">必須</span></label></div>
-<button class="form-submit" type="submit" aria-label="無料ページ診断を申し込む"><span class="submit-diagnosis">無料ページ診断を申し込む</span><span class="submit-consult">事業相談を送信する</span></button>
-<div class="form-disc mode-diagnosis">※本診断は分析に基づくものであり、成果保証ではありません。<br/>※診断結果は、商品・市場・運用状況によって異なります。</div>
-<div class="form-disc mode-consultation">※内容を確認後、2営業日以内にメールでご連絡します。<br/>※営業電話は行いません。</div>
-<div aria-live="polite" class="form-status" id="formStatus" role="status" tabindex="-1"></div>
+<div class="privacy"><input id="privacyConsent" name="privacy_agreement" type="checkbox" value="同意する"/><label for="privacyConsent"><a href="https://konishi-marketing.com/privacy/" rel="noopener" target="_blank">プライバシーポリシー</a>を確認し、個人情報の取り扱いに同意します。<span class="req">必須</span></label></div>
+<button class="submit" id="submitButton" type="submit">
+<span class="submit-label-diagnosis">無料ページ診断を申し込む</span>
+<span class="submit-label-consultation">事業相談を送信する</span>
+</button>
+<div class="disc mode-diagnosis">※本診断は分析に基づくものであり、成果保証ではありません。<br/>※営業電話は行いません。有料提案はご希望いただいた場合のみ行います。</div>
+<div class="disc mode-consultation">※内容を確認後、2営業日以内にメールでご連絡します。<br/>※営業電話は行いません。</div>
+<div aria-live="polite" class="status" id="formStatus" role="status"></div>
 </form>
-<div class="form-success" id="formSuccessDiag"><div class="success-icon">✓</div><div class="success-ttl">無料ページ診断を受け付けました。</div><p class="success-p">2営業日以内に診断レポートをお送りします。<br/><br/>レポートでは、①売上を妨げている可能性が高い箇所、②最初に直す1点、③改善余地の試算を整理します。</p></div>
-<div class="form-success" id="formSuccessConsult"><div class="success-icon">✓</div><div class="success-ttl">事業相談を受け付けました。</div><p class="success-p">内容を確認のうえ、2営業日以内にメールでご連絡します。</p></div>
-</div></section>
-<!-- footer -->
-<footer class="foot">
-<div>
-<div class="foot-name">小西 秀人｜小西マーケティング</div>
-<div class="foot-achieve">楽天年間ランキング11回・総合1位2回 ／ 月商5,000万円→9,500万円</div>
+<div class="success" id="formSuccessDiag"><h3>無料ページ診断を受け付けました。</h3><p>内容を確認し、2営業日以内に診断レポートをお送りします。</p></div>
+<div class="success" id="formSuccessConsult"><h3>事業相談を受け付けました。</h3><p>内容を確認し、2営業日以内にメールでご連絡します。</p></div>
 </div>
-<a class="foot-link" href="https://konishi-marketing.com">konishi-marketing.com</a>
-</footer>
+</section>
+</main>
+<footer class="foot"><div class="wrap footin"><span>小西 秀人｜小西マーケティング</span><a href="https://konishi-marketing.com/">konishi-marketing.com</a></div></footer>
 <script>
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbz_MtzGlFo9HkWpEQkdECfGoTgjL_KRU2zUfeiJGRTaU9dRcjY3KJyBP5SBIPl6KrSUxw/exec';
-const form = document.getElementById('diagForm');
-const radios = [...document.querySelectorAll('input[name="consult_type"]')];
-const diagFields = document.getElementById('diagFields');
-const urlInput = document.getElementById('urlInput');
-const channelSelect = document.getElementById('channelSelect');
-const trafficSelect = document.getElementById('trafficSelect');
-const pvSelect = document.getElementById('pvSelect');
-const cvrSelect = document.getElementById('cvrSelect');
-const nameInput = document.getElementById('nameInput');
-const emailInput = document.getElementById('emailInput');
-const messageInput = document.getElementById('messagePlaceholder');
-const privacyConsent = document.getElementById('privacyConsent');
-const submitButton = form.querySelector('.form-submit');
-const statusNode = document.getElementById('formStatus');
+const GAS_URL='https://script.google.com/macros/s/AKfycbz_MtzGlFo9HkWpEQkdECfGoTgjL_KRU2zUfeiJGRTaU9dRcjY3KJyBP5SBIPl6KrSUxw/exec';
 
-function currentType(){ return document.querySelector('input[name="consult_type"]:checked')?.value || 'ページ診断'; }
-function setModeVisibility(type){
-  const isConsult = type === '事業相談';
+const form=document.getElementById('diagForm');
+const radios=[...document.querySelectorAll('input[name="consult_type"]')];
+const diagFields=document.getElementById('diagFields');
+const submitButton=document.getElementById('submitButton');
+const formStatus=document.getElementById('formStatus');
+const messageInput=document.getElementById('messageInput');
+const urlInput=document.getElementById('urlInput');
+const channelSelect=document.getElementById('channelSelect');
+const pvSelect=document.getElementById('pvSelect');
+const cvrSelect=document.getElementById('cvrSelect');
+const nameInput=document.getElementById('nameInput');
+const emailInput=document.getElementById('emailInput');
+const privacyConsent=document.getElementById('privacyConsent');
 
-  // モード別ブロックを明示的に切り替える
-  document.querySelectorAll('.mode-diagnosis').forEach(el => {
-    el.hidden = isConsult;
-    el.setAttribute('aria-hidden', isConsult ? 'true' : 'false');
-  });
-  document.querySelectorAll('.mode-consultation').forEach(el => {
-    el.hidden = !isConsult;
-    el.setAttribute('aria-hidden', !isConsult ? 'true' : 'false');
-  });
-
-  // 診断専用入力欄
-  diagFields.hidden = isConsult;
-  diagFields.setAttribute('aria-hidden', isConsult ? 'true' : 'false');
-  [urlInput,channelSelect,trafficSelect,pvSelect,cvrSelect].forEach(el => el.required = !isConsult);
-
-  // 相談時は相談内容を必須化
-  messageInput.required = isConsult;
-  messageInput.placeholder = isConsult
-    ? `例：
-・現在の販売チャネルと売上状況
-・困っていること
-・今回相談したいこと`
-    : `例：
-・現在の課題
-・試した施策
-・診断時に見てほしいこと`;
-
-  // ボタンの可視文言はCSSでradioのchecked状態から直接切り替える。
-  // JSはアクセシビリティ用ラベルのみ同期する。
-  submitButton.setAttribute('aria-label', isConsult ? '事業相談を送信する' : '無料ページ診断を申し込む');
-
-  statusNode.textContent='';
-  statusNode.className='form-status';
+function currentType(){
+  return document.querySelector('input[name="consult_type"]:checked')?.value || 'ページ診断';
 }
 
-// radioのchangeだけを唯一の切替トリガーにする
-radios.forEach(r => r.addEventListener('change', () => setModeVisibility(currentType())));
+function setModeVisibility(type){
+  const isConsult=type==='事業相談';
+
+  // 表示切替はCSS :has() が担当。JSは入力必須条件と文言だけ同期する。
+  [urlInput,channelSelect,pvSelect,cvrSelect].forEach(el=>el.required=!isConsult);
+  messageInput.required=isConsult;
+  messageInput.placeholder=isConsult
+    ? '現在の販売チャネル、売上状況、困っていること、相談したい内容をご記入ください。'
+    : '現在の課題、試した施策、診断時に見てほしいことなど';
+
+  submitButton.setAttribute('aria-label',isConsult?'事業相談を送信する':'無料ページ診断を申し込む');
+  formStatus.textContent='';
+  formStatus.className='status';
+}
+
+radios.forEach(r=>r.addEventListener('change',()=>setModeVisibility(currentType())));
 setModeVisibility(currentType());
 
 function setStatus(message,type=''){
-  statusNode.textContent=message;
-  statusNode.className='form-status'+(type?' is-'+type:'');
-  statusNode.focus();
+  formStatus.textContent=message;
+  formStatus.className='status'+(type?' is-'+type:'');
 }
+
 function validateForm(){
   const isConsult=currentType()==='事業相談';
   const checks=[[nameInput,'お名前をご入力ください。'],[emailInput,'メールアドレスをご入力ください。']];
-  if(!isConsult) checks.push([channelSelect,'販売チャネルを選択してください。'],[urlInput,'商品ページURLをご入力ください。'],[trafficSelect,'主な流入元を選択してください。'],[pvSelect,'月間アクセス数を選択してください。'],[cvrSelect,'現在のCVRを選択してください。']);
-  else checks.push([messageInput,'現在の状況と相談したい内容をご入力ください。']);
-  for(const [el,msg] of checks){ if(!String(el.value||'').trim()){setStatus(msg,'error');el.focus();return false;} }
-  if(!emailInput.validity.valid){setStatus('メールアドレスの形式をご確認ください。','error');emailInput.focus();return false;}
-  if(!isConsult && !urlInput.validity.valid){setStatus('商品ページURLの形式をご確認ください。','error');urlInput.focus();return false;}
-  if(!privacyConsent.checked){setStatus('プライバシーポリシーへの同意をご確認ください。','error');privacyConsent.focus();return false;}
+
+  if(isConsult){
+    checks.push([messageInput,'現在の状況と相談したい内容をご入力ください。']);
+  }else{
+    checks.push(
+      [channelSelect,'販売チャネルを選択してください。'],
+      [urlInput,'商品ページURLをご入力ください。'],
+      [pvSelect,'月間アクセス数を選択してください。'],
+      [cvrSelect,'現在の転換率を選択してください。']
+    );
+  }
+
+  for(const [el,msg] of checks){
+    if(!String(el.value||'').trim()){
+      setStatus(msg,'error');
+      el.focus();
+      return false;
+    }
+  }
+
+  if(!emailInput.validity.valid){
+    setStatus('メールアドレスの形式をご確認ください。','error');
+    emailInput.focus();
+    return false;
+  }
+  if(!isConsult&&!urlInput.validity.valid){
+    setStatus('商品ページURLの形式をご確認ください。','error');
+    urlInput.focus();
+    return false;
+  }
+  if(!privacyConsent.checked){
+    setStatus('プライバシーポリシーへの同意をご確認ください。','error');
+    privacyConsent.focus();
+    return false;
+  }
   return true;
 }
 
 form.addEventListener('submit',async e=>{
   e.preventDefault();
-  if(!validateForm()) return;
+  if(!validateForm())return;
 
   const type=currentType();
-  const original=submitButton.innerHTML;
   submitButton.disabled=true;
-  submitButton.textContent='送信中…';
+  submitButton.querySelectorAll('.submit-label-diagnosis,.submit-label-consultation').forEach(el=>el.style.display='none');
+  let sendingLabel=submitButton.querySelector('.submit-label-sending');
+  if(!sendingLabel){
+    sendingLabel=document.createElement('span');
+    sendingLabel.className='submit-label-sending';
+    sendingLabel.textContent='送信中…';
+    submitButton.appendChild(sendingLabel);
+  }
+  sendingLabel.style.display='inline';
   setStatus('送信しています。');
 
-  // GAS側の既存処理との互換性を維持するため、診断専用項目も
-  // 事業相談時は「項目自体を省略せず空文字」で送る。
   const payload=new URLSearchParams({
     name:nameInput.value.trim(),
     email:emailInput.value.trim(),
     consult_type:type,
     channel:type==='ページ診断'?channelSelect.value:'',
     url:type==='ページ診断'?urlInput.value.trim():'',
-    traffic:type==='ページ診断'?trafficSelect.value:'',
+    traffic:'',
     pv:type==='ページ診断'?pvSelect.value:'',
     cvr:type==='ページ診断'?cvrSelect.value:'',
     message:messageInput.value.trim(),
@@ -1560,8 +338,6 @@ form.addEventListener('submit',async e=>{
   });
 
   try{
-    // Apps Script Web App はPOST後のレスポンス読取でCORSエラーになる場合がある。
-    // no-cors にして既存のPOST自体はそのまま実行し、レスポンス本文は読まない。
     await fetch(GAS_URL,{
       method:'POST',
       mode:'no-cors',
@@ -1569,18 +345,16 @@ form.addEventListener('submit',async e=>{
       body:payload.toString(),
       redirect:'follow'
     });
-
-    if(typeof gtag==='function'){
-      gtag('event','form_submit_success',{form_name:'top_page',inquiry_type:type});
-    }
     form.style.display='none';
     document.getElementById(type==='事業相談'?'formSuccessConsult':'formSuccessDiag').classList.add('show');
   }catch(err){
     console.error(err);
     setStatus('送信できませんでした。通信環境をご確認のうえ、再度お試しください。','error');
-  }finally{
     submitButton.disabled=false;
-    submitButton.innerHTML=original;
+    const sendingLabel=submitButton.querySelector('.submit-label-sending');
+    if(sendingLabel)sendingLabel.style.display='none';
+    submitButton.querySelectorAll('.submit-label-diagnosis,.submit-label-consultation').forEach(el=>el.style.display='');
+    setModeVisibility(currentType());
   }
 });
 </script>
