@@ -2569,6 +2569,25 @@ a:focus-visible,summary:focus-visible{outline-color:var(--mk-blue)!important}
   #flow .process-row p{font-size:16px !important;line-height:1.85 !important;}
 }
 </style>
+
+<style id="makuake-hero-headline-size-v1">
+/* FV headline: strengthen visual hierarchy */
+.hero .hero-headline{
+  font-size:clamp(48px,5.8vw,78px)!important;
+  line-height:1.16!important;
+  letter-spacing:-.045em!important;
+  font-weight:900!important;
+  max-width:1180px;
+}
+@media(max-width:700px){
+  .hero .hero-headline{
+    font-size:clamp(38px,10.2vw,48px)!important;
+    line-height:1.20!important;
+    letter-spacing:-.04em!important;
+  }
+}
+</style>
+
 </head>
 <body><a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="topbar" role="banner">
