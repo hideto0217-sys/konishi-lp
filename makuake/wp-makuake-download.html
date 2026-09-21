@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Makuakeプロジェクトが「ページ」が原因で失敗する悲劇のシナリオ｜無料ホワイトペーパー</title>
+<meta name="description" content="ECとは違う、Makuakeで応援購入につなげるページ設計。約60プロジェクトの支援経験をもとに、商品によって変わる購入判断の順番を実例で解説します。">
+<style>
+:root{--ink:#111817;--soft:#596360;--paper:#f7f6f1;--line:#dedbd1;--accent:#008f8a;--accent2:#006f6b;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
+.wrap{width:min(1100px,calc(100% - 40px));margin:auto}.hero{padding:72px 0 58px;background:#fff;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:.12em;color:var(--accent);margin-bottom:20px}.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center}
+h1{font-size:clamp(34px,5vw,62px);line-height:1.16;letter-spacing:-.035em;margin:0 0 22px}.lead{font-size:17px;line-height:2;color:var(--soft);margin:0 0 28px}
+.proof{display:flex;gap:22px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px}.proof b{display:block;font-size:25px}.proof span{font-size:12px;color:var(--soft)}
+.cover{background:#0f2020;color:#fff;min-height:520px;padding:46px 42px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 24px 70px rgba(0,0,0,.13)}
+.cover small{letter-spacing:.12em;color:#8bd0cd}.cover h2{font-size:34px;line-height:1.35;margin:0}.cover .sub{font-size:14px;line-height:1.8;color:#cbd9d7}
+.section{padding:76px 0}.section h2{font-size:34px;line-height:1.4;margin:0 0 16px}.section-intro{font-size:16px;line-height:2;color:var(--soft);max-width:760px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}.card{background:#fff;border:1px solid var(--line);padding:28px}.num{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.1em}.card h3{font-size:19px;line-height:1.55;margin:12px 0}.card p{font-size:14px;line-height:1.85;color:var(--soft);margin:0}
+.formsec{background:#fff;border-top:1px solid var(--line);padding:76px 0}.formgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:58px}.formbox{border:1px solid var(--line);padding:32px;background:var(--paper)}
+label{display:block;font-size:14px;font-weight:800;margin:0 0 8px}.req{font-size:10px;background:var(--accent);color:#fff;padding:3px 6px;margin-left:6px}
+input{width:100%;padding:14px 15px;border:1px solid var(--line);background:#fff;font:inherit;font-size:16px;margin-bottom:20px}input:focus{outline:2px solid rgba(0,143,138,.14);border-color:var(--accent)}
+button{width:100%;border:0;background:var(--accent);color:#fff;padding:18px;font-size:16px;font-weight:800;cursor:pointer}button:hover{background:var(--accent2)}button:disabled{opacity:.55;cursor:wait}
+.note{font-size:12px;line-height:1.8;color:var(--soft);margin-top:14px}.success{display:none;padding:28px;background:#edf7f6;border:1px solid #cce6e3}.success.show{display:block}.success h3{margin-top:0}
+.footer{padding:28px 0 50px;font-size:12px;color:var(--soft)}
+@media(max-width:800px){.grid,.formgrid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.hero{padding-top:48px}.cover{min-height:400px}.section,.formsec{padding:54px 0}}
+</style>
+</head>
+<body>
+<section class="hero">
+ <div class="wrap grid">
+  <div>
+   <div class="eyebrow">無料ホワイトペーパー</div>
+   <h1>Makuakeプロジェクトが<br>「ページ」が原因で失敗する<br>悲劇のシナリオ</h1>
+   <p class="lead">商品特徴を並べる前に、何を、どの順番で判断してもらうのか。ECとは違うMakuakeのページ設計を、実際のプロジェクト事例とともに解説します。</p>
+   <div class="proof">
+    <div><b>約60</b><span>Makuakeプロジェクト</span></div>
+    <div><b>710万円</b><span>平均応援購入額</span></div>
+    <div><b>6,600万円</b><span>最高応援購入額</span></div>
+   </div>
+  </div>
+  <div class="cover">
+   <small>MAKUAKE PAGE DESIGN / WHITEPAPER</small>
+   <h2>公開してから、<br>ページ設計の間違いに<br>気づいても遅い。</h2>
+   <div class="sub">ECとは違う、Makuakeで応援購入につなげるページ設計<br><br>小西マーケティング</div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="wrap">
+  <div class="eyebrow">この資料でわかること</div>
+  <h2>「売れる型」ではなく、<br>商品ごとに変わる判断の順番を解説します。</h2>
+  <p class="section-intro">同じMakuakeでも、問題を解決する商品と、新しい体験を広げる商品では、ページの入口から順番が変わります。資料では、その違いを実案件で比較します。</p>
+  <div class="cards">
+   <div class="card"><div class="num">01</div><h3>ECとMakuakeで、なぜページの開始地点が違うのか</h3><p>商品ページを見る前に成立している購入判断の違いから整理します。</p></div>
+   <div class="card"><div class="num">02</div><h3>2つの実案件で見る、逆方向のページ設計</h3><p>6,644万円と5,166万円のプロジェクトを使い、判断順序の違いを比較します。</p></div>
+   <div class="card"><div class="num">03</div><h3>制作前に決めるべき3つの判断</h3><p>情報を増やす前に、何を決めればページ全体が一つの売り方へ収束するのかを示します。</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="formsec" id="download">
+ <div class="wrap formgrid">
+  <div>
+   <div class="eyebrow">DOWNLOAD</div>
+   <h2>無料で資料を受け取る</h2>
+   <p class="section-intro">お申し込み後、ご入力いただいたメールアドレスへPDFの閲覧URLをお送りします。</p>
+   <p class="note">資料内では、ヒヤミスト3とSWIFT HORSE K2の実際のMakuakeプロジェクトを例に、商品によって購入判断の順番がどう変わるかを解説しています。</p>
+  </div>
+  <div class="formbox">
+   <form id="wpForm" novalidate>
+    <label for="store_name">会社名<span class="req">必須</span></label>
+    <input id="store_name" name="store_name" autocomplete="organization" required placeholder="例：株式会社〇〇">
+    <label for="name">お名前<span class="req">必須</span></label>
+    <input id="name" name="name" autocomplete="name" required placeholder="例：山田 太郎">
+    <label for="email">メールアドレス<span class="req">必須</span></label>
+    <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="例：yamada@example.com">
+    <input type="hidden" id="utm_source"><input type="hidden" id="utm_medium"><input type="hidden" id="utm_campaign"><input type="hidden" id="landing_url">
+    <button type="submit">無料でホワイトペーパーを受け取る</button>
+    <div class="note">※ 入力いただいたメールアドレスへ資料URLを送信します。<br>※ 商品適合診断や制作契約への申込みではありません。</div>
+   </form>
+   <div id="success" class="success">
+    <h3>お申し込みありがとうございます。</h3>
+    <p>ご入力いただいたメールアドレスへ、ホワイトペーパーの閲覧URLをお送りしました。メールをご確認ください。</p>
+   </div>
+  </div>
+ </div>
+</section>
+<footer class="footer"><div class="wrap">© Konishi Marketing</div></footer>
+
+<script>
+const GAS_URL='https://script.google.com/macros/s/AKfycbzBajl4dwtNpVnZFxIiklvGRB_SmF0DdAsXhCXxMpG-McoPeQ_Sy7oZKe6r_K5PAPQL/exec';
+const PDF_URL='https://konishi-marketing.com/wp/wp-makuake.pdf';
+const qs=new URLSearchParams(location.search);
+['utm_source','utm_medium','utm_campaign'].forEach(k=>document.getElementById(k).value=qs.get(k)||'');
+document.getElementById('landing_url').value=location.href;
+
+const form=document.getElementById('wpForm');
+form.addEventListener('submit', async function(e){
+ e.preventDefault();
+ let valid=true;
+ this.querySelectorAll('[required]').forEach(el=>{if(!(el.value||'').trim()){el.style.borderColor='#b32323';valid=false}else el.style.borderColor=''});
+ const email=document.getElementById('email');
+ if(email.value&&!email.checkValidity()){email.style.borderColor='#b32323';valid=false}
+ if(!valid){alert('必須項目をご確認ください。');return}
+ const btn=this.querySelector('button'); const old=btn.textContent; btn.disabled=true; btn.textContent='送信中...';
+ const data=new URLSearchParams({
+  store_name:document.getElementById('store_name').value.trim(),
+  name:document.getElementById('name').value.trim(),
+  email:email.value.trim(),
+  source:'wp-makuake',
+  pdf_url:PDF_URL,
+  utm_source:document.getElementById('utm_source').value,
+  utm_medium:document.getElementById('utm_medium').value,
+  utm_campaign:document.getElementById('utm_campaign').value,
+  landing_url:document.getElementById('landing_url').value,
+  submitted_at:new Date().toISOString()
+ });
+ try{
+  await fetch(GAS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data.toString()});
+  if(typeof gtag==='function')gtag('event','generate_lead',{event_category:'whitepaper',event_label:'makuake'});
+  form.style.display='none'; document.getElementById('success').classList.add('show');
+ }catch(err){
+  alert('通信エラーが発生しました。時間をおいて再度お試しください。');
+  btn.disabled=false; btn.textContent=old;
+ }
+});
+</script>
+</body>
+</html>
