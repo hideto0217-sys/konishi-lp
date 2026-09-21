@@ -98,19 +98,22 @@ footer{background:var(--ink-mid);color:rgba(247,246,241,.74);padding:48px 24px;b
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.submit-btn{transition:none}}
 
-/* ===== 強制ダークモード対策：配色を最終確定 ===== */
+/* ===== 強制ダークモード対策：ライト配色を最終確定 ===== */
+:root{color-scheme:light !important}
 html,body{background-color:#f7f6f1 !important;color:#0c1110 !important}
 section{background-color:#f7f6f1 !important}
-.on-paper{background-color:#f7f6f1 !important}
-.on-paper-d{background-color:#eeece5 !important}
+.on-paper{background-color:#f7f6f1 !important;color:#0c1110 !important}
+.on-paper-d{background-color:#eeece5 !important;color:#0c1110 !important}
 h1,h2,h3,.h2{color:#0c1110 !important}
 .body{color:#26312e !important}
 .body strong{color:#0c1110 !important}
 .overline span,.sec-label span,.diag-num,.compare-label{color:#00a6a0 !important}
+
 /* 6項目カード */
 .diag-card{background-color:#eeece5 !important;border-color:#dedbd1 !important}
 .diag-card h3{color:#0c1110 !important}
 .diag-card p{color:#26312e !important}
+
 /* 比較カード（左：白／右：ダーク） */
 .compare-card{background-color:#fff !important;border-color:#dedbd1 !important}
 .compare-card .compare-title{color:#0c1110 !important}
@@ -119,30 +122,45 @@ h1,h2,h3,.h2{color:#0c1110 !important}
 .compare-card.new .compare-label{color:#00a6a0 !important}
 .compare-card.new .compare-title{color:#fff !important}
 .compare-card.new .compare-body{color:rgba(247,246,241,.83) !important}
+
 /* 流れ */
 .flow li{background-color:#fff !important;border-color:#dedbd1 !important}
 .flow span{color:#26312e !important}
 .flow strong{color:#0c1110 !important}
-/* 実績（明色セクション内のダークタイル） */
+
+/* 実績（ダークタイル） */
 .stat{background-color:#0c1110 !important;border-color:#00a6a0 !important}
 .stat strong{color:#fff !important}
 .stat span{color:rgba(247,246,241,.76) !important}
+
 /* フォーム */
 .form-wrap{background-color:#fff !important}
 .form-label{color:#0c1110 !important}
-.form-input,.form-select,textarea.form-input{background-color:#f7f6f1 !important;color:#0c1110 !important;border-color:#dedbd1 !important}
+.form-input,.form-select,textarea.form-input{
+  background-color:#f7f6f1 !important;
+  color:#0c1110 !important;
+  border-color:#dedbd1 !important;
+  -webkit-text-fill-color:#0c1110 !important;
+}
+.form-input::placeholder,textarea.form-input::placeholder{
+  color:#747b77 !important;
+  opacity:1 !important;
+  -webkit-text-fill-color:#747b77 !important;
+}
+.form-select option{background:#fff !important;color:#0c1110 !important}
 .form-hint,.form-notes,.form-intro{color:#747b77 !important}
 .badge{background-color:#eeece5 !important;color:#747b77 !important}
 .badge.req{background-color:#00a6a0 !important;color:#fff !important}
-.btn,.submit-btn{background-color:#00a6a0 !important;color:#fff !important}
+.btn,.submit-btn{background-color:#00a6a0 !important;color:#fff !important;-webkit-text-fill-color:#fff !important}
 .success h3{color:#0c1110 !important}
 .success p{color:#26312e !important}
 .success-mark{color:#00a6a0 !important;border-color:#00a6a0 !important}
-/* 暗色セクション（後から上書き） */
-.hero,.on-ink{background-color:#0c1110 !important}
-.hero h1,.on-ink h2,.on-ink h3,.on-ink .h2{color:#fff !important}
+
+/* 暗色セクション：背景と文字をセットで固定 */
+.hero,.on-ink{background-color:#0c1110 !important;color:#f7f6f1 !important}
+.hero h1,.on-ink h1,.on-ink h2,.on-ink h3,.on-ink .h2{color:#fff !important}
 .hero .pre{color:rgba(247,246,241,.72) !important}
-.hero-lead{color:rgba(247,246,241,.9) !important}
+.hero-lead{color:rgba(247,246,241,.90) !important}
 .hero-lead strong{color:#fff !important}
 .hero .btn-note{color:rgba(247,246,241,.62) !important}
 .on-ink .body{color:rgba(247,246,241,.88) !important}
@@ -152,15 +170,27 @@ h1,h2,h3,.h2{color:#0c1110 !important}
 .on-ink .diag-card p{color:rgba(247,246,241,.80) !important}
 .on-ink .emph{background-color:rgba(0,166,160,.10) !important}
 .on-ink .emph p{color:#fff !important}
-.faq q{color:#fff !important}
-.faq p{color:rgba(247,246,241,.84) !important}
-.profile-name{color:#0c1110 !important}
-.profile-text{color:#26312e !important}
+.on-ink .profile-name{color:#fff !important}
+.on-ink .profile-text{color:rgba(247,246,241,.80) !important}
+.on-ink .faq q{color:#fff !important}
+.on-ink .faq p{color:rgba(247,246,241,.84) !important}
+
+/* フッター */
 footer{background-color:#0c1110 !important;color:rgba(247,246,241,.66) !important}
 .footer-name{color:#fff !important}
 .footer-text{color:rgba(247,246,241,.66) !important}
-.footer-links a{color:rgba(247,246,241,.7) !important}
-.legal{color:rgba(247,246,241,.5) !important}
+.footer-links a{color:rgba(247,246,241,.70) !important}
+.legal{color:rgba(247,246,241,.50) !important}
+
+/* OS/ブラウザのダーク設定時も同じ配色を維持 */
+@media (prefers-color-scheme: dark){
+  :root{color-scheme:light !important}
+  html,body{background-color:#f7f6f1 !important;color:#0c1110 !important}
+  .on-paper{background-color:#f7f6f1 !important;color:#0c1110 !important}
+  .on-paper-d{background-color:#eeece5 !important;color:#0c1110 !important}
+  .hero,.on-ink,footer{background-color:#0c1110 !important}
+}
+
 </style>
 </head>
 <body>
