@@ -355,8 +355,8 @@ h3{
   body{background-size:24px 24px}
   .wrap{width:min(calc(100% - 26px),var(--max))}
   .section{padding:78px 0}
-  h1{font-size:47px}
-  h2{font-size:37px}
+  h1{font-size:clamp(40px,12vw,47px)}
+  h2{font-size:clamp(31px,9.5vw,37px)}
   .hero .sub{font-size:17px}
   .proof-big{font-size:52px}
   .proof-meta{grid-template-columns:1fr}
@@ -1418,6 +1418,62 @@ footer a{
 .service .num{
   font-size:12px;
 }
+
+/* final design QA: sticky header / anchor offset */
+section[id],
+[id="contact"],
+[id="faq"],
+[id="flow"],
+[id="pricing"]{
+  scroll-margin-top:88px;
+}
+
+/* final design QA: case-study density hierarchy */
+.case-detail{
+  margin-top:20px;
+  border-top:1px solid var(--line);
+  padding-top:16px;
+}
+.case-detail summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:4px 0;
+  font-size:14px;
+  font-weight:850;
+  letter-spacing:.02em;
+}
+.case-detail summary::-webkit-details-marker{display:none}
+.case-detail summary::after{
+  content:"+";
+  flex:0 0 auto;
+  width:28px;
+  height:28px;
+  border:1px solid var(--line);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:18px;
+  line-height:1;
+}
+.case-detail[open] summary::after{content:"−"}
+.case-detail-body{padding-top:14px}
+.case-detail-body .bodycopy:first-child{margin-top:0}
+.case-stat{margin-top:22px}
+
+@media(max-width:560px){
+  .hero-headline .headline-phrase{white-space:nowrap}
+  section[id],
+  [id="contact"],
+  [id="faq"],
+  [id="flow"],
+  [id="pricing"]{scroll-margin-top:76px}
+  .case-detail{margin-top:16px}
+}
+
 </style><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="googlebot"/><meta content="小西秀人" name="author"/><meta content="#F7F4EE" name="theme-color"/><meta content="strict-origin-when-cross-origin" name="referrer"/><meta content="telephone=no" name="format-detection"/><link href="https://konishi-marketing.com/makuake/" rel="canonical"/><link href="https://konishi-marketing.com/makuake/" hreflang="ja-JP" rel="alternate"/><link href="https://konishi-marketing.com/makuake/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://konishi-marketing.com/#organization","name":"小西マーケティング","url":"https://konishi-marketing.com/","founder":{"@id":"https://konishi-marketing.com/#person"}},{"@type":"Person","@id":"https://konishi-marketing.com/#person","name":"小西秀人","jobTitle":"代表","worksFor":{"@id":"https://konishi-marketing.com/#organization"},"url":"https://konishi-marketing.com/"},{"@type":"Service","@id":"https://konishi-marketing.com/makuake/#service","name":"Makuakeプロジェクトページ制作","serviceType":["Makuakeプロジェクトページ制作","Makuakeページ制作","Makuake LP制作"],"description":"商品・競合・見込み客を調べ、売り方の設計から構成・コピー・デザイン・Makuake管理画面への入稿まで担当する制作サービス。公開後は広告・プレスリリースなどの相談に対応。固定費15万円（税別）と、応援購入総額の10％（税別）で提供。必要な案件には事前集客サポートを追加できる。","url":"https://konishi-marketing.com/makuake/","provider":{"@id":"https://konishi-marketing.com/#organization"},"areaServed":{"@type":"Country","name":"日本"},"audience":{"@type":"BusinessAudience","audienceType":"Makuakeで新商品を公開する企業・EC事業者"}},{"@type":"WebPage","@id":"https://konishi-marketing.com/makuake/#webpage","url":"https://konishi-marketing.com/makuake/","name":"Makuakeプロジェクトページ制作｜構成・コピー・デザイン・入稿まで｜小西マーケティング","description":"Makuakeで商品が選ばれる理由を調べ、売り方の設計から構成・コピー・デザイン・入稿まで小西秀人が一貫して担当。公開後は広告・プレスリリースなどの相談に対応。固定15万円（税別）＋応援購入総額10％。全60プロジェクト平均710万円。","inLanguage":"ja-JP","isPartOf":{"@type":"WebSite","@id":"https://konishi-marketing.com/#website","url":"https://konishi-marketing.com/","name":"小西マーケティング","publisher":{"@id":"https://konishi-marketing.com/#organization"}},"about":{"@id":"https://konishi-marketing.com/makuake/#service"},"dateModified":"2026-09-05","mainEntity":[{"@id":"https://konishi-marketing.com/makuake/#service"},{"@id":"https://konishi-marketing.com/makuake/#faq-schema"}],"headline":"Makuakeプロジェクトページ制作"},{"@type":"FAQPage","@id":"https://konishi-marketing.com/makuake/#faq-schema","url":"https://konishi-marketing.com/makuake/#faq","mainEntity":[{"@type":"Question","name":"公開後も相談できますか。","acceptedAnswer":{"@type":"Answer","text":"はい。公開後は、広告やプレスリリースなど、販売施策についてのご相談に対応します。基本サービスでの公開後の対応は、助言・相談です。広告運用やプレスリリースの作成・配信などの実作業は含みません。"}},{"@type":"Question","name":"写真がなくても依頼できますか。","acceptedAnswer":{"@type":"Answer","text":"はい。構成とコピーをもとに必要な写真を整理します。撮影が必要な場合は、こちらで手配する方法と、撮影会社へ指示を共有する方法があります。"}},{"@type":"Question","name":"デザインだけ依頼できますか。","acceptedAnswer":{"@type":"Answer","text":"売り方の設計から構成・コピー・デザイン・入稿まで、一括でのご依頼を承っています。購入の決め手や迷いを整理し、その内容を写真・図解・文章へ反映して制作するためです。"}},{"@type":"Question","name":"料金はいくらですか。","acceptedAnswer":{"@type":"Answer","text":"固定費15万円（税別）と、プロジェクト終了時にMakuakeページ上へ表示された応援購入総額の10％（税別）です。固定費は契約時に全額、成果報酬はMakuakeからクライアントへの入金後3日以内にお支払いいただきます。成果報酬に最低額と上限はありません。"}},{"@type":"Question","name":"制作途中で商品仕様や販売条件が変わった場合はどうなりますか。","acceptedAnswer":{"@type":"Answer","text":"当初合意した商品仕様と販売条件の範囲では、公開までに必要な修正へ対応します。商品仕様、価格、リターン設計などの前提が変更され、再制作が必要になる場合は別途協議します。"}},{"@type":"Question","name":"成果は保証されますか。","acceptedAnswer":{"@type":"Answer","text":"保証は行いません。応援購入総額には、商品と価格が影響します。公開時期と在庫も影響します。広告費やMakuake内露出にも左右されます。"}},{"@type":"Question","name":"制作期間はどれくらいですか。","acceptedAnswer":{"@type":"Answer","text":"商品情報とページ量を確認します。撮影、図解、動画の有無も踏まえ、想定スケジュールを提示します。"}},{"@type":"Question","name":"Makuake後の楽天や自社ECも依頼できますか。","acceptedAnswer":{"@type":"Answer","text":"対応可能です。先行販売と限定数の文脈を外します。割引に頼らず選ばれる一般販売向けページへ再構成します。"}},{"@type":"Question","name":"事前集客も依頼できますか。","acceptedAnswer":{"@type":"Answer","text":"対応可能です。全案件へ必須にはせず、商品単価、目標応援購入額、既存認知、公開初速の必要性を見て、実施するか決めます。実行まで依頼する場合は、15万円〜（税別）＋広告運用費です。実施する施策と範囲に応じて、事前にお見積もりします。広告運用費は広告費の10％、最低5万円（税別）で、広告費は実費です。"}},{"@type":"Question","name":"広告運用を依頼せず、プロジェクトページ制作だけを依頼できますか。","acceptedAnswer":{"@type":"Answer","text":"はい。プロジェクトページ制作が基本です。公開後の広告はMakuakeの広告メニューを利用するケースが一般的です。必要と判断した案件のみ、事前集客サポートを追加できます。"}}]},{"@type":"BreadcrumbList","@id":"https://konishi-marketing.com/makuake/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"トップページ","item":"https://konishi-marketing.com/"},{"@type":"ListItem","position":2,"name":"Makuakeプロジェクトページ制作","item":"https://konishi-marketing.com/makuake/"}]}]}</script>
 <meta content="https://script.google.com/macros/s/AKfycbyO2WuhDl_-N2aFd2sdqr80UpIJ_iCMVKetndhO7vjDLgQmSp0SWnTB8CGXC4qCo39i/exec" name="makuake-form-endpoint"/><style>
 /* v3.17 final cascade lock */
@@ -2616,12 +2672,27 @@ a:focus-visible,summary:focus-visible{outline-color:var(--mk-blue)!important}
 </div>
 </div>
 </section>
+<section aria-labelledby="startpoint-title" class="section pain-section" data-judgment-id="J04" id="startpoint">
+<div class="wrap pain-grid">
+<div>
+<p class="kicker">ECとMakuakeの違い</p>
+<h2 id="startpoint-title">なぜ、ECとMakuakeでは、<br/>ページの始め方が同じではないのか。</h2>
+<p class="lead">楽天やAmazonでは、検索結果などから、欲しいカテゴリがある程度決まった状態で商品ページへ来るケースがあります。</p>
+<p class="bodycopy">一方、Makuakeでは、プロジェクト一覧や広告などで、それまで知らなかった商品と初めて出会う人もいます。まだ「このカテゴリの商品が欲しい」という判断まで進んでいない人に、いきなり機能や他商品との違いを並べても、話が途中から始まってしまいます。</p>
+</div>
+<div class="decision-rail">
+<div class="decision"><b>すでに終わっている判断は、もう説明しない</b><span>分かっていることまで繰り返さず、次に必要な判断へ進めます。</span></div>
+<div class="decision"><b>まだ終わっていない判断は、飛ばさない</b><span>その人に最初に残っている購入判断から、ページを始めます。</span></div>
+<div class="decision"><b>だから、同じ商品でも構成は変わる</b><span>商品について何を伝えたいかではなく、見る人がどこまで判断を終えているかから、伝える内容と順番を決めます。</span></div>
+</div>
+</div>
+</section>
 <section aria-labelledby="pain-title" class="section pain-section" data-judgment-id="J02">
 <div class="wrap pain-grid">
 <div>
-<h2 id="pain-title">制作会社を、<br/>デザインの出来だけで選んでいませんか。</h2>
-<p class="lead">デザインの出来だけで依頼先を選ぶと、「そのプロダクトを誰が、何と比べ、なぜ買うのか」が決まらないまま制作が始まります。</p>
-<p class="bodycopy">先に確かめるべきなのは、デザインの出来ではなく、その商品が選ばれる理由です。小西マーケティングでは、商品資料だけで構成を決めず、競合商品と見込み客の声まで調べ、買う理由になる場面と比較軸を見つけてから、構成・コピー・写真・デザインへ落とします。</p>
+<h2 id="pain-title">ページを作る前に、<br/>まず「なぜこの商品を選ぶのか」を決めます。</h2>
+<p class="lead">写真やデザインに入る前に、「そのプロダクトを誰が、何と比べ、なぜ買うのか」が決まっていなければ、伝える内容と順番は決まりません。</p>
+<p class="bodycopy">先に確かめるのは、その商品が選ばれる理由です。小西マーケティングでは、商品資料だけで構成を決めず、競合商品と見込み客の声まで調べ、買う理由になる場面と比較軸を見つけてから、構成・コピー・写真・デザインへ落とします。</p>
 </div>
 <div class="decision-rail">
 <p class="decision-label"><b>選ばれる理由を見つけるために、<br/>ページを作る前に3つを確かめます。</b></p>
@@ -2660,21 +2731,7 @@ a:focus-visible,summary:focus-visible{outline-color:var(--mk-blue)!important}
 </div>
 </div>
 </section>
-<section aria-labelledby="startpoint-title" class="section pain-section" data-judgment-id="J04" id="startpoint">
-<div class="wrap pain-grid">
-<div>
-<p class="kicker">ECとMakuakeの違い</p>
-<h2 id="startpoint-title">なぜ、ECと同じ作り方では、<br/>Makuakeで応援購入が集まらないのか。</h2>
-<p class="lead">楽天やAmazonでは、検索結果などから、欲しいカテゴリがある程度決まった状態で商品ページへ来るケースがあります。</p>
-<p class="bodycopy">一方、Makuakeでは、プロジェクト一覧や広告などで、それまで知らなかった商品と初めて出会う人もいます。まだ「このカテゴリの商品が欲しい」という判断まで進んでいない人に、いきなり機能や他商品との違いを並べても、話が途中から始まってしまいます。</p>
-</div>
-<div class="decision-rail">
-<div class="decision"><b>すでに終わっている判断は、もう説明しない</b><span>分かっていることまで繰り返さず、次に必要な判断へ進めます。</span></div>
-<div class="decision"><b>まだ終わっていない判断は、飛ばさない</b><span>その人に最初に残っている購入判断から、ページを始めます。</span></div>
-<div class="decision"><b>だから、同じ商品でも構成は変わる</b><span>商品について何を伝えたいかではなく、見る人がどこまで判断を終えているかから、伝える内容と順番を決めます。</span></div>
-</div>
-</div>
-</section>
+
 <section aria-labelledby="cases-title" class="section" data-judgment-id="J05" id="cases">
 <div class="wrap">
 <div class="section-head">
@@ -2693,10 +2750,12 @@ a:focus-visible,summary:focus-visible{outline-color:var(--mk-blue)!important}
 <p class="bodycopy case-before"><span class="case-reading-label">特徴を順に紹介するなら</span>AGReluxの広い座面や背もたれを見せ、寸法と機能を説明する。そうすると「座面の広いゲーミングチェア」という紹介になります。</p>
 <p class="bodycopy"><span class="case-reading-label">それだけでは、何が伝わらないか</span>身体をしっかり固定する椅子がよいと思っている人には、座面が広く、自由に動けることの価値が見えません。「あぐらもかけます」と付け加えるだけでは、長時間のゲームに必要な違いとして伝わりにくいのです。</p>
 <div class="quote"><span class="case-reading-label">私が設計した構成</span><span class="case-reading-value">固定のよさを認めたうえで、ゲーム中の姿勢を問い直す</span></div>
+<details class="case-detail"><summary>構成の狙いを詳しく見る</summary><div class="case-detail-body">
 <p class="bodycopy">まず、長く座る途中で首・肩・腰・お尻が気になり、没入しづらくなる経験を取り上げました。そのうえで、レーシングシート由来の形が身体を支える合理性を説明し、「では、ゲームでも同じでしょうか」と問いかけています。</p>
 <p class="bodycopy">ゲームの種類や場面によって、前のめりになったり、ゆったり構えたりする。姿勢は一つではないと分かったところで、上半身を支える背もたれと、下半身を動かせるフルフラット座面を紹介しました。</p>
 <p class="bodycopy">あぐらや片足を上げた写真も、変わった座り方の紹介ではありません。お尻や脚の位置を変えられることを目で確かめてもらう実演です。先に「なぜ動ける必要があるか」を伝え、その答えとして商品の形を見せました。</p>
 <p class="bodycopy"><a href="https://www.makuake.com/project/3r_agrelax/" rel="noopener noreferrer" target="_blank">当時のAGReluxのページを見る</a></p>
+</div></details>
 <div class="case-stat"><div><b>18,833,120円</b><span>応援購入総額</span></div></div>
 </div>
 </article>
@@ -2707,10 +2766,12 @@ a:focus-visible,summary:focus-visible{outline-color:var(--mk-blue)!important}
 <p class="bodycopy case-before"><span class="case-reading-label">特徴を順に紹介するなら</span>SOMRESTAの厚み、硬さ、素材を説明し、最後に価格を提示する。機能を一通り紹介したマットレスのページになります。</p>
 <p class="bodycopy"><span class="case-reading-label">それだけでは、何が伝わらないか</span>ほかの寝具も高品質をうたう中、専門知識のない買い手には仕様の違いを判断しにくい。価格が高ければ「有名なブランドの方が安心」、価格を抑えれば「品質は大丈夫か」という疑問が残ります。</p>
 <div class="quote"><span class="case-reading-label">私が設計した構成</span><span class="case-reading-value">品質を追求できる理由と、価格を抑えられる理由を分けて説明する</span></div>
+<details class="case-detail"><summary>構成の狙いを詳しく見る</summary><div class="case-detail-body">
 <p class="bodycopy">そこで冒頭は、寝具業界に長く携わった開発者の物語にしました。売価に合わせて品質を削る開発や、広告・流通などにかかるコストへの問題意識を示し、価格や知名度だけでは品質を判断できないことを伝えています。</p>
 <p class="bodycopy">対してSOMRESTAは、必要な品質を先に追求する。ただし、それだけでは「とても高くなるのでは」と思われます。続けて、開発者の工場との関係、複数工程の一貫対応、メーカーからの直接販売を紹介し、品質以外のコストを抑える仕組みまで説明しました。</p>
 <p class="bodycopy">その後に、寝返り・体圧分散・耐久性の説明と試験結果を置いています。機能を長所として並べるのではなく、先に語った品質への姿勢を確かめる材料にする。「高級だから」ではなく、何に対してお金を払うのかを理解して選べる構成です。</p>
 <p class="bodycopy"><a href="https://www.makuake.com/project/somresta/" rel="noopener noreferrer" target="_blank">当時のSOMRESTAのページを見る</a></p>
+</div></details>
 <div class="case-stat"><div><b>18,157,400円</b><span>応援購入総額</span></div></div>
 </div>
 </article>
@@ -2721,10 +2782,12 @@ a:focus-visible,summary:focus-visible{outline-color:var(--mk-blue)!important}
 <p class="bodycopy case-before"><span class="case-reading-label">特徴を順に紹介するなら</span>ヒヤミスト3のファンやタンクの改良点を並べ、従来品から便利になった部分を説明する構成にできます。</p>
 <p class="bodycopy"><span class="case-reading-label">それだけでは、何が伝わらないか</span>初めて知る人には「扇風機と大して変わらないのでは」。過去のモデルを知る人には「少し便利になっただけでは」。改良点の一覧だけでは、冷風扇そのものへの疑問と、新モデルへの疑問が残ります。</p>
 <div class="quote"><span class="case-reading-label">私が設計した構成</span><span class="case-reading-value">冷風扇を選ぶ理由を作り、そのうえで「3」を選ぶ理由へ</span></div>
+<details class="case-detail"><summary>構成の狙いを詳しく見る</summary><div class="case-detail-body">
 <p class="bodycopy">まず歴代モデルの購入実績で関心を作り、扇風機では物足りないが、エアコンの冷えや電気代も気になる状況を取り上げました。続けて、扇風機との違い、さらにフィルターを使う気化式と超音波でミストを生む方式の違いを説明しています。</p>
 <p class="bodycopy">その後に、過去の購入者の声を読み、ゼロから開発した経緯を置きました。ここで初めて、ファン・タンク・操作方法などの改良を、単なる新機能ではなく、実際の使いづらさへの回答として紹介しています。</p>
 <p class="bodycopy">容量の拡大は給水の手間、タンク位置の変更は掃除のしやすさ、ダイヤルへの変更は操作のしやすさへ。新規客にも既存モデルを知る人にも、自分が選ぶ理由が残るよう、二つの疑問を順番に解く構成です。</p>
 <p class="bodycopy"><a href="https://www.makuake.com/project/3r_hiyamisto3/" rel="noopener noreferrer" target="_blank">当時のヒヤミスト3のページを見る</a></p>
+</div></details>
 <div class="case-stat"><div><b>66,449,483円</b><span>応援購入総額</span></div></div>
 </div>
 </article>
@@ -2735,10 +2798,12 @@ a:focus-visible,summary:focus-visible{outline-color:var(--mk-blue)!important}
 <p class="bodycopy case-before"><span class="case-reading-label">特徴を順に紹介するなら</span>ぽけどらいの小ささや折りたためる形を見せ、収納しやすい衣類乾燥機として説明する構成にできます。</p>
 <p class="bodycopy"><span class="case-reading-label">それだけでは、何が伝わらないか</span>収納しやすくても、普段の洗濯で間に合っている人には購入のきっかけがありません。一方、急な洗濯の場面に共感してもらうだけでも、「その商品で本当に対処できるのか」は分からないままです。</p>
 <div class="quote"><span class="case-reading-label">私が設計した構成</span><span class="case-reading-value">必要になる場面、乾燥の検証、使い方の順で判断を進める</span></div>
+<details class="case-detail"><summary>構成の狙いを詳しく見る</summary><div class="case-detail-body">
 <p class="bodycopy">冒頭で紹介した制服の物語では、汚れたことだけでなく、予備も乾いていないことまで描いています。「着替えれば済む」という普段の対処が通用しない。だから、予定外の洗濯にも対応する手段が欲しくなる場面です。</p>
 <p class="bodycopy">商品を紹介した後は、早い段階で乾燥時間のテストを見せました。必要性を感じた読者が次に知りたい「どのくらいで乾くのか」に答えるためです。掲載条件では、長袖Tシャツ1枚とマフラータオル2枚を温風モードで約1時間で乾燥しています。</p>
 <p class="bodycopy">その後に、組み立てて吊り下げる方法、操作、折りたたみ収納を説明。「自分に必要か」「役に立つか」「扱いに困らないか」の順に答え、小さい家電の紹介から、暮らしに取り入れる理由へつなげました。乾燥時間は衣類や使用条件によって異なります。</p>
 <p class="bodycopy"><a href="https://www.makuake.com/project/pokedry/" rel="noopener noreferrer" target="_blank">当時のぽけどらいのページを見る</a></p>
+</div></details>
 <div class="case-stat"><div><b>23,703,260円</b><span>応援購入総額</span></div></div>
 </div>
 </article>
